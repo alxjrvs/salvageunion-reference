@@ -582,7 +582,14 @@
     },
     "chassis_abilities": [{
       "name": "Reinforced Chassis",
-      "description": "The Jackhammer rolls on this alternate Critical Damage Table:\nROLL THE DIE:\n20: The Jackhammer is Intact and operational with 1 SP. The Pilot is unharmed.\n11-19: The Jackhammer is temporarily Shutdown and becomes inoperable. At the end of its next turn it activates and becomes operational with 1 SP. The Pilot is unharmed.\n6 - 10: As per 11-19, but a random Module on the Jackhammer is also Damaged.\n2 - 5: As per 11-19, but a random System on the Jackhammer is also Damaged.\n1: The Jackhammer Mech Chassis is damaged. All of its mounted Systems, Modules, and any carried Cargo are destroyed. The Pilot survives in the reinforced cockpit."
+      "description": "The Jackhammer rolls on this alternate Critical Damage Table:",
+      "rollTable": {
+        "20": "The Jackhammer is Intact and operational with 1 SP. The Pilot is unharmed.",
+        "11-19": "The Jackhammer is temporarily Shutdown and becomes inoperable. At the end of its next turn it activates and becomes operational with 1 SP. The Pilot is unharmed.",
+        "6-10": "As per 11-19, but a random Module on the Jackhammer is also Damaged.",
+        "2-5": "As per 11-19, but a random System on the Jackhammer is also Damaged.",
+        "1": "The Jackhammer Mech Chassis is damaged. All of its mounted Systems, Modules, and any carried Cargo are destroyed. The Pilot survives in the reinforced cockpit."
+      }
     }],
     "description": "The 'BG-288' Jackhammer was commissioned by the Terrestrial Democratic Alliance and constructed by Thatcher Steel. The Jackhammer was built in response to a series of costly uranium mining accidents on off-world colonies, due to lax worker safety protocols, in which a slew of mining Mechs were destroyed in tunnel collapses and the worker pilots tragically killed. The reinforced chassis of the Jackhammer was designed to protect the Mech's expensive reactor and core systems in the event of an accident which immobilised or crushed the Mech. That it happened to also protect the worker pilot was of secondary consideration to the corpo.",
     "patterns": [
