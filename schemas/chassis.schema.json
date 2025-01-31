@@ -22,8 +22,29 @@
           "salvage_value": { "type": "number" }
         }
       },
-      "chassis_ability": {
-        "type": "string"
+      "chassis_abilities": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "effect": {
+              "type": "string"
+            },
+            "activationCost": { "$ref": "common.schema.json#/definitions/activationCost" },
+            "range": { "$ref": "enums.schema.json#/definitions/range" },
+            "actionType": { "$ref": "enums.schema.json#/definitions/actionType" },
+            "traits": { "$ref": "common.schema.json#/definitions/traits" },
+            "damage": { "$ref": "common.schema.json#/definitions/damage" },
+            "options": {
+              "type": "array",
+              "items": { "type": "object", "additionalProperties": false, "properties": { "name": { "type": "string" }, "description": { "type": "string" } } }
+            },
+            "rollTable": { "$ref": "common.schema.json#/definitions/rollTable" }
+          }
+        }
       },
       "description": {
         "type": "string"
