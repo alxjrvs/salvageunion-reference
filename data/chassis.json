@@ -1992,7 +1992,12 @@
       "tech_level": 6,
       "salvage_value": 17
     },
-    "chassis_ability": "Burrower: 2EP Turn Action\nWhen you activate this Ability, the Iron Wyrm can burrow and move underneath the ground. It can burrow through sand, stone, and earth as well as basic metal and stone structures such as bunkers. The Iron Wyrm remains burrowed until it unborrows as a Turn Action where it emerges at a point of the Pilot's choice within Close Range of it. When burrowed, the Iron Wyrm cannot be targeted by anything on the ground, however it cannot see anything on the ground either. Its location can be verified with a Deep Survey Scanner.\nThe burrowing Ability of the Iron Wyrm enables it to create tunnels behind it that are large enough for a Mech to fit through.",
+    "chassis_abilities": [{
+      "name": "Burrower",
+      "description": "When you activate this Ability, the Iron Wyrm can burrow and move underneath the ground. It can burrow through sand, stone, and earth as well as basic metal and stone structures such as bunkers. The Iron Wyrm remains burrowed until it unborrows as a Turn Action where it emerges at a point of the Pilot's choice within Close Range of it. When burrowed, the Iron Wyrm cannot be targeted by anything on the ground, however it cannot see anything on the ground either. Its location can be verified with a Deep Survey Scanner. The burrowing Ability of the Iron Wyrm enables it to create tunnels behind it that are large enough for a Mech to fit through.",
+      "activationCost": 2,
+      "actionType": "Turn"
+    }],
     "description": "The 'EPBM-S11' Iron Wyrm is a mammoth tunnelling Mech capable of subterranean operations. It was designed as a joint venture between Sakura Futures, Herrsch Manufacturing, and Thatcher Steel in order to construct a vast tunnel network that would connect the Ferrous Range with the Central Wastes. Nobody knows whether the project was completed or what the current state of the tunnel network is, but some say the tunnels still exist and that they are filled with salvage just lying around. ready to be plundered. They also say that the tunnels are inhabited by those who have not seen the red sun for generations.",
     "patterns": [
       {
@@ -2061,7 +2066,16 @@
       "tech_level": 6,
       "salvage_value": 20
     },
-    "chassis_ability": "Juggernaut: The Leviathan may fire up to 2 Weapons Systems in a turn as a single Turn Action. Resolve each attack separately.\n\nEradication Protocols: If the Leviathan rolls a 'Nailed It' result (20) with an attack roll, it deals 4× damage instead of 2× damage.\n\nHeavily Armoured Chassis: Any 'Nailed It' (20) result made against the Leviathan counts as a standard hit (11-19) and does not deal 2× damage or have any other bonus effect.",
+    "chassis_abilities": [{
+      "name": "Juggernaut",
+      "description": "The Leviathan may fire up to 2 Weapons Systems in a turn as a single Turn Action. Resolve each attack separately."
+    },{
+      "name": "Eradication Protocols",
+      "description": "If the Leviathan rolls a 'Nailed It' result (20) with an attack roll, it deals 4× damage instead of 2× damage."
+    },{
+      "name": "Heavily Armoured Chassis",
+      "description": "Any 'Nailed It' (20) result made against the Leviathan counts as a standard hit (11-19) and does not deal 2× damage or have any other bonus effect."
+    }],
     "description": "The pinnacle of the Evantis range, the 'Mk3' Leviathan is currently the only general release Super Heavy Mech available to buy on the Corpo Net. Enormously powerful, it can be fitted with a veritable arsenal of lasers, missiles, and cannons, as well as enough Modules to make those shots count. It uses a modified reactor from a 1,000 tonne terraforming rig, and is so heavily armoured that nothing short of a tactical nuke can take it out. If you find yourself against one of these, you will either need a madcap plan under your belt to stop it or a good pair of running boots.",
     "patterns": [
       {
@@ -2139,7 +2153,19 @@
       "tech_level": 6,
       "salvage_value": 6
     },
-    "chassis_ability": "Integrated VTU System: The Shaitan has an integrated Vectored Thrust Unit System which is included in its profile. This functions as a standard VTU System.\n\nFlashy: The Shaitan has the Flashy Trait. It is incredibly stunning to look at and fills onlookers with awe and admiration.\n\nFast: The Shaitan can move an additional Range Band on its turn as a free action. In addition, it moves twice as fast across the Campaign, Area, and Region Maps.\n\nPolycarbonate Stealth Chassis: The Shaitan cannot be targeted with anything that uses the Targeter Trait such as targeting Modules. It also cannot be seen by anything with the Optics Trait or Scanner Trait. It does not appear on sensors, radar systems, or scanners and needs direct visual confirmation to be spotted.",
+    "chassis_abilities": [{
+      "name": "Integrated VTU System",
+      "description": "The Shaitan has an integrated Vectored Thrust Unit System which is included in its profile. This functions as a standard VTU System."
+    },{
+      "name": "Flashy",
+      "description": "The Shaitan has the Flashy Trait. It is incredibly stunning to look at and fills onlookers with awe and admiration."
+    },{
+      "name": "Fast",
+      "description": "The Shaitan can move an additional Range Band on its turn as a free action. In addition, it moves twice as fast across the Campaign, Area, and Region Maps."
+    },{
+      "name": "Polycarbonate Stealth Chassis",
+      "description": "The Shaitan cannot be targeted with anything that uses the Targeter Trait such as targeting Modules. It also cannot be seen by anything with the Optics Trait or Scanner Trait. It does not appear on sensors, radar systems, or scanners and needs direct visual confirmation to be spotted."
+    }],
     "description": "The 'v3.94.0' Shaitan is a custom crafted and over-designed Mech favoured by corpo execs who want to play. It packs an exec body suit, custom branding, high speed actuators, gold plated gyroscopes, and an array of hood ornaments. Even its bells have whistles. It can hit a max top speed that rivals all but the fastest of pure mil-tech design, and has a polycarb Chassis as well as integrated VTU for extra mileage. It contains frankly too many Module slots, allowing it to pack in extended comms, advanced optics, and multiple recreational devices.",
     "patterns": [
       {
