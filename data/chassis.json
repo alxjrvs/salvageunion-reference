@@ -1129,7 +1129,7 @@
         "activationCost": 2,
         "range": "Medium",
         "actionType": "Turn",
-        "description": "You take control of one of the following devices within Range, whilst it is under your control you may send it commands such as attack, move, activate, or power down/up as well as read any data it receives. You may not take other actions whilst it is under your control. Relinquishing control is a Free Action. • Security Cameras (Free Action to Command) • Automated Doors (Free Action to Command) • Lights (Free Action to Command) • Defensive Turrets (Turn Action to Command) • Drones (Turn Action to Command) When this Module is activated you may pay 1 EP per additional device you would like to control.",
+        "description": "You take control of one of the following devices within Range, whilst it is under your control you may send it commands such as attack, move, activate, or power down/up as well as read any data it receives. You may not take other actions whilst it is under your control. Relinquishing control is a Free Action.\n• Security Cameras (Free Action to Command)\n• Automated Doors (Free Action to Command)\n• Lights (Free Action to Command)\n• Defensive Turrets (Turn Action to Command)\n• Drones (Turn Action to Command) When this Module is activated you may pay 1 EP per additional device you would like to control.",
         "traits": [{
           "type": "hacking"
         }]
