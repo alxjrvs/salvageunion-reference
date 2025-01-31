@@ -12,7 +12,8 @@
         "module_slots": { "type": "number" },
         "cargo_cap": { "type": "number" },
         "tech_level": { "type": "number" },
-        "salvage_value": { "type": "number" }
+        "salvage_value": { "type": "number" },
+        "notes": { "type": "string" }
       }
     },
     "action": {

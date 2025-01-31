@@ -1027,7 +1027,8 @@
         "module_slots": 2,
         "cargo_cap": 3,
         "tech_level": 3,
-        "salvage_value": 2
+        "salvage_value": 2,
+        "notes": "Integrated Hover Locomotion System"
       }
     }],
     "description": "The 'НC-15' Little Sestra is a Mech designed by DronTek Systems to control a Sestra Drone in the field. Little Sestra Mechs are utilised for reconnaissance or in larger numbers to support DronTek's Big Brother Mechs in battle. Sestra Mechs were utilised effectively in the First Corpo War to pick off retreating Evantis forces following their failed invasion of the Northern Wastes. The majority of remote drones are unusable in the wastes, but the Little Sestra's high end, specialised drone controller continues to function where others have failed.",
