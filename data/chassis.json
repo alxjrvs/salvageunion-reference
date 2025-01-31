@@ -22,6 +22,7 @@
       {
         "name": "Hauler Pattern",
         "description": "This Mule, favoured by wastelanders and traders alike, is designed for hauling cargo, whilst being armed with some rudimentary defences.",
+        "legalStarting": true,
         "systems": [
           ".50 Cal Machine Gun",
           "Escape Hatch",
@@ -93,6 +94,7 @@
       {
         "name": "Buzzard Pattern",
         "description": "Buzzards of the wastes, raiders relish these builds as it lets them overheat larger Mechs whilst stripping the flesh off of anything else.",
+        "legalStarting": true,
         "systems": [
           "FM-3 Flamethrower",
           "FM-3 Flamethrower",
@@ -156,6 +158,7 @@
       {
         "name": "Leaky Pattern",
         "description": "The wasteland Scrapper is vital for survival, allowing repair, defence, and maintenance of a waster settlement even in the harshest of conditions.",
+        "legalStarting": true,
         "systems": [
           "Chainsaw Arm",
           "Escape Hatch",
@@ -223,6 +226,7 @@
       {
         "name": "Settler Pattern",
         "description": "Wastelanders who get hold of one of these can far more easily relocate their settlements and glean crucial information about potential settlement sites.",
+        "legalStarting": true,
         "systems": [
           ".50 Cal Machine Gun",
           "Escape Hatch",
@@ -292,6 +296,7 @@
       {
         "name": "Shepherd Pattern",
         "description": "Wastelanders do not have a lot to farm, but a settlement that gets hold of one of these can defend itself pretty well from raiders.",
+        "legalStarting": true,
         "systems": [
           "Red Laser",
           "Armour Plating",
