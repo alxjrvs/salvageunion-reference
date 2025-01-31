@@ -12,7 +12,7 @@
       "chassis_abilities": {
         "type": "array",
         "items": {
-          "$ref": "object.schema.json#/definitions/action"
+          "$ref": "shared/objects.schema.json#/definitions/action"
         }
       },
       "description": {

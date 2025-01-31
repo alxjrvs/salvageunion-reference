@@ -18,6 +18,7 @@
       "range": { "$ref": "shared/enums.schema.json#/definitions/range" },
       "damage": { "$ref": "shared/common.schema.json#/definitions/damage" },
       "actionType": { "$ref": "shared/enums.schema.json#/definitions/actionType" },
+      "rollTable": { "$ref": "shared/common.schema.json#/definitions/rollTable" },
       "actions": {
         "type": "array",
         "items": { "$ref": "shared/objects.schema.json#/definitions/action" }
