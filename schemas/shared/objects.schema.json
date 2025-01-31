@@ -1,6 +1,20 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema",
   "definitions": {
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "structure_pts": { "type": "number" },
+        "energy_pts": { "type": "number" },
+        "heat_cap": { "type": "number" },
+        "system_slots": { "type": "number" },
+        "module_slots": { "type": "number" },
+        "cargo_cap": { "type": "number" },
+        "tech_level": { "type": "number" },
+        "salvage_value": { "type": "number" }
+      }
+    },
     "action": {
       "type": "object",
       "additionalProperties": false,
