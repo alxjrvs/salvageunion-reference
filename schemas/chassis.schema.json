@@ -22,8 +22,11 @@
           "salvage_value": { "type": "number" }
         }
       },
-      "chassis_ability": {
-        "type": "string"
+      "chassis_abilities": {
+        "type": "array",
+        "items": {
+          "$ref": "object.schema.json#/definitions/action"
+        }
       },
       "description": {
         "type": "string"
