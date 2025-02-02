@@ -1,6 +1,6 @@
 [
   {
-    "source": "Core",
+    "source": "core",
     "name": "Core Mechanic Table",
     "section": "core",
     "rollTable": {
@@ -12,7 +12,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "Group Initiative Table",
     "section": "action scene",
     "rollTable": {
@@ -24,7 +24,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "Critical Injury Table",
     "section": "damage",
     "rollTable": {
@@ -36,7 +36,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "Critical Damage Table",
     "section": "damage",
     "rollTable": {
@@ -48,7 +48,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "Reactor Overload Table",
     "section": "heat",
     "rollTable": {
@@ -60,7 +60,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "Area Salvage Table",
     "section": "salvaging",
     "rollTable": {
@@ -72,7 +72,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "Mech Salvage Table",
     "section": "salvaging",
     "rollTable": {
@@ -84,7 +84,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "Reaction Roll Table",
     "section": "npc tables",
     "rollTable": {
@@ -96,7 +96,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "NPC Action Table",
     "section": "npc tables",
     "rollTable": {
@@ -108,7 +108,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "Morale Table",
     "section": "npc tables",
     "rollTable": {
@@ -120,7 +120,7 @@
     }
   },
   {
-    "source": "Core",
+    "source": "core",
     "name": "Retreat Table",
     "section": "npc tables",
     "rollTable": {

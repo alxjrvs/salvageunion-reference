@@ -1,6 +1,6 @@
 [
   {
-    "source": "Core",
+    "source": "core",
     "category": "Bio-Titans",
     "name": "Scylla",
     "description": "A gigantic, armoured, arachnid-like predator beast. It has no concept that the war it was designed to fight ended aeons ago, and continues to tear apart anything that enters into its mountainous domain.",
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Bio-Titans",
     "name": "Typhon",
     "description": "Vengeance of the earth. This terrifying spiked worm can even swallow a Colossus whole. Some believe the spirits of miners in the Ferrous Range, who died in industrial accidents, summoned this being in vengeance.",
@@ -117,7 +117,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Bio-Titans",
     "name": "Chrysalis",
     "description": "A mammoth flying insect with a wingspan the size of a city and an entrancing song that captures the souls of mortals. Said to inhabit a cave in the Verdant Crescent, it is worshipped by the wastelanders who live there as a god.",
@@ -191,7 +191,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Bio-Titans",
     "name": "Phantom",
     "description": "A multi-scythed being that can bend itself through reality. Rumoured to have been crafted in the Opus Institute Research Lab in the Frozen Gulf before breaking free to wreak havoc.",
@@ -238,7 +238,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Bio-Titans",
     "name": "Electrophorus",
     "description": "A vast, eel-like Bio-Titan able to harness bioelectric energy. Rumoured to dwell at the deepest point of the world's oceans within the Amara Trench in the Oceanic Rim.",
@@ -305,7 +305,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Bio-Titans",
     "name": "Tyrant",
     "description": "A mammoth, amphibian lizard said to have been born in the aftermath of the first nuclear war. It dwells somewhere deep within The Great Cape and was responsible for the destruction of the Kombu Tech home arco, a coastal city of a million souls.",
@@ -416,7 +416,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Meld",
     "name": "Meld Drone",
     "description": "Meld when they take over a biological organism, around the size of a human. The brain is sludged, only the stem remains, they become a peon of the swarm.",
@@ -443,7 +443,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Meld",
     "name": "Meld Drone Swarm",
     "description": "A swarm of multiple zombie-like Meld Drones",
@@ -474,7 +474,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Meld",
     "name": "Meld Nanoid",
     "description": "Meld in a small, swift form, about the size of a large wolf with lashing tendrils.",
@@ -506,7 +506,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Meld",
     "name": "Meld Splitter",
     "description": "Formless inky darkness, Meld Splitters are around the height of a Mech and made of boundless swarms of coagulated meld.",
@@ -541,7 +541,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Meld",
     "name": "Meld Behemoth",
     "description": "The apex Meld, the size of a high rise building. Having assimilated vast quantities of mechanical and biological entities, it becomes a force even the toughest of Mechs struggle to reckon with.",
@@ -583,7 +583,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Vehicles",
     "name": "Power Loader",
     "description": "A pneumatically powered heavy loader for moving cargo.",
@@ -614,7 +614,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Vehicles",
     "name": "Box Wheel",
     "description": "A four seater box wheel vehicle designed for recreational driving. Not a lot of these nowadays.",
@@ -637,7 +637,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Vehicles",
     "name": "Fighting Box Wheel",
     "description": "An improvised fighting vehicle, modified to carry heavy weaponry.",
@@ -679,7 +679,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Vehicles",
     "name": "Armoured Box Wheel",
     "description": "An armoured, wheeled vehicle that carries personnel and provides fire support",
@@ -718,7 +718,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Vehicles",
     "name": "Tank",
     "description": "A conventional tracked, armoured battle vehicle.",
@@ -749,7 +749,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Vehicles",
     "name": "Rotorcraft",
     "description": "A flying vehicle that can hover over terrain.",
@@ -799,7 +799,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Vehicles",
     "name": "Machine Gun Turret",
     "description": "A static gun emplacement.",
@@ -834,7 +834,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Drones",
     "name": "Defacer Drone",
     "description": "Used for salvaging and crowd control, their distinctive buzzsaw sound has struck fear into many protesters.",
@@ -864,7 +864,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Drones",
     "name": "Salvo Drone",
     "description": "A simple machine gun drone often used to defend areas of strategic importance.",
@@ -897,7 +897,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Drones",
     "name": "Survey Drone",
     "description": "An unarmed drone used as a reconnaissance tool.",
@@ -914,7 +914,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Drones",
     "name": "Combat Drone",
     "description": "A laser armed drone used in a defensive capacity.",
@@ -945,7 +945,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Drones",
     "name": "Heavy Combat Drone",
     "description": "A heavily armoured drone designed for battlefield use.",
@@ -975,7 +975,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Drones",
     "name": "Walker Drone",
     "description": "An anthropomorphic, Mech-like drone.",
@@ -1009,7 +1009,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Drones",
     "name": "Pest Drone",
     "description": "A versatile multi-legged drone armed with a flamethrower for 'industrial' use.",
@@ -1048,7 +1048,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Drones",
     "name": "Hover Drone",
     "description": "A highly mobile missile platform used in offensive and defensive roles.",
@@ -1087,7 +1087,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Drones",
     "name": "Needle Drone",
     "description": "A miniaturised corpo stealth drone developed for black ops and wetwork.",
@@ -1121,7 +1121,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Creatures",
     "name": "Irradiated Scorpion",
     "description": "Mutated beyond their usual size, they have been known to kill entire camps of wasters.",
@@ -1149,7 +1149,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Creatures",
     "name": "Artl",
     "description": "Burrowing, ambush predators that liquify their prey for easier digestion.",
@@ -1181,7 +1181,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Creatures",
     "name": "Chimeripede",
     "description": "A mutated, radiation scarred amalgamation of flesh.",
@@ -1213,7 +1213,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Creatures",
     "name": "Wasteland Bear",
     "description": "Large, hungry, and ferocious, these bears are not just after your picnic basket.",
@@ -1235,7 +1235,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Creatures",
     "name": "Molebear",
     "description": "Terrifying, huge burrowing predators known to rend through metal.",
@@ -1262,7 +1262,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Creatures",
     "name": "Carrion Bird",
     "description": "Large flying scavengers that feast on flesh and bone.",
@@ -1284,7 +1284,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "People",
     "name": "Wastelander",
     "description": "Represents the myriad of common denizens of the wastelands.",
@@ -1309,7 +1309,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "People",
     "name": "Raider",
     "description": "Wastelanders who take what they need by force.",
@@ -1334,7 +1334,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "People",
     "name": "Trooper",
     "description": "Combat trained troops deployed in a wide range of roles.",
@@ -1359,7 +1359,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "People",
     "name": "Veteran",
     "description": "A well trained and seasoned soldier deployed on difficult operations.",
@@ -1384,7 +1384,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "People",
     "name": "Combat Pilot",
     "description": "A combat trained Mech Pilot, such as a Union Salvager.",
@@ -1409,7 +1409,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "People",
     "name": "Ace",
     "description": "A veteran Mech Pilot, usually with Corpo training.",
@@ -1434,7 +1434,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Squads",
     "name": "Waster Mob",
     "description": "A mob of wastelanders with improvised weapons.",
@@ -1463,7 +1463,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Squads",
     "name": "Raider Band",
     "description": "A band of raiders hungry for scrap.",
@@ -1492,7 +1492,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Squads",
     "name": "Rifle Squad",
     "description": "A group of grunts armed with rifles.",
@@ -1524,7 +1524,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Squads",
     "name": "Machine Gun Squad",
     "description": "Combat trained troops armed with a mobile heavy machine gun.",
@@ -1562,7 +1562,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Squads",
     "name": "Missile Squad",
     "description": "Combat trained troops armed with a mobile missile launcher.",
@@ -1602,7 +1602,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Squads",
     "name": "Elite Blade Squad",
     "description": "Heavy assault troops armed with energised blades.",
@@ -1637,7 +1637,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Squads",
     "name": "Elite Beam Squad",
     "description": "Apex troops in heavy armour armed with a big ol' gun.",
@@ -1677,7 +1677,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Squads",
     "name": "Wasteland Herd",
     "description": "A herd of wasteland creatures.",
@@ -1704,7 +1704,7 @@
     ]
   },
   {
-    "source": "Core",
+    "source": "core",
     "category": "Squads",
     "name": "Drone Squadron",
     "description": "A swarm of Combat Drones flying in sync.",

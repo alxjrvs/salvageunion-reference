@@ -1,7 +1,7 @@
 [
   {
     "name": "Mule",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 12,
       "energy_pts": 4,
@@ -74,7 +74,7 @@
   },
   {
     "name": "Mazona",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 5,
       "energy_pts": 10,
@@ -139,7 +139,7 @@
   },
   {
     "name": "Scrapper",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 9,
       "energy_pts": 9,
@@ -210,7 +210,7 @@
   },
   {
     "name": "Spectrum",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 17,
       "energy_pts": 11,
@@ -281,7 +281,7 @@
   },
   {
     "name": "Thresher",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 15,
       "energy_pts": 6,
@@ -348,7 +348,7 @@
   },
   {
     "name": "Forge",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 16,
       "energy_pts": 13,
@@ -447,7 +447,7 @@
   },
   {
     "name": "Gopher",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 14,
       "energy_pts": 10,
@@ -518,7 +518,7 @@
   },
   {
     "name": "Hussar",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 12,
       "energy_pts": 10,
@@ -591,7 +591,7 @@
   },
   {
     "name": "Jackhammer",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 18,
       "energy_pts": 7,
@@ -673,7 +673,7 @@
   },
   {
     "name": "Kraken",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 24,
       "energy_pts": 10,
@@ -753,7 +753,7 @@
   },
   {
     "name": "Magpie",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 15,
       "energy_pts": 12,
@@ -828,7 +828,7 @@
   },
   {
     "name": "Mirrorball",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 16,
       "energy_pts": 14,
@@ -898,7 +898,7 @@
   },
   {
     "name": "Atlas",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 30,
       "energy_pts": 10,
@@ -973,7 +973,7 @@
   },
   {
     "name": "Brawler",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 25,
       "energy_pts": 10,
@@ -1045,7 +1045,7 @@
   },
   {
     "name": "Little Sestra",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 15,
       "energy_pts": 8,
@@ -1060,7 +1060,7 @@
       {
         "name": "Sestra Drone Controller",
         "description": "The Little Sestra comes with a single Sestra Drone that it controls up to Far Range. Roll on the A.I. Personality Table for the drone's personality. The Sestra Drone acts separately to the Little Sestra on its own turn, and is controlled by the Pilot. It functions effectively as a Mech, but cannot Push. It can be installed with Systems and Modules and restores its SP and EP in a T3 or higher Mech Bay during Downtime. If the Drone is damaged it can be repaired as though it was a Mech. If it is destroyed you may craft a new Sestra Drone for 2 Tech 3 Scrap as per the crafting rules. The Little Sestra may have one active Sestra Drone at a time.",
-        "source": "Core",
+        "source": "core",
         "stats": {
           "structure_pts": 7,
           "energy_pts": 8,
@@ -1153,7 +1153,7 @@
   },
   {
     "name": "Mantis",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 15,
       "energy_pts": 17,
@@ -1267,7 +1267,7 @@
   },
   {
     "name": "Photon",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 20,
       "energy_pts": 10,
@@ -1340,7 +1340,7 @@
   },
   {
     "name": "Solo",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 16,
       "energy_pts": 13,
@@ -1415,7 +1415,7 @@
   },
   {
     "name": "Terra",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 23,
       "energy_pts": 12,
@@ -1489,7 +1489,7 @@
   },
   {
     "name": "Aegis",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 24,
       "energy_pts": 16,
@@ -1571,7 +1571,7 @@
   },
   {
     "name": "Colossus",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 36,
       "energy_pts": 12,
@@ -1648,7 +1648,7 @@
   },
   {
     "name": "Consul",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 15,
       "energy_pts": 16,
@@ -1730,7 +1730,7 @@
   },
   {
     "name": "Drop Bear",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 26,
       "energy_pts": 14,
@@ -1808,7 +1808,7 @@
   },
   {
     "name": "Vorpal",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 18,
       "energy_pts": 12,
@@ -1880,7 +1880,7 @@
   },
   {
     "name": "Carrier",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 35,
       "energy_pts": 16,
@@ -1954,7 +1954,7 @@
   },
   {
     "name": "Eidolon",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 21,
       "energy_pts": 15,
@@ -2040,7 +2040,7 @@
   },
   {
     "name": "Neura-Phage",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 29,
       "energy_pts": 11,
@@ -2109,7 +2109,7 @@
   },
   {
     "name": "Iron Wyrm",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 46,
       "energy_pts": 15,
@@ -2186,7 +2186,7 @@
   },
   {
     "name": "Leviathan",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 76,
       "energy_pts": 14,
@@ -2278,7 +2278,7 @@
   },
   {
     "name": "Shaitan",
-    "source": "Core",
+    "source": "core",
     "stats": {
       "structure_pts": 21,
       "energy_pts": 20,
