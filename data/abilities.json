@@ -1,6 +1,7 @@
 [
   {
     "name": "Engineering Expertise",
+    "source": "Core",
     "tree": "Mechanical Knowledge",
     "level": 1,
     "description": "Ask questions pertaining to mechanical and engineering topics.",
@@ -10,6 +11,7 @@
   },
   {
     "name": "Talk Shop",
+    "source": "Core",
     "tree": "Mechanical Knowledge",
     "level": 2,
     "description": "Build rapport, and ask favours of other mechanics, salvagers, and workers.",
@@ -19,6 +21,7 @@
   },
   {
     "name": "Mech Acquisition",
+    "source": "Core",
     "tree": "Mechanical Knowledge",
     "level": 3,
     "description": "Track down and acquire specific Mech parts and Chassis.",
@@ -28,6 +31,7 @@
   },
   {
     "name": "Mass Field Maintenance",
+    "source": "Core",
     "tree": "Mech-Tech",
     "level": 1,
     "description": "Repair 4 SP on target Mechs or Vehicles in the field.",
@@ -38,6 +42,7 @@
   },
   {
     "name": "If I cut this wire...",
+    "source": "Core",
     "tree": "Mech-Tech",
     "level": 2,
     "description": "Damage Systems and Modules on target Mech.",
@@ -48,6 +53,7 @@
   },
   {
     "name": "Mass Field Repair",
+    "source": "Core",
     "tree": "Mech-Tech",
     "level": 3,
     "description": "Repair target Systems and Modules in the field.",
@@ -58,6 +64,7 @@
   },
   {
     "name": "Jury Rig",
+    "source": "Core",
     "tree": "Forging",
     "level": 1,
     "description": "Craft improvised equipment from everyday items.",
@@ -67,6 +74,7 @@
   },
   {
     "name": "Mech-Gyver",
+    "source": "Core",
     "tree": "Forging",
     "level": 2,
     "description": "Craft Mech Systems and Modules from Scrap in the field.",
@@ -76,6 +84,7 @@
   },
   {
     "name": "Auto-Turret",
+    "source": "Core",
     "tree": "Forging",
     "level": 3,
     "description": "Construct an Immobile Auto-Turret that can be fitted with Systems and Modules.",
@@ -90,6 +99,7 @@
   },
   {
     "name": "Union Engineer",
+    "source": "Core",
     "tree": "Advanced Engineer",
     "level": 1,
     "description": "Improved repair; gain an additional 4SP when using Repair abilities or Systems.",
@@ -99,6 +109,7 @@
   },
   {
     "name": "This one goes to 11...",
+    "source": "Core",
     "tree": "Advanced Engineer",
     "level": 2,
     "description": "Overcharge a Reactor beyond it’s initial capacity to gain additional Pushes.",
@@ -109,6 +120,7 @@
   },
   {
     "name": "Mass Energy Recharge",
+    "source": "Core",
     "tree": "Advanced Engineer",
     "level": 3,
     "description": "Restore 10 Energy Points to target Mechs in the field.",
@@ -119,6 +131,7 @@
   },
   {
     "name": "Tip Top Shape",
+    "source": "Core",
     "tree": "Legendary Engineer",
     "level": 1,
     "description": "Your Union Crawler no longer needs to pay upkeep and does not deteriorate.",
@@ -127,6 +140,7 @@
   },
   {
     "name": "The Full Works",
+    "source": "Core",
     "tree": "Legendary Engineer",
     "level": 1,
     "description": "Fully repair and restore a target Mech and all attached Systems and Modules.",
@@ -137,6 +151,7 @@
   },
   {
     "name": "Hacking Kit",
+    "source": "Core",
     "tree": "Hacking",
     "level": 1,
     "description": "Versatile tool for allowing Mech Module hacks on foot and vice-versa.",
@@ -152,6 +167,7 @@
   },
   {
     "name": "System and Software Hacker",
+    "source": "Core",
     "tree": "Hacking",
     "level": 2,
     "description": "Attempt to destroy Systems and Modules on target Mech.",
@@ -174,6 +190,7 @@
   },
   {
     "name": "Denial of Service Attack",
+    "source": "Core",
     "tree": "Hacking",
     "level": 3,
     "description": "Attempt to Shutdown target Mech in Range.",
@@ -196,6 +213,7 @@
   },
   {
     "name": "Well actually...",
+    "source": "Core",
     "tree": "Electronics",
     "level": 1,
     "description": "Ask questions about Systems, Modules, or Technology.",
@@ -212,6 +230,7 @@
   },
   {
     "name": "Techno Babble",
+    "source": "Core",
     "tree": "Electronics",
     "level": 2,
     "description": "Build rapport and ask favours of other Hackers and technophiles.",
@@ -221,6 +240,7 @@
   },
   {
     "name": "Holo Companion",
+    "source": "Core",
     "tree": "Electronics",
     "level": 3,
     "description": "Construct an intelligent, holographic A.I. companion, projected from a device on your person.",
@@ -233,6 +253,7 @@
   },
   {
     "name": "Bionic Senses",
+    "source": "Core",
     "tree": "Augmentation",
     "level": 1,
     "description": "Gain integrated Thermal Optics, Zoom Optics, or IR Night Vision Optics.",
@@ -241,6 +262,7 @@
   },
   {
     "name": "Bionic Arms",
+    "source": "Core",
     "tree": "Augmentation",
     "level": 2,
     "description": "Gain a set of integrated Bionic Arms. Gives an improved base attack.",
@@ -249,6 +271,7 @@
   },
   {
     "name": "Bionic Legs",
+    "source": "Core",
     "tree": "Augmentation",
     "level": 3,
     "description": "Gain a set of integrated Bionic Legs. Gives improved base movement.",
@@ -257,6 +280,7 @@
   },
   {
     "name": "Trojan Horse",
+    "source": "Core",
     "tree": "Advanced Hacking",
     "level": 1,
     "description": "Gain control of a Mech in Range as if it were yours for 10 minutes.",
@@ -272,6 +296,7 @@
   },
   {
     "name": "Counter-Hacking",
+    "source": "Core",
     "tree": "Advanced Hacking",
     "level": 2,
     "description": "Attempt to use an Ability with the Hacking Trait as a Reaction to being hacked.",
@@ -294,6 +319,7 @@
   },
   {
     "name": "Worm",
+    "source": "Core",
     "tree": "Advanced Hacking",
     "level": 3,
     "description": "Hack multiple Mechs in Range with a complex worm virus.",
@@ -316,6 +342,7 @@
   },
   {
     "name": "Network Takeover",
+    "source": "Core",
     "tree": "Legendary Hacker",
     "level": 1,
     "description": "Hack the entire network of a settlement in range. Control it as you wish.",
@@ -331,6 +358,7 @@
   },
   {
     "name": "Spyware",
+    "source": "Core",
     "tree": "Legendary Hacker",
     "level": 1,
     "description": "Permanent and undetectable spyware you can install on a settlement’s network.",
@@ -346,6 +374,7 @@
   },
   {
     "name": "Squeeze it in",
+    "source": "Core",
     "tree": "Salvaging",
     "level": 1,
     "description": "Temporariliy increase the cargo capacity of a Mech.",
@@ -356,6 +385,7 @@
   },
   {
     "name": "Expert Salvager",
+    "source": "Core",
     "tree": "Salvaging",
     "level": 2,
     "description": "Gain additional salvage when Area Salvaging. Bypass the die roll when salvaging a Mech.",
@@ -364,6 +394,7 @@
   },
   {
     "name": "Emergency Salvage Drop",
+    "source": "Core",
     "tree": "Salvaging",
     "level": 3,
     "description": "Retrieve Chassis, Systems, Modules, Scrap, and Equipment from your Crawler.",
@@ -373,6 +404,7 @@
   },
   {
     "name": "Read a Person",
+    "source": "Core",
     "tree": "Trading",
     "level": 1,
     "description": "Learn information about an NPC you’re conversing with.",
@@ -382,6 +414,7 @@
   },
   {
     "name": "Let’s Make a Deal",
+    "source": "Core",
     "tree": "Trading",
     "level": 2,
     "description": "Attempt to force a deal through on your terms using leverage.",
@@ -398,6 +431,7 @@
   },
   {
     "name": "No Job Too Big",
+    "source": "Core",
     "tree": "Trading",
     "level": 3,
     "description": "When reduced to 0 HP or your Mech is reduced to 0 SP, take a Turn Action or Reaction.",
@@ -407,6 +441,7 @@
   },
   {
     "name": "Folk Song",
+    "source": "Core",
     "tree": "Leadership",
     "level": 1,
     "description": "Sing a song to set a mood for an audience of NPCs.",
@@ -416,6 +451,7 @@
   },
   {
     "name": "Behemoth",
+    "source": "Core",
     "tree": "Leadership",
     "level": 2,
     "description": "Intimidate opponents and force them to accept your demands or flee.",
@@ -433,6 +469,7 @@
   },
   {
     "name": "Valiant Speech",
+    "source": "Core",
     "tree": "Leadership",
     "level": 3,
     "description": "Inspire you allies with a rousing speech which heals and provides them with bonuses.",
@@ -442,6 +479,7 @@
   },
   {
     "name": "Beefcake",
+    "source": "Core",
     "tree": "Advanced Hauler",
     "level": 1,
     "description": "Increase your size and strength, as well as the size and strength of your Mech.",
@@ -450,6 +488,7 @@
   },
   {
     "name": "Mechapult Master",
+    "source": "Core",
     "tree": "Advanced Hauler",
     "level": 2,
     "description": "Improve your ability with the Mechapult System.",
@@ -459,6 +498,7 @@
   },
   {
     "name": "Can’t Stop, Won’t Stop",
+    "source": "Core",
     "tree": "Advanced Hauler",
     "level": 3,
     "description": "Gain a special charge attack. Damage is based on cargo carried.",
@@ -474,6 +514,7 @@
   },
   {
     "name": "Master Salvager",
+    "source": "Core",
     "tree": "Legendary Hauler",
     "level": 1,
     "description": "Restore destroyed Systems Modules, and Mechs to Damaged Condition.",
@@ -484,6 +525,7 @@
   },
   {
     "name": "Hauling All Day",
+    "source": "Core",
     "tree": "Legendary Hauler",
     "level": 1,
     "description": "Any Mech that you Pilot doubles its Structure Points and Cargo Capacity.",
@@ -492,6 +534,7 @@
   },
   {
     "name": "Gather Intelligence",
+    "source": "Core",
     "tree": "Recon",
     "level": 1,
     "description": "Ask two questions about an area and recieve truthful answers.",
@@ -501,6 +544,7 @@
   },
   {
     "name": "Tail",
+    "source": "Core",
     "tree": "Recon",
     "level": 2,
     "description": "Track a target without being seen.",
@@ -511,6 +555,7 @@
   },
   {
     "name": "Survey Drone",
+    "source": "Core",
     "tree": "Recon",
     "level": 3,
     "description": "Gain a Survey Drone that can be equipped with Systems and Modules.",
@@ -523,6 +568,7 @@
   },
   {
     "name": "Silver Tongue",
+    "source": "Core",
     "tree": "Sleuth",
     "level": 1,
     "description": "Glean what motivates an NPC and use it to convince them to do as you wish.",
@@ -532,6 +578,7 @@
   },
   {
     "name": "Forked Tongue",
+    "source": "Core",
     "tree": "Sleuth",
     "level": 2,
     "description": "Lie with confidence and great skill to fool even the most insightful.",
@@ -541,6 +588,7 @@
   },
   {
     "name": "Persona",
+    "source": "Core",
     "tree": "Sleuth",
     "level": 3,
     "description": "Disguise yourself and create a false identity.",
@@ -550,6 +598,7 @@
   },
   {
     "name": "You Shot First",
+    "source": "Core",
     "tree": "Sniper",
     "level": 1,
     "description": "Activate this to act first whenever initiative would be rolled.",
@@ -559,6 +608,7 @@
   },
   {
     "name": "Spotter",
+    "source": "Core",
     "tree": "Sniper",
     "level": 2,
     "description": "Chooose a target in range for an ally to make a free attack against.",
@@ -569,6 +619,7 @@
   },
   {
     "name": "Custom Sniper Rifle",
+    "source": "Core",
     "tree": "Sniper",
     "level": 3,
     "description": "Gain a specialised sniper rifle that only you can use.",
@@ -581,6 +632,7 @@
   },
   {
     "name": "Flashback",
+    "source": "Core",
     "tree": "Advanced Scout",
     "level": 1,
     "description": "Activate to retroactively have a solution in place for the current situation.",
@@ -590,6 +642,7 @@
   },
   {
     "name": "Camo Suit",
+    "source": "Core",
     "tree": "Advanced Scout",
     "level": 2,
     "description": "Gain the use of an advanced Camo Suit that will make you invisible for short periods of time.",
@@ -607,6 +660,7 @@
   },
   {
     "name": "Wingsuit",
+    "source": "Core",
     "tree": "Advanced Scout",
     "level": 3,
     "description": "Gain a Wingsuit which allows you to fly.",
@@ -623,6 +677,7 @@
   },
   {
     "name": "Wasteland Celebrity",
+    "source": "Core",
     "tree": "Legendary Scout",
     "level": 1,
     "description": "You are known and respected everywhere and can get assistance when required.",
@@ -632,6 +687,7 @@
   },
   {
     "name": "Teleport Beacon",
+    "source": "Core",
     "tree": "Legendary Scout",
     "level": 1,
     "description": "Gain a beacon and controller. Activate the controller to be teleported to the beacon.",
@@ -646,6 +702,7 @@
   },
   {
     "name": "Charge",
+    "source": "Core",
     "tree": "Gladitorial Combat",
     "level": 1,
     "description": "Charge a target within Range and make a Melee attack with bonus damage.",
@@ -656,6 +713,7 @@
   },
   {
     "name": "Overpower",
+    "source": "Core",
     "tree": "Gladitorial Combat",
     "level": 2,
     "description": "Put and hold a target in a compromised position so that they gain the Vulnerable Trait.",
@@ -666,6 +724,7 @@
   },
   {
     "name": "Duel",
+    "source": "Core",
     "tree": "Gladitorial Combat",
     "level": 3,
     "description": "Compel a target in Range to fight you in single combat.",
@@ -676,6 +735,7 @@
   },
   {
     "name": "Wastelander Rapport",
+    "source": "Core",
     "tree": "Survivalist",
     "level": 1,
     "description": "Ask questions of locals and gain assistance when required.",
@@ -685,6 +745,7 @@
   },
   {
     "name": "Resourceful",
+    "source": "Core",
     "tree": "Survivalist",
     "level": 2,
     "description": "Find resources in the wastes and limit the effects of environmental conditions.",
@@ -694,6 +755,7 @@
   },
   {
     "name": "Custom Missile Launcher",
+    "source": "Core",
     "tree": "Survivalist",
     "level": 3,
     "description": "Gain a specialised Missile Launcher that only you can use.",
@@ -706,6 +768,7 @@
   },
   {
     "name": "Provoke",
+    "source": "Core",
     "tree": "Tactical Warfare",
     "level": 1,
     "description": "Taunt a target in Range to focus its attacks on you.",
@@ -716,6 +779,7 @@
   },
   {
     "name": "Tactical Retreat",
+    "source": "Core",
     "tree": "Tactical Warfare",
     "level": 2,
     "description": "Allow you and your allies to retreat safely to an adjacent Area.",
@@ -725,6 +789,7 @@
   },
   {
     "name": "Counterattack",
+    "source": "Core",
     "tree": "Tactical Warfare",
     "level": 3,
     "description": "Use as a reaction to make a single attack against the target that attacked you.",
@@ -734,6 +799,7 @@
   },
   {
     "name": "Critical Strike",
+    "source": "Core",
     "tree": "Advanced Soldier",
     "level": 1,
     "description": "Gain a ‘Nailed it’ result on attack rolls with a result of 19 - 20.",
@@ -742,6 +808,7 @@
   },
   {
     "name": "Defy Death",
+    "source": "Core",
     "tree": "Advanced Soldier",
     "level": 2,
     "description": "When reduced to 0 SP activate as a Reaction to be reduced to 1 SP instead.",
@@ -751,6 +818,7 @@
   },
   {
     "name": "Whirlwind Strike",
+    "source": "Core",
     "tree": "Advanced Soldier",
     "level": 3,
     "description": "Make an attack against all targets in Range with an equipped weapon.",
@@ -767,6 +835,7 @@
   },
   {
     "name": "Omega Strike",
+    "source": "Core",
     "tree": "Legendary Soldier",
     "level": 1,
     "description": "Coordinate an attack against a single target. You and each of your allies makes a free attack.",
@@ -776,6 +845,7 @@
   },
   {
     "name": "Steel Pact",
+    "source": "Core",
     "tree": "Legendary Soldier",
     "level": 1,
     "description": "Form a bond with a weapon. Gain an additional dice roll when attacking with that weapon.",
@@ -784,6 +854,7 @@
   },
   {
     "name": "Glanded Stims",
+    "source": "Core",
     "tree": "Cyborg",
     "level": 1,
     "description": "Gain additional actions on your turn, with the risk that you could cause yourself harm.",
@@ -800,6 +871,7 @@
   },
   {
     "name": "Modular Face Implant",
+    "source": "Core",
     "tree": "Cyborg",
     "level": 2,
     "description": "Install a Module interfaced directly to your brain.",
@@ -808,6 +880,7 @@
   },
   {
     "name": "Bionic Endoskeleton",
+    "source": "Core",
     "tree": "Cyborg",
     "level": 3,
     "description": "You are now fully bionic, your HP is now SP.",
@@ -816,6 +889,7 @@
   },
   {
     "name": "Meld Form",
+    "source": "Core",
     "tree": "Legendary Cyborg",
     "level": 1,
     "description": "You are now Meld. You can replicate Equipment and make Meld Tendril attacks.",
@@ -824,6 +898,7 @@
   },
   {
     "name": "Ascension",
+    "source": "Core",
     "tree": "Legendary Cyborg",
     "level": 1,
     "description": "You are now a virtual being. You control your Mech by wire, and can project your image holographically.",
@@ -832,6 +907,7 @@
   },
   {
     "name": "Field Fabrication",
+    "source": "Core",
     "tree": "Fabricator",
     "level": 1,
     "description": "Create Systems, Modules and Mech Chassis in the field.",
@@ -841,6 +917,7 @@
   },
   {
     "name": "Miniaturised EMP",
+    "source": "Core",
     "tree": "Fabricator",
     "level": 2,
     "description": "Gain a mini-EMP that when activated shuts down all electronics in Close Range for 10 mins.",
@@ -856,6 +933,7 @@
   },
   {
     "name": "Chassis Modder",
+    "source": "Core",
     "tree": "Fabricator",
     "level": 3,
     "description": "Modify your Mech Chassis to gain the Chassis Ability of another Mech in addition to its own.",
@@ -864,6 +942,7 @@
   },
   {
     "name": "System Miniaturisation",
+    "source": "Core",
     "tree": "Legendary Fabricator",
     "level": 1,
     "description": "Make Systems smaller to take up fewer slots and be usable as Pilot Equipment.",
@@ -872,6 +951,7 @@
   },
   {
     "name": "Droned Mech Conversion",
+    "source": "Core",
     "tree": "Legendary Fabricator",
     "level": 1,
     "description": "Your Mech can be piloted remotely up to Far range.",
@@ -880,6 +960,7 @@
   },
   {
     "name": "Mecha Companion",
+    "source": "Core",
     "tree": "Ranger",
     "level": 1,
     "description": "Gain a robot familiar. It can be equipped with Systems and Modules.",
@@ -892,6 +973,7 @@
   },
   {
     "name": "Snipe",
+    "source": "Core",
     "tree": "Ranger",
     "level": 2,
     "description": "Deal double damage on your next ranged weapon attack if it hits.",
@@ -901,6 +983,7 @@
   },
   {
     "name": "Infiltration",
+    "source": "Core",
     "tree": "Ranger",
     "level": 3,
     "description": "Sneak into compounds, settlements and arcos to perform acts of espionage.",
@@ -910,6 +993,7 @@
   },
   {
     "name": "Mecha Packmaster",
+    "source": "Core",
     "tree": "Legendary Ranger",
     "level": 1,
     "description": "Gain a second Mecha Companion in addition to your first.",
@@ -922,6 +1006,7 @@
   },
   {
     "name": "One with the Wastelands",
+    "source": "Core",
     "tree": "Legendary Ranger",
     "level": 1,
     "description": "Ask questions, gain favours and easily navigate the wastes.",
@@ -930,6 +1015,7 @@
   },
   {
     "name": "Black Market",
+    "source": "Core",
     "tree": "Smuggler",
     "level": 1,
     "description": "Gain access to a range of contraband Systems, Modules, and Pilot Equipment.",
@@ -938,6 +1024,7 @@
   },
   {
     "name": "Pray I don’t alter the deal further...",
+    "source": "Core",
     "tree": "Smuggler",
     "level": 2,
     "description": "Retroactively change the terms of a deal you’ve agreed.",
@@ -947,6 +1034,7 @@
   },
   {
     "name": "Hidden Stash",
+    "source": "Core",
     "tree": "Smuggler",
     "level": 3,
     "description": "Smuggle contraband into even the most secure areas.",
@@ -956,6 +1044,7 @@
   },
   {
     "name": "Knife Missile",
+    "source": "Core",
     "tree": "Legendary Smuggler",
     "level": 1,
     "description": "Gain a Knife Missile, a small floating assassination device you control.",
@@ -978,6 +1067,7 @@
   },
   {
     "name": "Stealth Field Generator",
+    "source": "Core",
     "tree": "Legendary Smuggler",
     "level": 1,
     "description": "This makes you and everything in Close range invisible indefinitely.",
@@ -993,6 +1083,7 @@
   },
   {
     "name": "Union Representative",
+    "source": "Core",
     "tree": "Union Rep",
     "level": 1,
     "description": "Gain access to and ask questions about settlements and arcos.",
@@ -1001,6 +1092,7 @@
   },
   {
     "name": "Union Call",
+    "source": "Core",
     "tree": "Union Rep",
     "level": 2,
     "description": "Direct other Pilots to carry out missions in exchange for a Scrap reward.",
@@ -1016,6 +1108,7 @@
   },
   {
     "name": "Recruit",
+    "source": "Core",
     "tree": "Union Rep",
     "level": 3,
     "description": "Command an NPC follower who will assist you in your missions.",
@@ -1025,6 +1118,7 @@
   },
   {
     "name": "VIP Beacon",
+    "source": "Core",
     "tree": "Legendary Union Rep",
     "level": 1,
     "description": "Place a distress beacon to call for aid, which arrives quickly and heavily armed.",
@@ -1039,6 +1133,7 @@
   },
   {
     "name": "Inspirational Union Leader",
+    "source": "Core",
     "tree": "Legendary Union Rep",
     "level": 1,
     "description": "Inspire your allies and refresh their HP, AP, and heal their minor injuries.",

@@ -1,6 +1,7 @@
 [
   {
     "name": "Engineer",
+    "source": "Core",
     "type": "core",
     "description": "Engineers form an integral component of the Union, the grease that keeps our Mechs and Crawlers trundling across the great wastelands.",
     "coreAbilities": [
@@ -20,6 +21,7 @@
   },
   {
     "name": "Hacker",
+    "source": "Core",
     "type": "core",
     "description": "Electronic warfare is a reality of the world we live in, and Hackers are at the forefront, delving into the cybersphere to discover new and ingenious ways to hack into Mech infrastructure, tap into corpo networks, and use corpo tech against their owners.",
     "coreAbilities": [
@@ -39,6 +41,7 @@
   },
   {
     "name": "Hauler",
+    "source": "Core",
     "type": "core",
     "description": "If you need a job done in the Union, no matter how dirty, you call a Hauler. There is never a job too big, or a deal too messy, that they won’t shake your hand with a smile to do.",
     "coreAbilities": [
@@ -58,6 +61,7 @@
   },
   {
     "name": "Salvager",
+    "source": "Core",
     "type": "core",
     "description": "The Union runs on the backbone of Salvagers who come from all walks of life. This gives them a wide breadth of knowledge which they use to support the Salvage Union.",
     "coreAbilities": [
@@ -79,6 +83,7 @@
   },
   {
     "name": "Scout",
+    "source": "Core",
     "type": "core",
     "description": "The wasteland is a vast, hostile, and unforgiving expanse; and the Scout knows that land from end to end.",
     "coreAbilities": [
@@ -98,6 +103,7 @@
   },
   {
     "name": "Soldier",
+    "source": "Core",
     "type": "core",
     "description": "War and conflict is an ever present factor in the wastelands and whether fighting with sharpened sticks or plasma cannons, soldiers have always been at the forefront of a conflict throughout human history.",
     "coreAbilities": [
@@ -117,6 +123,7 @@
   },
   {
     "name": "Fabricator",
+    "source": "Core",
     "type": "hybrid",
     "description": "You have chosen the path of the Fabricator.",
     "coreClasses": [
@@ -135,6 +142,7 @@
   },
   {
     "name": "Cyborg",
+    "source": "Core",
     "type": "hybrid",
     "description": "You have chosen the path of the Cyborg.",
     "coreClasses": [
@@ -153,6 +161,7 @@
   },
   {
     "name": "Union Rep",
+    "source": "Core",
     "type": "hybrid",
     "description": "You have chosen the path of the Union Rep.",
     "coreClasses": [
@@ -171,6 +180,7 @@
   },
   {
     "name": "Smuggler",
+    "source": "Core",
     "type": "hybrid",
     "description": "You have chosen the path of the Smuggler.",
     "coreClasses": [
@@ -189,6 +199,7 @@
   },
   {
     "name": "Ranger",
+    "source": "Core",
     "type": "hybrid",
     "description": "You have chosen the path of the Ranger.",
     "coreClasses": [

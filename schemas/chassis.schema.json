@@ -8,6 +8,7 @@
       "name": {
         "type": "string"
       },
+      "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
       "stats": { "$ref": "shared/objects.schema.json#/definitions/stats" },
       "chassis_abilities": {
         "type": "array",

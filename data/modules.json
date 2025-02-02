@@ -1,5 +1,6 @@
 [
   {
+    "source": "Core",
     "name": "Comms Module",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -15,6 +16,7 @@
     "description": "This allows for both voice and text communications via your Mech's HUD. You may also use your Comms Module to send and receive images and data, such as data you gather when using a Scanner."
   },
   {
+    "source": "Core",
     "name": "Equipment Locker",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -23,6 +25,7 @@
     "description": "This Module is installed directly into your Mech's Cockpit and allows storage of up to 10 pieces of Pilot Equipment within it, allowing easy access when in the field."
   },
   {
+    "source": "Core",
     "name": "Eggs Mayhem",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -45,6 +48,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "Firewall",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -67,6 +71,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "Personal Recreation Device",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -77,6 +82,7 @@
     "notes": "*It is against Union Regulation to install a Mech with a Personal Recreation Device designed to do what you're thinking.*"
   },
   {
+    "source": "Core",
     "name": "Reactor Flare",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -87,6 +93,7 @@
     "description": "When activated, this Module fires a reactor-fuelled flare to any point within Range. The flare is clearly visible up to anywhere within Far Range as well as anyone in any adjacent area to you on the Region Map. The flare burns enough to provide illumination nearly equal to that of daylight. The flare lasts for an hour before dissipating."
   },
   {
+    "source": "Core",
     "name": "Self-Destruct",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -95,6 +102,7 @@
     "description": "When activated, your Mech self-destructs, its reactor going into overdrive and causing a localised thermonuclear explosion. Your Mech, as well as all mounted Systems, Modules, and all Cargo, are destroyed. Everything within Close Range of your Mech takes SP damage equal to the Maximum Heat Capacity of your Mech. The area where your Mech was located before the Self-Destruct was activated, is now Irradiated."
   },
   {
+    "source": "Core",
     "name": "Survey Scanner",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -117,6 +125,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "Weapon Link",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -130,6 +139,7 @@
     "description": "A Weapons Link Module allows you to connect any number of identical Weapons Systems together. You make an attack with all weapons linked together with this Module against a single target in Range of your choice. Make and resolve each attack separately. You gain 1 Heat for each linked weapon you attack with and must make a Heat Check after the attacks have been resolved."
   },
   {
+    "source": "Core",
     "name": "Zoom Optics",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -144,6 +154,7 @@
     "description": "When activated, this optical array extends the Range of any single Ranged Weapons System mounted on your Mech by one band, to a maximum of Long Range. It further allows you to zoom in and see one Range Band further than you currently are. This effect lasts for 1 hour."
   },
   {
+    "source": "Core",
     "name": "Barometric Weather Sensor",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -157,6 +168,7 @@
     "description": "This device constantly measures and analyses air pressure, wind speed, temperature, and humidity. When entering an area you are able to get an up to date report on the weather of that area and any potential hazardous environmental conditions."
   },
   {
+    "source": "Core",
     "name": "Damage Assessor",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -172,6 +184,7 @@
     "description": "When activated, you scan a Mech or Vehicle in Range to get a full report on it. You learn its Chassis, Systems and Modules, its current and Max Structure Points, Heat, and Energy, and the Condition (Intact, Damaged, Destroyed) of its Chassis, Systems, and Modules."
   },
   {
+    "source": "Core",
     "name": "Energy Cell",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -180,6 +193,7 @@
     "description": "When activated, your Mech regains 3 EP and the Energy Cell Module is destroyed."
   },
   {
+    "source": "Core",
     "name": "Deep Survey Scanner",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -195,6 +209,7 @@
     "description": "When activated, you scan a point within Range to detect the presence of any underground structures, cave networks, ruins, or bases."
   },
   {
+    "source": "Core",
     "name": "Evasion Protocols",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -208,6 +223,7 @@
     "description": "If an attack hits your Mech, you may activate the Evasion Protocols as a Reaction to force the attacker to re-roll the attack and choose the lower result."
   },
   {
+    "source": "Core",
     "name": "Hull Magnetiser",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -219,6 +235,7 @@
     "notes": "This increases your Mech's Cargo Capacity by its System Slot Value. This effect lasts for 1 hour and can be deactivated any time as a Free Action. The Union unofficially encourages creative and unorthodox uses of the Hull Magnetiser."
   },
   {
+    "source": "Core",
     "name": "IR Night Vision Optics",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -234,6 +251,7 @@
     "description": "When activated, this specialised, green tinted optical array allows you to see in darkness from your Mech up to Far Range. This effect lasts for 1 hour."
   },
   {
+    "source": "Core",
     "name": "Metal Detector",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -242,11 +260,13 @@
     "description": "This Mech-mountable scanner lets you know when any Scrap is nearby.",
     "actions": [
       {
+        "source": "Core",
         "name": "Auto-Scan",
         "actionType": "Passive",
         "description": "This automated function passively alerts you when you move into an area that can be salvaged.\nIn addition, whenever you move from one area of the map to an location you have not yet visited, roll the die, on the result of a 20 you gain once piece of scrap of the Tech Level of the area as decided by the Mediator. By default this is the Tech Level of your Union Crawler."
       },
       {
+        "source": "Core",
         "name": "Coolant Flush",
         "activationCost": 2,
         "actionType": "Short",
@@ -261,6 +281,7 @@
     ]
   },
   {
+    "source": "Core",
     "name": "M315 Motion Scanner",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -276,6 +297,7 @@
     "description": "When activated, you scan a point within the area map or a specific area of interest such as a ruined building, bunker, or dense area of foliage for any signs of movement. You detect if anything is moving in the area, the number of separate things that are moving, and whether they are People or Mech-sized."
   },
   {
+    "source": "Core",
     "name": "Navigation Module",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -291,6 +313,7 @@
     "description": "When you activate this Module you are able to plot a safe course for you and your Allies to either a known location within the Region Map you are in or one of the following locations in the wasteland."
   },
   {
+    "source": "Core",
     "name": "Pinpoint Targeter",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -308,6 +331,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "Reactor Overload",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -323,6 +347,7 @@
     "description": "When you activate this Module, a target Mech in Range must roll on the Reactor Overload Table."
   },
   {
+    "source": "Core",
     "name": "Video Projection Array",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -333,6 +358,7 @@
     "description": "This Module projects a video or series of images of your choice onto a surface of your choice within Range."
   },
   {
+    "source": "Core",
     "name": "Sleeping Beauty",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -342,6 +368,7 @@
     "description": "When activated, you and all allied Mechs within Close Range go into a feigned reactor Shutdown. The Mechs are operational, but appear as though they are Shutdown to sensors. Anything with the Scanner, Targeter, or Hacking Trait cannot be used against them. The Mechs can move, but if they activate any Systems, Modules, Abilities, or attack, they become active again and this effect ceases."
   },
   {
+    "source": "Core",
     "name": "Reactor Safety Protocols",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -357,6 +384,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "Video Recording Array",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -367,6 +395,7 @@
     "description": "When activated, the video begins to record and automatically stops after one hour. The video is saved on a mini disc for watching later and can be kept as a Keepsake."
   },
   {
+    "source": "Core",
     "name": "Advanced Weapon Link",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -380,6 +409,7 @@
     "description": "An Advanced Weapons Link Module allows you to connect any number of different Weapons Systems together. You make an attack with all weapons linked together with this Module against a single target in Range of all linked weapons. Make and resolve each attack separately. You gain 1 Heat for each linked weapon you attack with and must make a Heat Check after the attacks have been resolved."
   },
   {
+    "source": "Core",
     "name": "Auto-Doctor",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -387,6 +417,7 @@
     "description": "The Auto-Doctor is a medical droid with a rudimentary A.I. that can heal a Pilot in the field via a complex array of mechanical surgery arms.",
     "actions": [
       {
+        "source": "Core",
         "name": "Heal",
         "activationCost": 2,
         "range": "Close",
@@ -394,6 +425,7 @@
         "description": "The Auto-Doctor heals a creature within Range up to 10 HP. If they were on 0 HP this restores them to consciousness and heals them to 10 HP."
       },
       {
+        "source": "Core",
         "name": "Physio",
         "activationCost": 2,
         "range": "Close",
@@ -401,6 +433,7 @@
         "description": "The Auto-Doctor heals a creature within Range of a single Minor Injury."
       },
       {
+        "source": "Core",
         "name": "Therapy",
         "activationCost": 2,
         "range": "Close",
@@ -408,6 +441,7 @@
         "description": "The Auto-Doctor engages its therapeutic and drinks dispensation protocols. A single People who talks through things with the Auto-Doctor feels a lot better about themselves, their life, and the situation they are in."
       },
       {
+        "source": "Core",
         "name": "First Aid",
         "activationCost": 2,
         "range": "Close",
@@ -417,6 +451,7 @@
     ]
   },
   {
+    "source": "Core",
     "name": "Comms Tapper",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -432,6 +467,7 @@
     "description": "You may target anything with the Communicator Trait in Range and listen in on it for 10 minutes, hearing all inbound and outbound comms traffic."
   },
   {
+    "source": "Core",
     "name": "Concealed Locker",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -440,6 +476,7 @@
     "description": "This equipment locker can carry up to 6 pieces of Pilot Equipment in your Mech Cockpit for easy access. Any Pilot Equipment stored in this locker cannot be found via inspection, or be seen or affected by anything with the Scanner, Hacking, or Targeter Trait."
   },
   {
+    "source": "Core",
     "name": "Coolant Flow Manifold",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -447,12 +484,14 @@
     "description": "This manifold provides more control over the coolant flowing through your reactor, allowing you to inject more coolant as required.",
     "actions": [
       {
+        "source": "Core",
         "name": "Coolant Flow",
         "activationCost": 2,
         "actionType": "Free",
         "description": "Adjusted valves provide coolant where required. Reduce the Heat of your Mech by 4."
       },
       {
+        "source": "Core",
         "name": "Coolant Flush",
         "activationCost": 1,
         "actionType": "Short",
@@ -461,6 +500,7 @@
     ]
   },
   {
+    "source": "Core",
     "name": "ECM Transmitter",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -471,6 +511,7 @@
     "description": "When activated, all enemy Pilots, Mechs, and Vehicles within Range cannot activate or use any Pilot Equipment, Systems, Modules, or Abilities that have the Targeter, Hacking, Shield or Communicator Trait. This effect lasts for 10 minutes."
   },
   {
+    "source": "Core",
     "name": "Emergency Power Conduit",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -479,6 +520,7 @@
     "description": "If your Mech is Shutdown, either voluntarily or involuntarily, the Emergency Power Conduit activates automatically. Whilst the Emergency Power Conduit is active your Mech can move and your Pilot is protected internally via any life support systems. It also does not have the Vulnerable Trait."
   },
   {
+    "source": "Core",
     "name": "Encrypted Comms",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -487,6 +529,7 @@
     "description": "Anything you have installed on your Mech the Comms Trait becomes encrypted. This means any voice or text communications you send or receive cannot be listened to, tapped into, hacked, or analysed. Anything with the Hacking or Scanner Trait does not work on them."
   },
   {
+    "source": "Core",
     "name": "Hacking Repeater Node",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -502,6 +545,7 @@
     "description": "When activated, your Mech acts as a range extender to various electronic devices. Any Ally within Long Range of you may use any System, Module, or Ability with the Communicator, Hacking, Scanner, or Optics Trait as though it originated from your Mech. This effect lasts for 1 hour."
   },
   {
+    "source": "Core",
     "name": "Multi-Targeter",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -515,6 +559,7 @@
     "description": "When activated, you may attack with any number of Weapons Systems mounted on your Mech. Each attack must have a different target, which you must choose before you make any attacks. Make and resolve each attack separately. This Ability costs 1 EP per weapon you attack with."
   },
   {
+    "source": "Core",
     "name": "Offensive Protocols",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -528,6 +573,7 @@
     "description": "When you activate this Module, choose a Weapons System mounted on your Mech. The next time you make an attack with this Weapons System, it deals an additional amount of SP damage equal to its Tech Level. When activated, your Mech gains 2 Heat and must make a Heat Check. You may activate this Ability on multiple different Weapons Systems on the same turn, but cannot apply it to the same Weapons System more than once."
   },
   {
+    "source": "Core",
     "name": "Panda Sneeze",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -550,6 +596,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "Sonic Screecher",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -567,6 +614,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "Voice Modulator",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -575,6 +623,7 @@
     "description": "This AMS-manufactured add-on unit allows you to modulate your outgoing voice communications, allowing you to disguise your voice. The modulator allows you to alter the pitch and tone of your voice, or choose from a variety of preset voice options such as robotic, sultry, intimidating, cartoonish, and animal-like. You may also choose any other option of your choice that you can think of."
   },
   {
+    "source": "Core",
     "name": "Aardvarks Tongue",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -597,6 +646,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "Advanced Reactor Safety Protocols",
     "techLevel": 4,
     "slotsRequired": 2,
@@ -612,6 +662,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "Alpha Strike Module",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -628,6 +679,7 @@
     "description": "When activated, you must attack with all mounted Weapons Systems on your Mech against any number of targets of your choice within Range. Make and resolve each attack separately. Activating this Module costs an amount of EP equal to the number of Weapon Systems you attacked with and you gain an amount of Heat equal to the amount of Weapons Systems you attacked with."
   },
   {
+    "source": "Core",
     "name": "Auto-Repair Droid",
     "techLevel": 4,
     "slotsRequired": 2,
@@ -636,18 +688,21 @@
     "description": "This compact repair droid with a rudimentary A.I. is hardwired into your Mech and can perform a variety of repair tasks on it whilst you focus on piloting.",
     "actions": [
       {
+        "source": "Core",
         "name": "Repair",
         "activationCost": 2,
         "actionType": "Free",
         "description": "You restore 6 SP to your Mech as long as it has at least 1 SP."
       },
       {
+        "source": "Core",
         "name": "System Repair",
         "activationCost": 2,
         "actionType": "Free",
         "description": "You repair a single, Tech 4 or lower, damaged System or Module mounted on your Mech to Intact Condition."
       },
       {
+        "source": "Core",
         "name": "Coolant Flush",
         "activationCost": 2,
         "actionType": "Free",
@@ -656,6 +711,7 @@
     ]
   },
   {
+    "source": "Core",
     "name": "Dash Protocols",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -669,6 +725,7 @@
     "description": "When activated, your Mech may move an additional Range Band this turn. Your Mech gains 2 Heat and must make a Heat Check. You may only activate this Module once per turn."
   },
   {
+    "source": "Core",
     "name": "Electro-Magnetic Self-Destruct",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -677,6 +734,7 @@
     "description": "When activated, your Mech as well as all attached Systems, Modules, and all carried Cargo are destroyed as the reactor detonates in an electro-magnetic explosion. Your Pilot may attempt to escape as normal if they have access to anything with the Escape Trait. If they fail to escape, they are reduced to 0 HP. All Mechs, Systems, Modules, and Vehicles including allies within Medium Range of your Mech become Shutdown and inactive for 10 minutes. In addition, any other electronic or technological equipment or hardware within Range becomes inoperable. Meld are also affected, going into an inert state for 10 minutes."
   },
   {
+    "source": "Core",
     "name": "Laser Guidance",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -692,6 +750,7 @@
     "description": "When you activate this Module, pick a target within Range. The next attack you make against that target automatically hits counting as an (11-19) result."
   },
   {
+    "source": "Core",
     "name": "Mech Scrambler",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -713,6 +772,7 @@
     }
   },
   {
+    "source": "Core",
     "name": "MRSI Co-Ordinator",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -728,6 +788,7 @@
     "description": "Multiple Rounds, Simultaneous Impact. When activated, choose a target within Range. You and up to 2 Allied Mechs in Range may attack the target immediately with a single Weapons System of their choice in Range of the target. Make each attack separately. These attacks count as having the Targeter Trait."
   },
   {
+    "source": "Core",
     "name": "Thermal Optics",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -743,6 +804,7 @@
     "description": "When activated, you are able to see the location of anything that generates heat within visual Range. You can see their location even if they are in an obscured area such as foggy conditions, in darkness, or behind solid objects such as buildings. This effect lasts for 1 hour."
   },
   {
+    "source": "Core",
     "name": "Weapon Guidance",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -759,6 +821,7 @@
     "description": "When activated, a Weapons System of your choice mounted on your Mech gains the Guided Trait meaning it does not need line of sight to hit any target within its Range."
   },
   {
+    "source": "Core",
     "name": "Adv. Targeting Array",
     "techLevel": 5,
     "slotsRequired": 2,
@@ -766,6 +829,7 @@
     "description": "This mil-tech Module combines Laser Guidance, Pinpoint Targeter, and Multi-Targeter into one Module. You may activate each separately.",
     "actions": [
       {
+        "source": "Core",
         "name": "Pinpoint Targeter",
         "activationCost": 3,
         "actionType": "Turn",
@@ -777,6 +841,7 @@
         "description": "Make an attack at a selected target. If it hits select a system or appendage to be damaged/injured. If you roll a 20 it is destroyed instead. You also deal damage as normal."
       },
       {
+        "source": "Core",
         "name": "Multi-Targeter",
         "activationCost": "Variable",
         "actionType": "Turn",
@@ -788,6 +853,7 @@
         "description": "Make an attack with any number of weapons. Each weapon must select a different target. Costs 1 EP per weapon fired."
       },
       {
+        "source": "Core",
         "name": "Laser Guidance",
         "activationCost": 3,
         "actionType": "Free",
@@ -805,6 +871,7 @@
     ]
   },
   {
+    "source": "Core",
     "name": "Holo Projector",
     "techLevel": 5,
     "slotsRequired": 1,
@@ -815,6 +882,7 @@
     "description": "When activated, this Module projects a lifelike, three dimensional, hologram into an area within Range. The hologram appears to onlookers as though it was realistic and can be viewed from multiple angles. It can be spoken through or set to repeat a message, make animal calls, or mimic the sounds of explosions or weapons firing."
   },
   {
+    "source": "Core",
     "name": "He 2 Coolant Flush",
     "techLevel": 5,
     "slotsRequired": 1,
@@ -823,6 +891,7 @@
     "description": "When activated, reduce the Heat on your Mech to 0."
   },
   {
+    "source": "Core",
     "name": "Multi-Optics",
     "techLevel": 5,
     "slotsRequired": 2,
@@ -830,6 +899,7 @@
     "description": "This Module combines Zoom Optics, Thermal Optics, and IR Night Vision Optics into one. You gain the use of all three and may activate each separately."
   },
   {
+    "source": "Core",
     "name": "Neuralink Communicator",
     "techLevel": 5,
     "slotsRequired": 2,
@@ -845,6 +915,7 @@
     "notes": "The Neuralink Communicator may also be detached and used by your Pilot in the field as a Portable Communications Unit."
   },
   {
+    "source": "Core",
     "name": "Omega Push Module",
     "techLevel": 5,
     "slotsRequired": 2,
@@ -852,6 +923,7 @@
     "description": "This Module combines Evasion Protocols, Offensive Protocols, and Dash Protocols into one Module. You may activate each separately as desired."
   },
   {
+    "source": "Core",
     "name": "DDR Module",
     "techLevel": 6,
     "slotsRequired": 1,
@@ -861,6 +933,7 @@
     "description": "This Module utilises Dynamic Diode Rotarisation technology allowing a Mech to perform a series of complex movements in time with music typically meant to impress others as well as for recreation."
   },
   {
+    "source": "Core",
     "name": "Matter Phaser",
     "techLevel": 6,
     "slotsRequired": 2,
@@ -870,6 +943,7 @@
     "description": "When activated, your Mech becomes phased. Whilst in a phased state your Mech can move through walls, objects, structures, and other Mechs. You cannot attack or otherwise interact with anything whilst phased. You can unphase as a Free Action at no cost."
   },
   {
+    "source": "Core",
     "name": "Reaction Protocols",
     "techLevel": 6,
     "slotsRequired": 1,
@@ -883,6 +957,7 @@
     "description": "When activated, you may attack with any Weapons System or activate any System, Module, or Ability your Mech has access to as a Reaction. This Reaction always resolves first. After this has resolved, increase your Mech's Heat by 2 and make a Heat Check."
   },
   {
+    "source": "Core",
     "name": "Reactor Transference",
     "techLevel": 6,
     "slotsRequired": 2,

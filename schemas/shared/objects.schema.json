@@ -52,6 +52,7 @@
       "additionalProperties": false,
       "properties": {
         "name": { "type": "string" },
+        "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
         "techLevel": { "type": "number" },
         "slotsRequired": { "type": "number" },
         "salvageValue": { "type": "number" },

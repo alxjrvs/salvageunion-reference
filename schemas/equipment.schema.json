@@ -6,6 +6,7 @@
     "additionalProperties": false,
     "properties": {
       "name": { "type": "string" },
+      "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
       "techLevel": { "type": "number" },
       "traits": { "$ref": "shared/common.schema.json#/definitions/traits" },
       "description": {

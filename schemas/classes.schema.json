@@ -8,6 +8,7 @@
         "additionalProperties": false,
         "properties": {
           "name": { "$ref": "shared/enums.schema.json#/definitions/class" },
+          "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
           "type": { "enum": ["core"] },
           "description": { "type": "string" },
           "coreAbilities": {
@@ -34,6 +35,7 @@
           "name": { "$ref": "shared/enums.schema.json#/definitions/class" },
           "type": { "enum": ["hybrid"] },
           "description": { "type": "string" },
+          "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
           "coreClasses": {
             "type": "array",
             "items": { "$ref": "shared/enums.schema.json#/definitions/class" }
