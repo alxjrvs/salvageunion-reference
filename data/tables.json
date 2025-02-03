@@ -130,5 +130,41 @@
       "6-10": "Dangerous Escape: The group escapes to any adjacent location of their choice within the Region Map, but at a cost. They must make a Tough Choice related to the situation.",
       "2-5": "Failed Escape: The group fails to retreat from the situation and are pinned down. They cannot retreat and must fight it out to the end."
     }
+  },
+  {
+    "source": "core",
+    "name": "Crawler Deterioration Table",
+    "section": "crawler",
+    "rollTable": {
+      "1": "Your Union Crawler loses 5 Structure Points and a Bay chosen at random is Damaged until repaired to the Intact Condition.",
+      "20": "Your Union Crawler chugs along for now.",
+      "11-19": "11-19 Your Union Crawler loses 5 Structure Points.",
+      "6-10": "Choose a Bay on your Union Crawler. It becomes Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition.",
+      "2-5": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition."
+    }
+  },
+  {
+    "source": "core",
+    "name": "Crawler Damage Table",
+    "section": "crawler",
+    "rollTable": {
+      "1": "Your Union Crawler is Destroyed as a mass series of malfunctions causes it to entirely collapse. Roll on the Union Crawler Destruction Table.",
+      "20": "20 Your Union Crawler survives any significant damage this time. ",
+      "11-19": "Your Union Crawler is inoperable and grounded. Its Bays are Intact, but inoperable.  You must pay your Union Crawler’s Upkeep Cost in order to repair it to be fully functioning again. Around 10% of your Union Crawler’s population are severely injured or killed.",
+      "6-10": "Choose a Bay on your Union Crawler. It is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition. Around 5% of your Union Crawler’s population are severely injured or killed.",
+       "2-5": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition."
+    }
+  },
+  {
+    "source": "core",
+    "name": "Crawler Destruction Table",
+    "section": "crawler",
+    "rollTable": {
+      "1": "The Union Crawler suffers critical damage, goes into a reactor meltdown, and explodes. The Union Crawler is destroyed beyond all recognition. It cannot be rebuilt.  Everyone and everything on board and within Medium Range takes 50 Structure Points of damage, and can be assumed destroyed or killed outright.",
+      "20": "There is hope. Everyone on board is somewhat battered and bruised, but manages to escape the Union Crawler safely. Your Union Crawler can be rebuilt from the wreckage for its current Upgrade Cost in Scrap of its Tech Level or higher.",
+      "11-19": "The Union Crawler is torn apart. All of its Bays are damaged. Around 25% of the Union Crawler’s population are severely injured or killed. Any Salvager Pilots on board must roll on the Critical Injury Table. The Union Crawler can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher.",
+      "6-10": "You must choose between saving the Union Crawler population and saving the Union Crawler itself. If you choose the population, the Union Crawler is entirely destroyed and cannot be rebuilt. If you choose the Union Crawler, assume all Bays are damaged.  It can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher, but you have to find new people to join it in the wastelands.",
+       "2-5": "The Union Crawler is destroyed, and the majority of its population are killed or severely injured. The Salvager Pilots must roll on the Critical Injury Table. Any survivors must find a way to rebuild."
+    }
   }
 ]
