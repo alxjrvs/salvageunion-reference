@@ -158,7 +158,8 @@
       "properties": {
         "name": { "type": "string" },
         "description": { "type": "string" },
-        "source": { "$ref": "shared/enums.schema.json#/definitions/source" }
+        "source": { "$ref": "enums.schema.json#/definitions/source" },
+        "page": { "type": "number" }
       }
     }
   }

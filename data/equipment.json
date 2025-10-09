@@ -573,11 +573,11 @@
     "activationCost": 2,
     "notes": "When you are hit by an attack you may activate your Portable Multi-Phase Shield to prevent the hit.",
     "rollTable": {
+      "1": "The attack hits as normal and the shield overloads. Your Portable Multi-Phase Shield is destroyed.",
       "20": "The attack deals no damage.",
       "11-19": "The forcefield partially absorbs some of the hit, you take half damage from the attack.",
       "6-10": "The forcefield absorbs the blow, but is destroyed. You take no damage from the attack and your Portable Multi-Phase Shield is destroyed.",
-      "2-5": "The force field fails and the attack hits as normal.",
-      "1": "The attack hits as normal and the shield overloads. Your Portable Multi-Phase Shield is destroyed."
+      "2-5": "The force field fails and the attack hits as normal."
     }
   },
   {

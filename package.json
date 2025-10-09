@@ -1,14 +1,19 @@
 {
   "name": "salvageunion-data",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Game data in JSON format for the Salvage Union tabletop RPG",
+  "type": "module",
   "scripts": {
-    "formatRolltable": "node ./tools/formatRollTable.mjs"
+    "validate": "tsx tools/validateAll.ts",
+    "format": "tsx tools/format.ts",
+    "list-property": "tsx tools/listEntriesWithProperty.ts"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "jsonschema": "^1.4.1"
+    "@types/node": "^20.10.0",
+    "jsonschema": "^1.4.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
   }
 }

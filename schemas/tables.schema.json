@@ -8,7 +8,10 @@
       "name": { "type": "string" },
       "section": { "type": "string" },
       "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
-      "rollTable": { "$ref": "shared/common.schema.json#/definitions/rollTable" }
+      "rollTable": {
+        "$ref": "shared/common.schema.json#/definitions/rollTable"
+      },
+      "page": { "type": "number" }
     }
   }
 }

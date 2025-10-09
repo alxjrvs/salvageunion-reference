@@ -15,15 +15,22 @@
       "notes": {
         "type": "string"
       },
-      "activationCost": { "$ref": "shared/common.schema.json#/definitions/activationCost" },
+      "activationCost": {
+        "$ref": "shared/common.schema.json#/definitions/activationCost"
+      },
       "range": { "$ref": "shared/enums.schema.json#/definitions/range" },
       "damage": { "$ref": "shared/common.schema.json#/definitions/damage" },
-      "actionType": { "$ref": "shared/enums.schema.json#/definitions/actionType" },
-      "rollTable": { "$ref": "shared/common.schema.json#/definitions/rollTable" },
+      "actionType": {
+        "$ref": "shared/enums.schema.json#/definitions/actionType"
+      },
+      "rollTable": {
+        "$ref": "shared/common.schema.json#/definitions/rollTable"
+      },
       "actions": {
         "type": "array",
         "items": { "$ref": "shared/objects.schema.json#/definitions/action" }
-      }
+      },
+      "page": { "type": "number" }
     }
   }
 }

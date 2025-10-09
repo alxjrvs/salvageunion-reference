@@ -21,7 +21,8 @@
       "systems": {
         "type": "array",
         "items": { "$ref": "shared/objects.schema.json#/definitions/system" }
-      }
+      },
+      "page": { "type": "number" }
     }
   }
 }

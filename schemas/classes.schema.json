@@ -25,7 +25,8 @@
           "legendaryAbilities": {
             "type": "array",
             "items": { "$ref": "shared/enums.schema.json#/definitions/ability" }
-          }
+          },
+          "page": { "type": "number" }
         }
       },
       {
@@ -50,7 +51,8 @@
           "legendaryAbilities": {
             "type": "array",
             "items": { "$ref": "shared/enums.schema.json#/definitions/ability" }
-          }
+          },
+          "page": { "type": "number" }
         }
       }
     ]

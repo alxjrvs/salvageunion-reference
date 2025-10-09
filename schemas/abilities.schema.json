@@ -17,11 +17,18 @@
       "effect": {
         "type": "string"
       },
-      "activationCost": { "$ref": "shared/common.schema.json#/definitions/activationCost" },
+      "activationCost": {
+        "$ref": "shared/common.schema.json#/definitions/activationCost"
+      },
       "range": { "$ref": "shared/enums.schema.json#/definitions/range" },
-      "actionType": { "$ref": "shared/enums.schema.json#/definitions/actionType" },
-      "rollTable": { "$ref": "shared/common.schema.json#/definitions/rollTable" },
-      "traits": { "$ref": "shared/common.schema.json#/definitions/traits" }
+      "actionType": {
+        "$ref": "shared/enums.schema.json#/definitions/actionType"
+      },
+      "rollTable": {
+        "$ref": "shared/common.schema.json#/definitions/rollTable"
+      },
+      "traits": { "$ref": "shared/common.schema.json#/definitions/traits" },
+      "page": { "type": "number" }
     }
   }
 }

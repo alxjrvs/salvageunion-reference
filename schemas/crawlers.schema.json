@@ -17,7 +17,8 @@
         "items": {
           "$ref": "shared/objects.schema.json#/definitions/action"
         }
-      }
+      },
+      "page": { "type": "number" }
     }
   }
 }

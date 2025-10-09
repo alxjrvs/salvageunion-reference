@@ -152,7 +152,7 @@
       "20": "20 Your Union Crawler survives any significant damage this time. ",
       "11-19": "Your Union Crawler is inoperable and grounded. Its Bays are Intact, but inoperable.  You must pay your Union Crawler’s Upkeep Cost in order to repair it to be fully functioning again. Around 10% of your Union Crawler’s population are severely injured or killed.",
       "6-10": "Choose a Bay on your Union Crawler. It is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition. Around 5% of your Union Crawler’s population are severely injured or killed.",
-       "2-5": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition."
+      "2-5": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition."
     }
   },
   {
@@ -164,7 +164,7 @@
       "20": "There is hope. Everyone on board is somewhat battered and bruised, but manages to escape the Union Crawler safely. Your Union Crawler can be rebuilt from the wreckage for its current Upgrade Cost in Scrap of its Tech Level or higher.",
       "11-19": "The Union Crawler is torn apart. All of its Bays are damaged. Around 25% of the Union Crawler’s population are severely injured or killed. Any Salvager Pilots on board must roll on the Critical Injury Table. The Union Crawler can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher.",
       "6-10": "You must choose between saving the Union Crawler population and saving the Union Crawler itself. If you choose the population, the Union Crawler is entirely destroyed and cannot be rebuilt. If you choose the Union Crawler, assume all Bays are damaged.  It can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher, but you have to find new people to join it in the wastelands.",
-       "2-5": "The Union Crawler is destroyed, and the majority of its population are killed or severely injured. The Salvager Pilots must roll on the Critical Injury Table. Any survivors must find a way to rebuild."
+      "2-5": "The Union Crawler is destroyed, and the majority of its population are killed or severely injured. The Salvager Pilots must roll on the Critical Injury Table. Any survivors must find a way to rebuild."
     }
   }
 ]
