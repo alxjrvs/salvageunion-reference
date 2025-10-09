@@ -64,7 +64,8 @@
       "20": "You escape safely from your Mech in Medium Range.",
       "11-19": "You escape safely from your Mech in Close Range.",
       "6-10": "You escape in Close Range, but are injured in the process. Roll on the Critical Injury Table.",
-      "2-5": "The Escape Hatch fails to trigger and is damaged in the process, it must be repaired to Intact Condition to be used again."
+      "2-5": "The Escape Hatch fails to trigger and is damaged in the process, it must be repaired to Intact Condition to be used again.",
+      "type": "standard"
     }
   },
   {
@@ -387,7 +388,8 @@
       "20": "The attack misses and deals no damage and you put your opponent off guard. You may make an attack against the target as a Reaction.",
       "11-19": "The Armoured Shield blocks the blow, the attack deals no damage.",
       "6-10": "The Armoured Shield deflects the attack, it misses and deals no damage, but your Armoured Shield is destroyed.",
-      "2-5": "The attack breaks through your Armoured Shield, it hits as normal, and your Armoured Shield is damaged."
+      "2-5": "The attack breaks through your Armoured Shield, it hits as normal, and your Armoured Shield is damaged.",
+      "type": "standard"
     }
   },
   {
@@ -653,7 +655,8 @@
       "20": "The attack misses and deals no damage and refracts back at the attacker, hitting them for the damage of the weapon.",
       "11-19": "The attack misses and deals no damage.",
       "6-10": "You may choose to gain Heat equal to the damage of the weapon that attacked you. If you do the attack misses and deals no damage. if you do not, the attack deals damage as normal.",
-      "2-5": "The attack hits as normal."
+      "2-5": "The attack hits as normal.",
+      "type": "standard"
     }
   },
   {
@@ -823,7 +826,8 @@
       "20": "You eject perfectly from the Mech and land in any location up to Far Range of your Mech.",
       "11-19": "You eject safely from the Mech and land unharmed within Long Range of your Mech.",
       "6-10": "You eject, but suffer injury in the process. You land within Medium Range of your Mech and must roll on the Critical Injury Table for your Pilot.",
-      "2-5": "The Ejection System fails to trigger and is damaged in the process."
+      "2-5": "The Ejection System fails to trigger and is damaged in the process.",
+      "type": "standard"
     }
   },
   {
@@ -862,7 +866,8 @@
       "20": "The attack misses, deals no damage, and is reflected back at the attacker, hitting them for the damage of the weapon.",
       "11-19": "The attack misses and deals no damage.",
       "6-10": "You may choose to gain Heat equal to the damage of the weapon that attacked you. If you do the attack misses and deals no damage. if you do not, the attack deals damage as normal.",
-      "2-5": "The attack hits as normal."
+      "2-5": "The attack hits as normal.",
+      "type": "standard"
     }
   },
   {
@@ -1017,7 +1022,8 @@
       "20": "You find a damaged Mech Chassis of the Tech Level of the area.",
       "11-19": "You find a damaged System of the Tech Level of the area.",
       "6-10": "You find a damaged Module of the Tech Level of the area.",
-      "2-5": "You find 2 Scrap of the Tech Level of the area."
+      "2-5": "You find 2 Scrap of the Tech Level of the area.",
+      "type": "standard"
     }
   },
   {
@@ -1211,7 +1217,8 @@
       "20": "Everything in the area is destroyed.",
       "11-19": "Deal 5 SP damage to everything in the area.",
       "6-10": "Deal 5 SP damage to one target in the area. The rest get clear unharmed.",
-      "2-5": "The targets avoid the mines and they explode to no effect."
+      "2-5": "The targets avoid the mines and they explode to no effect.",
+      "type": "standard"
     }
   },
   {
@@ -1616,7 +1623,8 @@
       "20": "The attack deals no damage and is reflected devastatingly back at the attacker, hitting them for 2× the damage of the weapon they attacked with.",
       "11-19": "The attack deals half damage and is reflected back at the attacker dealing the full damage of the weapon they attacked with to them.",
       "6-10": "The attack deals full damage and is reflected back at the attacker dealing half damage to them of the weapon they attacked with.",
-      "2-5": "The shielding fails and you are hit by the attack as normal."
+      "2-5": "The shielding fails and you are hit by the attack as normal.",
+      "type": "standard"
     }
   },
   {
@@ -1696,7 +1704,8 @@
       "20": "The attack deals no damage and reflects back at the attacker, hitting them for the damage of the weapon they attacked with.",
       "11-19": "The attack misses and deals no damage.",
       "6-10": "You may choose to gain Heat equal to the damage of the weapon. If you do so, the attack deals no damage. If you do not, the attack deals damage as normal.",
-      "2-5": "The attack hits as normal."
+      "2-5": "The attack hits as normal.",
+      "type": "standard"
     }
   },
   {
@@ -1717,7 +1726,8 @@
       "20": "The pod ejects perfectly and lands in any location within Far Range of your Mech.",
       "11-19": "The pod ejects safely and lands within Long Range of your Mech.",
       "6-10": "The pod ejects and lands within Medium Range of the Mech. The ride is bumpy and your Pilot suffers a Minor Injury.",
-      "2-5": "The Ejector Pod fails to trigger. You may not attempt to use it again until your next turn."
+      "2-5": "The Ejector Pod fails to trigger. You may not attempt to use it again until your next turn.",
+      "type": "standard"
     }
   },
   {
@@ -1831,7 +1841,8 @@
       "20": "Copy/Paste error. Everything you attempt to teleport appears on your Crawler. They are also still on your Mech.",
       "2-5": "Teleport Successful!",
       "6-10": "Teleport Successful!",
-      "11-19": "Teleport Successful!"
+      "11-19": "Teleport Successful!",
+      "type": "standard"
     }
   },
   {
@@ -1852,12 +1863,9 @@
         "type": "targeter"
       }
     ],
-    "description": "This miniaturised nuclear weapon launches an atomic warhead at a target creating a small and localised thermonuclear explosion.",
+    "description": "This miniaturised nuclear weapon launches an atomic warhead at a target creating a small and localised thermonuclear explosion. On a critical success (20), the target and everything within Long Range is destroyed and we really do mean *everything*. The entire area is also permanently Irradiated.",
     "range": "Far",
-    "notes": "When used this system is destroyed and cannot be used again.",
-    "rollTable": {
-      "20": "The target and everything within Long Range is destroyed and we really do mean *everything*. The entire area is also permanently Irradiated."
-    }
+    "notes": "When used this system is destroyed and cannot be used again."
   },
   {
     "source": "core",
@@ -1897,7 +1905,8 @@
           "20": "The attack deals no damage. If the weapon that made the attack had the Melee Trait, it is destroyed. You may activate your Matter Phase Shield as a Reaction without spending EP for the next 10 minutes.",
           "11-19": "The attack misses and deals no damage. If the weapon that made the attack had the Melee Trait, it is destroyed.",
           "6-10": "The attack hits and deals half damage. If the weapon that made the attack had the Melee Trait, it is destroyed.",
-          "2-5": "The shield fails and the attack hits as normal."
+          "2-5": "The shield fails and the attack hits as normal.",
+          "type": "standard"
         }
       }
     ]
@@ -1956,7 +1965,8 @@
       "20": "You teleport perfectly to your destination. In addition, you may bring an additional creature within Close Range with you as you teleport.",
       "11-19": "You teleport safely to your destination.",
       "6-10": "You teleport to your destination, but suffer a teleportation mishap. Roll on the Critical Injury Table.",
-      "2-5": "The teleporter fails to trigger. You may try again on your next turn."
+      "2-5": "The teleporter fails to trigger. You may try again on your next turn.",
+      "type": "standard"
     }
   }
 ]

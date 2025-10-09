@@ -8,28 +8,16 @@
     "type": "object",
     "description": "Requirements for an ability tree",
     "additionalProperties": false,
-    "required": ["tree"],
+    "required": ["tree", "requirement"],
     "properties": {
       "tree": {
         "$ref": "shared/enums.schema.json#/definitions/tree"
       },
-      "requirements": {
+      "requirement": {
         "type": "array",
-        "description": "List of requirements to access this tree",
+        "description": "List of ability tree names required to access this tree",
         "items": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type"],
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": ["class", "ability", "level"],
-              "description": "Type of requirement"
-            },
-            "value": {
-              "description": "Value for the requirement (class name, ability name, or level number)"
-            }
-          }
+          "$ref": "shared/enums.schema.json#/definitions/tree"
         }
       }
     }

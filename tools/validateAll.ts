@@ -115,16 +115,9 @@ function loadJson(filePath: string): any {
   return JSON.parse(content);
 }
 
-// Global validator instance with shared schemas loaded
 const globalValidator = new Validator();
 
 function loadSharedSchemas() {
-  // Load shared schemas that are referenced by other schemas
-  // Our schemas now use $id fields following best practices:
-  // - Each schema has a unique $id URL (e.g., "https://salvageunion.com/schemas/shared/enums.schema.json")
-  // - Schemas reference each other using relative paths (e.g., "shared/enums.schema.json#/definitions/tree")
-  // We need to register schemas with both their relative paths AND their $id URLs
-
   const sharedSchemas = [
     {
       path: "schemas/shared/common.schema.json",
@@ -255,18 +248,9 @@ function main() {
 
   if (allValid) {
     console.log("✅ All data files are valid!");
-    console.log("\n🎉 All schemas follow JSON Schema best practices:");
-    console.log("   • $id fields for unique identification");
-    console.log("   • title and description for documentation");
-    console.log("   • required fields specified");
-    console.log("   • integer types for whole numbers");
-    console.log("   • minimum constraints where appropriate");
-    console.log("   • oneOf instead of anyOf for exclusive choices");
-    console.log("   • const instead of single-value enum");
     process.exit(0);
   } else {
     console.log("❌ Some data files have validation errors.");
-    console.log("\n💡 Tip: Fix data issues to match the schema requirements.");
     process.exit(1);
   }
 }

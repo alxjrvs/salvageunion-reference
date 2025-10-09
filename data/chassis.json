@@ -385,7 +385,8 @@
             "label": "Custom Item",
             "value": "You craft a metallic structure of your own design. This cannot have any complex or moving parts."
           }
-        ]
+        ],
+        "name": "Forge"
       }
     ],
     "description": "Developed by Osiris Construction as a fabrication Mech for rapid construction and repair in the field, while also providing defense.",
@@ -611,7 +612,8 @@
           "20": "The Jackhammer is Intact and operational with 1 SP. The Pilot is unharmed.",
           "11-19": "The Jackhammer is temporarily Shutdown and becomes inoperable. At the end of its next turn it activates and becomes operational with 1 SP. The Pilot is unharmed.",
           "6-10": "As per 11-19, but a random Module on the Jackhammer is also Damaged.",
-          "2-5": "As per 11-19, but a random System on the Jackhammer is also Damaged."
+          "2-5": "As per 11-19, but a random System on the Jackhammer is also Damaged.",
+          "type": "standard"
         }
       }
     ],
@@ -1204,7 +1206,8 @@
             "label": "",
             "value": "When this Module is activated you may pay 1 EP per additional device you would like to control."
           }
-        ]
+        ],
+        "name": "Integrated Frog Prince Module"
       }
     ],
     "description": "Developed as a collaboration between the software arm of Stefanus Industries and Sakura Futures, the 'MCS-1337' Mantis was designed as a lightweight hacking Mech. Rarely deployed on the battlefield, it has primarily been utilised in a series of Black Ops operations, most notably during the endless intra-corporate cold wars. With its high energy capacity and a wide array of Module customisation options you sometimes just have to respect corpo engineering.",
@@ -1671,7 +1674,8 @@
       {
         "description": "When activated, the Consul transforms into a sphere that encases the Pilot or passenger. As a sphere, the Consul gains the Fast Trait, which it can make use of immediately after transforming. The sphere is quick and mobile, and slightly flexible, able to squeeze into tunnels and other hard to enter spots whilst transformed. The Consul cannot attack or activate any Systems whilst transformed but may activate Modules. When in this form the Consul takes up only 3 Cargo Slots if carried.The Consul may transform from a sphere back into its standard form as a Free Action at no EP cost.",
         "actionType": "Turn",
-        "activationCost": 2
+        "activationCost": 2,
+        "name": "Morph Sphere"
       }
     ],
     "description": "Consul Mechs are designed to be utilised as diplomatic envoys and are often used by corporate council members. They are a means for corpos to flex their wealth, power, and prestige when dealing with other corpos and diplomatic entities whilst maintaining a veneer of civility and decorum. As a result, they come in a vast array of different designs as befits the branding of the corpo, with the only commonality being that they are all, in a means unique to their corpo, incredibly flashy. Their inbuilt Morph Sphere technology further allows their pilot, typically a high ranking corpo exec, to rapidly exit an area in a dangerous situation.",

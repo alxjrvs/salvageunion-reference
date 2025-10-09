@@ -44,7 +44,8 @@
       "20": "You masterfully hack into the system and can ask 5 questions to the Mediator about it. The answers they give must be true.",
       "11-19": "You successfully hack in and can ask 3 questions to the Mediator about it. The answers they give must be true.",
       "6-10": "Your hack produces a mix of confused data. You are able to ask the Mediator 2 questions about it. One of the answers they give must be true, but the other contains false information as decided by the Mediator.",
-      "2-5": "The hacking attempt fails. The Mediator may choose an appropriate Setback."
+      "2-5": "The hacking attempt fails. The Mediator may choose an appropriate Setback.",
+      "type": "standard"
     }
   },
   {
@@ -67,7 +68,8 @@
       "20": "You successfully block the hack and you and your Allies cannot be affected by anything with the Hacking Trait for the next 10 minutes.",
       "11-19": "You successfully block the hack and entirely nullify all of its effects.",
       "6-10": "The Mediator offers you a Tough Choice in relation to the hack. This could be partially nullifying its effects, an additional EP cost, or damage to your Module.",
-      "2-5": "You fail to block the hack, and it has full effect."
+      "2-5": "You fail to block the hack, and it has full effect.",
+      "type": "standard"
     }
   },
   {
@@ -121,7 +123,8 @@
       "20": "You make a thorough scan of the area and may ask the Mediator 5 questions about it. The answers they give must be true.",
       "11-19": "Your scan is successful and you may ask the Mediator 3 questions about the scanned area. The answers they give must be true.",
       "6-10": "You partially scan the area and return messy results. You may ask the Mediator 2 questions about the area. One of the answers they give must be true, but the other answer contains false information as decided by the Mediator.",
-      "2-5": "Your scan fails to find any useful information about the area."
+      "2-5": "Your scan fails to find any useful information about the area.",
+      "type": "standard"
     }
   },
   {
@@ -325,10 +328,7 @@
     ],
     "actionType": "Turn",
     "activationCost": 3,
-    "description": "When activated, make an attack with a Weapons System of your choice against a target. If the attack hits choose a System, Module, or appendage on the target. You deal damage as normal, but the System, Module, or appendage is now damaged, or injured.",
-    "rollTable": {
-      "20": "The System, Module, or appendage is instead destroyed."
-    }
+    "description": "When activated, make an attack with a Weapons System of your choice against a target. If the attack hits choose a System, Module, or appendage on the target. You deal damage as normal, but the System, Module, or appendage is now damaged, or injured. On a critical success (20), the System, Module, or appendage is instead destroyed."
   },
   {
     "source": "core",
@@ -380,7 +380,8 @@
       "20": "Reactor Stabilisation: Your Mech's reactor stabilises and its Heat is reduced to 0.",
       "11-19": "Reactor Overheat: Your Mech has overheated. It shuts down and gains the Vulnerable Trait. Your Mech will re-activate at the end of your next turn. In addition, your Mech takes SP damage equal to half your current Heat level. Your Mech then reduces its Heat by 2.",
       "6-10": "Module Overheat: One of the Modules on your Mech, chosen at random or by the Mediator, has overheated and is damaged.",
-      "2-5": "System Overheat: One of the Systems on your Mech, chosen at random or by the Mediator, has overheated and is damaged."
+      "2-5": "System Overheat: One of the Systems on your Mech, chosen at random or by the Mediator, has overheated and is damaged.",
+      "type": "standard"
     }
   },
   {
@@ -592,7 +593,8 @@
       "20": "You may change or manipulate up to 5 pieces of data within the target.",
       "11-19": "You may change or manipulate up to 3 pieces of data within the target.",
       "6-10": "You may change or manipulate up to 2 pieces of data within the target. One of these manipulations will have a Setback attached as decided by the Mediator.",
-      "2-5": "The hacking attempt fails. The Mediator may choose an appropriate Setback."
+      "2-5": "The hacking attempt fails. The Mediator may choose an appropriate Setback.",
+      "type": "standard"
     }
   },
   {
@@ -610,7 +612,8 @@
       "20": "All targets that can hear within Range are reduced to 0 HP.",
       "11-19": "All targets that can hear within Range cannot take any actions and gain the Vulnerable Trait until the end of your next turn.",
       "6-10": "All targets that can hear within Range can choose to either not be able to take any actions until the end of your next turn or gain the Vulnerable Trait until the end of your next turn.",
-      "2-5": "The targets manage to resist the effect and are unharmed beyond some mild nausea."
+      "2-5": "The targets manage to resist the effect and are unharmed beyond some mild nausea.",
+      "type": "standard"
     }
   },
   {
@@ -642,7 +645,8 @@
       "20": "CHOOSE 3 TARGETS IN RANGE, THEY ALL GAIN THE IMMOBILE TRAIT FOR 10 MINUTES.",
       "11-19": "CHOOSE 2 TARGETS IN RANGE THEY GAIN THE IMMOBILE TRAIT FOR 10 MINUTES.",
       "6-10": "CHOOSE 1 TARGET IN RANGE, IT GAINS THE IMMOBILE TRAIT FOR 10 MINUTES.",
-      "2-5": "THE MODULE FAILS TO ACTIVATE"
+      "2-5": "THE MODULE FAILS TO ACTIVATE",
+      "type": "standard"
     }
   },
   {
@@ -658,7 +662,8 @@
       "20": "Reactor Hyper Stabilisation: Your Mechs reactor stabilises and its Heat is reduced to 0. You may Push your Mech's next action for free.",
       "11-19": "Temporary Reactor Shutdown: Your Mech has overheated and shuts down, gaining the Vulnerable Trait. Your Mech will re-activate at the end of your next turn. In addition, your Mech reduces its Heat to 0.",
       "6-10": "Module Overheat: One of your Mech's Modules, chosen at random or by the Mediator, has overheated and is inoperable for 10 minutes.",
-      "2-5": "System Overheat: One of the Mech's Systems, chosen at random or by the Mediator, has overheated and is inoperable for 10 minutes."
+      "2-5": "System Overheat: One of the Mech's Systems, chosen at random or by the Mediator, has overheated and is inoperable for 10 minutes.",
+      "type": "standard"
     }
   },
   {
@@ -768,7 +773,8 @@
       "20": "The target entirely loses control of itself, attacking wildly. It must make an attack with all its Weapons Systems against a random Ally within Range. It cannot move or take any actions until the end of your next turn.",
       "11-19": "The target loses control of itself and cannot tell friend from foe. It must make an attack with a random Weapons System against a random Ally within Range.",
       "6-10": "The target activates a random non-Weapons System. You decide a Tough Choice related to it that the target must resolve.",
-      "2-5": "The target activates a random Module. You decide a Tough Choice related to it that the target must resolve."
+      "2-5": "The target activates a random Module. You decide a Tough Choice related to it that the target must resolve.",
+      "type": "standard"
     }
   },
   {
