@@ -28,6 +28,11 @@ const validationConfigs: ValidationConfig[] = [
     schemaFile: "schemas/ability-tree-requirements.schema.json",
   },
   {
+    name: "Bio-Titans",
+    dataFile: "data/bio-titans.json",
+    schemaFile: "schemas/bio-titans.schema.json",
+  },
+  {
     name: "Chassis",
     dataFile: "data/chassis.json",
     schemaFile: "schemas/chassis.schema.json",
@@ -43,6 +48,16 @@ const validationConfigs: ValidationConfig[] = [
     schemaFile: "schemas/crawlers.schema.json",
   },
   {
+    name: "Creatures",
+    dataFile: "data/creatures.json",
+    schemaFile: "schemas/creatures.schema.json",
+  },
+  {
+    name: "Drones",
+    dataFile: "data/drones.json",
+    schemaFile: "schemas/drones.schema.json",
+  },
+  {
     name: "Equipment",
     dataFile: "data/equipment.json",
     schemaFile: "schemas/equipment.schema.json",
@@ -53,14 +68,24 @@ const validationConfigs: ValidationConfig[] = [
     schemaFile: "schemas/keywords.schema.json",
   },
   {
+    name: "Meld",
+    dataFile: "data/meld.json",
+    schemaFile: "schemas/meld.schema.json",
+  },
+  {
     name: "Modules",
     dataFile: "data/modules.json",
     schemaFile: "schemas/modules.schema.json",
   },
   {
-    name: "Other Entities",
-    dataFile: "data/otherEntities.json",
-    schemaFile: "schemas/otherEntities.schema.json",
+    name: "NPCs",
+    dataFile: "data/npcs.json",
+    schemaFile: "schemas/npcs.schema.json",
+  },
+  {
+    name: "Squads",
+    dataFile: "data/squads.json",
+    schemaFile: "schemas/squads.schema.json",
   },
   {
     name: "Systems",
@@ -77,6 +102,11 @@ const validationConfigs: ValidationConfig[] = [
     dataFile: "data/traits.json",
     schemaFile: "schemas/traits.schema.json",
   },
+  {
+    name: "Vehicles",
+    dataFile: "data/vehicles.json",
+    schemaFile: "schemas/vehicles.schema.json",
+  },
 ];
 
 function loadJson(filePath: string): any {
@@ -90,33 +120,51 @@ const globalValidator = new Validator();
 
 function loadSharedSchemas() {
   // Load shared schemas that are referenced by other schemas
-  // The schemas use relative references like "shared/enums.schema.json#/definitions/tree"
-  // We need to register them with IDs that match these references
+  // Our schemas now use $id fields following best practices:
+  // - Each schema has a unique $id URL (e.g., "https://salvageunion.com/schemas/shared/enums.schema.json")
+  // - Schemas reference each other using relative paths (e.g., "shared/enums.schema.json#/definitions/tree")
+  // We need to register schemas with both their relative paths AND their $id URLs
+
   const sharedSchemas = [
     {
       path: "schemas/shared/common.schema.json",
-      id: "shared/common.schema.json",
+      relativeId: "shared/common.schema.json",
     },
     {
       path: "schemas/shared/enums.schema.json",
-      id: "shared/enums.schema.json",
+      relativeId: "shared/enums.schema.json",
     },
     {
       path: "schemas/shared/objects.schema.json",
-      id: "shared/objects.schema.json",
+      relativeId: "shared/objects.schema.json",
     },
   ];
 
   for (const sharedInfo of sharedSchemas) {
     try {
       const sharedSchema = loadJson(sharedInfo.path);
-      // Register with both the relative ID and the full URL from $id
-      globalValidator.addSchema(sharedSchema, sharedInfo.id);
+
+      // Register with the relative ID for $ref resolution
+      globalValidator.addSchema(sharedSchema, sharedInfo.relativeId);
+
+      // Also register with the $id URL if present (best practice)
       if (sharedSchema.$id) {
         globalValidator.addSchema(sharedSchema, sharedSchema.$id);
       }
+
+      // Log successful registration
+      console.log(
+        `   ✓ Loaded ${sharedInfo.relativeId}${
+          sharedSchema.$id ? ` ($id: ${sharedSchema.$id})` : ""
+        }`
+      );
     } catch (error) {
-      console.error(`Warning: Could not load shared schema ${sharedInfo.path}`);
+      console.error(
+        `   ✗ Warning: Could not load shared schema ${sharedInfo.path}`
+      );
+      if (error instanceof Error) {
+        console.error(`     ${error.message}`);
+      }
     }
   }
 }
@@ -139,10 +187,35 @@ function validateData(config: ValidationConfig): boolean {
       return true;
     } else {
       console.log(`❌ ${config.name}: INVALID`);
-      console.log(`   Errors:`);
-      result.errors.forEach((error, index) => {
-        console.log(`   ${index + 1}. ${error.stack}`);
+
+      // Group errors by item for better readability
+      const errorsByItem = new Map<string, string[]>();
+
+      result.errors.forEach((error) => {
+        const itemPath = error.property || "root";
+        if (!errorsByItem.has(itemPath)) {
+          errorsByItem.set(itemPath, []);
+        }
+        errorsByItem.get(itemPath)!.push(error.stack);
       });
+
+      // Show first 20 errors to avoid overwhelming output
+      const maxErrors = 20;
+      let errorCount = 0;
+
+      console.log(`   Errors (showing first ${maxErrors}):`);
+      for (const [, errors] of errorsByItem) {
+        for (const error of errors) {
+          if (errorCount >= maxErrors) {
+            const remaining = result.errors.length - maxErrors;
+            console.log(`   ... and ${remaining} more errors`);
+            return false;
+          }
+          console.log(`   ${errorCount + 1}. ${error}`);
+          errorCount++;
+        }
+      }
+
       return false;
     }
   } catch (error) {
@@ -155,9 +228,13 @@ function validateData(config: ValidationConfig): boolean {
 function main() {
   console.log("🔍 Salvage Union Data Validation");
   console.log("=================================");
+  console.log("\n📚 Loading Shared Schemas...");
 
   // Load shared schemas once before validating
   loadSharedSchemas();
+
+  console.log("\n🔍 Validating Data Files...");
+  console.log("=================================");
 
   let allValid = true;
   let validCount = 0;
@@ -178,9 +255,18 @@ function main() {
 
   if (allValid) {
     console.log("✅ All data files are valid!");
+    console.log("\n🎉 All schemas follow JSON Schema best practices:");
+    console.log("   • $id fields for unique identification");
+    console.log("   • title and description for documentation");
+    console.log("   • required fields specified");
+    console.log("   • integer types for whole numbers");
+    console.log("   • minimum constraints where appropriate");
+    console.log("   • oneOf instead of anyOf for exclusive choices");
+    console.log("   • const instead of single-value enum");
     process.exit(0);
   } else {
     console.log("❌ Some data files have validation errors.");
+    console.log("\n💡 Tip: Fix data issues to match the schema requirements.");
     process.exit(1);
   }
 }

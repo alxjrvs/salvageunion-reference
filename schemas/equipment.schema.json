@@ -19,9 +19,7 @@
         "$ref": "shared/enums.schema.json#/definitions/source"
       },
       "techLevel": {
-        "type": "integer",
-        "minimum": 0,
-        "description": "Technology level"
+        "$ref": "shared/common.schema.json#/definitions/techLevel"
       },
       "traits": {
         "$ref": "shared/common.schema.json#/definitions/traits"

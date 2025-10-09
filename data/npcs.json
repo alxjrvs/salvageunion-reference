@@ -1,0 +1,146 @@
+[
+  {
+    "source": "core",
+    "name": "Wastelander",
+    "description": "Represents the myriad of common denizens of the wastelands.",
+    "abilities": [
+      {
+        "name": "Improvised Melee Weapon",
+        "range": "Close",
+        "damage": {
+          "amount": 2,
+          "type": "HP"
+        },
+        "traits": [
+          {
+            "type": "melee"
+          }
+        ]
+      },
+      {
+        "name": "Salvaging Tools"
+      }
+    ],
+    "hitPoints": 2
+  },
+  {
+    "source": "core",
+    "name": "Raider",
+    "description": "Wastelanders who take what they need by force.",
+    "abilities": [
+      {
+        "name": "Improvised Firearm",
+        "range": "Close",
+        "damage": {
+          "amount": 3,
+          "type": "HP"
+        },
+        "traits": [
+          {
+            "type": "ballistic"
+          },
+          {
+            "type": "unwieldy"
+          }
+        ]
+      }
+    ],
+    "hitPoints": 3
+  },
+  {
+    "source": "core",
+    "name": "Trooper",
+    "description": "Combat trained troops deployed in a wide range of roles.",
+    "abilities": [
+      {
+        "name": "Rifle",
+        "range": "Medium",
+        "damage": {
+          "amount": 5,
+          "type": "HP"
+        },
+        "traits": [
+          {
+            "type": "ballistic"
+          }
+        ]
+      },
+      {
+        "name": "Portable Comms Unit"
+      }
+    ],
+    "hitPoints": 5
+  },
+  {
+    "source": "core",
+    "name": "Veteran",
+    "description": "A well trained and seasoned soldier deployed on difficult operations.",
+    "abilities": [
+      {
+        "name": "Green Laser Rifle",
+        "range": "Medium",
+        "damage": {
+          "amount": 5,
+          "type": "HP"
+        },
+        "traits": [
+          {
+            "type": "energy"
+          }
+        ]
+      },
+      {
+        "name": "Portable Comms Unit"
+      }
+    ],
+    "hitPoints": 9
+  },
+  {
+    "source": "core",
+    "name": "Combat Pilot",
+    "description": "A combat trained Mech Pilot, such as a Union Salvager.",
+    "abilities": [
+      {
+        "name": "Pistol",
+        "range": "Close",
+        "damage": {
+          "amount": 3,
+          "type": "HP"
+        },
+        "traits": [
+          {
+            "type": "ballistic"
+          }
+        ]
+      },
+      {
+        "name": "Portable Comms Unit"
+      }
+    ],
+    "hitPoints": 10
+  },
+  {
+    "source": "core",
+    "name": "Ace",
+    "description": "A veteran Mech Pilot, usually with Corpo training.",
+    "abilities": [
+      {
+        "name": "Sniper Rifle",
+        "range": "Long",
+        "damage": {
+          "amount": 6,
+          "type": "HP"
+        },
+        "traits": [
+          {
+            "type": "ballistic"
+          }
+        ]
+      },
+      {
+        "name": "Portable Comms Unit"
+      }
+    ],
+    "hitPoints": 16
+  }
+]

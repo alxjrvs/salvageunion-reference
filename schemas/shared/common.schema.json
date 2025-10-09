@@ -250,6 +250,26 @@
           "description": "Page number in the source book"
         }
       }
+    },
+    "techLevel": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Technology level of the item or entity"
+    },
+    "salvageValue": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Salvage value in credits"
+    },
+    "hitPoints": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Hit points for creatures and personnel"
+    },
+    "structurePoints": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Structure points for mechs, vehicles, and titans"
     }
   }
 }

@@ -1,14 +1,36 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://salvageunion.com/schemas/ability-tree-requirements.schema.json",
+  "title": "Salvage Union Ability Tree Requirements",
+  "description": "Requirements for ability trees in Salvage Union",
   "type": "array",
   "items": {
     "type": "object",
+    "description": "Requirements for an ability tree",
     "additionalProperties": false,
+    "required": ["tree"],
     "properties": {
-      "tree": { "$ref": "shared/enums.schema.json#/definitions/tree" },
-      "requirement": {
+      "tree": {
+        "$ref": "shared/enums.schema.json#/definitions/tree"
+      },
+      "requirements": {
         "type": "array",
-        "items": { "$ref": "shared/enums.schema.json#/definitions/tree" }
+        "description": "List of requirements to access this tree",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["class", "ability", "level"],
+              "description": "Type of requirement"
+            },
+            "value": {
+              "description": "Value for the requirement (class name, ability name, or level number)"
+            }
+          }
+        }
       }
     }
   }

@@ -1,0 +1,280 @@
+[
+  {
+    "source": "core",
+    "name": "Defacer Drone",
+    "description": "Used for salvaging and crowd control, their distinctive buzzsaw sound has struck fear into many protesters.",
+    "systems": [
+      {
+        "name": "Hover Locomotion System"
+      },
+      {
+        "name": "Chainsaw Arm",
+        "range": "Close",
+        "damage": {
+          "amount": 2,
+          "type": "SP"
+        },
+        "traits": [
+          {
+            "type": "melee"
+          },
+          {
+            "type": "salvaging"
+          }
+        ]
+      }
+    ],
+    "techLevel": 1,
+    "salvageValue": 1,
+    "structurePoints": 2
+  },
+  {
+    "source": "core",
+    "name": "Salvo Drone",
+    "description": "A simple machine gun drone often used to defend areas of strategic importance.",
+    "systems": [
+      {
+        "name": "Hover Locomotion System"
+      },
+      {
+        "name": ".50 Cal Machine Gun",
+        "range": "Close",
+        "damage": {
+          "amount": 2,
+          "type": "SP"
+        },
+        "traits": [
+          {
+            "type": "ballistic"
+          },
+          {
+            "type": "jamming"
+          },
+          {
+            "type": "pinning"
+          }
+        ]
+      }
+    ],
+    "techLevel": 1,
+    "salvageValue": 2,
+    "structurePoints": 3
+  },
+  {
+    "source": "core",
+    "name": "Survey Drone",
+    "description": "An unarmed drone used as a reconnaissance tool.",
+    "systems": [
+      {
+        "name": "Hover Locomotion System"
+      },
+      {
+        "name": "Survey Scanner"
+      }
+    ],
+    "techLevel": 1,
+    "salvageValue": 1,
+    "structurePoints": 1
+  },
+  {
+    "source": "core",
+    "name": "Combat Drone",
+    "description": "A laser armed drone used in a defensive capacity.",
+    "systems": [
+      {
+        "name": "Hover Locomotion System"
+      },
+      {
+        "name": "Red Laser",
+        "range": "Medium",
+        "damage": {
+          "amount": 3,
+          "type": "SP"
+        },
+        "traits": [
+          {
+            "type": "energy"
+          },
+          {
+            "type": "hot",
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "techLevel": 2,
+    "salvageValue": 2,
+    "structurePoints": 4
+  },
+  {
+    "source": "core",
+    "name": "Heavy Combat Drone",
+    "description": "A heavily armoured drone designed for battlefield use.",
+    "systems": [
+      {
+        "name": "Hover Locomotion System"
+      },
+      {
+        "name": "30mm Autocannon",
+        "range": "Medium",
+        "damage": {
+          "amount": 4,
+          "type": "SP"
+        },
+        "traits": [
+          {
+            "type": "ballistic"
+          },
+          {
+            "type": "jamming"
+          }
+        ]
+      }
+    ],
+    "techLevel": 3,
+    "salvageValue": 2,
+    "structurePoints": 5
+  },
+  {
+    "source": "core",
+    "name": "Walker Drone",
+    "description": "An anthropomorphic, Mech-like drone.",
+    "systems": [
+      {
+        "name": "Locomotion System"
+      },
+      {
+        "name": "Articulated Rigging Arm"
+      },
+      {
+        "name": "Green Laser",
+        "range": "Medium",
+        "damage": {
+          "amount": 4,
+          "type": "SP"
+        },
+        "traits": [
+          {
+            "type": "energy"
+          },
+          {
+            "type": "hot",
+            "amount": 2
+          }
+        ]
+      }
+    ],
+    "techLevel": 2,
+    "salvageValue": 3,
+    "structurePoints": 6
+  },
+  {
+    "source": "core",
+    "name": "Pest Drone",
+    "description": "A versatile multi-legged drone armed with a flamethrower for 'industrial' use.",
+    "systems": [
+      {
+        "name": "Spider Locomotion System"
+      },
+      {
+        "name": "FM-3 Flamethrower",
+        "count": 2,
+        "range": "Close",
+        "damage": {
+          "amount": 1,
+          "type": "SP"
+        },
+        "traits": [
+          {
+            "type": "anti-organic"
+          },
+          {
+            "type": "burn",
+            "amount": 1
+          },
+          {
+            "type": "multi-attack",
+            "amount": 2
+          },
+          {
+            "type": "overheat"
+          }
+        ]
+      }
+    ],
+    "techLevel": 3,
+    "salvageValue": 3,
+    "structurePoints": 4
+  },
+  {
+    "source": "core",
+    "name": "Hover Drone",
+    "description": "A highly mobile missile platform used in offensive and defensive roles.",
+    "systems": [
+      {
+        "name": "Hover Locomotion System"
+      },
+      {
+        "name": "Missile Pod",
+        "range": "Long",
+        "damage": {
+          "amount": 8,
+          "type": "SP"
+        },
+        "traits": [
+          {
+            "type": "missile"
+          },
+          {
+            "type": "explosive",
+            "amount": 2
+          },
+          {
+            "type": "hot",
+            "amount": 1
+          },
+          {
+            "type": "uses",
+            "amount": 6
+          }
+        ]
+      }
+    ],
+    "techLevel": 4,
+    "salvageValue": 3,
+    "structurePoints": 4
+  },
+  {
+    "source": "core",
+    "name": "Needle Drone",
+    "description": "A miniaturised corpo stealth drone developed for black ops and wetwork.",
+    "systems": [
+      {
+        "name": "Hover Locomotion System"
+      },
+      {
+        "name": "Needler",
+        "range": "Close",
+        "damage": {
+          "amount": 1,
+          "type": "SP"
+        },
+        "traits": [
+          {
+            "type": "poison"
+          },
+          {
+            "type": "deadly (creatures only)"
+          }
+        ]
+      },
+      {
+        "name": "Polycarbonate Stealth Chassis",
+        "description": "The Needle Drone cannot be targeted with anything that uses the Targeter Trait such as targeting Modules. It also cannot be seen by anything with the Optics Trait or Scanner Trait. It does not appear on sensors, radar systems, or scanners and needs direct visual confirmation to be spotted."
+      }
+    ],
+    "techLevel": 4,
+    "salvageValue": 3,
+    "structurePoints": 2
+  }
+]
