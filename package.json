@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "validate": "tsx tools/validateAll.ts",
-    "format": "tsx tools/format.ts"
+    "format": "tsx tools/format.ts",
+    "parse": "tsx tools/parsePdf.ts"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "jsonschema": "^1.4.1",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "pdf.js-extract": "^0.2.1"
   }
 }

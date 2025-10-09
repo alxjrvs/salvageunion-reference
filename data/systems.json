@@ -21,7 +21,8 @@
         "type": "pinning"
       }
     ],
-    "description": "Fires solid, high calibre rounds that can puncture a Mech hull and shred through infantry."
+    "description": "This simple ballistic weapon of the Opus Institute design fires solid, high calibre rounds that can puncture a Mech hull and shred through infantry. It has been a mainstay of battlefields for as long as anyone remembers and remains ubiquitous today.",
+    "page": 164
   },
   {
     "source": "core",
@@ -30,7 +31,8 @@
     "slotsRequired": 2,
     "salvageValue": 1,
     "actionType": "Passive",
-    "description": "The first time that your Mech is hit by an attack, or takes damage, prevent the damage and all effects of the attack. Your Armour Plating System is then destroyed."
+    "description": "The first time that your Mech is hit by an attack, or takes damage, prevent the damage and all effects of the attack. Your Armour Plating System is then destroyed.",
+    "page": 164
   },
   {
     "source": "core",
@@ -43,7 +45,8 @@
     "statBonus": {
       "stat": "cargo_cap",
       "bonus": 1
-    }
+    },
+    "page": 164
   },
   {
     "source": "core",
@@ -58,7 +61,7 @@
       }
     ],
     "recommended": true,
-    "description": "When activated, by pulling a lever, a bolted charge blows the Escape Hatch from the Mech Chassis, allowing for the Pilot to crawl through to safety.",
+    "description": "An Escape Hatch is a sealed hatch that can be opened and escaped through in the event a Mech suffers critical damage or the Pilot needs to make a swift exit. When activated, by pulling a lever, a bolted charge blows the Escape Hatch from the Mech Chassis, allowing for the Pilot to crawl through to safety.",
     "rollTable": {
       "1": "The Escape Hatch severely malfunctions trapping you in your Mech and injuring you. You must roll on the Critical Injury Table, and the Escape Hatch is destroyed.",
       "20": "You escape safely from your Mech in Medium Range.",
@@ -66,7 +69,8 @@
       "6-10": "You escape in Close Range, but are injured in the process. Roll on the Critical Injury Table.",
       "2-5": "The Escape Hatch fails to trigger and is damaged in the process, it must be repaired to Intact Condition to be used again.",
       "type": "standard"
-    }
+    },
+    "page": 164
   },
   {
     "source": "core",
@@ -87,7 +91,8 @@
         "type": "salvaging"
       }
     ],
-    "description": "Originally developed as a tool for lumberjack Mechs, this saw arm has remained in use for its salvaging capabilities, utility, and stopping power."
+    "description": "Originally developed as a tool for lumberjack Mechs by Hodgson & Vasquez, an Evantis subsidiary, this saw arm has remained in use for its salvaging capabilities, utility, and stopping power even as the forests have been cut down across the world.",
+    "page": 164
   },
   {
     "source": "core",
@@ -96,8 +101,9 @@
     "slotsRequired": 1,
     "salvageValue": 1,
     "actionType": "Free",
-    "description": "Floodlights, light up a wide area up to Medium Range from a Mech as a Free Action. This allows you to see more clearly in dark or foggy conditions.",
-    "range": "Medium"
+    "description": "Floodlights, light up a wide area up to Medium Range from a Mech as a Free Action. This allows you to see more clearly in dark or foggy conditions. The Floodlights can be adjusted for tight or wide beam illumination.",
+    "range": "Medium",
+    "page": 165
   },
   {
     "source": "core",
@@ -122,7 +128,8 @@
         "type": "overheat"
       }
     ],
-    "description": "The FM-3 shoots a superheated stream of fire at a target. Most Mechs are armoured enough that this only licks them, but it can mess up internals enough to stop them firing anything hot back at you."
+    "description": "Developed by the Opus Institute for use in forestry and demolition operations, or at least that is what they tell themselves. The FM-3 shoots a superheated stream of fire at a target. Most Mechs are armoured enough that this only licks them, but it can mess up internals enough to stop them firing anything hot back at you. Flesh bubbles and screams.",
+    "page": 165
   },
   {
     "source": "core",
@@ -140,8 +147,9 @@
         "amount": 5
       }
     ],
-    "description": "You fire a stream of highly pressurised water at any target or location in Range. This can douse fire and make ground boggy and wet.",
-    "range": "Close"
+    "description": "A useful tool in the wastes, the Opus Institute originally designed the High Pressure Hose and was the first to make the blueprints freely available for use by fire fighting Mechs following the chaos of Impact Day. Sakura Futures would deploy them as a riot control measure against waves of food protestors. Though somewhat limited by its heavy water tank, this can be refilled in the field. You fire a stream of highly pressurised water at any target or location in Range. This can douse fire and make ground boggy and wet. A Mech doused in water reduces its Heat by 1.",
+    "range": "Close",
+    "page": 165
   },
   {
     "source": "core",
@@ -168,7 +176,8 @@
         "type": "unwieldy"
       }
     ],
-    "description": "When you Area Salvage with this System you gain a single additional Scrap of the Tech Level of the area in addition to what you roll on the Area Salvaging Table."
+    "description": "This hydraulic crushing system can be used to scour an area of salvage or as an impromptu weapon. Sometimes both. When you Area Salvage with this System you gain a single additional Scrap of the Tech Level of the area in addition to what you roll on the Area Salvaging Table.",
+    "page": 165
   },
   {
     "source": "core",
@@ -178,7 +187,8 @@
     "salvageValue": 2,
     "actionType": "Passive",
     "recommended": true,
-    "description": "A sturdy and dependable Locomotion System allowing a Mech to traverse most standard terrain types and adaptable to fit on most Chassis. A Locomotion System allows a Mech to move normally."
+    "description": "A sturdy and dependable Locomotion System allowing a Mech to traverse most standard terrain types and adaptable to fit on most Chassis. Locomotion Systems vary widely from bipedal to quadrupedal, and beyond. Some esoteric designs are known to have as many as eight legs! A Locomotion System allows a Mech to move normally. If a Mech does not have a Locomotion System or it is damaged or destroyed the Mech cannot move.",
+    "page": 165
   },
   {
     "source": "core",
@@ -187,8 +197,9 @@
     "slotsRequired": 1,
     "salvageValue": 1,
     "actionType": "Free",
-    "description": "These externally mounted speakers can be clearly heard by anything up to Medium Range from you.",
-    "range": "Medium"
+    "description": "These externally mounted speakers can be clearly heard by anything up to Medium Range from you. They can be used to communicate externally with those outside of your Mech or play some beats from your cassette deck. The Immortan Raiders made effective use of Loudspeakers as a crude shock and awe tool during their devastating raids in the Ferrous Wars.",
+    "range": "Medium",
+    "page": 165
   },
   {
     "source": "core",
@@ -197,7 +208,7 @@
     "slotsRequired": 5,
     "salvageValue": 3,
     "actionType": "Turn",
-    "description": "A Mechapult must be loaded with one piece of Scrap to fire. The effect is randomly determined and differs based on the Tech Level of Scrap you choose.",
+    "description": "The Mechapult is an invention that could only have been thought of by salvagers. Scrap has many uses in the wastelands from trade, from crafting to repair and most obviously launching at high velocity towards whoever looked at you the wrong way. A Mechapult must be loaded with one piece of Scrap to fire. The effect is randomly determined and differs based on the Tech Level of Scrap you choose. Choose a target in Range to fire the Mechapult at. Instead of making an attack roll, roll the die on the table below to determine the effect. You may Push this roll as normal. The Scrap is always destroyed irrespective of the result.",
     "range": "Long",
     "rollTable": {
       "1": "The Mechapult explodes and is destroyed. Deal SP damage equal to 2× the Tech Level of the Scrap to your Mech and everything within Close Range.",
@@ -221,7 +232,8 @@
       "19": "A heavy lump of scrap strikes the target with a devastating blow. The target is hit for SP damage equal to 4× the Tech Level of the Scrap",
       "20": "A dense ball of concentrated scrap hits the target with catastrophic force dealing SP damage equal to 6× the Tech Level of the Scrap.",
       "type": "full"
-    }
+    },
+    "page": 166
   },
   {
     "source": "core",
@@ -244,7 +256,8 @@
         "amount": 5
       }
     ],
-    "description": "The Herrsch Pattern Miniaturised Mortar lobs an explosive, high velocity round against a target, flaying everything around it with superheated shrapnel."
+    "description": "The Herrsch Pattern Miniaturised Mortar lobs an explosive, high velocity round against a target, flaying everything around it with superheated shrapnel.",
+    "page": 167
   },
   {
     "source": "core",
@@ -268,7 +281,8 @@
         "type": "unwieldy"
       }
     ],
-    "description": "Allows drilling, excavating, and salvaging of rock and other dense material."
+    "description": "An industrial excavator designed for mining and salvaging operations. Allows drilling, excavating, and salvaging of rock and other dense material. These were used extensively in the Ferrous Range by Thatcher Steel miners and their carcasses still litter the rocky outcrops.",
+    "page": 167
   },
   {
     "source": "core",
@@ -290,7 +304,8 @@
         "amount": 1
       }
     ],
-    "description": "Red lasers strike a target with a small, focussed beam of heat."
+    "description": "Red lasers strike a target with a small, focussed beam of heat. Their blueprint has been made widely available by the Opus Institute and are commonly used by corpos as much as they are by salvagers and wastelanders.",
+    "page": 167
   },
   {
     "source": "core",
@@ -303,7 +318,8 @@
         "type": "rigging"
       }
     ],
-    "description": "This industrial rigging arm is designed to enable a Mech to pick up and manipulate objects in its external environment."
+    "description": "This industrial rigging arm is designed to enable a Mech to pick up and manipulate objects in its external environment. It is important to note that Mechs are not equipped with arms by default. To avoid any embarrassment in the field, please remember to install a Rigging Arm on your Mech, as it will be unable to pick up objects without one.",
+    "page": 168
   },
   {
     "source": "core",
@@ -312,11 +328,12 @@
     "slotsRequired": 2,
     "salvageValue": 2,
     "actionType": "Passive",
-    "description": "A Transport Hold increases the Cargo Capacity of a Mech by 4.",
+    "description": "A simple hold designed to store salvage on a Mech. Not the most flashy option, but nothing beats the feeling of having a hold full of Scrap to bring home to the Crawler. A Transport Hold increases the Cargo Capacity of a Mech by 4.",
     "statBonus": {
       "stat": "cargo_cap",
       "bonus": 4
-    }
+    },
+    "page": 168
   },
   {
     "source": "core",
@@ -325,12 +342,13 @@
     "slotsRequired": 3,
     "salvageValue": 2,
     "actionType": "Turn",
-    "description": "A COMPRESSOR AND NOZZLE WHICH PROPELS AN ABRASIVE MATERIAL LIKE SAND TO SLOWLY ERODE, CLEAN, OR SHAPE A SURFACE.",
+    "description": "A compressor and nozzle which propels an abrasive material like sand to slowly erode, clean, or shape a surface. Any target hit cannot use any System or Module with the Targeter Trait for 1 turn.",
     "range": "Close",
     "damage": {
       "type": "SP",
       "amount": 1
-    }
+    },
+    "page": 167
   },
   {
     "source": "core",
@@ -365,7 +383,8 @@
         "actionType": "Long",
         "description": "You repair a damaged Tech 1 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
-    ]
+    ],
+    "page": 168
   },
   {
     "source": "core",
@@ -382,7 +401,7 @@
         "type": "wield"
       }
     ],
-    "description": "When your Mech or a target in Close Range is hit by a Melee Attack you may use your Armoured Shield to block the attack as a Reaction.",
+    "description": "This metallic shield is designed to protect the wielder from melee attacks, handy when a Bio-Titan is chomping down on you. When your Mech or a target in Close Range is hit by a Melee Attack you may use your Armoured Shield to block the attack as a Reaction.",
     "rollTable": {
       "1": "The attack smashes through your Armoured Shield. The attack hits as normal and your Armoured Shield is destroyed.",
       "20": "The attack misses and deals no damage and you put your opponent off guard. You may make an attack against the target as a Reaction.",
@@ -390,7 +409,8 @@
       "6-10": "The Armoured Shield deflects the attack, it misses and deals no damage, but your Armoured Shield is destroyed.",
       "2-5": "The attack breaks through your Armoured Shield, it hits as normal, and your Armoured Shield is damaged.",
       "type": "standard"
-    }
+    },
+    "page": 168
   },
   {
     "source": "core",
@@ -411,7 +431,8 @@
         "type": "jamming"
       }
     ],
-    "description": "This automatic ballistic weapon fires high calibre slugs at a target."
+    "description": "This automatic ballistic weapon fires high calibre slugs at a target. Evantis are one of the main manufacturers of heavy duty ballistic weapons, and you can expect to find their designs on their standard mil-tech loadouts.",
+    "page": 168
   },
   {
     "source": "core",
@@ -433,8 +454,8 @@
         "amount": 3
       }
     ],
-    "description": "This heavy duty mining laser fires a concentrated blue beam originally designed to crack through deposits, but equally tears through a Mech.",
-    "notes": "*Union safety regulation 956.326 (a) requires the use of Reactor Safety Protocols when using this system.*"
+    "description": "This heavy duty mining laser fires a concentrated blue beam originally designed to crack through deposits, but equally tears through a Mech. In the Night of Red Iron, salvagers tore apart Thatcher Steel defences with these, seizing their production facilities and turning the tide in the Ferrous Wars. *Union safety regulation 956.326 (a) requires the use of Reactor Safety Protocols when using this system.*",
+    "page": 169
   },
   {
     "source": "core",
@@ -443,11 +464,12 @@
     "slotsRequired": 4,
     "salvageValue": 2,
     "actionType": "Passive",
-    "description": "A Cargo Bay increases a Mech’s Cargo Capacity by 10.",
+    "description": "The true staple System of the Union, used as much by our comrades who founded the Salvage Unions as we do today to haul loads across the wastes and back to the crawler. A Cargo Bay increases a Mech’s Cargo Capacity by 10.",
     "statBonus": {
       "stat": "cargo_cap",
       "bonus": 10
-    }
+    },
+    "page": 169
   },
   {
     "source": "core",
@@ -462,7 +484,8 @@
       }
     ],
     "actionType": "Reaction",
-    "description": "This System fires a metallic cloud of chaff, made of strips of aluminium and zinc, from your Mech which can detonate missiles harmlessly in flight or scramble targeting systems."
+    "description": "This System fires a metallic cloud of chaff, made of strips of aluminium and zinc, from your Mech which can detonate missiles harmlessly in flight or scramble targeting systems. If you or an Ally in Close Range are hit by a weapon with the Missile Trait or any attack with the Targeter Trait, you may activate the Chaff Launcher. The attack misses, dealing no damage and having no other effect.",
+    "page": 169
   },
   {
     "source": "core",
@@ -471,7 +494,8 @@
     "slotsRequired": 3,
     "salvageValue": 2,
     "actionType": "Passive",
-    "description": "This allows your Mech to safely move through and clear any areas of Difficult Terrain such as rubble, ruins, and roadblocks."
+    "description": "A huge, frontal mounted, curved blade for clearing obstacles, used frequently by Osiris Construction. This allows your Mech to safely move through and clear any areas of Difficult Terrain such as rubble, ruins, and roadblocks.",
+    "page": 169
   },
   {
     "source": "core",
@@ -480,7 +504,7 @@
     "slotsRequired": 3,
     "salvageValue": 2,
     "traits": [],
-    "description": "This System launches a grappling spike attached to a high tensile wire.",
+    "description": "This System launches a grappling spike attached to a high tensile wire. Fired into a rock or structure and it can be used to help the Mech cross rough terrain. Fired at a Mech, it can be used to pin the Mech down or even pulled towards the attacker. Raiders love using these to pin down targets enabling their mates to strip them apart.",
     "actions": [
       {
         "source": "core",
@@ -493,7 +517,7 @@
             "type": "pinning"
           }
         ],
-        "description": "You deal 1 SP damage to the target and it cannot move beyond Medium Range of your Mech whilst the grappling harpoon is attached."
+        "description": "When activated, choose a target in Range. You deal 1 SP damage to the target and it cannot move beyond Medium Range of your Mech whilst the grappling harpoon is attached. You can detach the grappling harpoon as a Free Action. The target may attempt to remove the harpoon as a Turn Action on their turn, if they have some means to do so."
       },
       {
         "source": "core",
@@ -501,9 +525,10 @@
         "activationCost": 2,
         "range": "Medium",
         "actionType": "Turn",
-        "description": "You may swing or rappel up, down, or over any terrain or obstacle within Range such as a tall building, ravine, or stretch of Irradiated river as long as you have something sturdy to attach the grappling hook to."
+        "description": "When activated, you may swing or rappel up, down, or over any terrain or obstacle within Range such as a tall building, ravine, or stretch of Irradiated river as long as you have something sturdy to attach the grappling hook to."
       }
-    ]
+    ],
+    "page": 169
   },
   {
     "source": "core",
@@ -525,7 +550,8 @@
         "amount": 2
       }
     ],
-    "description": "The Green Laser fires a solid beam of superheated energy at a target."
+    "description": "The Green Laser fires a solid beam of superheated energy at a target. This was one of the first lasers developed for military use and was used extensively on all sides of the First Corpo War. It remains ubiquitous to this day.",
+    "page": 170
   },
   {
     "source": "core",
@@ -534,11 +560,12 @@
     "slotsRequired": 2,
     "salvageValue": 1,
     "actionType": "Passive",
-    "description": "A Heat Sink increases the Maximum Heat Capacity of a Mech by 1 for each Heat Sink installed.",
+    "description": "A large slab of Scrap that acts as a passive temperature exchange harmlessly dissipating Heat from your Mech's reactor. A Heat Sink increases the Maximum Heat Capacity of a Mech by 1 for each Heat Sink installed.",
     "statBonus": {
       "stat": "heat_cap",
       "bonus": 1
-    }
+    },
+    "page": 170
   },
   {
     "source": "core",
@@ -547,7 +574,8 @@
     "slotsRequired": 1,
     "salvageValue": 1,
     "actionType": "Passive",
-    "description": "This increases the Range band of any of your installed Modules or Pilot Abilities with the Communicator, Hacking, and Scanner Trait by 1."
+    "description": "A simple, scrap-built, extendable antenna that helps pierce through the atomic background noise. This increases the Range band of any of your installed Modules or Pilot Abilities with the Communicator, Hacking, and Scanner Trait by 1. For example, increasing the range of a Comms Module from Long Range to Far Range.",
+    "page": 170
   },
   {
     "source": "core",
@@ -556,7 +584,8 @@
     "slotsRequired": 3,
     "salvageValue": 3,
     "actionType": "Passive",
-    "description": "This body kit allows you to change the skin of your Mech to appear as though it is any other Tech 1 or 2 Mech or any design of your choice."
+    "description": "This body kit allows you to change the skin of your Mech to appear as though it is any other Tech 1 or 2 Mech or any design of your choice. This allows them to meld seamlessly with other Mechs of the desired design.",
+    "page": 170
   },
   {
     "source": "core",
@@ -574,8 +603,8 @@
         "type": "ballistic"
       }
     ],
-    "description": "Fires a blast of grapeshot which rips through multiple targets at close quarters.",
-    "notes": "When you hit with this weapon one other target of your choice in Close Range takes 2 SP damage."
+    "description": "Fires a blast of grapeshot which rips through multiple targets at close quarters. The dirt cheap salvage cost of these made them a favourite of salvagers during the Reclamation of the Wastes, when the remnants of corpo-owned industry were swept away under a hail of shrapnel. When you hit with this weapon one other target of your choice in Close Range takes 2 SP damage.",
+    "page": 170
   },
   {
     "source": "core",
@@ -584,9 +613,10 @@
     "slotsRequired": 3,
     "salvageValue": 2,
     "actionType": "Turn",
-    "description": "This System fires a large, strong nanofibre net at a target, making them easy pickings for salvage.",
+    "description": "This System fires a large, strong nanofibre net at a target, making them easy pickings for salvage. When activated, you fire a nanofibre net at a target in Range. The target cannot move, and gains the Vulnerable Trait as it becomes trapped in the net. The target may attempt to escape the net as a Turn Action on their turn, if they have some means to do so.",
     "range": "Close",
-    "activationCost": 2
+    "activationCost": 2,
+    "page": 170
   },
   {
     "source": "core",
@@ -595,11 +625,12 @@
     "slotsRequired": 4,
     "salvageValue": 1,
     "actionType": "Passive",
-    "description": "This System increases your Mech’s Module Capacity by 1.",
+    "description": "A complex adaptation port that lets you install additional Modules onto your Mech. This System increases your Mech’s Module Capacity by 1.",
     "statBonus": {
       "stat": "module_slots",
       "bonus": 1
-    }
+    },
+    "page": 170
   },
   {
     "source": "core",
@@ -608,13 +639,14 @@
     "slotsRequired": 3,
     "salvageValue": 2,
     "actionType": "Passive",
-    "description": "Grants the Mech a Personnel Capacity of 12, or 2 Squads per Personnel Transport Pod mounted.",
+    "description": "A self-contained transport pod designed to comfortably transport people on a Mech. Grants the Mech a Personnel Capacity of 12, or 2 Squads per Personnel Transport Pod mounted.",
     "traits": [
       {
         "type": "personnel capacity",
         "amount": 12
       }
-    ]
+    ],
+    "page": 171
   },
   {
     "source": "core",
@@ -623,8 +655,8 @@
     "slotsRequired": 2,
     "salvageValue": 2,
     "actionType": "Passive",
-    "description": "This is a separate cockpit which is mounted to the side of a Mech, and allows a Pilot to ride ‘shotgun’ on the Mech in support of the main Pilot, though unable to control the Mech itself.",
-    "notes": "When riding in the Shotgun Pit, the Pilot takes half damage from any weapons that deal HP damage and standard damage from any weapons that deal SP damage. If the Shotgun Pit is ever damaged or destroyed, the Pilot riding inside it must roll on the Critical Injury Table."
+    "description": "This is a separate cockpit which is mounted to the side of a Mech, and allows a Pilot to ride ‘shotgun’ on the Mech in support of the main Pilot, though unable to control the Mech itself. They may fire from the Shotgun Pit with any equipped weapons and use any of their Pilot Equipment or Abilities. When riding in the Shotgun Pit, the Pilot takes half damage from any weapons that deal HP damage and standard damage from any weapons that deal SP damage. If the Shotgun Pit is ever damaged or destroyed, the Pilot riding inside it must roll on the Critical Injury Table.",
+    "page": 171
   },
   {
     "source": "core",
@@ -633,8 +665,9 @@
     "slotsRequired": 2,
     "salvageValue": 2,
     "actionType": "Turn",
-    "description": "You pump a stream of smoke around you concealing your Mech from view. Any Systems, Modules, or Abilities with the Targeter Trait cannot be used against you.",
-    "activationCost": 2
+    "description": "A smoke machine pumps out large amounts of thick smoke around your Mech, obscuring it from view and scrambling target systems. You pump a stream of smoke around you concealing your Mech from view. Any Systems, Modules, or Abilities with the Targeter Trait cannot be used against you. The smoke lasts 10 minutes and then dissipates.",
+    "activationCost": 2,
+    "page": 171
   },
   {
     "source": "core",
@@ -648,7 +681,7 @@
         "type": "shield"
       }
     ],
-    "description": "When you or a target in Close Range is hit by a weapon with the Energy Trait, you may attempt to use your Refractive Shield Projector to prevent the hit.",
+    "description": "Developed by Aeon as a means to combat solar flares during colony construction and asteroid mining projects, this shield projector is also highly effective against energy weapons. When you or a target in Close Range is hit by a weapon with the Energy Trait, you may attempt to use your Refractive Shield Projector to prevent the hit.",
     "range": "Close",
     "rollTable": {
       "1": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check.",
@@ -657,7 +690,8 @@
       "6-10": "You may choose to gain Heat equal to the damage of the weapon that attacked you. If you do the attack misses and deals no damage. if you do not, the attack deals damage as normal.",
       "2-5": "The attack hits as normal.",
       "type": "standard"
-    }
+    },
+    "page": 171
   },
   {
     "source": "core",
@@ -687,8 +721,8 @@
         "amount": 6
       }
     ],
-    "description": "Developed as a highly destructive and versatile armament for underwater Mechs, it is not advisable to use these on land unless you have a good plan.",
-    "notes": "When fired in water, Torpedo Tubes are Long Range weapons. When fired out of water they are Close Range weapons."
+    "description": "Developed as a highly destructive and versatile armament for underwater Mechs, it is not advisable to use these on land unless you have a good plan. Originally developed by Aegean Dynamics, a subsidiary of Contour Aerospace. Contour conducted a short, highly hostile takeover of the subsidiary and solidified their power over both land and sea. When fired in water, Torpedo Tubes are Long Range weapons. When fired out of water they are Close Range weapons.",
+    "page": 172
   },
   {
     "source": "core",
@@ -702,10 +736,10 @@
         "type": "targeter"
       }
     ],
-    "description": "When activated, you fire a bead-sized tracking node from your Mech at any target within Long Range.",
+    "description": "A favourite of the Scouts Union, they are often used to track salvage targets over long distances. When activated, you fire a bead-sized tracking node from your Mech at any target within Long Range. The tracking node sticks to the target and allows you to track them over Range via your Mech's heads up display. You know the exact location of the target as long as it remains within Far Range of you. If the target moves further away than Far Range, you also know if the target returns to within Far Range of you. The tracking node adheres to a target for 24 hours. You may have multiple tracking nodes on multiple targets. *Union Code § 2211 prohibits the use of unsecured tracking systems on board Union Crawlers to prevent back hacking*",
     "range": "Long",
     "activationCost": 2,
-    "notes": "*Union Code § 2211 prohibits the use of unsecured tracking systems on board Union Crawlers to prevent back hacking*"
+    "page": 172
   },
   {
     "source": "core",
@@ -714,7 +748,7 @@
     "slotsRequired": 3,
     "salvageValue": 3,
     "traits": [],
-    "description": "This Mech-mountable welding laser allows you to make a wider range of repairs in the field.",
+    "description": "This Mech-mountable welding laser allows you to make a wider range of repairs in the field. An invaluable tool that has become the official symbol of the Engineers' Union.",
     "actions": [
       {
         "source": "core",
@@ -740,7 +774,8 @@
         "actionType": "Long",
         "description": "You repair a damaged Tech 1 or Tech 2 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
-    ]
+    ],
+    "page": 172
   },
   {
     "source": "core",
@@ -762,7 +797,8 @@
         "amount": 1
       }
     ],
-    "description": "This chunky Weapons System fires a huge ballistic charge that explodes on impact."
+    "description": "This chunky Weapons System fires a huge ballistic charge that explodes on impact. These are said to be so old they were used by actual nations during the First Corporate War. Despite their simplicity and weight, they're still undeniably effective when combined with modern targeting and tracking systems.",
+    "page": 172
   },
   {
     "source": "core",
@@ -778,8 +814,8 @@
         "type": "salvaging"
       }
     ],
-    "description": "This advanced rigging arm has multiple interacting joints allowing for a much greater degree of movement and utility.",
-    "notes": "If you have two or more Articulated Rigging Arms your Mech gains the Climbing Trait."
+    "description": "This advanced rigging arm has multiple interacting joints allowing for a much greater degree of movement and utility, enabling the user to dig through salvage and manipulate objects in their external environment. The Mechs in the fighting pits of Osiris often have several articulated rigging arms to aid in grappling and ripping chunks off other Mechs. If you have two or more Articulated Rigging Arms your Mech gains the Climbing Trait.",
+    "page": 173
   },
   {
     "source": "core",
@@ -788,11 +824,12 @@
     "slotsRequired": 4,
     "salvageValue": 2,
     "actionType": "Passive",
-    "description": "This System increases your Mech’s Maximum EP by 2 for each bank installed.",
+    "description": "Using Opus developed supercapacitors this hefty capacitor bank is attached externally and connected to a Mech's reactor. Storing excess produced energy it is also capable of rapidly discharging that energy when needed. This System increases your Mech’s Maximum EP by 2 for each bank installed.",
     "statBonus": {
       "stat": "energy_pts",
       "bonus": 2
-    }
+    },
+    "page": 173
   },
   {
     "source": "core",
@@ -801,12 +838,12 @@
     "slotsRequired": 3,
     "salvageValue": 1,
     "actionType": "Passive",
-    "description": "This System increases your Mech’s Max SP by 5 for each Composite Armour System you have installed.",
-    "notes": "If this System is Damaged or Destroyed reduce your Max SP by 5 and reduce your current SP to match your new Max SP.",
+    "description": "Layered plates of highly resilient metals, plastics, and ceramics that provide additional protection to your Mech. This System increases your Mech’s Max SP by 5 for each Composite Armour System you have installed. If this System is Damaged or Destroyed reduce your Max SP by 5 and reduce your current SP to match your new Max SP.",
     "statBonus": {
       "stat": "structure_pts",
       "bonus": 5
-    }
+    },
+    "page": 173
   },
   {
     "source": "core",
@@ -820,7 +857,7 @@
         "type": "escape"
       }
     ],
-    "description": "This allows you to escape your Mech in the event it suffers critical damage, is destroyed, or you find yourself in a tight spot.",
+    "description": "An Ejection System propels a Pilot from their Mech's cockpit to a safe distance, where they land with the aid of a parachute. This allows you to escape your Mech in the event it suffers critical damage, is destroyed, or you find yourself in a tight spot.",
     "rollTable": {
       "1": "The Ejection System severely malfunctions, harming you inside your cockpit. The Ejection System is destroyed and your Pilot must roll on the Critical Injury Table.",
       "20": "You eject perfectly from the Mech and land in any location up to Far Range of your Mech.",
@@ -828,7 +865,8 @@
       "6-10": "You eject, but suffer injury in the process. You land within Medium Range of your Mech and must roll on the Critical Injury Table for your Pilot.",
       "2-5": "The Ejection System fails to trigger and is damaged in the process.",
       "type": "standard"
-    }
+    },
+    "page": 173
   },
   {
     "source": "core",
@@ -837,7 +875,7 @@
     "slotsRequired": 2,
     "salvageValue": 2,
     "actionType": "Turn",
-    "description": "Reduces the Heat of a target Mech in Range to 0.",
+    "description": "This device sprays highly pressurised Aqueous Film Forming Coolant Foam on a Mech, rapidly reducing their Heat levels. It can also be used to quench blazing fires. Reduces the Heat of a target Mech in Range to 0.",
     "range": "Close",
     "activationCost": 1,
     "traits": [
@@ -845,7 +883,8 @@
         "type": "uses",
         "amount": 5
       }
-    ]
+    ],
+    "page": 173
   },
   {
     "source": "core",
@@ -859,7 +898,7 @@
         "type": "shield"
       }
     ],
-    "description": "When you or a target in Close Range is hit by a weapon with the Ballistic Trait, you may attempt to use your Electro-Magnetic Shield to prevent the hit.",
+    "description": "This Aeon-designed shield projector emits an electro-magnetic field that can stop ballistics impacts in their tracks. When you or a target in Close Range is hit by a weapon with the Ballistic Trait, you may attempt to use your Electro-Magnetic Shield to prevent the hit.",
     "range": "Close",
     "rollTable": {
       "1": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check.",
@@ -868,7 +907,8 @@
       "6-10": "You may choose to gain Heat equal to the damage of the weapon that attacked you. If you do the attack misses and deals no damage. if you do not, the attack deals damage as normal.",
       "2-5": "The attack hits as normal.",
       "type": "standard"
-    }
+    },
+    "page": 174
   },
   {
     "source": "core",
@@ -903,7 +943,8 @@
         "actionType": "Long",
         "description": "You repair a damaged Tech 1, 2, or 3 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
-    ]
+    ],
+    "page": 174
   },
   {
     "source": "core",
@@ -930,7 +971,8 @@
         "type": "unwieldy"
       }
     ],
-    "description": "A heavy duty industrial mining rig that can be used to deal carnage in a pinch."
+    "description": "A heavy duty industrial mining rig that can be used to deal carnage in a pinch. Developed by Evantis for use in offworld colony mining, based on the Thatcher Steel blueprint. As is typical of Evantis design they like to prove they do it bigger and better than the competition.",
+    "page": 174
   },
   {
     "source": "core",
@@ -952,7 +994,8 @@
         "amount": 1
       }
     ],
-    "description": "A Green Laser with an extended beam mount and heat sink allowing it to fire over a longer distance, whilst reducing its heat load."
+    "description": "A Green Laser with an extended beam mount and heat sink allowing it to fire over a longer distance, whilst reducing its heat load. Salvagers adapted this tech from the original Opus Institute design and used them effectively in the Second Corpo War to take control of the great spires of the Aeon home arco in the Verdant Crescent.",
+    "page": 175
   },
   {
     "source": "core",
@@ -973,8 +1016,8 @@
         "type": "wield"
       }
     ],
-    "description": "This System covers a wide array of close combat weapons designed for Mechs including swords, hatchets, and clubs.",
-    "notes": "*Duelling is prohibited by Union Code § 914 - Art. 114. (b) unless under strict supervision by a chartered Union Rep.*"
+    "description": "This System covers a wide array of close combat weapons designed for Mechs including swords, hatchets, and clubs. When crafting this you may describe what the weapon looks like. Gladiator Pilots who fight for corpo scrip in the pits of the sprawling Osiris home arco favour these weapons for the spectacle they engender. *Duelling is prohibited by Union Code § 914 - Art. 114. (b) unless under strict supervision by a chartered Union Rep.*",
+    "page": 175
   },
   {
     "source": "core",
@@ -1000,7 +1043,8 @@
         "type": "missile"
       }
     ],
-    "description": "Missile Pods fire a heavy salvo of unguided, rocket propelled explosives over a wide area of terrain."
+    "description": "Missile Pods fire a heavy salvo of unguided, rocket propelled explosives over a wide area of terrain. The Contour Aerospace execs were so proud of this design that when Aegean Dynamics surrendered to them they decided to shell their home arco to oblivion anyway and chalk the cost up as research and development.",
+    "page": 175
   },
   {
     "source": "core",
@@ -1016,15 +1060,16 @@
         "type": "salvaging"
       }
     ],
-    "description": "This complex prawn-like array of salvaging arms allows for the rapid and efficient Area Salvage, increasing your chances to find Mech Chassis, Systems, and Modules in an area.",
+    "description": "This complex prawn-like array of salvaging arms allows for the rapid and efficient Area Salvage, increasing your chances to find Mech Chassis, Systems, and Modules in an area. When performing Area Salvage with a Prawn Sifter, use the following table instead.",
     "rollTable": {
       "1": "You find 1 Scrap of the Tech Level of the area.",
-      "20": "You find a damaged Mech Chassis of the Tech Level of the area.",
-      "11-19": "You find a damaged System of the Tech Level of the area.",
-      "6-10": "You find a damaged Module of the Tech Level of the area.",
+      "20": "You find a damaged Mech Chassis of the Tech Level of the area. This can be determined randomly or chosen by the Mediator.",
+      "11-19": "You find a damaged System of the Tech Level of the area. This can be determined randomly or chosen by the Mediator.",
+      "6-10": "You find a damaged Module of the Tech Level of the area. This can be determined randomly or chosen by the Mediator.",
       "2-5": "You find 2 Scrap of the Tech Level of the area.",
       "type": "standard"
-    }
+    },
+    "page": 175
   },
   {
     "source": "core",
@@ -1056,7 +1101,8 @@
         "type": "pinning"
       }
     ],
-    "description": "This Evantis-developed Mech-mountable rotary ballistic weapon fires a horrifying hail of firepower at a target."
+    "description": "This Evantis-developed Mech-mountable rotary ballistic weapon fires a horrifying hail of firepower at a target. This was the favoured weapon of the legendary salvager Flash, who was said to have held off an entire Evantis lance whilst defending their Union Crawler #129 during the Reclamation.",
+    "page": 176
   },
   {
     "source": "core",
@@ -1065,8 +1111,8 @@
     "slotsRequired": 3,
     "salvageValue": 3,
     "actionType": "Passive",
-    "description": "Radiation Sealing consists of layers of radiation proof materials combined with airtight sealant that protects your Mech and Pilot from radiation and other environmental hazards.",
-    "notes": "You and your Mech take no damage from radiation or hazardous environmental effects such as rad storms or areas of toxic waste. In addition, when dealing with severe environmental hazards, they may Push for free to circumvent or resist any effects. Your Mech can also function for up to an hour fully submerged in any non-corrosive liquid."
+    "description": "Radiation Sealing consists of layers of radiation proof materials combined with airtight sealant that protects your Mech and Pilot from radiation and other environmental hazards. This fully seals your Mech against radiation as well as other hazardous environmental effects. You and your Mech take no damage from radiation or hazardous environmental effects such as rad storms or areas of toxic waste. In addition, when dealing with severe environmental hazards, they may Push for free to circumvent or resist any effects. Your Mech can also function for up to an hour fully submerged in any non-corrosive liquid.",
+    "page": 176
   },
   {
     "source": "core",
@@ -1088,7 +1134,8 @@
         "amount": 1
       }
     ],
-    "description": "Developed by Sakura Futures for use in wetwork against heavily protected targets such as Consul Mechs, this lightweight railgun was reverse engineered from an original Evantis design."
+    "description": "Developed by Sakura Futures for use in wetwork against heavily protected targets such as Consul Mechs, this lightweight railgun was reverse engineered from an original Evantis design. It fires an electro-magnetic ballistic charge at a phenomenal Range.",
+    "page": 176
   },
   {
     "source": "core",
@@ -1110,7 +1157,8 @@
         "amount": 1
       }
     ],
-    "description": "Shoots a hail of red lasers at a target sacrificing some range for increased firepower."
+    "description": "Shoots a hail of red lasers at a target sacrificing some range for increased firepower. Djinn Mechs mounted with these were effective in the retaking of the Aeon home arco in the Verdant Crescent from TDA rebels following Impact Day.",
+    "page": 176
   },
   {
     "source": "core",
@@ -1119,11 +1167,12 @@
     "slotsRequired": 5,
     "salvageValue": 2,
     "actionType": "Passive",
-    "description": "This hold increases your Cargo Capacity by 8. In addition, all cargo you store in this hold and the hold itself cannot be found by any inspections or be seen or targeted by anything with the Scanning, Hacking, Optics, or Targeter Trait.",
+    "description": "A black box hold that disguises cargo within it from scans and inspections by enforcement agents. It is likely the tenuous corporate economy would collapse if it was not for smugglers making hot runs between arcos to deliver all manner of contraband goods such as patented plant seeds, vital medicines, and weapons for anyone planning a rebellion. This hold increases your Cargo Capacity by 8. In addition, all cargo you store in this hold and the hold itself cannot be found by any inspections or be seen or targeted by anything with the Scanning, Hacking, Optics, or Targeter Trait.",
     "statBonus": {
       "stat": "cargo_cap",
       "bonus": 8
-    }
+    },
+    "page": 176
   },
   {
     "source": "core",
@@ -1132,8 +1181,8 @@
     "slotsRequired": 4,
     "salvageValue": 4,
     "actionType": "Passive",
-    "description": "This Locomotion System, alongside allowing your Mech to move as normal, grants your Mech the Climbing Trait.",
-    "notes": "This allows your Mech to easily traverse all forms of Difficult Terrain without penalty, and climb vertical and sheer surfaces with ease."
+    "description": "A series of lightweight, spider-like legs that allow for easy traversal over terrain and vertical movement. This Locomotion System, alongside allowing your Mech to move as normal, grants your Mech the Climbing Trait. This allows your Mech to easily traverse all forms of Difficult Terrain without penalty, and climb vertical and sheer surfaces with ease.",
+    "page": 177
   },
   {
     "source": "core",
@@ -1147,9 +1196,10 @@
         "type": "targeter"
       }
     ],
-    "description": "The Target Painter focusses a small beam on a target, tagging it so that missiles can automatically hit.",
+    "description": "The Target Painter focusses a small beam on a target, tagging it so that missiles can automatically hit. When activated, choose any target in Range. Until the start of your next turn, all Ranged attacks your Allies make with the Missile Trait may automatically hit the target as though they rolled a 11-19. These attacks all count as having the Targeter and Guided Traits for this attack in addition to their other Traits.",
     "range": "Close",
-    "activationCost": 2
+    "activationCost": 2,
+    "page": 177
   },
   {
     "source": "core",
@@ -1158,8 +1208,8 @@
     "slotsRequired": 4,
     "salvageValue": 5,
     "actionType": "Free",
-    "description": "When activated, the movement of your Mech this turn ignores all terrain and obstacles.",
-    "notes": "You can leap on top of tall buildings and other structures, as well as behind targets within Close Range, granting you better vantage points for reconnaissance and attack."
+    "description": "Developed by Contour Aerospace, a Vectored Thrust Unit or VTU provides a Mech with limited air propulsion allowing them to jump over terrain, other Mechs and obstacles. When activated, the movement of your Mech this turn ignores all terrain and obstacles. You can leap on top of tall buildings and other structures, as well as behind targets within Close Range, granting you better vantage points for reconnaissance and attack.",
+    "page": 177
   },
   {
     "source": "core",
@@ -1194,7 +1244,8 @@
         "actionType": "Long",
         "description": "You repair a damaged Tech 1, 2, 3, or 4 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
-    ]
+    ],
+    "page": 177
   },
   {
     "source": "core",
@@ -1203,7 +1254,7 @@
     "slotsRequired": 5,
     "salvageValue": 4,
     "actionType": "Short",
-    "description": "An effective area control tool, when triggered, Anti-Mech Mines attach to Mechs in their vicinity with spider-like clamps and detonate, dealing devastating damage.",
+    "description": "An effective area control tool, when triggered, Anti-Mech Mines attach to Mechs in their vicinity with spider-like clamps and detonate, dealing devastating damage. Salvager representatives voted to ban the use of these due to the horrendous collateral damage they can inflict, but were massively outvoted by corporate interests. Use with caution. When activated, your Mech lays a series of proximity triggered Anti-Mech cluster mines in a location or area on the map within Range such as a highway, stretch of wasteland, or city streets. The mines trigger when heavy targets such as Mechs, Vehicles, or Squads of troops enter the area.",
     "range": "Close",
     "activationCost": 1,
     "traits": [
@@ -1219,7 +1270,8 @@
       "6-10": "Deal 5 SP damage to one target in the area. The rest get clear unharmed.",
       "2-5": "The targets avoid the mines and they explode to no effect.",
       "type": "standard"
-    }
+    },
+    "page": 178
   },
   {
     "source": "core",
@@ -1229,7 +1281,8 @@
     "salvageValue": 2,
     "actionType": "Passive",
     "description": "This System allows you to mount an A.I. controlled, automated weapon turret onto your Mech. The turret understands and follows basic commands you give it such as attacking a target or defending an area.",
-    "notes": "The turret acts independently of you in the turn order, and may attack once per turn. This does not take up your Turn Action. The turret may not Push. When crafting this System, you may choose from the following turret types. Additionally, roll on the A.I. Personality Table for your Automated Turret System to determine its personality."
+    "notes": "The turret acts independently of you in the turn order, and may attack once per turn. This does not take up your Turn Action. The turret may not Push. When crafting this System, you may choose from the following turret types. Additionally, roll on the A.I. Personality Table for your Automated Turret System to determine its personality.",
+    "page": 178
   },
   {
     "source": "core",
@@ -1250,7 +1303,8 @@
       {
         "type": "pinning"
       }
-    ]
+    ],
+    "page": 178
   },
   {
     "source": "core",
@@ -1272,7 +1326,8 @@
         "type": "hot",
         "amount": 2
       }
-    ]
+    ],
+    "page": 178
   },
   {
     "source": "core",
@@ -1294,7 +1349,8 @@
         "type": "explosive",
         "amount": 1
       }
-    ]
+    ],
+    "page": 178
   },
   {
     "source": "core",
@@ -1305,7 +1361,8 @@
     "actionType": "Turn",
     "description": "EMITS A SPRAY OF CAUSTIC NERVE GAS THAT COATS AN AREA. CAUSES INTERNAL BLEEDING, VOMITING, MIGRAINES, SPASMS, LOSS OF BLADDER AND BOWEL CONTROL AND DEATH. ON A SUCCESSFUL HIT UNPROTECTED ORGANIC TARGETS MUST ROLL ON THE CRITICAL INJURY TABLE. PILOTS WITHOUT HAZARD PROTECTION, RADIATION SEALING OR EQUIVALENT ARE AFFECTED IN THEIR CHASSIS. THIS DOES NOT AFFECT BIO-TITANS.",
     "range": "Close",
-    "activationCost": 3
+    "activationCost": 3,
+    "page": 178
   },
   {
     "source": "core",
@@ -1327,8 +1384,9 @@
         "amount": 2
       }
     ],
-    "description": "Standing for ‘Constant Amplitude, Constant Bearing Laser’, the longer this laser is focussed on a target, the more damage it deals.",
-    "notes": "Each time you hit the same target with this Weapons System in consecutive turns you deal an additional 5 SP damage."
+    "description": "Standing for ‘Constant Amplitude, Constant Bearing Laser’, the longer this laser is focussed on a target, the more damage it deals. Sakura Futures developed the CACB following Impact Day as a means to take down Anomaly X312, an organically shielded Bio-Titan that dominated the Central Wastes.",
+    "notes": "Each time you hit the same target with this Weapons System in consecutive turns you deal an additional 5 SP damage.",
+    "page": 179
   },
   {
     "source": "core",
@@ -1337,7 +1395,8 @@
     "slotsRequired": 3,
     "salvageValue": 3,
     "actionType": "Passive",
-    "description": "This System allows you to change the skin of your Mech to appear as though it is any Tech 3 or 4 Mech or any corpo design of your choice."
+    "description": "This System allows you to change the skin of your Mech to appear as though it is any Tech 3 or 4 Mech or any corpo design of your choice.",
+    "page": 179
   },
   {
     "source": "core",
@@ -1346,7 +1405,8 @@
     "slotsRequired": 3,
     "salvageValue": 2,
     "actionType": "Passive",
-    "description": "This System hardens your Mech against Electro-Magnetic Pulse effects which typically would be able to Shutdown your Mech and disable its systems."
+    "description": "This System hardens your Mech against Electro-Magnetic Pulse effects which typically would be able to Shutdown your Mech and disable its systems.",
+    "page": 179
   },
   {
     "source": "core",
@@ -1355,12 +1415,13 @@
     "slotsRequired": 5,
     "salvageValue": 4,
     "actionType": "Passive",
-    "description": "A Cargo Bay with an integrated anti-gravity System allowing a Mech to carry a vast amount of salvage.",
+    "description": "A Cargo Bay with an integrated anti-gravity System allowing a Mech to carry a vast amount of salvage. Developed by Drontek for use in the mammoth construction project of their Big Brother Mech.",
     "notes": "A Grav Assisted Cargo Bay increases your Cargo Capacity by 20.",
     "statBonus": {
       "stat": "cargo_cap",
       "bonus": 20
-    }
+    },
+    "page": 179
   },
   {
     "source": "core",
@@ -1369,8 +1430,9 @@
     "slotsRequired": 5,
     "salvageValue": 4,
     "actionType": "Passive",
-    "description": "A Hover Locomotion System allows a Mech to move by hovering over terrain, obstacles, and even bodies of water, entirely circumventing them through grav propulsion.",
-    "notes": "Mechs with this System gain the Hover Trait."
+    "description": "A Hover Locomotion System allows a Mech to move by hovering over terrain, obstacles, and even bodies of water, entirely circumventing them through grav propulsion. DronTek holds the main patent for this, which has helped them secure the market on hover Mechs and drones and protect the relatively small corpo from hostile takeover.",
+    "notes": "Mechs with this System gain the Hover Trait.",
+    "page": 179
   },
   {
     "source": "core",
@@ -1379,7 +1441,8 @@
     "slotsRequired": 2,
     "salvageValue": 3,
     "actionType": "Reaction",
-    "description": "If you are hit by an attack with the Missile Trait you may activate your LAMS as a Reaction. The missiles explode harmlessly, missing and dealing no damage."
+    "description": "Developed by Drontek as a means to protect their Big Brother Mech, this Laser Anti-Missile System fires a series of nano-lasers at incoming missiles, destroying them before they strike. If you are hit by an attack with the Missile Trait you may activate your LAMS as a Reaction. The missiles explode harmlessly, missing and dealing no damage.",
+    "page": 179
   },
   {
     "source": "core",
@@ -1401,7 +1464,8 @@
       }
     ],
     "description": "Rumoured to have been developed using nanite tech from the vast Nanite Sea near the Stefanus home arco in the Forgotten Tundra, it fires a stream of nano-missiles at a target which hone in and overwhelm their defences.",
-    "notes": "When activated as a Turn Action, you may fire up to 6 Needle Missiles at a target of your choice in Range. This attack does not require you to be able to see the target, and automatically hits. Each individual Needle Missile fired takes up one ‘Use’ and is counted as a separate attack. Any modifiers or effects apply to each Needle Missile individually."
+    "notes": "When activated as a Turn Action, you may fire up to 6 Needle Missiles at a target of your choice in Range. This attack does not require you to be able to see the target, and automatically hits. Each individual Needle Missile fired takes up one ‘Use’ and is counted as a separate attack. Any modifiers or effects apply to each Needle Missile individually.",
+    "page": 180
   },
   {
     "source": "core",
@@ -1423,7 +1487,8 @@
         "amount": 2
       }
     ],
-    "description": "A magnetically propelled ballistic weapon that fires a large calibre, high velocity projectile that deals devastating damage on impact."
+    "description": "A magnetically propelled ballistic weapon that fires a large calibre, high velocity projectile that deals devastating damage on impact. The tragic fall of Crawler #13 was caused by a sustained railgun barrage from an Evantis hit squad sent to secure territory around the Arid Steppes. The catalyst for the Reclamation of the Wastes, this incident prompted the Opus Institute to reverse engineer and release their own Railgun schematic; turning the tide in the fight against the corpos.",
+    "page": 180
   },
   {
     "source": "core",
@@ -1439,7 +1504,8 @@
     ],
     "range": "Close",
     "description": "When activated, you project a Shield Dome around your Mech. Choose any amount of Energy Points when you activate this Ability. The Shield Dome has a number of Structure Points equal to 2× the Energy Points you spend on this Ability. You may only have one Shield Dome active at a time. You may deactivate the Shield Dome as a Free Action.",
-    "notes": "When you or any target within Close Range of your Mech is dealt damage, the damage is instead dealt to the Shield Dome. Any excess damage that penetrates the shield is dealt to the target instead. If the damage is reduced to 0, the target suffers no additional effect from the attack."
+    "notes": "When you or any target within Close Range of your Mech is dealt damage, the damage is instead dealt to the Shield Dome. Any excess damage that penetrates the shield is dealt to the target instead. If the damage is reduced to 0, the target suffers no additional effect from the attack.",
+    "page": 180
   },
   {
     "source": "core",
@@ -1449,7 +1515,8 @@
     "salvageValue": 3,
     "actionType": "Passive",
     "description": "This advanced radar system massively extends the communication and detection Range of any of your Systems, Modules, or Abilities with the Communicator Trait.",
-    "notes": "You may now use such devices to contact and receive communications from anything with the Communicator Trait within the entire Region Map you are in, including your Union Crawler."
+    "notes": "You may now use such devices to contact and receive communications from anything with the Communicator Trait within the entire Region Map you are in, including your Union Crawler.",
+    "page": 180
   },
   {
     "source": "core",
@@ -1472,7 +1539,8 @@
       }
     ],
     "description": "An adaption of the Blue Mining Laser which fragments the energy into a myriad of small but deadly particles, like buck shot, which blast apart a target.",
-    "notes": "When this weapon hits a target in Close Range it deals 2× damage. Apply this after other modifiers."
+    "notes": "When this weapon hits a target in Close Range it deals 2× damage. Apply this after other modifiers.",
+    "page": 181
   },
   {
     "source": "core",
@@ -1490,7 +1558,8 @@
         "actionType": "Turn",
         "description": "You activate the deployment protocols and your mech digs itself into the ground. Whilst stabilised, your Mech gains the Immobile Trait. Your Mech further reduces all damage it takes by 2 SP, to a minimum of 1 whilst stabilised. In addition, the first attack you make on your Turn whilst stabilised deals an additional 2 SP damage."
       }
-    ]
+    ],
+    "page": 181
   },
   {
     "source": "core",
@@ -1529,7 +1598,8 @@
         ],
         "description": "You create an electrical field around your Mech for 10 minutes. Everything within Close Range of you, including Allies, takes 3 SP damage as you activate this Ability. If anything ends its turn in Close Range of you it takes 3 SP damage."
       }
-    ]
+    ],
+    "page": 181
   },
   {
     "source": "core",
@@ -1547,7 +1617,8 @@
         "name": "Repair",
         "description": "• Restore up to 15 SP to a target Mech within the Fabrication Bay with at least 1 SP.\n• Restore up to 2 EP to a target Mech within the Fabrication Bay.\n• Repair up to 3 damaged Systems or Modules of Tech 1-5 within the Fabrication Bay to Intact Condition.\n• Repair up to 2 damaged Mech Chassis or Vehicles of Tech 1-5 within the Fabrication Bay to Intact Condition."
       }
-    ]
+    ],
+    "page": 183
   },
   {
     "source": "core",
@@ -1571,7 +1642,8 @@
         "type": "ion"
       }
     ],
-    "description": "This Weapons System fires a disabling bolt of ionised energy at the target. A target hit by this weapon cannot activate any Systems, Modules, or Abilities that have an Energy Cost on their next turn."
+    "description": "This Weapons System fires a disabling bolt of ionised energy at the target. A target hit by this weapon cannot activate any Systems, Modules, or Abilities that have an Energy Cost on their next turn. Stefanus forced Ascension PLC, one of their subsidiaries to develop this as a countermeasure to their own Neura-Phage Mech, as Neura-Phage Pilots are known to sometimes be driven insane after spending too long wired into the cockpit.",
+    "page": 183
   },
   {
     "source": "core",
@@ -1601,7 +1673,8 @@
         "type": "overheat"
       }
     ],
-    "description": "This Weapons System coats an area in superheated plasma which sticks to targets and burns through them. The effect is devastating against anyone in the open or unprotected terrain, burning them to a crisp in an instant. The weapon not only inflicts immediate damage against a Mech, it can also cause the Mech's reactor to overheat."
+    "description": "This Weapons System coats an area in superheated plasma which sticks to targets and burns through them. The effect is devastating against anyone in the open or unprotected terrain, burning them to a crisp in an instant. The weapon not only inflicts immediate damage against a Mech, it can also cause the Mech's reactor to overheat. This weapon was nearly banned under the terms of the Corporate Council Convention on Inhumane Weaponry. Aeon lawyers successfully argued that since the plasma heats to temperatures comparable to the centre of the sun, any man or woman hit by the weapon would instantly disintegrate and therefore not feel any pain.",
+    "page": 184
   },
   {
     "source": "core",
@@ -1625,7 +1698,8 @@
       "6-10": "The attack deals full damage and is reflected back at the attacker dealing half damage to them of the weapon they attacked with.",
       "2-5": "The shielding fails and you are hit by the attack as normal.",
       "type": "standard"
-    }
+    },
+    "page": 184
   },
   {
     "source": "core",
@@ -1656,7 +1730,8 @@
         "amount": 6
       }
     ],
-    "description": "This Weapons System fires a bunker busting torpedo with an explosive charge that burrows into the earth and travels underneath a target, causing a controlled explosion beneath it making it effective against shields."
+    "description": "This Weapons System fires a bunker busting torpedo with an explosive charge that burrows into the earth and travels underneath a target, causing a controlled explosion beneath it making it effective against shields. This weapon was used to bust open the underground home arco of the Spyre Corpo in the Central Wastes by TDA rebels. The ensuing massacre following the siege saw the corpo's oligarchs, executives, and elites summarily tried and executed, and its holdings permanently liquidated.",
+    "page": 183
   },
   {
     "source": "core",
@@ -1683,7 +1758,8 @@
         "type": "wield"
       }
     ],
-    "description": "A honed-carbon fibre blade with a monomolecular energy field that can slice through a Mech like butter."
+    "description": "A honed-carbon fibre blade with a monomolecular energy field that can slice through a Mech like butter. Nobody is sure who designed these, but they started appearing in salvage spots around the Nanite Sea following the first Meld incident.",
+    "page": 184
   },
   {
     "source": "core",
@@ -1706,7 +1782,8 @@
       "6-10": "You may choose to gain Heat equal to the damage of the weapon. If you do so, the attack deals no damage. If you do not, the attack deals damage as normal.",
       "2-5": "The attack hits as normal.",
       "type": "standard"
-    }
+    },
+    "page": 184
   },
   {
     "source": "core",
@@ -1720,7 +1797,7 @@
         "type": "escape"
       }
     ],
-    "description": "Developed by Sakura Futures as a means for their pilots to eject from their Mech in safety and comfort. This high-tech ejection System allows you to escape your Mech in the comfort of a well armoured Ejector Pod.",
+    "description": "Developed by Sakura Futures as a means for their pilots to eject from their Mech in safety and comfort. This high-tech ejection System allows you to escape your Mech in the comfort of a well armoured Ejector Pod. The Ejector Pod rocket is propelled from your Mech and lands safely via the aid of a graviton stabilisation system. The Ejector Pod has 5 SP when deployed.",
     "rollTable": {
       "1": "The Ejector Pod fails to trigger and is damaged in the process, it cannot be used until repaired to the Intact Condition.",
       "20": "The pod ejects perfectly and lands in any location within Far Range of your Mech.",
@@ -1728,7 +1805,8 @@
       "6-10": "The pod ejects and lands within Medium Range of the Mech. The ride is bumpy and your Pilot suffers a Minor Injury.",
       "2-5": "The Ejector Pod fails to trigger. You may not attempt to use it again until your next turn.",
       "type": "standard"
-    }
+    },
+    "page": 182
   },
   {
     "source": "core",
@@ -1743,8 +1821,9 @@
         "type": "hot (x)"
       }
     ],
-    "description": "This laser is designed to be charged before fired, burning up a reactor, but potentially dealing horrendous damage to a target.",
-    "notes": "Before you make an attack with this Weapons System, choose a number. Your Mech gains Heat equal to this number. If the attack hits the target it deals damage equal to this number. You cannot choose a number that would exceed your Mech's Heat Capacity."
+    "description": "This laser is designed to be charged before fired, burning up a reactor, but potentially dealing horrendous damage to a target. An effective siege weapon due to having time between attacks to cool down the Mech, these were deployed in the First Corpo War by Evantis to obliterate the Last Redoubt of Nations and pave the way for corpo rule.",
+    "notes": "Before you make an attack with this Weapons System, choose a number. Your Mech gains Heat equal to this number. If the attack hits the target it deals damage equal to this number. You cannot choose a number that would exceed your Mech's Heat Capacity.",
+    "page": 182
   },
   {
     "source": "core",
@@ -1758,7 +1837,8 @@
         "type": "amphibious"
       }
     ],
-    "description": "This System allows your Mech to move on land and underwater. You may move underwater with ease, suffering no restrictions or penalties, and can operate in underwater conditions indefinitely at significant depths."
+    "description": "Developed by Aegean Dynamics, this System allows your Mech to move on land and underwater. You may move underwater with ease, suffering no restrictions or penalties, and can operate in underwater conditions indefinitely at significant depths. Aegean Dynamics suffered a hostile takeover from Contour Dynamics and was forced to be their subsidiary, but there are rumours they have a hidden arco somewhere in the depths of the Oceanic Rim.",
+    "page": 182
   },
   {
     "source": "core",
@@ -1787,7 +1867,8 @@
         "amount": 3
       }
     ],
-    "description": "This obscenely oversized weapon rapidly fires 120mm explosive rounds."
+    "description": "This obscenely oversized weapon rapidly fires 120mm explosive rounds. Evantis developed this as a means to show off the power of their Leviathan Heavy Mech which can mount two of these and still have room for a drinks dispenser. The drinks dispenser is known to dispense an unpleasant drink almost exactly unlike tea. This is why all good salvagers know not to blow all the scrap on the military budget.",
+    "page": 185
   },
   {
     "source": "core",
@@ -1796,7 +1877,8 @@
     "slotsRequired": 3,
     "salvageValue": 3,
     "actionType": "Passive",
-    "description": "This System allows you to change the skin of your Mech to appear as though it is any other Tech 5 or 6 Mech or any executive corpo design of your choice."
+    "description": "This System allows you to change the skin of your Mech to appear as though it is any other Tech 5 or 6 Mech or any executive corpo design of your choice.",
+    "page": 185
   },
   {
     "source": "core",
@@ -1823,8 +1905,9 @@
         "type": "unwieldy"
       }
     ],
-    "description": "This Weapons System is designed to fire a high energy beam of subatomic particles which when they impact a target scramble its molecular structure rendering them into their component atoms.",
-    "notes": "*Please report any findings of field use of this weapon to the Salvage Union Council*"
+    "description": "This Weapons System is designed to fire a high energy beam of subatomic particles which when they impact a target scramble its molecular structure rendering them into their component atoms. These blueprints were extracted from Sakura during a salvage run, and as far as we are aware are purely theoretical.",
+    "notes": "*Please report any findings of field use of this weapon to the Salvage Union Council*",
+    "page": 185
   },
   {
     "source": "core",
@@ -1833,7 +1916,7 @@
     "slotsRequired": 5,
     "salvageValue": 4,
     "actionType": "Turn",
-    "description": "This allows you to teleport salvage directly from your Mech to the Crawler.",
+    "description": "Developed by Ascension PLC as part of their 'Matter Doesn't Matter' campaign, this allows you to teleport salvage directly from your Mech to the Crawler. This System increases your Mech's Cargo Capacity by 10.",
     "activationCost": 3,
     "notes": "When you activate this ability, you teleport all Scrap, Chassis, Systems, Modules, and People your Mech is carrying to the Storage Bay in your Union Crawler.",
     "rollTable": {
@@ -1843,7 +1926,8 @@
       "6-10": "Teleport Successful!",
       "11-19": "Teleport Successful!",
       "type": "standard"
-    }
+    },
+    "page": 185
   },
   {
     "source": "core",
@@ -1863,9 +1947,10 @@
         "type": "targeter"
       }
     ],
-    "description": "This miniaturised nuclear weapon launches an atomic warhead at a target creating a small and localised thermonuclear explosion. On a critical success (20), the target and everything within Long Range is destroyed and we really do mean *everything*. The entire area is also permanently Irradiated.",
+    "description": "This miniaturised nuclear weapon launches an atomic warhead at a target creating a small and localised thermonuclear explosion. They said these weapons would spell the end to all wars, but war never ceases. Nuclear weapons may seem like the only option when it comes to dealing with an insurmountable situation, however be aware that the use of nuclear armaments, even in the wasteland, makes you fair game for nuclear retaliation. When activated, you fire the N15 Fat Boy at a target within Range. This automatically hits and does not require line of sight. The target and everything within Long Range is destroyed and we really do mean *everything*. The entire area is also permanently Irradiated.",
     "range": "Far",
-    "notes": "When used this system is destroyed and cannot be used again."
+    "notes": "When used this system is destroyed and cannot be used again.",
+    "page": 186
   },
   {
     "source": "core",
@@ -1873,7 +1958,7 @@
     "techLevel": 6,
     "slotsRequired": 4,
     "salvageValue": 4,
-    "description": "A Matter Phase Shield disintegrates anything that attempts to pass through it by stripping it apart at a molecular level.",
+    "description": "Developed by Sakura Futures at the peak of their technological prowess before the Wasteland Reclamation, a Matter Phase Shield disintegrates anything that attempts to pass through it by stripping it apart at a molecular level.",
     "actions": [
       {
         "source": "core",
@@ -1909,7 +1994,8 @@
           "type": "standard"
         }
       }
-    ]
+    ],
+    "page": 186
   },
   {
     "source": "core",
@@ -1918,7 +2004,7 @@
     "slotsRequired": 3,
     "salvageValue": 3,
     "traits": [],
-    "description": "This highly specialised repair arm fires a stream of nanites at a damaged mech or part restoring it to full functionality.",
+    "description": "This highly specialised repair arm, developed by the Stefanus Solitude research team from their experiments with the Nanite Sea, fires a stream of nanites at a damaged mech or part restoring it to full functionality. The nanites' highly adaptive nature means this can be used to repair just about anything you will find in the wastes.",
     "actions": [
       {
         "source": "core",
@@ -1944,7 +2030,8 @@
         "actionType": "Long",
         "description": "You repair any damaged Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
-    ]
+    ],
+    "page": 187
   },
   {
     "source": "core",
@@ -1958,7 +2045,7 @@
         "type": "escape"
       }
     ],
-    "description": "This teleportation pod deconstructs your atoms and reconstructs them in the safety of a Teleportation Bay.",
+    "description": "This teleportation pod deconstructs your atoms and reconstructs them in the safety of a Teleportation Bay. There has been some philosophical debate among the Unions as to whether or not this device technically kills the Pilot and creates a clone of them. As yet, we are unable to reach a definitive conclusion as to the veracity of this theory.",
     "activationCost": 2,
     "rollTable": {
       "1": "The teleporter malfunctions. You instead teleport to a random Teleportation Bay somewhere on the Campaign Map you are currently in.",
@@ -1967,6 +2054,7 @@
       "6-10": "You teleport to your destination, but suffer a teleportation mishap. Roll on the Critical Injury Table.",
       "2-5": "The teleporter fails to trigger. You may try again on your next turn.",
       "type": "standard"
-    }
+    },
+    "page": 187
   }
 ]
