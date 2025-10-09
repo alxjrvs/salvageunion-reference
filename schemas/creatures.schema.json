@@ -8,7 +8,7 @@
     "type": "object",
     "description": "A creature",
     "additionalProperties": false,
-    "required": ["name", "source", "hitPoints"],
+    "required": ["name", "source", "hitPoints", "page"],
     "properties": {
       "name": {
         "type": "string",

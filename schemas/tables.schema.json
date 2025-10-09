@@ -8,7 +8,7 @@
     "type": "object",
     "description": "A random table",
     "additionalProperties": false,
-    "required": ["name", "source"],
+    "required": ["name", "source", "page"],
     "properties": {
       "name": {
         "type": "string",

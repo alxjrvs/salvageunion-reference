@@ -8,7 +8,7 @@
     "type": "object",
     "description": "A piece of pilot equipment",
     "additionalProperties": false,
-    "required": ["name", "source"],
+    "required": ["name", "source", "page"],
     "properties": {
       "name": {
         "type": "string",

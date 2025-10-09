@@ -8,7 +8,7 @@
     "type": "object",
     "description": "A meld-infected creature",
     "additionalProperties": false,
-    "required": ["name", "source"],
+    "required": ["name", "source", "page"],
     "oneOf": [
       {
         "required": ["hitPoints"]

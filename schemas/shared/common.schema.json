@@ -230,7 +230,7 @@
       "type": "object",
       "description": "Basic entry with name, description, source, and page reference",
       "additionalProperties": false,
-      "required": ["name", "source"],
+      "required": ["name", "source", "page"],
       "properties": {
         "name": {
           "type": "string",

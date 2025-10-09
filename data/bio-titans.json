@@ -63,7 +63,8 @@
         ]
       }
     ],
-    "structurePoints": 39
+    "structurePoints": 39,
+    "page": 276
   },
   {
     "source": "core",
@@ -112,7 +113,8 @@
         ]
       }
     ],
-    "structurePoints": 67
+    "structurePoints": 67,
+    "page": 278
   },
   {
     "source": "core",
@@ -185,7 +187,8 @@
         ]
       }
     ],
-    "structurePoints": 80
+    "structurePoints": 80,
+    "page": 280
   },
   {
     "source": "core",
@@ -231,7 +234,8 @@
         ]
       }
     ],
-    "structurePoints": 54
+    "structurePoints": 54,
+    "page": 282
   },
   {
     "source": "core",
@@ -297,7 +301,8 @@
         ]
       }
     ],
-    "structurePoints": 96
+    "structurePoints": 96,
+    "page": 284
   },
   {
     "source": "core",
@@ -407,6 +412,7 @@
         ]
       }
     ],
-    "structurePoints": 215
+    "structurePoints": 215,
+    "page": 286
   }
 ]

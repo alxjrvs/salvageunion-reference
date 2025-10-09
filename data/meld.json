@@ -23,7 +23,8 @@
       }
     ],
     "salvageValue": 1,
-    "hitPoints": 3
+    "hitPoints": 3,
+    "page": 289
   },
   {
     "source": "core",
@@ -53,7 +54,8 @@
       }
     ],
     "salvageValue": 3,
-    "hitPoints": 6
+    "hitPoints": 6,
+    "page": 289
   },
   {
     "source": "core",
@@ -84,7 +86,8 @@
       }
     ],
     "structurePoints": 5,
-    "salvageValue": 5
+    "salvageValue": 5,
+    "page": 289
   },
   {
     "source": "core",
@@ -118,7 +121,8 @@
       }
     ],
     "structurePoints": 10,
-    "salvageValue": 10
+    "salvageValue": 10,
+    "page": 289
   },
   {
     "source": "core",
@@ -159,6 +163,7 @@
         ]
       }
     ],
-    "structurePoints": 60
+    "structurePoints": 60,
+    "page": 290
   }
 ]

@@ -24,7 +24,8 @@
         ]
       }
     ],
-    "hitPoints": 4
+    "hitPoints": 4,
+    "page": 296
   },
   {
     "source": "core",
@@ -55,7 +56,8 @@
         "description": "When hit by a melee attack, the attacker takes 2 HP damage."
       }
     ],
-    "hitPoints": 2
+    "hitPoints": 2,
+    "page": 296
   },
   {
     "source": "core",
@@ -86,7 +88,8 @@
         ]
       }
     ],
-    "hitPoints": 10
+    "hitPoints": 10,
+    "page": 296
   },
   {
     "source": "core",
@@ -107,7 +110,8 @@
         ]
       }
     ],
-    "hitPoints": 5
+    "hitPoints": 5,
+    "page": 297
   },
   {
     "source": "core",
@@ -133,7 +137,8 @@
         ]
       }
     ],
-    "hitPoints": 12
+    "hitPoints": 12,
+    "page": 297
   },
   {
     "source": "core",
@@ -154,6 +159,7 @@
         }
       }
     ],
-    "hitPoints": 3
+    "hitPoints": 3,
+    "page": 297
   }
 ]

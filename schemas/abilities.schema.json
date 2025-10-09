@@ -8,7 +8,7 @@
     "type": "object",
     "description": "A pilot ability",
     "additionalProperties": false,
-    "required": ["name", "tree", "source", "level"],
+    "required": ["name", "tree", "source", "level", "page"],
     "properties": {
       "name": {
         "$ref": "shared/enums.schema.json#/definitions/ability"

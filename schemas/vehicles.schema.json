@@ -8,7 +8,7 @@
     "type": "object",
     "description": "A conventional vehicle",
     "additionalProperties": false,
-    "required": ["name", "source", "structurePoints"],
+    "required": ["name", "source", "structurePoints", "page"],
     "properties": {
       "name": {
         "type": "string",
@@ -35,7 +35,7 @@
         "type": "array",
         "description": "Systems installed on this vehicle",
         "items": {
-          "$ref": "shared/objects.schema.json#/definitions/system"
+          "$ref": "shared/objects.schema.json#/definitions/embeddedSystem"
         }
       },
       "traits": {
@@ -49,4 +49,3 @@
     }
   }
 }
-

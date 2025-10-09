@@ -8,7 +8,7 @@
     "type": "object",
     "description": "An NPC squad",
     "additionalProperties": false,
-    "required": ["name", "source"],
+    "required": ["name", "source", "page"],
     "oneOf": [
       {
         "required": ["hitPoints"]

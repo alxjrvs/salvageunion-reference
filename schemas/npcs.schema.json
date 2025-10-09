@@ -8,7 +8,7 @@
     "type": "object",
     "description": "An NPC or person",
     "additionalProperties": false,
-    "required": ["name", "source", "hitPoints"],
+    "required": ["name", "source", "hitPoints", "page"],
     "properties": {
       "name": {
         "type": "string",
@@ -40,4 +40,3 @@
     }
   }
 }
-

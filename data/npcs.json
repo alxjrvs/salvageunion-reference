@@ -21,7 +21,8 @@
         "name": "Salvaging Tools"
       }
     ],
-    "hitPoints": 2
+    "hitPoints": 2,
+    "page": 298
   },
   {
     "source": "core",
@@ -45,7 +46,8 @@
         ]
       }
     ],
-    "hitPoints": 3
+    "hitPoints": 3,
+    "page": 298
   },
   {
     "source": "core",
@@ -69,7 +71,8 @@
         "name": "Portable Comms Unit"
       }
     ],
-    "hitPoints": 5
+    "hitPoints": 5,
+    "page": 298
   },
   {
     "source": "core",
@@ -93,7 +96,8 @@
         "name": "Portable Comms Unit"
       }
     ],
-    "hitPoints": 9
+    "hitPoints": 9,
+    "page": 298
   },
   {
     "source": "core",
@@ -117,7 +121,8 @@
         "name": "Portable Comms Unit"
       }
     ],
-    "hitPoints": 10
+    "hitPoints": 10,
+    "page": 298
   },
   {
     "source": "core",
@@ -141,6 +146,7 @@
         "name": "Portable Comms Unit"
       }
     ],
-    "hitPoints": 16
+    "hitPoints": 16,
+    "page": 298
   }
 ]

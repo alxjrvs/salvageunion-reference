@@ -26,7 +26,8 @@
     ],
     "techLevel": 1,
     "salvageValue": 1,
-    "structurePoints": 2
+    "structurePoints": 2,
+    "page": 294
   },
   {
     "source": "core",
@@ -58,7 +59,8 @@
     ],
     "techLevel": 1,
     "salvageValue": 2,
-    "structurePoints": 3
+    "structurePoints": 3,
+    "page": 294
   },
   {
     "source": "core",
@@ -74,7 +76,8 @@
     ],
     "techLevel": 1,
     "salvageValue": 1,
-    "structurePoints": 1
+    "structurePoints": 1,
+    "page": 294
   },
   {
     "source": "core",
@@ -104,7 +107,8 @@
     ],
     "techLevel": 2,
     "salvageValue": 2,
-    "structurePoints": 4
+    "structurePoints": 4,
+    "page": 294
   },
   {
     "source": "core",
@@ -133,7 +137,8 @@
     ],
     "techLevel": 3,
     "salvageValue": 2,
-    "structurePoints": 5
+    "structurePoints": 5,
+    "page": 294
   },
   {
     "source": "core",
@@ -166,7 +171,8 @@
     ],
     "techLevel": 2,
     "salvageValue": 3,
-    "structurePoints": 6
+    "structurePoints": 6,
+    "page": 295
   },
   {
     "source": "core",
@@ -204,7 +210,8 @@
     ],
     "techLevel": 3,
     "salvageValue": 3,
-    "structurePoints": 4
+    "structurePoints": 4,
+    "page": 295
   },
   {
     "source": "core",
@@ -242,7 +249,8 @@
     ],
     "techLevel": 4,
     "salvageValue": 3,
-    "structurePoints": 4
+    "structurePoints": 4,
+    "page": 295
   },
   {
     "source": "core",
@@ -275,6 +283,7 @@
     ],
     "techLevel": 4,
     "salvageValue": 3,
-    "structurePoints": 2
+    "structurePoints": 2,
+    "page": 295
   }
 ]

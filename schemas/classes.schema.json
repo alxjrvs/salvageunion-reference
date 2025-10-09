@@ -10,7 +10,7 @@
         "type": "object",
         "description": "A core character class",
         "additionalProperties": false,
-        "required": ["name", "source", "type"],
+        "required": ["name", "source", "type", "page"],
         "properties": {
           "name": { "$ref": "shared/enums.schema.json#/definitions/class" },
           "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
@@ -53,7 +53,7 @@
         "type": "object",
         "description": "A hybrid character class",
         "additionalProperties": false,
-        "required": ["name", "source", "type"],
+        "required": ["name", "source", "type", "page"],
         "properties": {
           "name": { "$ref": "shared/enums.schema.json#/definitions/class" },
           "type": {

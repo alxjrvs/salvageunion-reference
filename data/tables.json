@@ -10,7 +10,8 @@
       "6-10": "Tough Choice: You succeed in your action, but at a cost. The Mediator gives you a Tough Choice with some kind of Setback attached. When attacking, you hit, but must make a Tough Choice.",
       "2-5": "Failure: You have failed at what you were attempting to do. You face a Setback of the Mediator’s choice. When attacking, you miss the target.",
       "type": "standard"
-    }
+    },
+    "page": 337
   },
   {
     "source": "core",
@@ -23,7 +24,8 @@
       "6-10": "Wait and See: One NPC chosen by the players acts first. Play then passes to the player group and one Pilot chosen by the players acts.",
       "2-5": "Fumble: One NPC chosen by the Mediator acts first. Play then passes to the player group and one Pilot chosen by the players acts.",
       "type": "standard"
-    }
+    },
+    "page": 337
   },
   {
     "source": "core",
@@ -36,7 +38,8 @@
       "6-10": "Minor Injury: You suffer a Minor Injury such as a sprain, burns, or minor concussion. Your Max HP is reduced by 1 until healed in a Tech 3-4 Med Bay. In addition, you are Unconscious. Apply the result of 11-19.",
       "2-5": "Major Injury: You suffer a Major Injury such as permanent scarring, broken ribs, or internal injuries. Your Max HP is reduced by 2 until healed in a Tech 5-6 Med Bay. In addition, you are Unconscious. Apply the result of 11-19.",
       "type": "standard"
-    }
+    },
+    "page": 338
   },
   {
     "source": "core",
@@ -49,7 +52,8 @@
       "6-10": "Module Destruction: A Module mounted on your Mech is destroyed. This is chosen by the Mediator or at random. Your Mech Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
       "2-5": "System Destruction: A System mounted on your Mech is destroyed. This is chosen by the Mediator or at random. Your Mech Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
       "type": "standard"
-    }
+    },
+    "page": 338
   },
   {
     "source": "core",
@@ -62,7 +66,8 @@
       "6-10": "Module Overload: One of your Mech’s Modules chosen at random or by the Mediator is destroyed.",
       "2-5": "System Overload: One of your Mech’s Systems chosen at random or by the Mediator is destroyed.",
       "type": "standard"
-    }
+    },
+    "page": 339
   },
   {
     "source": "core",
@@ -75,7 +80,8 @@
       "6-10": "Not Bad: You find 2 Scrap of the Tech Level of the area.",
       "2-5": "Better than Nothing: You find 1 Scrap of the Tech Level of the area.",
       "type": "standard"
-    }
+    },
+    "page": 339
   },
   {
     "source": "core",
@@ -88,7 +94,8 @@
       "6-10": "Bits and Pieces: You salvage a System or Module of your choice mounted on the Mech. It has the Damaged Condition. Anything else is considered destroyed.",
       "2-5": "Nuts and Bolts: You salvage half of the Salvage Value of the Mech Chassis in Scrap of its Tech Level, to a minimum of 1. Everything else is considered destroyed.",
       "type": "standard"
-    }
+    },
+    "page": 339
   },
   {
     "source": "core",
@@ -101,7 +108,8 @@
       "6-10": "Unfriendly: The NPCs react in an unfriendly manner to the group; they are difficult to talk or trade with and reluctant to offer any help to the Pilots.",
       "2-5": "Hostile: The NPCs are actively hostile to the group. They will defend their area, make motions to attack, gesture and threaten, and be unwilling to help in any way.",
       "type": "standard"
-    }
+    },
+    "page": 268
   },
   {
     "source": "core",
@@ -114,7 +122,8 @@
       "6-10": "Tough Choice: The NPC is successful, but faces a Tough Choice. The players give the Mediator a choice between two Setbacks. In combat, a weapon attack hits, but with a choice of Setback chosen by the players.",
       "2-5": "Failure: The NPC has failed at their action. The players choose an appropriate Setback for failure. In combat, a weapon attack misses.",
       "type": "standard"
-    }
+    },
+    "page": 267
   },
   {
     "source": "core",
@@ -127,7 +136,8 @@
       "6-10": "Fighting Retreat: The NPCs retreat, but do so whilst continuing to fight. They will fight for one more round and then retreat.",
       "2-5": "Retreat: The NPCs flee the fight as quickly and safely as possible.",
       "type": "standard"
-    }
+    },
+    "page": 268
   },
   {
     "source": "core",
@@ -140,7 +150,8 @@
       "6-10": "Dangerous Escape: The group escapes to any adjacent location of their choice within the Region Map, but at a cost. They must make a Tough Choice related to the situation.",
       "2-5": "Failed Escape: The group fails to retreat from the situation and are pinned down. They cannot retreat and must fight it out to the end.",
       "type": "standard"
-    }
+    },
+    "page": 337
   },
   {
     "source": "core",
@@ -153,7 +164,8 @@
       "6-10": "Choose a Bay on your Union Crawler. It becomes Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition.",
       "2-5": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition.",
       "type": "standard"
-    }
+    },
+    "page": 219
   },
   {
     "source": "core",
@@ -166,7 +178,8 @@
       "6-10": "Choose a Bay on your Union Crawler. It is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition. Around 5% of your Union Crawler’s population are severely injured or killed.",
       "2-5": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition.",
       "type": "standard"
-    }
+    },
+    "page": 219
   },
   {
     "source": "core",
@@ -179,6 +192,7 @@
       "6-10": "You must choose between saving the Union Crawler population and saving the Union Crawler itself. If you choose the population, the Union Crawler is entirely destroyed and cannot be rebuilt. If you choose the Union Crawler, assume all Bays are damaged.  It can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher, but you have to find new people to join it in the wastelands.",
       "2-5": "The Union Crawler is destroyed, and the majority of its population are killed or severely injured. The Salvager Pilots must roll on the Critical Injury Table. Any survivors must find a way to rebuild.",
       "type": "standard"
-    }
+    },
+    "page": 220
   }
 ]

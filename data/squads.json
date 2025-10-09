@@ -25,7 +25,8 @@
         "name": "Salvaging Tools"
       }
     ],
-    "hitPoints": 4
+    "hitPoints": 4,
+    "page": 300
   },
   {
     "source": "core",
@@ -53,7 +54,8 @@
         "name": "High Tensile Wire"
       }
     ],
-    "hitPoints": 6
+    "hitPoints": 6,
+    "page": 300
   },
   {
     "source": "core",
@@ -84,7 +86,8 @@
         "name": "Portable Comms Unit"
       }
     ],
-    "hitPoints": 10
+    "hitPoints": 10,
+    "page": 300
   },
   {
     "source": "core",
@@ -121,7 +124,8 @@
         "name": "First Aid Kit"
       }
     ],
-    "hitPoints": 10
+    "hitPoints": 10,
+    "page": 300
   },
   {
     "source": "core",
@@ -160,7 +164,8 @@
         "name": "First Aid Kit"
       }
     ],
-    "hitPoints": 10
+    "hitPoints": 10,
+    "page": 300
   },
   {
     "source": "core",
@@ -194,7 +199,8 @@
         "name": "Electro Grappling Hook"
       }
     ],
-    "hitPoints": 20
+    "hitPoints": 20,
+    "page": 301
   },
   {
     "source": "core",
@@ -233,7 +239,8 @@
         "name": "Night Vision Optics"
       }
     ],
-    "hitPoints": 20
+    "hitPoints": 20,
+    "page": 301
   },
   {
     "source": "core",
@@ -259,7 +266,8 @@
         "description": "Creatures hit by this attack are knocked prone."
       }
     ],
-    "hitPoints": 4
+    "hitPoints": 4,
+    "page": 301
   },
   {
     "source": "core",
@@ -291,6 +299,7 @@
         "name": "Hover Locomotion System"
       }
     ],
-    "structurePoints": 8
+    "structurePoints": 8,
+    "page": 301
   }
 ]

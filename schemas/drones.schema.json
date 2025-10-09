@@ -8,7 +8,7 @@
     "type": "object",
     "description": "An autonomous drone",
     "additionalProperties": false,
-    "required": ["name", "source", "structurePoints"],
+    "required": ["name", "source", "structurePoints", "page"],
     "properties": {
       "name": {
         "type": "string",
@@ -35,7 +35,7 @@
         "type": "array",
         "description": "Systems installed on this drone",
         "items": {
-          "$ref": "shared/objects.schema.json#/definitions/system"
+          "$ref": "shared/objects.schema.json#/definitions/embeddedSystem"
         }
       },
       "page": {
@@ -46,4 +46,3 @@
     }
   }
 }
-
