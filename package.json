@@ -6,8 +6,8 @@
   "main": "schemas/index.json",
   "scripts": {
     "validate": "tsx tools/validateAll.ts",
-    "format": "tsx tools/format.ts",
     "parse": "tsx tools/parsePdf.ts",
+    "docs": "tsx tools/generateDocs.ts",
     "test": "npm run validate"
   },
   "repository": {
