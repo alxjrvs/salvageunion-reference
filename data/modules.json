@@ -13,7 +13,7 @@
     "recommended": true,
     "actionType": "Free",
     "range": "Long",
-    "description": "This allows for both voice and text communications via your Mech's HUD. You may also use your Comms Module to send and receive images and data, such as data you gather when using a Scanner.",
+    "description": "This Opus Institute-developed array of telecommunications wires and receivers allows communication with anything with the Communicator Trait in Range. This allows for both voice and text communications via your Mech's HUD. You may also use your Comms Module to send and receive images and data, such as data you gather when using a Scanner. If the Mech does not have a Comms Module or equivalent with the Communicator Trait you cannot talk to your Allies from their Mech whilst out in the field.",
     "page": 190
   },
   {
@@ -40,7 +40,7 @@
     "actionType": "Turn",
     "range": "Medium",
     "activationCost": 2,
-    "description": "This hacking program allows you to tap into a Mech, database, or computer system to gather information about it. This can only be used to read data and not to write or manipulate it.",
+    "description": "This hacking program developed by Stefanus Industries allows you to tap into a Mech, database, or computer system to gather information about it. This can only be used to read data and not to write or manipulate it.",
     "rollTable": {
       "1": "The hack fails and the target is alerted to your hacking attempt. They can retaliate as appropriate.",
       "20": "You masterfully hack into the system and can ask 5 questions to the Mediator about it. The answers they give must be true.",
@@ -65,7 +65,7 @@
     "actionType": "Reaction",
     "range": "Medium",
     "activationCost": 2,
-    "description": "This Firewall is designed to block hacking attempts.",
+    "description": "This Firewall, made open source by the Opus Institute, is designed to block hacking attempts.",
     "rollTable": {
       "1": "You fail to block the hack, and your Firewall is breached, it becomes damaged and cannot be used until repaired to the Intact Condition.",
       "20": "You successfully block the hack and you and your Allies cannot be affected by anything with the Hacking Trait for the next 10 minutes.",
@@ -97,7 +97,7 @@
     "actionType": "Turn",
     "range": "Long",
     "activationCost": 1,
-    "description": "When activated, this Module fires a reactor-fuelled flare to any point within Range. The flare is clearly visible up to anywhere within Far Range as well as anyone in any adjacent area to you on the Region Map. The flare burns enough to provide illumination nearly equal to that of daylight. The flare lasts for an hour before dissipating.",
+    "description": "An open source Opus Institute blueprint, this Module is frequently used by emergency or rescue services. The Opus Institute developed it for use in the long winters where their headquarters are located; due to the pitch dark environments and constant threat of snowstorms and avalanches. When activated, this Module fires a reactor-fuelled flare to any point within Range. The flare is clearly visible up to anywhere within Far Range as well as anyone in any adjacent area to you on the Region Map. The flare burns enough to provide illumination nearly equal to that of daylight. The flare lasts for an hour before dissipating.",
     "page": 191
   },
   {
@@ -205,7 +205,7 @@
     "slotsRequired": 1,
     "salvageValue": 2,
     "actionType": "Reaction",
-    "description": "When activated, your Mech regains 3 EP and the Energy Cell Module is destroyed.",
+    "description": "For when you need that extra boost of energy on a long haul. This nuclear powered conduit can be drained of energy to provide your Mech's reactor with a temporary boost. When activated, your Mech regains 3 EP and the Energy Cell Module is destroyed.",
     "page": 194
   },
   {
@@ -222,7 +222,7 @@
     "actionType": "Short",
     "range": "Long",
     "activationCost": 2,
-    "description": "When activated, you scan a point within Range to detect the presence of any underground structures, cave networks, ruins, or bases.",
+    "description": "A scanner designed by Thatcher Steel to analyse underground areas prior to mining excavations. When activated, you scan a point within Range to detect the presence of any underground structures, cave networks, ruins, or bases. This can be a specific terrain feature or location such as a mountain range, military complex, settlement, or area in the landscape. If a point is not worth scanning because it holds nothing of interest, the Mediator must tell you before you make your scan. The scan returns a basic datamap of the underground area, including its size as well as the first three main sections as well as any passageways between those sections. The Mediator will draw you a rudimentary map noting any major features such as bridges, columns, or crevasses, and lets you know if the area can fit Mechs or Pilots.",
     "page": 194
   },
   {
@@ -237,7 +237,7 @@
       }
     ],
     "actionType": "Reaction",
-    "description": "If an attack hits your Mech, you may activate the Evasion Protocols as a Reaction to force the attacker to re-roll the attack and choose the lower result.",
+    "description": "This Module enables a Mech to make a series of rapid movements in an attempt to avoid damage from an attack or hazard. The infamous 'Devils Run' Pilot training route in the Arid Steppes contains a gauntlet of hazards that the Evasion Protocols Module has proved crucial in avoiding. If an attack hits your Mech, you may activate the Evasion Protocols as a Reaction to force the attacker to re-roll the attack and choose the lower result.",
     "page": 194
   },
   {
@@ -249,7 +249,7 @@
     "actionType": "Turn",
     "range": "Medium",
     "activationCost": 2,
-    "description": "When activated, the hull of your Mech becomes temporarily magnetised, drawing metallic objects towards it and allowing all manner of scrap and salvage to be easily carried.",
+    "description": "A byproduct of Drontek anti-grav technology, the Hull Magnetiser has become much loved by salvagers who want to slap some extra scrap on their Chassis. When activated, the hull of your Mech becomes temporarily magnetised, drawing metallic objects towards it and allowing all manner of scrap and salvage to be easily carried.",
     "notes": "This increases your Mech's Cargo Capacity by its System Slot Value. This effect lasts for 1 hour and can be deactivated any time as a Free Action. The Union unofficially encourages creative and unorthodox uses of the Hull Magnetiser.",
     "page": 194
   },
@@ -277,7 +277,7 @@
     "slotsRequired": 1,
     "salvageValue": 2,
     "actionType": "Reaction",
-    "description": "This Mech-mountable scanner lets you know when any Scrap is nearby.",
+    "description": "A favourite of salvage teams across the globe, this Mech-mountable scanner lets you know when any Scrap is nearby.",
     "actions": [
       {
         "source": "core",
@@ -315,7 +315,7 @@
     "actionType": "Turn",
     "range": "Medium",
     "activationCost": 1,
-    "description": "When activated, you scan a point within the area map or a specific area of interest such as a ruined building, bunker, or dense area of foliage for any signs of movement. You detect if anything is moving in the area, the number of separate things that are moving, and whether they are People or Mech-sized.",
+    "description": "Developed by Sakura Futures to aid in target acquisition, after a classified incident at a mining colony. This scanner is able to detect movement within an area via a high-powered ultrasound scanner. When activated, you scan a point within the area map or a specific area of interest such as a ruined building, bunker, or dense area of foliage for any signs of movement. You detect if anything is moving in the area, the number of separate things that are moving, and whether they are People or Mech-sized.",
     "page": 195
   },
   {
@@ -874,7 +874,7 @@
         "type": "guided"
       }
     ],
-    "description": "When activated, a Weapons System of your choice mounted on your Mech gains the Guided Trait meaning it does not need line of sight to hit any target within its Range.",
+    "description": "This Aegean Dynamics-developed Module allows you to track targets even without visual confirmation from your Mech's heads-up display. When activated, a Weapons System of your choice mounted on your Mech gains the Guided Trait meaning it does not need line of sight to hit any target within its Range.",
     "page": 205
   },
   {
@@ -937,7 +937,7 @@
     "actionType": "Turn",
     "range": "Medium",
     "activationCost": 2,
-    "description": "When activated, this Module projects a lifelike, three dimensional, hologram into an area within Range. The hologram appears to onlookers as though it was realistic and can be viewed from multiple angles. It can be spoken through or set to repeat a message, make animal calls, or mimic the sounds of explosions or weapons firing.",
+    "description": "Developed by Ascension PLC as a means for their corporate minds to communicate with the material realm, this holo projector uses a complex laser array to project solid, life-like, three dimensional holograms into the world. When activated, this Module projects a life-like, three dimensional, hologram into an area within Range. The hologram appears to onlookers as though it was realistic and can be viewed from multiple angles. It can be spoken through or set to repeat a message, make animal calls, or mimic the sounds of explosions or weapons firing. The hologram can have any appearance that you choose and can be either Mech or Pilot-sized. The hologram stays in place within the location you set for 24 hours.",
     "page": 205
   },
   {
@@ -947,7 +947,7 @@
     "slotsRequired": 1,
     "salvageValue": 2,
     "actionType": "Reaction",
-    "description": "When activated, reduce the Heat on your Mech to 0.",
+    "description": "This Module rapidly flushes your Mech's Reactor with sub-zero liquid Helium coolant manufactured in the Opus Institute Labs in the Frozen Gulf. When activated, reduce the Heat on your Mech to 0.",
     "page": 205
   },
   {
