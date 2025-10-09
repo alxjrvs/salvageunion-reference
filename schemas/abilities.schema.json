@@ -1,21 +1,36 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://salvageunion.com/schemas/abilities.schema.json",
+  "title": "Salvage Union Abilities",
+  "description": "Pilot abilities and skills in Salvage Union",
   "type": "array",
   "items": {
     "type": "object",
+    "description": "A pilot ability",
     "additionalProperties": false,
+    "required": ["name", "tree", "source", "level"],
     "properties": {
-      "name": { "$ref": "shared/enums.schema.json#/definitions/ability" },
-      "tree": { "$ref": "shared/enums.schema.json#/definitions/tree" },
-      "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
+      "name": {
+        "$ref": "shared/enums.schema.json#/definitions/ability"
+      },
+      "tree": {
+        "$ref": "shared/enums.schema.json#/definitions/tree"
+      },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
       "level": {
-        "type": "number"
+        "type": "integer",
+        "minimum": 1,
+        "description": "Level in the ability tree"
       },
       "description": {
-        "type": "string"
+        "type": "string",
+        "description": "Description of the ability"
       },
       "effect": {
-        "type": "string"
+        "type": "string",
+        "description": "Mechanical effect of the ability"
       },
       "activationCost": {
         "$ref": "shared/common.schema.json#/definitions/activationCost"
@@ -27,8 +42,14 @@
       "rollTable": {
         "$ref": "shared/common.schema.json#/definitions/rollTable"
       },
-      "traits": { "$ref": "shared/common.schema.json#/definitions/traits" },
-      "page": { "type": "number" }
+      "traits": {
+        "$ref": "shared/common.schema.json#/definitions/traits"
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Page number in the source book"
+      }
     }
   }
 }

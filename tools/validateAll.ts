@@ -85,32 +85,38 @@ function loadJson(filePath: string): any {
   return JSON.parse(content);
 }
 
-function loadAllSchemas(validator: Validator): void {
-  // Load shared schemas with IDs that match the $ref paths used in schemas
+// Global validator instance with shared schemas loaded
+const globalValidator = new Validator();
+
+function loadSharedSchemas() {
+  // Load shared schemas that are referenced by other schemas
+  // The schemas use relative references like "shared/enums.schema.json#/definitions/tree"
+  // We need to register them with IDs that match these references
   const sharedSchemas = [
     {
       path: "schemas/shared/common.schema.json",
-      ids: ["shared/common.schema.json", "common.schema.json"],
+      id: "shared/common.schema.json",
     },
     {
       path: "schemas/shared/enums.schema.json",
-      ids: ["shared/enums.schema.json", "enums.schema.json"],
+      id: "shared/enums.schema.json",
     },
     {
       path: "schemas/shared/objects.schema.json",
-      ids: ["shared/objects.schema.json", "objects.schema.json"],
+      id: "shared/objects.schema.json",
     },
   ];
 
-  for (const { path, ids } of sharedSchemas) {
+  for (const sharedInfo of sharedSchemas) {
     try {
-      const sharedSchema = loadJson(path);
-      // Add schema with multiple IDs to handle different reference styles
-      for (const id of ids) {
-        validator.addSchema(sharedSchema, `/${id}`);
+      const sharedSchema = loadJson(sharedInfo.path);
+      // Register with both the relative ID and the full URL from $id
+      globalValidator.addSchema(sharedSchema, sharedInfo.id);
+      if (sharedSchema.$id) {
+        globalValidator.addSchema(sharedSchema, sharedSchema.$id);
       }
     } catch (error) {
-      console.error(`Warning: Could not load shared schema ${path}`);
+      console.error(`Warning: Could not load shared schema ${sharedInfo.path}`);
     }
   }
 }
@@ -120,18 +126,13 @@ function loadSchema(schemaPath: string): any {
 }
 
 function validateData(config: ValidationConfig): boolean {
-  const validator = new Validator();
-
   try {
     console.log(`\n📋 Validating ${config.name}...`);
-
-    // Load all shared schemas first
-    loadAllSchemas(validator);
 
     const data = loadJson(config.dataFile);
     const schema = loadSchema(config.schemaFile);
 
-    const result = validator.validate(data, schema);
+    const result = globalValidator.validate(data, schema);
 
     if (result.valid) {
       console.log(`✅ ${config.name}: VALID`);
@@ -154,6 +155,9 @@ function validateData(config: ValidationConfig): boolean {
 function main() {
   console.log("🔍 Salvage Union Data Validation");
   console.log("=================================");
+
+  // Load shared schemas once before validating
+  loadSharedSchemas();
 
   let allValid = true;
   let validCount = 0;

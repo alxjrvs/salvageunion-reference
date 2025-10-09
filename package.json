@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "validate": "tsx tools/validateAll.ts",
-    "format": "tsx tools/format.ts",
-    "list-property": "tsx tools/listEntriesWithProperty.ts"
+    "format": "tsx tools/format.ts"
   },
   "author": "",
   "license": "ISC",

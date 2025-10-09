@@ -1,31 +1,62 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://salvageunion.com/schemas/shared/common.schema.json",
+  "title": "Salvage Union Common Definitions",
+  "description": "Shared common type definitions for Salvage Union game data",
   "definitions": {
     "activationCost": {
-      "anyOf": [{ "type": "number" }, { "enum": ["Variable"] }]
+      "description": "Cost in ability points to activate an ability",
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "type": "string",
+          "const": "Variable"
+        }
+      ]
     },
     "damage": {
-      "anyOf": [
+      "description": "Damage dealt by an attack or ability",
+      "oneOf": [
         {
           "type": "object",
           "additionalProperties": false,
+          "required": ["type", "amount"],
           "properties": {
-            "type": { "enum": ["HP", "SP"] },
-            "amount": { "type": "number" }
+            "type": {
+              "type": "string",
+              "enum": ["HP", "SP"],
+              "description": "Type of damage (Hit Points or Structure Points)"
+            },
+            "amount": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Amount of damage dealt"
+            }
           }
         },
-        { "enum": ["2d20", "X SP"] }
+        {
+          "type": "string",
+          "enum": ["2d20", "X SP"],
+          "description": "Variable damage formula"
+        }
       ]
     },
     "traits": {
       "type": "array",
+      "description": "Special traits and properties of items, systems, or abilities",
       "items": {
-        "anyOf": [
+        "oneOf": [
           {
             "type": "object",
+            "description": "Trait with a numeric value",
             "additionalProperties": false,
+            "required": ["type", "amount"],
             "properties": {
               "type": {
+                "type": "string",
                 "enum": [
                   "uses",
                   "explosive",
@@ -33,16 +64,25 @@
                   "hot",
                   "multi-attack",
                   "personnel capacity"
-                ]
+                ],
+                "description": "Type of trait that requires a numeric value"
               },
-              "amount": { "type": "number" }
+              "amount": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Numeric value for the trait"
+              }
             }
           },
           {
             "type": "object",
+            "description": "Trait without a numeric value",
             "additionalProperties": false,
+            "required": ["type"],
             "properties": {
               "type": {
+                "type": "string",
+                "description": "Type of trait that doesn't require a numeric value",
                 "enum": [
                   "pilot equipment",
                   "hacking",
@@ -98,36 +138,70 @@
       }
     },
     "rollTable": {
-      "anyOf": [
+      "description": "Roll table for random outcomes based on d20 rolls",
+      "oneOf": [
         {
           "type": "object",
+          "description": "Standard roll table with 5 outcome ranges",
           "additionalProperties": false,
+          "required": ["type"],
           "properties": {
-            "type": { "enum": ["standard"] },
-            "1": { "type": "string" },
-            "20": { "type": "string" },
-            "11-19": { "type": "string" },
-            "6-10": { "type": "string" },
-            "2-5": { "type": "string" }
+            "type": {
+              "type": "string",
+              "const": "standard"
+            },
+            "1": {
+              "type": "string",
+              "description": "Critical failure outcome"
+            },
+            "20": {
+              "type": "string",
+              "description": "Critical success outcome"
+            },
+            "11-19": {
+              "type": "string",
+              "description": "High success outcome"
+            },
+            "6-10": { "type": "string", "description": "Moderate outcome" },
+            "2-5": { "type": "string", "description": "Low outcome" }
           }
         },
         {
           "type": "object",
+          "description": "Alternative standard roll table with different ranges",
           "additionalProperties": false,
+          "required": ["type"],
           "properties": {
-            "type": { "enum": ["standard2"] },
-            "1": { "type": "string" },
-            "19-20": { "type": "string" },
-            "11-18": { "type": "string" },
-            "6-10": { "type": "string" },
-            "2-5": { "type": "string" }
+            "type": {
+              "type": "string",
+              "const": "standard2"
+            },
+            "1": {
+              "type": "string",
+              "description": "Critical failure outcome"
+            },
+            "19-20": {
+              "type": "string",
+              "description": "Critical success outcome"
+            },
+            "11-18": {
+              "type": "string",
+              "description": "High success outcome"
+            },
+            "6-10": { "type": "string", "description": "Moderate outcome" },
+            "2-5": { "type": "string", "description": "Low outcome" }
           }
         },
         {
           "type": "object",
+          "description": "Full roll table with individual outcomes for each d20 result",
           "additionalProperties": false,
+          "required": ["type"],
           "properties": {
-            "type": { "enum": ["full"] },
+            "type": {
+              "type": "string",
+              "const": "full"
+            },
             "1": { "type": "string" },
             "2": { "type": "string" },
             "3": { "type": "string" },
@@ -154,12 +228,27 @@
     },
     "entry": {
       "type": "object",
+      "description": "Basic entry with name, description, source, and page reference",
       "additionalProperties": false,
+      "required": ["name", "source"],
       "properties": {
-        "name": { "type": "string" },
-        "description": { "type": "string" },
-        "source": { "$ref": "enums.schema.json#/definitions/source" },
-        "page": { "type": "number" }
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Name of the entry"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the entry"
+        },
+        "source": {
+          "$ref": "enums.schema.json#/definitions/source"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Page number in the source book"
+        }
       }
     }
   }
