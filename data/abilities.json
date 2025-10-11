@@ -1,5 +1,6 @@
 [
   {
+    "id": "ef787157-c4d4-44bf-857f-71eec0db7939",
     "name": "Engineering Expertise",
     "source": "core",
     "tree": "Mechanical Knowledge",
@@ -11,6 +12,7 @@
     "page": 28
   },
   {
+    "id": "c3b7d2dd-d774-45b8-827c-48d3c9c58202",
     "name": "Talk Shop",
     "source": "core",
     "tree": "Mechanical Knowledge",
@@ -22,6 +24,7 @@
     "page": 28
   },
   {
+    "id": "fba6ecb0-86c6-4b4a-9daf-f0056c79c88f",
     "name": "Mech Acquisition",
     "source": "core",
     "tree": "Mechanical Knowledge",
@@ -33,6 +36,7 @@
     "page": 28
   },
   {
+    "id": "5521c16b-0831-4a2e-87b5-0f9205b734da",
     "name": "Mass Field Maintenance",
     "source": "core",
     "tree": "Mech-Tech",
@@ -45,6 +49,7 @@
     "page": 29
   },
   {
+    "id": "c28d466d-0a44-434e-8258-2f188285c67f",
     "name": "If I cut this wire...",
     "source": "core",
     "tree": "Mech-Tech",
@@ -57,6 +62,7 @@
     "page": 29
   },
   {
+    "id": "8fff03d8-8831-4143-af99-b3439bf9a306",
     "name": "Mass Field Repair",
     "source": "core",
     "tree": "Mech-Tech",
@@ -69,6 +75,7 @@
     "page": 29
   },
   {
+    "id": "d51afc02-2683-46e1-acba-353d85eaf071",
     "name": "Jury Rig",
     "source": "core",
     "tree": "Forging",
@@ -80,6 +87,7 @@
     "page": 29
   },
   {
+    "id": "4c410720-0a21-4b2b-a842-68a4d34ccf33",
     "name": "Mech-Gyver",
     "source": "core",
     "tree": "Forging",
@@ -91,6 +99,7 @@
     "page": 29
   },
   {
+    "id": "c7f121eb-6e9f-46e6-9500-f65860ddd08c",
     "name": "Auto-Turret",
     "source": "core",
     "tree": "Forging",
@@ -107,6 +116,7 @@
     "page": 29
   },
   {
+    "id": "8f954763-3014-4184-ace6-a7409ff00401",
     "name": "Union Engineer",
     "source": "core",
     "tree": "Advanced Engineer",
@@ -118,6 +128,7 @@
     "page": 30
   },
   {
+    "id": "195fec1d-d749-4e5c-b7c1-f4986f14114f",
     "name": "This one goes to 11...",
     "source": "core",
     "tree": "Advanced Engineer",
@@ -130,6 +141,7 @@
     "page": 30
   },
   {
+    "id": "7f77b684-c47a-4154-8adb-b1ee291dd177",
     "name": "Mass Energy Recharge",
     "source": "core",
     "tree": "Advanced Engineer",
@@ -142,6 +154,7 @@
     "page": 31
   },
   {
+    "id": "4ddfa5ed-cae2-4870-bc21-a7860d588fd7",
     "name": "Tip Top Shape",
     "source": "core",
     "tree": "Legendary Engineer",
@@ -152,6 +165,7 @@
     "page": 31
   },
   {
+    "id": "d2f752e1-8de5-4d4a-902d-8113106a982b",
     "name": "The Full Works",
     "source": "core",
     "tree": "Legendary Engineer",
@@ -164,6 +178,7 @@
     "page": 31
   },
   {
+    "id": "4cbf7319-164f-4b51-b417-1a7e8fa5d6a0",
     "name": "Hacking Kit",
     "source": "core",
     "tree": "Hacking",
@@ -181,6 +196,7 @@
     "page": 34
   },
   {
+    "id": "8a61839b-b0e2-4726-b436-0d76f229a9ea",
     "name": "System and Software Hacker",
     "source": "core",
     "tree": "Hacking",
@@ -206,6 +222,7 @@
     "page": 34
   },
   {
+    "id": "24f08353-1f4e-4549-a2e3-45272c90b57f",
     "name": "Denial of Service Attack",
     "source": "core",
     "tree": "Hacking",
@@ -231,6 +248,7 @@
     "page": 34
   },
   {
+    "id": "f7bc9f48-bdaf-4d28-a965-38b017b2328f",
     "name": "Well actually...",
     "source": "core",
     "tree": "Electronics",
@@ -250,6 +268,7 @@
     "page": 34
   },
   {
+    "id": "f6d6d8d7-0b3e-4ea8-906f-582281a98a5e",
     "name": "Techno Babble",
     "source": "core",
     "tree": "Electronics",
@@ -261,6 +280,7 @@
     "page": 35
   },
   {
+    "id": "3364cc4f-227f-4f88-8b73-a09309e293f0",
     "name": "Holo Companion",
     "source": "core",
     "tree": "Electronics",
@@ -275,6 +295,7 @@
     "page": 35
   },
   {
+    "id": "420ab386-ad77-4857-9679-1e4a01e3d090",
     "name": "Bionic Senses",
     "source": "core",
     "tree": "Augmentation",
@@ -285,6 +306,7 @@
     "page": 35
   },
   {
+    "id": "1e6183d7-0b67-40ab-91f4-134090c8846b",
     "name": "Bionic Arms",
     "source": "core",
     "tree": "Augmentation",
@@ -295,6 +317,7 @@
     "page": 35
   },
   {
+    "id": "4823bdf3-b501-423d-abd6-79ca1fd6203d",
     "name": "Bionic Legs",
     "source": "core",
     "tree": "Augmentation",
@@ -305,6 +328,7 @@
     "page": 36
   },
   {
+    "id": "379654a5-004f-458d-b0ce-1693fd87ee7f",
     "name": "Trojan Horse",
     "source": "core",
     "tree": "Advanced Hacking",
@@ -322,6 +346,7 @@
     "page": 36
   },
   {
+    "id": "fb98af0a-ac72-449d-ab9d-5a5f9b839ced",
     "name": "Counter-Hacking",
     "source": "core",
     "tree": "Advanced Hacking",
@@ -347,6 +372,7 @@
     "page": 36
   },
   {
+    "id": "a40a0177-70e3-423e-aaaa-1e06d6068a05",
     "name": "Worm",
     "source": "core",
     "tree": "Advanced Hacking",
@@ -372,6 +398,7 @@
     "page": 36
   },
   {
+    "id": "da3d0c65-c347-49cc-97c4-fd6cae9c2737",
     "name": "Network Takeover",
     "source": "core",
     "tree": "Legendary Hacker",
@@ -389,6 +416,7 @@
     "page": 37
   },
   {
+    "id": "d7c9ca3a-dc7a-4284-8736-2d0e02d8a2d9",
     "name": "Spyware",
     "source": "core",
     "tree": "Legendary Hacker",
@@ -406,6 +434,7 @@
     "page": 37
   },
   {
+    "id": "6ab9bdca-bd59-4bbd-afd7-ddcdaf944953",
     "name": "Squeeze it in",
     "source": "core",
     "tree": "Salvaging",
@@ -418,6 +447,7 @@
     "page": 40
   },
   {
+    "id": "cb3a5c51-2162-4090-8173-8909bae9dc8c",
     "name": "Expert Salvager",
     "source": "core",
     "tree": "Salvaging",
@@ -428,6 +458,7 @@
     "page": 40
   },
   {
+    "id": "d3845a5e-d838-4747-8e02-65f181ead511",
     "name": "Emergency Salvage Drop",
     "source": "core",
     "tree": "Salvaging",
@@ -439,6 +470,7 @@
     "page": 40
   },
   {
+    "id": "60b55e00-61c7-49af-b386-4c5fc21fc086",
     "name": "Read a Person",
     "source": "core",
     "tree": "Trading",
@@ -450,6 +482,7 @@
     "page": 40
   },
   {
+    "id": "a9f7366a-90ab-4972-91cf-3c5b1032f35e",
     "name": "Let’s Make a Deal",
     "source": "core",
     "tree": "Trading",
@@ -469,6 +502,7 @@
     "page": 40
   },
   {
+    "id": "1918ed6b-3341-4063-8be5-d87051701568",
     "name": "No Job Too Big",
     "source": "core",
     "tree": "Trading",
@@ -480,6 +514,7 @@
     "page": 41
   },
   {
+    "id": "3ad259a6-00eb-4411-af1a-03c247536520",
     "name": "Folk Song",
     "source": "core",
     "tree": "Leadership",
@@ -491,6 +526,7 @@
     "page": 41
   },
   {
+    "id": "9c2dad26-7d5d-45f8-9f60-d003e3151359",
     "name": "Behemoth",
     "source": "core",
     "tree": "Leadership",
@@ -511,6 +547,7 @@
     "page": 41
   },
   {
+    "id": "c657f188-107b-40c1-82c0-c5b37bfb3e4b",
     "name": "Valiant Speech",
     "source": "core",
     "tree": "Leadership",
@@ -522,6 +559,7 @@
     "page": 42
   },
   {
+    "id": "7ea637ab-14cf-4728-be2e-09adfddf5266",
     "name": "Beefcake",
     "source": "core",
     "tree": "Advanced Hauler",
@@ -532,6 +570,7 @@
     "page": 42
   },
   {
+    "id": "85d969a1-dcd1-4911-8299-4b80ffd79eb1",
     "name": "Mechapult Master",
     "source": "core",
     "tree": "Advanced Hauler",
@@ -543,6 +582,7 @@
     "page": 42
   },
   {
+    "id": "89c763c3-a8f3-4502-abf6-3f531e583299",
     "name": "Can’t Stop, Won’t Stop",
     "source": "core",
     "tree": "Advanced Hauler",
@@ -560,6 +600,7 @@
     "page": 42
   },
   {
+    "id": "a5b625c7-befc-4679-a334-2022f69ba9cb",
     "name": "Master Salvager",
     "source": "core",
     "tree": "Legendary Hauler",
@@ -572,6 +613,7 @@
     "page": 43
   },
   {
+    "id": "4154a12a-5149-4888-a305-b2b802a97d9b",
     "name": "Hauling All Day",
     "source": "core",
     "tree": "Legendary Hauler",
@@ -582,6 +624,7 @@
     "page": 43
   },
   {
+    "id": "72471ee4-9e97-47fa-a3c7-22655452d0ed",
     "name": "Gather Intelligence",
     "source": "core",
     "tree": "Recon",
@@ -593,6 +636,7 @@
     "page": 48
   },
   {
+    "id": "10fc5eb8-418e-4127-aebe-0c9c6543ddc6",
     "name": "Tail",
     "source": "core",
     "tree": "Recon",
@@ -605,6 +649,7 @@
     "page": 48
   },
   {
+    "id": "74830a8a-dc87-4a10-b95e-0e3ac2ec8fb4",
     "name": "Survey Drone",
     "source": "core",
     "tree": "Recon",
@@ -619,6 +664,7 @@
     "page": 48
   },
   {
+    "id": "e1796802-3966-4286-a0e4-74cf816a26b3",
     "name": "Silver Tongue",
     "source": "core",
     "tree": "Sleuth",
@@ -630,6 +676,7 @@
     "page": 48
   },
   {
+    "id": "6c36afb5-917c-4328-be35-2cd2cce9ccfc",
     "name": "Forked Tongue",
     "source": "core",
     "tree": "Sleuth",
@@ -641,6 +688,7 @@
     "page": 49
   },
   {
+    "id": "bac905b5-d178-413b-96b4-5317712529a3",
     "name": "Persona",
     "source": "core",
     "tree": "Sleuth",
@@ -652,6 +700,7 @@
     "page": 49
   },
   {
+    "id": "4460ad4a-8abb-44bc-9aaf-8d53b968ce76",
     "name": "You Shot First",
     "source": "core",
     "tree": "Sniper",
@@ -663,6 +712,7 @@
     "page": 50
   },
   {
+    "id": "ec6498ba-a242-42fd-a5b0-dbd7a4b63b40",
     "name": "Spotter",
     "source": "core",
     "tree": "Sniper",
@@ -675,6 +725,7 @@
     "page": 50
   },
   {
+    "id": "921afb77-3d0f-49b5-9cc4-36372b24e00d",
     "name": "Custom Sniper Rifle",
     "source": "core",
     "tree": "Sniper",
@@ -689,6 +740,7 @@
     "page": 50
   },
   {
+    "id": "89f20d2a-6f43-4a5f-943a-f8a77abd341b",
     "name": "Flashback",
     "source": "core",
     "tree": "Advanced Scout",
@@ -700,6 +752,7 @@
     "page": 50
   },
   {
+    "id": "c4f6b5f7-e06d-408f-b38f-61f3be5f48e1",
     "name": "Camo Suit",
     "source": "core",
     "tree": "Advanced Scout",
@@ -719,6 +772,7 @@
     "page": 51
   },
   {
+    "id": "5280d4fa-d97b-4678-a57e-1eae675e4772",
     "name": "Wingsuit",
     "source": "core",
     "tree": "Advanced Scout",
@@ -737,6 +791,7 @@
     "page": 51
   },
   {
+    "id": "15d9fafc-7265-4983-bbb2-c23bb64bd54f",
     "name": "Wasteland Celebrity",
     "source": "core",
     "tree": "Legendary Scout",
@@ -748,6 +803,7 @@
     "page": 51
   },
   {
+    "id": "0f6288c7-1025-4df2-8b9c-f32b5f344bdd",
     "name": "Teleport Beacon",
     "source": "core",
     "tree": "Legendary Scout",
@@ -764,6 +820,7 @@
     "page": 51
   },
   {
+    "id": "9947ca57-8a30-4ea6-bb0b-d021ee5e8567",
     "name": "Charge",
     "source": "core",
     "tree": "Gladitorial Combat",
@@ -776,6 +833,7 @@
     "page": 54
   },
   {
+    "id": "19b1961c-b50b-4436-9620-11b69545dbb4",
     "name": "Overpower",
     "source": "core",
     "tree": "Gladitorial Combat",
@@ -788,6 +846,7 @@
     "page": 54
   },
   {
+    "id": "010ef454-6c74-4fa5-8df1-c611ccaf66b3",
     "name": "Duel",
     "source": "core",
     "tree": "Gladitorial Combat",
@@ -800,6 +859,7 @@
     "page": 54
   },
   {
+    "id": "3095eb7e-aaea-4b8e-8b58-28a1643b5267",
     "name": "Wastelander Rapport",
     "source": "core",
     "tree": "Survivalist",
@@ -811,6 +871,7 @@
     "page": 54
   },
   {
+    "id": "61e72d21-812e-46c1-9217-7717bdfd5cf7",
     "name": "Resourceful",
     "source": "core",
     "tree": "Survivalist",
@@ -822,6 +883,7 @@
     "page": 54
   },
   {
+    "id": "35c99351-c62a-4975-ab48-23f14b3e633f",
     "name": "Custom Missile Launcher",
     "source": "core",
     "tree": "Survivalist",
@@ -836,6 +898,7 @@
     "page": 55
   },
   {
+    "id": "3625ae9b-942c-4d96-ae4d-683c9aaf2301",
     "name": "Provoke",
     "source": "core",
     "tree": "Tactical Warfare",
@@ -848,6 +911,7 @@
     "page": 55
   },
   {
+    "id": "dc88ef14-e1cd-49da-8927-1738a3f0a873",
     "name": "Tactical Retreat",
     "source": "core",
     "tree": "Tactical Warfare",
@@ -859,6 +923,7 @@
     "page": 55
   },
   {
+    "id": "a23001d9-4db3-4ffa-9ff3-5bdb39627318",
     "name": "Counterattack",
     "source": "core",
     "tree": "Tactical Warfare",
@@ -870,6 +935,7 @@
     "page": 55
   },
   {
+    "id": "4070019b-4924-444d-b666-77c75cd47794",
     "name": "Critical Strike",
     "source": "core",
     "tree": "Advanced Soldier",
@@ -880,6 +946,7 @@
     "page": 56
   },
   {
+    "id": "b521578a-3ee6-4b82-8066-27357b3bd9f1",
     "name": "Defy Death",
     "source": "core",
     "tree": "Advanced Soldier",
@@ -891,6 +958,7 @@
     "page": 56
   },
   {
+    "id": "720ff32f-f5cc-4902-8086-1ce436e9c566",
     "name": "Whirlwind Strike",
     "source": "core",
     "tree": "Advanced Soldier",
@@ -910,6 +978,7 @@
     "page": 56
   },
   {
+    "id": "b9c33055-9ecd-49ca-818d-5ddf0b94324c",
     "name": "Omega Strike",
     "source": "core",
     "tree": "Legendary Soldier",
@@ -921,6 +990,7 @@
     "page": 56
   },
   {
+    "id": "528bdad8-fb86-4376-bed6-4625db5cce88",
     "name": "Steel Pact",
     "source": "core",
     "tree": "Legendary Soldier",
@@ -931,6 +1001,7 @@
     "page": 56
   },
   {
+    "id": "92abaa31-6c3b-47d3-85ac-a6f47861a9b9",
     "name": "Glanded Stims",
     "source": "core",
     "tree": "Cyborg",
@@ -950,6 +1021,7 @@
     "page": 60
   },
   {
+    "id": "a225e943-2c1d-4783-ad04-28685336da4e",
     "name": "Modular Face Implant",
     "source": "core",
     "tree": "Cyborg",
@@ -960,6 +1032,7 @@
     "page": 60
   },
   {
+    "id": "34619b5e-7a6a-4834-abfe-4ceb35f27f27",
     "name": "Bionic Endoskeleton",
     "source": "core",
     "tree": "Cyborg",
@@ -970,6 +1043,7 @@
     "page": 60
   },
   {
+    "id": "173ff718-c282-488b-b063-23e5c9580b12",
     "name": "Meld Form",
     "source": "core",
     "tree": "Legendary Cyborg",
@@ -980,6 +1054,7 @@
     "page": 60
   },
   {
+    "id": "a153058b-3468-45fc-8856-72af40762088",
     "name": "Ascension",
     "source": "core",
     "tree": "Legendary Cyborg",
@@ -990,6 +1065,7 @@
     "page": 61
   },
   {
+    "id": "94a1b594-201d-4b82-b740-7583f0eac701",
     "name": "Field Fabrication",
     "source": "core",
     "tree": "Fabricator",
@@ -1001,6 +1077,7 @@
     "page": 64
   },
   {
+    "id": "91192a4c-b12a-47cf-af89-0dad2825f092",
     "name": "Miniaturised EMP",
     "source": "core",
     "tree": "Fabricator",
@@ -1018,6 +1095,7 @@
     "page": 64
   },
   {
+    "id": "46c587cf-2561-4199-bebe-3f5a211e8ebf",
     "name": "Chassis Modder",
     "source": "core",
     "tree": "Fabricator",
@@ -1028,6 +1106,7 @@
     "page": 64
   },
   {
+    "id": "6fc73eba-d1a6-4839-96dd-4b35365a58a5",
     "name": "System Miniaturisation",
     "source": "core",
     "tree": "Legendary Fabricator",
@@ -1038,6 +1117,7 @@
     "page": 64
   },
   {
+    "id": "f063ea1a-ba2f-4982-92cb-e19ebe3bb178",
     "name": "Droned Mech Conversion",
     "source": "core",
     "tree": "Legendary Fabricator",
@@ -1048,6 +1128,7 @@
     "page": 65
   },
   {
+    "id": "525f2eca-4f1e-4706-b89f-577f5d1eb832",
     "name": "Mecha Companion",
     "source": "core",
     "tree": "Ranger",
@@ -1062,6 +1143,7 @@
     "page": 68
   },
   {
+    "id": "f3b2da0b-d9b9-400d-947a-73dea06c2529",
     "name": "Snipe",
     "source": "core",
     "tree": "Ranger",
@@ -1073,6 +1155,7 @@
     "page": 68
   },
   {
+    "id": "15a40bf0-6268-4087-87da-3c1453951a4b",
     "name": "Infiltration",
     "source": "core",
     "tree": "Ranger",
@@ -1084,6 +1167,7 @@
     "page": 68
   },
   {
+    "id": "c0ccee58-0f35-4873-be5c-727640e62334",
     "name": "Mecha Packmaster",
     "source": "core",
     "tree": "Legendary Ranger",
@@ -1098,6 +1182,7 @@
     "page": 69
   },
   {
+    "id": "26e26814-996d-46ec-a721-8246784ab70b",
     "name": "One with the Wastelands",
     "source": "core",
     "tree": "Legendary Ranger",
@@ -1108,6 +1193,7 @@
     "page": 69
   },
   {
+    "id": "06bd8491-e750-4775-8dbb-80040c193b2d",
     "name": "Black Market",
     "source": "core",
     "tree": "Smuggler",
@@ -1118,6 +1204,7 @@
     "page": 72
   },
   {
+    "id": "37102a9a-4aa8-492a-a3d7-d84a34e131f3",
     "name": "Pray I don’t alter the deal further...",
     "source": "core",
     "tree": "Smuggler",
@@ -1129,6 +1216,7 @@
     "page": 72
   },
   {
+    "id": "e8e364cf-5812-4848-85a9-bbf6ef8d21a6",
     "name": "Hidden Stash",
     "source": "core",
     "tree": "Smuggler",
@@ -1140,6 +1228,7 @@
     "page": 73
   },
   {
+    "id": "b2cc25ff-a58a-4522-8069-13edbc687409",
     "name": "Knife Missile",
     "source": "core",
     "tree": "Legendary Smuggler",
@@ -1165,6 +1254,7 @@
     "page": 73
   },
   {
+    "id": "3ce9e519-dc38-47a6-a897-4636704c740b",
     "name": "Stealth Field Generator",
     "source": "core",
     "tree": "Legendary Smuggler",
@@ -1182,6 +1272,7 @@
     "page": 73
   },
   {
+    "id": "0e23ac83-98e0-4143-9c47-5fc29f6ba251",
     "name": "Union Representative",
     "source": "core",
     "tree": "Union Rep",
@@ -1192,6 +1283,7 @@
     "page": 76
   },
   {
+    "id": "18410073-869b-4545-a425-e462fcb83b13",
     "name": "Union Call",
     "source": "core",
     "tree": "Union Rep",
@@ -1210,6 +1302,7 @@
     "page": 76
   },
   {
+    "id": "96d7fe30-797b-4096-9d7c-e9e4208827eb",
     "name": "Recruit",
     "source": "core",
     "tree": "Union Rep",
@@ -1221,6 +1314,7 @@
     "page": 76
   },
   {
+    "id": "0e38ed64-73ff-4ae2-9592-87d34e868ab1",
     "name": "VIP Beacon",
     "source": "core",
     "tree": "Legendary Union Rep",
@@ -1237,6 +1331,7 @@
     "page": 77
   },
   {
+    "id": "ee08e81e-99cb-4b7d-ba8c-662ff7e3b2fc",
     "name": "Inspirational Union Leader",
     "source": "core",
     "tree": "Legendary Union Rep",

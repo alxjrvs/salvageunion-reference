@@ -4,6 +4,10 @@
   "title": "Salvage Union Common Definitions",
   "description": "Shared common type definitions for Salvage Union game data",
   "definitions": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the entry"
+    },
     "activationCost": {
       "description": "Cost in ability points to activate an ability",
       "oneOf": [
@@ -23,11 +27,17 @@
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["type", "amount"],
+          "required": [
+            "type",
+            "amount"
+          ],
           "properties": {
             "type": {
               "type": "string",
-              "enum": ["HP", "SP"],
+              "enum": [
+                "HP",
+                "SP"
+              ],
               "description": "Type of damage (Hit Points or Structure Points)"
             },
             "amount": {
@@ -39,7 +49,10 @@
         },
         {
           "type": "string",
-          "enum": ["2d20", "X SP"],
+          "enum": [
+            "2d20",
+            "X SP"
+          ],
           "description": "Variable damage formula"
         }
       ]
@@ -53,7 +66,10 @@
             "type": "object",
             "description": "Trait with a numeric value",
             "additionalProperties": false,
-            "required": ["type", "amount"],
+            "required": [
+              "type",
+              "amount"
+            ],
             "properties": {
               "type": {
                 "type": "string",
@@ -78,7 +94,9 @@
             "type": "object",
             "description": "Trait without a numeric value",
             "additionalProperties": false,
-            "required": ["type"],
+            "required": [
+              "type"
+            ],
             "properties": {
               "type": {
                 "type": "string",
@@ -144,7 +162,9 @@
           "type": "object",
           "description": "Standard roll table with 5 outcome ranges",
           "additionalProperties": false,
-          "required": ["type"],
+          "required": [
+            "type"
+          ],
           "properties": {
             "type": {
               "type": "string",
@@ -162,15 +182,23 @@
               "type": "string",
               "description": "High success outcome"
             },
-            "6-10": { "type": "string", "description": "Moderate outcome" },
-            "2-5": { "type": "string", "description": "Low outcome" }
+            "6-10": {
+              "type": "string",
+              "description": "Moderate outcome"
+            },
+            "2-5": {
+              "type": "string",
+              "description": "Low outcome"
+            }
           }
         },
         {
           "type": "object",
           "description": "Alternative standard roll table with different ranges",
           "additionalProperties": false,
-          "required": ["type"],
+          "required": [
+            "type"
+          ],
           "properties": {
             "type": {
               "type": "string",
@@ -188,40 +216,88 @@
               "type": "string",
               "description": "High success outcome"
             },
-            "6-10": { "type": "string", "description": "Moderate outcome" },
-            "2-5": { "type": "string", "description": "Low outcome" }
+            "6-10": {
+              "type": "string",
+              "description": "Moderate outcome"
+            },
+            "2-5": {
+              "type": "string",
+              "description": "Low outcome"
+            }
           }
         },
         {
           "type": "object",
           "description": "Full roll table with individual outcomes for each d20 result",
           "additionalProperties": false,
-          "required": ["type"],
+          "required": [
+            "type"
+          ],
           "properties": {
             "type": {
               "type": "string",
               "const": "full"
             },
-            "1": { "type": "string" },
-            "2": { "type": "string" },
-            "3": { "type": "string" },
-            "4": { "type": "string" },
-            "5": { "type": "string" },
-            "6": { "type": "string" },
-            "7": { "type": "string" },
-            "8": { "type": "string" },
-            "9": { "type": "string" },
-            "10": { "type": "string" },
-            "11": { "type": "string" },
-            "12": { "type": "string" },
-            "13": { "type": "string" },
-            "14": { "type": "string" },
-            "15": { "type": "string" },
-            "16": { "type": "string" },
-            "17": { "type": "string" },
-            "18": { "type": "string" },
-            "19": { "type": "string" },
-            "20": { "type": "string" }
+            "1": {
+              "type": "string"
+            },
+            "2": {
+              "type": "string"
+            },
+            "3": {
+              "type": "string"
+            },
+            "4": {
+              "type": "string"
+            },
+            "5": {
+              "type": "string"
+            },
+            "6": {
+              "type": "string"
+            },
+            "7": {
+              "type": "string"
+            },
+            "8": {
+              "type": "string"
+            },
+            "9": {
+              "type": "string"
+            },
+            "10": {
+              "type": "string"
+            },
+            "11": {
+              "type": "string"
+            },
+            "12": {
+              "type": "string"
+            },
+            "13": {
+              "type": "string"
+            },
+            "14": {
+              "type": "string"
+            },
+            "15": {
+              "type": "string"
+            },
+            "16": {
+              "type": "string"
+            },
+            "17": {
+              "type": "string"
+            },
+            "18": {
+              "type": "string"
+            },
+            "19": {
+              "type": "string"
+            },
+            "20": {
+              "type": "string"
+            }
           }
         }
       ]
@@ -230,8 +306,16 @@
       "type": "object",
       "description": "Basic entry with name, description, source, and page reference",
       "additionalProperties": false,
-      "required": ["name", "source", "page"],
+      "required": [
+        "id",
+        "name",
+        "source",
+        "page"
+      ],
       "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
         "name": {
           "type": "string",
           "minLength": 1,

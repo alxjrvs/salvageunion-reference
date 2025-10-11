@@ -8,8 +8,17 @@
     "type": "object",
     "description": "A creature",
     "additionalProperties": false,
-    "required": ["name", "source", "hitPoints", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "hitPoints",
+      "page"
+    ],
     "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
       "name": {
         "type": "string",
         "minLength": 1,

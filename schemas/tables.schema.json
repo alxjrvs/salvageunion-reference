@@ -8,8 +8,16 @@
     "type": "object",
     "description": "A random table",
     "additionalProperties": false,
-    "required": ["name", "source", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "page"
+    ],
     "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
       "name": {
         "type": "string",
         "minLength": 1,
@@ -19,7 +27,9 @@
         "type": "string",
         "description": "Section or category of the table"
       },
-      "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
       "rollTable": {
         "$ref": "shared/common.schema.json#/definitions/rollTable"
       },

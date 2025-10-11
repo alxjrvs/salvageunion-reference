@@ -8,8 +8,16 @@
     "type": "object",
     "description": "Requirements for an ability tree",
     "additionalProperties": false,
-    "required": ["tree", "requirement", "page"],
+    "required": [
+      "id",
+      "tree",
+      "requirement",
+      "page"
+    ],
     "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
       "tree": {
         "$ref": "shared/enums.schema.json#/definitions/tree"
       },

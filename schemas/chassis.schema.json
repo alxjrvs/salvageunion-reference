@@ -8,8 +8,16 @@
     "type": "object",
     "description": "A mech chassis",
     "additionalProperties": false,
-    "required": ["name", "source", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "page"
+    ],
     "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
       "name": {
         "type": "string",
         "minLength": 1,
@@ -39,7 +47,9 @@
           "type": "object",
           "description": "A specific loadout pattern",
           "additionalProperties": false,
-          "required": ["name"],
+          "required": [
+            "name"
+          ],
           "properties": {
             "name": {
               "type": "string",
@@ -57,12 +67,16 @@
             "systems": {
               "type": "array",
               "description": "Systems included in this pattern",
-              "items": { "type": "string" }
+              "items": {
+                "type": "string"
+              }
             },
             "modules": {
               "type": "array",
               "description": "Modules included in this pattern",
-              "items": { "type": "string" }
+              "items": {
+                "type": "string"
+              }
             },
             "drone": {
               "type": "object",
@@ -72,12 +86,16 @@
                 "systems": {
                   "type": "array",
                   "description": "Systems for the drone",
-                  "items": { "type": "string" }
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "modules": {
                   "type": "array",
                   "description": "Modules for the drone",
-                  "items": { "type": "string" }
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }

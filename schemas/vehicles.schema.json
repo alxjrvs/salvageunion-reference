@@ -8,8 +8,17 @@
     "type": "object",
     "description": "A conventional vehicle",
     "additionalProperties": false,
-    "required": ["name", "source", "structurePoints", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "structurePoints",
+      "page"
+    ],
     "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
       "name": {
         "type": "string",
         "minLength": 1,

@@ -1,5 +1,6 @@
 [
   {
+    "id": "f04d6f2a-723a-45ec-91be-23be3b8275fa",
     "source": "core",
     "name": "Meld Drone",
     "description": "Meld when they take over a biological organism, around the size of a human. The brain is sludged, only the stem remains, they become a peon of the swarm.",
@@ -27,6 +28,7 @@
     "page": 289
   },
   {
+    "id": "7b76574d-3eb3-4ed0-b658-b1a356fd4c7f",
     "source": "core",
     "name": "Meld Drone Swarm",
     "description": "A swarm of multiple zombie-like Meld Drones",
@@ -58,6 +60,7 @@
     "page": 289
   },
   {
+    "id": "f561bfeb-a9d5-4a9e-bc50-ddad52513684",
     "source": "core",
     "name": "Meld Nanoid",
     "description": "Meld in a small, swift form, about the size of a large wolf with lashing tendrils.",
@@ -90,6 +93,7 @@
     "page": 289
   },
   {
+    "id": "e1286046-f761-4c74-ab76-2afb8da1aab7",
     "source": "core",
     "name": "Meld Splitter",
     "description": "Formless inky darkness, Meld Splitters are around the height of a Mech and made of boundless swarms of coagulated meld.",
@@ -125,6 +129,7 @@
     "page": 289
   },
   {
+    "id": "e13f967e-a2af-4c30-a3c0-153a14ec9fdf",
     "source": "core",
     "name": "Meld Behemoth",
     "description": "The apex Meld, the size of a high rise building. Having assimilated vast quantities of mechanical and biological entities, it becomes a force even the toughest of Mechs struggle to reckon with.",

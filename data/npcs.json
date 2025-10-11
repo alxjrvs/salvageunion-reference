@@ -1,5 +1,6 @@
 [
   {
+    "id": "c6bfc845-b1dc-43e9-8f79-fd4854842949",
     "source": "core",
     "name": "Wastelander",
     "description": "Represents the myriad of common denizens of the wastelands.",
@@ -25,6 +26,7 @@
     "page": 298
   },
   {
+    "id": "bb1b8558-1bca-4db8-8d13-f02fc344d327",
     "source": "core",
     "name": "Raider",
     "description": "Wastelanders who take what they need by force.",
@@ -50,6 +52,7 @@
     "page": 298
   },
   {
+    "id": "28015ce1-8440-471c-b97e-bb4ff114a667",
     "source": "core",
     "name": "Trooper",
     "description": "Combat trained troops deployed in a wide range of roles.",
@@ -75,6 +78,7 @@
     "page": 298
   },
   {
+    "id": "5b1e5b18-c023-4e7c-a6b9-c6a22cb6e48d",
     "source": "core",
     "name": "Veteran",
     "description": "A well trained and seasoned soldier deployed on difficult operations.",
@@ -100,6 +104,7 @@
     "page": 298
   },
   {
+    "id": "ad0a3127-2fb2-4d38-af8e-7fc76d9d05d9",
     "source": "core",
     "name": "Combat Pilot",
     "description": "A combat trained Mech Pilot, such as a Union Salvager.",
@@ -125,6 +130,7 @@
     "page": 298
   },
   {
+    "id": "15ff8ca3-a759-4c39-a546-1cac319ffc4e",
     "source": "core",
     "name": "Ace",
     "description": "A veteran Mech Pilot, usually with Corpo training.",

@@ -8,8 +8,16 @@
     "type": "object",
     "description": "A piece of pilot equipment",
     "additionalProperties": false,
-    "required": ["name", "source", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "page"
+    ],
     "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
       "name": {
         "type": "string",
         "minLength": 1,
@@ -35,8 +43,12 @@
       "activationCost": {
         "$ref": "shared/common.schema.json#/definitions/activationCost"
       },
-      "range": { "$ref": "shared/enums.schema.json#/definitions/range" },
-      "damage": { "$ref": "shared/common.schema.json#/definitions/damage" },
+      "range": {
+        "$ref": "shared/enums.schema.json#/definitions/range"
+      },
+      "damage": {
+        "$ref": "shared/common.schema.json#/definitions/damage"
+      },
       "actionType": {
         "$ref": "shared/enums.schema.json#/definitions/actionType"
       },
@@ -46,7 +58,9 @@
       "actions": {
         "type": "array",
         "description": "Actions that can be performed with this equipment",
-        "items": { "$ref": "shared/objects.schema.json#/definitions/action" }
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
       },
       "page": {
         "type": "integer",

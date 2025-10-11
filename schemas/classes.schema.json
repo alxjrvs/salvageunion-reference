@@ -10,10 +10,23 @@
         "type": "object",
         "description": "A core character class",
         "additionalProperties": false,
-        "required": ["name", "source", "type", "page"],
+        "required": [
+          "id",
+          "name",
+          "source",
+          "type",
+          "page"
+        ],
         "properties": {
-          "name": { "$ref": "shared/enums.schema.json#/definitions/class" },
-          "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
+          "id": {
+            "$ref": "shared/common.schema.json#/definitions/id"
+          },
+          "name": {
+            "$ref": "shared/enums.schema.json#/definitions/class"
+          },
+          "source": {
+            "$ref": "shared/enums.schema.json#/definitions/source"
+          },
           "type": {
             "type": "string",
             "const": "core",
@@ -26,12 +39,16 @@
           "coreAbilities": {
             "type": "array",
             "description": "Core ability trees for this class",
-            "items": { "$ref": "shared/enums.schema.json#/definitions/tree" }
+            "items": {
+              "$ref": "shared/enums.schema.json#/definitions/tree"
+            }
           },
           "hybridClasses": {
             "type": "array",
             "description": "Hybrid classes that can be formed with this class",
-            "items": { "$ref": "shared/enums.schema.json#/definitions/class" }
+            "items": {
+              "$ref": "shared/enums.schema.json#/definitions/class"
+            }
           },
           "advancedAbilities": {
             "description": "Advanced ability tree for this class",
@@ -40,7 +57,9 @@
           "legendaryAbilities": {
             "type": "array",
             "description": "Legendary abilities for this class",
-            "items": { "$ref": "shared/enums.schema.json#/definitions/ability" }
+            "items": {
+              "$ref": "shared/enums.schema.json#/definitions/ability"
+            }
           },
           "page": {
             "type": "integer",
@@ -53,9 +72,20 @@
         "type": "object",
         "description": "A hybrid character class",
         "additionalProperties": false,
-        "required": ["name", "source", "type", "page"],
+        "required": [
+          "id",
+          "name",
+          "source",
+          "type",
+          "page"
+        ],
         "properties": {
-          "name": { "$ref": "shared/enums.schema.json#/definitions/class" },
+          "id": {
+            "$ref": "shared/common.schema.json#/definitions/id"
+          },
+          "name": {
+            "$ref": "shared/enums.schema.json#/definitions/class"
+          },
           "type": {
             "type": "string",
             "const": "hybrid",
@@ -65,16 +95,22 @@
             "type": "string",
             "description": "Description of the class"
           },
-          "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
+          "source": {
+            "$ref": "shared/enums.schema.json#/definitions/source"
+          },
           "coreClasses": {
             "type": "array",
             "description": "Core classes that form this hybrid",
-            "items": { "$ref": "shared/enums.schema.json#/definitions/class" }
+            "items": {
+              "$ref": "shared/enums.schema.json#/definitions/class"
+            }
           },
           "coreAbilities": {
             "type": "array",
             "description": "Core ability trees for this hybrid class",
-            "items": { "$ref": "shared/enums.schema.json#/definitions/tree" }
+            "items": {
+              "$ref": "shared/enums.schema.json#/definitions/tree"
+            }
           },
           "advancedAbilities": {
             "description": "Advanced ability tree for this hybrid class",
@@ -83,7 +119,9 @@
           "legendaryAbilities": {
             "type": "array",
             "description": "Legendary abilities for this hybrid class",
-            "items": { "$ref": "shared/enums.schema.json#/definitions/ability" }
+            "items": {
+              "$ref": "shared/enums.schema.json#/definitions/ability"
+            }
           },
           "page": {
             "type": "integer",

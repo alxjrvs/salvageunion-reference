@@ -59,7 +59,9 @@
       "type": "object",
       "description": "An action, ability, or attack that can be performed",
       "additionalProperties": false,
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -80,11 +82,21 @@
         "activationCost": {
           "$ref": "common.schema.json#/definitions/activationCost"
         },
-        "range": { "$ref": "enums.schema.json#/definitions/range" },
-        "actionType": { "$ref": "enums.schema.json#/definitions/actionType" },
-        "traits": { "$ref": "common.schema.json#/definitions/traits" },
-        "damage": { "$ref": "common.schema.json#/definitions/damage" },
-        "stats": { "$ref": "objects.schema.json#/definitions/stats" },
+        "range": {
+          "$ref": "enums.schema.json#/definitions/range"
+        },
+        "actionType": {
+          "$ref": "enums.schema.json#/definitions/actionType"
+        },
+        "traits": {
+          "$ref": "common.schema.json#/definitions/traits"
+        },
+        "damage": {
+          "$ref": "common.schema.json#/definitions/damage"
+        },
+        "stats": {
+          "$ref": "objects.schema.json#/definitions/stats"
+        },
         "options": {
           "type": "array",
           "description": "List of options or choices for this action",
@@ -98,7 +110,10 @@
                 "type": "object",
                 "description": "Structured option with label and value",
                 "additionalProperties": false,
-                "required": ["label", "value"],
+                "required": [
+                  "label",
+                  "value"
+                ],
                 "properties": {
                   "label": {
                     "type": "string",
@@ -127,8 +142,15 @@
       "type": "object",
       "description": "A system or module that can be installed on a mech",
       "additionalProperties": false,
-      "required": ["name", "page"],
+      "required": [
+        "id",
+        "name",
+        "page"
+      ],
       "properties": {
+        "id": {
+          "$ref": "common.schema.json#/definitions/id"
+        },
         "name": {
           "type": "string",
           "minLength": 1,
@@ -170,20 +192,33 @@
         "activationCost": {
           "$ref": "common.schema.json#/definitions/activationCost"
         },
-        "range": { "$ref": "enums.schema.json#/definitions/range" },
-        "damage": { "$ref": "common.schema.json#/definitions/damage" },
-        "rollTable": { "$ref": "common.schema.json#/definitions/rollTable" },
-        "actionType": { "$ref": "enums.schema.json#/definitions/actionType" },
+        "range": {
+          "$ref": "enums.schema.json#/definitions/range"
+        },
+        "damage": {
+          "$ref": "common.schema.json#/definitions/damage"
+        },
+        "rollTable": {
+          "$ref": "common.schema.json#/definitions/rollTable"
+        },
+        "actionType": {
+          "$ref": "enums.schema.json#/definitions/actionType"
+        },
         "actions": {
           "type": "array",
           "description": "Actions that can be performed with this system",
-          "items": { "$ref": "objects.schema.json#/definitions/action" }
+          "items": {
+            "$ref": "objects.schema.json#/definitions/action"
+          }
         },
         "statBonus": {
           "type": "object",
           "description": "Bonus to a specific stat",
           "additionalProperties": false,
-          "required": ["stat", "bonus"],
+          "required": [
+            "stat",
+            "bonus"
+          ],
           "properties": {
             "stat": {
               "type": "string",
@@ -211,7 +246,9 @@
       "type": "object",
       "description": "A system or module embedded within another entity (drone, vehicle, etc.) that doesn't have its own page reference",
       "additionalProperties": false,
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -254,20 +291,33 @@
         "activationCost": {
           "$ref": "common.schema.json#/definitions/activationCost"
         },
-        "range": { "$ref": "enums.schema.json#/definitions/range" },
-        "damage": { "$ref": "common.schema.json#/definitions/damage" },
-        "rollTable": { "$ref": "common.schema.json#/definitions/rollTable" },
-        "actionType": { "$ref": "enums.schema.json#/definitions/actionType" },
+        "range": {
+          "$ref": "enums.schema.json#/definitions/range"
+        },
+        "damage": {
+          "$ref": "common.schema.json#/definitions/damage"
+        },
+        "rollTable": {
+          "$ref": "common.schema.json#/definitions/rollTable"
+        },
+        "actionType": {
+          "$ref": "enums.schema.json#/definitions/actionType"
+        },
         "actions": {
           "type": "array",
           "description": "Actions that can be performed with this system",
-          "items": { "$ref": "objects.schema.json#/definitions/action" }
+          "items": {
+            "$ref": "objects.schema.json#/definitions/action"
+          }
         },
         "statBonus": {
           "type": "object",
           "description": "Bonus to a specific stat",
           "additionalProperties": false,
-          "required": ["stat", "bonus"],
+          "required": [
+            "stat",
+            "bonus"
+          ],
           "properties": {
             "stat": {
               "type": "string",

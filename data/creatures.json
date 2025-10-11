@@ -1,5 +1,6 @@
 [
   {
+    "id": "ba8b32f2-3916-43d0-937d-74168b846114",
     "source": "core",
     "name": "Irradiated Scorpion",
     "description": "Mutated beyond their usual size, they have been known to kill entire camps of wasters.",
@@ -28,6 +29,7 @@
     "page": 296
   },
   {
+    "id": "204c855b-e13b-4326-9355-24be3a38ae34",
     "source": "core",
     "name": "Artl",
     "description": "Burrowing, ambush predators that liquify their prey for easier digestion.",
@@ -60,6 +62,7 @@
     "page": 296
   },
   {
+    "id": "6718545a-0261-4e4c-874c-079f1a9fcd80",
     "source": "core",
     "name": "Chimeripede",
     "description": "A mutated, radiation scarred amalgamation of flesh.",
@@ -92,6 +95,7 @@
     "page": 296
   },
   {
+    "id": "bfbf2664-6139-4727-8ad1-26ec1c01ae12",
     "source": "core",
     "name": "Wasteland Bear",
     "description": "Large, hungry, and ferocious, these bears are not just after your picnic basket.",
@@ -114,6 +118,7 @@
     "page": 297
   },
   {
+    "id": "f32c1706-6bc0-476b-af22-01f0e4339034",
     "source": "core",
     "name": "Molebear",
     "description": "Terrifying, huge burrowing predators known to rend through metal.",
@@ -141,6 +146,7 @@
     "page": 297
   },
   {
+    "id": "9303ec5f-5cda-4edc-8ebf-265850bcdfcd",
     "source": "core",
     "name": "Carrion Bird",
     "description": "Large flying scavengers that feast on flesh and bone.",

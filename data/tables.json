@@ -1,5 +1,6 @@
 [
   {
+    "id": "fa9860bb-83c2-4d8c-b100-40708948257d",
     "source": "core",
     "name": "Core Mechanic Table",
     "section": "core",
@@ -14,6 +15,7 @@
     "page": 337
   },
   {
+    "id": "cdbc20d9-ff63-4272-805b-f148f0c01752",
     "source": "core",
     "name": "Group Initiative Table",
     "section": "action scene",
@@ -28,6 +30,7 @@
     "page": 337
   },
   {
+    "id": "dcd888a2-dc2d-4f45-94eb-ae6138761931",
     "source": "core",
     "name": "Critical Injury Table",
     "section": "damage",
@@ -42,6 +45,7 @@
     "page": 338
   },
   {
+    "id": "aa54dcd4-efd0-4cbb-83dc-4cf6f0411066",
     "source": "core",
     "name": "Critical Damage Table",
     "section": "damage",
@@ -56,6 +60,7 @@
     "page": 338
   },
   {
+    "id": "0050af76-7d88-43e7-b098-1a6af7656353",
     "source": "core",
     "name": "Reactor Overload Table",
     "section": "heat",
@@ -70,6 +75,7 @@
     "page": 339
   },
   {
+    "id": "abca780b-da93-47b0-91e6-290da910e2fd",
     "source": "core",
     "name": "Area Salvage Table",
     "section": "salvaging",
@@ -84,6 +90,7 @@
     "page": 339
   },
   {
+    "id": "acdc85ee-056c-4edc-95be-e25f0ab9b319",
     "source": "core",
     "name": "Mech Salvage Table",
     "section": "salvaging",
@@ -98,6 +105,7 @@
     "page": 339
   },
   {
+    "id": "2bdb98de-31a2-4eb1-b8f5-cf42f44ff618",
     "source": "core",
     "name": "Reaction Roll Table",
     "section": "npc tables",
@@ -112,6 +120,7 @@
     "page": 268
   },
   {
+    "id": "3b30af52-8e82-4b55-bda8-e46e64bf141f",
     "source": "core",
     "name": "NPC Action Table",
     "section": "npc tables",
@@ -126,6 +135,7 @@
     "page": 267
   },
   {
+    "id": "30b5379a-45d5-4e7b-9dfa-45b2ecead926",
     "source": "core",
     "name": "Morale Table",
     "section": "npc tables",
@@ -140,6 +150,7 @@
     "page": 268
   },
   {
+    "id": "70f6e979-f511-4407-a276-11b3e63f6758",
     "source": "core",
     "name": "Retreat Table",
     "section": "npc tables",
@@ -154,6 +165,7 @@
     "page": 337
   },
   {
+    "id": "044f3890-2d62-4bbe-b851-cc978a68ae8e",
     "source": "core",
     "name": "Crawler Deterioration Table",
     "section": "crawler",
@@ -168,6 +180,7 @@
     "page": 219
   },
   {
+    "id": "f4e866be-1092-4760-896c-fa3571b983d6",
     "source": "core",
     "name": "Crawler Damage Table",
     "section": "crawler",
@@ -182,6 +195,7 @@
     "page": 219
   },
   {
+    "id": "50f0dcca-d2ac-408d-a916-55027485299b",
     "source": "core",
     "name": "Crawler Destruction Table",
     "section": "crawler",

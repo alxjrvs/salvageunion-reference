@@ -1,5 +1,6 @@
 [
   {
+    "id": "fa6feaf4-1202-4263-9e1a-a71a6f43a661",
     "source": "core",
     "name": "Waster Mob",
     "description": "A mob of wastelanders with improvised weapons.",
@@ -29,6 +30,7 @@
     "page": 300
   },
   {
+    "id": "75f5e27f-64d7-4bd1-8f5b-46d38646e092",
     "source": "core",
     "name": "Raider Band",
     "description": "A band of raiders hungry for scrap.",
@@ -58,6 +60,7 @@
     "page": 300
   },
   {
+    "id": "dea7128f-1361-43b5-b4d1-9273a38c606b",
     "source": "core",
     "name": "Rifle Squad",
     "description": "A group of grunts armed with rifles.",
@@ -90,6 +93,7 @@
     "page": 300
   },
   {
+    "id": "139b0d61-9739-4c20-8fc3-6bd12ab6c360",
     "source": "core",
     "name": "Machine Gun Squad",
     "description": "Combat trained troops armed with a mobile heavy machine gun.",
@@ -128,6 +132,7 @@
     "page": 300
   },
   {
+    "id": "f2542b86-1982-49da-8906-e5f672511161",
     "source": "core",
     "name": "Missile Squad",
     "description": "Combat trained troops armed with a mobile missile launcher.",
@@ -168,6 +173,7 @@
     "page": 300
   },
   {
+    "id": "9a88af6a-b207-443b-a45f-c7cb34262ed7",
     "source": "core",
     "name": "Elite Blade Squad",
     "description": "Heavy assault troops armed with energised blades.",
@@ -203,6 +209,7 @@
     "page": 301
   },
   {
+    "id": "6fefee71-cbf6-4ce8-ba49-e8dd41c65f8b",
     "source": "core",
     "name": "Elite Beam Squad",
     "description": "Apex troops in heavy armour armed with a big ol' gun.",
@@ -243,6 +250,7 @@
     "page": 301
   },
   {
+    "id": "3263b60d-d599-45f8-b2e7-0d5382531bc1",
     "source": "core",
     "name": "Wasteland Herd",
     "description": "A herd of wasteland creatures.",
@@ -270,6 +278,7 @@
     "page": 301
   },
   {
+    "id": "99a017d5-5e92-4f3b-8696-7f1f806a0dbc",
     "source": "core",
     "name": "Drone Squadron",
     "description": "A swarm of Combat Drones flying in sync.",

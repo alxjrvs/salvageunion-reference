@@ -8,7 +8,10 @@
     "validate": "tsx tools/validateAll.ts",
     "parse": "tsx tools/parsePdf.ts",
     "docs": "tsx tools/generateDocs.ts",
-    "test": "npm run validate"
+    "generate:types": "tsx tools/generateTypes.ts",
+    "example": "tsx examples/orm-usage.ts",
+    "test": "npm run validate",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -30,6 +33,7 @@
   "homepage": "https://github.com/alxjrvs/salvageunion-data#readme",
   "devDependencies": {
     "@types/node": "^20.10.0",
+    "json-schema-to-typescript": "^15.0.4",
     "jsonschema": "^1.4.1",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3"

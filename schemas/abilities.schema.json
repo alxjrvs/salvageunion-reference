@@ -8,8 +8,18 @@
     "type": "object",
     "description": "A pilot ability",
     "additionalProperties": false,
-    "required": ["name", "tree", "source", "level", "page"],
+    "required": [
+      "id",
+      "name",
+      "tree",
+      "source",
+      "level",
+      "page"
+    ],
     "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
       "name": {
         "$ref": "shared/enums.schema.json#/definitions/ability"
       },
@@ -35,7 +45,9 @@
       "activationCost": {
         "$ref": "shared/common.schema.json#/definitions/activationCost"
       },
-      "range": { "$ref": "shared/enums.schema.json#/definitions/range" },
+      "range": {
+        "$ref": "shared/enums.schema.json#/definitions/range"
+      },
       "actionType": {
         "$ref": "shared/enums.schema.json#/definitions/actionType"
       },

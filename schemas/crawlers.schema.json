@@ -8,14 +8,24 @@
     "type": "object",
     "description": "A crawler vehicle",
     "additionalProperties": false,
-    "required": ["name", "source", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "page"
+    ],
     "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
       "name": {
         "type": "string",
         "minLength": 1,
         "description": "Name of the crawler"
       },
-      "source": { "$ref": "shared/enums.schema.json#/definitions/source" },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
       "description": {
         "type": "string",
         "description": "Description of the crawler"

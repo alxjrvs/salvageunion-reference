@@ -8,16 +8,28 @@
     "type": "object",
     "description": "An NPC squad",
     "additionalProperties": false,
-    "required": ["name", "source", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "page"
+    ],
     "oneOf": [
       {
-        "required": ["hitPoints"]
+        "required": [
+          "hitPoints"
+        ]
       },
       {
-        "required": ["structurePoints"]
+        "required": [
+          "structurePoints"
+        ]
       }
     ],
     "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
       "name": {
         "type": "string",
         "minLength": 1,
