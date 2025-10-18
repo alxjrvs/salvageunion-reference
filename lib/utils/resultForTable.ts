@@ -3,9 +3,7 @@ import type { Table, System } from '../types/inferred.js'
 /**
  * Result type for table roll resolution
  */
-export type TableRollResult =
-  | { success: true; result: string }
-  | { success: false; error: string }
+export type TableRollResult = { success: boolean; result: string }
 
 /**
  * Resolves a d20 roll against a table to get the result string
@@ -30,14 +28,14 @@ export function resultForTable(
   if (!rollTable) {
     return {
       success: false,
-      error: 'Table data is undefined',
+      result: 'Table data is undefined',
     }
   }
 
   if (roll < 1 || roll > 20) {
     return {
       success: false,
-      error: `Roll must be between 1 and 20, got ${roll}`,
+      result: `Roll must be between 1 and 20, got ${roll}`,
     }
   }
 
@@ -55,7 +53,7 @@ export function resultForTable(
     }
     return {
       success: false,
-      error: `No result found for roll ${roll} in flat table`,
+      result: `No result found for roll ${roll} in flat table`,
     }
   }
 
@@ -96,7 +94,7 @@ function findRangeResult(
 
   return {
     success: false,
-    error: `No result found for roll ${roll}`,
+    result: `No result found for roll ${roll}`,
   }
 }
 

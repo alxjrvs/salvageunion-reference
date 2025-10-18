@@ -47,7 +47,6 @@ export { VehiclesModel } from './models/Vehicles.js'
 // Export base model for custom extensions
 export { BaseModel } from './BaseModel.js'
 
-// Export utility functions
 export { resultForTable, type TableRollResult } from './utils/resultForTable.js'
 
 // Export inferred types (auto-generated from JSON data)
