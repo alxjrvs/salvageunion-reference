@@ -27,4 +27,3 @@ jobs:
 
       - name: Run type checking
         run: bun run typecheck
-
