@@ -973,7 +973,7 @@
       "11-18": "You hit all enemies within Range of the weapon.",
       "6-10": "You hit all enemies within Range of the weapon. Choose one: you deal half damage to all targets or you deal full damage, but your weapon is damaged after finishing the attack.",
       "2-5": "You hit one enemy in Range of the weapon, then your weapon is damaged.",
-      "type": "standard2"
+      "type": "alternate"
     },
     "page": 56
   },

@@ -202,7 +202,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "const": "standard2"
+              "const": "alternate"
             },
             "1": {
               "type": "string",
@@ -228,7 +228,7 @@
         },
         {
           "type": "object",
-          "description": "Full roll table with individual outcomes for each d20 result",
+          "description": "Flat roll table with individual outcomes for each numeric result",
           "additionalProperties": false,
           "required": [
             "type"
@@ -236,7 +236,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "const": "full"
+              "const": "flat"
             },
             "1": {
               "type": "string"
