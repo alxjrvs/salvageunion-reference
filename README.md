@@ -200,7 +200,7 @@ Contributions are welcome! Please:
 
 ## 📜 License
 
-CC-BY-4.0 License
+Salvage Union Open Game Licence 1.0b
 
 ## 🙏 Credits
 
