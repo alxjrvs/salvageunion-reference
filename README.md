@@ -22,9 +22,10 @@ bun add salvageunion-data
 ## Quick Start
 
 ```typescript
-import { SalvageUnionData } from "salvageunion-data";
+import { SalvageUnionReference } from "salvageunion-data";
 
-const { Abilities, Chassis, Equipment, Systems, Modules } = SalvageUnionData;
+const { Abilities, Chassis, Equipment, Systems, Modules } =
+  SalvageUnionReference;
 
 // Get all chassis
 const allChassis = Chassis.all();
@@ -50,7 +51,7 @@ const heavyArmor = Equipment.where(
 
 ## Available Models
 
-All models are accessible via the `SalvageUnionData` export:
+All models are accessible via the `SalvageUnionReference` export:
 
 | Model                     | Count | Description                      |
 | ------------------------- | ----- | -------------------------------- |
@@ -175,16 +176,16 @@ import chassisSchema from "salvageunion-data/schemas/chassis.schema.json";
 Full TypeScript support with inferred types from JSON data:
 
 ```typescript
-import { SalvageUnionData } from "salvageunion-data";
+import { SalvageUnionReference } from "salvageunion-data";
 import type { Chassis, Equipment, System } from "salvageunion-data";
 
-const { Chassis: ChassisModel } = SalvageUnionData;
+const { Chassis: ChassisModel } = SalvageUnionReference;
 
 // Fully typed
 const atlas: Chassis | undefined = ChassisModel.findByName("Atlas");
 
 // Type-safe queries
-const heavyEquipment: Equipment[] = SalvageUnionData.Equipment.where(
+const heavyEquipment: Equipment[] = SalvageUnionReference.Equipment.where(
   (e) => (e.techLevel ?? 0) >= 3,
 );
 ```

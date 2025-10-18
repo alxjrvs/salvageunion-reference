@@ -45,7 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Type-safe queries with full TypeScript support
 - JSON Schema validation for all data
 - Direct access to raw JSON data and schemas
-- Pre-instantiated models via SalvageUnionData export
+- Pre-instantiated models via SalvageUnionReference export
 - Functional programming methods (map, filter, some, every)
 - Random selection utilities
 - Search and filtering capabilities

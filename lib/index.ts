@@ -91,7 +91,7 @@ export type {
   Traits,
 } from "./types/inferred.js";
 
-export class SalvageUnionData {
+export class SalvageUnionReference {
   public static Abilities = new AbilitiesModel();
   public static AbilityTreeRequirements = new AbilityTreeRequirementsModel();
   public static BioTitans = new BioTitansModel();
