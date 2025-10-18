@@ -86,7 +86,7 @@ describe('resultForTable', () => {
       const result = resultForTable(undefined, 10)
       expect(result.success).toBe(false)
       if (!result.success) {
-        expect(result.error).toContain('undefined')
+        expect(result.result).toContain('undefined')
       }
     })
 
@@ -94,7 +94,7 @@ describe('resultForTable', () => {
       const result = resultForTable(mockStandardTable.rollTable, 0)
       expect(result.success).toBe(false)
       if (!result.success) {
-        expect(result.error).toContain('between 1 and 20')
+        expect(result.result).toContain('between 1 and 20')
       }
     })
 
@@ -102,7 +102,7 @@ describe('resultForTable', () => {
       const result = resultForTable(mockStandardTable.rollTable, 21)
       expect(result.success).toBe(false)
       if (!result.success) {
-        expect(result.error).toContain('between 1 and 20')
+        expect(result.result).toContain('between 1 and 20')
       }
     })
 
@@ -110,7 +110,7 @@ describe('resultForTable', () => {
       const result = resultForTable(mockStandardTable.rollTable, -5)
       expect(result.success).toBe(false)
       if (!result.success) {
-        expect(result.error).toContain('between 1 and 20')
+        expect(result.result).toContain('between 1 and 20')
       }
     })
   })
