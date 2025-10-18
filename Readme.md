@@ -1,143 +1,178 @@
 # Salvage Union Data
 
-A comprehensive, schema-validated JSON dataset for the **Salvage Union** tabletop RPG, published by [Leyline Press](https://leyline.press/).
+A comprehensive, schema-validated JSON dataset and TypeScript ORM for the **Salvage Union** tabletop RPG, published by [Leyline Press](https://leyline.press/).
 
-## 📚 Overview
+## Features
 
-This repository contains structured game data with full JSON Schema validation, including:
+✅ **513+ game data items** across 18 categories
+✅ **Type-safe TypeScript ORM** with auto-generated types
+✅ **JSON Schema validation** for all data
+✅ **Zero dependencies** at runtime
+✅ **ESM-only** for modern JavaScript
+✅ **Full page references** to source material
 
-- **95 Pilot Abilities** across 11 classes
-- **99 Mech Systems** and **61 Modules**
-- **30 Mech Chassis** with complete stats
-- **44 Pilot Equipment** items
-- **11 Character Classes** (6 core + 5 hybrid)
-- **NPCs, Creatures, Bio-Titans, Meld, Vehicles, Drones**
-- **Game Tables, Keywords, and Traits**
-
-All data entries include **page references** to the source material for easy verification.
-
-## 🚀 Quick Start
-
-### Installation
+## Installation
 
 ```bash
-npm install
+npm install salvageunion-data
 ```
 
-### Validation
+## Quick Start
 
-Validate all data files against their schemas:
+```typescript
+import { SalvageUnionData } from "salvageunion-data";
 
-```bash
-npm run validate
+const { Abilities, Chassis, Equipment, Systems, Modules } = SalvageUnionData;
+
+// Get all chassis
+const allChassis = Chassis.all();
+console.log(`Total chassis: ${Chassis.count()}`);
+
+// Find by name
+const atlas = Chassis.findByName("Atlas");
+console.log(`${atlas.name}: ${atlas.stats.structure_pts} SP`);
+
+// Query by tech level
+const t3Equipment = Equipment.findByTechLevel(3);
+
+// Get weapons
+const weapons = Systems.getWeapons();
+
+// Advanced queries
+const heavyArmor = Equipment.where(
+  (e) => e.traits?.some((t) => t.type === "armor") && (e.techLevel ?? 0) >= 3,
+);
 ```
 
-### Format
+## Available Models
 
-Auto-format all JSON files:
+All models are accessible via the `SalvageUnionData` export:
 
-```bash
-npm run format
+| Model                     | Count | Description                      |
+| ------------------------- | ----- | -------------------------------- |
+| `Abilities`               | 95    | Pilot abilities and skills       |
+| `AbilityTreeRequirements` | 20    | Ability tree prerequisites       |
+| `BioTitans`               | 6     | Massive bio-engineered creatures |
+| `Chassis`                 | 30    | Mech chassis                     |
+| `Classes`                 | 11    | Pilot classes                    |
+| `Crawlers`                | 5     | Union crawler types              |
+| `Creatures`               | 6     | Wasteland creatures              |
+| `Drones`                  | 9     | Autonomous drones                |
+| `Equipment`               | 44    | Pilot equipment                  |
+| `Keywords`                | 73    | Game keywords                    |
+| `Meld`                    | 5     | Meld-infected creatures          |
+| `Modules`                 | 61    | Mech modules                     |
+| `NPCs`                    | 6     | Non-player characters            |
+| `Squads`                  | 9     | NPC squads                       |
+| `Systems`                 | 99    | Mech weapon systems              |
+| `Tables`                  | 14    | Game tables                      |
+| `Traits`                  | 43    | Special traits                   |
+| `Vehicles`                | 7     | Wasteland vehicles               |
+
+## API Reference
+
+### Common Methods
+
+All models provide these base methods:
+
+```typescript
+// Query methods
+.all()                          // Get all items
+.count()                        // Get count
+.find(predicate)                // Find single item
+.where(predicate)               // Find all matching
+.findById(id)                   // Find by UUID
+.findByName(name)               // Find by name
+.searchByName(query)            // Partial name search
+.findBySource(source)           // Find by source book
+
+// Utility methods
+.first()                        // Get first item
+.last()                         // Get last item
+.random()                       // Get random item
+.randomMany(count)              // Get N random items
+
+// Functional methods
+.map(fn)                        // Map over items
+.some(predicate)                // Check if any match
+.every(predicate)               // Check if all match
 ```
 
-## 📁 Repository Structure
+### Model-Specific Methods
 
-```
-salvageunion-data/
-├── data/                    # JSON data files
-│   ├── abilities.json       # Pilot abilities (95 items)
-│   ├── classes.json         # Character classes (11 items)
-│   ├── equipment.json       # Pilot equipment (44 items)
-│   ├── systems.json         # Mech systems (99 items)
-│   ├── modules.json         # Mech modules (61 items)
-│   ├── chassis.json         # Mech chassis (30 items)
-│   ├── bio-titans.json      # Bio-Titan creatures (6 items)
-│   ├── creatures.json       # Wasteland creatures (6 items)
-│   ├── npcs.json            # NPCs and people (6 items)
-│   ├── meld.json            # Meld entities (5 items)
-│   ├── drones.json          # Autonomous drones (9 items)
-│   ├── vehicles.json        # Conventional vehicles (7 items)
-│   ├── squads.json          # NPC squads (9 items)
-│   ├── crawlers.json        # Union Crawler types (5 items)
-│   ├── tables.json          # Game tables (14 items)
-│   ├── keywords.json        # Game keywords (73 items)
-│   ├── traits.json          # Traits and properties (43 items)
-│   └── ability-tree-requirements.json  # Ability prerequisites (20 items)
-│
-├── schemas/                 # JSON Schema definitions
-│   ├── shared/              # Shared schema definitions
-│   │   ├── common.schema.json    # Common types (damage, traits, etc.)
-│   │   ├── enums.schema.json     # Enumerations (sources, ranges, etc.)
-│   │   └── objects.schema.json   # Complex objects (systems, actions, etc.)
-│   └── *.schema.json        # Individual data file schemas
-│
-└── tools/                   # Utility scripts
-    ├── validateAll.ts       # Schema validation tool
-    ├── format.ts            # JSON formatting tool
-    ├── parsePdf.ts          # PDF parsing tool
-    └── searchPdf.ts         # PDF search tool
+**Equipment**
+
+```typescript
+Equipment.findByTechLevel(3);
+Equipment.findByTrait("armor");
+Equipment.getArmor();
+Equipment.getWeapons();
 ```
 
-## 🔧 Development
+**Chassis**
 
-### VSCode Integration
-
-This repository includes VSCode settings for:
-
-- ✅ **Automatic schema validation** while editing
-- ✅ **IntelliSense** with autocomplete for all data files
-- ✅ **Format on save** for consistent formatting
-- ✅ **Inline error detection** for schema violations
-
-### Adding New Data
-
-1. Add your data to the appropriate JSON file in `data/`
-2. Ensure it includes a `page` property referencing the source material
-3. Run `npm run validate` to check schema compliance
-4. Run `npm run format` to auto-format
-
-### Schema Structure
-
-All schemas follow JSON Schema Draft 07 and include:
-
-- **Required fields**: All data entries must have `name`, `source`, and `page`
-- **Type safety**: Strict typing for all properties
-- **Shared definitions**: Common types defined in `schemas/shared/`
-- **Documentation**: Descriptions for all properties
-
-## 📖 Data Format Examples
-
-### Ability Example
-
-```json
-{
-  "name": "Jury Rig",
-  "tree": "Engineering",
-  "source": "core",
-  "level": 1,
-  "description": "You can repair Mechs in the field...",
-  "effect": "Restore 2 SP to a target Mech in Range...",
-  "activationCost": 1,
-  "actionType": "Turn Action",
-  "range": "Close",
-  "page": 28
-}
+```typescript
+Chassis.findByTechLevel(2);
+Chassis.findByMinStructurePoints(20);
+Chassis.findByMinSystemSlots(4);
 ```
 
-### System Example
+**Systems**
 
-```json
-{
-  "name": "Assault Cannon",
-  "source": "core",
-  "techLevel": 2,
-  "slotsRequired": 2,
-  "salvageValue": 2,
-  "range": "Medium",
-  "damage": { "type": "SP", "amount": 4 },
-  "traits": [{ "type": "ballistic" }, { "type": "multi-attack", "amount": 2 }],
-  "page": 103
-}
+```typescript
+Systems.findByTechLevel(3);
+Systems.getWeapons();
+Systems.findByDamageType("SP");
+Systems.findByMinDamage(3);
+```
+
+**Modules**
+
+```typescript
+Modules.findByTechLevel(2);
+Modules.findBySlotsRequired(1);
+Modules.getRecommended();
+Modules.findByTrait("communicator");
+```
+
+**Abilities**
+
+```typescript
+Abilities.findByLevel(1);
+Abilities.findByTree("Mechanical Knowledge");
+Abilities.getAllTrees();
+```
+
+## Direct Data Access
+
+You can also import raw JSON data and schemas:
+
+```typescript
+// Import raw data
+import chassisData from "salvageunion-data/data/chassis.json";
+import equipmentData from "salvageunion-data/data/equipment.json";
+
+// Import schemas
+import chassisSchema from "salvageunion-data/schemas/chassis.schema.json";
+```
+
+## TypeScript Support
+
+Full TypeScript support with auto-generated types:
+
+```typescript
+import { SalvageUnionData } from "salvageunion-data";
+import type {
+  SalvageUnionMechChassis,
+  SalvageUnionEquipment,
+  SalvageUnionSystems,
+} from "salvageunion-data";
+
+const { Chassis } = SalvageUnionData;
+
+// Fully typed
+const atlas: SalvageUnionMechChassis[number] | undefined =
+  Chassis.findByName("Atlas");
 ```
 
 ## 🤝 Contributing
@@ -146,7 +181,7 @@ Contributions are welcome! Please:
 
 1. Ensure all data includes page references
 2. Validate changes with `npm run validate`
-3. Format code with `npm run format`
+3. Run type checking with `npm run typecheck`
 4. Follow existing data structure patterns
 
 ## 📜 License

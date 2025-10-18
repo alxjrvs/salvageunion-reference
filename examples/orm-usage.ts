@@ -2,10 +2,11 @@
  * Example usage of the Salvage Union Data ORM
  */
 
-import { Abilities, Chassis, Equipment } from "../lib/index.js";
+import { SalvageUnionData } from "../lib/index.js";
 
 console.log("🎮 Salvage Union Data ORM Examples\n");
 
+const { Abilities, Chassis, Equipment } = SalvageUnionData;
 // ============================================================================
 // EQUIPMENT QUERIES
 // ============================================================================

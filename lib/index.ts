@@ -67,22 +67,23 @@ export type { SalvageUnionTables } from "./types/tables.js";
 export type { SalvageUnionTraits } from "./types/traits.js";
 export type { SalvageUnionVehicles } from "./types/vehicles.js";
 
-// Convenience exports - pre-instantiated models
-export const Abilities = new AbilitiesModel();
-export const AbilityTreeRequirements = new AbilityTreeRequirementsModel();
-export const BioTitans = new BioTitansModel();
-export const Chassis = new ChassisModel();
-export const Classes = new ClassesModel();
-export const Crawlers = new CrawlersModel();
-export const Creatures = new CreaturesModel();
-export const Drones = new DronesModel();
-export const Equipment = new EquipmentModel();
-export const Keywords = new KeywordsModel();
-export const Meld = new MeldModel();
-export const Modules = new ModulesModel();
-export const NPCs = new NPCsModel();
-export const Squads = new SquadsModel();
-export const Systems = new SystemsModel();
-export const Tables = new TablesModel();
-export const Traits = new TraitsModel();
-export const Vehicles = new VehiclesModel();
+export class SalvageUnionData {
+  public static Abilities = new AbilitiesModel();
+  public static AbilityTreeRequirements = new AbilityTreeRequirementsModel();
+  public static BioTitans = new BioTitansModel();
+  public static Chassis = new ChassisModel();
+  public static Classes = new ClassesModel();
+  public static Crawlers = new CrawlersModel();
+  public static Creatures = new CreaturesModel();
+  public static Drones = new DronesModel();
+  public static Equipment = new EquipmentModel();
+  public static Keywords = new KeywordsModel();
+  public static Meld = new MeldModel();
+  public static Modules = new ModulesModel();
+  public static NPCs = new NPCsModel();
+  public static Squads = new SquadsModel();
+  public static Systems = new SystemsModel();
+  public static Tables = new TablesModel();
+  public static Traits = new TraitsModel();
+  public static Vehicles = new VehiclesModel();
+}

@@ -1,8 +1,6 @@
-/**
- * Test all ORM models
- */
+import { SalvageUnionData } from "../lib/index.js";
 
-import {
+const {
   Abilities,
   AbilityTreeRequirements,
   BioTitans,
@@ -21,14 +19,16 @@ import {
   Tables,
   Traits,
   Vehicles,
-} from "../lib/index.js";
+} = SalvageUnionData;
 
 console.log("🧪 Testing All ORM Models\n");
 console.log("=".repeat(60));
 
 // Test each model
 console.log(`\n✅ Abilities: ${Abilities.count()} items`);
-console.log(`✅ AbilityTreeRequirements: ${AbilityTreeRequirements.count()} items`);
+console.log(
+  `✅ AbilityTreeRequirements: ${AbilityTreeRequirements.count()} items`,
+);
 console.log(`✅ BioTitans: ${BioTitans.count()} items`);
 console.log(`✅ Chassis: ${Chassis.count()} items`);
 console.log(`✅ Classes: ${Classes.count()} items`);
@@ -82,9 +82,7 @@ if (defacerDrone) {
 // Bio-Titans
 const scylla = BioTitans.findByName("Scylla");
 if (scylla) {
-  console.log(
-    `🐙 Bio-Titan: ${scylla.name} (${scylla.structurePoints} SP)`,
-  );
+  console.log(`🐙 Bio-Titan: ${scylla.name} (${scylla.structurePoints} SP)`);
 }
 
 // Crawlers
@@ -136,7 +134,8 @@ if (firstTable) {
 }
 
 // Ability Tree Requirements
-const advancedEngineer = AbilityTreeRequirements.findByTree("Advanced Engineer");
+const advancedEngineer =
+  AbilityTreeRequirements.findByTree("Advanced Engineer");
 if (advancedEngineer) {
   console.log(
     `🌳 Tree Requirement: ${advancedEngineer.tree} requires ${advancedEngineer.requirement.join(", ")}`,
@@ -144,4 +143,3 @@ if (advancedEngineer) {
 }
 
 console.log("\n✨ All models working correctly!");
-
