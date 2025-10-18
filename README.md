@@ -22,31 +22,31 @@ bun add salvageunion-data
 ## Quick Start
 
 ```typescript
-import { SalvageUnionReference } from "salvageunion-data";
+import { SalvageUnionReference } from 'salvageunion-data'
 
 const { Abilities, Chassis, Equipment, Systems, Modules } =
-  SalvageUnionReference;
+  SalvageUnionReference
 
 // Get all chassis
-const allChassis = Chassis.all();
-console.log(`Total chassis: ${Chassis.count()}`);
+const allChassis = Chassis.all()
+console.log(`Total chassis: ${Chassis.count()}`)
 
 // Find by name
-const atlas = Chassis.findByName("Atlas");
+const atlas = Chassis.findByName('Atlas')
 if (atlas) {
-  console.log(`${atlas.name}: ${atlas.stats.structure_pts} SP`);
+  console.log(`${atlas.name}: ${atlas.stats.structure_pts} SP`)
 }
 
 // Query by tech level
-const t3Equipment = Equipment.findByTechLevel(3);
+const t3Equipment = Equipment.findByTechLevel(3)
 
 // Get weapons
-const weapons = Systems.getWeapons();
+const weapons = Systems.getWeapons()
 
 // Advanced queries
 const heavyArmor = Equipment.where(
-  (e) => e.traits?.some((t) => t.type === "armor") && (e.techLevel ?? 0) >= 3,
-);
+  (e) => e.traits?.some((t) => t.type === 'armor') && (e.techLevel ?? 0) >= 3
+)
 ```
 
 ## Available Models
@@ -108,54 +108,54 @@ All models provide these base methods:
 #### Equipment
 
 ```typescript
-Equipment.findByTechLevel(3);
-Equipment.findByTrait("armor");
-Equipment.getArmor();
-Equipment.getWeapons();
-Equipment.findByActivationCost(1);
-Equipment.getWithActions();
+Equipment.findByTechLevel(3)
+Equipment.findByTrait('armor')
+Equipment.getArmor()
+Equipment.getWeapons()
+Equipment.findByActivationCost(1)
+Equipment.getWithActions()
 ```
 
 #### Chassis
 
 ```typescript
-Chassis.findByTechLevel(2);
-Chassis.findByMinStructurePoints(20);
-Chassis.findByMinSystemSlots(4);
-Chassis.findByMinModuleSlots(2);
-Chassis.findByMinCargoCap(5);
+Chassis.findByTechLevel(2)
+Chassis.findByMinStructurePoints(20)
+Chassis.findByMinSystemSlots(4)
+Chassis.findByMinModuleSlots(2)
+Chassis.findByMinCargoCap(5)
 ```
 
 #### Systems
 
 ```typescript
-Systems.findByTechLevel(3);
-Systems.findBySalvageValue(2);
-Systems.findBySlotsRequired(1);
-Systems.findByTrait("melee");
-Systems.getWeapons();
-Systems.findByDamageType("SP");
-Systems.findByMinDamage(3);
+Systems.findByTechLevel(3)
+Systems.findBySalvageValue(2)
+Systems.findBySlotsRequired(1)
+Systems.findByTrait('melee')
+Systems.getWeapons()
+Systems.findByDamageType('SP')
+Systems.findByMinDamage(3)
 ```
 
 #### Modules
 
 ```typescript
-Modules.findByTechLevel(2);
-Modules.findBySalvageValue(1);
-Modules.findBySlotsRequired(1);
-Modules.findByTrait("communicator");
-Modules.getRecommended();
-Modules.findByActionType("action");
+Modules.findByTechLevel(2)
+Modules.findBySalvageValue(1)
+Modules.findBySlotsRequired(1)
+Modules.findByTrait('communicator')
+Modules.getRecommended()
+Modules.findByActionType('action')
 ```
 
 #### Abilities
 
 ```typescript
-Abilities.findByLevel(1);
-Abilities.findByTree("Mechanical Knowledge");
-Abilities.findByTrait("passive");
-Abilities.getAllTrees();
+Abilities.findByLevel(1)
+Abilities.findByTree('Mechanical Knowledge')
+Abilities.findByTrait('passive')
+Abilities.getAllTrees()
 ```
 
 ## Direct Data Access
@@ -164,11 +164,11 @@ You can also import raw JSON data and schemas:
 
 ```typescript
 // Import raw data
-import chassisData from "salvageunion-data/data/chassis.json";
-import equipmentData from "salvageunion-data/data/equipment.json";
+import chassisData from 'salvageunion-data/data/chassis.json'
+import equipmentData from 'salvageunion-data/data/equipment.json'
 
 // Import schemas
-import chassisSchema from "salvageunion-data/schemas/chassis.schema.json";
+import chassisSchema from 'salvageunion-data/schemas/chassis.schema.json'
 ```
 
 ## TypeScript Support
@@ -176,18 +176,18 @@ import chassisSchema from "salvageunion-data/schemas/chassis.schema.json";
 Full TypeScript support with inferred types from JSON data:
 
 ```typescript
-import { SalvageUnionReference } from "salvageunion-data";
-import type { Chassis, Equipment, System } from "salvageunion-data";
+import { SalvageUnionReference } from 'salvageunion-data'
+import type { Chassis, Equipment, System } from 'salvageunion-data'
 
-const { Chassis: ChassisModel } = SalvageUnionReference;
+const { Chassis: ChassisModel } = SalvageUnionReference
 
 // Fully typed
-const atlas: Chassis | undefined = ChassisModel.findByName("Atlas");
+const atlas: Chassis | undefined = ChassisModel.findByName('Atlas')
 
 // Type-safe queries
 const heavyEquipment: Equipment[] = SalvageUnionReference.Equipment.where(
-  (e) => (e.techLevel ?? 0) >= 3,
-);
+  (e) => (e.techLevel ?? 0) >= 3
+)
 ```
 
 ## 🤝 Contributing

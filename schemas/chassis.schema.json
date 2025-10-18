@@ -8,12 +8,7 @@
     "type": "object",
     "description": "A mech chassis",
     "additionalProperties": false,
-    "required": [
-      "id",
-      "name",
-      "source",
-      "page"
-    ],
+    "required": ["id", "name", "source", "page"],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
@@ -47,9 +42,7 @@
           "type": "object",
           "description": "A specific loadout pattern",
           "additionalProperties": false,
-          "required": [
-            "name"
-          ],
+          "required": ["name"],
           "properties": {
             "name": {
               "type": "string",

@@ -18,17 +18,20 @@ Thank you for your interest in contributing to the Salvage Union Data repository
 All contributions must meet these requirements:
 
 #### ✅ Required for All Entries
+
 - **Page reference**: Every entry must include a `page` property
 - **Source attribution**: Must specify `source` (currently "core")
 - **Accurate data**: Must match the source material word-for-word
 - **Schema compliance**: Must pass validation (`npm run validate`)
 
 #### ✅ Formatting
+
 - Use 2-space indentation
 - Run `npm run format` before committing
 - Follow existing data structure patterns
 
 #### ✅ Completeness
+
 - Include all relevant properties from the source
 - Don't omit optional fields if they have values
 - Include descriptions and effect text verbatim
@@ -37,31 +40,32 @@ All contributions must meet these requirements:
 
 #### Step 1: Find the Right File
 
-| Data Type | File | Schema |
-|-----------|------|--------|
-| Pilot Abilities | `data/abilities.json` | `schemas/abilities.schema.json` |
-| Character Classes | `data/classes.json` | `schemas/classes.schema.json` |
-| Pilot Equipment | `data/equipment.json` | `schemas/equipment.schema.json` |
-| Mech Systems | `data/systems.json` | `schemas/systems.schema.json` |
-| Mech Modules | `data/modules.json` | `schemas/modules.schema.json` |
-| Mech Chassis | `data/chassis.json` | `schemas/chassis.schema.json` |
-| Bio-Titans | `data/bio-titans.json` | `schemas/bio-titans.schema.json` |
-| Creatures | `data/creatures.json` | `schemas/creatures.schema.json` |
-| NPCs | `data/npcs.json` | `schemas/npcs.schema.json` |
-| Drones | `data/drones.json` | `schemas/drones.schema.json` |
-| Vehicles | `data/vehicles.json` | `schemas/vehicles.schema.json` |
-| Squads | `data/squads.json` | `schemas/squads.schema.json` |
-| Meld | `data/meld.json` | `schemas/meld.schema.json` |
-| Crawlers | `data/crawlers.json` | `schemas/crawlers.schema.json` |
-| Tables | `data/tables.json` | `schemas/tables.schema.json` |
-| Keywords | `data/keywords.json` | `schemas/keywords.schema.json` |
-| Traits | `data/traits.json` | `schemas/traits.schema.json` |
+| Data Type         | File                   | Schema                           |
+| ----------------- | ---------------------- | -------------------------------- |
+| Pilot Abilities   | `data/abilities.json`  | `schemas/abilities.schema.json`  |
+| Character Classes | `data/classes.json`    | `schemas/classes.schema.json`    |
+| Pilot Equipment   | `data/equipment.json`  | `schemas/equipment.schema.json`  |
+| Mech Systems      | `data/systems.json`    | `schemas/systems.schema.json`    |
+| Mech Modules      | `data/modules.json`    | `schemas/modules.schema.json`    |
+| Mech Chassis      | `data/chassis.json`    | `schemas/chassis.schema.json`    |
+| Bio-Titans        | `data/bio-titans.json` | `schemas/bio-titans.schema.json` |
+| Creatures         | `data/creatures.json`  | `schemas/creatures.schema.json`  |
+| NPCs              | `data/npcs.json`       | `schemas/npcs.schema.json`       |
+| Drones            | `data/drones.json`     | `schemas/drones.schema.json`     |
+| Vehicles          | `data/vehicles.json`   | `schemas/vehicles.schema.json`   |
+| Squads            | `data/squads.json`     | `schemas/squads.schema.json`     |
+| Meld              | `data/meld.json`       | `schemas/meld.schema.json`       |
+| Crawlers          | `data/crawlers.json`   | `schemas/crawlers.schema.json`   |
+| Tables            | `data/tables.json`     | `schemas/tables.schema.json`     |
+| Keywords          | `data/keywords.json`   | `schemas/keywords.schema.json`   |
+| Traits            | `data/traits.json`     | `schemas/traits.schema.json`     |
 
 #### Step 2: Follow the Schema
 
 Each data type has specific required fields. Check the schema file or use VSCode's IntelliSense for guidance.
 
 **Example: Adding an Ability**
+
 ```json
 {
   "name": "Ability Name",
@@ -84,7 +88,7 @@ Each data type has specific required fields. Check the schema file or use VSCode
 ```json
 {
   "name": "Example Item",
-  "page": 123  // ← Required!
+  "page": 123 // ← Required!
 }
 ```
 
@@ -93,6 +97,7 @@ Each data type has specific required fields. Check the schema file or use VSCode
 Many fields use specific enumerated values. Check `schemas/shared/enums.schema.json` for valid options:
 
 **Common Enums:**
+
 - `source`: `"core"`
 - `range`: `"Close"`, `"Medium"`, `"Long"`
 - `actionType`: `"Turn Action"`, `"Reaction"`, `"Passive"`, `"Free Action"`
@@ -101,6 +106,7 @@ Many fields use specific enumerated values. Check `schemas/shared/enums.schema.j
 #### Step 5: Format Activation Costs
 
 **Important**: Activation costs should be numbers only (not "AP" suffix):
+
 - ✅ `"activationCost": 1`
 - ✅ `"activationCost": 2`
 - ✅ `"activationCost": "Variable"` (for XAP costs)
@@ -146,8 +152,8 @@ For abilities with roll outcomes, include the full roll table:
    ```bash
    npm run validate
    ```
-   
 2. **Format your code**:
+
    ```bash
    npm run format
    ```
@@ -161,6 +167,7 @@ For abilities with roll outcomes, include the full roll table:
 #### Using VSCode
 
 If you're using VSCode, you'll get:
+
 - ✅ Real-time validation errors
 - ✅ IntelliSense autocomplete
 - ✅ Hover documentation
@@ -169,6 +176,7 @@ If you're using VSCode, you'll get:
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Omit page references
 - Use "AP" suffix in activation costs
 - Manually format JSON (use `npm run format`)
@@ -176,6 +184,7 @@ If you're using VSCode, you'll get:
 - Add data without schema validation
 
 ✅ **Do:**
+
 - Include page numbers for everything
 - Use numeric activation costs (or "Variable")
 - Run validation before committing
@@ -207,6 +216,7 @@ If you're using VSCode, you'll get:
 ### Data Errors
 
 If you find incorrect data:
+
 1. Note the specific entry and file
 2. Provide the correct information
 3. Include page reference
@@ -215,6 +225,7 @@ If you find incorrect data:
 ### Schema Issues
 
 If you find schema problems:
+
 1. Describe the issue
 2. Provide example data
 3. Suggest a solution if possible
@@ -228,4 +239,3 @@ If you find schema problems:
 ## 🙏 Thank You!
 
 Your contributions help make this dataset more complete and accurate for the entire Salvage Union community!
-

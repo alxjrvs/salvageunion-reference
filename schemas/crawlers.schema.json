@@ -8,12 +8,7 @@
     "type": "object",
     "description": "A crawler vehicle",
     "additionalProperties": false,
-    "required": [
-      "id",
-      "name",
-      "source",
-      "page"
-    ],
+    "required": ["id", "name", "source", "page"],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"

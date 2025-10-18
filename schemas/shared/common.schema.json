@@ -27,17 +27,11 @@
         {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "type",
-            "amount"
-          ],
+          "required": ["type", "amount"],
           "properties": {
             "type": {
               "type": "string",
-              "enum": [
-                "HP",
-                "SP"
-              ],
+              "enum": ["HP", "SP"],
               "description": "Type of damage (Hit Points or Structure Points)"
             },
             "amount": {
@@ -49,10 +43,7 @@
         },
         {
           "type": "string",
-          "enum": [
-            "2d20",
-            "X SP"
-          ],
+          "enum": ["2d20", "X SP"],
           "description": "Variable damage formula"
         }
       ]
@@ -66,10 +57,7 @@
             "type": "object",
             "description": "Trait with a numeric value",
             "additionalProperties": false,
-            "required": [
-              "type",
-              "amount"
-            ],
+            "required": ["type", "amount"],
             "properties": {
               "type": {
                 "type": "string",
@@ -94,9 +82,7 @@
             "type": "object",
             "description": "Trait without a numeric value",
             "additionalProperties": false,
-            "required": [
-              "type"
-            ],
+            "required": ["type"],
             "properties": {
               "type": {
                 "type": "string",
@@ -162,9 +148,7 @@
           "type": "object",
           "description": "Standard roll table with 5 outcome ranges",
           "additionalProperties": false,
-          "required": [
-            "type"
-          ],
+          "required": ["type"],
           "properties": {
             "type": {
               "type": "string",
@@ -196,9 +180,7 @@
           "type": "object",
           "description": "Alternative standard roll table with different ranges",
           "additionalProperties": false,
-          "required": [
-            "type"
-          ],
+          "required": ["type"],
           "properties": {
             "type": {
               "type": "string",
@@ -230,9 +212,7 @@
           "type": "object",
           "description": "Flat roll table with individual outcomes for each numeric result",
           "additionalProperties": false,
-          "required": [
-            "type"
-          ],
+          "required": ["type"],
           "properties": {
             "type": {
               "type": "string",
@@ -306,12 +286,7 @@
       "type": "object",
       "description": "Basic entry with name, description, source, and page reference",
       "additionalProperties": false,
-      "required": [
-        "id",
-        "name",
-        "source",
-        "page"
-      ],
+      "required": ["id", "name", "source", "page"],
       "properties": {
         "id": {
           "$ref": "#/definitions/id"

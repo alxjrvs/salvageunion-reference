@@ -10,13 +10,7 @@
         "type": "object",
         "description": "A core character class",
         "additionalProperties": false,
-        "required": [
-          "id",
-          "name",
-          "source",
-          "type",
-          "page"
-        ],
+        "required": ["id", "name", "source", "type", "page"],
         "properties": {
           "id": {
             "$ref": "shared/common.schema.json#/definitions/id"
@@ -72,13 +66,7 @@
         "type": "object",
         "description": "A hybrid character class",
         "additionalProperties": false,
-        "required": [
-          "id",
-          "name",
-          "source",
-          "type",
-          "page"
-        ],
+        "required": ["id", "name", "source", "type", "page"],
         "properties": {
           "id": {
             "$ref": "shared/common.schema.json#/definitions/id"
