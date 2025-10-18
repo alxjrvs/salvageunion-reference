@@ -3,29 +3,19 @@ import { Ability, SalvageUnionAbilities, Traits } from "../types/inferred.js";
 import abilitiesData from "../../data/abilities.json" with { type: "json" };
 import abilitiesSchema from "../../schemas/abilities.schema.json" with { type: "json" };
 
-
 export class AbilitiesModel extends BaseModel<Ability> {
   constructor() {
     super(abilitiesData as Ability[], abilitiesSchema);
   }
 
-  /**
-   * Find abilities by level
-   */
   findByLevel(level: number): Ability[] {
     return this.where((a) => a.level === level);
   }
 
-  /**
-   * Find abilities by tree
-   */
   findByTree(treeName: string): Ability[] {
     return this.where((a) => a.tree === treeName);
   }
 
-  /**
-   * Find abilities with specific trait
-   */
   findByTrait(traitType: string): Ability[] {
     return this.where(
       (a) =>
@@ -33,9 +23,6 @@ export class AbilitiesModel extends BaseModel<Ability> {
     );
   }
 
-  /**
-   * Get all ability trees
-   */
   getAllTrees(): string[] {
     const trees = new Set<string>();
     this.data.forEach((a) => {

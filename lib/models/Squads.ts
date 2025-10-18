@@ -21,72 +21,42 @@ export class SquadsModel {
     this.schema = squadsSchema;
   }
 
-  /**
-   * Get all items
-   */
   all(): Squad[] {
     return this.data;
   }
 
-  /**
-   * Get count of items
-   */
   count(): number {
     return this.data.length;
   }
 
-  /**
-   * Find single item matching predicate
-   */
   find(predicate: (item: Squad) => boolean): Squad | undefined {
     return this.data.find(predicate);
   }
 
-  /**
-   * Find all items matching predicate
-   */
   where(predicate: (item: Squad) => boolean): Squad[] {
     return this.data.filter(predicate);
   }
 
-  /**
-   * Find by ID
-   */
   findById(id: string): Squad | undefined {
     return this.find((item) => item.id === id);
   }
 
-  /**
-   * Find by name
-   */
   findByName(name: string): Squad | undefined {
     return this.find((item) => item.name === name);
   }
 
-  /**
-   * Find squads by hit points
-   */
   findByHitPoints(hp: number): Squad[] {
     return this.where((s) => s.hitPoints === hp);
   }
 
-  /**
-   * Find squads with minimum hit points
-   */
   findByMinHitPoints(min: number): Squad[] {
     return this.where((s) => (s.hitPoints ?? 0) >= min);
   }
 
-  /**
-   * Find squads with minimum structure points
-   */
   findByMinStructurePoints(min: number): Squad[] {
     return this.where((s) => (s.structurePoints ?? 0) >= min);
   }
 
-  /**
-   * Get the schema
-   */
   getSchema(): any {
     return this.schema;
   }

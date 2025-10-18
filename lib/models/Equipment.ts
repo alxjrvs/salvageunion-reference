@@ -10,39 +10,24 @@ export class EquipmentModel extends BaseModel<Equipment> {
     super(equipmentData as Equipment[], equipmentSchema);
   }
 
-  /**
-   * Find equipment by tech level
-   */
   findByTechLevel(level: number): Equipment[] {
     return this.where((e) => e.techLevel === level);
   }
 
-  /**
-   * Find equipment with specific trait
-   */
   findByTrait(traitType: string): Equipment[] {
     return this.where(
       (e) => e.traits?.some((t: Trait) => t.type === traitType) ?? false,
     );
   }
 
-  /**
-   * Find equipment by activation cost
-   */
   findByActivationCost(cost: number): Equipment[] {
     return this.where((e) => e.activationCost === cost);
   }
 
-  /**
-   * Get all armor
-   */
   getArmor(): Equipment[] {
     return this.findByTrait("armor");
   }
 
-  /**
-   * Get all weapons
-   */
   getWeapons(): Equipment[] {
     return this.where(
       (e) =>
@@ -52,9 +37,6 @@ export class EquipmentModel extends BaseModel<Equipment> {
     );
   }
 
-  /**
-   * Get all equipment with actions
-   */
   getWithActions(): Equipment[] {
     return this.where((e) => (e.actions?.length ?? 0) > 0);
   }

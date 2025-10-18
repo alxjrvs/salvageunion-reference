@@ -9,16 +9,10 @@ export class NPCsModel extends BaseModel<NPC> {
     super(npcsData as NPC[], npcsSchema);
   }
 
-  /**
-   * Find NPCs by hit points
-   */
   findByHitPoints(hp: number): NPC[] {
     return this.where((n) => n.hitPoints === hp);
   }
 
-  /**
-   * Find NPCs with minimum hit points
-   */
   findByMinHitPoints(min: number): NPC[] {
     return this.where((n) => (n.hitPoints ?? 0) >= min);
   }

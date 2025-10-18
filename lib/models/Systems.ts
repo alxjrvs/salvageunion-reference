@@ -10,39 +10,24 @@ export class SystemsModel extends BaseModel<System> {
     super(systemsData as System[], systemsSchema);
   }
 
-  /**
-   * Find systems by tech level
-   */
   findByTechLevel(level: number): System[] {
     return this.where((s) => s.techLevel === level);
   }
 
-  /**
-   * Find systems by salvage value
-   */
   findBySalvageValue(value: number): System[] {
     return this.where((s) => s.salvageValue === value);
   }
 
-  /**
-   * Find systems by slots required
-   */
   findBySlotsRequired(slots: number): System[] {
     return this.where((s) => s.slotsRequired === slots);
   }
 
-  /**
-   * Find systems with specific trait
-   */
   findByTrait(traitType: string): System[] {
     return this.where(
       (s) => s.traits?.some((t: Trait) => t.type === traitType) ?? false,
     );
   }
 
-  /**
-   * Get all weapon systems
-   */
   getWeapons(): System[] {
     return this.where(
       (s) =>
@@ -52,9 +37,6 @@ export class SystemsModel extends BaseModel<System> {
     );
   }
 
-  /**
-   * Find systems by damage type
-   */
   findByDamageType(damageType: "SP" | "HP" | "EP"): System[] {
     return this.where(
       (s) =>
@@ -65,9 +47,6 @@ export class SystemsModel extends BaseModel<System> {
     );
   }
 
-  /**
-   * Find systems with minimum damage
-   */
   findByMinDamage(minDamage: number): System[] {
     return this.where(
       (s) =>
