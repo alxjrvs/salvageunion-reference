@@ -3,9 +3,9 @@
  */
 export class BaseModel<T extends { id: string; name: string }> {
   protected data: T[];
-  protected schema: any;
+  protected schema: Record<string, unknown>;
 
-  constructor(data: T[], schema: any) {
+  constructor(data: T[], schema: Record<string, unknown>) {
     this.data = data;
     this.schema = schema;
   }
@@ -58,7 +58,7 @@ export class BaseModel<T extends { id: string; name: string }> {
   searchByName(query: string): T[] {
     const lowerQuery = query.toLowerCase();
     return this.data.filter((item) =>
-      item.name.toLowerCase().includes(lowerQuery)
+      item.name.toLowerCase().includes(lowerQuery),
     );
   }
 
@@ -66,7 +66,10 @@ export class BaseModel<T extends { id: string; name: string }> {
    * Find item by source
    */
   findBySource(source: string): T[] {
-    return this.data.filter((item: any) => item.source === source);
+    return this.data.filter((item) => {
+      const itemWithSource = item as T & { source?: string };
+      return itemWithSource.source === source;
+    });
   }
 
   /**
@@ -125,8 +128,7 @@ export class BaseModel<T extends { id: string; name: string }> {
   /**
    * Get the JSON schema for this model
    */
-  getSchema(): any {
+  getSchema(): Record<string, unknown> {
     return this.schema;
   }
 }
-

@@ -91,6 +91,19 @@ export type {
   Traits,
 } from "./types/inferred.js";
 
+/**
+ * Type-safe helper for handling optional query results
+ * Use this to safely work with results from find/findById/findByName
+ *
+ * @example
+ * const table = SalvageUnionReference.Tables.findByName('Core Mechanic');
+ * if (table) {
+ *   // table is now safely typed as Table
+ *   console.log(table.name);
+ * }
+ */
+export type Optional<T> = T | undefined;
+
 export class SalvageUnionReference {
   public static readonly Abilities: AbilitiesModel = new AbilitiesModel();
   public static readonly AbilityTreeRequirements: AbilityTreeRequirementsModel =
