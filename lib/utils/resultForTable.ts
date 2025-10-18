@@ -1,4 +1,4 @@
-import type { Table } from '../types/inferred.js'
+import type { Table, System } from '../types/inferred.js'
 
 /**
  * Result type for table roll resolution
@@ -10,13 +10,13 @@ export type TableRollResult =
 /**
  * Resolves a d20 roll against a table to get the result string
  *
- * @param tableData - The table data (Table or undefined)
+ * @param rollTable - The roll table data (Table['rollTable'] | System['rollTable'] | undefined)
  * @param roll - The d20 roll result (1-20)
  * @returns Object with success flag and either the result string or error message
  *
  * @example
  * const table = SalvageUnionReference.Tables.findByName('Core Mechanic');
- * const result = resultForTable(table, 15);
+ * const result = resultForTable(table?.rollTable, 15);
  * if (result.success) {
  *   console.log(result.result); // "Success: You have achieved your goal..."
  * } else {
@@ -24,18 +24,16 @@ export type TableRollResult =
  * }
  */
 export function resultForTable(
-  tableData: Table | undefined,
+  rollTable: Table['rollTable'] | System['rollTable'] | undefined,
   roll: number
 ): TableRollResult {
-  // Check if table data exists
-  if (!tableData) {
+  if (!rollTable) {
     return {
       success: false,
       error: 'Table data is undefined',
     }
   }
 
-  // Validate roll is within bounds
   if (roll < 1 || roll > 20) {
     return {
       success: false,
@@ -43,19 +41,12 @@ export function resultForTable(
     }
   }
 
-  const rollTable = tableData.rollTable
-  if (!rollTable) {
-    return {
-      success: false,
-      error: 'Table does not have a rollTable property',
-    }
-  }
+  const table = rollTable as Record<string, unknown>
+  const numericKeys = Object.keys(table).filter((k) => /^\d+(-\d+)?$/.test(k))
 
-  const tableType = (rollTable as Record<string, unknown>).type as string
-
-  // Handle flat type tables - direct key lookup
-  if (tableType === 'flat') {
-    const result = (rollTable as Record<string, unknown>)[roll.toString()]
+  // Detect if this is a flat table (has all 20 individual keys)
+  if (numericKeys.length === 20 && numericKeys.every((k) => !k.includes('-'))) {
+    const result = table[roll.toString()]
     if (result && typeof result === 'string') {
       return {
         success: true,
@@ -68,20 +59,17 @@ export function resultForTable(
     }
   }
 
-  // Handle range-based tables (standard, standard2, full, alternate)
-  const rangeResult = findRangeResult(rollTable, roll, tableType)
-  return rangeResult
+  return findRangeResult(table, roll)
 }
 
 /**
  * Finds the result for a given roll in a range-based table
+ * Automatically detects the range structure from available keys
  */
 function findRangeResult(
   rollTable: Record<string, unknown>,
-  roll: number,
-  tableType: string
+  roll: number
 ): TableRollResult {
-  // Check for exact match first (e.g., "1" or "20")
   const exactKey = roll.toString()
   const exactResult = rollTable[exactKey]
   if (exactResult && typeof exactResult === 'string') {
@@ -91,12 +79,11 @@ function findRangeResult(
     }
   }
 
-  // Define range mappings for each table type
-  const rangeMap = getRangeMap(tableType)
+  // Get all numeric range keys (e.g., "2-5", "11-19")
+  const rangeKeys = Object.keys(rollTable).filter((k) => k.includes('-'))
 
-  // Find which range the roll falls into
-  for (const [range, rangeKey] of Object.entries(rangeMap)) {
-    if (rollInRange(roll, range)) {
+  for (const rangeKey of rangeKeys) {
+    if (rollInRange(roll, rangeKey)) {
       const result = rollTable[rangeKey]
       if (result && typeof result === 'string') {
         return {
@@ -109,58 +96,7 @@ function findRangeResult(
 
   return {
     success: false,
-    error: `No result found for roll ${roll} in ${tableType} table`,
-  }
-}
-
-/**
- * Gets the range mapping for a specific table type
- */
-function getRangeMap(tableType: string): Record<string, string> {
-  switch (tableType) {
-    case 'standard':
-      return {
-        '1': '1',
-        '2-5': '2-5',
-        '6-10': '6-10',
-        '11-19': '11-19',
-        '20': '20',
-      }
-    case 'standard2':
-    case 'alternate':
-      return {
-        '1': '1',
-        '2-5': '2-5',
-        '6-10': '6-10',
-        '11-18': '11-18',
-        '19-20': '19-20',
-      }
-    case 'full':
-      // Full type has all 20 individual results
-      return {
-        '1': '1',
-        '2': '2',
-        '3': '3',
-        '4': '4',
-        '5': '5',
-        '6': '6',
-        '7': '7',
-        '8': '8',
-        '9': '9',
-        '10': '10',
-        '11': '11',
-        '12': '12',
-        '13': '13',
-        '14': '14',
-        '15': '15',
-        '16': '16',
-        '17': '17',
-        '18': '18',
-        '19': '19',
-        '20': '20',
-      }
-    default:
-      return {}
+    error: `No result found for roll ${roll}`,
   }
 }
 
