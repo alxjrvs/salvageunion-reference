@@ -2,7 +2,7 @@
   {
     "id": "fa9860bb-83c2-4d8c-b100-40708948257d",
     "source": "core",
-    "name": "Core Mechanic Table",
+    "name": "Core Mechanic",
     "section": "core",
     "rollTable": {
       "1": "Cascade Failure: Something has gone terribly wrong. You suffer a severe consequence of the Mediator’s choice. When attacking, you miss the target and suffer a Setback chosen by the Mediator.",
@@ -17,7 +17,7 @@
   {
     "id": "cdbc20d9-ff63-4272-805b-f148f0c01752",
     "source": "core",
-    "name": "Group Initiative Table",
+    "name": "Group Initiative",
     "section": "action scene",
     "rollTable": {
       "1": "Ambush: Two NPCs chosen by the Mediator act first. Play then passes to the player group and one Pilot is chosen by the players to act next.",
@@ -32,7 +32,7 @@
   {
     "id": "dcd888a2-dc2d-4f45-94eb-ae6138761931",
     "source": "core",
-    "name": "Critical Injury Table",
+    "name": "Critical Injury",
     "section": "damage",
     "rollTable": {
       "1": "Fatal Injury: Your Pilot suffers a fatal injury and dies.",
@@ -47,7 +47,7 @@
   {
     "id": "aa54dcd4-efd0-4cbb-83dc-4cf6f0411066",
     "source": "core",
-    "name": "Critical Damage Table",
+    "name": "Critical Damage",
     "section": "damage",
     "rollTable": {
       "1": "Catastrophic Damage: The Mech, as well as any mounted Systems and Modules as well as all Cargo, is destroyed. Your Pilot dies unless they have a means to escape the Mech.",
@@ -62,7 +62,7 @@
   {
     "id": "0050af76-7d88-43e7-b098-1a6af7656353",
     "source": "core",
-    "name": "Reactor Overload Table",
+    "name": "Reactor Overload",
     "section": "heat",
     "rollTable": {
       "1": "Reactor Overload: Your Mech’s reactor goes into full meltdown and explodes. Your Mech, as well as any mounted Systems, Modules, and all Cargo, is destroyed in the explosion. Everything in Close Range of your Mech takes SP damage equal to your Mech’s Maximum Heat Capacity. They may take any Turn Action or Reaction in response to try to avoid this. Your Pilot dies unless they have a means to escape. The area your Mech was in becomes Irradiated",
@@ -77,7 +77,7 @@
   {
     "id": "abca780b-da93-47b0-91e6-290da910e2fd",
     "source": "core",
-    "name": "Area Salvage Table",
+    "name": "Area Salvage",
     "section": "salvaging",
     "rollTable": {
       "1": "Nothing: You find nothing in this area.",
@@ -92,7 +92,7 @@
   {
     "id": "acdc85ee-056c-4edc-95be-e25f0ab9b319",
     "source": "core",
-    "name": "Mech Salvage Table",
+    "name": "Mech Salvage",
     "section": "salvaging",
     "rollTable": {
       "1": "Ashes and Dust: The Mech is unsalvageable: its Chassis, Systems and Modules are all considered destroyed.",
@@ -107,7 +107,7 @@
   {
     "id": "2bdb98de-31a2-4eb1-b8f5-cf42f44ff618",
     "source": "core",
-    "name": "Reaction Roll Table",
+    "name": "Reaction Roll",
     "section": "npc tables",
     "rollTable": {
       "1": "Actively Hostile: The NPCs will launch an attack on the group if appropriate or flee from them, barricade themselves in, and avoid contact as though they were hostile.",
@@ -122,7 +122,7 @@
   {
     "id": "3b30af52-8e82-4b55-bda8-e46e64bf141f",
     "source": "core",
-    "name": "NPC Action Table",
+    "name": "NPC Action",
     "section": "npc tables",
     "rollTable": {
       "1": "Cascade Failure: The NPC has catastrophically failed at their action. They suffer a Severe Setback of the player’s choice. A weapon attack misses, with a Severe Setback chosen by the players.",
@@ -137,7 +137,7 @@
   {
     "id": "30b5379a-45d5-4e7b-9dfa-45b2ecead926",
     "source": "core",
-    "name": "Morale Table",
+    "name": "Morale",
     "section": "npc tables",
     "rollTable": {
       "1": "Surrender: The NPCs surrender to whoever is attacking them. If there is nobody to surrender to, they will recklessly flee.",
@@ -152,7 +152,7 @@
   {
     "id": "70f6e979-f511-4407-a276-11b3e63f6758",
     "source": "core",
-    "name": "Retreat Table",
+    "name": "Retreat",
     "section": "npc tables",
     "rollTable": {
       "1": "Disastrous Escape: The group retreat to an adjacent location of their choice within the Region Map, but at a severe cost. They suffer a Severe Setback and may be pursued.",
@@ -167,7 +167,7 @@
   {
     "id": "044f3890-2d62-4bbe-b851-cc978a68ae8e",
     "source": "core",
-    "name": "Crawler Deterioration Table",
+    "name": "Crawler Deterioration",
     "section": "crawler",
     "rollTable": {
       "1": "Your Union Crawler loses 5 Structure Points and a Bay chosen at random is Damaged until repaired to the Intact Condition.",
@@ -182,7 +182,7 @@
   {
     "id": "f4e866be-1092-4760-896c-fa3571b983d6",
     "source": "core",
-    "name": "Crawler Damage Table",
+    "name": "Crawler Damage",
     "section": "crawler",
     "rollTable": {
       "1": "Your Union Crawler is Destroyed as a mass series of malfunctions causes it to entirely collapse. Roll on the Union Crawler Destruction Table.",
@@ -197,7 +197,7 @@
   {
     "id": "50f0dcca-d2ac-408d-a916-55027485299b",
     "source": "core",
-    "name": "Crawler Destruction Table",
+    "name": "Crawler Destruction",
     "section": "crawler",
     "rollTable": {
       "1": "The Union Crawler suffers critical damage, goes into a reactor meltdown, and explodes. The Union Crawler is destroyed beyond all recognition. It cannot be rebuilt.  Everyone and everything on board and within Medium Range takes 50 Structure Points of damage, and can be assumed destroyed or killed outright.",
@@ -212,7 +212,7 @@
   {
     "id": "a1b2c3d4-e5f6-47a8-b9c0-d1e2f3a4b5c6",
     "source": "core",
-    "name": "Keepsake Table",
+    "name": "Keepsake",
     "section": "character",
     "rollTable": {
       "1": "Stuffed Toy",
@@ -242,7 +242,7 @@
   {
     "id": "b2c3d4e5-f6a7-48b9-c0d1-e2f3a4b5c6d7",
     "source": "core",
-    "name": "Motto Table",
+    "name": "Motto",
     "section": "character",
     "rollTable": {
       "1": "Live and let live.",
@@ -272,7 +272,7 @@
   {
     "id": "c3d4e5f6-a7b8-49ca-d1e2-f3a4b5c6d7e8",
     "source": "core",
-    "name": "Pilot Appearance Table",
+    "name": "Pilot Appearance",
     "section": "character",
     "rollTable": {
       "1": "Stocky",
@@ -302,7 +302,7 @@
   {
     "id": "d4e5f6a7-b8c9-4adb-e2f3-a4b5c6d7e8f9",
     "source": "core",
-    "name": "AI Personality Table",
+    "name": "AI Personality",
     "section": "character",
     "rollTable": {
       "1": "Megalomaniacal to a fault.",
@@ -332,7 +332,7 @@
   {
     "id": "e5f6a7b8-c9da-4bec-f3a4-b5c6d7e8f9a0",
     "source": "core",
-    "name": "Quirks Table",
+    "name": "Quirks",
     "section": "mech",
     "rollTable": {
       "1": "Flashing RGB lights",
@@ -362,7 +362,7 @@
   {
     "id": "f6a7b8c9-daeb-4cfd-a4b5-c6d7e8f9a0b1",
     "source": "core",
-    "name": "Mech Appearance Table",
+    "name": "Mech Appearance",
     "section": "mech",
     "rollTable": {
       "1": "Flashy, bright, vibrant, paint job",
@@ -392,7 +392,7 @@
   {
     "id": "a7b8c9da-ebfc-4dfe-b5c6-d7e8f9a0b1c2",
     "source": "core",
-    "name": "Mech Pattern Names Table",
+    "name": "Mech Pattern Names",
     "section": "mech",
     "rollTable": {
       "1": "Bullseye",
@@ -422,7 +422,7 @@
   {
     "id": "b8c9daeb-fcde-4eff-c6d7-e8f9a0b1c2d3",
     "source": "core",
-    "name": "Crawler Name Table",
+    "name": "Crawler Name",
     "section": "crawler",
     "rollTable": {
       "1": "Big Smoke",
