@@ -3,7 +3,7 @@
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
   "version": "1.0.0",
-  "generated": "2025-10-18T15:40:31.371Z",
+  "generated": "2025-10-18T17:41:37.577Z",
   "schemas": [
     {
       "id": "abilities",
@@ -223,7 +223,7 @@
       "description": "Random tables and roll tables in Salvage Union",
       "dataFile": "data/tables.json",
       "schemaFile": "schemas/tables.schema.json",
-      "itemCount": 14,
+      "itemCount": 18,
       "requiredFields": [
         "id",
         "name",

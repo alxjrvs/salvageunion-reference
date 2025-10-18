@@ -21,7 +21,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc --project tsconfig.build.json",
+    "build": "bun run docs && tsc --project tsconfig.build.json",
     "prepublishOnly": "npm run build && npm run validate && npm run typecheck",
     "validate": "tsx tools/validateAll.ts",
     "parse": "tsx tools/parsePdf.ts",
