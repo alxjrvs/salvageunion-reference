@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-10-11
 
 ### Added
+
 - TypeScript ORM with 18 model classes
 - Auto-generated TypeScript types from JSON Schema
 - 513+ validated game data items across all categories
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Full page references to source material
 
 ### Models
+
 - Abilities (95 items)
 - AbilityTreeRequirements (20 items)
 - BioTitans (6 items)
@@ -39,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Vehicles (7 items)
 
 ### Features
+
 - Type-safe queries with full TypeScript support
 - JSON Schema validation for all data
 - Direct access to raw JSON data and schemas
@@ -46,4 +49,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Functional programming methods (map, filter, some, every)
 - Random selection utilities
 - Search and filtering capabilities
-

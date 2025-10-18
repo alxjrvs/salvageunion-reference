@@ -5,9 +5,9 @@ A comprehensive, schema-validated JSON dataset and TypeScript ORM for the **Salv
 ## Features
 
 ✅ **513+ game data items** across 18 categories
-✅ **Type-safe TypeScript ORM** with auto-generated types
+✅ **Type-safe TypeScript ORM** with inferred types
 ✅ **JSON Schema validation** for all data
-✅ **Zero dependencies** at runtime
+✅ **Zero runtime dependencies**
 ✅ **ESM-only** for modern JavaScript
 ✅ **Full page references** to source material
 
@@ -15,6 +15,8 @@ A comprehensive, schema-validated JSON dataset and TypeScript ORM for the **Salv
 
 ```bash
 npm install salvageunion-data
+# or
+bun add salvageunion-data
 ```
 
 ## Quick Start
@@ -30,7 +32,9 @@ console.log(`Total chassis: ${Chassis.count()}`);
 
 // Find by name
 const atlas = Chassis.findByName("Atlas");
-console.log(`${atlas.name}: ${atlas.stats.structure_pts} SP`);
+if (atlas) {
+  console.log(`${atlas.name}: ${atlas.stats.structure_pts} SP`);
+}
 
 // Query by tech level
 const t3Equipment = Equipment.findByTechLevel(3);
@@ -100,46 +104,56 @@ All models provide these base methods:
 
 ### Model-Specific Methods
 
-**Equipment**
+#### Equipment
 
 ```typescript
 Equipment.findByTechLevel(3);
 Equipment.findByTrait("armor");
 Equipment.getArmor();
 Equipment.getWeapons();
+Equipment.findByActivationCost(1);
+Equipment.getWithActions();
 ```
 
-**Chassis**
+#### Chassis
 
 ```typescript
 Chassis.findByTechLevel(2);
 Chassis.findByMinStructurePoints(20);
 Chassis.findByMinSystemSlots(4);
+Chassis.findByMinModuleSlots(2);
+Chassis.findByMinCargoCap(5);
 ```
 
-**Systems**
+#### Systems
 
 ```typescript
 Systems.findByTechLevel(3);
+Systems.findBySalvageValue(2);
+Systems.findBySlotsRequired(1);
+Systems.findByTrait("melee");
 Systems.getWeapons();
 Systems.findByDamageType("SP");
 Systems.findByMinDamage(3);
 ```
 
-**Modules**
+#### Modules
 
 ```typescript
 Modules.findByTechLevel(2);
+Modules.findBySalvageValue(1);
 Modules.findBySlotsRequired(1);
-Modules.getRecommended();
 Modules.findByTrait("communicator");
+Modules.getRecommended();
+Modules.findByActionType("action");
 ```
 
-**Abilities**
+#### Abilities
 
 ```typescript
 Abilities.findByLevel(1);
 Abilities.findByTree("Mechanical Knowledge");
+Abilities.findByTrait("passive");
 Abilities.getAllTrees();
 ```
 
@@ -158,21 +172,21 @@ import chassisSchema from "salvageunion-data/schemas/chassis.schema.json";
 
 ## TypeScript Support
 
-Full TypeScript support with auto-generated types:
+Full TypeScript support with inferred types from JSON data:
 
 ```typescript
 import { SalvageUnionData } from "salvageunion-data";
-import type {
-  SalvageUnionMechChassis,
-  SalvageUnionEquipment,
-  SalvageUnionSystems,
-} from "salvageunion-data";
+import type { Chassis, Equipment, System } from "salvageunion-data";
 
-const { Chassis } = SalvageUnionData;
+const { Chassis: ChassisModel } = SalvageUnionData;
 
 // Fully typed
-const atlas: SalvageUnionMechChassis[number] | undefined =
-  Chassis.findByName("Atlas");
+const atlas: Chassis | undefined = ChassisModel.findByName("Atlas");
+
+// Type-safe queries
+const heavyEquipment: Equipment[] = SalvageUnionData.Equipment.where(
+  (e) => (e.techLevel ?? 0) >= 3,
+);
 ```
 
 ## 🤝 Contributing
@@ -180,16 +194,16 @@ const atlas: SalvageUnionMechChassis[number] | undefined =
 Contributions are welcome! Please:
 
 1. Ensure all data includes page references
-2. Validate changes with `npm run validate`
-3. Run type checking with `npm run typecheck`
+2. Validate changes with `bun run validate`
+3. Run type checking with `bun run typecheck`
 4. Follow existing data structure patterns
 
 ## 📜 License
 
-ISC License
+CC-BY-4.0 License
 
 ## 🙏 Credits
 
 This data was originally copied from [wfreinhart/salvage-union-tracker](https://github.com/wfreinhart/salvage-union-tracker) and later forked from [sbergot/salvageunion-data](https://github.com/sbergot/salvageunion-data).
 
-**Salvage Union** is published by [Leyline Press](https://leyline.press/).
+Salvage Union is copyrighted by Leyline Press. Salvage Union and the “Powered by Salvage” logo are used with permission of Leyline Press, under the Salvage Union Open Game Licence 1.0b

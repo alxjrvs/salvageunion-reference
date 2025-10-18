@@ -26,7 +26,6 @@
     "validate": "tsx tools/validateAll.ts",
     "parse": "tsx tools/parsePdf.ts",
     "docs": "tsx tools/generateDocs.ts",
-    "test": "npm run validate",
     "typecheck": "tsc --noEmit"
   },
   "repository": {
@@ -46,24 +45,20 @@
     "post-apocalyptic"
   ],
   "author": "Alex Jarvis",
-  "license": "ISC",
+  "license": "Salvage Union Open Game Licence 1.0b",
   "bugs": {
     "url": "https://github.com/alxjrvs/salvageunion-data/issues"
   },
   "homepage": "https://github.com/alxjrvs/salvageunion-data#readme",
   "devDependencies": {
     "@types/node": "^20.10.0",
-    "@vitest/ui": "^3.2.4",
     "jsonschema": "^1.4.1",
+    "pdf.js-extract": "^0.2.1",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "vitest": "^3.2.4"
   },
-  "dependencies": {
-    "pdf.js-extract": "^0.2.1"
-  },
   "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.0.0"
+    "node": ">=18.0.0"
   }
 }
