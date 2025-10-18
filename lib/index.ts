@@ -92,22 +92,23 @@ export type {
 } from "./types/inferred.js";
 
 export class SalvageUnionReference {
-  public static Abilities = new AbilitiesModel();
-  public static AbilityTreeRequirements = new AbilityTreeRequirementsModel();
-  public static BioTitans = new BioTitansModel();
-  public static Chassis = new ChassisModel();
-  public static Classes = new ClassesModel();
-  public static Crawlers = new CrawlersModel();
-  public static Creatures = new CreaturesModel();
-  public static Drones = new DronesModel();
-  public static Equipment = new EquipmentModel();
-  public static Keywords = new KeywordsModel();
-  public static Meld = new MeldModel();
-  public static Modules = new ModulesModel();
-  public static NPCs = new NPCsModel();
-  public static Squads = new SquadsModel();
-  public static Systems = new SystemsModel();
-  public static Tables = new TablesModel();
-  public static Traits = new TraitsModel();
-  public static Vehicles = new VehiclesModel();
+  public static readonly Abilities: AbilitiesModel = new AbilitiesModel();
+  public static readonly AbilityTreeRequirements: AbilityTreeRequirementsModel =
+    new AbilityTreeRequirementsModel();
+  public static readonly BioTitans: BioTitansModel = new BioTitansModel();
+  public static readonly Chassis: ChassisModel = new ChassisModel();
+  public static readonly Classes: ClassesModel = new ClassesModel();
+  public static readonly Crawlers: CrawlersModel = new CrawlersModel();
+  public static readonly Creatures: CreaturesModel = new CreaturesModel();
+  public static readonly Drones: DronesModel = new DronesModel();
+  public static readonly Equipment: EquipmentModel = new EquipmentModel();
+  public static readonly Keywords: KeywordsModel = new KeywordsModel();
+  public static readonly Meld: MeldModel = new MeldModel();
+  public static readonly Modules: ModulesModel = new ModulesModel();
+  public static readonly NPCs: NPCsModel = new NPCsModel();
+  public static readonly Squads: SquadsModel = new SquadsModel();
+  public static readonly Systems: SystemsModel = new SystemsModel();
+  public static readonly Tables: TablesModel = new TablesModel();
+  public static readonly Traits: TraitsModel = new TraitsModel();
+  public static readonly Vehicles: VehiclesModel = new VehiclesModel();
 }
