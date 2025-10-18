@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionNPCs } from "../types/npcs.js";
+import { NPC, SalvageUnionNPCs } from "../types/inferred.js";
 import npcsData from "../../data/npcs.json" with { type: "json" };
 import npcsSchema from "../../schemas/npcs.schema.json" with { type: "json" };
 
-type NPC = SalvageUnionNPCs[number];
 
 export class NPCsModel extends BaseModel<NPC> {
   constructor() {

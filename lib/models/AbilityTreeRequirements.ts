@@ -1,8 +1,7 @@
-import { SalvageUnionAbilityTreeRequirements } from "../types/ability-tree-requirements.js";
+import { AbilityTreeRequirement, SalvageUnionAbilityTreeRequirements } from "../types/inferred.js";
 import abilityTreeRequirementsData from "../../data/ability-tree-requirements.json" with { type: "json" };
 import abilityTreeRequirementsSchema from "../../schemas/ability-tree-requirements.schema.json" with { type: "json" };
 
-type AbilityTreeRequirement = SalvageUnionAbilityTreeRequirements[number];
 
 export class AbilityTreeRequirementsModel {
   protected data: AbilityTreeRequirement[];

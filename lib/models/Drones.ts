@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionDrones } from "../types/drones.js";
+import { Drone, SalvageUnionDrones } from "../types/inferred.js";
 import dronesData from "../../data/drones.json" with { type: "json" };
 import dronesSchema from "../../schemas/drones.schema.json" with { type: "json" };
 
-type Drone = SalvageUnionDrones[number];
 
 export class DronesModel extends BaseModel<Drone> {
   constructor() {

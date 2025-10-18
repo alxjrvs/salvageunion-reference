@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionAbilities, Traits } from "../types/abilities.js";
+import { Ability, SalvageUnionAbilities, Traits } from "../types/inferred.js";
 import abilitiesData from "../../data/abilities.json" with { type: "json" };
 import abilitiesSchema from "../../schemas/abilities.schema.json" with { type: "json" };
 
-type Ability = SalvageUnionAbilities[number];
 
 export class AbilitiesModel extends BaseModel<Ability> {
   constructor() {

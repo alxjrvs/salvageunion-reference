@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionModules } from "../types/modules.js";
+import { Module, SalvageUnionModules } from "../types/inferred.js";
 import modulesData from "../../data/modules.json" with { type: "json" };
 import modulesSchema from "../../schemas/modules.schema.json" with { type: "json" };
 
-type Module = SalvageUnionModules[number];
 type Trait = NonNullable<Module["traits"]>[number];
 
 export class ModulesModel extends BaseModel<Module> {

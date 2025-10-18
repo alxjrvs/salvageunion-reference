@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionVehicles } from "../types/vehicles.js";
+import { Vehicle, SalvageUnionVehicles } from "../types/inferred.js";
 import vehiclesData from "../../data/vehicles.json" with { type: "json" };
 import vehiclesSchema from "../../schemas/vehicles.schema.json" with { type: "json" };
 
-type Vehicle = SalvageUnionVehicles[number];
 
 export class VehiclesModel extends BaseModel<Vehicle> {
   constructor() {

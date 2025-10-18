@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionCreatures } from "../types/creatures.js";
+import { Creature, SalvageUnionCreatures } from "../types/inferred.js";
 import creaturesData from "../../data/creatures.json" with { type: "json" };
 import creaturesSchema from "../../schemas/creatures.schema.json" with { type: "json" };
 
-type Creature = SalvageUnionCreatures[number];
 
 export class CreaturesModel extends BaseModel<Creature> {
   constructor() {

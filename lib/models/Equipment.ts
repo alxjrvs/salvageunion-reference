@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionEquipment } from "../types/equipment.js";
+import { Equipment, SalvageUnionEquipment } from "../types/inferred.js";
 import equipmentData from "../../data/equipment.json" with { type: "json" };
 import equipmentSchema from "../../schemas/equipment.schema.json" with { type: "json" };
 
-type Equipment = SalvageUnionEquipment[number];
 type Trait = NonNullable<Equipment["traits"]>[number];
 
 export class EquipmentModel extends BaseModel<Equipment> {

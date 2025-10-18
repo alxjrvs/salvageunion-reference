@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionMechChassis } from "../types/chassis.js";
+import { Chassis, SalvageUnionMechChassis } from "../types/inferred.js";
 import chassisData from "../../data/chassis.json" with { type: "json" };
 import chassisSchema from "../../schemas/chassis.schema.json" with { type: "json" };
 
-type Chassis = SalvageUnionMechChassis[number];
 
 export class ChassisModel extends BaseModel<Chassis> {
   constructor() {

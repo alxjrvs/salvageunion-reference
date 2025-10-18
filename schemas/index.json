@@ -3,7 +3,7 @@
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
   "version": "1.0.0",
-  "generated": "2025-10-09T19:45:14.554Z",
+  "generated": "2025-10-18T15:40:31.371Z",
   "schemas": [
     {
       "id": "abilities",
@@ -13,6 +13,7 @@
       "schemaFile": "schemas/abilities.schema.json",
       "itemCount": 95,
       "requiredFields": [
+        "id",
         "name",
         "tree",
         "source",
@@ -28,6 +29,7 @@
       "schemaFile": "schemas/ability-tree-requirements.schema.json",
       "itemCount": 20,
       "requiredFields": [
+        "id",
         "tree",
         "requirement",
         "page"
@@ -41,6 +43,7 @@
       "schemaFile": "schemas/bio-titans.schema.json",
       "itemCount": 6,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "structurePoints",
@@ -55,6 +58,7 @@
       "schemaFile": "schemas/chassis.schema.json",
       "itemCount": 30,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "page"
@@ -68,6 +72,7 @@
       "schemaFile": "schemas/classes.schema.json",
       "itemCount": 11,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "type",
@@ -82,6 +87,7 @@
       "schemaFile": "schemas/crawlers.schema.json",
       "itemCount": 5,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "page"
@@ -95,6 +101,7 @@
       "schemaFile": "schemas/creatures.schema.json",
       "itemCount": 6,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "hitPoints",
@@ -109,6 +116,7 @@
       "schemaFile": "schemas/drones.schema.json",
       "itemCount": 9,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "structurePoints",
@@ -123,6 +131,7 @@
       "schemaFile": "schemas/equipment.schema.json",
       "itemCount": 44,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "page"
@@ -149,6 +158,7 @@
       "schemaFile": "schemas/meld.schema.json",
       "itemCount": 5,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "page"
@@ -174,6 +184,7 @@
       "schemaFile": "schemas/npcs.schema.json",
       "itemCount": 6,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "hitPoints",
@@ -188,6 +199,7 @@
       "schemaFile": "schemas/squads.schema.json",
       "itemCount": 9,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "page"
@@ -213,6 +225,7 @@
       "schemaFile": "schemas/tables.schema.json",
       "itemCount": 14,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "page"
@@ -239,6 +252,7 @@
       "schemaFile": "schemas/vehicles.schema.json",
       "itemCount": 7,
       "requiredFields": [
+        "id",
         "name",
         "source",
         "structurePoints",

@@ -26,8 +26,6 @@
     "validate": "tsx tools/validateAll.ts",
     "parse": "tsx tools/parsePdf.ts",
     "docs": "tsx tools/generateDocs.ts",
-    "generate:types": "tsx tools/generateTypes.ts",
-    "example": "tsx examples/orm-usage.ts",
     "test": "npm run validate",
     "typecheck": "tsc --noEmit"
   },
@@ -56,7 +54,6 @@
   "devDependencies": {
     "@types/node": "^20.10.0",
     "@vitest/ui": "^3.2.4",
-    "json-schema-to-typescript": "^15.0.4",
     "jsonschema": "^1.4.1",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",

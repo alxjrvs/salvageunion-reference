@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionClasses } from "../types/classes.js";
+import { Class, SalvageUnionClasses } from "../types/inferred.js";
 import classesData from "../../data/classes.json" with { type: "json" };
 import classesSchema from "../../schemas/classes.schema.json" with { type: "json" };
 
-type Class = SalvageUnionClasses[number];
 
 export class ClassesModel extends BaseModel<Class> {
   constructor() {

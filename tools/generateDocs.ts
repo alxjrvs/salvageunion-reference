@@ -1,9 +1,3 @@
-#!/usr/bin/env tsx
-/**
- * Generate documentation from schema files
- * This ensures documentation stays in sync with actual schemas
- */
-
 import fs from "fs";
 import path from "path";
 
@@ -15,10 +9,6 @@ interface SchemaInfo {
   schemaFile: string;
   itemCount: number;
   requiredFields: string[];
-}
-
-interface DataFileCounts {
-  [key: string]: number;
 }
 
 // Get all schema files
@@ -77,7 +67,6 @@ function getRequiredFields(schema: any, schemaId: string): string[] {
   return [];
 }
 
-// Parse schema file to get info
 function parseSchemaFile(schemaFile: string): SchemaInfo | null {
   try {
     const fullPath = path.join(process.cwd(), "schemas", schemaFile);
@@ -101,7 +90,6 @@ function parseSchemaFile(schemaFile: string): SchemaInfo | null {
   }
 }
 
-// Generate schema index
 function generateSchemaIndex(schemas: SchemaInfo[]): void {
   const index = {
     $schema: "http://json-schema.org/draft-07/schema#",
@@ -145,87 +133,8 @@ function generateVSCodeSettings(schemas: SchemaInfo[]): void {
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, JSON.stringify(settings, null, 2) + "\n");
   console.log(
-    `✅ Generated .vscode/settings.json (${schemas.length} mappings)`
+    `✅ Generated .vscode/settings.json (${schemas.length} mappings)`,
   );
-}
-
-// Generate README section
-function generateReadmeSection(schemas: SchemaInfo[]): string {
-  const totalItems = schemas.reduce((sum, s) => sum + s.itemCount, 0);
-
-  let section = "## 📚 Overview\n\n";
-  section +=
-    "This repository contains structured game data with full JSON Schema validation, including:\n\n";
-
-  // Group by category
-  const categories = {
-    Pilot: schemas.filter((s) =>
-      ["abilities", "classes", "equipment"].includes(s.id)
-    ),
-    Mech: schemas.filter((s) =>
-      ["systems", "modules", "chassis"].includes(s.id)
-    ),
-    Enemies: schemas.filter((s) =>
-      ["bio-titans", "creatures", "npcs", "squads", "meld"].includes(s.id)
-    ),
-    Vehicles: schemas.filter((s) =>
-      ["drones", "vehicles", "crawlers"].includes(s.id)
-    ),
-    Reference: schemas.filter((s) =>
-      ["keywords", "traits", "tables", "ability-tree-requirements"].includes(
-        s.id
-      )
-    ),
-  };
-
-  for (const [category, items] of Object.entries(categories)) {
-    if (items.length > 0) {
-      section += `**${category}:**\n`;
-      for (const item of items) {
-        section += `- **${item.itemCount} ${item.title}**\n`;
-      }
-      section += "\n";
-    }
-  }
-
-  section += `**Total: ${totalItems} items across ${schemas.length} data files**\n\n`;
-  section +=
-    "All data entries include **page references** to the source material for easy verification.\n";
-
-  return section;
-}
-
-// Generate data file listing
-function generateDataFileListing(schemas: SchemaInfo[]): string {
-  let listing =
-    "```\nsalvageunion-data/\n├── data/                    # JSON data files\n";
-
-  for (const schema of schemas) {
-    const fileName = path.basename(schema.dataFile);
-    const comment = `${schema.title} (${schema.itemCount} items)`;
-    listing += `│   ├── ${fileName.padEnd(28)} # ${comment}\n`;
-  }
-
-  listing += "│\n";
-  listing += "├── schemas/                 # JSON Schema definitions\n";
-  listing += "│   ├── shared/              # Shared schema definitions\n";
-  listing +=
-    "│   │   ├── common.schema.json    # Common types (damage, traits, etc.)\n";
-  listing +=
-    "│   │   ├── enums.schema.json     # Enumerations (sources, ranges, etc.)\n";
-  listing +=
-    "│   │   └── objects.schema.json   # Complex objects (systems, actions, etc.)\n";
-  listing += "│   └── *.schema.json        # Individual data file schemas\n";
-  listing += "│\n";
-  listing += "└── tools/                   # Utility scripts\n";
-  listing += "    ├── validateAll.ts       # Schema validation tool\n";
-  listing += "    ├── format.ts            # JSON formatting tool\n";
-  listing += "    ├── generateDocs.ts      # Documentation generator\n";
-  listing += "    ├── parsePdf.ts          # PDF parsing tool\n";
-  listing += "    └── searchPdf.ts         # PDF search tool\n";
-  listing += "```\n";
-
-  return listing;
 }
 
 // Main function
@@ -245,20 +154,6 @@ function main() {
   // Generate VSCode settings
   generateVSCodeSettings(schemas);
 
-  // Generate documentation snippets
-  const readmeSection = generateReadmeSection(schemas);
-  const dataListing = generateDataFileListing(schemas);
-
-  // Save snippets for manual inclusion
-  const snippetsDir = path.join(process.cwd(), ".docs-snippets");
-  fs.mkdirSync(snippetsDir, { recursive: true });
-
-  fs.writeFileSync(path.join(snippetsDir, "readme-overview.md"), readmeSection);
-  console.log("✅ Generated .docs-snippets/readme-overview.md");
-
-  fs.writeFileSync(path.join(snippetsDir, "data-file-listing.md"), dataListing);
-  console.log("✅ Generated .docs-snippets/data-file-listing.md");
-
   // Generate required fields table
   let requiredFieldsTable = "| Data Type | Required Fields |\n";
   requiredFieldsTable += "|-----------|----------------|\n";
@@ -267,15 +162,9 @@ function main() {
     requiredFieldsTable += `| ${schema.title} | ${fields} |\n`;
   }
 
-  fs.writeFileSync(
-    path.join(snippetsDir, "required-fields-table.md"),
-    requiredFieldsTable
-  );
-  console.log("✅ Generated .docs-snippets/required-fields-table.md");
-
   console.log("\n✨ Documentation generation complete!");
   console.log(
-    "\n💡 Tip: Use the snippets in .docs-snippets/ to update documentation files"
+    "\n💡 Tip: Use the snippets in .docs-snippets/ to update documentation files",
   );
 }
 

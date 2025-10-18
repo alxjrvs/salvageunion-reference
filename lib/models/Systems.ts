@@ -1,9 +1,8 @@
 import { BaseModel } from "../BaseModel.js";
-import { SalvageUnionSystems } from "../types/systems.js";
+import { System, SalvageUnionSystems } from "../types/inferred.js";
 import systemsData from "../../data/systems.json" with { type: "json" };
 import systemsSchema from "../../schemas/systems.schema.json" with { type: "json" };
 
-type System = SalvageUnionSystems[number];
 type Trait = NonNullable<System["traits"]>[number];
 
 export class SystemsModel extends BaseModel<System> {
