@@ -11,6 +11,18 @@ interface SchemaInfo {
   requiredFields: string[];
 }
 
+// Get version from package.json
+function getPackageVersion(): string {
+  try {
+    const packageJsonPath = path.join(process.cwd(), "package.json");
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+    return packageJson.version || "1.0.0";
+  } catch (error) {
+    console.warn("⚠️  Could not read package.json version, using default");
+    return "1.0.0";
+  }
+}
+
 // Get all schema files
 function getSchemaFiles(): string[] {
   const schemasDir = path.join(process.cwd(), "schemas");
@@ -91,12 +103,24 @@ function parseSchemaFile(schemaFile: string): SchemaInfo | null {
 }
 
 function generateSchemaIndex(schemas: SchemaInfo[]): void {
-  const index = {
+  const outputPath = path.join(process.cwd(), "schemas", "index.json");
+
+  // Read existing index if it exists
+  let existingIndex: any = null;
+  if (fs.existsSync(outputPath)) {
+    try {
+      existingIndex = JSON.parse(fs.readFileSync(outputPath, "utf-8"));
+    } catch (error) {
+      // If we can't parse it, we'll regenerate it
+    }
+  }
+
+  const newIndex = {
     $schema: "http://json-schema.org/draft-07/schema#",
     title: "Salvage Union Data Schema Catalog",
     description:
       "Catalog of all available schemas in the salvageunion-data repository",
-    version: "1.0.0",
+    version: getPackageVersion(),
     generated: new Date().toISOString(),
     schemas: schemas.map((s) => ({
       id: s.id,
@@ -109,8 +133,23 @@ function generateSchemaIndex(schemas: SchemaInfo[]): void {
     })),
   };
 
-  const outputPath = path.join(process.cwd(), "schemas", "index.json");
-  fs.writeFileSync(outputPath, JSON.stringify(index, null, 2) + "\n");
+  // Check if only the generated field would change
+  if (existingIndex) {
+    const existingWithoutGenerated = { ...existingIndex, generated: undefined };
+    const newWithoutGenerated = { ...newIndex, generated: undefined };
+
+    if (
+      JSON.stringify(existingWithoutGenerated) ===
+      JSON.stringify(newWithoutGenerated)
+    ) {
+      console.log(
+        `⏭️  Skipped schemas/index.json (only generated timestamp would change)`,
+      );
+      return;
+    }
+  }
+
+  fs.writeFileSync(outputPath, JSON.stringify(newIndex, null, 2) + "\n");
   console.log(`✅ Generated schemas/index.json (${schemas.length} schemas)`);
 }
 

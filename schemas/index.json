@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "1.0.1",
-  "generated": "2025-10-18T17:43:13.380Z",
+  "version": "1.0.2",
+  "generated": "2025-10-18T17:58:12.840Z",
   "schemas": [
     {
       "id": "abilities",
@@ -223,7 +223,7 @@
       "description": "Random tables and roll tables in Salvage Union",
       "dataFile": "data/tables.json",
       "schemaFile": "schemas/tables.schema.json",
-      "itemCount": 18,
+      "itemCount": 22,
       "requiredFields": [
         "id",
         "name",
