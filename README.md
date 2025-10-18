@@ -1,6 +1,6 @@
-# Salvage Union Data
+# Salvage Union Reference
 
-A comprehensive, schema-validated JSON dataset and TypeScript ORM for the **Salvage Union** tabletop RPG, published by [Leyline Press](https://leyline.press/).
+A comprehensive, schema-validated JSON reference and TypeScript ORM for the **Salvage Union** tabletop RPG, published by [Leyline Press](https://leyline.press/).
 
 ## Features
 
