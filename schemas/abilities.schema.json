@@ -50,6 +50,41 @@
       "traits": {
         "$ref": "shared/common.schema.json#/definitions/traits"
       },
+      "options": {
+        "type": "array",
+        "description": "List of options or choices for this ability",
+        "items": {
+          "oneOf": [
+            {
+              "type": "string",
+              "description": "Simple text option"
+            },
+            {
+              "type": "object",
+              "description": "Structured option with label and value",
+              "additionalProperties": false,
+              "required": ["label", "value"],
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Display label for the option"
+                },
+                "value": {
+                  "type": "string",
+                  "description": "Value or effect of the option"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "subAbilities": {
+        "type": "array",
+        "description": "Named sub-abilities with separate mechanics",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
+      },
       "page": {
         "type": "integer",
         "minimum": 1,

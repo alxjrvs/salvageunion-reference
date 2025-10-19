@@ -18,7 +18,14 @@
     "tree": "Mechanical Knowledge",
     "level": 2,
     "description": "Build rapport, and ask favours of other mechanics, salvagers, and workers.",
-    "effect": "You can easily converse and build rapport with other mechanics, salvagers, workers, and similar wasteland folk. You invent a local saying to exchange with the person you are talking to, something like, \"The only thing that overcomes hard luck is hard work\" or \"Get the show on the road\". Explain what this means. You are now friendly with this NPC and can ask them for three of the following favours. You may choose the same option multiple times. • Restore up to 4 SP on a single Mech or Vehicle with at least 1 SP. • Answer any question about the local area, Mechs, and mechanical & engineering topics. • Repair a single damaged System or Module to Intact Condition. This must be of a Tech Level the wastelander could reasonably repair as decided by the Mediator. • Provide food, shelter, and lodgings for you and the other salvagers in your crew. • Provide a favour within their power and ability to grant as adjudicated by the Mediator. If you meet that same person again you may repeat the phrase and they will offer you a single favour.",
+    "effect": "You can easily converse and build rapport with other mechanics, salvagers, workers, and similar wasteland folk. You invent a local saying to exchange with the person you are talking to, something like, \"The only thing that overcomes hard luck is hard work\" or \"Get the show on the road\". Explain what this means. You are now friendly with this NPC and can ask them for three of the following favours. You may choose the same option multiple times. If you meet that same person again you may repeat the phrase and they will offer you a single favour.",
+    "options": [
+      "Restore up to 4 SP on a single Mech or Vehicle with at least 1 SP.",
+      "Answer any question about the local area, Mechs, and mechanical & engineering topics.",
+      "Repair a single damaged System or Module to Intact Condition. This must be of a Tech Level the wastelander could reasonably repair as decided by the Mediator.",
+      "Provide food, shelter, and lodgings for you and the other salvagers in your crew.",
+      "Provide a favour within their power and ability to grant as adjudicated by the Mediator."
+    ],
     "activationCost": 3,
     "actionType": "Turn",
     "page": 28
@@ -122,7 +129,20 @@
     "tree": "Advanced Engineer",
     "level": 1,
     "description": "Improved repair; gain an additional 4SP when using Repair abilities or Systems.",
-    "effect": "You have specialised in getting your hands dirty, you can patch up even the most brutally damaged Mechs with ease, even in the midst of conflict. Mender (Passive): When you, or a Mech you are piloting uses any Ability that restores Structure Points, the Ability restores an additional 4 SP each time you use it. For example, if you use the Welding Laser's 'Weld' Ability, it restores an additional 4 Structure Points when used. Quick Fix (1AP Free Action): When you activate this Ability, you may use any Turn Action Ability you have access to that restores Structure Points as a Free Action. For example, you could use the Welding Lasers 'Weld' Ability as a Free Action instead of a Turn Action. This allows you to use the Ability multiple times in a turn.",
+    "effect": "You have specialised in getting your hands dirty, you can patch up even the most brutally damaged Mechs with ease, even in the midst of conflict.",
+    "subAbilities": [
+      {
+        "name": "Mender",
+        "actionType": "Passive",
+        "description": "When you, or a Mech you are piloting uses any Ability that restores Structure Points, the Ability restores an additional 4 SP each time you use it. For example, if you use the Welding Laser's 'Weld' Ability, it restores an additional 4 Structure Points when used."
+      },
+      {
+        "name": "Quick Fix",
+        "actionType": "Free",
+        "activationCost": 1,
+        "description": "When you activate this Ability, you may use any Turn Action Ability you have access to that restores Structure Points as a Free Action. For example, you could use the Welding Lasers 'Weld' Ability as a Free Action instead of a Turn Action. This allows you to use the Ability multiple times in a turn."
+      }
+    ],
     "activationCost": 1,
     "actionType": "Passive",
     "page": 30
@@ -202,7 +222,7 @@
     "tree": "Hacking",
     "level": 2,
     "description": "Attempt to destroy Systems and Modules on target Mech.",
-    "effect": "You attempt to hack into a System or Module in order to disable, damage, or destroy it in some way. Choose a target System or Module in Range. ROLL THE DIE: 20: The System or Module is destroyed. 11 - 19: The System or Module is damaged. 6 - 10: The System or Module is inoperable and cannot be used until the end of the next turn. 2 - 5: The hacking attempt fails. 1: The hacking attempt fails and the target cannot be targeted by any Abilities with the Hacking Trait for the next 10 minutes.",
+    "effect": "You attempt to hack into a System or Module in order to disable, damage, or destroy it in some way. Choose a target System or Module in Range.",
     "activationCost": 2,
     "range": "Medium",
     "actionType": "Turn",
@@ -228,7 +248,7 @@
     "tree": "Hacking",
     "level": 3,
     "description": "Attempt to Shutdown target Mech in Range.",
-    "effect": "This allows you to flood any number of Mechs or Vehicles in Close Range with numerous false signals, overwhelming them with so much information that they temporarily Shutdown. This costs 1 AP per Mech or Vehicle you target. ROLL THE DIE: 20: All targets Shutdown for 10 minutes. 11 - 19: All targets Shutdown for one round. They are active again at the end of their next turn. 6 - 10: All targets must choose to either move or take an action during its next turn. 2 - 5: The hacking attempt fails. 1: All Mechs within Close Range of your Mech Shutdown for 10 minutes. This includes your Mech and those of any allies.",
+    "effect": "This allows you to flood any number of Mechs or Vehicles in Close Range with numerous false signals, overwhelming them with so much information that they temporarily Shutdown. This costs 1 AP per Mech or Vehicle you target.",
     "activationCost": "Variable",
     "range": "Medium",
     "actionType": "Turn",
@@ -254,7 +274,7 @@
     "tree": "Electronics",
     "level": 1,
     "description": "Ask questions about Systems, Modules, or Technology.",
-    "effect": "You can casually answer questions about Systems, Modules, Mechs, or technology even if you do not actually know the answer. ROLL THE DIE: 20: You can ask the Mediator five questions about it and they must give you true answers. 11 - 19: You can ask the Mediator three questions about it and they must give you true answers. 6 - 10: You can ask the Mediator two questions about it. One of these answers must be true, but the other can be false. 2 - 5: You do not actually know, and must make up a convincing answer to save your pride. 1: You do not know the answer, and everyone realises this.",
+    "effect": "You can casually answer questions about Systems, Modules, Mechs, or technology even if you do not actually know the answer.",
     "activationCost": 1,
     "actionType": "Turn",
     "rollTable": {
@@ -378,7 +398,7 @@
     "tree": "Advanced Hacking",
     "level": 3,
     "description": "Hack multiple Mechs in Range with a complex worm virus.",
-    "effect": "You have programmed a complex worm virus that can traverse through a network of multiple Mechs, causing havoc and chaos amongst their installed Systems and Modules, and even potentially disabling their Chassis entirely. Choose any number of target Mechs within Medium Range. This Ability costs 1 AP per Mech you target. ROLL THE DIE: 20: The Chassis of all targeted Mechs is damaged and inoperable until repaired. 11 - 19: A System and Module of your choice on each Mech is damaged. 6 - 10: A System or Module of your choice on each Mech is damaged. 2 - 5: A System or Module on one targeted Mech of your choice is damaged. 1: The Worm fails to upload to the targets and has no effect.",
+    "effect": "You have programmed a complex worm virus that can traverse through a network of multiple Mechs, causing havoc and chaos amongst their installed Systems and Modules, and even potentially disabling their Chassis entirely. Choose any number of target Mechs within Medium Range. This Ability costs 1 AP per Mech you target.",
     "activationCost": "Variable",
     "range": "Medium",
     "actionType": "Turn",
@@ -464,7 +484,13 @@
     "tree": "Salvaging",
     "level": 3,
     "description": "Retrieve Chassis, Systems, Modules, Scrap, and Equipment from your Crawler.",
-    "effect": "You can call in an emergency salvage drop that deploys from your Union Crawler. When you activate this Ability, choose one of the following options and it will be delivered to you from your Union Crawler in 10 minutes. You must be in the same region as Union Crawler. • Any Mech Chassis you currently have stored in your Union Crawler. • Any System or Module you currently have stored in your Union Crawler. • Up to 10 Scrap of any type you have stored in your Union Crawler. • Up to 5 of any Pilot Equipment you currently have stored in your Union Crawler.",
+    "effect": "You can call in an emergency salvage drop that deploys from your Union Crawler. When you activate this Ability, choose one of the following options and it will be delivered to you from your Union Crawler in 10 minutes. You must be in the same region as Union Crawler.",
+    "options": [
+      "Any Mech Chassis you currently have stored in your Union Crawler.",
+      "Any System or Module you currently have stored in your Union Crawler.",
+      "Up to 10 Scrap of any type you have stored in your Union Crawler.",
+      "Up to 5 of any Pilot Equipment you currently have stored in your Union Crawler."
+    ],
     "activationCost": 3,
     "actionType": "Short",
     "page": 40
@@ -476,7 +502,15 @@
     "tree": "Trading",
     "level": 1,
     "description": "Learn information about an NPC you’re conversing with.",
-    "effect": "You have a knack for being able to read people during a conversation. Choose an NPC that you are in conversation with. During the conversation, you can spend 1 AP to learn one of the following options. You can do this as many times as you wish during the conversation. • You learn something the target intends to do soon. • You learn something the target wants. • You learn what the target is currently feeling. • You learn what internally motivates the target. • You learn one of the target's weaknesses or flaws. • You learn if the target is telling the truth or not.",
+    "effect": "You have a knack for being able to read people during a conversation. Choose an NPC that you are in conversation with. During the conversation, you can spend 1 AP to learn one of the following options. You can do this as many times as you wish during the conversation.",
+    "options": [
+      "You learn something the target intends to do soon.",
+      "You learn something the target wants.",
+      "You learn what the target is currently feeling.",
+      "You learn what internally motivates the target.",
+      "You learn one of the target's weaknesses or flaws.",
+      "You learn if the target is telling the truth or not."
+    ],
     "activationCost": 1,
     "actionType": "Turn",
     "page": 40
@@ -520,7 +554,29 @@
     "tree": "Leadership",
     "level": 1,
     "description": "Sing a song to set a mood for an audience of NPCs.",
-    "effect": "You sing a song that kindles strong feelings in NPCs nearby. Read or sing the chorus of a song at the table, and describe your performance. You may write your own or use one from another songwriter. Choose a mood to set for your audience: Bright: Hearts swell with friendly enthusiasm, sparking joyful conversations. Sombre: The audience falls silent, and begins a sorrowful reflection on their suffering. Proud: Zealous feelings are ignited, making the crowd noisy and excitable. Fear: You strike fear into those gathered around you, making them agitated, furtive, and itching for a solution. Comfort: The crowd is calmed and comforted with warm feelings of safety, home, and rosy tinted memories.",
+    "effect": "You sing a song that kindles strong feelings in NPCs nearby. Read or sing the chorus of a song at the table, and describe your performance. You may write your own or use one from another songwriter. Choose a mood to set for your audience:",
+    "options": [
+      {
+        "label": "Bright",
+        "value": "Hearts swell with friendly enthusiasm, sparking joyful conversations."
+      },
+      {
+        "label": "Sombre",
+        "value": "The audience falls silent, and begins a sorrowful reflection on their suffering."
+      },
+      {
+        "label": "Proud",
+        "value": "Zealous feelings are ignited, making the crowd noisy and excitable."
+      },
+      {
+        "label": "Fear",
+        "value": "You strike fear into those gathered around you, making them agitated, furtive, and itching for a solution."
+      },
+      {
+        "label": "Comfort",
+        "value": "The crowd is calmed and comforted with warm feelings of safety, home, and rosy tinted memories."
+      }
+    ],
     "activationCost": 1,
     "actionType": "Turn",
     "page": 41
@@ -532,7 +588,7 @@
     "tree": "Leadership",
     "level": 2,
     "description": "Intimidate opponents and force them to accept your demands or flee.",
-    "effect": "You strike fear into the hearts of any number of targets within Range. The targets must be able to understand you. Explain how you do this, and ask for what you want. ROLL THE DIE: 20: They flee from you or acquiesce to your demands. You may choose which and may demand something in addition to what you originally requested. 11-19: They flee from you or acquiesce to your demands. 6-10: They flee from you, but barricade themselves in or alert something stronger to your presence.",
+    "effect": "You strike fear into the hearts of any number of targets within Range. The targets must be able to understand you. Explain how you do this, and ask for what you want.",
     "activationCost": 2,
     "range": "Medium",
     "actionType": "Turn",
@@ -576,7 +632,21 @@
     "tree": "Advanced Hauler",
     "level": 2,
     "description": "Improve your ability with the Mechapult System.",
-    "effect": "You have become a master of the sacred art of scrap flinging, making you highly versed at using the Mechapult System (see p. 166). Let me double check that (1AP Free Action): You may activate this Ability when you make an attack with the Mechapult System. You may roll three times on the Mechapult Table and choose the result you want. Load 'er up! (1AP Free Action): When you activate this Ability you may attack twice with the Mechapult System on your turn. Make each attack separately. You may only activate this Ability once per turn. This follows all other normal rules for using the Mechapult.",
+    "effect": "You have become a master of the sacred art of scrap flinging, making you highly versed at using the Mechapult System (see p. 166).",
+    "subAbilities": [
+      {
+        "name": "Let me double check that",
+        "actionType": "Free",
+        "activationCost": 1,
+        "description": "You may activate this Ability when you make an attack with the Mechapult System. You may roll three times on the Mechapult Table and choose the result you want."
+      },
+      {
+        "name": "Load 'er up!",
+        "actionType": "Free",
+        "activationCost": 1,
+        "description": "When you activate this Ability you may attack twice with the Mechapult System on your turn. Make each attack separately. You may only activate this Ability once per turn. This follows all other normal rules for using the Mechapult."
+      }
+    ],
     "activationCost": 1,
     "actionType": "Free",
     "page": 42
@@ -694,7 +764,17 @@
     "tree": "Sleuth",
     "level": 3,
     "description": "Disguise yourself and create a false identity.",
-    "effect": "You carefully prepare a convincing alternate identity. You cannot create a Persona of an existing person or the identity of someone who holds an exclusive position, like the known CEO of a corpo. Each persona consists of a wardrobe, credentials, and a backstory. You may create and describe each element of the persona. When you use your alternate identity, you must outwardly present yourself as that person by wearing their costume. This persona lasts until you choose to remove it or reveal yourself. 2 AP: You create a persona of a wastelander of average means, like a scrap hauler, rad diver, rat farmer, travelling trader, mercenary, or guide. You can effortlessly blend into crowds and travel unnoticed in public spaces. 4 AP: You create the persona of someone in a formal position of power, wealth, or influence, e.g. a union representative, military officer, captain, wealthy business owner, prominent socialite, or politician. You can effortlessly mingle with such people and those 'beneath' you will treat you with deference.",
+    "effect": "You carefully prepare a convincing alternate identity. You cannot create a Persona of an existing person or the identity of someone who holds an exclusive position, like the known CEO of a corpo. Each persona consists of a wardrobe, credentials, and a backstory. You may create and describe each element of the persona. When you use your alternate identity, you must outwardly present yourself as that person by wearing their costume. This persona lasts until you choose to remove it or reveal yourself.",
+    "options": [
+      {
+        "label": "2 AP",
+        "value": "You create a persona of a wastelander of average means, like a scrap hauler, rad diver, rat farmer, travelling trader, mercenary, or guide. You can effortlessly blend into crowds and travel unnoticed in public spaces."
+      },
+      {
+        "label": "4 AP",
+        "value": "You create the persona of someone in a formal position of power, wealth, or influence, e.g. a union representative, military officer, captain, wealthy business owner, prominent socialite, or politician. You can effortlessly mingle with such people and those 'beneath' you will treat you with deference."
+      }
+    ],
     "activationCost": "Variable",
     "actionType": "Long",
     "page": 49
@@ -964,7 +1044,7 @@
     "tree": "Advanced Soldier",
     "level": 3,
     "description": "Make an attack against all targets in Range with an equipped weapon.",
-    "effect": "You have learned to deliver a flurry of attacks against your foes. Choose a weapon you are equipped with or Weapons System on your Mech. You can attack all enemies in Range of that weapon with a single whirlwind salvo. If the weapon causes you to gain Heat or has any additional costs you must pay them for each target. ROLL THE DIE: 19 - 20: You strike all enemies within Range of the weapon, hitting them for double damage. 11 - 18: You hit all enemies within Range of the weapon. 6 - 10: You hit all enemies within Range of the weapon. Choose one: you deal half damage to all targets or you deal full damage, but your weapon is damaged after finishing the attack. 2 - 5: You hit one enemy in Range of the weapon, then your weapon is damaged. 1: Your attacks miss. You spin wildly and then collapse, falling Prone.",
+    "effect": "You have learned to deliver a flurry of attacks against your foes. Choose a weapon you are equipped with or Weapons System on your Mech. You can attack all enemies in Range of that weapon with a single whirlwind salvo. If the weapon causes you to gain Heat or has any additional costs you must pay them for each target.",
     "activationCost": 3,
     "actionType": "Turn",
     "rollTable": {
@@ -1007,7 +1087,7 @@
     "tree": "Cyborg",
     "level": 1,
     "description": "Gain additional actions on your turn, with the risk that you could cause yourself harm.",
-    "effect": "Stim glands inserted into your adrenal veins allow you to push yourself beyond your normal means. You can use stims as a Pilot or whilst in your Mech and their effects apply to the Mech you are piloting. ROLL THE DIE: 20: For the next 10 minutes you can take up to three actions on your turn or Push an action for free. 11 - 19: For the next 10 minutes you can take up to two actions on your turn or Push an action for free. 6 - 10: You can act twice this turn or Push an action for free. 2 - 5: Everything slows to a crawl. For the next 10 minutes you must choose between moving or taking an action on your turn. You also cannot Push rolls. 1: You overdose on stims, your HP is reduced to 0 and you must roll on the Critical Injury Table.",
+    "effect": "Stim glands inserted into your adrenal veins allow you to push yourself beyond your normal means. You can use stims as a Pilot or whilst in your Mech and their effects apply to the Mech you are piloting.",
     "activationCost": 3,
     "actionType": "Free",
     "rollTable": {
@@ -1234,7 +1314,7 @@
     "tree": "Legendary Smuggler",
     "level": 1,
     "description": "Gain a Knife Missile, a small floating assassination device you control.",
-    "effect": "You acquire and train in the use of a Knife Missile that only you can use. Add this to your Pilot Equipment. A Knife Missile is a miniscule, tadpole-sized assassination device that flies towards a target and penetrates their skull, instantly killing them. You control the Knife Missile remotely via a Knife Missile Controller. The Knife Missile can be set to attack any creature within Far Range. You do not need to be able to see the creature. The Knife Missile is able to fly directly to the target, avoiding detection as well as any obstacles, it can fly through vents, cracks, and get into significantly hard to reach places. The Knife Missile does not affect Meld or Bio-Titans. ROLL THE DIE: 20: The target creature is killed, and any number of other target creatures within Close Range of the original target can also be killed if you desire. 11 - 19: The target creature is killed. 6 - 10: You can choose to kill the target creature, but if you do you are detected and your location is compromised. 2 - 5: The target narrowly avoids being killed, but is reduced to 0 HP and must roll on the Critical Injury Table. 1: The target avoids harm, your location is compromised, and you are detected and pursued.",
+    "effect": "You acquire and train in the use of a Knife Missile that only you can use. Add this to your Pilot Equipment. A Knife Missile is a miniscule, tadpole-sized assassination device that flies towards a target and penetrates their skull, instantly killing them. You control the Knife Missile remotely via a Knife Missile Controller. The Knife Missile can be set to attack any creature within Far Range. You do not need to be able to see the creature. The Knife Missile is able to fly directly to the target, avoiding detection as well as any obstacles, it can fly through vents, cracks, and get into significantly hard to reach places. The Knife Missile does not affect Meld or Bio-Titans.",
     "activationCost": 3,
     "range": "Far",
     "actionType": "Turn",
@@ -1289,7 +1369,7 @@
     "tree": "Union Rep",
     "level": 2,
     "description": "Direct other Pilots to carry out missions in exchange for a Scrap reward.",
-    "effect": "As a Union Rep you can call upon the aid of other Pilots to support you in a variety of missions. You can use this Ability once during Downtime. Name the mission you wish to be completed, and name the reward. This must be something of value, such as scrap or salvage, that fits the mission. This can be discussed between the player and the Mediator. Sample Missions: • Assassinate a person. • Destroy a Mech. • Destroy the defences of a military base. • Find out who is responsible for a crime. • Escort a trade caravan or VIP to a location. • Perform reconnaissance in a settlement or area of the wastelands. • Retrieve a piece of salvage or equipment. The standard reward for any of these missions is 5 Tech 3 Scrap or equivalent. If the mission is deemed particularly difficult, for example, assassinating an incredibly well protected target, performing reconnaissance in a main corporate arco, or defending a high profile VIP, the reward is increased to 10 Tech 3 Scrap or the equivalent. The Mediator may adjust these values as fits the situation. ROLL THE DIE: 20: The mission is completed within a week. You pay the reward during Downtime. 11 - 19: The mission is completed within two weeks. You pay the reward during Downtime. 6 - 10: The mission will be completed within two weeks, but only if you pay twice the agreed reward during Downtime. 2 - 5: You wait two weeks and realise the mission is not completed. You may post the mission offer again or choose a different one. 1: The mission fails, and cannot be completed as something has gone badly wrong, for example, the target of an assassination attempt escapes and places a bounty on you instead, the trade caravan is destroyed, or the salvage is taken by a corpo or raider band instead.",
+    "effect": "As a Union Rep you can call upon the aid of other Pilots to support you in a variety of missions. You can use this Ability once during Downtime. Name the mission you wish to be completed, and name the reward. This must be something of value, such as scrap or salvage, that fits the mission. This can be discussed between the player and the Mediator. Sample Missions: • Assassinate a person. • Destroy a Mech. • Destroy the defences of a military base. • Find out who is responsible for a crime. • Escort a trade caravan or VIP to a location. • Perform reconnaissance in a settlement or area of the wastelands. • Retrieve a piece of salvage or equipment. The standard reward for any of these missions is 5 Tech 3 Scrap or equivalent. If the mission is deemed particularly difficult, for example, assassinating an incredibly well protected target, performing reconnaissance in a main corporate arco, or defending a high profile VIP, the reward is increased to 10 Tech 3 Scrap or the equivalent. The Mediator may adjust these values as fits the situation.",
     "actionType": "DownTime",
     "rollTable": {
       "1": "The mission fails, and cannot be completed as something has gone badly wrong, for example, the target of an assassination attempt escapes and places a bounty on you instead, the trade caravan is destroyed, or the salvage is taken by a corpo or raider band instead.",
