@@ -28,6 +28,6 @@ jobs:
 
       - name: Publish to NPM
         run: |
-          bun run moon :publish -u
+          bun publish --no-git-checks --access=public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
