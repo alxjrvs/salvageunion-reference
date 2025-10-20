@@ -9,7 +9,6 @@
  *   tsx tools/rules-parser/pdfSearch.ts --case-sensitive "Search Term"
  */
 
-import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
 import { createRequire } from 'module'
@@ -49,9 +48,9 @@ async function searchPdf(
 
     // Split text by pages - pdf-parse v2 doesn't provide per-page text directly
     // We'll use a simple heuristic: split by form feed or page breaks
-    const pageTexts = pdfResult.text.split('\f').filter((t) => t.trim())
+    const pageTexts = pdfResult.text.split('\f').filter((t: string) => t.trim())
 
-    pageTexts.forEach((pageText, index) => {
+    pageTexts.forEach((pageText: string, index: number) => {
       const pageNum = index + 1
       const matches = pageText.match(searchRegex)
 
@@ -60,7 +59,7 @@ async function searchPdf(
         const words = pageText.split(/\s+/)
         const contextParts: string[] = []
 
-        words.forEach((word, wordIndex) => {
+        words.forEach((word: string, wordIndex: number) => {
           if (searchRegex.test(word)) {
             const start = Math.max(0, wordIndex - 20)
             const end = Math.min(words.length, wordIndex + 21)
@@ -73,7 +72,7 @@ async function searchPdf(
 
         results.push({
           page: pageNum,
-          matches: [...new Set(matches)],
+          matches: [...new Set(matches)] as string[],
           context: contextParts.join('\n---\n'),
         })
       }
