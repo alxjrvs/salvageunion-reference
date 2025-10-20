@@ -2,7 +2,7 @@
   {
     "id": "8bffb508-8c8f-418d-b6ce-f24f7266e41b",
     "name": "Augmented",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "description": "Nearly everyone on your Union Crawler is augmented in some way and your medical technicians are able to implement a variety of body modifications with ease.",
     "abilities": [
       {
@@ -19,7 +19,7 @@
   {
     "id": "3d1d9f79-9c56-43fa-a4c9-6dfe10b9aac9",
     "name": "Battle",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "description": "Your Crawler is equipped to better defend itself in the wastelands. It bristles with armour and armaments and many on board are highly trained and effective fighters",
     "abilities": [
       {
@@ -36,7 +36,7 @@
   {
     "id": "4e317382-046b-4a35-bce8-065c6d659a7b",
     "name": "Engineering",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "description": "Your Crawler is designed for maximum efficiency, functioning with the bare minimum of scrap expenditure thanks to the efforts of your well-oiled engineering team. ",
     "abilities": [
       {
@@ -53,7 +53,7 @@
   {
     "id": "d850cd93-f1cc-462b-bfa4-babfb0b2812e",
     "name": "Exploratory",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "description": "Exploratory Crawlers are designed to get to the hardest to reach places in the wasteland. They have unique and even bizarre locomotion systems that let them travel over terrain that range from spider-like legs and multiple articulated tracks to tunnelling maws and complex hover systems.",
     "abilities": [
       {
@@ -70,7 +70,7 @@
   {
     "id": "46e44f56-be78-49d8-bfe4-32628ad4b8ef",
     "name": "Trade Caravan",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "description": "Your Crawler is geared towards trade in the wastelands, giving you better deals and attracting more folk willing to trade better quality goods",
     "abilities": [
       {

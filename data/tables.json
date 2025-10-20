@@ -1,7 +1,7 @@
 [
   {
     "id": "fa9860bb-83c2-4d8c-b100-40708948257d",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Core Mechanic",
     "section": "core",
     "rollTable": {
@@ -16,7 +16,7 @@
   },
   {
     "id": "cdbc20d9-ff63-4272-805b-f148f0c01752",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Group Initiative",
     "section": "action scene",
     "rollTable": {
@@ -31,7 +31,7 @@
   },
   {
     "id": "dcd888a2-dc2d-4f45-94eb-ae6138761931",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Critical Injury",
     "section": "damage",
     "rollTable": {
@@ -46,7 +46,7 @@
   },
   {
     "id": "aa54dcd4-efd0-4cbb-83dc-4cf6f0411066",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Critical Damage",
     "section": "damage",
     "rollTable": {
@@ -61,7 +61,7 @@
   },
   {
     "id": "0050af76-7d88-43e7-b098-1a6af7656353",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Reactor Overload",
     "section": "heat",
     "rollTable": {
@@ -76,7 +76,7 @@
   },
   {
     "id": "abca780b-da93-47b0-91e6-290da910e2fd",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Area Salvage",
     "section": "salvaging",
     "rollTable": {
@@ -91,7 +91,7 @@
   },
   {
     "id": "acdc85ee-056c-4edc-95be-e25f0ab9b319",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Mech Salvage",
     "section": "salvaging",
     "rollTable": {
@@ -106,7 +106,7 @@
   },
   {
     "id": "2bdb98de-31a2-4eb1-b8f5-cf42f44ff618",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Reaction Roll",
     "section": "npc tables",
     "rollTable": {
@@ -121,7 +121,7 @@
   },
   {
     "id": "3b30af52-8e82-4b55-bda8-e46e64bf141f",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "NPC Action",
     "section": "npc tables",
     "rollTable": {
@@ -136,7 +136,7 @@
   },
   {
     "id": "30b5379a-45d5-4e7b-9dfa-45b2ecead926",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Morale",
     "section": "npc tables",
     "rollTable": {
@@ -151,7 +151,7 @@
   },
   {
     "id": "70f6e979-f511-4407-a276-11b3e63f6758",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Retreat",
     "section": "npc tables",
     "rollTable": {
@@ -166,7 +166,7 @@
   },
   {
     "id": "044f3890-2d62-4bbe-b851-cc978a68ae8e",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Crawler Deterioration",
     "section": "crawler",
     "rollTable": {
@@ -181,7 +181,7 @@
   },
   {
     "id": "f4e866be-1092-4760-896c-fa3571b983d6",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Crawler Damage",
     "section": "crawler",
     "rollTable": {
@@ -196,7 +196,7 @@
   },
   {
     "id": "50f0dcca-d2ac-408d-a916-55027485299b",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Crawler Destruction",
     "section": "crawler",
     "rollTable": {
@@ -211,7 +211,7 @@
   },
   {
     "id": "a1b2c3d4-e5f6-47a8-b9c0-d1e2f3a4b5c6",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Keepsake",
     "section": "character",
     "rollTable": {
@@ -241,7 +241,7 @@
   },
   {
     "id": "b2c3d4e5-f6a7-48b9-c0d1-e2f3a4b5c6d7",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Motto",
     "section": "character",
     "rollTable": {
@@ -271,7 +271,7 @@
   },
   {
     "id": "c3d4e5f6-a7b8-49ca-d1e2-f3a4b5c6d7e8",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Pilot Appearance",
     "section": "character",
     "rollTable": {
@@ -301,7 +301,7 @@
   },
   {
     "id": "d4e5f6a7-b8c9-4adb-e2f3-a4b5c6d7e8f9",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "AI Personality",
     "section": "character",
     "rollTable": {
@@ -331,7 +331,7 @@
   },
   {
     "id": "e5f6a7b8-c9da-4bec-f3a4-b5c6d7e8f9a0",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Quirks",
     "section": "mech",
     "rollTable": {
@@ -361,7 +361,7 @@
   },
   {
     "id": "f6a7b8c9-daeb-4cfd-a4b5-c6d7e8f9a0b1",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Mech Appearance",
     "section": "mech",
     "rollTable": {
@@ -391,7 +391,7 @@
   },
   {
     "id": "a7b8c9da-ebfc-4dfe-b5c6-d7e8f9a0b1c2",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Mech Pattern Names",
     "section": "mech",
     "rollTable": {
@@ -421,7 +421,7 @@
   },
   {
     "id": "b8c9daeb-fcde-4eff-c6d7-e8f9a0b1c2d3",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Crawler Name",
     "section": "crawler",
     "rollTable": {

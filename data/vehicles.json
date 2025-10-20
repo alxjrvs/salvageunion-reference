@@ -1,7 +1,7 @@
 [
   {
     "id": "c1d53d2d-9abd-4a72-8e78-2674eb7d7329",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Power Loader",
     "description": "A pneumatically powered heavy loader for moving cargo.",
     "systems": [
@@ -33,7 +33,7 @@
   },
   {
     "id": "cc95bd31-30c2-4f47-b1b3-a881eb228c0d",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Box Wheel",
     "description": "A four seater box wheel vehicle designed for recreational driving. Not a lot of these nowadays.",
     "systems": [
@@ -57,7 +57,7 @@
   },
   {
     "id": "b31e45ef-412a-46ae-bf21-83ef01477199",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Fighting Box Wheel",
     "description": "An improvised fighting vehicle, modified to carry heavy weaponry.",
     "systems": [
@@ -100,7 +100,7 @@
   },
   {
     "id": "92f28dba-4b4b-4e4d-81f8-bc9e279d92f5",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Armoured Box Wheel",
     "description": "An armoured, wheeled vehicle that carries personnel and provides fire support",
     "systems": [
@@ -140,7 +140,7 @@
   },
   {
     "id": "2ee55c7e-c8fb-406f-93f9-93a5b2a9ba37",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Tank",
     "description": "A conventional tracked, armoured battle vehicle.",
     "systems": [
@@ -172,7 +172,7 @@
   },
   {
     "id": "1e582dbd-3d2c-4408-a43c-d961ba63fb37",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Rotorcraft",
     "description": "A flying vehicle that can hover over terrain.",
     "systems": [
@@ -223,7 +223,7 @@
   },
   {
     "id": "79640c87-2166-44fa-a9e5-396de3fe865a",
-    "source": "core",
+    "source": "Salvage Union Core Book",
     "name": "Machine Gun Turret",
     "description": "A static gun emplacement.",
     "systems": [
