@@ -31,7 +31,7 @@
         "description": "A Grizzled Veteran is part of your Union Crawler. Name them and give them a Keepsake and Motto. They have 10 HP.\n The Grizzled Veteran helps to keep the Union Crawler Armoury well stocked. Pilots may take two pieces of Pilot Equipment from the Armoury instead of one per Downtime. In addition, once per Downtime they may answer a question relating to combat, military, strategy, and tactics.  They must provide a true answer to the question.\n When defending the Union Crawler, the Grizzled Veteran will fight alongside a Rifle Squad they have trained. They may also pilot a Mech in the defence of the Crawler, though they will not venture out into the wastes for those days are behind them."
       }
     ],
-    "page": 216
+    "page": 157
   },
   {
     "id": "4e317382-046b-4a35-bce8-065c6d659a7b",
@@ -48,7 +48,7 @@
         "description": "An engineer who is one step ahead of their peers has joined your Union Crawler. Name them and give them a Keepsake and Motto. They have 4 HP.\n Once per Downtime, the Research Engineer can be asked to craft a single Mech Chassis, System, or Module. This can be of a Tech Level one higher than the current Tech Level of your Union Crawler. For example, the Research Engineer could craft you a Tech 3 System if you were in a Tech 2 Union Crawler. You must provide them the correct amount of Scrap to do this and it follows all the normal crafting rules."
       }
     ],
-    "page": 216
+    "page": 27
   },
   {
     "id": "d850cd93-f1cc-462b-bfa4-babfb0b2812e",
@@ -90,6 +90,6 @@
         "description": "A Savvy Trader is part of your Union Crawler.  Name them and give them a Keepsake and Motto. They have 4 HP.\n The Savvy Trader reduces the cost of any Mech Chassis, System, or Module available in the Improved Trading Bay by 1 Scrap to a minimum of one. "
       }
     ],
-    "page": 217
+    "page": 76
   }
 ]

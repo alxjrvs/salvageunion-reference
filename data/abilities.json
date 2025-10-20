@@ -28,7 +28,7 @@
     ],
     "activationCost": 3,
     "actionType": "Turn",
-    "page": 28
+    "page": 27
   },
   {
     "id": "fba6ecb0-86c6-4b4a-9daf-f0056c79c88f",
@@ -66,7 +66,7 @@
     "activationCost": 2,
     "range": "Close",
     "actionType": "Turn",
-    "page": 29
+    "page": 45
   },
   {
     "id": "8fff03d8-8831-4143-af99-b3439bf9a306",
@@ -79,7 +79,7 @@
     "activationCost": "Variable",
     "range": "Close",
     "actionType": "Long",
-    "page": 29
+    "page": 27
   },
   {
     "id": "d51afc02-2683-46e1-acba-353d85eaf071",
@@ -103,7 +103,7 @@
     "effect": "Your ability to improvise extends to being able to craft mech parts from scrap in the field. When you are in an area with Scrap at your disposal, you may craft any System or Module of your choice of a Tech Level equal to or lower than your Union Crawler. You must spend 1 Scrap of the Tech Level of the System or Module or higher to use this Ability. This System or Module gains the Unwieldy Trait, and is destroyed on any roll of 1-5 when used, in addition to any other setbacks.",
     "activationCost": 3,
     "actionType": "Short",
-    "page": 29
+    "page": 27
   },
   {
     "id": "c7f121eb-6e9f-46e6-9500-f65860ddd08c",
@@ -120,7 +120,7 @@
         "type": "pilot equipment"
       }
     ],
-    "page": 29
+    "page": 30
   },
   {
     "id": "8f954763-3014-4184-ace6-a7409ff00401",
@@ -145,7 +145,7 @@
     ],
     "activationCost": 1,
     "actionType": "Passive",
-    "page": 30
+    "page": 27
   },
   {
     "id": "195fec1d-d749-4e5c-b7c1-f4986f14114f",
@@ -182,7 +182,7 @@
     "description": "Your Union Crawler no longer needs to pay upkeep and does not deteriorate.",
     "effect": "You have learned every inch of your Union Crawler, and know it better than the back of your own hand. The team of onboard engineers you work with are at peak efficiency when you are on board. Your Union Crawler no longer needs to pay Upkeep as long as you are on board during Downtime, and it does not deteriorate.",
     "actionType": "Passive",
-    "page": 31
+    "page": 27
   },
   {
     "id": "d2f752e1-8de5-4d4a-902d-8113106a982b",
@@ -195,7 +195,7 @@
     "activationCost": 3,
     "range": "Close",
     "actionType": "Long",
-    "page": 31
+    "page": 27
   },
   {
     "id": "4cbf7319-164f-4b51-b417-1a7e8fa5d6a0",
@@ -285,7 +285,7 @@
       "2-5": "You do not actually know, and must make up a convincing answer to save your pride.",
       "type": "standard"
     },
-    "page": 34
+    "page": 33
   },
   {
     "id": "f6d6d8d7-0b3e-4ea8-906f-582281a98a5e",
@@ -312,7 +312,7 @@
         "type": "pilot equipment"
       }
     ],
-    "page": 35
+    "page": 33
   },
   {
     "id": "420ab386-ad77-4857-9679-1e4a01e3d090",
@@ -323,7 +323,7 @@
     "description": "Gain integrated Thermal Optics, Zoom Optics, or IR Night Vision Optics.",
     "effect": "You gain your choice of integrated Thermal Optics, Zoom Optics, or IR Night Vision Optics. This is installed in your cranium via surgical procedure, and grants your Pilot all of the Abilities of the chosen Module. You must spend AP instead of EP to use any of these Abilities. During Downtime you may undergo a further surgical procedure in a Med Bay to remove your current integrated optics and install another one of your choice from the list above.",
     "actionType": "Passive",
-    "page": 35
+    "page": 33
   },
   {
     "id": "1e6183d7-0b67-40ab-91f4-134090c8846b",
@@ -332,9 +332,22 @@
     "tree": "Augmentation",
     "level": 2,
     "description": "Gain a set of integrated Bionic Arms. Gives an improved base attack.",
-    "effect": "You gain a set of bionic arms, surgically installed to any specification you desire. They provide you the following weapon attack, where X is equal to the Tech Level of your Union Crawler. Range: Close // Damage: X SP // Melee In addition, you can heal a Minor Injury during Downtime by spending 2 Tech 1 Scrap at any Crafting Bay. You also increase your Pilot's Max HP by 2.",
+    "effect": "You gain a set of bionic arms, surgically installed to any specification you desire. In addition, you can heal a Minor Injury during Downtime by spending 2 Tech 1 Scrap at any Crafting Bay. You also increase your Pilot's Max HP by 2.",
     "actionType": "Passive",
-    "page": 35
+    "subAbilities": [
+      {
+        "name": "Bionic Arms Attack",
+        "description": "Melee attack with your bionic arms, where X is equal to the Tech Level of your Union Crawler.",
+        "damage": "X SP",
+        "range": "Close",
+        "traits": [
+          {
+            "type": "melee"
+          }
+        ]
+      }
+    ],
+    "page": 33
   },
   {
     "id": "4823bdf3-b501-423d-abd6-79ca1fd6203d",
@@ -363,7 +376,7 @@
         "type": "hacking"
       }
     ],
-    "page": 36
+    "page": 33
   },
   {
     "id": "fb98af0a-ac72-449d-ab9d-5a5f9b839ced",
@@ -415,7 +428,7 @@
       "2-5": "A System or Module on one targeted Mech of your choice is damaged.",
       "type": "standard"
     },
-    "page": 36
+    "page": 33
   },
   {
     "id": "da3d0c65-c347-49cc-97c4-fd6cae9c2737",
@@ -433,7 +446,7 @@
         "type": "hacking"
       }
     ],
-    "page": 37
+    "page": 33
   },
   {
     "id": "d7c9ca3a-dc7a-4284-8736-2d0e02d8a2d9",
@@ -451,7 +464,7 @@
         "type": "hacking"
       }
     ],
-    "page": 37
+    "page": 33
   },
   {
     "id": "6ab9bdca-bd59-4bbd-afd7-ddcdaf944953",
@@ -513,7 +526,7 @@
     ],
     "activationCost": 1,
     "actionType": "Turn",
-    "page": 40
+    "page": 45
   },
   {
     "id": "a9f7366a-90ab-4972-91cf-3c5b1032f35e",
@@ -533,7 +546,7 @@
       "2-5": "The deal is rejected.",
       "type": "standard"
     },
-    "page": 40
+    "page": 39
   },
   {
     "id": "1918ed6b-3341-4063-8be5-d87051701568",
@@ -545,7 +558,7 @@
     "effect": "You summon all your reserves in the face of death to finish what you started. Your reputation is all you have in the wastes and yours is that you get the job done no matter the cost. Activate this Ability when you are reduced to 0 HP or a Mech you are Piloting is reduced to 0 SP. You may immediately take any Turn Action or Reaction of your choice.",
     "activationCost": 2,
     "actionType": "Reaction",
-    "page": 41
+    "page": 45
   },
   {
     "id": "3ad259a6-00eb-4411-af1a-03c247536520",
@@ -579,7 +592,7 @@
     ],
     "activationCost": 1,
     "actionType": "Turn",
-    "page": 41
+    "page": 39
   },
   {
     "id": "9c2dad26-7d5d-45f8-9f60-d003e3151359",
@@ -600,7 +613,7 @@
       "2-5": "They stand strong in the face of you, ready to fight, and do not retreat or acquiesce.",
       "type": "standard"
     },
-    "page": 41
+    "page": 39
   },
   {
     "id": "c657f188-107b-40c1-82c0-c5b37bfb3e4b",
@@ -612,7 +625,7 @@
     "effect": "You inspire your Allies with a rousing speech. You can write your own or borrow one from a play or movie. It can be short; reading a few powerful lines is enough. Give the speech at the table. When you complete it, each of your Allies can re-roll a single die within the next 10 minutes, accepting the second result. In addition, count a result of 19-20 for all rolls they make as a 'Nailed It' result for the next 10 minutes. Finally, each Ally heals 4 Hit Points, as long as they have at least 1 Hit Point.",
     "activationCost": 3,
     "actionType": "Short",
-    "page": 42
+    "page": 39
   },
   {
     "id": "7ea637ab-14cf-4728-be2e-09adfddf5266",
@@ -623,7 +636,7 @@
     "description": "Increase your size and strength, as well as the size and strength of your Mech.",
     "effect": "Bigger is always better. Bigger than that is the best. Any Mech you Pilot increases its Max Structure Points by 3+X (where X is the Mech's Tech Level) and increases its Cargo Capacity by 6. In addition, your Pilot increases their Max Hit Points by 2 and Inventory Capacity by 4.",
     "actionType": "Passive",
-    "page": 42
+    "page": 39
   },
   {
     "id": "85d969a1-dcd1-4911-8299-4b80ffd79eb1",
@@ -649,7 +662,7 @@
     ],
     "activationCost": 1,
     "actionType": "Free",
-    "page": 42
+    "page": 39
   },
   {
     "id": "89c763c3-a8f3-4502-abf6-3f531e583299",
@@ -658,16 +671,33 @@
     "tree": "Advanced Hauler",
     "level": 3,
     "description": "Gain a special charge attack. Damage is based on cargo carried.",
-    "effect": "You have learned to use the momentum and bulk of the vast weight of cargo you can carry to crush your enemies and see them driven before you. When you activate this Ability, choose a target in Range. You make a special charge attack against the target. Roll to hit as normal. On a hit, this deals HP damage equal to the amount of Inventory Slots your Pilot has filled, for example, if you have 6 Inventory Slots filled, it deals 6 HP damage. Non-Bio-Titan or Meld creatures hit by this attack are knocked Prone and gain the Vulnerable Trait. If you use this Ability whilst piloting a Mech, it deals SP damage equal to the amount of Cargo Slots you currently have filled on your Mech, for example, if you have 10 Cargo Slots filled, the attack deals 10 SP damage. Any target hit by this attack is knocked Prone and gains the Vulnerable Trait.",
+    "effect": "You have learned to use the momentum and bulk of the vast weight of cargo you can carry to crush your enemies and see them driven before you. Any target hit by this attack is knocked Prone and gains the Vulnerable Trait.",
     "activationCost": 3,
     "range": "Medium",
     "actionType": "Turn",
-    "traits": [
+    "subAbilities": [
       {
-        "type": "melee"
+        "name": "Cargo Charge (Pilot)",
+        "description": "Make a special charge attack against a target in Range. Roll to hit as normal. On a hit, this deals HP damage equal to the amount of Inventory Slots your Pilot has filled. Non-Bio-Titan or Meld creatures hit by this attack are knocked Prone and gain the Vulnerable Trait.",
+        "range": "Medium",
+        "traits": [
+          {
+            "type": "melee"
+          }
+        ]
+      },
+      {
+        "name": "Cargo Charge (Mech)",
+        "description": "Make a special charge attack against a target in Range while piloting a Mech. Roll to hit as normal. On a hit, this deals SP damage equal to the amount of Cargo Slots you currently have filled on your Mech. Any target hit by this attack is knocked Prone and gains the Vulnerable Trait.",
+        "range": "Medium",
+        "traits": [
+          {
+            "type": "melee"
+          }
+        ]
       }
     ],
-    "page": 42
+    "page": 328
   },
   {
     "id": "a5b625c7-befc-4679-a334-2022f69ba9cb",
@@ -680,7 +710,7 @@
     "activationCost": 2,
     "range": "Close",
     "actionType": "Short",
-    "page": 43
+    "page": 39
   },
   {
     "id": "4154a12a-5149-4888-a305-b2b802a97d9b",
@@ -691,7 +721,7 @@
     "description": "Any Mech that you Pilot doubles its Structure Points and Cargo Capacity.",
     "effect": "You’ve been there, seen it all, and can take on just about anything thrown at you. Any Mech that you Pilot doubles its Structure Points and Cargo Capacity. This is doubled after all other modifiers are applied.",
     "actionType": "Passive",
-    "page": 43
+    "page": 39
   },
   {
     "id": "72471ee4-9e97-47fa-a3c7-22655452d0ed",
@@ -716,7 +746,7 @@
     "activationCost": 2,
     "range": "Long",
     "actionType": "Turn",
-    "page": 48
+    "page": 5
   },
   {
     "id": "74830a8a-dc87-4a10-b95e-0e3ac2ec8fb4",
@@ -731,7 +761,7 @@
         "type": "pilot equipment"
       }
     ],
-    "page": 48
+    "page": 45
   },
   {
     "id": "e1796802-3966-4286-a0e4-74cf816a26b3",
@@ -743,7 +773,7 @@
     "effect": "When you are in conversation with someone, you may appeal to something that motivates them in order to convince them to do something you want. The Mediator will decide what motivates them from one of the following options and secretly note it down. Goodness: They are motivated by an intrinsic desire to do good and treat others with kindness.",
     "activationCost": 1,
     "actionType": "Turn",
-    "page": 48
+    "page": 45
   },
   {
     "id": "6c36afb5-917c-4328-be35-2cd2cce9ccfc",
@@ -789,7 +819,7 @@
     "effect": "You have a knack for being the first to act in an altercation. When you activate this Ability you act first in the current situation. If using Group Initiative, assume you rolled a 20 on the Group Initiative Table, but you must be the first to act in the round and cannot choose to act later in the round.",
     "activationCost": 2,
     "actionType": "Free",
-    "page": 50
+    "page": 47
   },
   {
     "id": "ec6498ba-a242-42fd-a5b0-dbd7a4b63b40",
@@ -802,7 +832,7 @@
     "activationCost": 2,
     "range": "Medium",
     "actionType": "Free",
-    "page": 50
+    "page": 47
   },
   {
     "id": "921afb77-3d0f-49b5-9cc4-36372b24e00d",
@@ -811,13 +841,35 @@
     "tree": "Sniper",
     "level": 3,
     "description": "Gain a specialised sniper rifle that only you can use.",
-    "effect": "You acquire and train in the use of a Custom Sniper Rifle that only you can use. Damage: 2 SP // Range: Long Choose if it is a Ballistic or Energy weapon and it gains the respective Energy or Ballistic Trait. In addition, choose a modification from the list below. Rangefinder: The Custom Sniper Rifle increases its Range to Far. Laser Guidance: You may spend 2 AP to automatically hit with the Custom Sniper Rifle. It also gains the Targeter Trait. Pinpoint Targeter: You may spend 2 AP when you make an attack. If it hits, a System, Module, or appendage of your choice on the target is damaged. It also gains the Targeter Trait. Dum Dum Rounds: The Custom Sniper Rifle gains the Anti-Organic Trait. High Calibre Rounds: The Custom Sniper Rifle deals an additional 1 SP damage. Anti-Matter: The Custom Sniper Rifle gains the Deadly Trait. Flashy: The Custom Sniper Rifle gains the Flashy Trait. Silencer: The Custom Sniper Rifle gains the Silent Trait. Compact Design: The Custom Sniper Rifle is designed to fold down into a briefcase, making it easily concealable. At each Tech Level you may choose an additional modification for your Custom Sniper Rifle. In addition, its damage increases by 1 SP per Tech Level after the first, e.g. a Tech 3 Custom Sniper Rifle would deal 4 SP damage and you would be able to choose three modifications for it.",
+    "effect": "You acquire and train in the use of a Custom Sniper Rifle that only you can use. Choose if it is a Ballistic or Energy weapon and it gains the respective Energy or Ballistic Trait. At each Tech Level you may choose an additional modification for your Custom Sniper Rifle. In addition, its damage increases by 1 SP per Tech Level after the first, e.g. a Tech 3 Custom Sniper Rifle would deal 4 SP damage and you would be able to choose three modifications for it.",
+    "options": [
+      "Rangefinder: The Custom Sniper Rifle increases its Range to Far.",
+      "Laser Guidance: You may spend 2 AP to automatically hit with the Custom Sniper Rifle. It also gains the Targeter Trait.",
+      "Pinpoint Targeter: You may spend 2 AP when you make an attack. If it hits, a System, Module, or appendage of your choice on the target is damaged. It also gains the Targeter Trait.",
+      "Dum Dum Rounds: The Custom Sniper Rifle gains the Anti-Organic Trait.",
+      "High Calibre Rounds: The Custom Sniper Rifle deals an additional 1 SP damage.",
+      "Anti-Matter: The Custom Sniper Rifle gains the Deadly Trait.",
+      "Flashy: The Custom Sniper Rifle gains the Flashy Trait.",
+      "Silencer: The Custom Sniper Rifle gains the Silent Trait.",
+      "Compact Design: The Custom Sniper Rifle is designed to fold down into a briefcase, making it easily concealable."
+    ],
+    "subAbilities": [
+      {
+        "name": "Custom Sniper Rifle",
+        "description": "Attack with your custom sniper rifle. Base damage is 2 SP at Tech 1, increasing by 1 SP per Tech Level.",
+        "damage": {
+          "type": "SP",
+          "amount": 2
+        },
+        "range": "Long"
+      }
+    ],
     "traits": [
       {
         "type": "pilot equipment"
       }
     ],
-    "page": 50
+    "page": 47
   },
   {
     "id": "89f20d2a-6f43-4a5f-943a-f8a77abd341b",
@@ -829,7 +881,7 @@
     "effect": "You have a knack for preparing for situations in advance, allowing you to get out of all sorts of binds.",
     "activationCost": 3,
     "actionType": "Reaction",
-    "page": 50
+    "page": 47
   },
   {
     "id": "c4f6b5f7-e06d-408f-b38f-61f3be5f48e1",
@@ -849,7 +901,7 @@
         "type": "armor"
       }
     ],
-    "page": 51
+    "page": 328
   },
   {
     "id": "5280d4fa-d97b-4678-a57e-1eae675e4772",
@@ -868,7 +920,7 @@
         "type": "armor"
       }
     ],
-    "page": 51
+    "page": 47
   },
   {
     "id": "15d9fafc-7265-4983-bbb2-c23bb64bd54f",
@@ -880,7 +932,7 @@
     "effect": "Your presence is now respected by people everywhere. Wastelanders and Corpos alike will no longer attack you unless you mean to harm them. They will always provide you and any crew you are with, with food, lodging, safe passage, access to their settlements, and any other help within their means even if it puts them in danger. When you activate this Ability you extoll your various accomplishments and remind those around you of your fame in order to coerce them to your will. Describe how you do this. You may make a demand of an individual, even a high profile one such as a corpo exec and they will acquiesce to it. Alternatively, you can make a demand of a group of people such as a band of wastelanders, a squad of soldiers, a salvaging crew, or a band of Mech pilots and they will do what you say, even if it puts them in harm's way.",
     "activationCost": 2,
     "actionType": "Turn",
-    "page": 51
+    "page": 47
   },
   {
     "id": "0f6288c7-1025-4df2-8b9c-f32b5f344bdd",
@@ -897,7 +949,7 @@
         "type": "pilot equipment"
       }
     ],
-    "page": 51
+    "page": 47
   },
   {
     "id": "9947ca57-8a30-4ea6-bb0b-d021ee5e8567",
@@ -910,7 +962,7 @@
     "activationCost": 1,
     "range": "Medium",
     "actionType": "Free",
-    "page": 54
+    "page": 59
   },
   {
     "id": "19b1961c-b50b-4436-9620-11b69545dbb4",
@@ -923,7 +975,7 @@
     "activationCost": 2,
     "range": "Close",
     "actionType": "Turn",
-    "page": 54
+    "page": 59
   },
   {
     "id": "010ef454-6c74-4fa5-8df1-c611ccaf66b3",
@@ -936,7 +988,7 @@
     "activationCost": 3,
     "range": "Close",
     "actionType": "Turn",
-    "page": 54
+    "page": 45
   },
   {
     "id": "3095eb7e-aaea-4b8e-8b58-28a1643b5267",
@@ -948,7 +1000,7 @@
     "effect": "You have an affinity with the people of the wastes. When you activate this Ability you become friendly with a wastelander who you can communicate with. Describe how you do this. You may ask this wastelander up to two questions about the local area and they will answer to the full extent of their knowledge. In addition, they will provide you with what help they can as long as it does not put them in danger. For example, by providing you with food or shelter. If you meet this wastelander again you may ask them one question and they will answer it.",
     "activationCost": 1,
     "actionType": "Turn",
-    "page": 54
+    "page": 45
   },
   {
     "id": "61e72d21-812e-46c1-9217-7717bdfd5cf7",
@@ -960,7 +1012,7 @@
     "effect": "You are hardened to surviving out in the wastelands. You are unaffected by any standard environmental effects and take half damage from any severe effects that you are unable to avoid. In addition, you are able to find food and water for yourself in the wastelands. When you use this Ability you scour the wastelands for one of the following: • You find healing herbs, plants, and poultices. These can be used to heal a Minor Injury, eliminate poison, heal a target 2 HP, or revive someone who is unconscious to 1 HP. • You scavenge the area for salvage and find 1 Scrap of a Tech Level appropriate to the area as decided by the Mediator. You only may choose this option once per area unless the Mediator says otherwise. • You find a safe shelter with enough food and water to sustain yourself and up to 10 people for 24 hours.",
     "activationCost": 1,
     "actionType": "Short",
-    "page": 54
+    "page": 53
   },
   {
     "id": "35c99351-c62a-4975-ab48-23f14b3e633f",
@@ -969,7 +1021,40 @@
     "tree": "Survivalist",
     "level": 3,
     "description": "Gain a specialised Missile Launcher that only you can use.",
-    "effect": "You acquire and train in the use of a Custom Missile Launcher that only you can use. It can be customised how you desire. Its Tech level is equal to that of your Union Crawler. It has the following stats at Tech 1, in addition, choose a single modification from the list below. Damage: 3 SP // Range: Medium // Missile // Explosive (1) // Heavy Rangefinder: The Custom Missile increases its Range to Long. Laser Guidance: You may spend 2 AP to automatically hit with the Custom Missile Launcher. This attack counts as having the Targeter Trait. A.I. Tracking: You may spend 1 AP to give the Custom Missile Launcher the Guided Trait for the next attack. This attack counts as having the Targeter Trait. Napalm Rounds: The Custom Missile Launcher gains the Anti-Organic and Burn (1) Trait. Bigger Boom: The Custom Missile Launcher gains the Explosive (2) Trait. Flashy: The Custom Missile Launcher gains the Flashy Trait. Expanded Warhead: The Custom Missile Launcher deals an additional 1 SP damage. Portable: The Custom Missile Launcher loses the Heavy Trait. At each Tech Level you may choose an additional modification for your Custom Missile Launcher. In addition, its damage increases by 1 SP per Tech Level after the first. e.g. a Tech 3 Custom Missile Launcher would deal 5 SP damage and you would be able to choose three modifications for it. If your Custom Missile Launcher is misplaced, damaged, or destroyed you can acquire a new one during Downtime of a Tech Level equal to your Union Crawler. You may only ever have one Custom Missile Launcher at a time.",
+    "effect": "You acquire and train in the use of a Custom Missile Launcher that only you can use. It can be customised how you desire. Its Tech level is equal to that of your Union Crawler. At each Tech Level you may choose an additional modification for your Custom Missile Launcher. In addition, its damage increases by 1 SP per Tech Level after the first. e.g. a Tech 3 Custom Missile Launcher would deal 5 SP damage and you would be able to choose three modifications for it. If your Custom Missile Launcher is misplaced, damaged, or destroyed you can acquire a new one during Downtime of a Tech Level equal to your Union Crawler. You may only ever have one Custom Missile Launcher at a time.",
+    "options": [
+      "Rangefinder: The Custom Missile increases its Range to Long.",
+      "Laser Guidance: You may spend 2 AP to automatically hit with the Custom Missile Launcher. This attack counts as having the Targeter Trait.",
+      "A.I. Tracking: You may spend 1 AP to give the Custom Missile Launcher the Guided Trait for the next attack. This attack counts as having the Targeter Trait.",
+      "Napalm Rounds: The Custom Missile Launcher gains the Anti-Organic and Burn (1) Trait.",
+      "Bigger Boom: The Custom Missile Launcher gains the Explosive (2) Trait.",
+      "Flashy: The Custom Missile Launcher gains the Flashy Trait.",
+      "Expanded Warhead: The Custom Missile Launcher deals an additional 1 SP damage.",
+      "Portable: The Custom Missile Launcher loses the Heavy Trait."
+    ],
+    "subAbilities": [
+      {
+        "name": "Custom Missile Launcher",
+        "description": "Attack with your custom missile launcher. Base damage is 3 SP at Tech 1, increasing by 1 SP per Tech Level.",
+        "damage": {
+          "type": "SP",
+          "amount": 3
+        },
+        "range": "Medium",
+        "traits": [
+          {
+            "type": "missile"
+          },
+          {
+            "type": "explosive",
+            "amount": 1
+          },
+          {
+            "type": "heavy"
+          }
+        ]
+      }
+    ],
     "traits": [
       {
         "type": "pilot equipment"
@@ -1012,7 +1097,7 @@
     "effect": "When you are attacked you may activate this Ability to make a single attack of your choice against the target that attacked you. This follows all of the normal rules for attacking. Your attack and all of its effects resolve first and then the target's initial attack resolves.",
     "activationCost": 3,
     "actionType": "Reaction",
-    "page": 55
+    "page": 45
   },
   {
     "id": "4070019b-4924-444d-b666-77c75cd47794",
@@ -1055,7 +1140,7 @@
       "2-5": "You hit one enemy in Range of the weapon, then your weapon is damaged.",
       "type": "alternate"
     },
-    "page": 56
+    "page": 53
   },
   {
     "id": "b9c33055-9ecd-49ca-818d-5ddf0b94324c",
@@ -1067,7 +1152,7 @@
     "effect": "You coordinate a team wide attack against a target, working perfectly in unison to destroy those standing against you and your allies. When activated, you and any number of Allies can make a single attack against a target of your choice. Roll each attack separately. This Ability costs 1 AP per ally that is making an attack.",
     "activationCost": "Variable",
     "actionType": "Turn",
-    "page": 56
+    "page": 53
   },
   {
     "id": "528bdad8-fb86-4376-bed6-4625db5cce88",
@@ -1078,7 +1163,7 @@
     "description": "Form a bond with a weapon. Gain an additional dice roll when attacking with that weapon.",
     "effect": "Choose a Weapon and Weapons System that you own. You form an extraordinary bond with these weapons. They can never be broken or destroyed through use. When you make an attack with either of these weapons you may roll two dice and choose the highest result. If you Push the roll you re-roll both dice. You also deal an additional amount of damage with both these weapons equal to their Tech Level.",
     "actionType": "Passive",
-    "page": 56
+    "page": 53
   },
   {
     "id": "92abaa31-6c3b-47d3-85ac-a6f47861a9b9",
@@ -1098,7 +1183,7 @@
       "2-5": "Everything slows to a crawl. For the next 10 minutes you must choose between moving or taking an action on your turn. You also cannot Push rolls.",
       "type": "standard"
     },
-    "page": 60
+    "page": 59
   },
   {
     "id": "a225e943-2c1d-4783-ad04-28685336da4e",
@@ -1131,7 +1216,7 @@
     "description": "You are now Meld. You can replicate Equipment and make Meld Tendril attacks.",
     "effect": "The Meld called to you from beyond the vast void of time and space. You are lonely as one, but together you are strong and will have great power. You have formed symbiotically with the Meld. You have all of the strengths and weaknesses of Meld as detailed in the Meld Section p. 288. You are able to make the following Meld Tendril Attack: Damage: 5 SP // Range: Medium // Melee // Meld Infection // Multi-Attack (2) Replica Pilot Equipment: You grow a replica of a Pilot Equipment of any Tech Level out of your body. This costs an amount of AP equal to the Tech Level of the Pilot Equipment. You now have a Meld version of this Pilot Equipment. Split Form: When you are reduced to 0 HP/SP you split into two. Each split version of you has half of your Max SP/HP and Ability Points. Split your remaining Ability points evenly between your two forms. Your equipped Pilot Equipment is copied across both forms. You control both of your forms and they act separately during each round. Your split forms",
     "actionType": "Passive",
-    "page": 60
+    "page": 59
   },
   {
     "id": "a153058b-3468-45fc-8856-72af40762088",
@@ -1142,7 +1227,7 @@
     "description": "You are now a virtual being. You control your Mech by wire, and can project your image holographically.",
     "effect": "You have explored the ways of the flesh to their full potential, and have found them lacking. Ascension offers you another path. You fully upload yourself to the A.I. on your Union Crawler. You can appear as a hologram projection when interacting on the material plane, but cannot directly interact or affect anything. You can project anywhere within Far Range of your Union Crawler or any Mech you are controlling. You can control your Mech from your Union Crawler, as long as it remains in the area map your Union Crawler is stationed in. Your Cyborg form remains merely as a vessel. You can send a copy of yourself into it and control it, whilst simultaneously being within the upload cloud. If it is destroyed, you can create another during Downtime. Your essence remains within the cloud.",
     "actionType": "Passive",
-    "page": 61
+    "page": 153
   },
   {
     "id": "94a1b594-201d-4b82-b740-7583f0eac701",
@@ -1154,7 +1239,7 @@
     "effect": "You are able to use your intimate knowledge of Mech fabrication techniques to craft Mech parts and even entire Chassis in the field. System and Module Fabrication 1AP Short Action: You can craft a System or Module anywhere in the field. You can choose from any System or Module of a Tech Level equal to or lower than your Union Crawler. This follows the normal crafting rules. Chassis Fabrication 2AP Long Action: You can craft a Mech Chassis anywhere in the field. You can choose from any Mech Chassis of a Tech Level equal to or lower than your Union Crawler. This follows the normal crafting rules.",
     "activationCost": 1,
     "actionType": "Short",
-    "page": 64
+    "page": 63
   },
   {
     "id": "91192a4c-b12a-47cf-af89-0dad2825f092",
@@ -1172,7 +1257,7 @@
         "type": "pilot equipment"
       }
     ],
-    "page": 64
+    "page": 63
   },
   {
     "id": "46c587cf-2561-4199-bebe-3f5a211e8ebf",
@@ -1183,7 +1268,7 @@
     "description": "Modify your Mech Chassis to gain the Chassis Ability of another Mech in addition to its own.",
     "effect": "Your intense study and fascination with the core design of Mechs in their multiple forms allows you to modify a Mech Chassis to gain an array of abilities it was not initially designed for. Once during Downtime you can modify your Mech Chassis. It gains any Chassis Ability of your choice from any Mech that you could craft in your Crafting Bay. For example, if you have a Tech 4 Crafting Bay you can modify the Mech with any Chassis Ability from any Tech 1-4 Mech. You may only have one additional Chassis Ability on a Mech, though you can replace one that you have added during Downtime. You can only use this Ability on your Mech, and it only works when you are piloting the Mech.",
     "actionType": "DownTime",
-    "page": 64
+    "page": 63
   },
   {
     "id": "6fc73eba-d1a6-4839-96dd-4b35365a58a5",
@@ -1205,7 +1290,7 @@
     "description": "Your Mech can be piloted remotely up to Far range.",
     "effect": "You install a complex array of electronic equipment, receivers, and transmitters into your Mech. This allows you to control the Mech remotely as a drone, removing the need of a fleshy pilot. You may use this Ability once during Downtime to convert a single Mech you own into a Droned Mech. This Mech does not require a Pilot and cannot be piloted normally. Instead it is controlled by you via a special controller you possess as Pilot Equipment. It can be controlled from up to Far Range. If the Mech has Radomes installed it can be controlled from anywhere within the Area Map you are in, including your Union Crawler. Controlling a Mech this way takes up all of your concentration, as though you were piloting it, and you cannot do anything else whilst controlling it except speak and occasionally sip from a beverage.",
     "actionType": "DownTime",
-    "page": 65
+    "page": 329
   },
   {
     "id": "525f2eca-4f1e-4706-b89f-577f5d1eb832",
@@ -1220,7 +1305,7 @@
         "type": "pilot equipment"
       }
     ],
-    "page": 68
+    "page": 67
   },
   {
     "id": "f3b2da0b-d9b9-400d-947a-73dea06c2529",
@@ -1232,7 +1317,7 @@
     "effect": "You sharpen your senses, surpassing normal limits to pick off a target at Range. The next ranged weapon attack you make deals 2× damage if it hits. In addition, you may increase the Range Band of the attack by one, for example, Long Range becomes Far Range, or Close Range becomes Medium Range.",
     "activationCost": 3,
     "actionType": "Free",
-    "page": 68
+    "page": 47
   },
   {
     "id": "15a40bf0-6268-4087-87da-3c1453951a4b",
@@ -1244,7 +1329,7 @@
     "effect": "You are unrivalled at being able to infiltrate the most dangerous and well-guarded areas of the wastelands, and carry out acts of assassination, sabotage, or theft, or simply cause chaos, before slipping away unseen. When you activate this Ability you infiltrate a settlement, arco, camp, home, or other dwelling. Describe how you do this. You infiltrate this place safely and unseen. Whilst in this area you may spend an additional 1 AP to perform an act of sabotage from the following list. You may perform up to three acts of sabotage in this way. Describe how you perform each of them. • Assassinate a wastelander, low ranking officer, or similar human target within the area. You will need an additional plan to kill higher ranked targets such as commanders or corpo execs. • Damage a structure such as a guard post, mech bay, or hab block. • Damage a Mech within the area. • Steal something Pilot-sized from within the area such as a piece of equipment, important documents, or a valuable artefact. • Rile up wastelanders within the area enough for them to riot and cause widespread damage and destruction. • An act of sabotage of your choice. The Mediator will decide if it is appropriate.",
     "activationCost": 3,
     "actionType": "Long",
-    "page": 68
+    "page": 67
   },
   {
     "id": "c0ccee58-0f35-4873-be5c-727640e62334",
@@ -1259,7 +1344,7 @@
         "type": "pilot equipment"
       }
     ],
-    "page": 69
+    "page": 67
   },
   {
     "id": "26e26814-996d-46ec-a721-8246784ab70b",
@@ -1270,7 +1355,7 @@
     "description": "Ask questions, gain favours and easily navigate the wastes.",
     "effect": "You have gained pure affinity with the wastelands offering you the following benefits. These apply whilst on foot or when piloting your Mech. • When entering any point on the area map, you can ask the Mediator two questions about it, and the answer they give must be true. • You have expanded knowledge of the denizens of the wasteland. If you encounter a wastelander or wasteland creature, you can ask the Mediator one question about them, and the answer they give must be true. • Your Pilot can move from points on the Campaign Map in a day, points on the area map in an hour, and points on the Region Map in 10 minutes. • Difficult Terrain does not slow down your movement in the wastelands. • You can never become lost in the wastelands, and are always able to find a route from where you are to where you need to go. • You are always able to find food, water, and shelter in the wastelands. • You are always alert to danger in the wastelands, and can never be ambushed. • You can rally a local populace to your cause. At any wastelander settlement you can muster a Wastelander Mob, a Wastelander Mech, or up to four Wastelanders; who join you as allies.",
     "actionType": "Passive",
-    "page": 69
+    "page": 332
   },
   {
     "id": "06bd8491-e750-4775-8dbb-80040c193b2d",
@@ -1281,7 +1366,7 @@
     "description": "Gain access to a range of contraband Systems, Modules, and Pilot Equipment.",
     "effect": "You are able to trade for various contraband and illegally acquired goods on the Black Market. All of these things, even in the wasteland, are blacklisted from use and often considered cruel and unusual. Your Union Crawler gains permanent access to a Black Market. In addition, when you are in a settlement in the wastelands you can find a Black Market contact to trade with. You can purchase any of the below items from the Black Market for an amount of Scrap equal to their Salvage Value of their Tech Level or higher. The Mediator may also offer you additional Black Market items as they see fit.",
     "actionType": "Passive",
-    "page": 72
+    "page": 71
   },
   {
     "id": "37102a9a-4aa8-492a-a3d7-d84a34e131f3",
@@ -1331,7 +1416,7 @@
       "2-5": "The target narrowly avoids being killed, but is reduced to 0 HP and must roll on the Critical Injury Table.",
       "type": "standard"
     },
-    "page": 73
+    "page": 331
   },
   {
     "id": "3ce9e519-dc38-47a6-a897-4636704c740b",
@@ -1379,7 +1464,7 @@
       "2-5": "You wait two weeks and realise the mission is not completed. You may post the mission offer again or choose a different one.",
       "type": "standard"
     },
-    "page": 76
+    "page": 75
   },
   {
     "id": "96d7fe30-797b-4096-9d7c-e9e4208827eb",
@@ -1391,7 +1476,7 @@
     "effect": "You command an NPC who can understand and assist you. They cannot be hostile towards you. You can have them join a fight or perform some other task like watching a door, defending an area, or delivering a message.",
     "activationCost": 4,
     "actionType": "Turn",
-    "page": 76
+    "page": 219
   },
   {
     "id": "0e38ed64-73ff-4ae2-9592-87d34e868ab1",
@@ -1408,7 +1493,7 @@
         "amount": 1
       }
     ],
-    "page": 77
+    "page": 75
   },
   {
     "id": "ee08e81e-99cb-4b7d-ba8c-662ff7e3b2fc",

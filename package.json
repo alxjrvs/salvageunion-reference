@@ -1,6 +1,6 @@
 {
   "name": "salvageunion-reference",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "Comprehensive, schema-validated JSON dataset and TypeScript ORM for the Salvage Union tabletop RPG",
   "type": "module",
   "main": "./dist/index.js",
@@ -29,7 +29,11 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "pdf:read": "tsx tools/rules-parser/pdfReader.ts",
+    "pdf:search": "tsx tools/rules-parser/pdfSearch.ts",
+    "pdf:find": "tsx tools/rules-parser/findPageNumber.ts",
+    "pdf:update-pages": "tsx tools/rules-parser/updatePageNumbers.ts"
   },
   "repository": {
     "type": "git",
@@ -56,7 +60,9 @@
   "devDependencies": {
     "@eslint/js": "^9.38.0",
     "@types/node": "^20.10.0",
+    "@types/pdf-parse": "^1.1.5",
     "jsonschema": "^1.4.1",
+    "pdf-parse": "^2.4.4",
     "pdf.js-extract": "^0.2.1",
     "prettier": "^3.6.2",
     "tsx": "^4.7.0",

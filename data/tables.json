@@ -12,7 +12,7 @@
       "2-5": "Failure: You have failed at what you were attempting to do. You face a Setback of the Mediator’s choice. When attacking, you miss the target.",
       "type": "standard"
     },
-    "page": 337
+    "page": 2
   },
   {
     "id": "cdbc20d9-ff63-4272-805b-f148f0c01752",
@@ -27,7 +27,7 @@
       "2-5": "Fumble: One NPC chosen by the Mediator acts first. Play then passes to the player group and one Pilot chosen by the players acts.",
       "type": "standard"
     },
-    "page": 337
+    "page": 330
   },
   {
     "id": "dcd888a2-dc2d-4f45-94eb-ae6138761931",
@@ -42,7 +42,7 @@
       "2-5": "Major Injury: You suffer a Major Injury such as permanent scarring, broken ribs, or internal injuries. Your Max HP is reduced by 2 until healed in a Tech 5-6 Med Bay. In addition, you are Unconscious. Apply the result of 11-19.",
       "type": "standard"
     },
-    "page": 338
+    "page": 323
   },
   {
     "id": "aa54dcd4-efd0-4cbb-83dc-4cf6f0411066",
@@ -72,7 +72,7 @@
       "2-5": "System Overload: One of your Mech’s Systems chosen at random or by the Mediator is destroyed.",
       "type": "standard"
     },
-    "page": 339
+    "page": 235
   },
   {
     "id": "abca780b-da93-47b0-91e6-290da910e2fd",
@@ -87,7 +87,7 @@
       "2-5": "Better than Nothing: You find 1 Scrap of the Tech Level of the area.",
       "type": "standard"
     },
-    "page": 339
+    "page": 248
   },
   {
     "id": "acdc85ee-056c-4edc-95be-e25f0ab9b319",
@@ -102,7 +102,7 @@
       "2-5": "Nuts and Bolts: You salvage half of the Salvage Value of the Mech Chassis in Scrap of its Tech Level, to a minimum of 1. Everything else is considered destroyed.",
       "type": "standard"
     },
-    "page": 339
+    "page": 2
   },
   {
     "id": "2bdb98de-31a2-4eb1-b8f5-cf42f44ff618",
@@ -132,7 +132,7 @@
       "2-5": "Failure: The NPC has failed at their action. The players choose an appropriate Setback for failure. In combat, a weapon attack misses.",
       "type": "standard"
     },
-    "page": 267
+    "page": 336
   },
   {
     "id": "30b5379a-45d5-4e7b-9dfa-45b2ecead926",
@@ -147,7 +147,7 @@
       "2-5": "Retreat: The NPCs flee the fight as quickly and safely as possible.",
       "type": "standard"
     },
-    "page": 268
+    "page": 167
   },
   {
     "id": "70f6e979-f511-4407-a276-11b3e63f6758",
@@ -162,7 +162,7 @@
       "2-5": "Failed Escape: The group fails to retreat from the situation and are pinned down. They cannot retreat and must fight it out to the end.",
       "type": "standard"
     },
-    "page": 337
+    "page": 42
   },
   {
     "id": "044f3890-2d62-4bbe-b851-cc978a68ae8e",
@@ -177,7 +177,7 @@
       "2-5": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition.",
       "type": "standard"
     },
-    "page": 219
+    "page": 7
   },
   {
     "id": "f4e866be-1092-4760-896c-fa3571b983d6",
@@ -237,7 +237,7 @@
       "20": "Peach Lipstick",
       "type": "flat"
     },
-    "page": 90
+    "page": 24
   },
   {
     "id": "b2c3d4e5-f6a7-48b9-c0d1-e2f3a4b5c6d7",
@@ -267,7 +267,7 @@
       "20": "Feel the fear and do it anyway.",
       "type": "flat"
     },
-    "page": 90
+    "page": 24
   },
   {
     "id": "c3d4e5f6-a7b8-49ca-d1e2-f3a4b5c6d7e8",
@@ -297,7 +297,7 @@
       "20": "Quaint",
       "type": "flat"
     },
-    "page": 91
+    "page": 332
   },
   {
     "id": "d4e5f6a7-b8c9-4adb-e2f3-a4b5c6d7e8f9",
@@ -327,7 +327,7 @@
       "20": "Hopeful and idealistic.",
       "type": "flat"
     },
-    "page": 91
+    "page": 208
   },
   {
     "id": "e5f6a7b8-c9da-4bec-f3a4-b5c6d7e8f9a0",
@@ -387,7 +387,7 @@
       "20": "The Meld, sleek, oily black",
       "type": "flat"
     },
-    "page": 208
+    "page": 94
   },
   {
     "id": "a7b8c9da-ebfc-4dfe-b5c6-d7e8f9a0b1c2",
