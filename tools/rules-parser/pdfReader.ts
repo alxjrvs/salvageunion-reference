@@ -10,7 +10,6 @@
  *   tsx tools/rules-parser/pdfReader.ts --range 10-20
  */
 
-import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
 import { createRequire } from 'module'
@@ -45,7 +44,7 @@ async function extractPdfText(
 
     // Split text by pages - pdf-parse v2 doesn't provide per-page text directly
     // We'll use a simple heuristic: split by form feed or page breaks
-    const pageTexts = pdfResult.text.split('\f').filter((t) => t.trim())
+    const pageTexts = pdfResult.text.split('\f').filter((t: string) => t.trim())
 
     // Filter by page range
     const start = startPage ? startPage - 1 : 0
