@@ -48,6 +48,11 @@ const validationConfigs: ValidationConfig[] = [
     schemaFile: 'schemas/crawlers.schema.json',
   },
   {
+    name: 'Crawler Tech Levels',
+    dataFile: 'data/crawler-tech-levels.json',
+    schemaFile: 'schemas/crawler-tech-levels.schema.json',
+  },
+  {
     name: 'Creatures',
     dataFile: 'data/creatures.json',
     schemaFile: 'schemas/creatures.schema.json',

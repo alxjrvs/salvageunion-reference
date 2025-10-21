@@ -1,0 +1,62 @@
+[
+  {
+    "id": "crawler-tech-1",
+    "name": "Hamlet Crawler",
+    "techLevel": 1,
+    "structurePoints": 20,
+    "populationMin": 100,
+    "populationMax": 500,
+    "source": "Salvage Union Core Book",
+    "page": 218
+  },
+  {
+    "id": "crawler-tech-2",
+    "name": "Village Crawler",
+    "techLevel": 2,
+    "structurePoints": 25,
+    "populationMin": 500,
+    "populationMax": 2000,
+    "source": "Salvage Union Core Book",
+    "page": 218
+  },
+  {
+    "id": "crawler-tech-3",
+    "name": "Town Crawler",
+    "techLevel": 3,
+    "structurePoints": 30,
+    "populationMin": 2000,
+    "populationMax": 5000,
+    "source": "Salvage Union Core Book",
+    "page": 218
+  },
+  {
+    "id": "crawler-tech-4",
+    "name": "City Crawler",
+    "techLevel": 4,
+    "structurePoints": 35,
+    "populationMin": 5000,
+    "populationMax": 15000,
+    "source": "Salvage Union Core Book",
+    "page": 218
+  },
+  {
+    "id": "crawler-tech-5",
+    "name": "Metropolis Crawler",
+    "techLevel": 5,
+    "structurePoints": 40,
+    "populationMin": 15000,
+    "populationMax": 25000,
+    "source": "Salvage Union Core Book",
+    "page": 218
+  },
+  {
+    "id": "crawler-tech-6",
+    "name": "Megacity Crawler",
+    "techLevel": 6,
+    "structurePoints": 50,
+    "populationMin": 25000,
+    "populationMax": 0,
+    "source": "Salvage Union Core Book",
+    "page": 218
+  }
+]

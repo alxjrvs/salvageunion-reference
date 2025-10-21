@@ -3,7 +3,7 @@
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
   "version": "1.12.0",
-  "generated": "2025-10-20T22:05:54.662Z",
+  "generated": "2025-10-21T02:54:56.852Z",
   "schemas": [
     {
       "id": "abilities",
@@ -76,6 +76,28 @@
         "name",
         "source",
         "type",
+        "page"
+      ]
+    },
+    {
+      "id": "crawler-tech-levels",
+      "title": "Salvage Union Crawler Tech Levels",
+      "description": "Tech levels for Union Crawlers in Salvage Union",
+      "dataFile": "data/crawler-tech-levels.json",
+      "schemaFile": "schemas/crawler-tech-levels.schema.json",
+      "itemCount": 6,
+      "requiredFields": [
+        "id",
+        "name",
+        "techLevel",
+        "structurePoints",
+        "upkeepScrap",
+        "upkeepTechLevel",
+        "upgradeScrap",
+        "upgradeTechLevel",
+        "populationMin",
+        "populationMax",
+        "source",
         "page"
       ]
     },

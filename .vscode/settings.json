@@ -32,6 +32,12 @@
     },
     {
       "fileMatch": [
+        "data/crawler-tech-levels.json"
+      ],
+      "url": "./schemas/crawler-tech-levels.schema.json"
+    },
+    {
+      "fileMatch": [
         "data/crawlers.json"
       ],
       "url": "./schemas/crawlers.schema.json"
