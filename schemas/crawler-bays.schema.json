@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://salvageunion.com/schemas/crawler-bays.schema.json",
+  "title": "Salvage Union Crawler Bays",
+  "description": "Bays and facilities on Union Crawlers in Salvage Union",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "description": "A crawler bay or facility",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "source",
+      "description",
+      "damagedEffect",
+      "operatorPosition",
+      "operatorHitPoints",
+      "page"
+    ],
+    "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Name of the bay (e.g., 'Command Bay', 'Mech Bay')"
+      },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
+      "description": {
+        "type": "string",
+        "description": "Full description of the bay's function and capabilities"
+      },
+      "damagedEffect": {
+        "type": "string",
+        "description": "What happens when this bay is damaged"
+      },
+      "operatorPosition": {
+        "type": "string",
+        "description": "Title of the lead operator (e.g., 'Princeps', 'Greaser', 'Chef')"
+      },
+      "operatorHitPoints": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Hit points of the lead operator"
+      },
+      "techLevelEffects": {
+        "type": "array",
+        "description": "Effects that vary by tech level",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["techLevelMin", "techLevelMax", "effect"],
+          "properties": {
+            "techLevelMin": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 6,
+              "description": "Minimum tech level for this effect"
+            },
+            "techLevelMax": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 6,
+              "description": "Maximum tech level for this effect"
+            },
+            "effect": {
+              "type": "string",
+              "description": "Description of the effect at this tech level range"
+            }
+          }
+        }
+      },
+      "rollTable": {
+        "$ref": "shared/common.schema.json#/definitions/rollTable"
+      },
+      "abilities": {
+        "type": "array",
+        "description": "Special abilities or features of this bay",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
+      },
+      "notes": {
+        "type": "string",
+        "description": "Additional notes or special rules"
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Page number in the source book"
+      }
+    }
+  }
+}

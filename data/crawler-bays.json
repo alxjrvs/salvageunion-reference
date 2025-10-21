@@ -1,0 +1,225 @@
+[
+  {
+    "id": "command-bay",
+    "name": "Command Bay",
+    "source": "Salvage Union Core Book",
+    "description": "This area of your Union Crawler is where the core of the crew that controls your Union Crawler resides. It is also designed for surveying and planning out forays into the wasteland. It allows you to scan the area within the Campaign Map and get a simple holomap of the environment and any key points of interest.",
+    "damagedEffect": "If the Command Bay is damaged your Union Crawler can no longer move, and its scanning and map functions no longer work. You are in the dark when it comes to conducting missions outside of the immediate area.",
+    "operatorPosition": "Princeps",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [],
+    "abilities": [
+      {
+        "name": "Wasteland Scanning",
+        "description": "Once per Downtime, before you set out into the wasteland, you may ask the Mediator a number of questions equal to the Tech Level of your Union Crawler about the area of the Region Map you are in, and they will answer you truthfully."
+      }
+    ],
+    "notes": "The Command Bay is operated and maintained by the Bridge Crew, the most experienced of whom is known as the Princeps. You may give the Princeps a name, Motto, and a Keepsake.",
+    "page": 221
+  },
+  {
+    "id": "mech-bay",
+    "name": "Mech Bay",
+    "source": "Salvage Union Core Book",
+    "description": "Within this area, each Pilot on the Union Crawler gets access to their own Mech Bay, which allows them to have one field ready Mech active. This active Mech may be of any Tech Level. Other Mechs can be stored in the Storage bay. Any Mech installed into a Mech Bay fully restores all of its Structure Points and Energy Points over the Downtime period of one week, and reduces its Heat to 0.",
+    "damagedEffect": "If the Mech Bay becomes damaged, your Mechs can no longer restore SP and EP during Downtime. Their Chassis as well as any Systems or Modules will not be repaired if they are damaged, and you will have to make any System or Module modifications manually.",
+    "operatorPosition": "Greaser",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [],
+    "abilities": [
+      {
+        "name": "Mech Repair",
+        "description": "The Tech Level of the Union Crawler determines what Mech Chassis, Systems, and Modules it can repair during Downtime. A damaged Mech Chassis as well as any damaged Systems or Modules are repaired to Intact Condition during Downtime as long as they are of an equal to or lower Tech Level than the Union Crawler."
+      },
+      {
+        "name": "Advanced Repair",
+        "description": "You may choose to repair anything that cannot be repaired in this way by spending an amount of Scrap equal to half its Salvage Value of it's Tech Level or higher. For example, if your Crawler is Tech 3 and you are repairing a Damaged Colossus Chassis which is a Tech 4 Chassis with a Salvage Value of 16, you must spend 8× Tech 4 Scrap to repair it to an Intact Condition."
+      },
+      {
+        "name": "System Installation",
+        "description": "You may further use your Mech Bay to install or remove any number of Systems or Modules on your Mech that you have access to."
+      }
+    ],
+    "notes": "The Mech Bay is operated and maintained by Mech Engineers, the most experienced of whom is known as the Greaser. You may give the Greaser a name, Motto, and a Keepsake.",
+    "page": 221
+  },
+  {
+    "id": "storage-bay",
+    "name": "Storage Bay",
+    "source": "Salvage Union Core Book",
+    "description": "All Mech Chassis, Systems, Modules, and Scrap not in active use are stored within the Storage Bay. This pool is accessible to all Pilots in the Union Crawler. For game purposes, the Storage Bay has an unlimited amount of storage and you do not need to track this. Pilots may also store complete, undamaged Mechs that they have built or salvaged here, keeping them as spare until they bring them out when they need them for a salvage run.",
+    "damagedEffect": "If the Storage Bay becomes damaged, half of the Mech Chassis, Systems, and Modules stored within it are damaged and half of the Scrap within it is destroyed. Determine this randomly. In addition, you cannot store anything else within it until it is repaired.",
+    "operatorPosition": "Bullwhacker",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [],
+    "abilities": [],
+    "notes": "The Storage Bay is operated and maintained by Teamsters, the most experienced of whom is known as the Bullwhacker. You may give the Bullwhacker a name, Motto, and a Keepsake.",
+    "page": 221
+  },
+  {
+    "id": "armament-bay",
+    "name": "Armament Bay",
+    "source": "Salvage Union Core Book",
+    "description": "The main defensive Weapons System of the Union Crawler is mounted here. Your Union Crawler may mount any single Weapons System of the Tech Level of the Crawler that you have access to. As your Union Crawler upgrades, you may replace this Weapons System with another Weapons System of your choice as long as it is of the same Tech Level or lower of the Union Crawler.",
+    "damagedEffect": "If the Armament Bay becomes damaged, the Union Crawler cannot use any of its Weapons Systems.",
+    "operatorPosition": "Gunny",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [],
+    "abilities": [],
+    "notes": "The Armament Bay is operated and maintained by the Gunnery Crew, the most experienced of whom is known as the Gunny. You may give the Gunny a name, Motto, and a Keepsake.",
+    "page": 222
+  },
+  {
+    "id": "crafting-bay",
+    "name": "Crafting Bay",
+    "source": "Salvage Union Core Book",
+    "description": "A Crafting Bay allows you to craft any Mech Chassis, System, or Module of the Tech Level of your Union Crawler or lower. To craft a Mech Chassis, System, or Module you must spend an amount of Scrap equal to its Salvage Value. This Scrap must be of a Tech Level equal to or higher than the Tech Level of the Mech Chassis, System, or Module.",
+    "damagedEffect": "If the Crafting Bay becomes damaged, you can no longer craft anything.",
+    "operatorPosition": "Forger",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [],
+    "abilities": [],
+    "notes": "The Crafting Bay is operated and maintained by the Salvage Techs, the most experienced of whom is known as the Forger. You may give the Forger a name, Motto, and a Keepsake. All Mech Chassis, Systems, and Modules in the Salvage Union Core Book are assumed available to Pilots who wish to craft them.",
+    "page": 222
+  },
+  {
+    "id": "trading-bay",
+    "name": "Trading Bay",
+    "source": "Salvage Union Core Book",
+    "description": "The Trading Bay allows for Scrap as well as Intact Mech Chassis, Systems, and Modules to be traded. As the Union Crawler travels across the wasteland, this represents the various wastelanders and other folk who stop by the Union Crawler with wares to trade back and forth.",
+    "damagedEffect": "If the Trading Bay becomes damaged, you can no longer trade Scrap or roll on the Trading Bay Table during Downtime.",
+    "operatorPosition": "Operator",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [],
+    "rollTable": {
+      "type": "standard",
+      "1": "Nothing is available for trade during this Downtime.",
+      "2-5": "An Intact Module is available for trade.",
+      "6-10": "An Intact System is available for trade.",
+      "11-19": "An Intact System and an Intact Module are available for trade.",
+      "20": "An Intact Mech Chassis is available for trade."
+    },
+    "abilities": [
+      {
+        "name": "Trading Scrap",
+        "description": "Each piece of Scrap is worth an amount equal to its Tech Level. For example, Tech 1 Scrap is worth 1, Tech 3 Scrap is worth 3, Tech 5 Scrap is worth 5. You may trade this Scrap at the Trading Bay at an equal rate based on its value."
+      },
+      {
+        "name": "Sourcing Equipment",
+        "description": "Once per Downtime, the Mediator rolls on the Trading Bay Table and lets the group know what is available for trade. An Intact Mech Chassis, System, or Module costs an amount of Scrap equal to its Salvage Value of its Tech Level. All Chassis, Systems, and Modules available for trade are always one level higher than your Union Crawler."
+      }
+    ],
+    "notes": "The Trading Bay is operated and maintained by the Union Traders, the most experienced of whom is known as the Operator. You may give the Operator a name, Motto, and a Keepsake.",
+    "page": 222
+  },
+  {
+    "id": "med-bay",
+    "name": "Med Bay",
+    "source": "Salvage Union Core Book",
+    "description": "A Med Bay allows Pilots to heal their injuries. The higher the Tech Level of your Union Crawler, the more advanced your Med Bay is.",
+    "damagedEffect": "If the Med Bay is damaged, you cannot heal any of your Pilot's Hit Points or injuries.",
+    "operatorPosition": "Doc",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [
+      {
+        "techLevelMin": 1,
+        "techLevelMax": 2,
+        "effect": "Heals a Pilot to full Hit Points during Downtime."
+      },
+      {
+        "techLevelMin": 3,
+        "techLevelMax": 4,
+        "effect": "Heals a Pilot to full Hit Points, and heals any Minor Injuries fully during Downtime."
+      },
+      {
+        "techLevelMin": 5,
+        "techLevelMax": 6,
+        "effect": "Heals a Pilot to full Hit Points, and heals any Major and Minor Injuries fully during Downtime."
+      }
+    ],
+    "abilities": [],
+    "notes": "The Med Bay is operated and maintained by the Medics, the most experienced of whom is known as the Doc. You may give the Doc a name, Motto, and a Keepsake.",
+    "page": 223
+  },
+  {
+    "id": "pilot-bay",
+    "name": "Pilot Bay",
+    "source": "Salvage Union Core Book",
+    "description": "This area is where your Pilots are able to rest and entertain themselves during Downtime. It also allows your Pilots to train new Abilities. Training in the Pilot Bay during Downtime provides you one Training Point, which you can spend on new Abilities.",
+    "damagedEffect": "If the Pilot Bay is damaged, you cannot train any new Pilot Abilities.",
+    "operatorPosition": "Ace",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [
+      {
+        "techLevelMin": 1,
+        "techLevelMax": 2,
+        "effect": "Allows training of all Core Pilot Abilities."
+      },
+      {
+        "techLevelMin": 3,
+        "techLevelMax": 4,
+        "effect": "Allows training of all Core, Advanced, and Hybrid Class Pilot Abilities."
+      },
+      {
+        "techLevelMin": 5,
+        "techLevelMax": 6,
+        "effect": "Allows training of all Core, Advanced, Hybrid Class, and Legendary Pilot Abilities."
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Stat Training - Tech 2",
+        "description": "Training during Downtime on your Union Crawler in a Tech 2 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      },
+      {
+        "name": "Stat Training - Tech 3",
+        "description": "Training during Downtime on your Union Crawler in a Tech 3 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      },
+      {
+        "name": "Stat Training - Tech 4",
+        "description": "Training during Downtime on your Union Crawler in a Tech 4 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      },
+      {
+        "name": "Stat Training - Tech 5",
+        "description": "Training during Downtime on your Union Crawler in a Tech 5 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      },
+      {
+        "name": "Stat Training - Tech 6",
+        "description": "Training during Downtime on your Union Crawler in a Tech 6 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      }
+    ],
+    "notes": "The Pilot Bay is operated and maintained by the Pilots, the most experienced of whom is known as the Ace. You may give the Ace a name, Motto, and a Keepsake. Core Abilities cost 1 Training Point, Advanced and Hybrid Class Abilities cost 2 Training Points, and Legendary Abilities cost 3 Training Points.",
+    "page": 223
+  },
+  {
+    "id": "armoury",
+    "name": "Armoury",
+    "source": "Salvage Union Core Book",
+    "description": "Once during Downtime, a Pilot may gain one piece of Pilot Equipment from the Armoury. This must be of the Tech Level of your Union Crawler or lower. These items are sourced from the wasteland by your Quartermasters, and are in relatively limited supply. In addition, all Pilot Equipment not in active use may be stored here. For game purposes, The Armoury can store an unlimited amount of Pilot Equipment you acquire or find in the wastelands.",
+    "damagedEffect": "If the Armoury becomes damaged, you can no longer acquire Pilot Equipment from it, and half of all stored Pilot Equipment within it is destroyed. Determine this randomly.",
+    "operatorPosition": "Smith",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [],
+    "abilities": [],
+    "notes": "The Armoury is operated and maintained by the Quartermasters, the most experienced of whom is known as the Smith. You may give the Smith a name, Motto, and a Keepsake.",
+    "page": 224
+  },
+  {
+    "id": "cantina",
+    "name": "Cantina",
+    "source": "Salvage Union Core Book",
+    "description": "Your Cantina is the social hub of your Union Crawler. It is where everybody on board comes to eat, drink, and socialise. Rumours fly easily around the cantina and it is a great place to pick up information about the wastelands. It is also where the majority of food and drink on the Union Crawler is produced and stored and is the location of all your food and water purifiers.",
+    "damagedEffect": "If the Cantina becomes damaged, you no longer have food and water purifiers and your food and water supply is spoiled. The people on your Union Crawler will die of starvation and dehydration within four weeks if it is not repaired. In addition, you can no longer ask around for rumours.",
+    "operatorPosition": "Chef",
+    "operatorHitPoints": 4,
+    "techLevelEffects": [],
+    "abilities": [
+      {
+        "name": "Gather Rumours",
+        "description": "Once during Downtime each Pilot may ask around your Cantina for rumours. The Mediator will tell you a rumour that is circulating around the Cantina. Alternatively, you may ask one question and will get a somewhat vague answer about it from the Cantina."
+      }
+    ],
+    "notes": "The Cantina is operated and maintained by the Cantina Crew, the most experienced of whom is known as the Chef. You may give the Chef a name, Motto, and a Keepsake.",
+    "page": 224
+  }
+]

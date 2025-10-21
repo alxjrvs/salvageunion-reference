@@ -88,4 +88,3 @@ npm run pdf:read -- 164
 
 - The PDF file must be located at `.rules/Salvage Union Core Book Digital Edition 2.0a.pdf`
 - All tools output JSON for easy parsing and integration with other scripts
-

@@ -3,7 +3,7 @@
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
   "version": "1.12.0",
-  "generated": "2025-10-21T02:54:56.852Z",
+  "generated": "2025-10-21T03:03:22.784Z",
   "schemas": [
     {
       "id": "abilities",
@@ -12,14 +12,7 @@
       "dataFile": "data/abilities.json",
       "schemaFile": "schemas/abilities.schema.json",
       "itemCount": 95,
-      "requiredFields": [
-        "id",
-        "name",
-        "tree",
-        "source",
-        "level",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "tree", "source", "level", "page"]
     },
     {
       "id": "ability-tree-requirements",
@@ -28,12 +21,7 @@
       "dataFile": "data/ability-tree-requirements.json",
       "schemaFile": "schemas/ability-tree-requirements.schema.json",
       "itemCount": 20,
-      "requiredFields": [
-        "id",
-        "tree",
-        "requirement",
-        "page"
-      ]
+      "requiredFields": ["id", "tree", "requirement", "page"]
     },
     {
       "id": "bio-titans",
@@ -42,13 +30,7 @@
       "dataFile": "data/bio-titans.json",
       "schemaFile": "schemas/bio-titans.schema.json",
       "itemCount": 6,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "structurePoints",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "structurePoints", "page"]
     },
     {
       "id": "chassis",
@@ -57,12 +39,7 @@
       "dataFile": "data/chassis.json",
       "schemaFile": "schemas/chassis.schema.json",
       "itemCount": 30,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "page"]
     },
     {
       "id": "classes",
@@ -71,11 +48,23 @@
       "dataFile": "data/classes.json",
       "schemaFile": "schemas/classes.schema.json",
       "itemCount": 11,
+      "requiredFields": ["id", "name", "source", "type", "page"]
+    },
+    {
+      "id": "crawler-bays",
+      "title": "Salvage Union Crawler Bays",
+      "description": "Bays and facilities on Union Crawlers in Salvage Union",
+      "dataFile": "data/crawler-bays.json",
+      "schemaFile": "schemas/crawler-bays.schema.json",
+      "itemCount": 10,
       "requiredFields": [
         "id",
         "name",
         "source",
-        "type",
+        "description",
+        "damagedEffect",
+        "operatorPosition",
+        "operatorHitPoints",
         "page"
       ]
     },
@@ -91,10 +80,6 @@
         "name",
         "techLevel",
         "structurePoints",
-        "upkeepScrap",
-        "upkeepTechLevel",
-        "upgradeScrap",
-        "upgradeTechLevel",
         "populationMin",
         "populationMax",
         "source",
@@ -108,12 +93,7 @@
       "dataFile": "data/crawlers.json",
       "schemaFile": "schemas/crawlers.schema.json",
       "itemCount": 5,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "page"]
     },
     {
       "id": "creatures",
@@ -122,13 +102,7 @@
       "dataFile": "data/creatures.json",
       "schemaFile": "schemas/creatures.schema.json",
       "itemCount": 6,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "hitPoints",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "hitPoints", "page"]
     },
     {
       "id": "drones",
@@ -137,13 +111,7 @@
       "dataFile": "data/drones.json",
       "schemaFile": "schemas/drones.schema.json",
       "itemCount": 9,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "structurePoints",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "structurePoints", "page"]
     },
     {
       "id": "equipment",
@@ -152,12 +120,7 @@
       "dataFile": "data/equipment.json",
       "schemaFile": "schemas/equipment.schema.json",
       "itemCount": 44,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "page"]
     },
     {
       "id": "keywords",
@@ -166,11 +129,7 @@
       "dataFile": "data/keywords.json",
       "schemaFile": "schemas/keywords.schema.json",
       "itemCount": 73,
-      "requiredFields": [
-        "name",
-        "source",
-        "page"
-      ]
+      "requiredFields": ["name", "source", "page"]
     },
     {
       "id": "meld",
@@ -179,12 +138,7 @@
       "dataFile": "data/meld.json",
       "schemaFile": "schemas/meld.schema.json",
       "itemCount": 5,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "page"]
     },
     {
       "id": "modules",
@@ -193,10 +147,7 @@
       "dataFile": "data/modules.json",
       "schemaFile": "schemas/modules.schema.json",
       "itemCount": 61,
-      "requiredFields": [
-        "name",
-        "page"
-      ]
+      "requiredFields": ["name", "page"]
     },
     {
       "id": "npcs",
@@ -205,13 +156,7 @@
       "dataFile": "data/npcs.json",
       "schemaFile": "schemas/npcs.schema.json",
       "itemCount": 6,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "hitPoints",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "hitPoints", "page"]
     },
     {
       "id": "squads",
@@ -220,12 +165,7 @@
       "dataFile": "data/squads.json",
       "schemaFile": "schemas/squads.schema.json",
       "itemCount": 9,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "page"]
     },
     {
       "id": "systems",
@@ -234,10 +174,7 @@
       "dataFile": "data/systems.json",
       "schemaFile": "schemas/systems.schema.json",
       "itemCount": 99,
-      "requiredFields": [
-        "name",
-        "page"
-      ]
+      "requiredFields": ["name", "page"]
     },
     {
       "id": "tables",
@@ -246,12 +183,7 @@
       "dataFile": "data/tables.json",
       "schemaFile": "schemas/tables.schema.json",
       "itemCount": 22,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "page"]
     },
     {
       "id": "traits",
@@ -260,11 +192,7 @@
       "dataFile": "data/traits.json",
       "schemaFile": "schemas/traits.schema.json",
       "itemCount": 43,
-      "requiredFields": [
-        "name",
-        "source",
-        "page"
-      ]
+      "requiredFields": ["name", "source", "page"]
     },
     {
       "id": "vehicles",
@@ -273,13 +201,7 @@
       "dataFile": "data/vehicles.json",
       "schemaFile": "schemas/vehicles.schema.json",
       "itemCount": 7,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "structurePoints",
-        "page"
-      ]
+      "requiredFields": ["id", "name", "source", "structurePoints", "page"]
     }
   ]
 }

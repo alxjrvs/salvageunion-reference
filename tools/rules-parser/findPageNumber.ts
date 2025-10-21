@@ -12,7 +12,6 @@
  *   tsx tools/rules-parser/findPageNumber.ts --type ability "Ability Name"
  */
 
-import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
 import { createRequire } from 'module'
@@ -36,10 +35,7 @@ interface PageMatch {
   context: string
 }
 
-async function findPageNumber(
-  itemName: string,
-  itemType?: string
-): Promise<PageMatch[]> {
+async function findPageNumber(itemName: string): Promise<PageMatch[]> {
   try {
     const matches: PageMatch[] = []
 
@@ -162,7 +158,7 @@ async function main() {
     console.log(
       `Searching for: "${itemName}"${itemType ? ` (type: ${itemType})` : ''}...`
     )
-    const matches = await findPageNumber(itemName, itemType)
+    const matches = await findPageNumber(itemName)
 
     if (matches.length === 0) {
       console.log('No matches found.')

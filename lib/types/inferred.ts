@@ -12,6 +12,7 @@ import bioTitansData from '../../data/bio-titans.json' with { type: 'json' }
 import chassisData from '../../data/chassis.json' with { type: 'json' }
 import classesData from '../../data/classes.json' with { type: 'json' }
 import crawlersData from '../../data/crawlers.json' with { type: 'json' }
+import crawlerBaysData from '../../data/crawler-bays.json' with { type: 'json' }
 import crawlerTechLevelsData from '../../data/crawler-tech-levels.json' with { type: 'json' }
 import creaturesData from '../../data/creatures.json' with { type: 'json' }
 import dronesData from '../../data/drones.json' with { type: 'json' }
@@ -34,6 +35,7 @@ export type SalvageUnionBioTitans = typeof bioTitansData
 export type SalvageUnionMechChassis = typeof chassisData
 export type SalvageUnionClasses = typeof classesData
 export type SalvageUnionCrawlers = typeof crawlersData
+export type SalvageUnionCrawlerBays = typeof crawlerBaysData
 export type SalvageUnionCrawlerTechLevels = typeof crawlerTechLevelsData
 export type SalvageUnionCreatures = typeof creaturesData
 export type SalvageUnionDrones = typeof dronesData
@@ -55,6 +57,7 @@ export type BioTitan = SalvageUnionBioTitans[number]
 export type Chassis = SalvageUnionMechChassis[number]
 export type Class = SalvageUnionClasses[number]
 export type Crawler = SalvageUnionCrawlers[number]
+export type CrawlerBay = SalvageUnionCrawlerBays[number]
 export type CrawlerTechLevel = SalvageUnionCrawlerTechLevels[number]
 export type Creature = SalvageUnionCreatures[number]
 export type Drone = SalvageUnionDrones[number]

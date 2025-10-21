@@ -11,6 +11,7 @@ import { BioTitansModel } from './models/BioTitans.js'
 import { ChassisModel } from './models/Chassis.js'
 import { ClassesModel } from './models/Classes.js'
 import { CrawlersModel } from './models/Crawlers.js'
+import { CrawlerBaysModel } from './models/CrawlerBays.js'
 import { CrawlerTechLevelsModel } from './models/CrawlerTechLevels.js'
 import { CreaturesModel } from './models/Creatures.js'
 import { DronesModel } from './models/Drones.js'
@@ -32,6 +33,7 @@ export { BioTitansModel } from './models/BioTitans.js'
 export { ChassisModel } from './models/Chassis.js'
 export { ClassesModel } from './models/Classes.js'
 export { CrawlersModel } from './models/Crawlers.js'
+export { CrawlerBaysModel } from './models/CrawlerBays.js'
 export { CrawlerTechLevelsModel } from './models/CrawlerTechLevels.js'
 export { CreaturesModel } from './models/Creatures.js'
 export { DronesModel } from './models/Drones.js'
@@ -60,6 +62,7 @@ export type {
   SalvageUnionMechChassis,
   SalvageUnionClasses,
   SalvageUnionCrawlers,
+  SalvageUnionCrawlerBays,
   SalvageUnionCrawlerTechLevels,
   SalvageUnionCreatures,
   SalvageUnionDrones,
@@ -80,6 +83,7 @@ export type {
   Chassis,
   Class,
   Crawler,
+  CrawlerBay,
   CrawlerTechLevel,
   Creature,
   Drone,
@@ -118,6 +122,7 @@ export class SalvageUnionReference {
   public static readonly Chassis: ChassisModel = new ChassisModel()
   public static readonly Classes: ClassesModel = new ClassesModel()
   public static readonly Crawlers: CrawlersModel = new CrawlersModel()
+  public static readonly CrawlerBays: CrawlerBaysModel = new CrawlerBaysModel()
   public static readonly CrawlerTechLevels: CrawlerTechLevelsModel =
     new CrawlerTechLevelsModel()
   public static readonly Creatures: CreaturesModel = new CreaturesModel()
