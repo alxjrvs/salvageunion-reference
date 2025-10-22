@@ -8,7 +8,13 @@
     "type": "object",
     "description": "A pilot ability",
     "additionalProperties": false,
-    "required": ["id", "name", "tree", "source", "level", "page"],
+    "required": [
+      "id",
+      "name",
+      "tree",
+      "source",
+      "page"
+    ],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
@@ -44,6 +50,13 @@
       "actionType": {
         "$ref": "shared/enums.schema.json#/definitions/actionType"
       },
+      "mechActionType": {
+        "$ref": "shared/enums.schema.json#/definitions/actionType"
+      },
+      "notes": {
+        "type": "string",
+        "description": "Additional notes or requirements for the ability"
+      },
       "table": {
         "$ref": "shared/common.schema.json#/definitions/table"
       },
@@ -63,7 +76,10 @@
               "type": "object",
               "description": "Structured option with label and value",
               "additionalProperties": false,
-              "required": ["label", "value"],
+              "required": [
+                "label",
+                "value"
+              ],
               "properties": {
                 "label": {
                   "type": "string",

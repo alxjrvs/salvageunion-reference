@@ -1,7 +1,7 @@
 [
   {
     "id": "418deda4-ab48-4bc4-a527-d56f4d77746e",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": ".50 Cal Machine Gun",
     "techLevel": 1,
     "slotsRequired": 2,
@@ -28,7 +28,7 @@
   },
   {
     "id": "799e7054-4227-4288-9015-9d29bb2a73d9",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Armour Plating",
     "techLevel": 1,
     "slotsRequired": 2,
@@ -40,7 +40,7 @@
   },
   {
     "id": "08bfedbf-c00a-4353-927a-109dc14d3c56",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Cargo Pod",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -56,7 +56,7 @@
   },
   {
     "id": "d1b9d257-a2d5-4765-9899-1f08ffa7f5c1",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Escape Hatch",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -82,7 +82,7 @@
   },
   {
     "id": "9beaf95a-de30-4f3d-a523-a7af5f6fc8de",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Chainsaw Arm",
     "techLevel": 1,
     "slotsRequired": 3,
@@ -106,7 +106,7 @@
   },
   {
     "id": "dfccec2b-1e23-4476-946f-45993455da3e",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Floodlights",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -119,7 +119,7 @@
   },
   {
     "id": "d541364c-fbeb-4c38-883c-462ee8e1cbc2",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "FM-3 Flamethrower",
     "techLevel": 1,
     "slotsRequired": 3,
@@ -147,7 +147,7 @@
   },
   {
     "id": "084ec8ab-8eab-4b28-ae4f-53026e2c9d4e",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "High Pressure Hose",
     "techLevel": 1,
     "slotsRequired": 2,
@@ -169,7 +169,7 @@
   },
   {
     "id": "89b75921-7bdf-410e-aa16-95d332ded6f9",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Hydraulic Crusher",
     "techLevel": 1,
     "slotsRequired": 4,
@@ -199,7 +199,7 @@
   },
   {
     "id": "28fc95c2-0c31-4904-9a0c-d5e0e66f6598",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Locomotion System",
     "techLevel": 1,
     "slotsRequired": 2,
@@ -212,7 +212,7 @@
   },
   {
     "id": "919411b2-cdfd-4c5f-98d8-d401ffd40ff3",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Loudspeakers",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -225,7 +225,7 @@
   },
   {
     "id": "e2f93445-ed27-4fe1-b35e-5d3cdc8957c6",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Mechapult",
     "techLevel": 1,
     "slotsRequired": 5,
@@ -261,7 +261,7 @@
   },
   {
     "id": "9e7ad2ee-2793-4f80-a0c6-4729123302c2",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Mini Mortar",
     "techLevel": 1,
     "slotsRequired": 5,
@@ -287,7 +287,7 @@
   },
   {
     "id": "d68b90c2-7637-4672-99c5-b67e72db74de",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Mining Rig",
     "techLevel": 1,
     "slotsRequired": 5,
@@ -314,7 +314,7 @@
   },
   {
     "id": "828d17e1-d61c-4b1b-915f-2f0a0f0faf15",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Red Laser",
     "techLevel": 1,
     "slotsRequired": 3,
@@ -339,7 +339,7 @@
   },
   {
     "id": "0d9a91d4-1045-444d-b8c2-3ae711576a8c",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Rigging Arm",
     "techLevel": 1,
     "slotsRequired": 2,
@@ -355,7 +355,7 @@
   },
   {
     "id": "eb57d2c5-7c22-4869-a806-edc0d92f539b",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Transport Hold",
     "techLevel": 1,
     "slotsRequired": 2,
@@ -371,7 +371,7 @@
   },
   {
     "id": "dd080aea-2e6e-481d-8eb9-e7a532ac3e3a",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Sandblaster",
     "techLevel": 1,
     "slotsRequired": 3,
@@ -388,7 +388,7 @@
   },
   {
     "id": "3cf8a2ee-9aa4-4235-96fe-bd4eeeb114e4",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Riveting Gun",
     "techLevel": 1,
     "slotsRequired": 3,
@@ -397,7 +397,7 @@
     "description": "This mech-mountable riveting gun can be used to make field repairs to the most basic of Mechs, Systems, and Modules.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -405,7 +405,7 @@
         "description": "You restore up to 4 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -413,7 +413,7 @@
         "description": "You repair a damaged Tech 1 System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",
@@ -425,7 +425,7 @@
   },
   {
     "id": "fb0de7ed-bf3e-4293-aaba-c35d9718bc33",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Armoured Shield",
     "techLevel": 2,
     "slotsRequired": 2,
@@ -453,7 +453,7 @@
   },
   {
     "id": "c1a27f45-075a-4fe4-a07e-1d3d548ff82d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "30mm Autocannon",
     "techLevel": 2,
     "slotsRequired": 5,
@@ -477,7 +477,7 @@
   },
   {
     "id": "962d035c-2d46-4698-a060-03ec169b9373",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Blue Mining Laser",
     "techLevel": 2,
     "slotsRequired": 7,
@@ -502,7 +502,7 @@
   },
   {
     "id": "14626d57-064d-48c3-80c6-3221e2014589",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Cargo Bay",
     "techLevel": 2,
     "slotsRequired": 4,
@@ -518,7 +518,7 @@
   },
   {
     "id": "9eeb5d1a-19b7-4044-bd9e-de87aeda9b67",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Chaff Launcher",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -536,7 +536,7 @@
   },
   {
     "id": "15685ad9-348f-48dc-828b-014f23274ed9",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Dozer Blades",
     "techLevel": 2,
     "slotsRequired": 3,
@@ -548,7 +548,7 @@
   },
   {
     "id": "005da612-641c-4d20-aafc-dc74ecbe0102",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Grappling Harpoon",
     "techLevel": 2,
     "slotsRequired": 3,
@@ -557,7 +557,7 @@
     "description": "This System launches a grappling spike attached to a high tensile wire. Fired into a rock or structure and it can be used to help the Mech cross rough terrain. Fired at a Mech, it can be used to pin the Mech down or even pulled towards the attacker. Raiders love using these to pin down targets enabling their mates to strip them apart.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Pin",
         "activationCost": 2,
         "range": "Medium",
@@ -570,7 +570,7 @@
         "description": "When activated, choose a target in Range. You deal 1 SP damage to the target and it cannot move beyond Medium Range of your Mech whilst the grappling harpoon is attached. You can detach the grappling harpoon as a Free Action. The target may attempt to remove the harpoon as a Turn Action on their turn, if they have some means to do so."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Swing",
         "activationCost": 2,
         "range": "Medium",
@@ -582,7 +582,7 @@
   },
   {
     "id": "5fabe13d-8e5c-436e-9b73-ce02027fe6a5",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Green Laser",
     "techLevel": 2,
     "slotsRequired": 4,
@@ -607,7 +607,7 @@
   },
   {
     "id": "a241c7a9-4739-4e57-a74d-26e2597bbe99",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Heat Sink",
     "techLevel": 2,
     "slotsRequired": 2,
@@ -623,7 +623,7 @@
   },
   {
     "id": "49cbaf62-8bb6-44f5-b048-198a708747e3",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "High Gain Antenna",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -635,7 +635,7 @@
   },
   {
     "id": "0a69bc01-e8bb-4726-864d-3d45f9724000",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Industrial Body Kit",
     "techLevel": 2,
     "slotsRequired": 3,
@@ -647,7 +647,7 @@
   },
   {
     "id": "bbed4a6b-e602-4e44-929f-773759b05068",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "M2-X Mauler",
     "techLevel": 2,
     "slotsRequired": 3,
@@ -668,7 +668,7 @@
   },
   {
     "id": "ee78e486-95be-4876-b48d-621185636e09",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Nanofibre Net Launcher",
     "techLevel": 2,
     "slotsRequired": 3,
@@ -682,7 +682,7 @@
   },
   {
     "id": "7152f2d6-d9ed-4903-b2b3-fc31ed39f5a2",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Module Switch",
     "techLevel": 2,
     "slotsRequired": 4,
@@ -698,7 +698,7 @@
   },
   {
     "id": "66aad3fe-84a3-4145-ab69-37bb44c49e05",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Personnel Transport Pod",
     "techLevel": 2,
     "slotsRequired": 3,
@@ -716,7 +716,7 @@
   },
   {
     "id": "5cef0ef1-a850-4c92-9350-cf4a8de491df",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Shotgun Pit",
     "techLevel": 2,
     "slotsRequired": 2,
@@ -728,7 +728,7 @@
   },
   {
     "id": "8b4e7111-3334-4deb-bfdf-ad74c8c9c1de",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Smoke Machine",
     "techLevel": 2,
     "slotsRequired": 2,
@@ -741,7 +741,7 @@
   },
   {
     "id": "0760af2d-b0ae-45ef-90ab-e797f2233cdb",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Refractive Shield Projector",
     "techLevel": 2,
     "slotsRequired": 2,
@@ -767,7 +767,7 @@
   },
   {
     "id": "8e8052e2-3779-4c88-b40d-517e3b1d1432",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Torpedo Tubes",
     "techLevel": 2,
     "slotsRequired": 6,
@@ -800,7 +800,7 @@
   },
   {
     "id": "8913e828-fe19-486b-b994-909136fbf3f4",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Tracking Node",
     "techLevel": 2,
     "slotsRequired": 2,
@@ -819,7 +819,7 @@
   },
   {
     "id": "ff499aa4-f422-4beb-ad55-683c508ff950",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Welding Laser",
     "techLevel": 2,
     "slotsRequired": 3,
@@ -828,7 +828,7 @@
     "description": "This Mech-mountable welding laser allows you to make a wider range of repairs in the field. An invaluable tool that has become the official symbol of the Engineers' Union.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -836,7 +836,7 @@
         "description": "You restore up to 5 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -844,7 +844,7 @@
         "description": "You repair a damaged Tech 1 or Tech 2 System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",
@@ -856,7 +856,7 @@
   },
   {
     "id": "104ef3b1-64b7-4617-85bd-b2960a3e7142",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "120mm Cannon",
     "techLevel": 3,
     "slotsRequired": 7,
@@ -881,7 +881,7 @@
   },
   {
     "id": "b1beadc3-368b-47fc-9641-cc0b7038b646",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Articulated Rigging Arm",
     "techLevel": 3,
     "slotsRequired": 3,
@@ -900,7 +900,7 @@
   },
   {
     "id": "2e536b16-c188-4b52-be78-0ac69572636b",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Capacitance Bank",
     "techLevel": 3,
     "slotsRequired": 4,
@@ -916,7 +916,7 @@
   },
   {
     "id": "c54b0f9b-de8a-40e8-a869-a7341f478b48",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Composite Armour",
     "techLevel": 3,
     "slotsRequired": 3,
@@ -932,7 +932,7 @@
   },
   {
     "id": "baa67be6-7dff-42b2-9534-ab31dbd1df64",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Ejection System",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -957,7 +957,7 @@
   },
   {
     "id": "fb3ad8b7-6293-4eef-90d6-1a04367f674f",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "AFF Coolant Foam",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -977,7 +977,7 @@
   },
   {
     "id": "5da7e635-b055-4fb2-96b9-de26e0ad80c6",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Electro-Magnetic Shield Projector",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -1003,7 +1003,7 @@
   },
   {
     "id": "89926020-d751-4d64-a4b6-3521406cf456",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Fabrication Arm",
     "techLevel": 3,
     "slotsRequired": 3,
@@ -1012,7 +1012,7 @@
     "description": "This multi-purpose fabrication arm produces a resilient form of metallic oxide epoxy allowing specialised field repairs.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -1020,7 +1020,7 @@
         "description": "You restore up to 6 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -1028,7 +1028,7 @@
         "description": "You repair a damaged Tech 1, 2, or 3 System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",
@@ -1040,7 +1040,7 @@
   },
   {
     "id": "295c4c65-02c3-4cd2-89ee-d60f5461d792",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Heavy Duty Mining Rig",
     "techLevel": 3,
     "slotsRequired": 7,
@@ -1070,7 +1070,7 @@
   },
   {
     "id": "cd1da228-d4e4-439b-8978-6f7a82f0809d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Long Barrelled Green Laser",
     "techLevel": 3,
     "slotsRequired": 5,
@@ -1095,7 +1095,7 @@
   },
   {
     "id": "df4f2e7c-0fb7-472f-8fdf-4e397460e1d7",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Mech Melee Armament",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -1119,7 +1119,7 @@
   },
   {
     "id": "7427374e-8d04-40ff-8313-de6a0650db56",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Missile Pod",
     "techLevel": 3,
     "slotsRequired": 7,
@@ -1148,7 +1148,7 @@
   },
   {
     "id": "818eef8d-8147-45b1-8e9d-da677a74dce3",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Prawn Sifter",
     "techLevel": 3,
     "slotsRequired": 5,
@@ -1175,7 +1175,7 @@
   },
   {
     "id": "a6a69453-3007-4a87-b742-7fe9f0c3c38c",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Rotary Minigun",
     "techLevel": 3,
     "slotsRequired": 7,
@@ -1210,7 +1210,7 @@
   },
   {
     "id": "cc564f09-9353-42cb-9d8f-22dc5e9a3a9d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Radiation Sealing",
     "techLevel": 3,
     "slotsRequired": 3,
@@ -1222,7 +1222,7 @@
   },
   {
     "id": "a7b133e5-face-4530-a827-df8304d819d6",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Rail Rifle",
     "techLevel": 3,
     "slotsRequired": 7,
@@ -1247,7 +1247,7 @@
   },
   {
     "id": "73016ca0-febb-4cc0-9583-6f8bc927e022",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Red Pulse Laser",
     "techLevel": 3,
     "slotsRequired": 5,
@@ -1272,7 +1272,7 @@
   },
   {
     "id": "226d5f10-cc5e-4076-a202-1347107b3099",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Smuggling Hold",
     "techLevel": 3,
     "slotsRequired": 5,
@@ -1288,7 +1288,7 @@
   },
   {
     "id": "b4a750ba-05b9-4d9d-b142-4bfa3deb5518",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Spider Locomotion System",
     "techLevel": 3,
     "slotsRequired": 4,
@@ -1300,7 +1300,7 @@
   },
   {
     "id": "98aa1e7e-89d2-4d5a-9b65-8d3d66e4fb5f",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Target Painter",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -1319,7 +1319,7 @@
   },
   {
     "id": "a5abf09c-c040-41e0-b31b-e1ce952a59ba",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Vectored Thrust Unit",
     "techLevel": 3,
     "slotsRequired": 4,
@@ -1331,7 +1331,7 @@
   },
   {
     "id": "4b425808-bf2d-453c-acb5-6d0483caf8d9",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Advanced Fabrication Arm",
     "techLevel": 4,
     "slotsRequired": 3,
@@ -1340,7 +1340,7 @@
     "description": "Specially designed by Osiris Construction to repair Evantis Colossus Mechs during the Last War of Nations.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -1348,7 +1348,7 @@
         "description": "You restore up to 7 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -1356,7 +1356,7 @@
         "description": "You repair a damaged Tech 1, 2, 3, or 4 System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",
@@ -1368,7 +1368,7 @@
   },
   {
     "id": "b2bf6656-26f0-4831-9f34-659017e6fb63",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Anti-Mech Mine Layer",
     "techLevel": 4,
     "slotsRequired": 5,
@@ -1396,7 +1396,7 @@
   },
   {
     "id": "b246abab-05e8-4946-9324-b6bdd8ab1b48",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Automated Weapon Turret",
     "techLevel": 4,
     "slotsRequired": 5,
@@ -1409,7 +1409,7 @@
   },
   {
     "id": "c05fd7f4-cd5a-4c0d-8518-3566cece416d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Automated Machine Gun Turret",
     "techLevel": 4,
     "slotsRequired": 5,
@@ -1433,7 +1433,7 @@
   },
   {
     "id": "47f3299a-2bdc-4bb9-8efe-ecec6c4b6b19",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Automated Green Laser Turret",
     "techLevel": 4,
     "slotsRequired": 9,
@@ -1458,7 +1458,7 @@
   },
   {
     "id": "0312bf43-e138-42b4-8bce-0a048e88634c",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Automated 120mm Cannon Turret",
     "techLevel": 4,
     "slotsRequired": 7,
@@ -1483,7 +1483,7 @@
   },
   {
     "id": "9f6a712f-6e0e-43c9-b2a1-fa2795ee97fe",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Aerosolised Nerve Gas Sprayer",
     "techLevel": 4,
     "slotsRequired": 5,
@@ -1497,7 +1497,7 @@
   },
   {
     "id": "408c3aad-8a52-4185-a8dc-ff4d2c39f88d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "CACB Laser",
     "techLevel": 4,
     "slotsRequired": 7,
@@ -1523,7 +1523,7 @@
   },
   {
     "id": "3b79be10-0ca8-4e1d-a71a-1272f7f6a7d3",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Corpo Body Kit",
     "techLevel": 4,
     "slotsRequired": 3,
@@ -1535,7 +1535,7 @@
   },
   {
     "id": "e717b8f1-c509-4faf-9a33-0702bb0b07be",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Electro-Magnetic Hardening",
     "techLevel": 4,
     "slotsRequired": 3,
@@ -1547,7 +1547,7 @@
   },
   {
     "id": "c84813bb-fa24-40da-9139-74b42d90ff6d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Grav Assisted Cargo Bay",
     "techLevel": 4,
     "slotsRequired": 5,
@@ -1564,7 +1564,7 @@
   },
   {
     "id": "11c8fa59-f224-4961-8478-80d7e02667c8",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Hover Locomotion System",
     "techLevel": 4,
     "slotsRequired": 5,
@@ -1577,7 +1577,7 @@
   },
   {
     "id": "ae58a874-dcb9-4ef8-8ec9-02864f83fe57",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Laser Anti-Missile System",
     "techLevel": 4,
     "slotsRequired": 2,
@@ -1589,7 +1589,7 @@
   },
   {
     "id": "a00c20db-8162-4706-96bb-05f6e70d588b",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Needle Missile Pod",
     "techLevel": 4,
     "slotsRequired": 3,
@@ -1614,7 +1614,7 @@
   },
   {
     "id": "dfb1ca46-8116-4536-b129-6b30caa3e39c",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Railgun",
     "techLevel": 4,
     "slotsRequired": 9,
@@ -1639,7 +1639,7 @@
   },
   {
     "id": "0bd9fffd-cab7-45b4-a73f-83a9bbeff8cb",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Shield Dome",
     "techLevel": 4,
     "slotsRequired": 4,
@@ -1658,7 +1658,7 @@
   },
   {
     "id": "ca3b64b8-7c25-4174-9613-987ce3fc6031",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Radomes",
     "techLevel": 4,
     "slotsRequired": 3,
@@ -1671,7 +1671,7 @@
   },
   {
     "id": "95191048-7eef-4c7c-9986-16912f6e4533",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Snub-Nosed Blue Laser",
     "techLevel": 4,
     "slotsRequired": 5,
@@ -1697,7 +1697,7 @@
   },
   {
     "id": "c001522c-b80c-4cc7-bce8-d76cdc31db88",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Stabilising Locomotion System",
     "techLevel": 4,
     "slotsRequired": 5,
@@ -1706,7 +1706,7 @@
     "description": "This Locomotion System, alongside allowing your Mech to move as normal, includes heavy actuators, pistons, and struts which can dig into the ground, stabilising your Mech and increasing its resilience and damage output at the cost of not being able to move.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Stabilise",
         "activationCost": 3,
         "actionType": "Turn",
@@ -1717,7 +1717,7 @@
   },
   {
     "id": "4f0da6b3-f8b4-4d96-a9d0-751308fa304d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Tesla Coils",
     "techLevel": 4,
     "slotsRequired": 5,
@@ -1725,7 +1725,7 @@
     "description": "Developed by Aeon as a means to charge their patented shielding technology whilst in the field. Tesla Coils fire an arc of super-charged electricity which can be used in offensive, defensive, and support roles.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Tesla Arc",
         "activationCost": 2,
         "range": "Medium",
@@ -1733,7 +1733,7 @@
         "description": "You may choose up to three different targets in Range. Roll to hit once as normal. On a successful hit, the first target takes 4 SP damage, the second target takes 3 SP damage, and the third target takes 2 SP damage."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Tesla Charge",
         "activationCost": 3,
         "range": "Close",
@@ -1741,7 +1741,7 @@
         "description": "You may restore up to 2 EP to a target Mech in Range."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Tesla Shield",
         "activationCost": 2,
         "range": "Close",
@@ -1758,7 +1758,7 @@
   },
   {
     "id": "722978d7-b386-4158-9225-94ee1b79f3bb",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Fabrication Bay",
     "techLevel": 5,
     "slotsRequired": 7,
@@ -1769,7 +1769,7 @@
     "activationCost": 3,
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Repair",
         "description": "• Restore up to 15 SP to a target Mech within the Fabrication Bay with at least 1 SP.\n• Restore up to 2 EP to a target Mech within the Fabrication Bay.\n• Repair up to 3 damaged Systems or Modules of Tech 1-5 within the Fabrication Bay to Intact Condition.\n• Repair up to 2 damaged Mech Chassis or Vehicles of Tech 1-5 within the Fabrication Bay to Intact Condition."
       }
@@ -1778,7 +1778,7 @@
   },
   {
     "id": "4f3c9cfe-8580-4c4b-923a-c63859660522",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Ion Cannon",
     "techLevel": 5,
     "slotsRequired": 5,
@@ -1805,7 +1805,7 @@
   },
   {
     "id": "7398315b-40d4-481b-8801-3f5c53891d9a",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Plasma Cannon",
     "techLevel": 5,
     "slotsRequired": 6,
@@ -1838,7 +1838,7 @@
   },
   {
     "id": "ee16c8ce-29c3-4248-b018-3975caa9e5f1",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Reflective Shielding",
     "techLevel": 5,
     "slotsRequired": 4,
@@ -1865,7 +1865,7 @@
   },
   {
     "id": "2892d3dc-0d88-4896-aae1-c453fc7e943b",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Mole Torpedo",
     "techLevel": 5,
     "slotsRequired": 6,
@@ -1899,7 +1899,7 @@
   },
   {
     "id": "01485e0f-001a-449a-a4ad-bb2d6270bae5",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Monomolecular Blade",
     "techLevel": 5,
     "slotsRequired": 3,
@@ -1929,7 +1929,7 @@
   },
   {
     "id": "f6747007-296c-4845-93d8-5ff21bb7c599",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Multi-Phase Shield",
     "techLevel": 5,
     "slotsRequired": 6,
@@ -1955,7 +1955,7 @@
   },
   {
     "id": "858daac8-54c6-445b-9f15-700a674565c9",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Ejector Pod",
     "techLevel": 5,
     "slotsRequired": 3,
@@ -1980,7 +1980,7 @@
   },
   {
     "id": "80cd92fc-581d-45ee-ace5-9a0079361c99",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Blue Beam Laser",
     "techLevel": 5,
     "slotsRequired": 7,
@@ -2002,7 +2002,7 @@
   },
   {
     "id": "28ee7a7b-2508-4c37-859d-e7a4595d7b63",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Amphibious Locomotion System",
     "techLevel": 5,
     "slotsRequired": 5,
@@ -2019,7 +2019,7 @@
   },
   {
     "id": "53780c05-7707-4b2e-8f97-5080e2191649",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "120mm Heavy Autocannon",
     "techLevel": 6,
     "slotsRequired": 14,
@@ -2051,7 +2051,7 @@
   },
   {
     "id": "38b2c398-0824-4444-902d-33e95ad483e6",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Executive Body Kit",
     "techLevel": 6,
     "slotsRequired": 3,
@@ -2063,7 +2063,7 @@
   },
   {
     "id": "a4e1795d-570c-4c01-bcbb-d490b30b8b40",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Experimental Particle Beam Cannon",
     "techLevel": 6,
     "slotsRequired": 12,
@@ -2097,7 +2097,7 @@
   },
   {
     "id": "3c530430-bec9-4319-b1cf-6aeff54dc9cd",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Experimental Teleportation Hold",
     "techLevel": 6,
     "slotsRequired": 5,
@@ -2119,7 +2119,7 @@
   },
   {
     "id": "7071de35-abd0-49c7-885c-c8283f95e6e7",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "N15 Fat Boy",
     "techLevel": 6,
     "slotsRequired": 10,
@@ -2144,7 +2144,7 @@
   },
   {
     "id": "76a9e54c-2117-4570-bbe9-66007aee5675",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Matter Phase Shield",
     "techLevel": 6,
     "slotsRequired": 4,
@@ -2152,7 +2152,7 @@
     "description": "Developed by Sakura Futures at the peak of their technological prowess before the Wasteland Reclamation, a Matter Phase Shield disintegrates anything that attempts to pass through it by stripping it apart at a molecular level.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Disintegrate",
         "activationCost": "X",
         "range": "Close",
@@ -2165,7 +2165,7 @@
         "description": "You extend the Matter Phase Shield outward from you. Everything within Close Range of you except for your own Mech and Pilot takes an amount of SP damage equal to 3× the EP you spend on this Ability."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Shield",
         "activationCost": 2,
         "range": "Close",
@@ -2190,7 +2190,7 @@
   },
   {
     "id": "f81c02f4-0583-4002-93ea-db73c738d166",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Nanite Repair Arm",
     "techLevel": 6,
     "slotsRequired": 3,
@@ -2199,7 +2199,7 @@
     "description": "This highly specialised repair arm, developed by the Stefanus Solitude research team from their experiments with the Nanite Sea, fires a stream of nanites at a damaged mech or part restoring it to full functionality. The nanites' highly adaptive nature means this can be used to repair just about anything you will find in the wastes.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -2207,7 +2207,7 @@
         "description": "You restore up to 10 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -2215,7 +2215,7 @@
         "description": "You repair any damaged System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",
@@ -2227,7 +2227,7 @@
   },
   {
     "id": "2e2a0c20-a0e0-4448-9b5e-1c8a02a5f3a5",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Teleportation Pod",
     "techLevel": 6,
     "slotsRequired": 3,

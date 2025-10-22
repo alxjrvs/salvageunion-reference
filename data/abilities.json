@@ -2,7 +2,7 @@
   {
     "id": "ef787157-c4d4-44bf-857f-71eec0db7939",
     "name": "Engineering Expertise",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Mechanical Knowledge",
     "level": 1,
     "description": "Ask questions pertaining to mechanical and engineering topics.",
@@ -14,7 +14,7 @@
   {
     "id": "c3b7d2dd-d774-45b8-827c-48d3c9c58202",
     "name": "Talk Shop",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Mechanical Knowledge",
     "level": 2,
     "description": "Build rapport, and ask favours of other mechanics, salvagers, and workers.",
@@ -33,7 +33,7 @@
   {
     "id": "fba6ecb0-86c6-4b4a-9daf-f0056c79c88f",
     "name": "Mech Acquisition",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Mechanical Knowledge",
     "level": 3,
     "description": "Track down and acquire specific Mech parts and Chassis.",
@@ -45,7 +45,7 @@
   {
     "id": "5521c16b-0831-4a2e-87b5-0f9205b734da",
     "name": "Mass Field Maintenance",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Mech-Tech",
     "level": 1,
     "description": "Repair 4 SP on target Mechs or Vehicles in the field.",
@@ -58,7 +58,7 @@
   {
     "id": "c28d466d-0a44-434e-8258-2f188285c67f",
     "name": "If I cut this wire...",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Mech-Tech",
     "level": 2,
     "description": "Damage Systems and Modules on target Mech.",
@@ -71,7 +71,7 @@
   {
     "id": "8fff03d8-8831-4143-af99-b3439bf9a306",
     "name": "Mass Field Repair",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Mech-Tech",
     "level": 3,
     "description": "Repair target Systems and Modules in the field.",
@@ -84,7 +84,7 @@
   {
     "id": "d51afc02-2683-46e1-acba-353d85eaf071",
     "name": "Jury Rig",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Forging",
     "level": 1,
     "description": "Craft improvised equipment from everyday items.",
@@ -96,7 +96,7 @@
   {
     "id": "4c410720-0a21-4b2b-a842-68a4d34ccf33",
     "name": "Mech-Gyver",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Forging",
     "level": 2,
     "description": "Craft Mech Systems and Modules from Scrap in the field.",
@@ -108,7 +108,7 @@
   {
     "id": "c7f121eb-6e9f-46e6-9500-f65860ddd08c",
     "name": "Auto-Turret",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Forging",
     "level": 3,
     "description": "Construct an Immobile Auto-Turret that can be fitted with Systems and Modules.",
@@ -125,7 +125,7 @@
   {
     "id": "8f954763-3014-4184-ace6-a7409ff00401",
     "name": "Union Engineer",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Engineer",
     "level": 1,
     "description": "Improved repair; gain an additional 4SP when using Repair abilities or Systems.",
@@ -150,7 +150,7 @@
   {
     "id": "195fec1d-d749-4e5c-b7c1-f4986f14114f",
     "name": "This one goes to 11...",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Engineer",
     "level": 2,
     "description": "Overcharge a Reactor beyond it’s initial capacity to gain additional Pushes.",
@@ -163,7 +163,7 @@
   {
     "id": "7f77b684-c47a-4154-8adb-b1ee291dd177",
     "name": "Mass Energy Recharge",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Engineer",
     "level": 3,
     "description": "Restore 10 Energy Points to target Mechs in the field.",
@@ -176,7 +176,7 @@
   {
     "id": "4ddfa5ed-cae2-4870-bc21-a7860d588fd7",
     "name": "Tip Top Shape",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Engineer",
     "level": 1,
     "description": "Your Union Crawler no longer needs to pay upkeep and does not deteriorate.",
@@ -187,7 +187,7 @@
   {
     "id": "d2f752e1-8de5-4d4a-902d-8113106a982b",
     "name": "The Full Works",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Engineer",
     "level": 1,
     "description": "Fully repair and restore a target Mech and all attached Systems and Modules.",
@@ -200,7 +200,7 @@
   {
     "id": "4cbf7319-164f-4b51-b417-1a7e8fa5d6a0",
     "name": "Hacking Kit",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Hacking",
     "level": 1,
     "description": "Versatile tool for allowing Mech Module hacks on foot and vice-versa.",
@@ -218,7 +218,7 @@
   {
     "id": "8a61839b-b0e2-4726-b436-0d76f229a9ea",
     "name": "System and Software Hacker",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Hacking",
     "level": 2,
     "description": "Attempt to destroy Systems and Modules on target Mech.",
@@ -244,7 +244,7 @@
   {
     "id": "24f08353-1f4e-4549-a2e3-45272c90b57f",
     "name": "Denial of Service Attack",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Hacking",
     "level": 3,
     "description": "Attempt to Shutdown target Mech in Range.",
@@ -270,7 +270,7 @@
   {
     "id": "f7bc9f48-bdaf-4d28-a965-38b017b2328f",
     "name": "Well actually...",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Electronics",
     "level": 1,
     "description": "Ask questions about Systems, Modules, or Technology.",
@@ -290,7 +290,7 @@
   {
     "id": "f6d6d8d7-0b3e-4ea8-906f-582281a98a5e",
     "name": "Techno Babble",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Electronics",
     "level": 2,
     "description": "Build rapport and ask favours of other Hackers and technophiles.",
@@ -302,7 +302,7 @@
   {
     "id": "3364cc4f-227f-4f88-8b73-a09309e293f0",
     "name": "Holo Companion",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Electronics",
     "level": 3,
     "description": "Construct an intelligent, holographic A.I. companion, projected from a device on your person.",
@@ -317,7 +317,7 @@
   {
     "id": "420ab386-ad77-4857-9679-1e4a01e3d090",
     "name": "Bionic Senses",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Augmentation",
     "level": 1,
     "description": "Gain integrated Thermal Optics, Zoom Optics, or IR Night Vision Optics.",
@@ -328,7 +328,7 @@
   {
     "id": "1e6183d7-0b67-40ab-91f4-134090c8846b",
     "name": "Bionic Arms",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Augmentation",
     "level": 2,
     "description": "Gain a set of integrated Bionic Arms. Gives an improved base attack.",
@@ -355,7 +355,7 @@
   {
     "id": "4823bdf3-b501-423d-abd6-79ca1fd6203d",
     "name": "Bionic Legs",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Augmentation",
     "level": 3,
     "description": "Gain a set of integrated Bionic Legs. Gives improved base movement.",
@@ -366,7 +366,7 @@
   {
     "id": "379654a5-004f-458d-b0ce-1693fd87ee7f",
     "name": "Trojan Horse",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Hacking",
     "level": 1,
     "description": "Gain control of a Mech in Range as if it were yours for 10 minutes.",
@@ -384,7 +384,7 @@
   {
     "id": "fb98af0a-ac72-449d-ab9d-5a5f9b839ced",
     "name": "Counter-Hacking",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Hacking",
     "level": 2,
     "description": "Attempt to use an Ability with the Hacking Trait as a Reaction to being hacked.",
@@ -410,7 +410,7 @@
   {
     "id": "a40a0177-70e3-423e-aaaa-1e06d6068a05",
     "name": "Worm",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Hacking",
     "level": 3,
     "description": "Hack multiple Mechs in Range with a complex worm virus.",
@@ -436,7 +436,7 @@
   {
     "id": "da3d0c65-c347-49cc-97c4-fd6cae9c2737",
     "name": "Network Takeover",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Hacker",
     "level": 1,
     "description": "Hack the entire network of a settlement in range. Control it as you wish.",
@@ -454,7 +454,7 @@
   {
     "id": "d7c9ca3a-dc7a-4284-8736-2d0e02d8a2d9",
     "name": "Spyware",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Hacker",
     "level": 1,
     "description": "Permanent and undetectable spyware you can install on a settlement’s network.",
@@ -472,7 +472,7 @@
   {
     "id": "6ab9bdca-bd59-4bbd-afd7-ddcdaf944953",
     "name": "Squeeze it in",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Salvaging",
     "level": 1,
     "description": "Temporariliy increase the cargo capacity of a Mech.",
@@ -485,7 +485,7 @@
   {
     "id": "cb3a5c51-2162-4090-8173-8909bae9dc8c",
     "name": "Expert Salvager",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Salvaging",
     "level": 2,
     "description": "Gain additional salvage when Area Salvaging. Bypass the die roll when salvaging a Mech.",
@@ -496,7 +496,7 @@
   {
     "id": "d3845a5e-d838-4747-8e02-65f181ead511",
     "name": "Emergency Salvage Drop",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Salvaging",
     "level": 3,
     "description": "Retrieve Chassis, Systems, Modules, Scrap, and Equipment from your Crawler.",
@@ -514,7 +514,7 @@
   {
     "id": "60b55e00-61c7-49af-b386-4c5fc21fc086",
     "name": "Read a Person",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Trading",
     "level": 1,
     "description": "Learn information about an NPC you’re conversing with.",
@@ -534,7 +534,7 @@
   {
     "id": "a9f7366a-90ab-4972-91cf-3c5b1032f35e",
     "name": "Let’s Make a Deal",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Trading",
     "level": 2,
     "description": "Attempt to force a deal through on your terms using leverage.",
@@ -554,7 +554,7 @@
   {
     "id": "1918ed6b-3341-4063-8be5-d87051701568",
     "name": "No Job Too Big",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Trading",
     "level": 3,
     "description": "When reduced to 0 HP or your Mech is reduced to 0 SP, take a Turn Action or Reaction.",
@@ -566,7 +566,7 @@
   {
     "id": "3ad259a6-00eb-4411-af1a-03c247536520",
     "name": "Folk Song",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Leadership",
     "level": 1,
     "description": "Sing a song to set a mood for an audience of NPCs.",
@@ -600,7 +600,7 @@
   {
     "id": "9c2dad26-7d5d-45f8-9f60-d003e3151359",
     "name": "Behemoth",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Leadership",
     "level": 2,
     "description": "Intimidate opponents and force them to accept your demands or flee.",
@@ -621,7 +621,7 @@
   {
     "id": "c657f188-107b-40c1-82c0-c5b37bfb3e4b",
     "name": "Valiant Speech",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Leadership",
     "level": 3,
     "description": "Inspire you allies with a rousing speech which heals and provides them with bonuses.",
@@ -633,7 +633,7 @@
   {
     "id": "7ea637ab-14cf-4728-be2e-09adfddf5266",
     "name": "Beefcake",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Hauler",
     "level": 1,
     "description": "Increase your size and strength, as well as the size and strength of your Mech.",
@@ -644,7 +644,7 @@
   {
     "id": "85d969a1-dcd1-4911-8299-4b80ffd79eb1",
     "name": "Mechapult Master",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Hauler",
     "level": 2,
     "description": "Improve your ability with the Mechapult System.",
@@ -670,7 +670,7 @@
   {
     "id": "89c763c3-a8f3-4502-abf6-3f531e583299",
     "name": "Can’t Stop, Won’t Stop",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Hauler",
     "level": 3,
     "description": "Gain a special charge attack. Damage is based on cargo carried.",
@@ -705,7 +705,7 @@
   {
     "id": "a5b625c7-befc-4679-a334-2022f69ba9cb",
     "name": "Master Salvager",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Hauler",
     "level": 1,
     "description": "Restore destroyed Systems Modules, and Mechs to Damaged Condition.",
@@ -718,7 +718,7 @@
   {
     "id": "4154a12a-5149-4888-a305-b2b802a97d9b",
     "name": "Hauling All Day",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Hauler",
     "level": 1,
     "description": "Any Mech that you Pilot doubles its Structure Points and Cargo Capacity.",
@@ -729,7 +729,7 @@
   {
     "id": "72471ee4-9e97-47fa-a3c7-22655452d0ed",
     "name": "Gather Intelligence",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Recon",
     "level": 1,
     "description": "Ask two questions about an area and recieve truthful answers.",
@@ -741,7 +741,7 @@
   {
     "id": "10fc5eb8-418e-4127-aebe-0c9c6543ddc6",
     "name": "Tail",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Recon",
     "level": 2,
     "description": "Track a target without being seen.",
@@ -754,7 +754,7 @@
   {
     "id": "74830a8a-dc87-4a10-b95e-0e3ac2ec8fb4",
     "name": "Survey Drone",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Recon",
     "level": 3,
     "description": "Gain a Survey Drone that can be equipped with Systems and Modules.",
@@ -769,7 +769,7 @@
   {
     "id": "e1796802-3966-4286-a0e4-74cf816a26b3",
     "name": "Silver Tongue",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Sleuth",
     "level": 1,
     "description": "Glean what motivates an NPC and use it to convince them to do as you wish.",
@@ -781,7 +781,7 @@
   {
     "id": "6c36afb5-917c-4328-be35-2cd2cce9ccfc",
     "name": "Forked Tongue",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Sleuth",
     "level": 2,
     "description": "Lie with confidence and great skill to fool even the most insightful.",
@@ -793,7 +793,7 @@
   {
     "id": "bac905b5-d178-413b-96b4-5317712529a3",
     "name": "Persona",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Sleuth",
     "level": 3,
     "description": "Disguise yourself and create a false identity.",
@@ -815,7 +815,7 @@
   {
     "id": "4460ad4a-8abb-44bc-9aaf-8d53b968ce76",
     "name": "You Shot First",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Sniper",
     "level": 1,
     "description": "Activate this to act first whenever initiative would be rolled.",
@@ -827,7 +827,7 @@
   {
     "id": "ec6498ba-a242-42fd-a5b0-dbd7a4b63b40",
     "name": "Spotter",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Sniper",
     "level": 2,
     "description": "Chooose a target in range for an ally to make a free attack against.",
@@ -840,7 +840,7 @@
   {
     "id": "921afb77-3d0f-49b5-9cc4-36372b24e00d",
     "name": "Custom Sniper Rifle",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Sniper",
     "level": 3,
     "description": "Gain a specialised sniper rifle that only you can use.",
@@ -877,7 +877,7 @@
   {
     "id": "89f20d2a-6f43-4a5f-943a-f8a77abd341b",
     "name": "Flashback",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Scout",
     "level": 1,
     "description": "Activate to retroactively have a solution in place for the current situation.",
@@ -889,7 +889,7 @@
   {
     "id": "c4f6b5f7-e06d-408f-b38f-61f3be5f48e1",
     "name": "Camo Suit",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Scout",
     "level": 2,
     "description": "Gain the use of an advanced Camo Suit that will make you invisible for short periods of time.",
@@ -909,7 +909,7 @@
   {
     "id": "5280d4fa-d97b-4678-a57e-1eae675e4772",
     "name": "Wingsuit",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Scout",
     "level": 3,
     "description": "Gain a Wingsuit which allows you to fly.",
@@ -928,7 +928,7 @@
   {
     "id": "15d9fafc-7265-4983-bbb2-c23bb64bd54f",
     "name": "Wasteland Celebrity",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Scout",
     "level": 1,
     "description": "You are known and respected everywhere and can get assistance when required.",
@@ -940,7 +940,7 @@
   {
     "id": "0f6288c7-1025-4df2-8b9c-f32b5f344bdd",
     "name": "Teleport Beacon",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Scout",
     "level": 1,
     "description": "Gain a beacon and controller. Activate the controller to be teleported to the beacon.",
@@ -957,7 +957,7 @@
   {
     "id": "9947ca57-8a30-4ea6-bb0b-d021ee5e8567",
     "name": "Charge",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Gladitorial Combat",
     "level": 1,
     "description": "Charge a target within Range and make a Melee attack with bonus damage.",
@@ -970,7 +970,7 @@
   {
     "id": "19b1961c-b50b-4436-9620-11b69545dbb4",
     "name": "Overpower",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Gladitorial Combat",
     "level": 2,
     "description": "Put and hold a target in a compromised position so that they gain the Vulnerable Trait.",
@@ -983,7 +983,7 @@
   {
     "id": "010ef454-6c74-4fa5-8df1-c611ccaf66b3",
     "name": "Duel",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Gladitorial Combat",
     "level": 3,
     "description": "Compel a target in Range to fight you in single combat.",
@@ -996,7 +996,7 @@
   {
     "id": "3095eb7e-aaea-4b8e-8b58-28a1643b5267",
     "name": "Wastelander Rapport",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Survivalist",
     "level": 1,
     "description": "Ask questions of locals and gain assistance when required.",
@@ -1008,7 +1008,7 @@
   {
     "id": "61e72d21-812e-46c1-9217-7717bdfd5cf7",
     "name": "Resourceful",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Survivalist",
     "level": 2,
     "description": "Find resources in the wastes and limit the effects of environmental conditions.",
@@ -1020,7 +1020,7 @@
   {
     "id": "35c99351-c62a-4975-ab48-23f14b3e633f",
     "name": "Custom Missile Launcher",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Survivalist",
     "level": 3,
     "description": "Gain a specialised Missile Launcher that only you can use.",
@@ -1068,7 +1068,7 @@
   {
     "id": "3625ae9b-942c-4d96-ae4d-683c9aaf2301",
     "name": "Provoke",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Tactical Warfare",
     "level": 1,
     "description": "Taunt a target in Range to focus its attacks on you.",
@@ -1081,7 +1081,7 @@
   {
     "id": "dc88ef14-e1cd-49da-8927-1738a3f0a873",
     "name": "Tactical Retreat",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Tactical Warfare",
     "level": 2,
     "description": "Allow you and your allies to retreat safely to an adjacent Area.",
@@ -1093,7 +1093,7 @@
   {
     "id": "a23001d9-4db3-4ffa-9ff3-5bdb39627318",
     "name": "Counterattack",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Tactical Warfare",
     "level": 3,
     "description": "Use as a reaction to make a single attack against the target that attacked you.",
@@ -1105,7 +1105,7 @@
   {
     "id": "4070019b-4924-444d-b666-77c75cd47794",
     "name": "Critical Strike",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Soldier",
     "level": 1,
     "description": "Gain a ‘Nailed it’ result on attack rolls with a result of 19 - 20.",
@@ -1116,7 +1116,7 @@
   {
     "id": "b521578a-3ee6-4b82-8066-27357b3bd9f1",
     "name": "Defy Death",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Soldier",
     "level": 2,
     "description": "When reduced to 0 SP activate as a Reaction to be reduced to 1 SP instead.",
@@ -1128,7 +1128,7 @@
   {
     "id": "720ff32f-f5cc-4902-8086-1ce436e9c566",
     "name": "Whirlwind Strike",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Advanced Soldier",
     "level": 3,
     "description": "Make an attack against all targets in Range with an equipped weapon.",
@@ -1148,7 +1148,7 @@
   {
     "id": "b9c33055-9ecd-49ca-818d-5ddf0b94324c",
     "name": "Omega Strike",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Soldier",
     "level": 1,
     "description": "Coordinate an attack against a single target. You and each of your allies makes a free attack.",
@@ -1160,7 +1160,7 @@
   {
     "id": "528bdad8-fb86-4376-bed6-4625db5cce88",
     "name": "Steel Pact",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Soldier",
     "level": 1,
     "description": "Form a bond with a weapon. Gain an additional dice roll when attacking with that weapon.",
@@ -1171,7 +1171,7 @@
   {
     "id": "92abaa31-6c3b-47d3-85ac-a6f47861a9b9",
     "name": "Glanded Stims",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Cyborg",
     "level": 1,
     "description": "Gain additional actions on your turn, with the risk that you could cause yourself harm.",
@@ -1191,7 +1191,7 @@
   {
     "id": "a225e943-2c1d-4783-ad04-28685336da4e",
     "name": "Modular Face Implant",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Cyborg",
     "level": 2,
     "description": "Install a Module interfaced directly to your brain.",
@@ -1202,7 +1202,7 @@
   {
     "id": "34619b5e-7a6a-4834-abfe-4ceb35f27f27",
     "name": "Bionic Endoskeleton",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Cyborg",
     "level": 3,
     "description": "You are now fully bionic, your HP is now SP.",
@@ -1213,7 +1213,7 @@
   {
     "id": "173ff718-c282-488b-b063-23e5c9580b12",
     "name": "Meld Form",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Cyborg",
     "level": 1,
     "description": "You are now Meld. You can replicate Equipment and make Meld Tendril attacks.",
@@ -1247,7 +1247,7 @@
   {
     "id": "a153058b-3468-45fc-8856-72af40762088",
     "name": "Ascension",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Cyborg",
     "level": 1,
     "description": "You are now a virtual being. You control your Mech by wire, and can project your image holographically.",
@@ -1258,7 +1258,7 @@
   {
     "id": "94a1b594-201d-4b82-b740-7583f0eac701",
     "name": "Field Fabrication",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Fabricator",
     "level": 1,
     "description": "Create Systems, Modules and Mech Chassis in the field.",
@@ -1270,7 +1270,7 @@
   {
     "id": "91192a4c-b12a-47cf-af89-0dad2825f092",
     "name": "Miniaturised EMP",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Fabricator",
     "level": 2,
     "description": "Gain a mini-EMP that when activated shuts down all electronics in Close Range for 10 mins.",
@@ -1288,7 +1288,7 @@
   {
     "id": "46c587cf-2561-4199-bebe-3f5a211e8ebf",
     "name": "Chassis Modder",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Fabricator",
     "level": 3,
     "description": "Modify your Mech Chassis to gain the Chassis Ability of another Mech in addition to its own.",
@@ -1299,7 +1299,7 @@
   {
     "id": "6fc73eba-d1a6-4839-96dd-4b35365a58a5",
     "name": "System Miniaturisation",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Fabricator",
     "level": 1,
     "description": "Make Systems smaller to take up fewer slots and be usable as Pilot Equipment.",
@@ -1310,7 +1310,7 @@
   {
     "id": "f063ea1a-ba2f-4982-92cb-e19ebe3bb178",
     "name": "Droned Mech Conversion",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Fabricator",
     "level": 1,
     "description": "Your Mech can be piloted remotely up to Far range.",
@@ -1321,7 +1321,7 @@
   {
     "id": "525f2eca-4f1e-4706-b89f-577f5d1eb832",
     "name": "Mecha Companion",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Ranger",
     "level": 1,
     "description": "Gain a robot familiar. It can be equipped with Systems and Modules.",
@@ -1336,7 +1336,7 @@
   {
     "id": "f3b2da0b-d9b9-400d-947a-73dea06c2529",
     "name": "Snipe",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Ranger",
     "level": 2,
     "description": "Deal double damage on your next ranged weapon attack if it hits.",
@@ -1348,7 +1348,7 @@
   {
     "id": "15a40bf0-6268-4087-87da-3c1453951a4b",
     "name": "Infiltration",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Ranger",
     "level": 3,
     "description": "Sneak into compounds, settlements and arcos to perform acts of espionage.",
@@ -1360,7 +1360,7 @@
   {
     "id": "c0ccee58-0f35-4873-be5c-727640e62334",
     "name": "Mecha Packmaster",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Ranger",
     "level": 1,
     "description": "Gain a second Mecha Companion in addition to your first.",
@@ -1375,7 +1375,7 @@
   {
     "id": "26e26814-996d-46ec-a721-8246784ab70b",
     "name": "One with the Wastelands",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Ranger",
     "level": 1,
     "description": "Ask questions, gain favours and easily navigate the wastes.",
@@ -1386,7 +1386,7 @@
   {
     "id": "06bd8491-e750-4775-8dbb-80040c193b2d",
     "name": "Black Market",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Smuggler",
     "level": 1,
     "description": "Gain access to a range of contraband Systems, Modules, and Pilot Equipment.",
@@ -1397,7 +1397,7 @@
   {
     "id": "37102a9a-4aa8-492a-a3d7-d84a34e131f3",
     "name": "Pray I don’t alter the deal further...",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Smuggler",
     "level": 2,
     "description": "Retroactively change the terms of a deal you’ve agreed.",
@@ -1409,7 +1409,7 @@
   {
     "id": "e8e364cf-5812-4848-85a9-bbf6ef8d21a6",
     "name": "Hidden Stash",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Smuggler",
     "level": 3,
     "description": "Smuggle contraband into even the most secure areas.",
@@ -1421,7 +1421,7 @@
   {
     "id": "b2cc25ff-a58a-4522-8069-13edbc687409",
     "name": "Knife Missile",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Smuggler",
     "level": 1,
     "description": "Gain a Knife Missile, a small floating assassination device you control.",
@@ -1447,7 +1447,7 @@
   {
     "id": "3ce9e519-dc38-47a6-a897-4636704c740b",
     "name": "Stealth Field Generator",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Smuggler",
     "level": 1,
     "description": "This makes you and everything in Close range invisible indefinitely.",
@@ -1465,7 +1465,7 @@
   {
     "id": "0e23ac83-98e0-4143-9c47-5fc29f6ba251",
     "name": "Union Representative",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Union Rep",
     "level": 1,
     "description": "Gain access to and ask questions about settlements and arcos.",
@@ -1476,7 +1476,7 @@
   {
     "id": "18410073-869b-4545-a425-e462fcb83b13",
     "name": "Union Call",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Union Rep",
     "level": 2,
     "description": "Direct other Pilots to carry out missions in exchange for a Scrap reward.",
@@ -1495,7 +1495,7 @@
   {
     "id": "96d7fe30-797b-4096-9d7c-e9e4208827eb",
     "name": "Recruit",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Union Rep",
     "level": 3,
     "description": "Command an NPC follower who will assist you in your missions.",
@@ -1507,7 +1507,7 @@
   {
     "id": "0e38ed64-73ff-4ae2-9592-87d34e868ab1",
     "name": "VIP Beacon",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Union Rep",
     "level": 1,
     "description": "Place a distress beacon to call for aid, which arrives quickly and heavily armed.",
@@ -1524,7 +1524,7 @@
   {
     "id": "ee08e81e-99cb-4b7d-ba8c-662ff7e3b2fc",
     "name": "Inspirational Union Leader",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "tree": "Legendary Union Rep",
     "level": 1,
     "description": "Inspire your allies and refresh their HP, AP, and heal their minor injuries.",
@@ -1537,5 +1537,138 @@
       }
     ],
     "page": 77
+  },
+  {
+    "id": "a7f3c8e1-9b2d-4f5a-8c3e-1d6f7a9b2c4e",
+    "name": "Area Salvage",
+    "tree": "Generic",
+    "source": "Salvage Union Workshop Manual",
+    "description": "You search an area for Scrap and other useful items.",
+    "effect": "You search an area for Scrap and other useful items. Roll 2d6 and consult the table below to see what you find.",
+    "activationCost": 0,
+    "actionType": "Long",
+    "mechActionType": "Short",
+    "notes": "Requires the Rigging Trait.",
+    "table": {
+      "type": "standard",
+      "1": "You find nothing in this area.",
+      "2-5": "You find 1 Scrap of the Tech Level of the area.",
+      "6-10": "You find 2 Scrap of the Tech Level of the area.",
+      "11-19": "You find 3 Scrap of the Tech Level of the area.",
+      "20": "You find a Mech Chassis, System, or Module at the Tech Level of the area. It is in the damaged Condition. This can be determined randomly or chosen by the Mediator."
+    },
+    "traits": [],
+    "page": 248
+  },
+  {
+    "id": "b8e4d9f2-0c3e-5g6b-9d4f-2e7g8a0c3d5f",
+    "name": "Mech Salvage",
+    "tree": "Generic",
+    "source": "Salvage Union Workshop Manual",
+    "description": "You salvage a destroyed Mech Chassis for Scrap and Systems.",
+    "effect": "You salvage a destroyed Mech Chassis for Scrap and Systems. Roll 1d20 and consult the table below to see what you recover.",
+    "activationCost": 0,
+    "range": "Close",
+    "actionType": "Long",
+    "mechActionType": "Short",
+    "notes": "Requires the Rigging Trait.",
+    "table": {
+      "type": "standard",
+      "1": "The Mech is unsalvageable: its Chassis, Systems, and Modules are all considered destroyed.",
+      "2-5": "You salvage half of the Salvage Value of the Mech Chassis in Scrap of its Tech Level, to a minimum of 1. Everything else is considered destroyed.",
+      "6-10": "You salvage a System or Module of your choice mounted on the Mech. It has the Damaged Condition. Everything else is considered destroyed.",
+      "11-19": "You salvage the Mech Chassis, or a System, or Module of your choice mounted on it. It has the Damaged Condition. Everything else is considered destroyed.",
+      "20": "You salvage the Mech Chassis, a System, and a Module of your choice mounted on it. They have the Damaged Condition. Everything else is considered destroyed."
+    },
+    "traits": [],
+    "page": 248
+  },
+  {
+    "id": "c9f5e0g3-1d4f-6h7c-0e5g-3f8h9b1d4e6g",
+    "name": "Scrap",
+    "tree": "Generic",
+    "source": "Salvage Union Workshop Manual",
+    "description": "You break down a Mech Chassis, System, or Module into Scrap.",
+    "effect": "You break down a Mech Chassis, System, or Module into Scrap equal to its Salvage Value. The Mech Chassis, System, or Module is destroyed in the process.",
+    "activationCost": 0,
+    "range": "Close",
+    "actionType": "Long",
+    "mechActionType": "Short",
+    "notes": "Requires the Rigging Trait.",
+    "traits": [],
+    "page": 248
+  },
+  {
+    "id": "d0g6f1h4-2e5g-7i8d-1f6h-4g9i0c2e5f7h",
+    "name": "Repair",
+    "tree": "Generic",
+    "source": "Salvage Union Workshop Manual",
+    "description": "You repair a damaged Mech Chassis, System, or Module.",
+    "effect": "You repair a damaged Mech Chassis, System, or Module to Intact Condition. Scrap must be of a Tech Level equal to or higher than the Mech Chassis, System, or Module.\n\nFor example, to repair a damaged Brawler Mech Chassis which is Tech 3 with a Salvage Value of 5 you would need to spend 2 Tech 3 Scrap.",
+    "activationCost": 0,
+    "range": "Close",
+    "actionType": "Long",
+    "mechActionType": "Short",
+    "notes": "Requires the Rigging Trait. Scrap must be of a Tech Level equal to or higher than the Mech Chassis, System, or Module.",
+    "traits": [],
+    "page": 248
+  },
+  {
+    "id": "e1h7g2i5-3f6h-8j9e-2g7i-5h0j1d3f6g8i",
+    "name": "Mount",
+    "tree": "Generic",
+    "source": "Salvage Union Workshop Manual",
+    "description": "You Mount a System or Module onto a target Mech in Range. The Mech must have enough System or Module Slots to mount the new System or Module and the slots must be empty.\n\nAs part of this action you may dismount any number of Systems or Modules on the Mech to make room for the new System or Module. You may not Mount a damaged System or Module onto a Mech.",
+    "effect": "",
+    "activationCost": 0,
+    "range": "Close",
+    "actionType": "Long",
+    "mechActionType": "Short",
+    "notes": "Requires the Rigging Trait.",
+    "traits": [],
+    "page": 249
+  },
+  {
+    "id": "f2i8h3j6-4g7i-9k0f-3h8j-6i1k2e4g7h9j",
+    "name": "Patch Up",
+    "tree": "Generic",
+    "source": "Salvage Union Workshop Manual",
+    "description": "You restore up to 3 + X Structure Points on a target Mech or Vehicle, where X is equal to the Tech Level of the Scrap you spend when you use this Ability.\n\nYou must spend 1 Scrap of the Mech or Vehicles Tech Level or higher to use this Ability. The Mech or Vehicle must have at least 1 SP to use this Ability on it.",
+    "effect": "",
+    "activationCost": 0,
+    "range": "Close",
+    "actionType": "Long",
+    "mechActionType": "Short",
+    "notes": "Requires the Rigging Trait.",
+    "traits": [],
+    "page": 249
+  },
+  {
+    "id": "g3j9i4k7-5h8j-0l1g-4i9k-7j2l3f5h8i0k",
+    "name": "Load",
+    "tree": "Generic",
+    "source": "Salvage Union Workshop Manual",
+    "description": "You pick up and load a Mech Chassis, System, Module, or piece of Scrap in Range onto your Mech or an allied Mech. This takes up a number of Cargo Slots equal to its Salvage Value. Scrap takes up 1 Cargo Slot.\n\nAlternatively, a Pilot may use this action to pick up a Mech Chassis, System, Module, or Scrap, and carry it. Scrap takes up 3 Pilot Inventory Slots. Mech Chassis, Systems, and Modules take up a number of Inventory Slots equal to 3× their Salvage Value. This does make some things impossible for a Pilot to carry without help.",
+    "effect": "",
+    "activationCost": 0,
+    "range": "Close",
+    "actionType": "Short",
+    "mechActionType": "Turn",
+    "notes": "Requires the Rigging Trait.",
+    "traits": [],
+    "page": 249
+  },
+  {
+    "id": "h4k0j5l8-6i9k-1m2h-5j0l-8k3m4g6i9j1l",
+    "name": "Craft",
+    "tree": "Generic",
+    "source": "Salvage Union Workshop Manual",
+    "description": "You craft a Mech Chassis, System, or Module. This costs a number of Scrap equal to the Salvage Value of the Mech Chassis, System, or Module. This Scrap must be of a Tech Level equal to or higher than the Mech Chassis, System, or Module. You may only craft a Mech Chassis, System, or Module of a Tech Level equal to or lower than the Crafting Bay you are working in. This will typically be the same level as your Union Crawler.\n\nYou may perform this Ability as many times as you wish during Downtime, but cannot do it in the field.",
+    "effect": "",
+    "activationCost": 0,
+    "actionType": "DownTime",
+    "notes": "Requires Crafting Bay.",
+    "traits": [],
+    "page": 249
   }
 ]

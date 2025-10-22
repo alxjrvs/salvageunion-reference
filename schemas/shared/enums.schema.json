@@ -6,12 +6,20 @@
   "definitions": {
     "source": {
       "type": "string",
-      "enum": ["Salvage Union Core Book"],
+      "enum": [
+        "Salvage Union Workshop Manual"
+      ],
       "description": "The source book or expansion for this content"
     },
     "range": {
       "type": "string",
-      "enum": ["Close", "Medium", "Long", "Far", "Close/Long"],
+      "enum": [
+        "Close",
+        "Medium",
+        "Long",
+        "Far",
+        "Close/Long"
+      ],
       "description": "Range bands for abilities and weapons"
     },
     "actionType": {

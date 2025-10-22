@@ -20,7 +20,7 @@ All contributions must meet these requirements:
 #### ✅ Required for All Entries
 
 - **Page reference**: Every entry must include a `page` property
-- **Source attribution**: Must specify `source` (currently "Salvage Union Core Book")
+- **Source attribution**: Must specify `source` (currently "Salvage Union Workshop Manual")
 - **Accurate data**: Must match the source material word-for-word
 - **Schema compliance**: Must pass validation (`npm run validate`)
 
@@ -70,7 +70,7 @@ Each data type has specific required fields. Check the schema file or use VSCode
 {
   "name": "Ability Name",
   "tree": "Engineering",
-  "source": "Salvage Union Core Book",
+  "source": "Salvage Union Workshop Manual",
   "level": 1,
   "description": "Lore description from the book",
   "effect": "Mechanical effect description",
@@ -98,7 +98,7 @@ Many fields use specific enumerated values. Check `schemas/shared/enums.schema.j
 
 **Common Enums:**
 
-- `source`: `"Salvage Union Core Book"`
+- `source`: `"Salvage Union Workshop Manual"`
 - `range`: `"Close"`, `"Medium"`, `"Long"`
 - `actionType`: `"Turn Action"`, `"Reaction"`, `"Passive"`, `"Free Action"`
 - `tree`: `"Engineering"`, `"Hacking"`, `"Hauling"`, etc.

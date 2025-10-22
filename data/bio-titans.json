@@ -1,7 +1,7 @@
 [
   {
     "id": "8e5b04e5-9532-48c1-86ae-5960da416ede",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Scylla",
     "description": "A gigantic, armoured, arachnid-like predator beast. It has no concept that the war it was designed to fight ended aeons ago, and continues to tear apart anything that enters into its mountainous domain.",
     "abilities": [
@@ -69,7 +69,7 @@
   },
   {
     "id": "8bab65a1-d9ee-445e-97d6-9d13602831ee",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Typhon",
     "description": "Vengeance of the earth. This terrifying spiked worm can even swallow a Colossus whole. Some believe the spirits of miners in the Ferrous Range, who died in industrial accidents, summoned this being in vengeance.",
     "abilities": [
@@ -120,7 +120,7 @@
   },
   {
     "id": "a6cc074f-2e23-48d0-8448-4825d803d153",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Chrysalis",
     "description": "A mammoth flying insect with a wingspan the size of a city and an entrancing song that captures the souls of mortals. Said to inhabit a cave in the Verdant Crescent, it is worshipped by the wastelanders who live there as a god.",
     "abilities": [
@@ -195,7 +195,7 @@
   },
   {
     "id": "9c548eba-0fbe-4eb5-8752-a0cfe4c319f9",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Phantom",
     "description": "A multi-scythed being that can bend itself through reality. Rumoured to have been crafted in the Opus Institute Research Lab in the Frozen Gulf before breaking free to wreak havoc.",
     "abilities": [
@@ -243,7 +243,7 @@
   },
   {
     "id": "ba63bfa7-9e90-4c81-bcc6-90e4ddfac939",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Electrophorus",
     "description": "A vast, eel-like Bio-Titan able to harness bioelectric energy. Rumoured to dwell at the deepest point of the world's oceans within the Amara Trench in the Oceanic Rim.",
     "abilities": [
@@ -311,7 +311,7 @@
   },
   {
     "id": "a7952eaa-4621-4f4f-8944-ee249d9a04a3",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Tyrant",
     "description": "A mammoth, amphibian lizard said to have been born in the aftermath of the first nuclear war. It dwells somewhere deep within The Great Cape and was responsible for the destruction of the Kombu Tech home arco, a coastal city of a million souls.",
     "abilities": [

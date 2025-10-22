@@ -20,7 +20,7 @@ const __dirname = path.dirname(__filename)
 
 const PDF_PATH = path.join(
   __dirname,
-  '../../.rules/Salvage Union Core Book Digital Edition 2.0a.pdf'
+  '../../.rules/Salvage Union Workshop Manual Digital Edition 2.0a.pdf'
 )
 
 const DATA_DIR = path.join(__dirname, '../../data')
@@ -115,7 +115,7 @@ async function updateDataFile(filename: string) {
 
     // Update source if missing
     if (!item.source || item.source === '') {
-      item.source = 'Salvage Union Core Book'
+      item.source = 'Salvage Union Workshop Manual'
       updated++
     }
 

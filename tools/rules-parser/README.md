@@ -1,6 +1,6 @@
 # Rules Parser Tools
 
-Tools for reading and searching the Salvage Union Core Book PDF to extract page numbers and content.
+Tools for reading and searching the Salvage Union Workshop Manual PDF to extract page numbers and content.
 
 ## Prerequisites
 
@@ -86,5 +86,5 @@ npm run pdf:read -- 164
 
 ## Notes
 
-- The PDF file must be located at `.rules/Salvage Union Core Book Digital Edition 2.0a.pdf`
+- The PDF file must be located at `.rules/Salvage Union Workshop Manual Digital Edition 2.0a.pdf`
 - All tools output JSON for easy parsing and integration with other scripts

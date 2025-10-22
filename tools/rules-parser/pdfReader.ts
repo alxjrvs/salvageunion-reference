@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 
 /**
- * PDF Reader Tool for Salvage Union Core Book
+ * PDF Reader Tool for Salvage Union Workshop Manual
  *
  * This tool extracts text from the PDF with page numbers.
  * Usage:
@@ -23,7 +23,7 @@ const __dirname = path.dirname(__filename)
 
 const PDF_PATH = path.join(
   __dirname,
-  '../../.rules/Salvage Union Core Book Digital Edition 2.0a.pdf'
+  '../../.rules/Salvage Union Workshop Manual Digital Edition 2.0a.pdf'
 )
 
 interface PageContent {

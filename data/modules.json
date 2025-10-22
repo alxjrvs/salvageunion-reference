@@ -1,7 +1,7 @@
 [
   {
     "id": "a7411917-ee9a-48ac-b588-6606e03e58c1",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Comms Module",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -20,7 +20,7 @@
   },
   {
     "id": "f8acedfb-56da-4ca2-8bb8-511d95a23abe",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Equipment Locker",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -32,7 +32,7 @@
   },
   {
     "id": "25ca5163-7ac1-47d3-b36c-377aaf2773fe",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Eggs Mayhem",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -59,7 +59,7 @@
   },
   {
     "id": "dde4b6c5-fe3c-4d18-a6c3-15ba7630db96",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Firewall",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -86,7 +86,7 @@
   },
   {
     "id": "ab7c2af1-f474-4cc0-8dc9-3942d6f24d8b",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Personal Recreation Device",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -100,7 +100,7 @@
   },
   {
     "id": "92677d7f-3490-48ee-9554-513355c967ce",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Reactor Flare",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -114,7 +114,7 @@
   },
   {
     "id": "a93614fa-1e90-4fed-b806-4f2f4ea77dab",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Self-Destruct",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -126,7 +126,7 @@
   },
   {
     "id": "655c1325-9525-4a7f-a601-e302e5240208",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Survey Scanner",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -153,7 +153,7 @@
   },
   {
     "id": "d54471d7-562a-4f25-8f3d-740ffc520dc3",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Weapon Link",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -170,7 +170,7 @@
   },
   {
     "id": "301a86b9-2508-41ed-939f-f416c050dccc",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Zoom Optics",
     "techLevel": 1,
     "slotsRequired": 1,
@@ -188,7 +188,7 @@
   },
   {
     "id": "bca31633-15d8-4441-9d84-1857546b50cb",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Barometric Weather Sensor",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -205,7 +205,7 @@
   },
   {
     "id": "5360e2ed-f25f-4d7a-9ec0-7b0bdc0af758",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Damage Assessor",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -224,7 +224,7 @@
   },
   {
     "id": "ffa5abd0-c7b4-4adb-8411-132040d385a5",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Energy Cell",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -236,7 +236,7 @@
   },
   {
     "id": "10ccfd99-5580-4a94-a9b7-50c24fd7faf3",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Deep Survey Scanner",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -255,7 +255,7 @@
   },
   {
     "id": "746b6003-1100-4c22-ab2a-5593fafe3e41",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Evasion Protocols",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -272,7 +272,7 @@
   },
   {
     "id": "3d096dd7-7437-4af1-a8ab-28cf9886cae4",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Hull Magnetiser",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -287,7 +287,7 @@
   },
   {
     "id": "91256ee6-a6d8-4bee-a457-1f7b87b177a4",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "IR Night Vision Optics",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -306,7 +306,7 @@
   },
   {
     "id": "893a303c-7b53-4956-945e-ee8619859ca2",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Metal Detector",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -315,13 +315,13 @@
     "description": "A favourite of salvage teams across the globe, this Mech-mountable scanner lets you know when any Scrap is nearby.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Auto-Scan",
         "actionType": "Passive",
         "description": "This automated function passively alerts you when you move into an area that can be salvaged.\nIn addition, whenever you move from one area of the map to an location you have not yet visited, roll the die, on the result of a 20 you gain once piece of scrap of the Tech Level of the area as decided by the Mediator. By default this is the Tech Level of your Union Crawler."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Coolant Flush",
         "activationCost": 2,
         "actionType": "Short",
@@ -338,7 +338,7 @@
   },
   {
     "id": "c8c03a99-b0d4-4071-b92d-0fa3cb9de6e0",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "M315 Motion Scanner",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -357,7 +357,7 @@
   },
   {
     "id": "c753cba0-29f8-4690-82f7-ca146251682c",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Navigation Module",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -376,7 +376,7 @@
   },
   {
     "id": "09409fcc-9463-465b-91e5-5580bc1ce7bd",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Pinpoint Targeter",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -394,7 +394,7 @@
   },
   {
     "id": "d0eeed2b-690e-486e-936a-ec2baac2a48e",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Reactor Overload",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -413,7 +413,7 @@
   },
   {
     "id": "f1c9860f-949c-44ee-9d77-baf6016b38fb",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Video Projection Array",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -427,7 +427,7 @@
   },
   {
     "id": "df8846de-8b69-4199-a20e-09bac424e6a1",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Sleeping Beauty",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -440,7 +440,7 @@
   },
   {
     "id": "2cf1bba0-3614-4559-adfe-f353ff04bbd0",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Reactor Safety Protocols",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -460,7 +460,7 @@
   },
   {
     "id": "db7d6cfa-4947-4543-8a4f-e8b7b67da979",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Video Recording Array",
     "techLevel": 2,
     "slotsRequired": 1,
@@ -474,7 +474,7 @@
   },
   {
     "id": "10498cb2-a869-4d73-81c5-7ac82f149448",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Advanced Weapon Link",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -491,7 +491,7 @@
   },
   {
     "id": "8879315d-3e6b-491a-8f12-64781984c3bf",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Auto-Doctor",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -499,7 +499,7 @@
     "description": "The Auto-Doctor is a medical droid with a rudimentary A.I. that can heal a Pilot in the field via a complex array of mechanical surgery arms.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Heal",
         "activationCost": 2,
         "range": "Close",
@@ -507,7 +507,7 @@
         "description": "The Auto-Doctor heals a creature within Range up to 10 HP. If they were on 0 HP this restores them to consciousness and heals them to 10 HP."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Physio",
         "activationCost": 2,
         "range": "Close",
@@ -515,7 +515,7 @@
         "description": "The Auto-Doctor heals a creature within Range of a single Minor Injury."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Therapy",
         "activationCost": 2,
         "range": "Close",
@@ -523,7 +523,7 @@
         "description": "The Auto-Doctor engages its therapeutic and drinks dispensation protocols. A single People who talks through things with the Auto-Doctor feels a lot better about themselves, their life, and the situation they are in."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "First Aid",
         "activationCost": 2,
         "range": "Close",
@@ -535,7 +535,7 @@
   },
   {
     "id": "f4fbab3e-e726-40b0-9a48-1303dc043cac",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Comms Tapper",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -554,7 +554,7 @@
   },
   {
     "id": "5effd37d-f1a9-48e8-bc8e-228e5bd66d7b",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Concealed Locker",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -566,7 +566,7 @@
   },
   {
     "id": "84d90e6d-2a58-4f66-b246-5aa80dbc7a3e",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Coolant Flow Manifold",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -574,14 +574,14 @@
     "description": "This manifold provides more control over the coolant flowing through your reactor, allowing you to inject more coolant as required.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Coolant Flow",
         "activationCost": 2,
         "actionType": "Free",
         "description": "Adjusted valves provide coolant where required. Reduce the Heat of your Mech by 4."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Coolant Flush",
         "activationCost": 1,
         "actionType": "Short",
@@ -592,7 +592,7 @@
   },
   {
     "id": "3394e0b0-0fb9-4226-9c6d-b5e99b9ca522",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "ECM Transmitter",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -606,7 +606,7 @@
   },
   {
     "id": "b8b38922-fe44-4710-9d36-5fe48b713e87",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Emergency Power Conduit",
     "techLevel": 3,
     "slotsRequired": 2,
@@ -618,7 +618,7 @@
   },
   {
     "id": "a342f3f7-d504-4df3-9ee1-276382f3332f",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Encrypted Comms",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -630,7 +630,7 @@
   },
   {
     "id": "b873392d-434d-4327-9fc7-2762b88fb37d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Hacking Repeater Node",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -649,7 +649,7 @@
   },
   {
     "id": "5ec148d7-7297-4247-b6e2-b6c2df965c80",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Multi-Targeter",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -666,7 +666,7 @@
   },
   {
     "id": "03685c58-515e-4579-a92e-63828a4db855",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Offensive Protocols",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -683,7 +683,7 @@
   },
   {
     "id": "2af195ad-8525-427d-add2-b3afe990a80d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Panda Sneeze",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -710,7 +710,7 @@
   },
   {
     "id": "c332e34e-5079-4658-880b-4c6b4b87719d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Sonic Screecher",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -732,7 +732,7 @@
   },
   {
     "id": "a9f2ca91-6d27-4778-b775-0fb8c35a3628",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Voice Modulator",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -744,7 +744,7 @@
   },
   {
     "id": "ba46280d-c937-4e36-a1e3-12482e544e9d",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Aardvarks Tongue",
     "techLevel": 3,
     "slotsRequired": 1,
@@ -771,7 +771,7 @@
   },
   {
     "id": "01ef98c2-3b7c-4a75-9659-4baf5f51f0bd",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Advanced Reactor Safety Protocols",
     "techLevel": 4,
     "slotsRequired": 2,
@@ -791,7 +791,7 @@
   },
   {
     "id": "35544d7f-232e-43d4-8044-e6406986fdca",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Alpha Strike Module",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -811,7 +811,7 @@
   },
   {
     "id": "49957195-dedf-4f22-862c-296c010efda4",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Auto-Repair Droid",
     "techLevel": 4,
     "slotsRequired": 2,
@@ -820,21 +820,21 @@
     "description": "This compact repair droid with a rudimentary A.I. is hardwired into your Mech and can perform a variety of repair tasks on it whilst you focus on piloting.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Repair",
         "activationCost": 2,
         "actionType": "Free",
         "description": "You restore 6 SP to your Mech as long as it has at least 1 SP."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "actionType": "Free",
         "description": "You repair a single, Tech 4 or lower, damaged System or Module mounted on your Mech to Intact Condition."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Coolant Flush",
         "activationCost": 2,
         "actionType": "Free",
@@ -845,7 +845,7 @@
   },
   {
     "id": "8cb4e8af-4b45-4958-ac4d-b80775354960",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Dash Protocols",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -862,7 +862,7 @@
   },
   {
     "id": "67c24f7c-aa47-46a6-ae8e-eaa0ade9e1f4",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Electro-Magnetic Self-Destruct",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -874,7 +874,7 @@
   },
   {
     "id": "fd13e5af-bb66-4d19-bcae-f6266300ce5a",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Laser Guidance",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -893,7 +893,7 @@
   },
   {
     "id": "d0d06e1b-954c-42ef-89fe-f0df69625900",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Mech Scrambler",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -919,7 +919,7 @@
   },
   {
     "id": "82393866-dda0-483f-bd68-8edb8adeee6a",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "MRSI Co-Ordinator",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -938,7 +938,7 @@
   },
   {
     "id": "65a6a178-40f8-47fb-a0cd-aa6b3ce959a3",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Thermal Optics",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -957,7 +957,7 @@
   },
   {
     "id": "58638c99-7f67-4607-9227-0b0f81dcbe65",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Weapon Guidance",
     "techLevel": 4,
     "slotsRequired": 1,
@@ -977,7 +977,7 @@
   },
   {
     "id": "2c15e95a-fce0-4046-b407-efe7b34e9aa7",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Adv. Targeting Array",
     "techLevel": 5,
     "slotsRequired": 2,
@@ -985,7 +985,7 @@
     "description": "This mil-tech Module combines Laser Guidance, Pinpoint Targeter, and Multi-Targeter into one Module. You may activate each separately.",
     "actions": [
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Pinpoint Targeter",
         "activationCost": 3,
         "actionType": "Turn",
@@ -997,7 +997,7 @@
         "description": "Make an attack at a selected target. If it hits select a system or appendage to be damaged/injured. If you roll a 20 it is destroyed instead. You also deal damage as normal."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Multi-Targeter",
         "activationCost": "X",
         "actionType": "Turn",
@@ -1009,7 +1009,7 @@
         "description": "Make an attack with any number of weapons. Each weapon must select a different target. Costs 1 EP per weapon fired."
       },
       {
-        "source": "Salvage Union Core Book",
+        "source": "Salvage Union Workshop Manual",
         "name": "Laser Guidance",
         "activationCost": 3,
         "actionType": "Free",
@@ -1029,7 +1029,7 @@
   },
   {
     "id": "0c8d0737-89f1-4e75-8ce3-99b31c7000ae",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Holo Projector",
     "techLevel": 5,
     "slotsRequired": 1,
@@ -1043,7 +1043,7 @@
   },
   {
     "id": "f05e57d3-a579-48c1-bd31-bb6a52ffd091",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "He 2 Coolant Flush",
     "techLevel": 5,
     "slotsRequired": 1,
@@ -1055,7 +1055,7 @@
   },
   {
     "id": "0cbc2a80-bf97-4acb-ad26-9e2f8f5ed0d7",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Multi-Optics",
     "techLevel": 5,
     "slotsRequired": 2,
@@ -1066,7 +1066,7 @@
   },
   {
     "id": "cf34948e-631e-4051-ad34-db3494b8f2b5",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Neuralink Communicator",
     "techLevel": 5,
     "slotsRequired": 2,
@@ -1085,7 +1085,7 @@
   },
   {
     "id": "f363125a-2d73-4f2c-a689-3af8a5fd9da5",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Omega Push Module",
     "techLevel": 5,
     "slotsRequired": 2,
@@ -1096,7 +1096,7 @@
   },
   {
     "id": "8e991403-1d78-464e-b71c-ccd397bf733e",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "DDR Module",
     "techLevel": 6,
     "slotsRequired": 1,
@@ -1109,7 +1109,7 @@
   },
   {
     "id": "684e6851-9a5c-496b-8104-14350e1d32e2",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Matter Phaser",
     "techLevel": 6,
     "slotsRequired": 2,
@@ -1122,7 +1122,7 @@
   },
   {
     "id": "8cdd2865-337f-4ee4-890e-c74d98d2943f",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Reaction Protocols",
     "techLevel": 6,
     "slotsRequired": 1,
@@ -1139,7 +1139,7 @@
   },
   {
     "id": "44fdfeb4-bfb3-4007-bddf-f6dddc7200e9",
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "name": "Reactor Transference",
     "techLevel": 6,
     "slotsRequired": 2,

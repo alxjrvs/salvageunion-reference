@@ -6,7 +6,7 @@
     "structurePoints": 20,
     "populationMin": 100,
     "populationMax": 500,
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "page": 218
   },
   {
@@ -16,7 +16,7 @@
     "structurePoints": 25,
     "populationMin": 500,
     "populationMax": 2000,
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "page": 218
   },
   {
@@ -26,7 +26,7 @@
     "structurePoints": 30,
     "populationMin": 2000,
     "populationMax": 5000,
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "page": 218
   },
   {
@@ -36,7 +36,7 @@
     "structurePoints": 35,
     "populationMin": 5000,
     "populationMax": 15000,
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "page": 218
   },
   {
@@ -46,7 +46,7 @@
     "structurePoints": 40,
     "populationMin": 15000,
     "populationMax": 25000,
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "page": 218
   },
   {
@@ -56,7 +56,7 @@
     "structurePoints": 50,
     "populationMin": 25000,
     "populationMax": 0,
-    "source": "Salvage Union Core Book",
+    "source": "Salvage Union Workshop Manual",
     "page": 218
   }
 ]

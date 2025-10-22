@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 
 /**
- * Find Page Number Tool for Salvage Union Core Book
+ * Find Page Number Tool for Salvage Union Workshop Manual
  *
  * This tool finds the page number for a specific item by name.
  * It searches for the item name and returns the most likely page number.
@@ -25,7 +25,7 @@ const __dirname = path.dirname(__filename)
 
 const PDF_PATH = path.join(
   __dirname,
-  '../../.rules/Salvage Union Core Book Digital Edition 2.0a.pdf'
+  '../../.rules/Salvage Union Workshop Manual Digital Edition 2.0a.pdf'
 )
 
 interface PageMatch {
