@@ -4,10 +4,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Defacer Drone",
     "description": "Used for salvaging and crowd control, their distinctive buzzsaw sound has struck fear into many protesters.",
-    "systems": [
-      "Hover Locomotion System",
-      "Chainsaw Arm"
-    ],
+    "systems": ["Hover Locomotion System", "Chainsaw Arm"],
     "techLevel": 1,
     "salvageValue": 1,
     "structurePoints": 2,
@@ -18,10 +15,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Salvo Drone",
     "description": "A simple machine gun drone often used to defend areas of strategic importance.",
-    "systems": [
-      "Hover Locomotion System",
-      ".50 Cal Machine Gun"
-    ],
+    "systems": ["Hover Locomotion System", ".50 Cal Machine Gun"],
     "techLevel": 1,
     "salvageValue": 2,
     "structurePoints": 3,
@@ -32,10 +26,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Survey Drone",
     "description": "An unarmed drone used as a reconnaissance tool.",
-    "systems": [
-      "Hover Locomotion System",
-      "Survey Scanner"
-    ],
+    "systems": ["Hover Locomotion System", "Survey Scanner"],
     "techLevel": 1,
     "salvageValue": 1,
     "structurePoints": 1,
@@ -46,10 +37,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Combat Drone",
     "description": "A laser armed drone used in a defensive capacity.",
-    "systems": [
-      "Hover Locomotion System",
-      "Red Laser"
-    ],
+    "systems": ["Hover Locomotion System", "Red Laser"],
     "techLevel": 2,
     "salvageValue": 2,
     "structurePoints": 4,
@@ -60,10 +48,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Heavy Combat Drone",
     "description": "A heavily armoured drone designed for battlefield use.",
-    "systems": [
-      "Hover Locomotion System",
-      "30mm Autocannon"
-    ],
+    "systems": ["Hover Locomotion System", "30mm Autocannon"],
     "techLevel": 3,
     "salvageValue": 2,
     "structurePoints": 5,
@@ -74,11 +59,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Walker Drone",
     "description": "An anthropomorphic, Mech-like drone.",
-    "systems": [
-      "Locomotion System",
-      "Articulated Rigging Arm",
-      "Green Laser"
-    ],
+    "systems": ["Locomotion System", "Articulated Rigging Arm", "Green Laser"],
     "techLevel": 2,
     "salvageValue": 3,
     "structurePoints": 6,
@@ -89,10 +70,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Pest Drone",
     "description": "A versatile multi-legged drone armed with a flamethrower for 'industrial' use.",
-    "systems": [
-      "Spider Locomotion System",
-      "FM-3 Flamethrower"
-    ],
+    "systems": ["Spider Locomotion System", "FM-3 Flamethrower"],
     "techLevel": 3,
     "salvageValue": 3,
     "structurePoints": 4,
@@ -103,10 +81,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Hover Drone",
     "description": "A highly mobile missile platform used in offensive and defensive roles.",
-    "systems": [
-      "Hover Locomotion System",
-      "Missile Pod"
-    ],
+    "systems": ["Hover Locomotion System", "Missile Pod"],
     "techLevel": 4,
     "salvageValue": 3,
     "structurePoints": 4,
