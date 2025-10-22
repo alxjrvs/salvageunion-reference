@@ -50,7 +50,7 @@
     "level": 1,
     "description": "Repair 4 SP on target Mechs or Vehicles in the field.",
     "effect": "For each Ability Point you spend when you activate this Ability you restore up to 4 SP amongst any number of target Mechs or Vehicles within Range, as long as they have at least 1 SP. For example, if you spend 3 AP you may restore up to 12 SP between all target Mechs or Vehicles. You may distribute this SP however you wish amongst the targets.",
-    "activationCost": "Variable",
+    "activationCost": "X",
     "range": "Close",
     "actionType": "Long",
     "page": 29
@@ -76,7 +76,7 @@
     "level": 3,
     "description": "Repair target Systems and Modules in the field.",
     "effect": "You repair any number of damaged Mech Chassis, Vehicles, Systems, or Modules within Range to Intact Condition. They must be of a Tech Level equal to or lower than your Union Crawler. This Ability costs 1 AP per target that you repair.",
-    "activationCost": "Variable",
+    "activationCost": "X",
     "range": "Close",
     "actionType": "Long",
     "page": 27
@@ -249,7 +249,7 @@
     "level": 3,
     "description": "Attempt to Shutdown target Mech in Range.",
     "effect": "This allows you to flood any number of Mechs or Vehicles in Close Range with numerous false signals, overwhelming them with so much information that they temporarily Shutdown. This costs 1 AP per Mech or Vehicle you target.",
-    "activationCost": "Variable",
+    "activationCost": "X",
     "range": "Medium",
     "actionType": "Turn",
     "traits": [
@@ -338,7 +338,10 @@
       {
         "name": "Bionic Arms Attack",
         "description": "Melee attack with your bionic arms, where X is equal to the Tech Level of your Union Crawler.",
-        "damage": "X SP",
+        "damage": {
+          "type": "SP",
+          "amount": "X"
+        },
         "range": "Close",
         "traits": [
           {
@@ -412,7 +415,7 @@
     "level": 3,
     "description": "Hack multiple Mechs in Range with a complex worm virus.",
     "effect": "You have programmed a complex worm virus that can traverse through a network of multiple Mechs, causing havoc and chaos amongst their installed Systems and Modules, and even potentially disabling their Chassis entirely. Choose any number of target Mechs within Medium Range. This Ability costs 1 AP per Mech you target.",
-    "activationCost": "Variable",
+    "activationCost": "X",
     "range": "Medium",
     "actionType": "Turn",
     "traits": [
@@ -805,7 +808,7 @@
         "value": "You create the persona of someone in a formal position of power, wealth, or influence, e.g. a union representative, military officer, captain, wealthy business owner, prominent socialite, or politician. You can effortlessly mingle with such people and those 'beneath' you will treat you with deference."
       }
     ],
-    "activationCost": "Variable",
+    "activationCost": "X",
     "actionType": "Long",
     "page": 49
   },
@@ -1150,7 +1153,7 @@
     "level": 1,
     "description": "Coordinate an attack against a single target. You and each of your allies makes a free attack.",
     "effect": "You coordinate a team wide attack against a target, working perfectly in unison to destroy those standing against you and your allies. When activated, you and any number of Allies can make a single attack against a target of your choice. Roll each attack separately. This Ability costs 1 AP per ally that is making an attack.",
-    "activationCost": "Variable",
+    "activationCost": "X",
     "actionType": "Turn",
     "page": 53
   },
@@ -1214,8 +1217,31 @@
     "tree": "Legendary Cyborg",
     "level": 1,
     "description": "You are now Meld. You can replicate Equipment and make Meld Tendril attacks.",
-    "effect": "The Meld called to you from beyond the vast void of time and space. You are lonely as one, but together you are strong and will have great power. You have formed symbiotically with the Meld. You have all of the strengths and weaknesses of Meld as detailed in the Meld Section p. 288. You are able to make the following Meld Tendril Attack: Damage: 5 SP // Range: Medium // Melee // Meld Infection // Multi-Attack (2) Replica Pilot Equipment: You grow a replica of a Pilot Equipment of any Tech Level out of your body. This costs an amount of AP equal to the Tech Level of the Pilot Equipment. You now have a Meld version of this Pilot Equipment. Split Form: When you are reduced to 0 HP/SP you split into two. Each split version of you has half of your Max SP/HP and Ability Points. Split your remaining Ability points evenly between your two forms. Your equipped Pilot Equipment is copied across both forms. You control both of your forms and they act separately during each round. Your split forms",
+    "effect": "The Meld called to you from beyond the vast void of time and space. You are lonely as one, but together you are strong and will have great power. You have formed symbiotically with the Meld. You have all of the strengths and weaknesses of Meld as detailed in the Meld Section p. 288. Replica Pilot Equipment: You grow a replica of a Pilot Equipment of any Tech Level out of your body. This costs an amount of AP equal to the Tech Level of the Pilot Equipment. You now have a Meld version of this Pilot Equipment. Split Form: When you are reduced to 0 HP/SP you split into two. Each split version of you has half of your Max SP/HP and Ability Points. Split your remaining Ability points evenly between your two forms. Your equipped Pilot Equipment is copied across both forms. You control both of your forms and they act separately during each round. Your split forms",
     "actionType": "Passive",
+    "subAbilities": [
+      {
+        "name": "Meld Tendril Attack",
+        "description": "Attack with your Meld tendrils.",
+        "damage": {
+          "type": "SP",
+          "amount": 5
+        },
+        "range": "Medium",
+        "traits": [
+          {
+            "type": "melee"
+          },
+          {
+            "type": "meld infection"
+          },
+          {
+            "type": "multi-attack",
+            "amount": 2
+          }
+        ]
+      }
+    ],
     "page": 59
   },
   {

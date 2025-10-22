@@ -14,13 +14,13 @@
         "$ref": "shared/common.schema.json#/definitions/id"
       },
       "tree": {
-        "$ref": "shared/enums.schema.json#/definitions/tree"
+        "$ref": "shared/common.schema.json#/definitions/tree"
       },
       "requirement": {
         "type": "array",
         "description": "List of ability tree names required to access this tree",
         "items": {
-          "$ref": "shared/enums.schema.json#/definitions/tree"
+          "$ref": "shared/common.schema.json#/definitions/tree"
         }
       },
       "page": {

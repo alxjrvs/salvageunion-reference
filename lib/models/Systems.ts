@@ -48,12 +48,17 @@ export class SystemsModel extends BaseModel<System> {
   }
 
   findByMinDamage(minDamage: number): System[] {
-    return this.where(
-      (s) =>
-        s.damage !== undefined &&
-        typeof s.damage === 'object' &&
-        'amount' in s.damage &&
-        s.damage.amount >= minDamage
-    )
+    return this.where((s) => {
+      const hasDamage = s.damage !== undefined
+
+      if (!hasDamage) {
+        return false
+      }
+
+      if (typeof s.damage.amount === 'string') {
+        return true
+      }
+      return s.damage.amount >= minDamage
+    })
   }
 }

@@ -109,7 +109,7 @@ Many fields use specific enumerated values. Check `schemas/shared/enums.schema.j
 
 - ✅ `"activationCost": 1`
 - ✅ `"activationCost": 2`
-- ✅ `"activationCost": "Variable"` (for XAP costs)
+- ✅ `"activationCost": "X"` (for XAP costs)
 - ❌ `"activationCost": "1 AP"`
 
 #### Step 6: Structure Traits Correctly
@@ -186,7 +186,7 @@ If you're using VSCode, you'll get:
 ✅ **Do:**
 
 - Include page numbers for everything
-- Use numeric activation costs (or "Variable")
+- Use numeric activation costs (or "X")
 - Run validation before committing
 - Match source material exactly
 - Follow existing patterns
