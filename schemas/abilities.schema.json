@@ -8,14 +8,7 @@
     "type": "object",
     "description": "A pilot ability",
     "additionalProperties": false,
-    "required": [
-      "id",
-      "name",
-      "tree",
-      "source",
-      "level",
-      "page"
-    ],
+    "required": ["id", "name", "tree", "source", "level", "page"],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
@@ -70,10 +63,7 @@
               "type": "object",
               "description": "Structured option with label and value",
               "additionalProperties": false,
-              "required": [
-                "label",
-                "value"
-              ],
+              "required": ["label", "value"],
               "properties": {
                 "label": {
                   "type": "string",
