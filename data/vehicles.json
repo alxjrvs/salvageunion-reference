@@ -4,28 +4,7 @@
     "source": "Salvage Union Core Book",
     "name": "Power Loader",
     "description": "A pneumatically powered heavy loader for moving cargo.",
-    "systems": [
-      {
-        "name": "Locomotion System"
-      },
-      {
-        "name": "Rigging Arm",
-        "count": 2,
-        "range": "Close",
-        "damage": {
-          "amount": 1,
-          "type": "SP"
-        },
-        "traits": [
-          {
-            "type": "melee"
-          },
-          {
-            "type": "load"
-          }
-        ]
-      }
-    ],
+    "systems": ["Locomotion System", "Rigging Arm"],
     "techLevel": 1,
     "salvageValue": 1,
     "structurePoints": 1,
@@ -36,11 +15,7 @@
     "source": "Salvage Union Core Book",
     "name": "Box Wheel",
     "description": "A four seater box wheel vehicle designed for recreational driving. Not a lot of these nowadays.",
-    "systems": [
-      {
-        "name": "Locomotion System Box Wheel"
-      }
-    ],
+    "systems": ["Locomotion System Box Wheel"],
     "traits": [
       {
         "type": "personnel capacity",
@@ -60,30 +35,7 @@
     "source": "Salvage Union Core Book",
     "name": "Fighting Box Wheel",
     "description": "An improvised fighting vehicle, modified to carry heavy weaponry.",
-    "systems": [
-      {
-        "name": "Locomotion System"
-      },
-      {
-        "name": ".50 Cal Machine Gun",
-        "range": "Close",
-        "damage": {
-          "amount": 2,
-          "type": "SP"
-        },
-        "traits": [
-          {
-            "type": "ballistic"
-          },
-          {
-            "type": "jamming"
-          },
-          {
-            "type": "pinning"
-          }
-        ]
-      }
-    ],
+    "systems": ["Locomotion System", ".50 Cal Machine Gun"],
     "traits": [
       {
         "type": "personnel capacity",
@@ -103,27 +55,7 @@
     "source": "Salvage Union Core Book",
     "name": "Armoured Box Wheel",
     "description": "An armoured, wheeled vehicle that carries personnel and provides fire support",
-    "systems": [
-      {
-        "name": "Locomotion System"
-      },
-      {
-        "name": "30mm Autocannon",
-        "range": "Medium",
-        "damage": {
-          "amount": 4,
-          "type": "SP"
-        },
-        "traits": [
-          {
-            "type": "ballistic"
-          },
-          {
-            "type": "jamming"
-          }
-        ]
-      }
-    ],
+    "systems": ["Locomotion System", "30mm Autocannon"],
     "traits": [
       {
         "type": "personnel capacity",
@@ -143,28 +75,7 @@
     "source": "Salvage Union Core Book",
     "name": "Tank",
     "description": "A conventional tracked, armoured battle vehicle.",
-    "systems": [
-      {
-        "name": "Locomotion System"
-      },
-      {
-        "name": "120mm Cannon",
-        "range": "Long",
-        "damage": {
-          "amount": 6,
-          "type": "SP"
-        },
-        "traits": [
-          {
-            "type": "ballistic"
-          },
-          {
-            "type": "explosive",
-            "amount": 1
-          }
-        ]
-      }
-    ],
+    "systems": ["Locomotion System", "120mm Cannon"],
     "techLevel": 3,
     "salvageValue": 4,
     "structurePoints": 6,
@@ -175,38 +86,7 @@
     "source": "Salvage Union Core Book",
     "name": "Rotorcraft",
     "description": "A flying vehicle that can hover over terrain.",
-    "systems": [
-      {
-        "name": "Hover Locomotion System"
-      },
-      {
-        "name": "Rotary Mini Gun",
-        "range": "Medium",
-        "damage": {
-          "amount": 4,
-          "type": "SP"
-        },
-        "traits": [
-          {
-            "type": "ballistic"
-          },
-          {
-            "type": "hot",
-            "amount": 1
-          },
-          {
-            "type": "jamming"
-          },
-          {
-            "type": "multi-attack",
-            "amount": 2
-          },
-          {
-            "type": "pinning"
-          }
-        ]
-      }
-    ],
+    "systems": ["Hover Locomotion System", "Rotary Mini Gun"],
     "traits": [
       {
         "type": "personnel capacity",
@@ -226,27 +106,7 @@
     "source": "Salvage Union Core Book",
     "name": "Machine Gun Turret",
     "description": "A static gun emplacement.",
-    "systems": [
-      {
-        "name": ".50 Cal Machine Gun",
-        "range": "Close",
-        "damage": {
-          "amount": 2,
-          "type": "SP"
-        },
-        "traits": [
-          {
-            "type": "ballistic"
-          },
-          {
-            "type": "jamming"
-          },
-          {
-            "type": "pinning"
-          }
-        ]
-      }
-    ],
+    "systems": [".50 Cal Machine Gun"],
     "traits": [
       {
         "type": "immobile"

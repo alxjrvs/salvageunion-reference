@@ -36,9 +36,9 @@
       },
       "systems": {
         "type": "array",
-        "description": "Systems installed on this vehicle",
+        "description": "Names of systems installed on this vehicle",
         "items": {
-          "$ref": "shared/objects.schema.json#/definitions/embeddedSystem"
+          "type": "string"
         }
       },
       "traits": {

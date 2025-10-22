@@ -36,9 +36,9 @@
       },
       "systems": {
         "type": "array",
-        "description": "Systems installed on this drone",
+        "description": "Names of systems installed on this drone",
         "items": {
-          "$ref": "shared/objects.schema.json#/definitions/embeddedSystem"
+          "type": "string"
         }
       },
       "page": {
