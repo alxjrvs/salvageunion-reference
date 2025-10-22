@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "1.15.0",
-  "generated": "2025-10-22T15:18:07.359Z",
+  "version": "1.16.0",
+  "generated": "2025-10-22T17:14:06.875Z",
   "schemas": [
     {
       "id": "abilities",
@@ -21,7 +21,7 @@
       "dataFile": "data/ability-tree-requirements.json",
       "schemaFile": "schemas/ability-tree-requirements.schema.json",
       "itemCount": 20,
-      "requiredFields": ["id", "tree", "requirement", "page"]
+      "requiredFields": ["id", "tree", "requirement", "page", "source"]
     },
     {
       "id": "bio-titans",

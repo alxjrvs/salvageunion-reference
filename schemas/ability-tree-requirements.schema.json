@@ -8,7 +8,7 @@
     "type": "object",
     "description": "Requirements for an ability tree",
     "additionalProperties": false,
-    "required": ["id", "tree", "requirement", "page"],
+    "required": ["id", "tree", "requirement", "page", "source"],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
@@ -27,6 +27,9 @@
         "type": "integer",
         "minimum": 1,
         "description": "Page number in the source book"
+      },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
       }
     }
   }
