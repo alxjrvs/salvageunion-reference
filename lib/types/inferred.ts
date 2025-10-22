@@ -23,7 +23,7 @@ import modulesData from '../../data/modules.json' with { type: 'json' }
 import npcsData from '../../data/npcs.json' with { type: 'json' }
 import squadsData from '../../data/squads.json' with { type: 'json' }
 import systemsData from '../../data/systems.json' with { type: 'json' }
-import tablesData from '../../data/tables.json' with { type: 'json' }
+import rollTablesData from '../../data/roll-tables.json' with { type: 'json' }
 import traitsData from '../../data/traits.json' with { type: 'json' }
 import vehiclesData from '../../data/vehicles.json' with { type: 'json' }
 
@@ -46,7 +46,7 @@ export type SalvageUnionModules = typeof modulesData
 export type SalvageUnionNPCs = typeof npcsData
 export type SalvageUnionSquads = typeof squadsData
 export type SalvageUnionSystems = typeof systemsData
-export type SalvageUnionTables = typeof tablesData
+export type SalvageUnionRollTables = typeof rollTablesData
 export type SalvageUnionTraits = typeof traitsData
 export type SalvageUnionVehicles = typeof vehiclesData
 
@@ -68,7 +68,7 @@ export type Module = SalvageUnionModules[number]
 export type NPC = SalvageUnionNPCs[number]
 export type Squad = SalvageUnionSquads[number]
 export type System = SalvageUnionSystems[number]
-export type Table = SalvageUnionTables[number]
+export type RollTable = SalvageUnionRollTables[number]
 export type TraitEntry = SalvageUnionTraits[number]
 export type Vehicle = SalvageUnionVehicles[number]
 

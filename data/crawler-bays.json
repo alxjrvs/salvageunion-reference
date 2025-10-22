@@ -91,7 +91,7 @@
     "operatorPosition": "Operator",
     "operatorHitPoints": 4,
     "techLevelEffects": [],
-    "rollTable": {
+    "table": {
       "type": "standard",
       "1": "Nothing is available for trade during this Downtime.",
       "2-5": "An Intact Module is available for trade.",

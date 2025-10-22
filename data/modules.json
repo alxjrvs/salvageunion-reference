@@ -46,7 +46,7 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "This hacking program developed by Stefanus Industries allows you to tap into a Mech, database, or computer system to gather information about it. This can only be used to read data and not to write or manipulate it.",
-    "rollTable": {
+    "table": {
       "1": "The hack fails and the target is alerted to your hacking attempt. They can retaliate as appropriate.",
       "20": "You masterfully hack into the system and can ask 5 questions to the Mediator about it. The answers they give must be true.",
       "11-19": "You successfully hack in and can ask 3 questions to the Mediator about it. The answers they give must be true.",
@@ -73,7 +73,7 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "This Firewall, made open source by the Opus Institute, is designed to block hacking attempts.",
-    "rollTable": {
+    "table": {
       "1": "You fail to block the hack, and your Firewall is breached, it becomes damaged and cannot be used until repaired to the Intact Condition.",
       "20": "You successfully block the hack and you and your Allies cannot be affected by anything with the Hacking Trait for the next 10 minutes.",
       "11-19": "You successfully block the hack and entirely nullify all of its effects.",
@@ -140,7 +140,7 @@
     "range": "Long",
     "activationCost": 2,
     "description": "When activated, a Survey Scanner allows you to scan a specific point of interest within Range.",
-    "rollTable": {
+    "table": {
       "1": "Your scan returns inaccurate data. You may ask the Mediator 2 questions about the area and both answers will contain false information which you believe to be true.",
       "20": "You make a thorough scan of the area and may ask the Mediator 5 questions about it. The answers they give must be true.",
       "11-19": "Your scan is successful and you may ask the Mediator 3 questions about the scanned area. The answers they give must be true.",
@@ -447,7 +447,7 @@
     "salvageValue": 2,
     "actionType": "Passive",
     "description": "This Module increases the efficiency and cooling capability of your Mech's reactor, mitigating damage in the event of an overload.",
-    "rollTable": {
+    "table": {
       "1": "Reactor Damage: The Chassis of your Mech becomes damaged as your reactor wildly overheats.",
       "20": "Reactor Stabilisation: Your Mech's reactor stabilises and its Heat is reduced to 0.",
       "11-19": "Reactor Overheat: Your Mech has overheated. It shuts down and gains the Vulnerable Trait. Your Mech will re-activate at the end of your next turn. In addition, your Mech takes SP damage equal to half your current Heat level. Your Mech then reduces its Heat by 2.",
@@ -697,7 +697,7 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "This Stefanus developed hacking program allows you to hack into a Mech, database, or computer system and manipulate data within it.",
-    "rollTable": {
+    "table": {
       "1": "The hack fails and the target is alerted of your hacking attempt. They can retaliate as appropriate.",
       "20": "You may change or manipulate up to 5 pieces of data within the target.",
       "11-19": "You may change or manipulate up to 3 pieces of data within the target.",
@@ -719,7 +719,7 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "This Drontek-manufactured Module emits a piercing sound at an ultra high frequency that stuns anyone who hears it and causes them immense and sudden pain, with potential for cerebral haemorrhages and internal bleeding.",
-    "rollTable": {
+    "table": {
       "1": "The targets are entirely unharmed. The Module malfunctions causing the sound to reverberate through your Mech's Cockpit, your Pilot must roll on the Critical Injury Table.",
       "20": "All targets that can hear within Range are reduced to 0 HP.",
       "11-19": "All targets that can hear within Range cannot take any actions and gain the Vulnerable Trait until the end of your next turn.",
@@ -758,7 +758,7 @@
     "range": "Close",
     "activationCost": 4,
     "description": "UNION DESIGNED HACKING MODULE THAT IMMOBILISES TARGET MECHS. IT THEN ATTEMPTS TO JUMP TO ANOTHER MECH IN RANGE.",
-    "rollTable": {
+    "table": {
       "1": "THE TONGUE REPLICATES IN YOUR SYSTEM. YOU GAIN THE IMMOBILE TRAIT FOR 10 MINUTES",
       "20": "CHOOSE 3 TARGETS IN RANGE, THEY ALL GAIN THE IMMOBILE TRAIT FOR 10 MINUTES.",
       "11-19": "CHOOSE 2 TARGETS IN RANGE THEY GAIN THE IMMOBILE TRAIT FOR 10 MINUTES.",
@@ -778,7 +778,7 @@
     "salvageValue": 2,
     "actionType": "Passive",
     "description": "These advanced safety protocols are hyper efficient at keeping your reactor and core systems functional even in high stress situations that would otherwise result in a total reactor meltdown.",
-    "rollTable": {
+    "table": {
       "1": "Reactor Disabled: Your Mech is forced to Shutdown for one hour and cannot be powered back on in that period. Whilst Shutdown your Mech cannot move or take any actions and gains the Vulnerable Trait. Its Heat is reduced to 0 after the hour ends.",
       "20": "Reactor Hyper Stabilisation: Your Mechs reactor stabilises and its Heat is reduced to 0. You may Push your Mech's next action for free.",
       "11-19": "Temporary Reactor Shutdown: Your Mech has overheated and shuts down, gaining the Vulnerable Trait. Your Mech will re-activate at the end of your next turn. In addition, your Mech reduces its Heat to 0.",
@@ -906,7 +906,7 @@
     ],
     "range": "Close",
     "description": "When activated, choose up to 4 target Mechs in Range. This Ability costs 2 EP for each Mech you target with this Ability.",
-    "rollTable": {
+    "table": {
       "1": "The target goes haywire, it moves one Range Band in a random direction, falls Prone, and gains the Vulnerable Trait.",
       "20": "The target entirely loses control of itself, attacking wildly. It must make an attack with all its Weapons Systems against a random Ally within Range. It cannot move or take any actions until the end of your next turn.",
       "11-19": "The target loses control of itself and cannot tell friend from foe. It must make an attack with a random Weapons System against a random Ally within Range.",

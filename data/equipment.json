@@ -637,7 +637,7 @@
     "description": "Favoured by Sakura Wetwork teams, this miniature, wrist-mounted shield can protect you from harm by projecting a forcefield around your Pilot which will absorb some of the incoming attack.",
     "activationCost": 2,
     "notes": "When you are hit by an attack you may activate your Portable Multi-Phase Shield to prevent the hit.",
-    "rollTable": {
+    "table": {
       "1": "The attack hits as normal and the shield overloads. Your Portable Multi-Phase Shield is destroyed.",
       "20": "The attack deals no damage.",
       "11-19": "The forcefield partially absorbs some of the hit, you take half damage from the attack.",

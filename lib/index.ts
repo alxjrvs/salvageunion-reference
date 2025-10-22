@@ -22,7 +22,7 @@ import { ModulesModel } from './models/Modules.js'
 import { NPCsModel } from './models/NPCs.js'
 import { SquadsModel } from './models/Squads.js'
 import { SystemsModel } from './models/Systems.js'
-import { TablesModel } from './models/Tables.js'
+import { RollTablesModel } from './models/RollTables.js'
 import { TraitsModel } from './models/Traits.js'
 import { VehiclesModel } from './models/Vehicles.js'
 
@@ -44,7 +44,7 @@ export { ModulesModel } from './models/Modules.js'
 export { NPCsModel } from './models/NPCs.js'
 export { SquadsModel } from './models/Squads.js'
 export { SystemsModel } from './models/Systems.js'
-export { TablesModel } from './models/Tables.js'
+export { RollTablesModel } from './models/RollTables.js'
 export { TraitsModel } from './models/Traits.js'
 export { VehiclesModel } from './models/Vehicles.js'
 
@@ -73,7 +73,7 @@ export type {
   SalvageUnionNPCs,
   SalvageUnionSquads,
   SalvageUnionSystems,
-  SalvageUnionTables,
+  SalvageUnionRollTables,
   SalvageUnionTraits,
   SalvageUnionVehicles,
   // Individual item types
@@ -94,7 +94,7 @@ export type {
   NPC,
   Squad,
   System,
-  Table,
+  RollTable,
   TraitEntry,
   Vehicle,
   // Shared types
@@ -106,9 +106,9 @@ export type {
  * Use this to safely work with results from find/findById/findByName
  *
  * @example
- * const table = SalvageUnionReference.Tables.findByName('Core Mechanic');
+ * const table = SalvageUnionReference.RollTables.findByName('Core Mechanic');
  * if (table) {
- *   // table is now safely typed as Table
+ *   // table is now safely typed as RollTable
  *   console.log(table.name);
  * }
  */
@@ -134,7 +134,7 @@ export class SalvageUnionReference {
   public static readonly NPCs: NPCsModel = new NPCsModel()
   public static readonly Squads: SquadsModel = new SquadsModel()
   public static readonly Systems: SystemsModel = new SystemsModel()
-  public static readonly Tables: TablesModel = new TablesModel()
+  public static readonly RollTables: RollTablesModel = new RollTablesModel()
   public static readonly Traits: TraitsModel = new TraitsModel()
   public static readonly Vehicles: VehiclesModel = new VehiclesModel()
 }

@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "1.16.0",
-  "generated": "2025-10-22T17:14:06.875Z",
+  "version": "1.18.0",
+  "generated": "2025-10-22T20:18:46.294Z",
   "schemas": [
     {
       "id": "abilities",
@@ -159,6 +159,15 @@
       "requiredFields": ["id", "name", "source", "hitPoints", "page"]
     },
     {
+      "id": "roll-tables",
+      "title": "Salvage Union Roll Tables",
+      "description": "Random tables and roll tables in Salvage Union",
+      "dataFile": "data/roll-tables.json",
+      "schemaFile": "schemas/roll-tables.schema.json",
+      "itemCount": 22,
+      "requiredFields": ["id", "name", "source", "page"]
+    },
+    {
       "id": "squads",
       "title": "Salvage Union Squads",
       "description": "NPC squads and groups in Salvage Union",
@@ -175,15 +184,6 @@
       "schemaFile": "schemas/systems.schema.json",
       "itemCount": 99,
       "requiredFields": ["name", "page"]
-    },
-    {
-      "id": "tables",
-      "title": "Salvage Union Tables",
-      "description": "Random tables and roll tables in Salvage Union",
-      "dataFile": "data/tables.json",
-      "schemaFile": "schemas/tables.schema.json",
-      "itemCount": 22,
-      "requiredFields": ["id", "name", "source", "page"]
     },
     {
       "id": "traits",

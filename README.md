@@ -70,7 +70,7 @@ All models are accessible via the `SalvageUnionReference` export:
 | `NPCs`                    | 6     | Non-player characters            |
 | `Squads`                  | 9     | NPC squads                       |
 | `Systems`                 | 99    | Mech weapon systems              |
-| `Tables`                  | 14    | Game tables                      |
+| `RollTables`              | 14    | Game tables                      |
 | `Traits`                  | 43    | Special traits                   |
 | `Vehicles`                | 7     | Wasteland vehicles               |
 

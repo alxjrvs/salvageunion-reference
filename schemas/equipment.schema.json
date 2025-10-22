@@ -47,8 +47,8 @@
       "actionType": {
         "$ref": "shared/enums.schema.json#/definitions/actionType"
       },
-      "rollTable": {
-        "$ref": "shared/common.schema.json#/definitions/rollTable"
+      "table": {
+        "$ref": "shared/common.schema.json#/definitions/table"
       },
       "actions": {
         "type": "array",

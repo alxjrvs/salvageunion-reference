@@ -168,7 +168,7 @@ async function main() {
     'traits.json',
     'keywords.json',
     'meld.json',
-    'tables.json',
+    'roll-tables.json',
   ]
 
   console.log('🚀 Starting page number and source update...\n')

@@ -560,7 +560,7 @@
       {
         "name": "Reinforced Chassis",
         "description": "The Jackhammer rolls on this alternate Critical Damage Table:",
-        "rollTable": {
+        "table": {
           "1": "The Jackhammer Mech Chassis is damaged. All of its mounted Systems, Modules, and any carried Cargo are destroyed. The Pilot survives in the reinforced cockpit.",
           "20": "The Jackhammer is Intact and operational with 1 SP. The Pilot is unharmed.",
           "11-19": "The Jackhammer is temporarily Shutdown and becomes inoperable. At the end of its next turn it activates and becomes operational with 1 SP. The Pilot is unharmed.",

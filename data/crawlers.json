@@ -76,7 +76,7 @@
       {
         "name": "Imrpoved Trading Bay",
         "description": "When you roll to see what is available in the Trading Bay use this table instead. Trade available is always one Tech Level higher than your Union Crawler and can be purchased for its Salvage Value as per the normal trading rules. Chassis, Systems, and Modules available for trade are determined randomly or by the Mediator.",
-        "rollTable": {
+        "table": {
           "1": "Re-roll on this table. If a 1 is rolled again nothing is available for trade this Downtime.",
           "20": " An Intact Mech Chassis, System, and Module are all available for trade.",
           "11-19": " An Intact Mech Chassis and an Intact System are available for trade.",

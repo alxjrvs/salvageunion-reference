@@ -103,9 +103,9 @@ const validationConfigs: ValidationConfig[] = [
     schemaFile: 'schemas/systems.schema.json',
   },
   {
-    name: 'Tables',
-    dataFile: 'data/tables.json',
-    schemaFile: 'schemas/tables.schema.json',
+    name: 'Roll Tables',
+    dataFile: 'data/roll-tables.json',
+    schemaFile: 'schemas/roll-tables.schema.json',
   },
   {
     name: 'Traits',

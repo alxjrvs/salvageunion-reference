@@ -1,4 +1,4 @@
-import type { Table, System } from '../types/inferred.js'
+import type { RollTable, System } from '../types/inferred.js'
 
 /**
  * Result type for table roll resolution
@@ -8,13 +8,13 @@ export type TableRollResult = { success: boolean; result: string }
 /**
  * Resolves a d20 roll against a table to get the result string
  *
- * @param rollTable - The roll table data (Table['rollTable'] | System['rollTable'] | undefined)
+ * @param table - The roll table data (RollTable['table'] | System['table'] | undefined)
  * @param roll - The d20 roll result (1-20)
  * @returns Object with success flag and either the result string or error message
  *
  * @example
- * const table = SalvageUnionReference.Tables.findByName('Core Mechanic');
- * const result = resultForTable(table?.rollTable, 15);
+ * const rollTable = SalvageUnionReference.RollTables.findByName('Core Mechanic');
+ * const result = resultForTable(rollTable?.table, 15);
  * if (result.success) {
  *   console.log(result.result); // "Success: You have achieved your goal..."
  * } else {
@@ -22,10 +22,10 @@ export type TableRollResult = { success: boolean; result: string }
  * }
  */
 export function resultForTable(
-  rollTable: Table['rollTable'] | System['rollTable'] | undefined,
+  table: RollTable['table'] | System['table'] | undefined,
   roll: number
 ): TableRollResult {
-  if (!rollTable) {
+  if (!table) {
     return {
       success: false,
       result: 'Table data is undefined',
@@ -39,12 +39,14 @@ export function resultForTable(
     }
   }
 
-  const table = rollTable as Record<string, unknown>
-  const numericKeys = Object.keys(table).filter((k) => /^\d+(-\d+)?$/.test(k))
+  const tableData = table as Record<string, unknown>
+  const numericKeys = Object.keys(tableData).filter((k) =>
+    /^\d+(-\d+)?$/.test(k)
+  )
 
   // Detect if this is a flat table (has all 20 individual keys)
   if (numericKeys.length === 20 && numericKeys.every((k) => !k.includes('-'))) {
-    const result = table[roll.toString()]
+    const result = tableData[roll.toString()]
     if (result && typeof result === 'string') {
       return {
         success: true,
@@ -57,7 +59,7 @@ export function resultForTable(
     }
   }
 
-  return findRangeResult(table, roll)
+  return findRangeResult(tableData, roll)
 }
 
 /**

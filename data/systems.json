@@ -69,7 +69,7 @@
     ],
     "recommended": true,
     "description": "An Escape Hatch is a sealed hatch that can be opened and escaped through in the event a Mech suffers critical damage or the Pilot needs to make a swift exit. When activated, by pulling a lever, a bolted charge blows the Escape Hatch from the Mech Chassis, allowing for the Pilot to crawl through to safety.",
-    "rollTable": {
+    "table": {
       "1": "The Escape Hatch severely malfunctions trapping you in your Mech and injuring you. You must roll on the Critical Injury Table, and the Escape Hatch is destroyed.",
       "20": "You escape safely from your Mech in Medium Range.",
       "11-19": "You escape safely from your Mech in Close Range.",
@@ -233,7 +233,7 @@
     "actionType": "Turn",
     "description": "The Mechapult is an invention that could only have been thought of by salvagers. Scrap has many uses in the wastelands from trade, from crafting to repair and most obviously launching at high velocity towards whoever looked at you the wrong way. A Mechapult must be loaded with one piece of Scrap to fire. The effect is randomly determined and differs based on the Tech Level of Scrap you choose. Choose a target in Range to fire the Mechapult at. Instead of making an attack roll, roll the die on the table below to determine the effect. You may Push this roll as normal. The Scrap is always destroyed irrespective of the result.",
     "range": "Long",
-    "rollTable": {
+    "table": {
       "1": "The Mechapult explodes and is destroyed. Deal SP damage equal to 2× the Tech Level of the Scrap to your Mech and everything within Close Range.",
       "2": "The Mechapult overloads collapsing in on itself. Your Mech takes damage equal to the Tech Level of the Scrap and the Mechapult is damaged.",
       "3": "The Mechapult backfires, hitting a random Ally in Range for SP damage equal to the Tech Level of the Scrap.",
@@ -440,7 +440,7 @@
       }
     ],
     "description": "This metallic shield is designed to protect the wielder from melee attacks, handy when a Bio-Titan is chomping down on you. When your Mech or a target in Close Range is hit by a Melee Attack you may use your Armoured Shield to block the attack as a Reaction.",
-    "rollTable": {
+    "table": {
       "1": "The attack smashes through your Armoured Shield. The attack hits as normal and your Armoured Shield is destroyed.",
       "20": "The attack misses and deals no damage and you put your opponent off guard. You may make an attack against the target as a Reaction.",
       "11-19": "The Armoured Shield blocks the blow, the attack deals no damage.",
@@ -754,7 +754,7 @@
     ],
     "description": "Developed by Aeon as a means to combat solar flares during colony construction and asteroid mining projects, this shield projector is also highly effective against energy weapons. When you or a target in Close Range is hit by a weapon with the Energy Trait, you may attempt to use your Refractive Shield Projector to prevent the hit.",
     "range": "Close",
-    "rollTable": {
+    "table": {
       "1": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check.",
       "20": "The attack misses and deals no damage and refracts back at the attacker, hitting them for the damage of the weapon.",
       "11-19": "The attack misses and deals no damage.",
@@ -944,7 +944,7 @@
       }
     ],
     "description": "An Ejection System propels a Pilot from their Mech's cockpit to a safe distance, where they land with the aid of a parachute. This allows you to escape your Mech in the event it suffers critical damage, is destroyed, or you find yourself in a tight spot.",
-    "rollTable": {
+    "table": {
       "1": "The Ejection System severely malfunctions, harming you inside your cockpit. The Ejection System is destroyed and your Pilot must roll on the Critical Injury Table.",
       "20": "You eject perfectly from the Mech and land in any location up to Far Range of your Mech.",
       "11-19": "You eject safely from the Mech and land unharmed within Long Range of your Mech.",
@@ -990,7 +990,7 @@
     ],
     "description": "This Aeon-designed shield projector emits an electro-magnetic field that can stop ballistics impacts in their tracks. When you or a target in Close Range is hit by a weapon with the Ballistic Trait, you may attempt to use your Electro-Magnetic Shield to prevent the hit.",
     "range": "Close",
-    "rollTable": {
+    "table": {
       "1": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check.",
       "20": "The attack misses, deals no damage, and is reflected back at the attacker, hitting them for the damage of the weapon.",
       "11-19": "The attack misses and deals no damage.",
@@ -1162,7 +1162,7 @@
       }
     ],
     "description": "This complex prawn-like array of salvaging arms allows for the rapid and efficient Area Salvage, increasing your chances to find Mech Chassis, Systems, and Modules in an area. When performing Area Salvage with a Prawn Sifter, use the following table instead.",
-    "rollTable": {
+    "table": {
       "1": "You find 1 Scrap of the Tech Level of the area.",
       "20": "You find a damaged Mech Chassis of the Tech Level of the area. This can be determined randomly or chosen by the Mediator.",
       "11-19": "You find a damaged System of the Tech Level of the area. This can be determined randomly or chosen by the Mediator.",
@@ -1383,7 +1383,7 @@
         "amount": 5
       }
     ],
-    "rollTable": {
+    "table": {
       "1": "The mines hit an unintended target such as an Ally or something innocent in the area.",
       "20": "Everything in the area is destroyed.",
       "11-19": "Deal 5 SP damage to everything in the area.",
@@ -1852,7 +1852,7 @@
     "description": "This shielding array of Stefanus design is specifically designed to reflect attacks back at the target.",
     "range": "Close",
     "activationCost": 2,
-    "rollTable": {
+    "table": {
       "1": "The shield malfunctions. You take no damage from the attack, but it is deflected to a random target within Medium Range, which takes the full damage of the attack. In addition, your Reflective Shielding System becomes damaged.",
       "20": "The attack deals no damage and is reflected devastatingly back at the attacker, hitting them for 2× the damage of the weapon they attacked with.",
       "11-19": "The attack deals half damage and is reflected back at the attacker dealing the full damage of the weapon they attacked with to them.",
@@ -1942,7 +1942,7 @@
     ],
     "description": "This multi-phase shield array was developed as a collaboration between Aeon and Stefanus and protects a Mech against a wide array of attacks.",
     "activationCost": 3,
-    "rollTable": {
+    "table": {
       "1": "The attack hits as normal and the shield overloads. Your Mech gains 2 Heat and must make a Heat Check.",
       "20": "The attack deals no damage and reflects back at the attacker, hitting them for the damage of the weapon they attacked with.",
       "11-19": "The attack misses and deals no damage.",
@@ -1967,7 +1967,7 @@
       }
     ],
     "description": "Developed by Sakura Futures as a means for their pilots to eject from their Mech in safety and comfort. This high-tech ejection System allows you to escape your Mech in the comfort of a well armoured Ejector Pod. The Ejector Pod rocket is propelled from your Mech and lands safely via the aid of a graviton stabilisation system. The Ejector Pod has 5 SP when deployed.",
-    "rollTable": {
+    "table": {
       "1": "The Ejector Pod fails to trigger and is damaged in the process, it cannot be used until repaired to the Intact Condition.",
       "20": "The pod ejects perfectly and lands in any location within Far Range of your Mech.",
       "11-19": "The pod ejects safely and lands within Long Range of your Mech.",
@@ -2106,7 +2106,7 @@
     "description": "Developed by Ascension PLC as part of their 'Matter Doesn't Matter' campaign, this allows you to teleport salvage directly from your Mech to the Crawler. This System increases your Mech's Cargo Capacity by 10.",
     "activationCost": 3,
     "notes": "When you activate this ability, you teleport all Scrap, Chassis, Systems, Modules, and People your Mech is carrying to the Storage Bay in your Union Crawler.",
-    "rollTable": {
+    "table": {
       "1": "Everything you are attempting to teleport is destroyed or killed.",
       "20": "Copy/Paste error. Everything you attempt to teleport appears on your Crawler. They are also still on your Mech.",
       "2-5": "Teleport Successful!",
@@ -2176,7 +2176,7 @@
           }
         ],
         "description": "When you or a target in Close Range is hit by an attack with the Ballistic, Missile, or Melee Trait, you may activate the Matter Phase Shield to prevent the hit.",
-        "rollTable": {
+        "table": {
           "1": "The attack hits as normal and the shield temporarily breaks down. It cannot be used for 10 minutes.",
           "20": "The attack deals no damage. If the weapon that made the attack had the Melee Trait, it is destroyed. You may activate your Matter Phase Shield as a Reaction without spending EP for the next 10 minutes.",
           "11-19": "The attack misses and deals no damage. If the weapon that made the attack had the Melee Trait, it is destroyed.",
@@ -2240,7 +2240,7 @@
     ],
     "description": "This teleportation pod deconstructs your atoms and reconstructs them in the safety of a Teleportation Bay. There has been some philosophical debate among the Unions as to whether or not this device technically kills the Pilot and creates a clone of them. As yet, we are unable to reach a definitive conclusion as to the veracity of this theory.",
     "activationCost": 2,
-    "rollTable": {
+    "table": {
       "1": "The teleporter malfunctions. You instead teleport to a random Teleportation Bay somewhere on the Campaign Map you are currently in.",
       "20": "You teleport perfectly to your destination. In addition, you may bring an additional creature within Close Range with you as you teleport.",
       "11-19": "You teleport safely to your destination.",

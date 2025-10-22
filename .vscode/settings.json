@@ -61,16 +61,16 @@
       "url": "./schemas/npcs.schema.json"
     },
     {
+      "fileMatch": ["data/roll-tables.json"],
+      "url": "./schemas/roll-tables.schema.json"
+    },
+    {
       "fileMatch": ["data/squads.json"],
       "url": "./schemas/squads.schema.json"
     },
     {
       "fileMatch": ["data/systems.json"],
       "url": "./schemas/systems.schema.json"
-    },
-    {
-      "fileMatch": ["data/tables.json"],
-      "url": "./schemas/tables.schema.json"
     },
     {
       "fileMatch": ["data/traits.json"],

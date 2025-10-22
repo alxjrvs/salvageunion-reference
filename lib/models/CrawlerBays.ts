@@ -13,9 +13,7 @@ export class CrawlerBaysModel extends BaseModel<CrawlerBay> {
   }
 
   findBaysWithRollTables(): CrawlerBay[] {
-    return this.where(
-      (b) => !!b.rollTable && Object.keys(b.rollTable).length > 0
-    )
+    return this.where((b) => !!b.table && Object.keys(b.table).length > 0)
   }
 
   findBaysWithTechLevelEffects(): CrawlerBay[] {

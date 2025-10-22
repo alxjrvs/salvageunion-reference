@@ -4,7 +4,7 @@
     "source": "Salvage Union Core Book",
     "name": "Core Mechanic",
     "section": "core",
-    "rollTable": {
+    "table": {
       "1": "Cascade Failure: Something has gone terribly wrong. You suffer a severe consequence of the Mediator’s choice. When attacking, you miss the target and suffer a Setback chosen by the Mediator.",
       "20": "Nailed it: You have overcome the odds and managed an outstanding success. You may achieve an additional bonus of your choice to the action. When dealing damage, you can choose to double it or pick another appropriate bonus effect.",
       "11-19": "Success: You have achieved your goal without any compromises. When attacking, you hit the target and deal standard damage.",
@@ -19,7 +19,7 @@
     "source": "Salvage Union Core Book",
     "name": "Group Initiative",
     "section": "action scene",
-    "rollTable": {
+    "table": {
       "1": "Ambush: Two NPCs chosen by the Mediator act first. Play then passes to the player group and one Pilot is chosen by the players to act next.",
       "20": "You Shot First: Two Pilots chosen by the players act first. Play then passes to the NPC group and one NPC chosen by the Mediator acts next.",
       "11-19": "Quickdraw: One Pilot chosen by the players acts first. Play then passes to the NPC group and one NPC chosen by the Mediator acts.",
@@ -34,7 +34,7 @@
     "source": "Salvage Union Core Book",
     "name": "Critical Injury",
     "section": "damage",
-    "rollTable": {
+    "table": {
       "1": "Fatal Injury: Your Pilot suffers a fatal injury and dies.",
       "20": "Miraculous Survival: You survive against the odds. You have 1 HP, remain conscious and can act normally.",
       "11-19": "Unconscious: You are stable at 0 HP, but unconscious and cannot move or take actions until you gain at least 1 HP. You will regain consciousness naturally in 1 hour and get back up with 1 HP.",
@@ -49,7 +49,7 @@
     "source": "Salvage Union Core Book",
     "name": "Critical Damage",
     "section": "damage",
-    "rollTable": {
+    "table": {
       "1": "Catastrophic Damage: The Mech, as well as any mounted Systems and Modules as well as all Cargo, is destroyed. Your Pilot dies unless they have a means to escape the Mech.",
       "20": "Miraculous Survival: Your Mech is somehow Intact. It has 1 SP and is still fully operational. Your Pilot is unharmed.",
       "11-19": "Core Damage: Your Mech Chassis is damaged and inoperable until repaired. All mounted Systems and Modules remain Intact. Your Pilot is reduced to 0 HP unless they have some means to escape the Mech.",
@@ -64,7 +64,7 @@
     "source": "Salvage Union Core Book",
     "name": "Reactor Overload",
     "section": "heat",
-    "rollTable": {
+    "table": {
       "1": "Reactor Overload: Your Mech’s reactor goes into full meltdown and explodes. Your Mech, as well as any mounted Systems, Modules, and all Cargo, is destroyed in the explosion. Everything in Close Range of your Mech takes SP damage equal to your Mech’s Maximum Heat Capacity. They may take any Turn Action or Reaction in response to try to avoid this. Your Pilot dies unless they have a means to escape. The area your Mech was in becomes Irradiated",
       "20": "Reactor Overdrive: Your Mech’s reactor goes into overdrive. Your Mech can take any additional action this turn or Push their next roll within 10 minutes for free.",
       "11-19": "Reactor Overheat: Your Mech’s reactor has overheated. Your Mech shuts down and gains the Vulnerable Trait. Your Mech will re-activate at the end of your next turn. In addition, your Mech takes an amount of SP damage equal to your current Heat.",
@@ -79,7 +79,7 @@
     "source": "Salvage Union Core Book",
     "name": "Area Salvage",
     "section": "salvaging",
-    "rollTable": {
+    "table": {
       "1": "Nothing: You find nothing in this area.",
       "20": "Jackpot!: You find a Mech Chassis, System, or Module at the Tech Level of the area. It is in the Damaged Condition. This can be randomised or chosen by the Mediator.",
       "11-19": "Winning: You find 3 Scrap of the Tech Level of the area.",
@@ -94,7 +94,7 @@
     "source": "Salvage Union Core Book",
     "name": "Mech Salvage",
     "section": "salvaging",
-    "rollTable": {
+    "table": {
       "1": "Ashes and Dust: The Mech is unsalvageable: its Chassis, Systems and Modules are all considered destroyed.",
       "20": "Lions Share: You salvage the Mech Chassis, a System and a Module of your choice mounted on it. They both have the Damaged Condition. Anything else is considered destroyed.",
       "11-19": "Meat and Potatoes: You salvage the Mech Chassis or a System or Module of your choice mounted on it. It has the Damaged Condition. Anything else is considered destroyed.",
@@ -109,7 +109,7 @@
     "source": "Salvage Union Core Book",
     "name": "Reaction Roll",
     "section": "npc tables",
-    "rollTable": {
+    "table": {
       "1": "Actively Hostile: The NPCs will launch an attack on the group if appropriate or flee from them, barricade themselves in, and avoid contact as though they were hostile.",
       "20": "Actively Helpful and Friendly: The NPCs are incredibly friendly and positive towards the group and will actively help them in any reasonable way they can.",
       "11-19": "Friendly: The NPCs are friendly and willing to talk, trade, and offer information to the group; however, they will still ask for their fair share in return.",
@@ -124,7 +124,7 @@
     "source": "Salvage Union Core Book",
     "name": "NPC Action",
     "section": "npc tables",
-    "rollTable": {
+    "table": {
       "1": "Cascade Failure: The NPC has catastrophically failed at their action. They suffer a Severe Setback of the player’s choice. A weapon attack misses, with a Severe Setback chosen by the players.",
       "20": "Nailed It: The NPC succeeds spectacularly at their action. They get an additional bonus of the Mediator’s choice. If they are making an attack, they hit, and do double damage or get another bonus of the Mediator’s choice.",
       "11-19": "Success: The NPC achieves their action successfully. An attack hits and deals standard damage.",
@@ -139,7 +139,7 @@
     "source": "Salvage Union Core Book",
     "name": "Morale",
     "section": "npc tables",
-    "rollTable": {
+    "table": {
       "1": "Surrender: The NPCs surrender to whoever is attacking them. If there is nobody to surrender to, they will recklessly flee.",
       "20": "Fight to the Death: The NPCs see this one through to the end. They hunker down and will not retreat from this fight under any circumstance.",
       "11-19": "Keep Fighting: The NPCs continue to fight this one out for now.",
@@ -154,7 +154,7 @@
     "source": "Salvage Union Core Book",
     "name": "Retreat",
     "section": "npc tables",
-    "rollTable": {
+    "table": {
       "1": "Disastrous Escape: The group retreat to an adjacent location of their choice within the Region Map, but at a severe cost. They suffer a Severe Setback and may be pursued.",
       "20": "Perfect Escape: The group makes a perfect escape from the situation to any location of their choice within the Region Map and cannot be pursued.",
       "11-19": "Escape: The group makes a safe escape from the situation to any adjacent location of their choice within the Map and cannot be pursued.",
@@ -169,7 +169,7 @@
     "source": "Salvage Union Core Book",
     "name": "Crawler Deterioration",
     "section": "crawler",
-    "rollTable": {
+    "table": {
       "1": "Your Union Crawler loses 5 Structure Points and a Bay chosen at random is Damaged until repaired to the Intact Condition.",
       "20": "Your Union Crawler chugs along for now.",
       "11-19": "11-19 Your Union Crawler loses 5 Structure Points.",
@@ -184,7 +184,7 @@
     "source": "Salvage Union Core Book",
     "name": "Crawler Damage",
     "section": "crawler",
-    "rollTable": {
+    "table": {
       "1": "Your Union Crawler is Destroyed as a mass series of malfunctions causes it to entirely collapse. Roll on the Union Crawler Destruction Table.",
       "20": "20 Your Union Crawler survives any significant damage this time. ",
       "11-19": "Your Union Crawler is inoperable and grounded. Its Bays are Intact, but inoperable.  You must pay your Union Crawler’s Upkeep Cost in order to repair it to be fully functioning again. Around 10% of your Union Crawler’s population are severely injured or killed.",
@@ -199,7 +199,7 @@
     "source": "Salvage Union Core Book",
     "name": "Crawler Destruction",
     "section": "crawler",
-    "rollTable": {
+    "table": {
       "1": "The Union Crawler suffers critical damage, goes into a reactor meltdown, and explodes. The Union Crawler is destroyed beyond all recognition. It cannot be rebuilt.  Everyone and everything on board and within Medium Range takes 50 Structure Points of damage, and can be assumed destroyed or killed outright.",
       "20": "There is hope. Everyone on board is somewhat battered and bruised, but manages to escape the Union Crawler safely. Your Union Crawler can be rebuilt from the wreckage for its current Upgrade Cost in Scrap of its Tech Level or higher.",
       "11-19": "The Union Crawler is torn apart. All of its Bays are damaged. Around 25% of the Union Crawler’s population are severely injured or killed. Any Salvager Pilots on board must roll on the Critical Injury Table. The Union Crawler can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher.",
@@ -214,7 +214,7 @@
     "source": "Salvage Union Core Book",
     "name": "Keepsake",
     "section": "character",
-    "rollTable": {
+    "table": {
       "1": "Stuffed Toy",
       "2": "Pre-War Handheld Console",
       "3": "Dog Tags",
@@ -244,7 +244,7 @@
     "source": "Salvage Union Core Book",
     "name": "Motto",
     "section": "character",
-    "rollTable": {
+    "table": {
       "1": "Live and let live.",
       "2": "The early bird gets the worm.",
       "3": "Knowledge is power, France is Bacon.",
@@ -274,7 +274,7 @@
     "source": "Salvage Union Core Book",
     "name": "Pilot Appearance",
     "section": "character",
-    "rollTable": {
+    "table": {
       "1": "Stocky",
       "2": "Alluring",
       "3": "Intimidating",
@@ -304,7 +304,7 @@
     "source": "Salvage Union Core Book",
     "name": "AI Personality",
     "section": "character",
-    "rollTable": {
+    "table": {
       "1": "Megalomaniacal to a fault.",
       "2": "Asks far too many questions.",
       "3": "Views humans as lost puppies to protect.",
@@ -334,7 +334,7 @@
     "source": "Salvage Union Core Book",
     "name": "Quirks",
     "section": "mech",
-    "rollTable": {
+    "table": {
       "1": "Flashing RGB lights",
       "2": "Fumes smoke",
       "3": "Incredibly loud, grinding gears",
@@ -364,7 +364,7 @@
     "source": "Salvage Union Core Book",
     "name": "Mech Appearance",
     "section": "mech",
-    "rollTable": {
+    "table": {
       "1": "Flashy, bright, vibrant, paint job",
       "2": "Grizzly, bloody markings",
       "3": "Rusty and dilapidated",
@@ -394,7 +394,7 @@
     "source": "Salvage Union Core Book",
     "name": "Mech Pattern Names",
     "section": "mech",
-    "rollTable": {
+    "table": {
       "1": "Bullseye",
       "2": "Moonbeam",
       "3": "Reaper",
@@ -424,7 +424,7 @@
     "source": "Salvage Union Core Book",
     "name": "Crawler Name",
     "section": "crawler",
-    "rollTable": {
+    "table": {
       "1": "Big Smoke",
       "2": "Juggernaut",
       "3": "Calypso",

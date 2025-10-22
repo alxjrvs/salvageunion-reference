@@ -133,7 +133,7 @@ For abilities with roll outcomes, include the full roll table:
 
 ```json
 {
-  "rollTable": {
+  "table": {
     "type": "standard",
     "1": "Critical failure outcome text",
     "2-5": "Low outcome text",

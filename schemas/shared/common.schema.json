@@ -68,7 +68,7 @@
         }
       }
     },
-    "rollTable": {
+    "table": {
       "description": "Roll table for random outcomes based on d20 rolls",
       "oneOf": [
         {

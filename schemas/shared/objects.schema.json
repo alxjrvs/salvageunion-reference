@@ -123,8 +123,8 @@
             ]
           }
         },
-        "rollTable": {
-          "$ref": "common.schema.json#/definitions/rollTable"
+        "table": {
+          "$ref": "common.schema.json#/definitions/table"
         },
         "page": {
           "type": "integer",
@@ -189,8 +189,8 @@
         "damage": {
           "$ref": "common.schema.json#/definitions/damage"
         },
-        "rollTable": {
-          "$ref": "common.schema.json#/definitions/rollTable"
+        "table": {
+          "$ref": "common.schema.json#/definitions/table"
         },
         "actionType": {
           "$ref": "enums.schema.json#/definitions/actionType"
@@ -283,8 +283,8 @@
         "damage": {
           "$ref": "common.schema.json#/definitions/damage"
         },
-        "rollTable": {
-          "$ref": "common.schema.json#/definitions/rollTable"
+        "table": {
+          "$ref": "common.schema.json#/definitions/table"
         },
         "actionType": {
           "$ref": "enums.schema.json#/definitions/actionType"

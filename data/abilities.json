@@ -231,7 +231,7 @@
         "type": "hacking"
       }
     ],
-    "rollTable": {
+    "table": {
       "1": "The hacking attempt fails and the target cannot be targeted by any Abilities with the Hacking Trait for the next 10 minutes.",
       "20": "The System or Module is destroyed.",
       "11-19": "The System or Module is damaged.",
@@ -257,7 +257,7 @@
         "type": "hacking"
       }
     ],
-    "rollTable": {
+    "table": {
       "1": "All Mechs within Close Range of your Mech Shutdown for 10 minutes. This includes your Mech and those of any allies.",
       "20": "All targets Shutdown for 10 minutes.",
       "11-19": "All targets Shutdown for one round. They are active again at the end of their next turn.",
@@ -277,7 +277,7 @@
     "effect": "You can casually answer questions about Systems, Modules, Mechs, or technology even if you do not actually know the answer.",
     "activationCost": 1,
     "actionType": "Turn",
-    "rollTable": {
+    "table": {
       "1": "You do not know the answer, and everyone realises this.",
       "20": "You can ask the Mediator five questions about it and they must give you true answers.",
       "11-19": "You can ask the Mediator three questions about it and they must give you true answers.",
@@ -397,7 +397,7 @@
         "type": "hacking"
       }
     ],
-    "rollTable": {
+    "table": {
       "1": "Your counter hacking attempt fails, and the opposing hacker can activate any Ability with the Hacking Trait in response to your attempt.",
       "20": "You stop the hacking attempt. In addition, you can activate any of your Abilities with the Hacking Trait in response as a Reaction, without paying their EP or AP cost.",
       "11-19": "You stop the hacking attempt. In addition, you can activate any of your Abilities with the Hacking Trait in response as a Reaction.",
@@ -423,7 +423,7 @@
         "type": "hacking"
       }
     ],
-    "rollTable": {
+    "table": {
       "1": "The Worm fails to upload to the targets and has no effect.",
       "20": "The Chassis of all targeted Mechs is damaged and inoperable until repaired.",
       "11-19": "A System and Module of your choice on each Mech is damaged.",
@@ -541,7 +541,7 @@
     "effect": "You have a knack for being able to make a deal with the staunchest and most hard nosed folk, even in dire situations. When you use this Ability you use your leverage to negotiate a deal with a group of wastelanders, traders, corpos, or anyone else you can communicate with.",
     "activationCost": 1,
     "actionType": "Turn",
-    "rollTable": {
+    "table": {
       "1": "The deal is rejected and the people you are making a deal with become hostile to you and cannot be negotiated with further.",
       "20": "The deal is accepted and you may ask for an additional request.",
       "11-19": "The deal is accepted based on your leverage.",
@@ -608,7 +608,7 @@
     "activationCost": 2,
     "range": "Medium",
     "actionType": "Turn",
-    "rollTable": {
+    "table": {
       "1": "They stand strong in the face of you, and are much stronger than you thought. The Mediator may add reinforcements to their numbers, or improve their strength or capabilities in some other way.",
       "20": "They flee from you or acquiesce to your demands. You may choose which and may demand something in addition to what you originally requested.",
       "11-19": "They flee from you or acquiesce to your demands.",
@@ -1135,7 +1135,7 @@
     "effect": "You have learned to deliver a flurry of attacks against your foes. Choose a weapon you are equipped with or Weapons System on your Mech. You can attack all enemies in Range of that weapon with a single whirlwind salvo. If the weapon causes you to gain Heat or has any additional costs you must pay them for each target.",
     "activationCost": 3,
     "actionType": "Turn",
-    "rollTable": {
+    "table": {
       "1": "Your attacks miss. You spin wildly and then collapse, falling Prone.",
       "19-20": "You strike all enemies within Range of the weapon, hitting them for double damage.",
       "11-18": "You hit all enemies within Range of the weapon.",
@@ -1178,7 +1178,7 @@
     "effect": "Stim glands inserted into your adrenal veins allow you to push yourself beyond your normal means. You can use stims as a Pilot or whilst in your Mech and their effects apply to the Mech you are piloting.",
     "activationCost": 3,
     "actionType": "Free",
-    "rollTable": {
+    "table": {
       "1": "You overdose on stims, your HP is reduced to 0 and you must roll on the Critical Injury Table.",
       "20": "For the next 10 minutes you can take up to three actions on your turn or Push an action for free.",
       "11-19": "For the next 10 minutes you can take up to two actions on your turn or Push an action for free.",
@@ -1434,7 +1434,7 @@
         "type": "pilot equipment"
       }
     ],
-    "rollTable": {
+    "table": {
       "1": "The target avoids harm, your location is compromised, and you are detected and pursued.",
       "20": "The target creature is killed, and any number of other target creatures within Close Range of the original target can also be killed if you desire.",
       "11-19": "The target creature is killed.",
@@ -1482,7 +1482,7 @@
     "description": "Direct other Pilots to carry out missions in exchange for a Scrap reward.",
     "effect": "As a Union Rep you can call upon the aid of other Pilots to support you in a variety of missions. You can use this Ability once during Downtime. Name the mission you wish to be completed, and name the reward. This must be something of value, such as scrap or salvage, that fits the mission. This can be discussed between the player and the Mediator. Sample Missions: • Assassinate a person. • Destroy a Mech. • Destroy the defences of a military base. • Find out who is responsible for a crime. • Escort a trade caravan or VIP to a location. • Perform reconnaissance in a settlement or area of the wastelands. • Retrieve a piece of salvage or equipment. The standard reward for any of these missions is 5 Tech 3 Scrap or equivalent. If the mission is deemed particularly difficult, for example, assassinating an incredibly well protected target, performing reconnaissance in a main corporate arco, or defending a high profile VIP, the reward is increased to 10 Tech 3 Scrap or the equivalent. The Mediator may adjust these values as fits the situation.",
     "actionType": "DownTime",
-    "rollTable": {
+    "table": {
       "1": "The mission fails, and cannot be completed as something has gone badly wrong, for example, the target of an assassination attempt escapes and places a bounty on you instead, the trade caravan is destroyed, or the salvage is taken by a corpo or raider band instead.",
       "20": "The mission is completed within a week. You pay the reward during Downtime.",
       "11-19": "The mission is completed within two weeks. You pay the reward during Downtime.",

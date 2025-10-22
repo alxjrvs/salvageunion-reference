@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
-  "$id": "https://salvageunion.com/schemas/tables.schema.json",
-  "title": "Salvage Union Tables",
+  "$id": "https://salvageunion.com/schemas/roll-tables.schema.json",
+  "title": "Salvage Union Roll Tables",
   "description": "Random tables and roll tables in Salvage Union",
   "type": "array",
   "items": {
@@ -25,8 +25,8 @@
       "source": {
         "$ref": "shared/enums.schema.json#/definitions/source"
       },
-      "rollTable": {
-        "$ref": "shared/common.schema.json#/definitions/rollTable"
+      "table": {
+        "$ref": "shared/common.schema.json#/definitions/table"
       },
       "page": {
         "type": "integer",
