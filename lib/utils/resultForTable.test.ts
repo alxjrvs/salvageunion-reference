@@ -85,6 +85,7 @@ describe('resultForTable', () => {
     it('should return error when tableData is undefined', () => {
       const result = resultForTable(undefined, 10)
       expect(result.success).toBe(false)
+      expect(result.key).toBe('')
       if (!result.success) {
         expect(result.result).toContain('undefined')
       }
@@ -93,6 +94,7 @@ describe('resultForTable', () => {
     it('should return error when roll is below 1', () => {
       const result = resultForTable(mockStandardTable.table, 0)
       expect(result.success).toBe(false)
+      expect(result.key).toBe('')
       if (!result.success) {
         expect(result.result).toContain('between 1 and 20')
       }
@@ -101,6 +103,7 @@ describe('resultForTable', () => {
     it('should return error when roll is above 20', () => {
       const result = resultForTable(mockStandardTable.table, 21)
       expect(result.success).toBe(false)
+      expect(result.key).toBe('')
       if (!result.success) {
         expect(result.result).toContain('between 1 and 20')
       }
@@ -109,6 +112,7 @@ describe('resultForTable', () => {
     it('should return error when roll is negative', () => {
       const result = resultForTable(mockStandardTable.table, -5)
       expect(result.success).toBe(false)
+      expect(result.key).toBe('')
       if (!result.success) {
         expect(result.result).toContain('between 1 and 20')
       }
@@ -119,6 +123,7 @@ describe('resultForTable', () => {
     it('should return result for roll 1', () => {
       const result = resultForTable(mockStandardTable.table, 1)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('1')
       if (result.success) {
         expect(result.result).toBe('Critical Failure')
       }
@@ -127,6 +132,7 @@ describe('resultForTable', () => {
     it('should return result for roll in 2-5 range', () => {
       const result = resultForTable(mockStandardTable.table, 3)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('2-5')
       if (result.success) {
         expect(result.result).toBe('Failure')
       }
@@ -135,6 +141,7 @@ describe('resultForTable', () => {
     it('should return result for roll in 6-10 range', () => {
       const result = resultForTable(mockStandardTable.table, 8)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('6-10')
       if (result.success) {
         expect(result.result).toBe('Partial Success')
       }
@@ -143,6 +150,7 @@ describe('resultForTable', () => {
     it('should return result for roll in 11-19 range', () => {
       const result = resultForTable(mockStandardTable.table, 15)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('11-19')
       if (result.success) {
         expect(result.result).toBe('Success')
       }
@@ -151,6 +159,7 @@ describe('resultForTable', () => {
     it('should return result for roll 20', () => {
       const result = resultForTable(mockStandardTable.table, 20)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('20')
       if (result.success) {
         expect(result.result).toBe('Critical Success')
       }
@@ -161,6 +170,7 @@ describe('resultForTable', () => {
     it('should return result for roll 1', () => {
       const result = resultForTable(mockFlatTable.table, 1)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('1')
       if (result.success) {
         expect(result.result).toBe('Result 1')
       }
@@ -169,6 +179,7 @@ describe('resultForTable', () => {
     it('should return result for roll 10', () => {
       const result = resultForTable(mockFlatTable.table, 10)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('10')
       if (result.success) {
         expect(result.result).toBe('Result 10')
       }
@@ -177,6 +188,7 @@ describe('resultForTable', () => {
     it('should return result for roll 20', () => {
       const result = resultForTable(mockFlatTable.table, 20)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('20')
       if (result.success) {
         expect(result.result).toBe('Result 20')
       }
@@ -186,6 +198,7 @@ describe('resultForTable', () => {
       for (let i = 1; i <= 20; i++) {
         const result = resultForTable(mockFlatTable.table, i)
         expect(result.success).toBe(true)
+        expect(result.key).toBe(i.toString())
         if (result.success) {
           expect(result.result).toBe(`Result ${i}`)
         }
@@ -197,6 +210,7 @@ describe('resultForTable', () => {
     it('should return result for roll 1', () => {
       const result = resultForTable(mockFullTable.table, 1)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('1')
       if (result.success) {
         expect(result.result).toBe('Full Result 1')
       }
@@ -205,6 +219,7 @@ describe('resultForTable', () => {
     it('should return result for roll 15', () => {
       const result = resultForTable(mockFullTable.table, 15)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('15')
       if (result.success) {
         expect(result.result).toBe('Full Result 15')
       }
@@ -213,6 +228,7 @@ describe('resultForTable', () => {
     it('should return result for roll 20', () => {
       const result = resultForTable(mockFullTable.table, 20)
       expect(result.success).toBe(true)
+      expect(result.key).toBe('20')
       if (result.success) {
         expect(result.result).toBe('Full Result 20')
       }

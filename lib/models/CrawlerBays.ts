@@ -8,10 +8,6 @@ export class CrawlerBaysModel extends BaseModel<CrawlerBay> {
     super(crawlerBaysData as CrawlerBay[], crawlerBaysSchema)
   }
 
-  findByOperatorPosition(position: string): CrawlerBay | undefined {
-    return this.find((b) => b.operatorPosition === position)
-  }
-
   findBaysWithRollTables(): CrawlerBay[] {
     return this.where((b) => !!b.table && Object.keys(b.table).length > 0)
   }

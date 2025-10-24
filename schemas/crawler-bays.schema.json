@@ -14,8 +14,7 @@
       "source",
       "description",
       "damagedEffect",
-      "operatorPosition",
-      "operatorHitPoints",
+      "npc",
       "page"
     ],
     "properties": {
@@ -38,14 +37,8 @@
         "type": "string",
         "description": "What happens when this bay is damaged"
       },
-      "operatorPosition": {
-        "type": "string",
-        "description": "Title of the lead operator (e.g., 'Princeps', 'Greaser', 'Chef')"
-      },
-      "operatorHitPoints": {
-        "type": "integer",
-        "minimum": 0,
-        "description": "Hit points of the lead operator"
+      "npc": {
+        "$ref": "shared/common.schema.json#/definitions/npc"
       },
       "techLevelEffects": {
         "type": "array",
@@ -53,7 +46,11 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["techLevelMin", "techLevelMax", "effect"],
+          "required": [
+            "techLevelMin",
+            "techLevelMax",
+            "effect"
+          ],
           "properties": {
             "techLevelMin": {
               "type": "integer",
