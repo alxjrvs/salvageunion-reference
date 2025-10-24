@@ -14,7 +14,7 @@
     ],
     "page": 221,
     "npc": {
-      "name": "Princeps",
+      "position": "Princeps",
       "description": "The Command Bay is operated and maintained by the Bridge Crew, the most experienced of whom is known as the Princeps. You may give the Princeps a name, Motto, and a Keepsake.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]
@@ -43,7 +43,7 @@
     ],
     "page": 221,
     "npc": {
-      "name": "Greaser",
+      "position": "Greaser",
       "description": "The Mech Bay is operated and maintained by Mech Engineers, the most experienced of whom is known as the Greaser. You may give the Greaser a name, Motto, and a Keepsake.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]
@@ -59,7 +59,7 @@
     "abilities": [],
     "page": 221,
     "npc": {
-      "name": "Bullwhacker",
+      "position": "Bullwhacker",
       "description": "The Storage Bay is operated and maintained by Teamsters, the most experienced of whom is known as the Bullwhacker. You may give the Bullwhacker a name, Motto, and a Keepsake.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]
@@ -75,7 +75,7 @@
     "abilities": [],
     "page": 222,
     "npc": {
-      "name": "Gunny",
+      "position": "Gunny",
       "description": "The Armament Bay is operated and maintained by the Gunnery Crew, the most experienced of whom is known as the Gunny. You may give the Gunny a name, Motto, and a Keepsake.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]
@@ -91,7 +91,7 @@
     "abilities": [],
     "page": 222,
     "npc": {
-      "name": "Forger",
+      "position": "Forger",
       "description": "The Crafting Bay is operated and maintained by the Salvage Techs, the most experienced of whom is known as the Forger. You may give the Forger a name, Motto, and a Keepsake. All Mech Chassis, Systems, and Modules in the Salvage Union Workshop Manual are assumed available to Pilots who wish to craft them.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]
@@ -124,7 +124,7 @@
     ],
     "page": 222,
     "npc": {
-      "name": "Operator",
+      "position": "Operator",
       "description": "The Trading Bay is operated and maintained by the Union Traders, the most experienced of whom is known as the Operator. You may give the Operator a name, Motto, and a Keepsake.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]
@@ -156,7 +156,7 @@
     "abilities": [],
     "page": 223,
     "npc": {
-      "name": "Doc",
+      "position": "Doc",
       "description": "The Med Bay is operated and maintained by the Medics, the most experienced of whom is known as the Doc. You may give the Doc a name, Motto, and a Keepsake.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]
@@ -209,7 +209,7 @@
     ],
     "page": 223,
     "npc": {
-      "name": "Ace",
+      "position": "Ace",
       "description": "The Pilot Bay is operated and maintained by the Pilots, the most experienced of whom is known as the Ace. You may give the Ace a name, Motto, and a Keepsake. Core Abilities cost 1 Training Point, Advanced and Hybrid Class Abilities cost 2 Training Points, and Legendary Abilities cost 3 Training Points.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]
@@ -225,7 +225,7 @@
     "abilities": [],
     "page": 224,
     "npc": {
-      "name": "Smith",
+      "position": "Smith",
       "description": "The Armoury is operated and maintained by the Quartermasters, the most experienced of whom is known as the Smith. You may give the Smith a name, Motto, and a Keepsake.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]
@@ -246,7 +246,7 @@
     ],
     "page": 224,
     "npc": {
-      "name": "Chef",
+      "position": "Chef",
       "description": "The Cantina is operated and maintained by the Cantina Crew, the most experienced of whom is known as the Chef. You may give the Chef a name, Motto, and a Keepsake.",
       "hitPoints": 4,
       "choices": ["Keepsake", "Motto"]

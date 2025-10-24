@@ -333,9 +333,9 @@
       "type": "object",
       "description": "NPC associated with an entity",
       "additionalProperties": false,
-      "required": ["name", "description"],
+      "required": ["position", "description"],
       "properties": {
-        "name": {
+        "position": {
           "type": "string",
           "minLength": 1,
           "description": "Name of the NPC"
