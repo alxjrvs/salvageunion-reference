@@ -7,7 +7,9 @@
     "npc": {
       "position": "Union Crawler A.I.",
       "description": "Your Union Crawler has an advanced, intelligent A.I. on board which controls its core functions. The A.I. is jacked into the Corpo Net, once per Downtime you can ask them two questions about any topic and they will answer you truthfully. Name your A.I. and roll on the A.I. Personality Table for their personality.",
-      "choices": ["A.I. Personality"]
+      "choices": [
+        "A.I. Personality"
+      ]
     },
     "abilities": [
       {
@@ -25,7 +27,11 @@
     "npc": {
       "position": "Grizzled Veteran",
       "description": "A Grizzled Veteran is part of your Union Crawler. Name them and give them a Keepsake and Motto. They have 10 HP.",
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        "Keepsake",
+        "Motto"
+      ],
+      "hitPoints": 10
     },
     "abilities": [
       {
@@ -44,7 +50,10 @@
       "position": "Research Engineer",
       "description": "An engineer who is one step ahead of their peers has joined your Union Crawler. Name them and give them a Keepsake and Motto. They have 4 HP.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        "Keepsake",
+        "Motto"
+      ]
     },
     "abilities": [
       {
@@ -62,7 +71,11 @@
     "npc": {
       "position": "Wasteland Explorer",
       "description": "A Wasteland Explorer is part of your Union Crawler. Name them and if you wish, give them a Keepsake and Motto. They have 4 HP.",
-      "choices": ["Keepsake", "Motto"]
+      "hitPoints": 4,
+      "choices": [
+        "Keepsake",
+        "Motto"
+      ]
     },
     "abilities": [
       {
@@ -80,7 +93,11 @@
     "npc": {
       "position": "Saavy Trader",
       "description": "A Savvy Trader is part of your Union Crawler.  Name them and give them a Keepsake and Motto. They have 4 HP.",
-      "choices": ["Keepsake", "Motto"]
+      "hitPoints": 4,
+      "choices": [
+        "Keepsake",
+        "Motto"
+      ]
     },
     "abilities": [
       {
