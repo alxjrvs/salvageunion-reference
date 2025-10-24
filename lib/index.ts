@@ -79,6 +79,7 @@ export type {
   // Meta
   SURefTraitMetaList,
   SUrRefActionMetaList,
+  SURefEntity,
   // Lists
   SURefAbilityList,
   SURefAbilityTreeRequirementList,

@@ -92,3 +92,23 @@ export type SUrRefActionMetaList = NonNullable<
   | NonNullable<SURefSquad['abilities']>[number]
   | SURefCreature['abilities'][number]
 >
+
+export type SURefEntity =
+  | SURefAbility
+  | SURefBioTitan
+  | SURefChassis
+  | SURefClass
+  | SURefCrawler
+  | SURefCrawlerBay
+  | SURefCrawlerTechLevel
+  | SURefCreature
+  | SURefDrone
+  | SURefEquipment
+  | SURefMeld
+  | SURefModule
+  | SURefNPC
+  | SURefSquad
+  | SURefSystem
+  | SURefRollTable
+  | SURefTrait
+  | SURefVehicle
