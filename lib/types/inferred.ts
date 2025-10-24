@@ -114,3 +114,25 @@ export type SURefEntity =
   | SURefClass
   | SURefCrawlerBay
   | SURefChassis
+
+export type SURefEntityName =
+  | 'Vehicle'
+  | 'Creature'
+  | 'Drone'
+  | 'BioTitan'
+  | 'NPC'
+  | 'Squad'
+  | 'Meld'
+  | 'Keyword'
+  | 'Trait'
+  | 'System'
+  | 'Module'
+  | 'Equipment'
+  | 'Ability'
+  | 'AbilityTreeRequirement'
+  | 'Table'
+  | 'Crawler'
+  | 'CrawlerTechLevel'
+  | 'Class'
+  | 'CrawlerBay'
+  | 'Chassis'

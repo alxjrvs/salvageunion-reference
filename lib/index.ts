@@ -80,6 +80,7 @@ export type {
   SURefTraitMetaList,
   SUrRefActionMetaList,
   SURefEntity,
+  SURefEntityName,
   // Lists
   SURefAbilityList,
   SURefAbilityTreeRequirementList,
