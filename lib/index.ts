@@ -78,7 +78,8 @@ export type {
   SURefVehicle,
   // Meta
   SURefTraitMetaList,
-  SUrRefActionMetaList,
+  SURefActionMetaList,
+  SURefMetaTable,
   SURefEntity,
   SURefEntityName,
   // Lists

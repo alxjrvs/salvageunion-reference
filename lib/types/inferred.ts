@@ -81,7 +81,7 @@ export type SURefTraitMetaList = NonNullable<
   | SURefSystem['traits']
 >
 
-export type SUrRefActionMetaList = NonNullable<
+export type SURefActionMetaList = NonNullable<
   | NonNullable<SURefAbility['subAbilities']>[number]
   | NonNullable<SURefSystem['actions']>[number]
   | NonNullable<SURefModule['actions']>[number]
@@ -92,6 +92,13 @@ export type SUrRefActionMetaList = NonNullable<
   | NonNullable<SURefSquad['abilities']>[number]
   | SURefCreature['abilities'][number]
 >
+
+export type SURefMetaTable =
+  | SURefRollTable['table']
+  | SURefSystem['table']
+  | SURefEquipment['table']
+  | SURefCrawlerBay['table']
+  | SURefAbility['table']
 
 export type SURefEntity =
   | SURefVehicle
