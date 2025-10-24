@@ -1544,18 +1544,18 @@
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
     "description": "You search an area for Scrap and other useful items.",
-    "effect": "You search an area for Scrap and other useful items. Roll 2d6 and consult the table below to see what you find.",
-    "activationCost": 0,
     "actionType": "Long",
+    "activationCost": 1,
+    "activationCurrency": "Variable",
     "mechActionType": "Short",
     "notes": "Requires the Rigging Trait.",
     "table": {
-      "type": "standard",
-      "1": "You find nothing in this area.",
-      "2-5": "You find 1 Scrap of the Tech Level of the area.",
-      "6-10": "You find 2 Scrap of the Tech Level of the area.",
-      "11-19": "You find 3 Scrap of the Tech Level of the area.",
-      "20": "You find a Mech Chassis, System, or Module at the Tech Level of the area. It is in the damaged Condition. This can be determined randomly or chosen by the Mediator."
+      "1": "Nothing: You find nothing in this area.",
+      "20": "Jackpot!: You find a Mech Chassis, System, or Module at the Tech Level of the area. It is in the Damaged Condition. This can be randomised or chosen by the Mediator.",
+      "11-19": "Winning: You find 3 Scrap of the Tech Level of the area.",
+      "6-10": "Not Bad: You find 2 Scrap of the Tech Level of the area.",
+      "2-5": "Better than Nothing: You find 1 Scrap of the Tech Level of the area.",
+      "type": "standard"
     },
     "traits": [],
     "page": 248

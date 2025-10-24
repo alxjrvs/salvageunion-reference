@@ -13,6 +13,11 @@
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
       },
+      "activationCurrency": {
+        "type": "string",
+        "enum": ["Variable"],
+        "description": "Currency used to activate the ability"
+      },
       "name": {
         "$ref": "shared/common.schema.json#/definitions/ability"
       },
