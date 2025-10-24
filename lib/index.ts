@@ -74,7 +74,7 @@ export type {
   SURefSquad,
   SURefSystem,
   SURefRollTable,
-  SURefTraitEntry,
+  SURefTrait,
   SURefVehicle,
   // Meta
   SURefTraitMetaList,

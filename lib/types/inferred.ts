@@ -69,7 +69,7 @@ export type SURefNPC = SURefNPCList[number]
 export type SURefSquad = SURefSquadList[number]
 export type SURefSystem = SURefSystemList[number]
 export type SURefRollTable = SURefRollTableList[number]
-export type SURefTraitEntry = SURefTraitList[number]
+export type SURefTrait = SURefTraitList[number]
 export type SURefVehicle = SURefVehicleList[number]
 
 // Shared trait type (inferred from actual usage in data)
