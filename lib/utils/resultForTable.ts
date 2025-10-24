@@ -1,4 +1,4 @@
-import type { RollTable, System } from '../types/inferred.js'
+import type { SURefRollTable, SURefSystem } from '../types/inferred.js'
 
 /**
  * Result type for table roll resolution
@@ -8,7 +8,7 @@ export type TableRollResult = { success: boolean; result: string; key: string }
 /**
  * Resolves a d20 roll against a table to get the result string
  *
- * @param table - The roll table data (RollTable['table'] | System['table'] | undefined)
+ * @param table - The roll table data (SURefRollTable['table'] | SURefSystem['table'] | undefined)
  * @param roll - The d20 roll result (1-20)
  * @returns Object with success flag and either the result string or error message
  *
@@ -22,7 +22,7 @@ export type TableRollResult = { success: boolean; result: string; key: string }
  * }
  */
 export function resultForTable(
-  table: RollTable['table'] | System['table'] | undefined,
+  table: SURefRollTable['table'] | SURefSystem['table'] | undefined,
   roll: number
 ): TableRollResult {
   if (!table) {

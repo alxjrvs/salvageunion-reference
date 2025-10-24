@@ -1,17 +1,17 @@
-import type { AbilityTreeRequirement } from '../types/inferred.js'
+import type { SURefAbilityTreeRequirement } from '../types/inferred.js'
 import abilityTreeRequirementsData from '../../data/ability-tree-requirements.json' with { type: 'json' }
 import abilityTreeRequirementsSchema from '../../schemas/ability-tree-requirements.schema.json' with { type: 'json' }
 
 export class AbilityTreeRequirementsModel {
-  protected data: AbilityTreeRequirement[]
+  protected data: SURefAbilityTreeRequirement[]
   protected schema: Record<string, unknown>
 
   constructor() {
-    this.data = abilityTreeRequirementsData as AbilityTreeRequirement[]
+    this.data = abilityTreeRequirementsData as SURefAbilityTreeRequirement[]
     this.schema = abilityTreeRequirementsSchema as Record<string, unknown>
   }
 
-  all(): AbilityTreeRequirement[] {
+  all(): SURefAbilityTreeRequirement[] {
     return this.data
   }
 
@@ -20,22 +20,22 @@ export class AbilityTreeRequirementsModel {
   }
 
   find(
-    predicate: (item: AbilityTreeRequirement) => boolean
-  ): AbilityTreeRequirement | undefined {
+    predicate: (item: SURefAbilityTreeRequirement) => boolean
+  ): SURefAbilityTreeRequirement | undefined {
     return this.data.find(predicate)
   }
 
   where(
-    predicate: (item: AbilityTreeRequirement) => boolean
-  ): AbilityTreeRequirement[] {
+    predicate: (item: SURefAbilityTreeRequirement) => boolean
+  ): SURefAbilityTreeRequirement[] {
     return this.data.filter(predicate)
   }
 
-  findById(id: string): AbilityTreeRequirement | undefined {
+  findById(id: string): SURefAbilityTreeRequirement | undefined {
     return this.find((item) => item.id === id)
   }
 
-  findByTree(tree: string): AbilityTreeRequirement | undefined {
+  findByTree(tree: string): SURefAbilityTreeRequirement | undefined {
     return this.find((item) => item.tree === tree)
   }
 

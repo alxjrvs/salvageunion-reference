@@ -1,18 +1,18 @@
 import { BaseModel } from '../BaseModel.js'
-import type { Creature } from '../types/inferred.js'
+import type { SURefCreature } from '../types/inferred.js'
 import creaturesData from '../../data/creatures.json' with { type: 'json' }
 import creaturesSchema from '../../schemas/creatures.schema.json' with { type: 'json' }
 
-export class CreaturesModel extends BaseModel<Creature> {
+export class CreaturesModel extends BaseModel<SURefCreature> {
   constructor() {
-    super(creaturesData as Creature[], creaturesSchema)
+    super(creaturesData as SURefCreature[], creaturesSchema)
   }
 
-  findByHitPoints(hp: number): Creature[] {
+  findByHitPoints(hp: number): SURefCreature[] {
     return this.where((c) => c.hitPoints === hp)
   }
 
-  findByMinHitPoints(min: number): Creature[] {
+  findByMinHitPoints(min: number): SURefCreature[] {
     return this.where((c) => (c.hitPoints ?? 0) >= min)
   }
 }

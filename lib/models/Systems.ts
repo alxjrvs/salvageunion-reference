@@ -1,34 +1,34 @@
 import { BaseModel } from '../BaseModel.js'
-import { System } from '../types/inferred.js'
+import { SURefSystem } from '../types/inferred.js'
 import systemsData from '../../data/systems.json' with { type: 'json' }
 import systemsSchema from '../../schemas/systems.schema.json' with { type: 'json' }
 
-type Trait = NonNullable<System['traits']>[number]
+type Trait = NonNullable<SURefSystem['traits']>[number]
 
-export class SystemsModel extends BaseModel<System> {
+export class SystemsModel extends BaseModel<SURefSystem> {
   constructor() {
-    super(systemsData as System[], systemsSchema)
+    super(systemsData as SURefSystem[], systemsSchema)
   }
 
-  findByTechLevel(level: number): System[] {
+  findByTechLevel(level: number): SURefSystem[] {
     return this.where((s) => s.techLevel === level)
   }
 
-  findBySalvageValue(value: number): System[] {
+  findBySalvageValue(value: number): SURefSystem[] {
     return this.where((s) => s.salvageValue === value)
   }
 
-  findBySlotsRequired(slots: number): System[] {
+  findBySlotsRequired(slots: number): SURefSystem[] {
     return this.where((s) => s.slotsRequired === slots)
   }
 
-  findByTrait(traitType: string): System[] {
+  findByTrait(traitType: string): SURefSystem[] {
     return this.where(
       (s) => s.traits?.some((t: Trait) => t.type === traitType) ?? false
     )
   }
 
-  getWeapons(): System[] {
+  getWeapons(): SURefSystem[] {
     return this.where(
       (s) =>
         s.traits?.some((t: Trait) =>
@@ -37,7 +37,7 @@ export class SystemsModel extends BaseModel<System> {
     )
   }
 
-  findByDamageType(damageType: 'SP' | 'HP' | 'EP'): System[] {
+  findByDamageType(damageType: 'SP' | 'HP' | 'EP'): SURefSystem[] {
     return this.where(
       (s) =>
         s.damage !== undefined &&
@@ -47,7 +47,7 @@ export class SystemsModel extends BaseModel<System> {
     )
   }
 
-  findByMinDamage(minDamage: number): System[] {
+  findByMinDamage(minDamage: number): SURefSystem[] {
     return this.where((s) => {
       const hasDamage = s.damage !== undefined
 

@@ -1,10 +1,10 @@
 import { BaseModel } from '../BaseModel.js'
-import { RollTable } from '../types/inferred.js'
+import { SURefRollTable } from '../types/inferred.js'
 import rollTablesData from '../../data/roll-tables.json' with { type: 'json' }
 import rollTablesSchema from '../../schemas/roll-tables.schema.json' with { type: 'json' }
 
-export class RollTablesModel extends BaseModel<RollTable> {
+export class RollTablesModel extends BaseModel<SURefRollTable> {
   constructor() {
-    super(rollTablesData as RollTable[], rollTablesSchema)
+    super(rollTablesData as SURefRollTable[], rollTablesSchema)
   }
 }

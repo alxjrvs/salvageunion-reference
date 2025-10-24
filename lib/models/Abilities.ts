@@ -1,25 +1,27 @@
 import { BaseModel } from '../BaseModel.js'
-import type { Ability, Traits } from '../types/inferred.js'
+import type { SURefAbility, SURefTraitMetaList } from '../types/inferred.js'
 import abilitiesData from '../../data/abilities.json' with { type: 'json' }
 import abilitiesSchema from '../../schemas/abilities.schema.json' with { type: 'json' }
 
-export class AbilitiesModel extends BaseModel<Ability> {
+export class AbilitiesModel extends BaseModel<SURefAbility> {
   constructor() {
-    super(abilitiesData as Ability[], abilitiesSchema)
+    super(abilitiesData as SURefAbility[], abilitiesSchema)
   }
 
-  findByLevel(level: number): Ability[] {
+  findByLevel(level: number): SURefAbility[] {
     return this.where((a) => a.level === level)
   }
 
-  findByTree(treeName: string): Ability[] {
+  findByTree(treeName: string): SURefAbility[] {
     return this.where((a) => a.tree === treeName)
   }
 
-  findByTrait(traitType: string): Ability[] {
+  findByTrait(traitType: string): SURefAbility[] {
     return this.where(
       (a) =>
-        a.traits?.some((t: Traits[number]) => t.type === traitType) ?? false
+        a.traits?.some(
+          (t: SURefTraitMetaList[number]) => t.type === traitType
+        ) ?? false
     )
   }
 

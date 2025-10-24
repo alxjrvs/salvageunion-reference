@@ -1,34 +1,34 @@
 import { BaseModel } from '../BaseModel.js'
-import type { Equipment } from '../types/inferred.js'
+import type { SURefEquipment } from '../types/inferred.js'
 import equipmentData from '../../data/equipment.json' with { type: 'json' }
 import equipmentSchema from '../../schemas/equipment.schema.json' with { type: 'json' }
 
-type Trait = NonNullable<Equipment['traits']>[number]
+type Trait = NonNullable<SURefEquipment['traits']>[number]
 
-export class EquipmentModel extends BaseModel<Equipment> {
+export class EquipmentModel extends BaseModel<SURefEquipment> {
   constructor() {
-    super(equipmentData as Equipment[], equipmentSchema)
+    super(equipmentData as SURefEquipment[], equipmentSchema)
   }
 
-  findByTechLevel(level: number): Equipment[] {
+  findByTechLevel(level: number): SURefEquipment[] {
     return this.where((e) => e.techLevel === level)
   }
 
-  findByTrait(traitType: string): Equipment[] {
+  findByTrait(traitType: string): SURefEquipment[] {
     return this.where(
       (e) => e.traits?.some((t: Trait) => t.type === traitType) ?? false
     )
   }
 
-  findByActivationCost(cost: number): Equipment[] {
+  findByActivationCost(cost: number): SURefEquipment[] {
     return this.where((e) => e.activationCost === cost)
   }
 
-  getArmor(): Equipment[] {
+  getArmor(): SURefEquipment[] {
     return this.findByTrait('armor')
   }
 
-  getWeapons(): Equipment[] {
+  getWeapons(): SURefEquipment[] {
     return this.where(
       (e) =>
         e.traits?.some((t: Trait) =>
@@ -37,7 +37,7 @@ export class EquipmentModel extends BaseModel<Equipment> {
     )
   }
 
-  getWithActions(): Equipment[] {
+  getWithActions(): SURefEquipment[] {
     return this.where((e) => (e.actions?.length ?? 0) > 0)
   }
 }

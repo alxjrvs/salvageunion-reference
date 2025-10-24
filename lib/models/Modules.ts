@@ -1,38 +1,38 @@
 import { BaseModel } from '../BaseModel.js'
-import type { Module } from '../types/inferred.js'
+import type { SURefModule } from '../types/inferred.js'
 import modulesData from '../../data/modules.json' with { type: 'json' }
 import modulesSchema from '../../schemas/modules.schema.json' with { type: 'json' }
 
-type Trait = NonNullable<Module['traits']>[number]
+type Trait = NonNullable<SURefModule['traits']>[number]
 
-export class ModulesModel extends BaseModel<Module> {
+export class ModulesModel extends BaseModel<SURefModule> {
   constructor() {
-    super(modulesData as Module[], modulesSchema)
+    super(modulesData as SURefModule[], modulesSchema)
   }
 
-  findByTechLevel(level: number): Module[] {
+  findByTechLevel(level: number): SURefModule[] {
     return this.where((m) => m.techLevel === level)
   }
 
-  findBySalvageValue(value: number): Module[] {
+  findBySalvageValue(value: number): SURefModule[] {
     return this.where((m) => m.salvageValue === value)
   }
 
-  findBySlotsRequired(slots: number): Module[] {
+  findBySlotsRequired(slots: number): SURefModule[] {
     return this.where((m) => m.slotsRequired === slots)
   }
 
-  findByTrait(traitType: string): Module[] {
+  findByTrait(traitType: string): SURefModule[] {
     return this.where(
       (m) => m.traits?.some((t: Trait) => t.type === traitType) ?? false
     )
   }
 
-  getRecommended(): Module[] {
+  getRecommended(): SURefModule[] {
     return this.where((m) => m.recommended === true)
   }
 
-  findByActionType(actionType: string): Module[] {
+  findByActionType(actionType: string): SURefModule[] {
     return this.where((m) => m.actionType === actionType)
   }
 }

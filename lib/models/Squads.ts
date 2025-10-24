@@ -1,17 +1,17 @@
 import squadsData from '../../data/squads.json' with { type: 'json' }
 import squadsSchema from '../../schemas/squads.schema.json' with { type: 'json' }
-import type { Squad } from '../types/inferred.js'
+import type { SURefSquad } from '../types/inferred.js'
 
 export class SquadsModel {
-  protected data: Squad[]
+  protected data: SURefSquad[]
   protected schema: Record<string, unknown>
 
   constructor() {
-    this.data = squadsData as Squad[]
+    this.data = squadsData as SURefSquad[]
     this.schema = squadsSchema as Record<string, unknown>
   }
 
-  all(): Squad[] {
+  all(): SURefSquad[] {
     return this.data
   }
 
@@ -19,31 +19,31 @@ export class SquadsModel {
     return this.data.length
   }
 
-  find(predicate: (item: Squad) => boolean): Squad | undefined {
+  find(predicate: (item: SURefSquad) => boolean): SURefSquad | undefined {
     return this.data.find(predicate)
   }
 
-  where(predicate: (item: Squad) => boolean): Squad[] {
+  where(predicate: (item: SURefSquad) => boolean): SURefSquad[] {
     return this.data.filter(predicate)
   }
 
-  findById(id: string): Squad | undefined {
+  findById(id: string): SURefSquad | undefined {
     return this.find((item) => item.id === id)
   }
 
-  findByName(name: string): Squad | undefined {
+  findByName(name: string): SURefSquad | undefined {
     return this.find((item) => item.name === name)
   }
 
-  findByHitPoints(hp: number): Squad[] {
+  findByHitPoints(hp: number): SURefSquad[] {
     return this.where((s) => s.hitPoints === hp)
   }
 
-  findByMinHitPoints(min: number): Squad[] {
+  findByMinHitPoints(min: number): SURefSquad[] {
     return this.where((s) => (s.hitPoints ?? 0) >= min)
   }
 
-  findByMinStructurePoints(min: number): Squad[] {
+  findByMinStructurePoints(min: number): SURefSquad[] {
     return this.where((s) => (s.structurePoints ?? 0) >= min)
   }
 

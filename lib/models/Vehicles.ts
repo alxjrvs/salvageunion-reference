@@ -1,22 +1,22 @@
 import { BaseModel } from '../BaseModel.js'
-import { Vehicle } from '../types/inferred.js'
+import { SURefVehicle } from '../types/inferred.js'
 import vehiclesData from '../../data/vehicles.json' with { type: 'json' }
 import vehiclesSchema from '../../schemas/vehicles.schema.json' with { type: 'json' }
 
-export class VehiclesModel extends BaseModel<Vehicle> {
+export class VehiclesModel extends BaseModel<SURefVehicle> {
   constructor() {
-    super(vehiclesData as Vehicle[], vehiclesSchema)
+    super(vehiclesData as SURefVehicle[], vehiclesSchema)
   }
 
-  findByTechLevel(level: number): Vehicle[] {
+  findByTechLevel(level: number): SURefVehicle[] {
     return this.where((v) => v.techLevel === level)
   }
 
-  findBySalvageValue(value: number): Vehicle[] {
+  findBySalvageValue(value: number): SURefVehicle[] {
     return this.where((v) => v.salvageValue === value)
   }
 
-  findByMinStructurePoints(min: number): Vehicle[] {
+  findByMinStructurePoints(min: number): SURefVehicle[] {
     return this.where((v) => (v.structurePoints ?? 0) >= min)
   }
 }

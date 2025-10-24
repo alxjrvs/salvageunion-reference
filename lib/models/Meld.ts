@@ -1,17 +1,17 @@
 import meldData from '../../data/meld.json' with { type: 'json' }
 import meldSchema from '../../schemas/meld.schema.json' with { type: 'json' }
-import type { Meld } from '../types/inferred.js'
+import type { SURefMeld } from '../types/inferred.js'
 
 export class MeldModel {
-  protected data: Meld[]
+  protected data: SURefMeld[]
   protected schema: Record<string, unknown>
 
   constructor() {
-    this.data = meldData as Meld[]
+    this.data = meldData as SURefMeld[]
     this.schema = meldSchema as Record<string, unknown>
   }
 
-  all(): Meld[] {
+  all(): SURefMeld[] {
     return this.data
   }
 
@@ -19,31 +19,31 @@ export class MeldModel {
     return this.data.length
   }
 
-  find(predicate: (item: Meld) => boolean): Meld | undefined {
+  find(predicate: (item: SURefMeld) => boolean): SURefMeld | undefined {
     return this.data.find(predicate)
   }
 
-  where(predicate: (item: Meld) => boolean): Meld[] {
+  where(predicate: (item: SURefMeld) => boolean): SURefMeld[] {
     return this.data.filter(predicate)
   }
 
-  findById(id: string): Meld | undefined {
+  findById(id: string): SURefMeld | undefined {
     return this.find((item) => item.id === id)
   }
 
-  findByName(name: string): Meld | undefined {
+  findByName(name: string): SURefMeld | undefined {
     return this.find((item) => item.name === name)
   }
 
-  findByHitPoints(hp: number): Meld[] {
+  findByHitPoints(hp: number): SURefMeld[] {
     return this.where((m) => m.hitPoints === hp)
   }
 
-  findByMinHitPoints(min: number): Meld[] {
+  findByMinHitPoints(min: number): SURefMeld[] {
     return this.where((m) => (m.hitPoints ?? 0) >= min)
   }
 
-  findByMinStructurePoints(min: number): Meld[] {
+  findByMinStructurePoints(min: number): SURefMeld[] {
     return this.where((m) => (m.structurePoints ?? 0) >= min)
   }
 

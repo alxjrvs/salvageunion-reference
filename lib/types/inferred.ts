@@ -74,53 +74,9 @@ export type SURefVehicle = SURefVehicleList[number]
 
 // Shared trait type (inferred from actual usage in data)
 // This type appears in abilities, equipment, modules, systems, etc.
-export type Traits = NonNullable<
+export type SURefTraitMetaList = NonNullable<
   | SURefAbility['traits']
   | SURefEquipment['traits']
   | SURefModule['traits']
   | SURefSystem['traits']
 >
-
-// Backward compatibility aliases (old naming convention)
-export type SalvageUnionAbilities = SURefAbilityList
-export type SalvageUnionAbilityTreeRequirements =
-  SURefAbilityTreeRequirementList
-export type SalvageUnionBioTitans = SURefBioTitanList
-export type SalvageUnionMechChassis = SURefMechChassisList
-export type SalvageUnionClasses = SURefClassList
-export type SalvageUnionCrawlers = SURefCrawlerList
-export type SalvageUnionCrawlerBays = SURefCrawlerBayList
-export type SalvageUnionCrawlerTechLevels = SURefCrawlerTechLevelList
-export type SalvageUnionCreatures = SURefCreatureList
-export type SalvageUnionDrones = SURefDroneList
-export type SalvageUnionEquipment = SURefEquipmentList
-export type SalvageUnionKeywords = SURefKeywordList
-export type SalvageUnionMeld = SURefMeldList
-export type SalvageUnionModules = SURefModuleList
-export type SalvageUnionNPCs = SURefNPCList
-export type SalvageUnionSquads = SURefSquadList
-export type SalvageUnionSystems = SURefSystemList
-export type SalvageUnionRollTables = SURefRollTableList
-export type SalvageUnionTraits = SURefTraitList
-export type SalvageUnionVehicles = SURefVehicleList
-
-export type Ability = SURefAbility
-export type AbilityTreeRequirement = SURefAbilityTreeRequirement
-export type BioTitan = SURefBioTitan
-export type Chassis = SURefChassis
-export type Class = SURefClass
-export type Crawler = SURefCrawler
-export type CrawlerBay = SURefCrawlerBay
-export type CrawlerTechLevel = SURefCrawlerTechLevel
-export type Creature = SURefCreature
-export type Drone = SURefDrone
-export type Equipment = SURefEquipment
-export type Keyword = SURefKeyword
-export type Meld = SURefMeld
-export type Module = SURefModule
-export type NPC = SURefNPC
-export type Squad = SURefSquad
-export type System = SURefSystem
-export type RollTable = SURefRollTable
-export type TraitEntry = SURefTraitEntry
-export type Vehicle = SURefVehicle
