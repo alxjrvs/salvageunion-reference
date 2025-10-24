@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import { resultForTable } from './resultForTable.js'
-import type { RollTable } from '../types/inferred.js'
+import type { SURefRollTable } from '../types/inferred.js'
 
-const mockStandardTable: RollTable = {
+const mockStandardTable: SURefRollTable = {
   id: 'test-standard',
   source: 'core',
   name: 'Test Standard',
@@ -18,7 +18,7 @@ const mockStandardTable: RollTable = {
   page: 1,
 }
 
-const mockFlatTable: RollTable = {
+const mockFlatTable: SURefRollTable = {
   id: 'test-flat',
   source: 'core',
   name: 'Test Flat',
@@ -49,7 +49,7 @@ const mockFlatTable: RollTable = {
   page: 1,
 }
 
-const mockFullTable: RollTable = {
+const mockFullTable: SURefRollTable = {
   id: 'test-full',
   source: 'core',
   name: 'Test Full',
