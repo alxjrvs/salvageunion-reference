@@ -94,21 +94,23 @@ export type SUrRefActionMetaList = NonNullable<
 >
 
 export type SURefEntity =
-  | SURefAbility
-  | SURefBioTitan
-  | SURefChassis
-  | SURefClass
-  | SURefCrawler
-  | SURefCrawlerBay
-  | SURefCrawlerTechLevel
+  | SURefVehicle
   | SURefCreature
   | SURefDrone
-  | SURefEquipment
-  | SURefMeld
-  | SURefModule
+  | SURefBioTitan
   | SURefNPC
   | SURefSquad
-  | SURefSystem
-  | SURefRollTable
+  | SURefMeld
+  | SURefKeyword
   | SURefTrait
-  | SURefVehicle
+  | SURefSystem
+  | SURefModule
+  | SURefEquipment
+  | SURefAbility
+  | SURefAbilityTreeRequirement
+  | SURefRollTable
+  | SURefCrawler
+  | SURefCrawlerTechLevel
+  | SURefClass
+  | SURefCrawlerBay
+  | SURefChassis
