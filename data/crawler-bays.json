@@ -17,10 +17,7 @@
       "name": "Princeps",
       "description": "The Command Bay is operated and maintained by the Bridge Crew, the most experienced of whom is known as the Princeps. You may give the Princeps a name, Motto, and a Keepsake.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   },
   {
@@ -49,10 +46,7 @@
       "name": "Greaser",
       "description": "The Mech Bay is operated and maintained by Mech Engineers, the most experienced of whom is known as the Greaser. You may give the Greaser a name, Motto, and a Keepsake.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   },
   {
@@ -68,10 +62,7 @@
       "name": "Bullwhacker",
       "description": "The Storage Bay is operated and maintained by Teamsters, the most experienced of whom is known as the Bullwhacker. You may give the Bullwhacker a name, Motto, and a Keepsake.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   },
   {
@@ -87,10 +78,7 @@
       "name": "Gunny",
       "description": "The Armament Bay is operated and maintained by the Gunnery Crew, the most experienced of whom is known as the Gunny. You may give the Gunny a name, Motto, and a Keepsake.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   },
   {
@@ -106,10 +94,7 @@
       "name": "Forger",
       "description": "The Crafting Bay is operated and maintained by the Salvage Techs, the most experienced of whom is known as the Forger. You may give the Forger a name, Motto, and a Keepsake. All Mech Chassis, Systems, and Modules in the Salvage Union Workshop Manual are assumed available to Pilots who wish to craft them.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   },
   {
@@ -142,10 +127,7 @@
       "name": "Operator",
       "description": "The Trading Bay is operated and maintained by the Union Traders, the most experienced of whom is known as the Operator. You may give the Operator a name, Motto, and a Keepsake.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   },
   {
@@ -177,10 +159,7 @@
       "name": "Doc",
       "description": "The Med Bay is operated and maintained by the Medics, the most experienced of whom is known as the Doc. You may give the Doc a name, Motto, and a Keepsake.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   },
   {
@@ -233,10 +212,7 @@
       "name": "Ace",
       "description": "The Pilot Bay is operated and maintained by the Pilots, the most experienced of whom is known as the Ace. You may give the Ace a name, Motto, and a Keepsake. Core Abilities cost 1 Training Point, Advanced and Hybrid Class Abilities cost 2 Training Points, and Legendary Abilities cost 3 Training Points.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   },
   {
@@ -252,10 +228,7 @@
       "name": "Smith",
       "description": "The Armoury is operated and maintained by the Quartermasters, the most experienced of whom is known as the Smith. You may give the Smith a name, Motto, and a Keepsake.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   },
   {
@@ -276,10 +249,7 @@
       "name": "Chef",
       "description": "The Cantina is operated and maintained by the Cantina Crew, the most experienced of whom is known as the Chef. You may give the Chef a name, Motto, and a Keepsake.",
       "hitPoints": 4,
-      "choices": [
-        "Keepsake",
-        "Motto"
-      ]
+      "choices": ["Keepsake", "Motto"]
     }
   }
 ]
