@@ -55,6 +55,7 @@ export { resultForTable, type TableRollResult } from './utils/resultForTable.js'
 
 // Export inferred types (auto-generated from JSON data)
 export type {
+  // Singles
   SURefAbility,
   SURefAbilityTreeRequirement,
   SURefBioTitan,
@@ -75,7 +76,10 @@ export type {
   SURefRollTable,
   SURefTraitEntry,
   SURefVehicle,
+  // Meta
   SURefTraitMetaList,
+  SUrRefActionMetaList,
+  // Lists
   SURefAbilityList,
   SURefAbilityTreeRequirementList,
   SURefBioTitanList,

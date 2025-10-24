@@ -80,3 +80,15 @@ export type SURefTraitMetaList = NonNullable<
   | SURefModule['traits']
   | SURefSystem['traits']
 >
+
+export type SUrRefActionMetaList = NonNullable<
+  | NonNullable<SURefAbility['subAbilities']>[number]
+  | NonNullable<SURefSystem['actions']>[number]
+  | NonNullable<SURefModule['actions']>[number]
+  | NonNullable<SURefEquipment['actions']>[number]
+  | SURefBioTitan['abilities'][number]
+  | SURefNPC['abilities'][number]
+  | NonNullable<SURefMeld['abilities']>[number]
+  | NonNullable<SURefSquad['abilities']>[number]
+  | SURefCreature['abilities'][number]
+>
