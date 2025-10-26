@@ -40,8 +40,8 @@ export { resultForTable, type TableRollResult } from './utils/resultForTable.js'
 
 export type * from './types/inferred.js'
 
-// Auto-generate models from schema catalog (top-level await)
-const models = await generateModels()
+// Auto-generate models from schema catalog (synchronous)
+const models = generateModels()
 
 /**
  * Main entry point for Salvage Union data access

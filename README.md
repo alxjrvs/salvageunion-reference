@@ -146,10 +146,10 @@ import equipmentData from 'salvageunion-data/data/equipment.json'
 // Import schemas
 import chassisSchema from 'salvageunion-data/schemas/chassis.schema.json'
 
-// Or use the dynamic data maps (async)
+// Or use the data maps
 import { getDataMaps, getSchemaCatalog, toPascalCase } from 'salvageunion-data'
 
-const { dataMap, schemaMap } = await getDataMaps()
+const { dataMap, schemaMap } = getDataMaps()
 const chassisData = dataMap['chassis']
 const chassisSchema = schemaMap['chassis']
 

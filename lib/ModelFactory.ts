@@ -1,64 +1,123 @@
 /**
  * Model Factory - Auto-generates models from schema catalog
- * Uses dynamic imports to automatically load data and schemas
+ * Uses static imports for synchronous data loading
  */
 import { BaseModel } from './BaseModel.js'
 import schemaIndex from '../schemas/index.json' with { type: 'json' }
 
+// Import all data files
+import abilitiesData from '../data/abilities.json' with { type: 'json' }
+import abilityTreeRequirementsData from '../data/ability-tree-requirements.json' with { type: 'json' }
+import bioTitansData from '../data/bio-titans.json' with { type: 'json' }
+import chassisData from '../data/chassis.json' with { type: 'json' }
+import classesAdvancedData from '../data/classes.advanced.json' with { type: 'json' }
+import classesCoreData from '../data/classes.core.json' with { type: 'json' }
+import classesHybridData from '../data/classes.hybrid.json' with { type: 'json' }
+import crawlerBaysData from '../data/crawler-bays.json' with { type: 'json' }
+import crawlerTechLevelsData from '../data/crawler-tech-levels.json' with { type: 'json' }
+import crawlersData from '../data/crawlers.json' with { type: 'json' }
+import creaturesData from '../data/creatures.json' with { type: 'json' }
+import dronesData from '../data/drones.json' with { type: 'json' }
+import equipmentData from '../data/equipment.json' with { type: 'json' }
+import keywordsData from '../data/keywords.json' with { type: 'json' }
+import meldData from '../data/meld.json' with { type: 'json' }
+import modulesData from '../data/modules.json' with { type: 'json' }
+import npcsData from '../data/npcs.json' with { type: 'json' }
+import rollTablesData from '../data/roll-tables.json' with { type: 'json' }
+import squadsData from '../data/squads.json' with { type: 'json' }
+import systemsData from '../data/systems.json' with { type: 'json' }
+import traitsData from '../data/traits.json' with { type: 'json' }
+import vehiclesData from '../data/vehicles.json' with { type: 'json' }
+
+// Import all schema files
+import abilitiesSchema from '../schemas/abilities.schema.json' with { type: 'json' }
+import abilityTreeRequirementsSchema from '../schemas/ability-tree-requirements.schema.json' with { type: 'json' }
+import bioTitansSchema from '../schemas/bio-titans.schema.json' with { type: 'json' }
+import chassisSchema from '../schemas/chassis.schema.json' with { type: 'json' }
+import classesAdvancedSchema from '../schemas/classes.advanced.schema.json' with { type: 'json' }
+import classesCoreSchema from '../schemas/classes.core.schema.json' with { type: 'json' }
+import classesHybridSchema from '../schemas/classes.hybrid.schema.json' with { type: 'json' }
+import crawlerBaysSchema from '../schemas/crawler-bays.schema.json' with { type: 'json' }
+import crawlerTechLevelsSchema from '../schemas/crawler-tech-levels.schema.json' with { type: 'json' }
+import crawlersSchema from '../schemas/crawlers.schema.json' with { type: 'json' }
+import creaturesSchema from '../schemas/creatures.schema.json' with { type: 'json' }
+import dronesSchema from '../schemas/drones.schema.json' with { type: 'json' }
+import equipmentSchema from '../schemas/equipment.schema.json' with { type: 'json' }
+import keywordsSchema from '../schemas/keywords.schema.json' with { type: 'json' }
+import meldSchema from '../schemas/meld.schema.json' with { type: 'json' }
+import modulesSchema from '../schemas/modules.schema.json' with { type: 'json' }
+import npcsSchema from '../schemas/npcs.schema.json' with { type: 'json' }
+import rollTablesSchema from '../schemas/roll-tables.schema.json' with { type: 'json' }
+import squadsSchema from '../schemas/squads.schema.json' with { type: 'json' }
+import systemsSchema from '../schemas/systems.schema.json' with { type: 'json' }
+import traitsSchema from '../schemas/traits.schema.json' with { type: 'json' }
+import vehiclesSchema from '../schemas/vehicles.schema.json' with { type: 'json' }
+
 /**
- * Dynamically import data file based on schema entry
+ * Static data map - all data files indexed by schema ID
  */
-async function importData(dataFile: string): Promise<unknown[]> {
-  const module = await import(`../${dataFile}`, { with: { type: 'json' } })
-  return module.default as unknown[]
+const dataMap: Record<string, unknown[]> = {
+  abilities: abilitiesData,
+  'ability-tree-requirements': abilityTreeRequirementsData,
+  'bio-titans': bioTitansData,
+  chassis: chassisData,
+  'classes.advanced': classesAdvancedData,
+  'classes.core': classesCoreData,
+  'classes.hybrid': classesHybridData,
+  'crawler-bays': crawlerBaysData,
+  'crawler-tech-levels': crawlerTechLevelsData,
+  crawlers: crawlersData,
+  creatures: creaturesData,
+  drones: dronesData,
+  equipment: equipmentData,
+  keywords: keywordsData,
+  meld: meldData,
+  modules: modulesData,
+  npcs: npcsData,
+  'roll-tables': rollTablesData,
+  squads: squadsData,
+  systems: systemsData,
+  traits: traitsData,
+  vehicles: vehiclesData,
 }
 
 /**
- * Dynamically import schema file based on schema entry
+ * Static schema map - all schemas indexed by schema ID
  */
-async function importSchema(
-  schemaFile: string
-): Promise<Record<string, unknown>> {
-  const module = await import(`../${schemaFile}`, { with: { type: 'json' } })
-  return module.default as Record<string, unknown>
+const schemaMap: Record<string, Record<string, unknown>> = {
+  abilities: abilitiesSchema,
+  'ability-tree-requirements': abilityTreeRequirementsSchema,
+  'bio-titans': bioTitansSchema,
+  chassis: chassisSchema,
+  'classes.advanced': classesAdvancedSchema,
+  'classes.core': classesCoreSchema,
+  'classes.hybrid': classesHybridSchema,
+  'crawler-bays': crawlerBaysSchema,
+  'crawler-tech-levels': crawlerTechLevelsSchema,
+  crawlers: crawlersSchema,
+  creatures: creaturesSchema,
+  drones: dronesSchema,
+  equipment: equipmentSchema,
+  keywords: keywordsSchema,
+  meld: meldSchema,
+  modules: modulesSchema,
+  npcs: npcsSchema,
+  'roll-tables': rollTablesSchema,
+  squads: squadsSchema,
+  systems: systemsSchema,
+  traits: traitsSchema,
+  vehicles: vehiclesSchema,
 }
 
 /**
- * Build data and schema maps dynamically from schema catalog
- */
-async function buildMaps(): Promise<{
-  dataMap: Record<string, unknown[]>
-  schemaMap: Record<string, Record<string, unknown>>
-}> {
-  const dataMap: Record<string, unknown[]> = {}
-  const schemaMap: Record<string, Record<string, unknown>> = {}
-
-  await Promise.all(
-    schemaIndex.schemas.map(async (entry) => {
-      const [data, schema] = await Promise.all([
-        importData(entry.dataFile),
-        importSchema(entry.schemaFile),
-      ])
-      dataMap[entry.id] = data
-      schemaMap[entry.id] = schema
-    })
-  )
-
-  return { dataMap, schemaMap }
-}
-
-// Build maps at module load time
-const mapsPromise = buildMaps()
-
-/**
- * Get the data and schema maps
+ * Get the data and schema maps (synchronous)
  * Exposed for client use
  */
-export async function getDataMaps(): Promise<{
+export function getDataMaps(): {
   dataMap: Record<string, unknown[]>
   schemaMap: Record<string, Record<string, unknown>>
-}> {
-  return mapsPromise
+} {
+  return { dataMap, schemaMap }
 }
 
 /**
@@ -85,10 +144,9 @@ export function toPascalCase(id: string): string {
 }
 
 /**
- * Create a model instance for a given schema entry
+ * Create a model instance for a given schema entry (synchronous)
  */
-async function createModel<T>(schemaId: string): Promise<BaseModel<T>> {
-  const { dataMap, schemaMap } = await mapsPromise
+function createModel<T>(schemaId: string): BaseModel<T> {
   const data = dataMap[schemaId]
   const schema = schemaMap[schemaId]
 
@@ -100,19 +158,15 @@ async function createModel<T>(schemaId: string): Promise<BaseModel<T>> {
 }
 
 /**
- * Auto-generate all models from the schema catalog
+ * Auto-generate all models from the schema catalog (synchronous)
  */
-export async function generateModels(): Promise<
-  Record<string, BaseModel<unknown>>
-> {
+export function generateModels(): Record<string, BaseModel<unknown>> {
   const models: Record<string, BaseModel<unknown>> = {}
 
-  await Promise.all(
-    schemaIndex.schemas.map(async (schemaEntry) => {
-      const propertyName = toPascalCase(schemaEntry.id)
-      models[propertyName] = await createModel(schemaEntry.id)
-    })
-  )
+  for (const schemaEntry of schemaIndex.schemas) {
+    const propertyName = toPascalCase(schemaEntry.id)
+    models[propertyName] = createModel(schemaEntry.id)
+  }
 
   return models
 }
