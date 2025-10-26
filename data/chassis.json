@@ -5,16 +5,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 100,
     "stats": {
-      "structure_pts": 12,
-      "energy_pts": 4,
-      "heat_cap": 6,
-      "system_slots": 16,
-      "module_slots": 2,
-      "cargo_cap": 16,
-      "tech_level": 1,
+      "structurePts": 12,
+      "energyPts": 4,
+      "heatCap": 6,
+      "systemSlots": 16,
+      "moduleSlots": 2,
+      "cargoCap": 16,
+      "techLevel": 1,
       "salvageValue": 7
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Cargo Bay",
         "description": "Increases the Cargo Capacity of the Mule by 10, to 16."
@@ -71,16 +71,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 102,
     "stats": {
-      "structure_pts": 5,
-      "energy_pts": 10,
-      "heat_cap": 6,
-      "system_slots": 7,
-      "module_slots": 3,
-      "cargo_cap": 6,
-      "tech_level": 1,
+      "structurePts": 5,
+      "energyPts": 10,
+      "heatCap": 6,
+      "systemSlots": 7,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 1,
       "salvageValue": 4
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Hover Drone",
         "description": "The Mazona has an Integrated Hover Locomotion System which is included in its profile. This allows it to hover over obstacles and terrain."
@@ -119,16 +119,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 104,
     "stats": {
-      "structure_pts": 9,
-      "energy_pts": 9,
-      "heat_cap": 8,
-      "system_slots": 12,
-      "module_slots": 2,
-      "cargo_cap": 6,
-      "tech_level": 1,
+      "structurePts": 9,
+      "energyPts": 9,
+      "heatCap": 8,
+      "systemSlots": 12,
+      "moduleSlots": 2,
+      "cargoCap": 6,
+      "techLevel": 1,
       "salvageValue": 6
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Hazard Protected Chassis",
         "description": "The Scrapper suffers no effect or damage from hazardous environmental effects such as radiation storms. In addition, when dealing with severe environmental hazards they may Push once for free to circumvent or resist any effects."
@@ -183,16 +183,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 106,
     "stats": {
-      "structure_pts": 17,
-      "energy_pts": 11,
-      "heat_cap": 3,
-      "system_slots": 7,
-      "module_slots": 4,
-      "cargo_cap": 6,
-      "tech_level": 1,
+      "structurePts": 17,
+      "energyPts": 11,
+      "heatCap": 3,
+      "systemSlots": 7,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 1,
       "salvageValue": 10
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Data Scanner",
         "description": "The Spectrum is a mobile data repository that has all manner of information stored within it. It is able to scan objects to both gain information about them and store that data to access at a later time.",
@@ -261,16 +261,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 108,
     "stats": {
-      "structure_pts": 15,
-      "energy_pts": 6,
-      "heat_cap": 10,
-      "system_slots": 9,
-      "module_slots": 2,
-      "cargo_cap": 6,
-      "tech_level": 1,
+      "structurePts": 15,
+      "energyPts": 6,
+      "heatCap": 10,
+      "systemSlots": 9,
+      "moduleSlots": 2,
+      "cargoCap": 6,
+      "techLevel": 1,
       "salvageValue": 9
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Heavily Armoured Chassis",
         "description": "Any attack that rolls a 'Nailed It' (20) result against the Thresher counts as a standard hit (11-19) and does not deal 2× damage or have any other bonus effect."
@@ -321,16 +321,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 110,
     "stats": {
-      "structure_pts": 16,
-      "energy_pts": 13,
-      "heat_cap": 10,
-      "system_slots": 15,
-      "module_slots": 4,
-      "cargo_cap": 6,
-      "tech_level": 2,
+      "structurePts": 16,
+      "energyPts": 13,
+      "heatCap": 10,
+      "systemSlots": 15,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 2,
       "salvageValue": 10
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Epoxy Printer",
         "description": " The Forge is able to 3D print metallic structures via a specialised epoxy."
@@ -423,16 +423,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 112,
     "stats": {
-      "structure_pts": 14,
-      "energy_pts": 10,
-      "heat_cap": 8,
-      "system_slots": 12,
-      "module_slots": 3,
-      "cargo_cap": 12,
-      "tech_level": 2,
+      "structurePts": 14,
+      "energyPts": 10,
+      "heatCap": 8,
+      "systemSlots": 12,
+      "moduleSlots": 3,
+      "cargoCap": 12,
+      "techLevel": 2,
       "salvageValue": 4
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Expanded Transport Hold",
         "description": "Increases the Cargo Capacity of the Gopher by 6, to 12."
@@ -484,16 +484,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 114,
     "stats": {
-      "structure_pts": 12,
-      "energy_pts": 10,
-      "heat_cap": 12,
-      "system_slots": 12,
-      "module_slots": 3,
-      "cargo_cap": 6,
-      "tech_level": 2,
+      "structurePts": 12,
+      "energyPts": 10,
+      "heatCap": 12,
+      "systemSlots": 12,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
       "salvageValue": 6
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Fast",
         "description": "The Hussar can move an additional Range band on its turn as a Free Action. In addition, it moves twice as fast across the Campaign, Area, and Region Maps."
@@ -547,16 +547,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 116,
     "stats": {
-      "structure_pts": 18,
-      "energy_pts": 7,
-      "heat_cap": 13,
-      "system_slots": 15,
-      "module_slots": 3,
-      "cargo_cap": 6,
-      "tech_level": 2,
+      "structurePts": 18,
+      "energyPts": 7,
+      "heatCap": 13,
+      "systemSlots": 15,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
       "salvageValue": 6
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Reinforced Chassis",
         "description": "The Jackhammer rolls on this alternate Critical Damage Table:",
@@ -617,16 +617,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 118,
     "stats": {
-      "structure_pts": 24,
-      "energy_pts": 10,
-      "heat_cap": 14,
-      "system_slots": 18,
-      "module_slots": 3,
-      "cargo_cap": 6,
-      "tech_level": 2,
+      "structurePts": 24,
+      "energyPts": 10,
+      "heatCap": 14,
+      "systemSlots": 18,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
       "salvageValue": 14
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Amphibious Locomotion System",
         "description": "The Kraken has an integral Advanced Amphibious Locomotion System included in its profile. This allows the Kraken to operate indefinitely in underwater conditions at significant depths whilst also being able to walk on land. Its sealed Chassis is also airtight and watertight."
@@ -687,16 +687,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 120,
     "stats": {
-      "structure_pts": 15,
-      "energy_pts": 12,
-      "heat_cap": 10,
-      "system_slots": 15,
-      "module_slots": 3,
-      "cargo_cap": 6,
-      "tech_level": 2,
+      "structurePts": 15,
+      "energyPts": 12,
+      "heatCap": 10,
+      "systemSlots": 15,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
       "salvageValue": 5
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Hot Swap Universal Mounts",
         "description": "The Magpie allows you to mount and dismount Systems on it in the field significantly faster. This uses the normal rules for mounting, but increases the speed and versatility. A Pilot may Mount a System on the Magpie as a Short Action (10 minutes). A Mech, including the Magpie itself, may Mount a System on the Magpie as a Turn Action."
@@ -756,16 +756,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 122,
     "stats": {
-      "structure_pts": 16,
-      "energy_pts": 14,
-      "heat_cap": 8,
-      "system_slots": 12,
-      "module_slots": 3,
-      "cargo_cap": 6,
-      "tech_level": 2,
+      "structurePts": 16,
+      "energyPts": 14,
+      "heatCap": 8,
+      "systemSlots": 12,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
       "salvageValue": 8
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Advanced Shield Dome",
         "description": "The Mirror Ball can project a glowing, protective energy field around its Chassis.",
@@ -820,16 +820,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 124,
     "stats": {
-      "structure_pts": 30,
-      "energy_pts": 10,
-      "heat_cap": 14,
-      "system_slots": 21,
-      "module_slots": 2,
-      "cargo_cap": 30,
-      "tech_level": 3,
+      "structurePts": 30,
+      "energyPts": 10,
+      "heatCap": 14,
+      "systemSlots": 21,
+      "moduleSlots": 2,
+      "cargoCap": 30,
+      "techLevel": 3,
       "salvageValue": 12
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Colossal Cargo Bay",
         "description": "Increases the Cargo Capacity of the Atlas by 24, to 30."
@@ -891,16 +891,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 126,
     "stats": {
-      "structure_pts": 25,
-      "energy_pts": 10,
-      "heat_cap": 14,
-      "system_slots": 16,
-      "module_slots": 3,
-      "cargo_cap": 6,
-      "tech_level": 3,
+      "structurePts": 25,
+      "energyPts": 10,
+      "heatCap": 14,
+      "systemSlots": 16,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 3,
       "salvageValue": 5
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Close Range Protocols",
         "description": "The Brawler deals an additional 2 SP damage when it makes an attack at any target within Close Range of it. This bonus is applied before other modifiers."
@@ -957,28 +957,28 @@
     "source": "Salvage Union Workshop Manual",
     "page": 128,
     "stats": {
-      "structure_pts": 15,
-      "energy_pts": 8,
-      "heat_cap": 10,
-      "system_slots": 9,
-      "module_slots": 3,
-      "cargo_cap": 6,
-      "tech_level": 3,
+      "structurePts": 15,
+      "energyPts": 8,
+      "heatCap": 10,
+      "systemSlots": 9,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 3,
       "salvageValue": 7
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Sestra Drone Controller",
         "description": "The Little Sestra comes with a single Sestra Drone that it controls up to Far Range. Roll on the A.I. Personality Table for the drone's personality. The Sestra Drone acts separately to the Little Sestra on its own turn, and is controlled by the Pilot. It functions effectively as a Mech, but cannot Push. It can be installed with Systems and Modules and restores its SP and EP in a T3 or higher Mech Bay during Downtime. If the Drone is damaged it can be repaired as though it was a Mech. If it is destroyed you may craft a new Sestra Drone for 2 Tech 3 Scrap as per the crafting rules. The Little Sestra may have one active Sestra Drone at a time.",
         "source": "Salvage Union Workshop Manual",
         "stats": {
-          "structure_pts": 7,
-          "energy_pts": 8,
-          "heat_cap": 6,
-          "system_slots": 7,
-          "module_slots": 2,
-          "cargo_cap": 3,
-          "tech_level": 3,
+          "structurePts": 7,
+          "energyPts": 8,
+          "heatCap": 6,
+          "systemSlots": 7,
+          "moduleSlots": 2,
+          "cargoCap": 3,
+          "techLevel": 3,
           "salvageValue": 2,
           "notes": "Integrated Hover Locomotion System"
         }
@@ -1043,16 +1043,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 130,
     "stats": {
-      "structure_pts": 15,
-      "energy_pts": 17,
-      "heat_cap": 7,
-      "system_slots": 9,
-      "module_slots": 6,
-      "cargo_cap": 6,
-      "tech_level": 3,
+      "structurePts": 15,
+      "energyPts": 17,
+      "heatCap": 7,
+      "systemSlots": 9,
+      "moduleSlots": 6,
+      "cargoCap": 6,
+      "techLevel": 3,
       "salvageValue": 7
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Frog Prince Module",
         "description": "This specialised hacking module developed for the Mantis allows you to take control of defensive and security systems."
@@ -1160,16 +1160,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 132,
     "stats": {
-      "structure_pts": 20,
-      "energy_pts": 10,
-      "heat_cap": 12,
-      "system_slots": 15,
-      "module_slots": 4,
-      "cargo_cap": 6,
-      "tech_level": 3,
+      "structurePts": 20,
+      "energyPts": 10,
+      "heatCap": 12,
+      "systemSlots": 15,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 3,
       "salvageValue": 8
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Solar Reactor",
         "description": "As a Long Action you may fully restore the Energy Points of the Photon to its maximum value. You must be in an area of sunlight to do this. You may only use this Ability once every 24 hours."
@@ -1231,16 +1231,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 134,
     "stats": {
-      "structure_pts": 16,
-      "energy_pts": 13,
-      "heat_cap": 10,
-      "system_slots": 12,
-      "module_slots": 4,
-      "cargo_cap": 6,
-      "tech_level": 3,
+      "structurePts": 16,
+      "energyPts": 13,
+      "heatCap": 10,
+      "systemSlots": 12,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 3,
       "salvageValue": 4
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Polycarbonate Stealth Chassis",
         "description": "The Solo cannot be targeted with anything that uses the Targeter Trait such as targeting Modules. It also cannot be seen by anything with the Optics Trait or Scanner Trait. It does not appear on sensors, radar systems, or scanners, and needs clear and direct visual confirmation to be spotted."
@@ -1308,16 +1308,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 129,
     "stats": {
-      "structure_pts": 23,
-      "energy_pts": 12,
-      "heat_cap": 13,
-      "system_slots": 18,
-      "module_slots": 3,
-      "cargo_cap": 6,
-      "tech_level": 3,
+      "structurePts": 23,
+      "energyPts": 12,
+      "heatCap": 13,
+      "systemSlots": 18,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 3,
       "salvageValue": 9
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Terraforming Bubble",
         "description": "When activated, the Terra projects a safe, oxygenated, and habitable atmospheric bubble around it for 1 hour, or until shut off as a Free Action. Within the bubble gravity levels, pressure, heat, and other environmental factors are comparable to an Earth-like planet. This extends to Medium Range, and everything within it is safe from all harmful environmental effects irrespective of their severity.",
@@ -1376,16 +1376,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 138,
     "stats": {
-      "structure_pts": 24,
-      "energy_pts": 16,
-      "heat_cap": 14,
-      "system_slots": 18,
-      "module_slots": 5,
-      "cargo_cap": 6,
-      "tech_level": 4,
+      "structurePts": 24,
+      "energyPts": 16,
+      "heatCap": 14,
+      "systemSlots": 18,
+      "moduleSlots": 5,
+      "cargoCap": 6,
+      "techLevel": 4,
       "salvageValue": 8
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Advanced Shield Projector",
         "description": "When a target within Range is hit by an attack or something that would deal damage, you may activate the Advanced Shield Projector. The damage of the attack is reduced by 3× the amount of Energy Points you expend on this Ability. If this reduces the damage to 0 or less the attack also has no additional effects.",
@@ -1456,16 +1456,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 140,
     "stats": {
-      "structure_pts": 36,
-      "energy_pts": 12,
-      "heat_cap": 16,
-      "system_slots": 24,
-      "module_slots": 4,
-      "cargo_cap": 6,
-      "tech_level": 4,
+      "structurePts": 36,
+      "energyPts": 12,
+      "heatCap": 16,
+      "systemSlots": 24,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 4,
       "salvageValue": 16
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Eradication Protocols",
         "description": "If the Colossus rolls a 'Nailed It' result (20) with an attack roll, it deals 4× damage instead of 2× damage."
@@ -1531,16 +1531,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 142,
     "stats": {
-      "structure_pts": 15,
-      "energy_pts": 16,
-      "heat_cap": 12,
-      "system_slots": 12,
-      "module_slots": 5,
-      "cargo_cap": 6,
-      "tech_level": 4,
+      "structurePts": 15,
+      "energyPts": 16,
+      "heatCap": 12,
+      "systemSlots": 12,
+      "moduleSlots": 5,
+      "cargoCap": 6,
+      "techLevel": 4,
       "salvageValue": 3
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Flashy",
         "description": "The Consul has the Flashy Trait. It looks incredibly impressive, never being less than mint and pristine to onlookers, and fills them with much awe and admiration."
@@ -1612,16 +1612,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 144,
     "stats": {
-      "structure_pts": 26,
-      "energy_pts": 14,
-      "heat_cap": 14,
-      "system_slots": 16,
-      "module_slots": 4,
-      "cargo_cap": 6,
-      "tech_level": 4,
+      "structurePts": 26,
+      "energyPts": 14,
+      "heatCap": 14,
+      "systemSlots": 16,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 4,
       "salvageValue": 7
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Advanced Vectored Thrust Unit",
         "description": "The Drop Bear has an Integrated Advanced Vectored Thrust Unit. This acts as a standard Vectored Thrust Unit System. In addition, when the Drop Bear activates the Advanced VTU System it can move an additional Range Band, ignoring all obstacles, Mechs, and terrain, and still move on its turn as normal."
@@ -1692,16 +1692,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 146,
     "stats": {
-      "structure_pts": 18,
-      "energy_pts": 12,
-      "heat_cap": 15,
-      "system_slots": 15,
-      "module_slots": 4,
-      "cargo_cap": 6,
-      "tech_level": 4,
+      "structurePts": 18,
+      "energyPts": 12,
+      "heatCap": 15,
+      "systemSlots": 15,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 4,
       "salvageValue": 4
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Heat Efficient Reactor",
         "description": "Everytime the Vorpal gains Heat, reduce the amount gained to 1. Treat each source of Heat separately when using this Ability. For example if the Vorpal fires a Blue Mining Laser with the Hot (3) Trait it gains 1 Heat instead of 3. If the Vorpal then chooses to Push it would gain an additional 1 Heat instead of 2 for the Push."
@@ -1762,16 +1762,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 148,
     "stats": {
-      "structure_pts": 35,
-      "energy_pts": 16,
-      "heat_cap": 12,
-      "system_slots": 21,
-      "module_slots": 5,
-      "cargo_cap": 6,
-      "tech_level": 5,
+      "structurePts": 35,
+      "energyPts": 16,
+      "heatCap": 12,
+      "systemSlots": 21,
+      "moduleSlots": 5,
+      "cargoCap": 6,
+      "techLevel": 5,
       "salvageValue": 9
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated Mech Bay",
         "description": "The Carrier has an integrated Tech 4 Mech Bay which can carry up to 5 Tech 4 or lower Mechs in an active and ready state. This acts as a Tech 4 Mech Bay allowing you to fully heal the SP, EP, and Heat of all Mechs within it over a week of Downtime and mount or remove any number of Systems or Modules as well as anything else the Mech Bay would be capable of."
@@ -1834,16 +1834,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 150,
     "stats": {
-      "structure_pts": 21,
-      "energy_pts": 15,
-      "heat_cap": 12,
-      "system_slots": 15,
-      "module_slots": 7,
-      "cargo_cap": 6,
-      "tech_level": 5,
+      "structurePts": 21,
+      "energyPts": 15,
+      "heatCap": 12,
+      "systemSlots": 15,
+      "moduleSlots": 7,
+      "cargoCap": 6,
+      "techLevel": 5,
       "salvageValue": 5
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Polycarbonate Stealth Chassis",
         "description": "The Eidolon cannot be targeted with anything that uses the Targeter Trait such as targeting Modules. It also cannot be seen by anything with the Optics Trait or Scanner Trait. It does not appear on sensors, radar systems, or scanners, and needs clear and direct visual confirmation to be spotted."
@@ -1922,16 +1922,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 152,
     "stats": {
-      "structure_pts": 29,
-      "energy_pts": 11,
-      "heat_cap": 13,
-      "system_slots": 18,
-      "module_slots": 6,
-      "cargo_cap": 6,
-      "tech_level": 5,
+      "structurePts": 29,
+      "energyPts": 11,
+      "heatCap": 13,
+      "systemSlots": 18,
+      "moduleSlots": 6,
+      "cargoCap": 6,
+      "techLevel": 5,
       "salvageValue": 9
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Cybernetic Neuralink",
         "description": "The Neura-Phage connects directly to the Pilot with an advanced neuralink mesh that allows their thoughts to be directly translated to the actions of the Mech, merging them into one entity. They may spend their Pilot Ability Points on any Energy Point Abilities the Neura-Phage has access to. They may spend their Energy Points on any Pilot Abilities their Pilot has access to that the Neura-Phage would reasonably be able to perform. In addition, they always count as having a Neuralink Communicator installed in their Mech."
@@ -1993,16 +1993,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 154,
     "stats": {
-      "structure_pts": 46,
-      "energy_pts": 15,
-      "heat_cap": 19,
-      "system_slots": 24,
-      "module_slots": 5,
-      "cargo_cap": 6,
-      "tech_level": 6,
+      "structurePts": 46,
+      "energyPts": 15,
+      "heatCap": 19,
+      "systemSlots": 24,
+      "moduleSlots": 5,
+      "cargoCap": 6,
+      "techLevel": 6,
       "salvageValue": 17
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Burrower",
         "description": "When you activate this Ability, the Iron Wyrm can burrow and move underneath the ground. It can burrow through sand, stone, and earth as well as basic metal and stone structures such as bunkers. The Iron Wyrm remains burrowed until it unborrows as a Turn Action where it emerges at a point of the Pilot's choice within Close Range of it. When burrowed, the Iron Wyrm cannot be targeted by anything on the ground, however it cannot see anything on the ground either. Its location can be verified with a Deep Survey Scanner. The burrowing Ability of the Iron Wyrm enables it to create tunnels behind it that are large enough for a Mech to fit through.",
@@ -2068,16 +2068,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 156,
     "stats": {
-      "structure_pts": 76,
-      "energy_pts": 14,
-      "heat_cap": 18,
-      "system_slots": 36,
-      "module_slots": 6,
-      "cargo_cap": 6,
-      "tech_level": 6,
+      "structurePts": 76,
+      "energyPts": 14,
+      "heatCap": 18,
+      "systemSlots": 36,
+      "moduleSlots": 6,
+      "cargoCap": 6,
+      "techLevel": 6,
       "salvageValue": 20
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Juggernaut",
         "description": "The Leviathan may fire up to 2 Weapons Systems in a turn as a single Turn Action. Resolve each attack separately."
@@ -2162,16 +2162,16 @@
     "source": "Salvage Union Workshop Manual",
     "page": 158,
     "stats": {
-      "structure_pts": 21,
-      "energy_pts": 20,
-      "heat_cap": 14,
-      "system_slots": 15,
-      "module_slots": 10,
-      "cargo_cap": 6,
-      "tech_level": 6,
+      "structurePts": 21,
+      "energyPts": 20,
+      "heatCap": 14,
+      "systemSlots": 15,
+      "moduleSlots": 10,
+      "cargoCap": 6,
+      "techLevel": 6,
       "salvageValue": 6
     },
-    "chassis_abilities": [
+    "chassisAbilities": [
       {
         "name": "Integrated VTU System",
         "description": "The Shaitan has an integrated Vectored Thrust Unit System which is included in its profile. This functions as a standard VTU System."

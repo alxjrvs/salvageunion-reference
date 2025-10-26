@@ -48,7 +48,7 @@
     "actionType": "Passive",
     "description": "A Cargo Pod increases the Cargo Capacity of a Mech by 1.",
     "statBonus": {
-      "stat": "cargo_cap",
+      "stat": "cargoCap",
       "bonus": 1
     },
     "page": 164,
@@ -363,7 +363,7 @@
     "actionType": "Passive",
     "description": "A simple hold designed to store salvage on a Mech. Not the most flashy option, but nothing beats the feeling of having a hold full of Scrap to bring home to the Crawler. A Transport Hold increases the Cargo Capacity of a Mech by 4.",
     "statBonus": {
-      "stat": "cargo_cap",
+      "stat": "cargoCap",
       "bonus": 4
     },
     "page": 168,
@@ -510,7 +510,7 @@
     "actionType": "Passive",
     "description": "The true staple System of the Union, used as much by our comrades who founded the Salvage Unions as we do today to haul loads across the wastes and back to the crawler. A Cargo Bay increases a Mech’s Cargo Capacity by 10.",
     "statBonus": {
-      "stat": "cargo_cap",
+      "stat": "cargoCap",
       "bonus": 10
     },
     "page": 169,
@@ -615,7 +615,7 @@
     "actionType": "Passive",
     "description": "A large slab of Scrap that acts as a passive temperature exchange harmlessly dissipating Heat from your Mech's reactor. A Heat Sink increases the Maximum Heat Capacity of a Mech by 1 for each Heat Sink installed.",
     "statBonus": {
-      "stat": "heat_cap",
+      "stat": "heatCap",
       "bonus": 1
     },
     "page": 175,
@@ -690,7 +690,7 @@
     "actionType": "Passive",
     "description": "A complex adaptation port that lets you install additional Modules onto your Mech. This System increases your Mech’s Module Capacity by 1.",
     "statBonus": {
-      "stat": "module_slots",
+      "stat": "moduleSlots",
       "bonus": 1
     },
     "page": 170,
@@ -908,7 +908,7 @@
     "actionType": "Passive",
     "description": "Using Opus developed supercapacitors this hefty capacitor bank is attached externally and connected to a Mech's reactor. Storing excess produced energy it is also capable of rapidly discharging that energy when needed. This System increases your Mech’s Maximum EP by 2 for each bank installed.",
     "statBonus": {
-      "stat": "energy_pts",
+      "stat": "energyPts",
       "bonus": 2
     },
     "page": 173,
@@ -924,7 +924,7 @@
     "actionType": "Passive",
     "description": "Layered plates of highly resilient metals, plastics, and ceramics that provide additional protection to your Mech. This System increases your Mech’s Max SP by 5 for each Composite Armour System you have installed. If this System is Damaged or Destroyed reduce your Max SP by 5 and reduce your current SP to match your new Max SP.",
     "statBonus": {
-      "stat": "structure_pts",
+      "stat": "structurePts",
       "bonus": 5
     },
     "page": 173,
@@ -1280,7 +1280,7 @@
     "actionType": "Passive",
     "description": "A black box hold that disguises cargo within it from scans and inspections by enforcement agents. It is likely the tenuous corporate economy would collapse if it was not for smugglers making hot runs between arcos to deliver all manner of contraband goods such as patented plant seeds, vital medicines, and weapons for anyone planning a rebellion. This hold increases your Cargo Capacity by 8. In addition, all cargo you store in this hold and the hold itself cannot be found by any inspections or be seen or targeted by anything with the Scanning, Hacking, Optics, or Targeter Trait.",
     "statBonus": {
-      "stat": "cargo_cap",
+      "stat": "cargoCap",
       "bonus": 8
     },
     "page": 176,
@@ -1556,7 +1556,7 @@
     "description": "A Cargo Bay with an integrated anti-gravity System allowing a Mech to carry a vast amount of salvage. Developed by Drontek for use in the mammoth construction project of their Big Brother Mech.",
     "notes": "A Grav Assisted Cargo Bay increases your Cargo Capacity by 20.",
     "statBonus": {
-      "stat": "cargo_cap",
+      "stat": "cargoCap",
       "bonus": 20
     },
     "page": 179,

@@ -24,7 +24,7 @@
       "stats": {
         "$ref": "shared/objects.schema.json#/definitions/stats"
       },
-      "chassis_abilities": {
+      "chassisAbilities": {
         "type": "array",
         "description": "Special abilities built into this chassis",
         "items": {

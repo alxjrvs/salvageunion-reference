@@ -9,37 +9,37 @@
       "description": "Statistics for mechs, chassis, and vehicles",
       "additionalProperties": false,
       "properties": {
-        "structure_pts": {
+        "structurePts": {
           "type": "integer",
           "minimum": 0,
           "description": "Structure points (durability)"
         },
-        "energy_pts": {
+        "energyPts": {
           "type": "integer",
           "minimum": 0,
           "description": "Energy points (power capacity)"
         },
-        "heat_cap": {
+        "heatCap": {
           "type": "integer",
           "minimum": 0,
           "description": "Heat capacity"
         },
-        "system_slots": {
+        "systemSlots": {
           "type": "integer",
           "minimum": 0,
           "description": "Number of system slots"
         },
-        "module_slots": {
+        "moduleSlots": {
           "type": "integer",
           "minimum": 0,
           "description": "Number of module slots"
         },
-        "cargo_cap": {
+        "cargoCap": {
           "type": "integer",
           "minimum": 0,
           "description": "Cargo capacity"
         },
-        "tech_level": {
+        "techLevel": {
           "type": "integer",
           "minimum": 0,
           "description": "Technology level"

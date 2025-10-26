@@ -34,7 +34,7 @@ console.log(`Total chassis: ${allChassis.length}`)
 // Find by predicate (same as Array.find)
 const atlas = Chassis.find((c) => c.name === 'Atlas')
 if (atlas) {
-  console.log(`${atlas.name}: ${atlas.stats.structure_pts} SP`)
+  console.log(`${atlas.name}: ${atlas.stats.structurePts} SP`)
 }
 
 // Find all matching items (same as Array.filter)

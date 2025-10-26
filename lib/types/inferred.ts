@@ -6,7 +6,7 @@ import classes_advancedData from '../../data/classes.advanced.json' with { type:
 import classes_coreData from '../../data/classes.core.json' with { type: 'json' }
 import classes_hybridData from '../../data/classes.hybrid.json' with { type: 'json' }
 import crawler_baysData from '../../data/crawler-bays.json' with { type: 'json' }
-import crawler_tech_levelsData from '../../data/crawler-tech-levels.json' with { type: 'json' }
+import crawler_techLevelsData from '../../data/crawler-tech-levels.json' with { type: 'json' }
 import crawlersData from '../../data/crawlers.json' with { type: 'json' }
 import creaturesData from '../../data/creatures.json' with { type: 'json' }
 import dronesData from '../../data/drones.json' with { type: 'json' }
@@ -31,7 +31,7 @@ export type SURefAdvancedClassList = typeof classes_advancedData
 export type SURefCoreClassList = typeof classes_coreData
 export type SURefHybridClassList = typeof classes_hybridData
 export type SURefCrawlerBayList = typeof crawler_baysData
-export type SURefCrawlerTechLevelList = typeof crawler_tech_levelsData
+export type SURefCrawlerTechLevelList = typeof crawler_techLevelsData
 export type SURefCrawlerList = typeof crawlersData
 export type SURefCreatureList = typeof creaturesData
 export type SURefDroneList = typeof dronesData
