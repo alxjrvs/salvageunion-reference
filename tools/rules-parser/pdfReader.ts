@@ -9,6 +9,7 @@
  *   tsx tools/rules-parser/pdfReader.ts --all
  *   tsx tools/rules-parser/pdfReader.ts --range 10-20
  */
+import * as fs from 'fs'
 
 import * as path from 'path'
 import { fileURLToPath } from 'url'
@@ -21,10 +22,18 @@ const pdfParse = PDFParse
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const PDF_PATH = path.join(
-  __dirname,
-  '../../.rules/Salvage Union Workshop Manual Digital Edition 2.0a.pdf'
-)
+const RULES_DIR = path.join(__dirname, '../../.rules')
+const CANDIDATE_PDFS = [
+  'Salvage Union Core Book Digital Edition 2.0a.pdf',
+  'Salvage Union Workshop Manual Digital Edition 2.0a.pdf',
+]
+const PDF_PATH = (() => {
+  for (const name of CANDIDATE_PDFS) {
+    const p = path.join(RULES_DIR, name)
+    if (fs.existsSync(p)) return p
+  }
+  throw new Error(`Rules PDF not found in ${RULES_DIR}`)
+})()
 
 interface PageContent {
   page: number
@@ -38,26 +47,22 @@ async function extractPdfText(
   try {
     const result: PageContent[] = []
 
-    // Extract text using pdf-parse v2
     const parser = new pdfParse({ url: PDF_PATH })
-    const pdfResult = await parser.getText()
+    const first = await parser.getText({ first: 1 })
+    const total = first.total
 
-    // Split text by pages - pdf-parse v2 doesn't provide per-page text directly
-    // We'll use a simple heuristic: split by form feed or page breaks
-    const pageTexts = pdfResult.text.split('\f').filter((t: string) => t.trim())
+    const start = Math.max(1, startPage ?? 1)
+    const end = Math.min(total, endPage ?? total)
 
-    // Filter by page range
-    const start = startPage ? startPage - 1 : 0
-    const end = endPage ? endPage : pageTexts.length
-
-    for (let i = start; i < end && i < pageTexts.length; i++) {
-      if (pageTexts[i].trim()) {
-        result.push({
-          page: i + 1,
-          text: pageTexts[i].trim(),
-        })
+    for (let i = start; i <= end; i++) {
+      const pageRes = await parser.getText({ partial: [i] })
+      const text = (pageRes.text || '').trim()
+      if (text) {
+        result.push({ page: i, text })
       }
     }
+
+    await parser.destroy()
 
     return result
   } catch (error) {
