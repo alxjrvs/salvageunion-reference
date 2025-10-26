@@ -139,12 +139,9 @@ export type SURefEntityName =
   | 'Equipment'
   | 'Ability'
   | 'AbilityTreeRequirement'
-  | 'Table'
+  | 'RollTable'
   | 'Crawler'
   | 'CrawlerTechLevel'
   | 'Class'
   | 'CrawlerBay'
   | 'Chassis'
-
-// Backward compatibility alias
-export type SURefMechChassisList = SURefChassisList
