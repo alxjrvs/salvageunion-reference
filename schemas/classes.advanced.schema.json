@@ -10,6 +10,7 @@
     "additionalProperties": false,
     "required": [
       "id",
+      "sourceTrees",
       "name",
       "source",
       "advancedTree",
@@ -39,6 +40,13 @@
         "description": "Legendary abilities for this class",
         "items": {
           "$ref": "shared/common.schema.json#/definitions/ability"
+        }
+      },
+      "sourceTrees": {
+        "type": "array",
+        "description": "Ability Trees that lead to this class",
+        "items": {
+          "$ref": "shared/common.schema.json#/definitions/tree"
         }
       },
       "page": {

@@ -5,6 +5,7 @@
     "source": "Salvage Union Workshop Manual",
     "description": "You have chosen the path of the Fabricator. Technology is an extension of yourself which you can toy and tinker with to your steel heart's content. What beautiful creations will you form? The Fabricator has access to the Fabricator Tree, Forging Tree p. 29, and Electronics Tree p. 34. You can take Abilities from any of these trees. You can also choose one Ability from the Legendary Fabricator Tree once you have learned all Fabricator Tree Abilities.",
     "advancedTree": "Fabricator",
+    "sourceTrees": ["Electronics", "Forging"],
     "legendaryAbilities": ["Droned Mech Conversion", "System Miniaturisation"],
     "page": 62
   },
@@ -14,6 +15,7 @@
     "source": "Salvage Union Workshop Manual",
     "description": "You have chosen the path of the Cyborg. Augmenting your body with mechanical and electronic parts to give you powers beyond the frailty of flesh. Some Cyborgs find themselves losing grip of their humanity, others find a duality between their flesh and mechanical forms. All are welcomed by the Salvage Unions who find Cyborgs an invaluable part of the crew. How will you adapt to your cybernetic form? The Cyborg has access to the Cyborg Tree, Gladiatorial Combat Tree p. 54, and Augmentation Tree p. 35. You can take Abilities from any of these trees. You can also choose one Ability from the Legendary Cyborg Tree once you have learned all Cyborg Tree Abilities.",
     "advancedTree": "Cyborg",
+    "sourceTrees": ["Gladitorial Combat", "Augmentation"],
     "legendaryAbilities": ["Ascension", "Meld Form"],
     "page": 58
   },
@@ -23,6 +25,7 @@
     "source": "Salvage Union Workshop Manual",
     "description": "You have chosen the path of the Union Rep. You are the prime representative of your Union Crawler on any diplomatic mission, able to rub shoulders with corpos or share drinks with Union Reps from other Union Crawlers as you negotiate for the best terms possible for you and your crew. What will your leadership bring to the table? The Union Rep has access to the Union Rep Tree, Leadership Tree p. 41, and Mechanical Knowledge Tree p. 28. You can take Abilities from any of these trees. You can also choose one Ability from the Legendary Union Rep Tree once you have learned all Union Rep Tree Abilities.",
     "advancedTree": "Union Rep",
+    "sourceTrees": ["Leadership", "Mechanical Knowledge"],
     "legendaryAbilities": ["Inspirational Union Leader", "VIP Beacon"],
     "page": 5
   },
@@ -32,6 +35,7 @@
     "source": "Salvage Union Workshop Manual",
     "description": "You have chosen the path of the Smuggler. Your cargo hides contraband goods, your comms unit whispers dark deals, and nothing is beyond your reach. What escapades will you find yourself in? The Smuggler has access to the Smuggler Tree, Sleuth Tree p. 48, and Salvaging Tree p. 40. You can take Abilities from any of these trees. You can also choose one Ability from the Legendary Smuggler Tree once you have learned all Smuggler Tree Abilities.",
     "advancedTree": "Smuggler",
+    "sourceTrees": ["Sleuth", "Salvaging"],
     "legendaryAbilities": ["Stealth Field Generator", "Knife Missile"],
     "page": 70
   },
@@ -41,6 +45,7 @@
     "source": "Salvage Union Workshop Manual",
     "description": "You have chosen the path of the Ranger. You have become one with the wastes, able to survive on vast treks, shrugging off danger, and picking off targets with ease. What challenges will you overcome? The Ranger has access to the Ranger Tree, Survivalist Tree p. 54, and Sniper Tree p. 50. They can take Abilities from any of these trees. You can also choose one Ability from the Legendary Ranger Tree once you have learned all Ranger Tree Abilities.",
     "advancedTree": "Ranger",
+    "sourceTrees": ["Sniper", "Survivalist"],
     "legendaryAbilities": ["One with the Wastelands", "Mecha Packmaster"],
     "page": 66
   }
