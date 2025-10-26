@@ -12,12 +12,12 @@ import type {
   SURefAbilityTreeRequirement,
   SURefBioTitan,
   SURefChassis,
+  SURefAdvancedClass,
   SURefCoreClass,
   SURefHybridClass,
-  SURefAdvancedClass,
-  SURefCrawler,
   SURefCrawlerBay,
   SURefCrawlerTechLevel,
+  SURefCrawler,
   SURefCreature,
   SURefDrone,
   SURefEquipment,
@@ -25,91 +25,23 @@ import type {
   SURefMeld,
   SURefModule,
   SURefNPC,
+  SURefRollTable,
   SURefSquad,
   SURefSystem,
-  SURefRollTable,
   SURefTrait,
   SURefVehicle,
 } from './types/inferred.js'
 
-// Export base model for custom extensions
 export { BaseModel } from './BaseModel.js'
+
+export { getDataMaps, getSchemaCatalog } from './ModelFactory.js'
 
 export { resultForTable, type TableRollResult } from './utils/resultForTable.js'
 
-// Export inferred types (auto-generated from JSON data)
-export type {
-  // Singles
-  SURefAbility,
-  SURefAbilityTreeRequirement,
-  SURefBioTitan,
-  SURefChassis,
-  SURefClass,
-  SURefAdvancedClass,
-  SURefCoreClass,
-  SURefHybridClass,
-  SURefCrawler,
-  SURefCrawlerBay,
-  SURefCrawlerTechLevel,
-  SURefCreature,
-  SURefDrone,
-  SURefEquipment,
-  SURefKeyword,
-  SURefMeld,
-  SURefModule,
-  SURefNPC,
-  SURefSquad,
-  SURefSystem,
-  SURefRollTable,
-  SURefTrait,
-  SURefVehicle,
-  // Meta
-  SURefTraitMetaList,
-  SURefActionMetaList,
-  SURefMetaTable,
-  SURefEntity,
-  SURefEntityName,
-  // Lists
-  SURefAbilityList,
-  SURefAbilityTreeRequirementList,
-  SURefBioTitanList,
-  SURefMechChassisList,
-  SURefAdvancedClassList,
-  SURefCoreClassList,
-  SURefHybridClassList,
-  SURefClassList,
-  SURefCrawlerList,
-  SURefCrawlerBayList,
-  SURefCrawlerTechLevelList,
-  SURefCreatureList,
-  SURefDroneList,
-  SURefEquipmentList,
-  SURefKeywordList,
-  SURefMeldList,
-  SURefModuleList,
-  SURefNPCList,
-  SURefSquadList,
-  SURefSystemList,
-  SURefRollTableList,
-  SURefTraitList,
-  SURefVehicleList,
-} from './types/inferred.js'
+export type * from './types/inferred.js'
 
-/**
- * Type-safe helper for handling optional query results
- * Use this to safely work with results from find/findById/findByName
- *
- * @example
- * const table = SalvageUnionReference.RollTables.findByName('Core Mechanic');
- * if (table) {
- *   // table is now safely typed as RollTable
- *   console.log(table.name);
- * }
- */
-export type Optional<T> = T | undefined
-
-// Auto-generate models from schema catalog
-const models = generateModels()
+// Auto-generate models from schema catalog (top-level await)
+const models = await generateModels()
 
 /**
  * Main entry point for Salvage Union data access
@@ -128,11 +60,11 @@ export class SalvageUnionReference {
     models.CoreClasses as BaseModel<SURefCoreClass>
   public static readonly HybridClasses =
     models.HybridClasses as BaseModel<SURefHybridClass>
-  public static readonly Crawlers = models.Crawlers as BaseModel<SURefCrawler>
   public static readonly CrawlerBays =
     models.CrawlerBays as BaseModel<SURefCrawlerBay>
   public static readonly CrawlerTechLevels =
     models.CrawlerTechLevels as BaseModel<SURefCrawlerTechLevel>
+  public static readonly Crawlers = models.Crawlers as BaseModel<SURefCrawler>
   public static readonly Creatures =
     models.Creatures as BaseModel<SURefCreature>
   public static readonly Drones = models.Drones as BaseModel<SURefDrone>
@@ -142,10 +74,10 @@ export class SalvageUnionReference {
   public static readonly Meld = models.Meld as BaseModel<SURefMeld>
   public static readonly Modules = models.Modules as BaseModel<SURefModule>
   public static readonly NPCs = models.NPCs as BaseModel<SURefNPC>
-  public static readonly Squads = models.Squads as BaseModel<SURefSquad>
-  public static readonly Systems = models.Systems as BaseModel<SURefSystem>
   public static readonly RollTables =
     models.RollTables as BaseModel<SURefRollTable>
+  public static readonly Squads = models.Squads as BaseModel<SURefSquad>
+  public static readonly Systems = models.Systems as BaseModel<SURefSystem>
   public static readonly Traits = models.Traits as BaseModel<SURefTrait>
   public static readonly Vehicles = models.Vehicles as BaseModel<SURefVehicle>
 }

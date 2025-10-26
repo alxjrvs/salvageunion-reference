@@ -4,6 +4,7 @@ import { readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { Validator } from 'jsonschema'
+import schemaIndex from '../schemas/index.json' with { type: 'json' }
 
 // Get the project root directory
 const __filename = fileURLToPath(import.meta.url)
@@ -11,123 +12,19 @@ const __dirname = dirname(__filename)
 const projectRoot = join(__dirname, '..')
 
 interface ValidationConfig {
+  name: string
   dataFile: string
   schemaFile: string
-  name: string
 }
 
-const validationConfigs: ValidationConfig[] = [
-  {
-    name: 'Abilities',
-    dataFile: 'data/abilities.json',
-    schemaFile: 'schemas/abilities.schema.json',
-  },
-  {
-    name: 'Ability Tree Requirements',
-    dataFile: 'data/ability-tree-requirements.json',
-    schemaFile: 'schemas/ability-tree-requirements.schema.json',
-  },
-  {
-    name: 'Bio-Titans',
-    dataFile: 'data/bio-titans.json',
-    schemaFile: 'schemas/bio-titans.schema.json',
-  },
-  {
-    name: 'Chassis',
-    dataFile: 'data/chassis.json',
-    schemaFile: 'schemas/chassis.schema.json',
-  },
-  {
-    name: 'Advanced Classes',
-    dataFile: 'data/classes.advanced.json',
-    schemaFile: 'schemas/classes.advanced.schema.json',
-  },
-  {
-    name: 'Core Classes',
-    dataFile: 'data/classes.core.json',
-    schemaFile: 'schemas/classes.core.schema.json',
-  },
-  {
-    name: 'Hybrid Classes',
-    dataFile: 'data/classes.hybrid.json',
-    schemaFile: 'schemas/classes.hybrid.schema.json',
-  },
-  {
-    name: 'Crawlers',
-    dataFile: 'data/crawlers.json',
-    schemaFile: 'schemas/crawlers.schema.json',
-  },
-  {
-    name: 'Crawler Bays',
-    dataFile: 'data/crawler-bays.json',
-    schemaFile: 'schemas/crawler-bays.schema.json',
-  },
-  {
-    name: 'Crawler Tech Levels',
-    dataFile: 'data/crawler-tech-levels.json',
-    schemaFile: 'schemas/crawler-tech-levels.schema.json',
-  },
-  {
-    name: 'Creatures',
-    dataFile: 'data/creatures.json',
-    schemaFile: 'schemas/creatures.schema.json',
-  },
-  {
-    name: 'Drones',
-    dataFile: 'data/drones.json',
-    schemaFile: 'schemas/drones.schema.json',
-  },
-  {
-    name: 'Equipment',
-    dataFile: 'data/equipment.json',
-    schemaFile: 'schemas/equipment.schema.json',
-  },
-  {
-    name: 'Keywords',
-    dataFile: 'data/keywords.json',
-    schemaFile: 'schemas/keywords.schema.json',
-  },
-  {
-    name: 'Meld',
-    dataFile: 'data/meld.json',
-    schemaFile: 'schemas/meld.schema.json',
-  },
-  {
-    name: 'Modules',
-    dataFile: 'data/modules.json',
-    schemaFile: 'schemas/modules.schema.json',
-  },
-  {
-    name: 'NPCs',
-    dataFile: 'data/npcs.json',
-    schemaFile: 'schemas/npcs.schema.json',
-  },
-  {
-    name: 'Squads',
-    dataFile: 'data/squads.json',
-    schemaFile: 'schemas/squads.schema.json',
-  },
-  {
-    name: 'Systems',
-    dataFile: 'data/systems.json',
-    schemaFile: 'schemas/systems.schema.json',
-  },
-  {
-    name: 'Roll Tables',
-    dataFile: 'data/roll-tables.json',
-    schemaFile: 'schemas/roll-tables.schema.json',
-  },
-  {
-    name: 'Traits',
-    dataFile: 'data/traits.json',
-    schemaFile: 'schemas/traits.schema.json',
-  },
-  {
-    name: 'Vehicles',
-    dataFile: 'data/vehicles.json',
-    schemaFile: 'schemas/vehicles.schema.json',
-  },
-]
+// Build validation configs from schema catalog
+const validationConfigs: ValidationConfig[] = schemaIndex.schemas.map(
+  (schema) => ({
+    name: schema.title,
+    dataFile: schema.dataFile,
+    schemaFile: schema.schemaFile,
+  })
+)
 
 function loadJson(filePath: string): unknown {
   const fullPath = join(projectRoot, filePath)

@@ -145,6 +145,21 @@ import equipmentData from 'salvageunion-data/data/equipment.json'
 
 // Import schemas
 import chassisSchema from 'salvageunion-data/schemas/chassis.schema.json'
+
+// Or use the dynamic data maps (async)
+import { getDataMaps, getSchemaCatalog, toPascalCase } from 'salvageunion-data'
+
+const { dataMap, schemaMap } = await getDataMaps()
+const chassisData = dataMap['chassis']
+const chassisSchema = schemaMap['chassis']
+
+// Get schema catalog metadata
+const catalog = getSchemaCatalog()
+console.log(catalog.schemas) // Array of all schema entries
+
+// Convert schema IDs to property names
+toPascalCase('ability-tree-requirements') // => 'AbilityTreeRequirements'
+toPascalCase('classes.core') // => 'CoreClasses'
 ```
 
 ## TypeScript Support
