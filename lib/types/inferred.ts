@@ -10,7 +10,8 @@ import abilitiesData from '../../data/abilities.json' with { type: 'json' }
 import abilityTreeRequirementsData from '../../data/ability-tree-requirements.json' with { type: 'json' }
 import bioTitansData from '../../data/bio-titans.json' with { type: 'json' }
 import chassisData from '../../data/chassis.json' with { type: 'json' }
-import classesData from '../../data/classes.json' with { type: 'json' }
+import coreClassesData from '../../data/classes.core.json' with { type: 'json' }
+import hybridClassesData from '../../data/classes.hybrid.json' with { type: 'json' }
 import crawlersData from '../../data/crawlers.json' with { type: 'json' }
 import crawlerBaysData from '../../data/crawler-bays.json' with { type: 'json' }
 import crawlerTechLevelsData from '../../data/crawler-tech-levels.json' with { type: 'json' }
@@ -32,7 +33,8 @@ export type SURefAbilityList = typeof abilitiesData
 export type SURefAbilityTreeRequirementList = typeof abilityTreeRequirementsData
 export type SURefBioTitanList = typeof bioTitansData
 export type SURefMechChassisList = typeof chassisData
-export type SURefClassList = typeof classesData
+export type SURefCoreClassList = typeof coreClassesData
+export type SURefHybridClassList = typeof hybridClassesData
 export type SURefCrawlerList = typeof crawlersData
 export type SURefCrawlerBayList = typeof crawlerBaysData
 export type SURefCrawlerTechLevelList = typeof crawlerTechLevelsData
@@ -55,7 +57,9 @@ export type SURefAbilityTreeRequirement =
   SURefAbilityTreeRequirementList[number]
 export type SURefBioTitan = SURefBioTitanList[number]
 export type SURefChassis = SURefMechChassisList[number]
-export type SURefClass = SURefClassList[number]
+export type SURefCoreClass = SURefCoreClassList[number]
+export type SURefHybridClass = SURefHybridClassList[number]
+export type SURefClass = SURefCoreClass | SURefHybridClass
 export type SURefCrawler = SURefCrawlerList[number]
 export type SURefCrawlerBay = SURefCrawlerBayList[number]
 export type SURefCrawlerTechLevel = SURefCrawlerTechLevelList[number]
@@ -71,6 +75,9 @@ export type SURefSystem = SURefSystemList[number]
 export type SURefRollTable = SURefRollTableList[number]
 export type SURefTrait = SURefTraitList[number]
 export type SURefVehicle = SURefVehicleList[number]
+
+// Combined list type for classes across core and hybrid files
+export type SURefClassList = Array<SURefClass>
 
 // Shared trait type (inferred from actual usage in data)
 // This type appears in abilities, equipment, modules, systems, etc.

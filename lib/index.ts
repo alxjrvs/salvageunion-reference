@@ -9,7 +9,8 @@ import { AbilitiesModel } from './models/Abilities.js'
 import { AbilityTreeRequirementsModel } from './models/AbilityTreeRequirements.js'
 import { BioTitansModel } from './models/BioTitans.js'
 import { ChassisModel } from './models/Chassis.js'
-import { ClassesModel } from './models/Classes.js'
+import { CoreClassesModel } from './models/CoreClasses.js'
+import { HybridClassesModel } from './models/HybridClasses.js'
 import { CrawlersModel } from './models/Crawlers.js'
 import { CrawlerBaysModel } from './models/CrawlerBays.js'
 import { CrawlerTechLevelsModel } from './models/CrawlerTechLevels.js'
@@ -31,7 +32,8 @@ export { AbilitiesModel } from './models/Abilities.js'
 export { AbilityTreeRequirementsModel } from './models/AbilityTreeRequirements.js'
 export { BioTitansModel } from './models/BioTitans.js'
 export { ChassisModel } from './models/Chassis.js'
-export { ClassesModel } from './models/Classes.js'
+export { CoreClassesModel } from './models/CoreClasses.js'
+export { HybridClassesModel } from './models/HybridClasses.js'
 export { CrawlersModel } from './models/Crawlers.js'
 export { CrawlerBaysModel } from './models/CrawlerBays.js'
 export { CrawlerTechLevelsModel } from './models/CrawlerTechLevels.js'
@@ -61,6 +63,8 @@ export type {
   SURefBioTitan,
   SURefChassis,
   SURefClass,
+  SURefCoreClass,
+  SURefHybridClass,
   SURefCrawler,
   SURefCrawlerBay,
   SURefCrawlerTechLevel,
@@ -124,7 +128,9 @@ export class SalvageUnionReference {
     new AbilityTreeRequirementsModel()
   public static readonly BioTitans: BioTitansModel = new BioTitansModel()
   public static readonly Chassis: ChassisModel = new ChassisModel()
-  public static readonly Classes: ClassesModel = new ClassesModel()
+  public static readonly CoreClasses: CoreClassesModel = new CoreClassesModel()
+  public static readonly HybridClasses: HybridClassesModel =
+    new HybridClassesModel()
   public static readonly Crawlers: CrawlersModel = new CrawlersModel()
   public static readonly CrawlerBays: CrawlerBaysModel = new CrawlerBaysModel()
   public static readonly CrawlerTechLevels: CrawlerTechLevelsModel =

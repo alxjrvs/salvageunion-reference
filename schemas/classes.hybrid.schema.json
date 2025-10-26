@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://salvageunion.com/schemas/classes.hybrid.schema.json",
+  "title": "Salvage Union Hybrid Classes",
+  "description": "Hybrid character classes in Salvage Union",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "description": "An Advanced Core character class",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "source",
+      "advancedTree",
+      "legendaryAbilities",
+      "page"
+    ],
+    "properties": {
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
+      "name": {
+        "$ref": "shared/common.schema.json#/definitions/class"
+      },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the class"
+      },
+      "advancedTree": {
+        "description": "Advanced ability tree for this class",
+        "$ref": "shared/common.schema.json#/definitions/tree"
+      },
+      "legendaryAbilities": {
+        "type": "array",
+        "description": "Legendary abilities for this class",
+        "items": {
+          "$ref": "shared/common.schema.json#/definitions/ability"
+        }
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Page number in the source book"
+      }
+    }
+  }
+}

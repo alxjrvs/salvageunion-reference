@@ -38,9 +38,19 @@ const validationConfigs: ValidationConfig[] = [
     schemaFile: 'schemas/chassis.schema.json',
   },
   {
-    name: 'Classes',
-    dataFile: 'data/classes.json',
-    schemaFile: 'schemas/classes.schema.json',
+    name: 'Advanced Classes',
+    dataFile: 'data/classes.advanced.json',
+    schemaFile: 'schemas/classes.advanced.schema.json',
+  },
+  {
+    name: 'Core Classes',
+    dataFile: 'data/classes.core.json',
+    schemaFile: 'schemas/classes.core.schema.json',
+  },
+  {
+    name: 'Hybrid Classes',
+    dataFile: 'data/classes.hybrid.json',
+    schemaFile: 'schemas/classes.hybrid.schema.json',
   },
   {
     name: 'Crawlers',

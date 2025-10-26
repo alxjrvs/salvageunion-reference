@@ -3,7 +3,7 @@
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
   "version": "1.29.4",
-  "generated": "2025-10-24T15:07:54.159Z",
+  "generated": "2025-10-26T14:05:14.637Z",
   "schemas": [
     {
       "id": "abilities",
@@ -42,13 +42,52 @@
       "requiredFields": ["id", "name", "source", "page"]
     },
     {
-      "id": "classes",
-      "title": "Salvage Union Classes",
-      "description": "Character classes in Salvage Union",
-      "dataFile": "data/classes.json",
-      "schemaFile": "schemas/classes.schema.json",
-      "itemCount": 11,
-      "requiredFields": ["id", "name", "source", "type", "page"]
+      "id": "classes.advanced",
+      "title": "Salvage Union Advanced Core Classes",
+      "description": "Advanced character classes in Salvage Union",
+      "dataFile": "data/classes.advanced.json",
+      "schemaFile": "schemas/classes.advanced.schema.json",
+      "itemCount": 5,
+      "requiredFields": [
+        "id",
+        "name",
+        "source",
+        "advancedTree",
+        "legendaryAbilities",
+        "page"
+      ]
+    },
+    {
+      "id": "classes.core",
+      "title": "Salvage Union Core Classes",
+      "description": "Core character classes in Salvage Union",
+      "dataFile": "data/classes.core.json",
+      "schemaFile": "schemas/classes.core.schema.json",
+      "itemCount": 6,
+      "requiredFields": [
+        "id",
+        "name",
+        "source",
+        "page",
+        "maxAbilities",
+        "advanceable"
+      ]
+    },
+    {
+      "id": "classes.hybrid",
+      "title": "Salvage Union Hybrid Classes",
+      "description": "Hybrid character classes in Salvage Union",
+      "dataFile": "data/classes.hybrid.json",
+      "schemaFile": "schemas/classes.hybrid.schema.json",
+      "itemCount": 5,
+      "requiredFields": [
+        "id",
+        "name",
+        "source",
+        "advancedTree",
+        "legendaryAbilities",
+        "page"
+      ]
     },
     {
       "id": "crawler-bays",
