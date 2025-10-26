@@ -1,7 +1,8 @@
 /**
- * Base Model class for querying JSON data with type safety
+ * Simplified Base Model class for querying JSON data with type safety
+ * Provides only the essential query methods
  */
-export class BaseModel<T extends { id: string; name: string }> {
+export class BaseModel<T> {
   protected data: T[]
   protected schema: Record<string, unknown>
 
@@ -18,117 +19,16 @@ export class BaseModel<T extends { id: string; name: string }> {
   }
 
   /**
-   * Get the count of items
-   */
-  count(): number {
-    return this.data.length
-  }
-
-  /**
-   * Find a single item by predicate
+   * Find a single item by predicate (same interface as Array.find)
    */
   find(predicate: (item: T) => boolean): T | undefined {
     return this.data.find(predicate)
   }
 
   /**
-   * Find all items matching predicate
+   * Find all items matching predicate (same interface as Array.filter)
    */
-  where(predicate: (item: T) => boolean): T[] {
+  findAll(predicate: (item: T) => boolean): T[] {
     return this.data.filter(predicate)
-  }
-
-  /**
-   * Find item by ID
-   */
-  findById(id: string): T | undefined {
-    return this.data.find((item) => item.id === id)
-  }
-
-  /**
-   * Find item by name (case-sensitive)
-   */
-  findByName(name: string): T | undefined {
-    return this.data.find((item) => item.name === name)
-  }
-
-  /**
-   * Find items by name (case-insensitive partial match)
-   */
-  searchByName(query: string): T[] {
-    const lowerQuery = query.toLowerCase()
-    return this.data.filter((item) =>
-      item.name.toLowerCase().includes(lowerQuery)
-    )
-  }
-
-  /**
-   * Find item by source
-   */
-  findBySource(source: string): T[] {
-    return this.data.filter((item) => {
-      const itemWithSource = item as T & { source?: string }
-      return itemWithSource.source === source
-    })
-  }
-
-  /**
-   * Get the first item
-   */
-  first(): T | undefined {
-    return this.data[0]
-  }
-
-  /**
-   * Get the last item
-   */
-  last(): T | undefined {
-    return this.data[this.data.length - 1]
-  }
-
-  /**
-   * Map over items
-   */
-  map<U>(fn: (item: T) => U): U[] {
-    return this.data.map(fn)
-  }
-
-  /**
-   * Check if any item matches predicate
-   */
-  some(predicate: (item: T) => boolean): boolean {
-    return this.data.some(predicate)
-  }
-
-  /**
-   * Check if all items match predicate
-   */
-  every(predicate: (item: T) => boolean): boolean {
-    return this.data.every(predicate)
-  }
-
-  /**
-   * Get random item
-   */
-  random(): T | undefined {
-    if (this.data.length === 0) return undefined
-    const index = Math.floor(Math.random() * this.data.length)
-    return this.data[index]
-  }
-
-  /**
-   * Get random items (without duplicates)
-   */
-  randomMany(count: number): T[] {
-    if (count >= this.data.length) return [...this.data]
-    const shuffled = [...this.data].sort(() => Math.random() - 0.5)
-    return shuffled.slice(0, count)
-  }
-
-  /**
-   * Get the JSON schema for this model
-   */
-  getSchema(): Record<string, unknown> {
-    return this.schema
   }
 }

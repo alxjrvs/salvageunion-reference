@@ -2,53 +2,35 @@
  * Salvage Union Data ORM
  *
  * Type-safe query interface for Salvage Union game data
+ * Models are auto-generated from the schema catalog
  */
 
-// Import models first
-import { AbilitiesModel } from './models/Abilities.js'
-import { AbilityTreeRequirementsModel } from './models/AbilityTreeRequirements.js'
-import { BioTitansModel } from './models/BioTitans.js'
-import { ChassisModel } from './models/Chassis.js'
-import { CoreClassesModel } from './models/CoreClasses.js'
-import { HybridClassesModel } from './models/HybridClasses.js'
-import { CrawlersModel } from './models/Crawlers.js'
-import { CrawlerBaysModel } from './models/CrawlerBays.js'
-import { CrawlerTechLevelsModel } from './models/CrawlerTechLevels.js'
-import { CreaturesModel } from './models/Creatures.js'
-import { DronesModel } from './models/Drones.js'
-import { EquipmentModel } from './models/Equipment.js'
-import { KeywordsModel } from './models/Keywords.js'
-import { MeldModel } from './models/Meld.js'
-import { ModulesModel } from './models/Modules.js'
-import { NPCsModel } from './models/NPCs.js'
-import { SquadsModel } from './models/Squads.js'
-import { SystemsModel } from './models/Systems.js'
-import { RollTablesModel } from './models/RollTables.js'
-import { TraitsModel } from './models/Traits.js'
-import { VehiclesModel } from './models/Vehicles.js'
-
-// Export model classes
-export { AbilitiesModel } from './models/Abilities.js'
-export { AbilityTreeRequirementsModel } from './models/AbilityTreeRequirements.js'
-export { BioTitansModel } from './models/BioTitans.js'
-export { ChassisModel } from './models/Chassis.js'
-export { CoreClassesModel } from './models/CoreClasses.js'
-export { HybridClassesModel } from './models/HybridClasses.js'
-export { CrawlersModel } from './models/Crawlers.js'
-export { CrawlerBaysModel } from './models/CrawlerBays.js'
-export { CrawlerTechLevelsModel } from './models/CrawlerTechLevels.js'
-export { CreaturesModel } from './models/Creatures.js'
-export { DronesModel } from './models/Drones.js'
-export { EquipmentModel } from './models/Equipment.js'
-export { KeywordsModel } from './models/Keywords.js'
-export { MeldModel } from './models/Meld.js'
-export { ModulesModel } from './models/Modules.js'
-export { NPCsModel } from './models/NPCs.js'
-export { SquadsModel } from './models/Squads.js'
-export { SystemsModel } from './models/Systems.js'
-export { RollTablesModel } from './models/RollTables.js'
-export { TraitsModel } from './models/Traits.js'
-export { VehiclesModel } from './models/Vehicles.js'
+import { BaseModel } from './BaseModel.js'
+import { generateModels } from './ModelFactory.js'
+import type {
+  SURefAbility,
+  SURefAbilityTreeRequirement,
+  SURefBioTitan,
+  SURefChassis,
+  SURefCoreClass,
+  SURefHybridClass,
+  SURefAdvancedClass,
+  SURefCrawler,
+  SURefCrawlerBay,
+  SURefCrawlerTechLevel,
+  SURefCreature,
+  SURefDrone,
+  SURefEquipment,
+  SURefKeyword,
+  SURefMeld,
+  SURefModule,
+  SURefNPC,
+  SURefSquad,
+  SURefSystem,
+  SURefRollTable,
+  SURefTrait,
+  SURefVehicle,
+} from './types/inferred.js'
 
 // Export base model for custom extensions
 export { BaseModel } from './BaseModel.js'
@@ -63,6 +45,7 @@ export type {
   SURefBioTitan,
   SURefChassis,
   SURefClass,
+  SURefAdvancedClass,
   SURefCoreClass,
   SURefHybridClass,
   SURefCrawler,
@@ -91,6 +74,9 @@ export type {
   SURefAbilityTreeRequirementList,
   SURefBioTitanList,
   SURefMechChassisList,
+  SURefAdvancedClassList,
+  SURefCoreClassList,
+  SURefHybridClassList,
   SURefClassList,
   SURefCrawlerList,
   SURefCrawlerBayList,
@@ -122,29 +108,44 @@ export type {
  */
 export type Optional<T> = T | undefined
 
+// Auto-generate models from schema catalog
+const models = generateModels()
+
+/**
+ * Main entry point for Salvage Union data access
+ * All models are auto-generated from the schema catalog
+ */
 export class SalvageUnionReference {
-  public static readonly Abilities: AbilitiesModel = new AbilitiesModel()
-  public static readonly AbilityTreeRequirements: AbilityTreeRequirementsModel =
-    new AbilityTreeRequirementsModel()
-  public static readonly BioTitans: BioTitansModel = new BioTitansModel()
-  public static readonly Chassis: ChassisModel = new ChassisModel()
-  public static readonly CoreClasses: CoreClassesModel = new CoreClassesModel()
-  public static readonly HybridClasses: HybridClassesModel =
-    new HybridClassesModel()
-  public static readonly Crawlers: CrawlersModel = new CrawlersModel()
-  public static readonly CrawlerBays: CrawlerBaysModel = new CrawlerBaysModel()
-  public static readonly CrawlerTechLevels: CrawlerTechLevelsModel =
-    new CrawlerTechLevelsModel()
-  public static readonly Creatures: CreaturesModel = new CreaturesModel()
-  public static readonly Drones: DronesModel = new DronesModel()
-  public static readonly Equipment: EquipmentModel = new EquipmentModel()
-  public static readonly Keywords: KeywordsModel = new KeywordsModel()
-  public static readonly Meld: MeldModel = new MeldModel()
-  public static readonly Modules: ModulesModel = new ModulesModel()
-  public static readonly NPCs: NPCsModel = new NPCsModel()
-  public static readonly Squads: SquadsModel = new SquadsModel()
-  public static readonly Systems: SystemsModel = new SystemsModel()
-  public static readonly RollTables: RollTablesModel = new RollTablesModel()
-  public static readonly Traits: TraitsModel = new TraitsModel()
-  public static readonly Vehicles: VehiclesModel = new VehiclesModel()
+  public static readonly Abilities = models.Abilities as BaseModel<SURefAbility>
+  public static readonly AbilityTreeRequirements =
+    models.AbilityTreeRequirements as BaseModel<SURefAbilityTreeRequirement>
+  public static readonly BioTitans =
+    models.BioTitans as BaseModel<SURefBioTitan>
+  public static readonly Chassis = models.Chassis as BaseModel<SURefChassis>
+  public static readonly AdvancedClasses =
+    models.AdvancedClasses as BaseModel<SURefAdvancedClass>
+  public static readonly CoreClasses =
+    models.CoreClasses as BaseModel<SURefCoreClass>
+  public static readonly HybridClasses =
+    models.HybridClasses as BaseModel<SURefHybridClass>
+  public static readonly Crawlers = models.Crawlers as BaseModel<SURefCrawler>
+  public static readonly CrawlerBays =
+    models.CrawlerBays as BaseModel<SURefCrawlerBay>
+  public static readonly CrawlerTechLevels =
+    models.CrawlerTechLevels as BaseModel<SURefCrawlerTechLevel>
+  public static readonly Creatures =
+    models.Creatures as BaseModel<SURefCreature>
+  public static readonly Drones = models.Drones as BaseModel<SURefDrone>
+  public static readonly Equipment =
+    models.Equipment as BaseModel<SURefEquipment>
+  public static readonly Keywords = models.Keywords as BaseModel<SURefKeyword>
+  public static readonly Meld = models.Meld as BaseModel<SURefMeld>
+  public static readonly Modules = models.Modules as BaseModel<SURefModule>
+  public static readonly NPCs = models.NPCs as BaseModel<SURefNPC>
+  public static readonly Squads = models.Squads as BaseModel<SURefSquad>
+  public static readonly Systems = models.Systems as BaseModel<SURefSystem>
+  public static readonly RollTables =
+    models.RollTables as BaseModel<SURefRollTable>
+  public static readonly Traits = models.Traits as BaseModel<SURefTrait>
+  public static readonly Vehicles = models.Vehicles as BaseModel<SURefVehicle>
 }

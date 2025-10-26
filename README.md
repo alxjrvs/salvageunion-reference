@@ -29,29 +29,33 @@ const { Abilities, Chassis, Equipment, Systems, Modules } =
 
 // Get all chassis
 const allChassis = Chassis.all()
-console.log(`Total chassis: ${Chassis.count()}`)
+console.log(`Total chassis: ${allChassis.length}`)
 
-// Find by name
-const atlas = Chassis.findByName('Atlas')
+// Find by predicate (same as Array.find)
+const atlas = Chassis.find((c) => c.name === 'Atlas')
 if (atlas) {
   console.log(`${atlas.name}: ${atlas.stats.structure_pts} SP`)
 }
 
-// Query by tech level
-const t3Equipment = Equipment.findByTechLevel(3)
+// Find all matching items (same as Array.filter)
+const t3Equipment = Equipment.findAll((e) => e.techLevel === 3)
 
 // Get weapons
-const weapons = Systems.getWeapons()
+const weapons = Systems.findAll((s) =>
+  s.traits?.some((t) =>
+    ['melee', 'ballistic', 'energy', 'missile'].includes(t.type)
+  )
+)
 
 // Advanced queries
-const heavyArmor = Equipment.where(
+const heavyArmor = Equipment.findAll(
   (e) => e.traits?.some((t) => t.type === 'armor') && (e.techLevel ?? 0) >= 3
 )
 ```
 
 ## Available Models
 
-All models are accessible via the `SalvageUnionReference` export:
+All models are auto-generated from the schema catalog and accessible via the `SalvageUnionReference` export:
 
 | Model                     | Count | Description                      |
 | ------------------------- | ----- | -------------------------------- |
@@ -76,86 +80,58 @@ All models are accessible via the `SalvageUnionReference` export:
 
 ## API Reference
 
-### Common Methods
-
-All models provide these base methods:
+All models provide a simple, consistent API with just three methods:
 
 ```typescript
-// Query methods
-.all()                          // Get all items
-.count()                        // Get count
-.find(predicate)                // Find single item
-.where(predicate)               // Find all matching
-.findById(id)                   // Find by UUID
-.findByName(name)               // Find by name
-.searchByName(query)            // Partial name search
-.findBySource(source)           // Find by source book
+// Get all items
+.all(): T[]
 
-// Utility methods
-.first()                        // Get first item
-.last()                         // Get last item
-.random()                       // Get random item
-.randomMany(count)              // Get N random items
+// Find first matching item (same interface as Array.find)
+.find(predicate: (item: T) => boolean): T | undefined
 
-// Functional methods
-.map(fn)                        // Map over items
-.some(predicate)                // Check if any match
-.every(predicate)               // Check if all match
+// Find all matching items (same interface as Array.filter)
+.findAll(predicate: (item: T) => boolean): T[]
 ```
 
-### Model-Specific Methods
-
-#### Equipment
+### Examples
 
 ```typescript
-Equipment.findByTechLevel(3)
-Equipment.findByTrait('armor')
-Equipment.getArmor()
-Equipment.getWeapons()
-Equipment.findByActivationCost(1)
-Equipment.getWithActions()
-```
+// Get all items
+const allChassis = Chassis.all()
 
-#### Chassis
+// Find by name
+const atlas = Chassis.find((c) => c.name === 'Atlas')
 
-```typescript
-Chassis.findByTechLevel(2)
-Chassis.findByMinStructurePoints(20)
-Chassis.findByMinSystemSlots(4)
-Chassis.findByMinModuleSlots(2)
-Chassis.findByMinCargoCap(5)
-```
+// Find by tech level
+const t3Equipment = Equipment.findAll((e) => e.techLevel === 3)
 
-#### Systems
+// Find by trait
+const armorItems = Equipment.findAll((e) =>
+  e.traits?.some((t) => t.type === 'armor')
+)
 
-```typescript
-Systems.findByTechLevel(3)
-Systems.findBySalvageValue(2)
-Systems.findBySlotsRequired(1)
-Systems.findByTrait('melee')
-Systems.getWeapons()
-Systems.findByDamageType('SP')
-Systems.findByMinDamage(3)
-```
+// Find weapons
+const weapons = Systems.findAll((s) =>
+  s.traits?.some((t) =>
+    ['melee', 'ballistic', 'energy', 'missile'].includes(t.type)
+  )
+)
 
-#### Modules
+// Find by level
+const level1Abilities = Abilities.findAll((a) => a.level === 1)
 
-```typescript
-Modules.findByTechLevel(2)
-Modules.findBySalvageValue(1)
-Modules.findBySlotsRequired(1)
-Modules.findByTrait('communicator')
-Modules.getRecommended()
-Modules.findByActionType('action')
-```
+// Find by tree
+const mechanicalAbilities = Abilities.findAll(
+  (a) => a.tree === 'Mechanical Knowledge'
+)
 
-#### Abilities
-
-```typescript
-Abilities.findByLevel(1)
-Abilities.findByTree('Mechanical Knowledge')
-Abilities.findByTrait('passive')
-Abilities.getAllTrees()
+// Complex queries
+const heavyWeapons = Systems.findAll(
+  (s) =>
+    s.traits?.some((t) =>
+      ['melee', 'ballistic', 'energy', 'missile'].includes(t.type)
+    ) && (s.techLevel ?? 0) >= 3
+)
 ```
 
 ## Direct Data Access
@@ -177,15 +153,19 @@ Full TypeScript support with inferred types from JSON data:
 
 ```typescript
 import { SalvageUnionReference } from 'salvageunion-data'
-import type { Chassis, Equipment, System } from 'salvageunion-data'
+import type {
+  SURefChassis,
+  SURefEquipment,
+  SURefSystem,
+} from 'salvageunion-data'
 
-const { Chassis: ChassisModel } = SalvageUnionReference
+const { Chassis, Equipment } = SalvageUnionReference
 
 // Fully typed
-const atlas: Chassis | undefined = ChassisModel.findByName('Atlas')
+const atlas: SURefChassis | undefined = Chassis.find((c) => c.name === 'Atlas')
 
 // Type-safe queries
-const heavyEquipment: Equipment[] = SalvageUnionReference.Equipment.where(
+const heavyEquipment: SURefEquipment[] = Equipment.findAll(
   (e) => (e.techLevel ?? 0) >= 3
 )
 ```
