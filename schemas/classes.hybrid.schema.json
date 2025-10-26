@@ -10,11 +10,10 @@
     "additionalProperties": false,
     "required": [
       "id",
-      "sourceTrees",
       "name",
       "source",
       "advancedTree",
-      "legendaryAbilities",
+      "legendaryTree",
       "page"
     ],
     "properties": {
@@ -35,19 +34,9 @@
         "description": "Advanced ability tree for this class",
         "$ref": "shared/common.schema.json#/definitions/tree"
       },
-      "sourceTrees": {
-        "type": "array",
-        "description": "Ability Trees that lead to this class",
-        "items": {
-          "$ref": "shared/common.schema.json#/definitions/tree"
-        }
-      },
-      "legendaryAbilities": {
-        "type": "array",
-        "description": "Legendary abilities for this class",
-        "items": {
-          "$ref": "shared/common.schema.json#/definitions/ability"
-        }
+      "legendaryTree": {
+        "description": "Legendary ability tree for this class",
+        "$ref": "shared/common.schema.json#/definitions/tree"
       },
       "page": {
         "type": "integer",
