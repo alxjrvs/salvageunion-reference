@@ -34,3 +34,6 @@ jobs:
 
       - name: Run validation
         run: bun run validate
+
+      - name: Validate unique IDs
+        run: bun run validate:ids

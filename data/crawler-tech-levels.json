@@ -1,6 +1,6 @@
 [
   {
-    "id": "crawler-tech-1",
+    "id": "c0ff9aa7-6c06-4022-809a-3297cfc0ba29",
     "name": "Hamlet Crawler",
     "techLevel": 1,
     "structurePoints": 20,
@@ -10,7 +10,7 @@
     "page": 218
   },
   {
-    "id": "crawler-tech-2",
+    "id": "7cd84b14-49e1-481b-80aa-92cc0944bb0e",
     "name": "Village Crawler",
     "techLevel": 2,
     "structurePoints": 25,
@@ -20,7 +20,7 @@
     "page": 218
   },
   {
-    "id": "crawler-tech-3",
+    "id": "f6c1a46e-0037-405c-a8bf-d5b573f0e63d",
     "name": "Town Crawler",
     "techLevel": 3,
     "structurePoints": 30,
@@ -30,7 +30,7 @@
     "page": 218
   },
   {
-    "id": "crawler-tech-4",
+    "id": "ef5be1b5-ddfe-4073-abac-1a7b91a1b797",
     "name": "City Crawler",
     "techLevel": 4,
     "structurePoints": 35,
@@ -40,7 +40,7 @@
     "page": 218
   },
   {
-    "id": "crawler-tech-5",
+    "id": "26723856-c00e-4f71-991d-880389f8bf49",
     "name": "Metropolis Crawler",
     "techLevel": 5,
     "structurePoints": 40,
@@ -50,7 +50,7 @@
     "page": 218
   },
   {
-    "id": "crawler-tech-6",
+    "id": "2c03f1f9-00f7-44af-bd4b-5258bd6b78f8",
     "name": "Megacity Crawler",
     "techLevel": 6,
     "structurePoints": 50,

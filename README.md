@@ -185,14 +185,59 @@ const heavyEquipment: SURefEquipment[] = Equipment.findAll(
 )
 ```
 
+## 🛠️ Development Scripts
+
+### Data Validation
+
+```bash
+# Validate all data against JSON schemas
+npm run validate
+
+# Validate all IDs are unique UUIDs (including nested objects)
+npm run validate:ids
+
+# Generate missing UUIDs and fix invalid ones
+npm run fix:ids
+```
+
+### Other Scripts
+
+```bash
+# Build the package
+npm run build
+
+# Run type checking
+npm run typecheck
+
+# Run tests
+npm test
+
+# Lint code
+npm run lint
+
+# Format code
+npm run format
+```
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please:
 
 1. Ensure all data includes page references
-2. Validate changes with `bun run validate`
-3. Run type checking with `bun run typecheck`
-4. Follow existing data structure patterns
+2. Ensure all items have unique UUIDs (run `npm run validate:ids`)
+3. Validate changes with `npm run validate`
+4. Run type checking with `npm run typecheck`
+5. Follow existing data structure patterns
+
+### ID Requirements
+
+All data items must have a unique UUID v4 identifier in the `id` field. This includes:
+
+- Root-level items in all data files
+- Nested `choices` objects in NPCs and abilities
+- Any other nested objects with an `id` field
+
+Use `npm run fix:ids` to automatically generate missing UUIDs or fix invalid ones.
 
 ## 📜 License
 

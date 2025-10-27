@@ -1561,7 +1561,7 @@
     "page": 248
   },
   {
-    "id": "b8e4d9f2-0c3e-5g6b-9d4f-2e7g8a0c3d5f",
+    "id": "07cd4482-d26b-40d4-8bb8-4881fbbebbd4",
     "name": "Mech Salvage",
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
@@ -1573,18 +1573,18 @@
     "mechActionType": "Short",
     "notes": "Requires the Rigging Trait.",
     "table": {
-      "type": "standard",
       "1": "The Mech is unsalvageable: its Chassis, Systems, and Modules are all considered destroyed.",
+      "20": "You salvage the Mech Chassis, a System, and a Module of your choice mounted on it. They have the Damaged Condition. Everything else is considered destroyed.",
+      "type": "standard",
       "2-5": "You salvage half of the Salvage Value of the Mech Chassis in Scrap of its Tech Level, to a minimum of 1. Everything else is considered destroyed.",
       "6-10": "You salvage a System or Module of your choice mounted on the Mech. It has the Damaged Condition. Everything else is considered destroyed.",
-      "11-19": "You salvage the Mech Chassis, or a System, or Module of your choice mounted on it. It has the Damaged Condition. Everything else is considered destroyed.",
-      "20": "You salvage the Mech Chassis, a System, and a Module of your choice mounted on it. They have the Damaged Condition. Everything else is considered destroyed."
+      "11-19": "You salvage the Mech Chassis, or a System, or Module of your choice mounted on it. It has the Damaged Condition. Everything else is considered destroyed."
     },
     "traits": [],
     "page": 248
   },
   {
-    "id": "c9f5e0g3-1d4f-6h7c-0e5g-3f8h9b1d4e6g",
+    "id": "2a992b4f-45ea-4810-9039-9226ba15b7e5",
     "name": "Scrap",
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
@@ -1599,7 +1599,7 @@
     "page": 248
   },
   {
-    "id": "d0g6f1h4-2e5g-7i8d-1f6h-4g9i0c2e5f7h",
+    "id": "f70b4b9a-3887-46fb-a217-b99c8841ae64",
     "name": "Repair",
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
@@ -1614,7 +1614,7 @@
     "page": 248
   },
   {
-    "id": "e1h7g2i5-3f6h-8j9e-2g7i-5h0j1d3f6g8i",
+    "id": "b926e557-d8ad-45db-a933-056b85563ea0",
     "name": "Mount",
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
@@ -1629,7 +1629,7 @@
     "page": 249
   },
   {
-    "id": "f2i8h3j6-4g7i-9k0f-3h8j-6i1k2e4g7h9j",
+    "id": "ad933f31-b106-413f-ac75-1a7b933091cd",
     "name": "Patch Up",
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
@@ -1644,7 +1644,7 @@
     "page": 249
   },
   {
-    "id": "g3j9i4k7-5h8j-0l1g-4i9k-7j2l3f5h8i0k",
+    "id": "888c8bb1-efa9-41cc-9a71-515c96fb6a37",
     "name": "Load",
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
@@ -1659,7 +1659,7 @@
     "page": 249
   },
   {
-    "id": "h4k0j5l8-6i9k-1m2h-5j0l-8k3m4g6i9j1l",
+    "id": "8a689f26-b3f3-4473-a2a0-f0d2fde5b9d9",
     "name": "Craft",
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
