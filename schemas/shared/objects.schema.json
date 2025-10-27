@@ -59,9 +59,7 @@
       "type": "object",
       "description": "An action, ability, or attack that can be performed",
       "additionalProperties": false,
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "properties": {
         "name": {
           "type": "string",
@@ -110,10 +108,7 @@
                 "type": "object",
                 "description": "Structured option with label and value",
                 "additionalProperties": false,
-                "required": [
-                  "label",
-                  "value"
-                ],
+                "required": ["label", "value"],
                 "properties": {
                   "label": {
                     "type": "string",
@@ -145,11 +140,7 @@
       "type": "object",
       "description": "A system or module that can be installed on a mech",
       "additionalProperties": false,
-      "required": [
-        "id",
-        "name",
-        "page"
-      ],
+      "required": ["id", "name", "page"],
       "properties": {
         "id": {
           "$ref": "common.schema.json#/definitions/id"
@@ -218,10 +209,7 @@
           "type": "object",
           "description": "Bonus to a specific stat",
           "additionalProperties": false,
-          "required": [
-            "stat",
-            "bonus"
-          ],
+          "required": ["stat", "bonus"],
           "properties": {
             "stat": {
               "type": "string",
@@ -249,9 +237,7 @@
       "type": "object",
       "description": "A system or module embedded within another entity (drone, vehicle, etc.) that doesn't have its own page reference",
       "additionalProperties": false,
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "properties": {
         "name": {
           "type": "string",
@@ -317,10 +303,7 @@
           "type": "object",
           "description": "Bonus to a specific stat",
           "additionalProperties": false,
-          "required": [
-            "stat",
-            "bonus"
-          ],
+          "required": ["stat", "bonus"],
           "properties": {
             "stat": {
               "type": "string",

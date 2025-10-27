@@ -46,11 +46,7 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "techLevelMin",
-            "techLevelMax",
-            "effect"
-          ],
+          "required": ["techLevelMin", "techLevelMax", "effect"],
           "properties": {
             "techLevelMin": {
               "type": "integer",
