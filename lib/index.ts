@@ -38,7 +38,64 @@ export { getDataMaps, getSchemaCatalog } from './ModelFactory.js'
 
 export { resultForTable, type TableRollResult } from './utils/resultForTable.js'
 
+export type {
+  SURefEntity,
+  SURefSchemaName,
+  SURefEntityName,
+} from './types/inferred.js'
 export type * from './types/inferred.js'
+
+// Type mapping from schema names to entity types
+type SchemaToEntityMap = {
+  vehicles: SURefVehicle
+  creatures: SURefCreature
+  drones: SURefDrone
+  'bio-titans': SURefBioTitan
+  npcs: SURefNPC
+  squads: SURefSquad
+  meld: SURefMeld
+  keywords: SURefKeyword
+  traits: SURefTrait
+  systems: SURefSystem
+  modules: SURefModule
+  equipment: SURefEquipment
+  abilities: SURefAbility
+  'ability-tree-requirements': SURefAbilityTreeRequirement
+  'roll-tables': SURefRollTable
+  crawlers: SURefCrawler
+  'crawler-tech-levels': SURefCrawlerTechLevel
+  'classes.advanced': SURefAdvancedClass
+  'classes.core': SURefCoreClass
+  'classes.hybrid': SURefHybridClass
+  'crawler-bays': SURefCrawlerBay
+  chassis: SURefChassis
+}
+
+// Runtime mapping from schema names to model property names
+const SchemaToModelMap = {
+  vehicles: 'Vehicles',
+  creatures: 'Creatures',
+  drones: 'Drones',
+  'bio-titans': 'BioTitans',
+  npcs: 'NPCs',
+  squads: 'Squads',
+  meld: 'Meld',
+  keywords: 'Keywords',
+  traits: 'Traits',
+  systems: 'Systems',
+  modules: 'Modules',
+  equipment: 'Equipment',
+  abilities: 'Abilities',
+  'ability-tree-requirements': 'AbilityTreeRequirements',
+  'roll-tables': 'RollTables',
+  crawlers: 'Crawlers',
+  'crawler-tech-levels': 'CrawlerTechLevels',
+  'classes.advanced': 'AdvancedClasses',
+  'classes.core': 'CoreClasses',
+  'classes.hybrid': 'HybridClasses',
+  'crawler-bays': 'CrawlerBays',
+  chassis: 'Chassis',
+} as const
 
 // Auto-generate models from schema catalog (synchronous)
 const models = generateModels()
@@ -80,4 +137,50 @@ export class SalvageUnionReference {
   public static readonly Systems = models.Systems as BaseModel<SURefSystem>
   public static readonly Traits = models.Traits as BaseModel<SURefTrait>
   public static readonly Vehicles = models.Vehicles as BaseModel<SURefVehicle>
+
+  /**
+   * Find a single record in a specific schema
+   *
+   * @param schemaName - The schema to search in (e.g., 'abilities', 'systems')
+   * @param predicate - Function that returns true for the matching record
+   * @returns The matching record or undefined
+   *
+   * @example
+   * const ability = SalvageUnionReference.findIn('abilities', (a) => a.name === 'Hack')
+   * const system = SalvageUnionReference.findIn('systems', (s) => s.techLevel === 3)
+   */
+  public static findIn<T extends keyof SchemaToEntityMap>(
+    schemaName: T,
+    predicate: (item: SchemaToEntityMap[T]) => boolean
+  ): SchemaToEntityMap[T] | undefined {
+    const modelName = SchemaToModelMap[schemaName]
+    const model = SalvageUnionReference[
+      modelName as keyof typeof SalvageUnionReference
+    ] as BaseModel<SchemaToEntityMap[T]>
+    return model.find(predicate)
+  }
+
+  /**
+   * Find all matching records in a specific schema
+   *
+   * @param schemaName - The schema to search in (e.g., 'abilities', 'systems')
+   * @param predicate - Function that returns true for matching records
+   * @returns Array of matching records
+   *
+   * @example
+   * const level3Abilities = SalvageUnionReference.findAllIn('abilities', (a) => a.level === 3)
+   * const energyWeapons = SalvageUnionReference.findAllIn('systems', (s) =>
+   *   s.traits?.some((t) => t.type === 'energy')
+   * )
+   */
+  public static findAllIn<T extends keyof SchemaToEntityMap>(
+    schemaName: T,
+    predicate: (item: SchemaToEntityMap[T]) => boolean
+  ): SchemaToEntityMap[T][] {
+    const modelName = SchemaToModelMap[schemaName]
+    const model = SalvageUnionReference[
+      modelName as keyof typeof SalvageUnionReference
+    ] as BaseModel<SchemaToEntityMap[T]>
+    return model.findAll(predicate)
+  }
 }

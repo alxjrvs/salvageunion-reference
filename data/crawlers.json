@@ -55,7 +55,7 @@
             "name": "Additional Armament Bay Weapons System",
             "description": "Choose a Weapons System to mount in the Armament Bay.",
             "schema": [
-              "Systems"
+              "systems"
             ]
           }
         ]

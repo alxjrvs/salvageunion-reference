@@ -106,6 +106,16 @@
     "damagedEffect": "If the Armament Bay becomes damaged, the Union Crawler cannot use any of its Weapons Systems.",
     "techLevelEffects": [],
     "abilities": [],
+    "choices": [
+      {
+        "id": "383de916-bbd6-4e34-9cfc-1b37e12178c8",
+        "name": "Armament Bay Weapons System",
+        "description": "Choose a Weapons System to mount in the Armament Bay.",
+        "schema": [
+          "systems"
+        ]
+      }
+    ],
     "page": 222,
     "npc": {
       "position": "Gunny",
@@ -350,16 +360,6 @@
       {
         "name": "Gather Rumours",
         "description": "Once during Downtime each Pilot may ask around your Cantina for rumours. The Mediator will tell you a rumour that is circulating around the Cantina. Alternatively, you may ask one question and will get a somewhat vague answer about it from the Cantina."
-      }
-    ],
-    "choices": [
-      {
-        "id": "383de916-bbd6-4e34-9cfc-1b37e12178c8",
-        "name": "Additional Armament Bay Weapons System",
-        "description": "Choose a Weapons System to mount in the Armament Bay.",
-        "schema": [
-          "Systems"
-        ]
       }
     ],
     "page": 224,
