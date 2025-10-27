@@ -7,7 +7,14 @@
     "npc": {
       "position": "Union Crawler A.I.",
       "description": "Your Union Crawler has an advanced, intelligent A.I. on board which controls its core functions. The A.I. is jacked into the Corpo Net, once per Downtime you can ask them two questions about any topic and they will answer you truthfully. Name your A.I. and roll on the A.I. Personality Table for their personality.",
-      "choices": ["A.I. Personality"]
+      "choices": [
+        {
+          "id": "ai-personality",
+          "name": "A.I. Personality",
+          "description": "Roll on the A.I. Personality Table for their personality.",
+          "schema": "AIPersonality"
+        }
+      ]
     },
     "abilities": [
       {
@@ -25,13 +32,34 @@
     "npc": {
       "position": "Grizzled Veteran",
       "description": "A Grizzled Veteran is part of your Union Crawler. Name them and give them a Keepsake and Motto. They have 10 HP.",
-      "choices": ["Keepsake", "Motto"],
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ],
       "hitPoints": 10
     },
     "abilities": [
       {
         "name": "Improved Armour and Armaments",
-        "description": "Your Union Crawler may mount two Weapons Systems in its Armament Bay instead of the usual one and make two attacks on its turn. In addition, the Crawler increases its Max SP by 5."
+        "description": "Your Union Crawler may mount two Weapons Systems in its Armament Bay instead of the usual one and make two attacks on its turn. In addition, the Crawler increases its Max SP by 5.",
+        "choices": [
+          {
+            "id": "weapons-system",
+            "name": "Additional Armament Bay Weapons System",
+            "description": "Choose a Weapons System to mount in the Armament Bay.",
+            "schema": "Systems"
+          }
+        ]
       }
     ],
     "page": 157
@@ -45,7 +73,20 @@
       "position": "Research Engineer",
       "description": "An engineer who is one step ahead of their peers has joined your Union Crawler. Name them and give them a Keepsake and Motto. They have 4 HP.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     },
     "abilities": [
       {
@@ -64,7 +105,20 @@
       "position": "Wasteland Explorer",
       "description": "A Wasteland Explorer is part of your Union Crawler. Name them and if you wish, give them a Keepsake and Motto. They have 4 HP.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     },
     "abilities": [
       {
@@ -83,7 +137,20 @@
       "position": "Saavy Trader",
       "description": "A Savvy Trader is part of your Union Crawler.  Name them and give them a Keepsake and Motto. They have 4 HP.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     },
     "abilities": [
       {

@@ -46,7 +46,11 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["techLevelMin", "techLevelMax", "effect"],
+          "required": [
+            "techLevelMin",
+            "techLevelMax",
+            "effect"
+          ],
           "properties": {
             "techLevelMin": {
               "type": "integer",
@@ -66,6 +70,9 @@
             }
           }
         }
+      },
+      "choices": {
+        "$ref": "shared/common.schema.json#/definitions/choices"
       },
       "table": {
         "$ref": "shared/common.schema.json#/definitions/table"

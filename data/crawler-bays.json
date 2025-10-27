@@ -17,7 +17,20 @@
       "position": "Princeps",
       "description": "The Command Bay is operated and maintained by the Bridge Crew, the most experienced of whom is known as the Princeps.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   },
   {
@@ -46,7 +59,20 @@
       "position": "Greaser",
       "description": "The Mech Bay is operated and maintained by Mech Engineers, the most experienced of whom is known as the Greaser.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   },
   {
@@ -62,7 +88,20 @@
       "position": "Bullwhacker",
       "description": "The Storage Bay is operated and maintained by Teamsters, the most experienced of whom is known as the Bullwhacker.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   },
   {
@@ -78,7 +117,20 @@
       "position": "Gunny",
       "description": "The Armament Bay is operated and maintained by the Gunnery Crew, the most experienced of whom is known as the Gunny.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   },
   {
@@ -94,7 +146,20 @@
       "position": "Forger",
       "description": "The Crafting Bay is operated and maintained by the Salvage Techs, the most experienced of whom is known as the Forger.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   },
   {
@@ -127,7 +192,20 @@
       "position": "Operator",
       "description": "The Trading Bay is operated and maintained by the Union Traders, the most experienced of whom is known as the Operator.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   },
   {
@@ -159,7 +237,20 @@
       "position": "Doc",
       "description": "The Med Bay is operated and maintained by the Medics, the most experienced of whom is known as the Doc.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   },
   {
@@ -183,36 +274,58 @@
         "techLevelMin": 5,
         "techLevelMax": 6,
         "effect": "Allows training of all Core, Advanced, Hybrid Class, and Legendary Pilot Abilities."
+      },
+      {
+        "techLevelMin": 1,
+        "techLevelMax": 1,
+        "effect": "Training during Downtime on your Union Crawler in a Tech 2 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      },
+      {
+        "techLevelMin": 2,
+        "techLevelMax": 2,
+        "effect": "Training during Downtime on your Union Crawler in a Tech 3 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      },
+      {
+        "techLevelMin": 3,
+        "techLevelMax": 3,
+        "effect": "Training during Downtime on your Union Crawler in a Tech 4 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      },
+      {
+        "techLevelMin": 4,
+        "techLevelMax": 4,
+        "effect": "Training during Downtime on your Union Crawler in a Tech 5 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      },
+      {
+        "techLevelMin": 5,
+        "techLevelMax": 5,
+        "effect": "Training during Downtime on your Union Crawler in a Tech 6 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+      },
+      {
+        "techLevelMin": 6,
+        "techLevelMax": 6,
+        "effect": "Training during Downtime on your Union Crawler in a Tech 6 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
       }
     ],
-    "abilities": [
-      {
-        "name": "Stat Training - Tech 2",
-        "description": "Training during Downtime on your Union Crawler in a Tech 2 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
-      },
-      {
-        "name": "Stat Training - Tech 3",
-        "description": "Training during Downtime on your Union Crawler in a Tech 3 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
-      },
-      {
-        "name": "Stat Training - Tech 4",
-        "description": "Training during Downtime on your Union Crawler in a Tech 4 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
-      },
-      {
-        "name": "Stat Training - Tech 5",
-        "description": "Training during Downtime on your Union Crawler in a Tech 5 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
-      },
-      {
-        "name": "Stat Training - Tech 6",
-        "description": "Training during Downtime on your Union Crawler in a Tech 6 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
-      }
-    ],
+    "abilities": [],
     "page": 223,
     "npc": {
       "position": "Ace",
       "description": "The Pilot Bay is operated and maintained by the Pilots, the most experienced of whom is known as the Ace.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   },
   {
@@ -228,7 +341,20 @@
       "position": "Smith",
       "description": "The Armoury is operated and maintained by the Quartermasters, the most experienced of whom is known as the Smith.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   },
   {
@@ -244,12 +370,33 @@
         "description": "Once during Downtime each Pilot may ask around your Cantina for rumours. The Mediator will tell you a rumour that is circulating around the Cantina. Alternatively, you may ask one question and will get a somewhat vague answer about it from the Cantina."
       }
     ],
+    "choices": [
+      {
+        "id": "weapons-system",
+        "name": "Additional Armament Bay Weapons System",
+        "description": "Choose a Weapons System to mount in the Armament Bay.",
+        "schema": "Systems"
+      }
+    ],
     "page": 224,
     "npc": {
       "position": "Chef",
       "description": "The Cantina is operated and maintained by the Cantina Crew, the most experienced of whom is known as the Chef.",
       "hitPoints": 4,
-      "choices": ["Keepsake", "Motto"]
+      "choices": [
+        {
+          "id": "keepsake",
+          "name": "Keepsake",
+          "description": "A Keepsake is a personal item that represents something important to the NPC. It could be a memento from their past, a family heirloom, or something they have worked hard to acquire. The Keepsake is a reminder of the NPC's history and personality.",
+          "schema": "Keepsake"
+        },
+        {
+          "id": "motto",
+          "name": "Motto",
+          "description": "A Motto is a personal saying or phrase that represents the NPC's personality or beliefs. It could be something they live by, or something they are trying to achieve. The Motto is a reminder of the NPC's personality and goals.",
+          "schema": "Motto"
+        }
+      ]
     }
   }
 ]
