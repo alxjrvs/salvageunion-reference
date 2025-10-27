@@ -21,6 +21,11 @@
         }
       ]
     },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Name of the entry"
+    },
     "damage": {
       "description": "Damage dealt by an attack or ability",
       "type": "object",
@@ -373,8 +378,11 @@
           "description": "Description of the choice"
         },
         "schema": {
-          "type": "string",
-          "description": "Schema for the choice"
+          "type": "array",
+          "description": "Schema for the choice",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
