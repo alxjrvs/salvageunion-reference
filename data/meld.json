@@ -4,7 +4,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Meld Drone",
     "description": "Meld when they take over a biological organism, around the size of a human. The brain is sludged, only the stem remains, they become a peon of the swarm.",
-    "abilities": [
+    "actions": [
       {
         "name": "Bite",
         "description": "The Meld Drone mindlessly attacks the target with teeth and claw.",
@@ -32,7 +32,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Meld Drone Swarm",
     "description": "A swarm of multiple zombie-like Meld Drones",
-    "abilities": [
+    "actions": [
       {
         "name": "Devour",
         "description": "The Meld Drones bite and claw at a target with all their multitude limbs and maws.",
@@ -69,7 +69,7 @@
         "type": "fast"
       }
     ],
-    "abilities": [
+    "actions": [
       {
         "name": "Nanoid Tendrils",
         "description": "The nanoid lashes out with it's tendrils",
@@ -97,7 +97,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Meld Splitter",
     "description": "Formless inky darkness, Meld Splitters are around the height of a Mech and made of boundless swarms of coagulated meld.",
-    "abilities": [
+    "actions": [
       {
         "name": "Splitter Tendrils",
         "description": "Huge tendrils lash out at anything nearby.",
@@ -133,7 +133,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Meld Behemoth",
     "description": "The apex Meld, the size of a high rise building. Having assimilated vast quantities of mechanical and biological entities, it becomes a force even the toughest of Mechs struggle to reckon with.",
-    "abilities": [
+    "actions": [
       {
         "name": "Behemoth Tendrils",
         "description": "Long reaching tendrils whip around to grab all within reach, either crushing them or drawing them nearer to be assimilated.",

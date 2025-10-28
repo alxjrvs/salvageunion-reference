@@ -8,13 +8,22 @@
     "type": "object",
     "description": "A meld-infected creature",
     "additionalProperties": false,
-    "required": ["id", "name", "source", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "page"
+    ],
     "oneOf": [
       {
-        "required": ["hitPoints"]
+        "required": [
+          "hitPoints"
+        ]
       },
       {
-        "required": ["structurePoints"]
+        "required": [
+          "structurePoints"
+        ]
       }
     ],
     "properties": {
@@ -42,7 +51,7 @@
       "salvageValue": {
         "$ref": "shared/common.schema.json#/definitions/salvageValue"
       },
-      "abilities": {
+      "actions": {
         "type": "array",
         "description": "Special abilities of this meld creature",
         "items": {

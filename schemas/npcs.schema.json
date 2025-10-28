@@ -8,7 +8,13 @@
     "type": "object",
     "description": "An NPC or person",
     "additionalProperties": false,
-    "required": ["id", "name", "source", "hitPoints", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "hitPoints",
+      "page"
+    ],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
@@ -28,7 +34,7 @@
       "hitPoints": {
         "$ref": "shared/common.schema.json#/definitions/hitPoints"
       },
-      "abilities": {
+      "actions": {
         "type": "array",
         "description": "Special abilities of this NPC",
         "items": {

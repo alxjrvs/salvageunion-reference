@@ -46,7 +46,11 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["techLevelMin", "techLevelMax", "effect"],
+          "required": [
+            "techLevelMin",
+            "techLevelMax",
+            "effect"
+          ],
           "properties": {
             "techLevelMin": {
               "type": "integer",
@@ -73,7 +77,7 @@
       "table": {
         "$ref": "shared/common.schema.json#/definitions/table"
       },
-      "abilities": {
+      "actions": {
         "type": "array",
         "description": "Special abilities or features of this bay",
         "items": {

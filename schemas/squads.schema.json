@@ -8,13 +8,22 @@
     "type": "object",
     "description": "An NPC squad",
     "additionalProperties": false,
-    "required": ["id", "name", "source", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "page"
+    ],
     "oneOf": [
       {
-        "required": ["hitPoints"]
+        "required": [
+          "hitPoints"
+        ]
       },
       {
-        "required": ["structurePoints"]
+        "required": [
+          "structurePoints"
+        ]
       }
     ],
     "properties": {
@@ -39,7 +48,7 @@
       "structurePoints": {
         "$ref": "shared/common.schema.json#/definitions/structurePoints"
       },
-      "abilities": {
+      "actions": {
         "type": "array",
         "description": "Special abilities of this squad",
         "items": {

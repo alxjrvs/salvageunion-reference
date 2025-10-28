@@ -4,7 +4,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Waster Mob",
     "description": "A mob of wastelanders with improvised weapons.",
-    "abilities": [
+    "actions": [
       {
         "name": "Improvised Weapons",
         "range": "Close",
@@ -34,7 +34,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Raider Band",
     "description": "A band of raiders hungry for scrap.",
-    "abilities": [
+    "actions": [
       {
         "name": "Improvised Firearms",
         "range": "Close",
@@ -64,7 +64,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Rifle Squad",
     "description": "A group of grunts armed with rifles.",
-    "abilities": [
+    "actions": [
       {
         "name": "Rifles",
         "range": "Medium",
@@ -97,7 +97,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Machine Gun Squad",
     "description": "Combat trained troops armed with a mobile heavy machine gun.",
-    "abilities": [
+    "actions": [
       {
         "name": ".50 Cal Machine Gun",
         "range": "Close",
@@ -136,7 +136,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Missile Squad",
     "description": "Combat trained troops armed with a mobile missile launcher.",
-    "abilities": [
+    "actions": [
       {
         "name": "Rocket Launcher",
         "range": "Long",
@@ -177,7 +177,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Elite Blade Squad",
     "description": "Heavy assault troops armed with energised blades.",
-    "abilities": [
+    "actions": [
       {
         "name": "Monomolecular Sword",
         "range": "Close",
@@ -213,7 +213,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Elite Beam Squad",
     "description": "Apex troops in heavy armour armed with a big ol' gun.",
-    "abilities": [
+    "actions": [
       {
         "name": "Beta Fission Gun",
         "range": "Long",
@@ -254,7 +254,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Wasteland Herd",
     "description": "A herd of wasteland creatures.",
-    "abilities": [
+    "actions": [
       {
         "name": "Stampede",
         "range": "Close",
@@ -282,7 +282,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Drone Squadron",
     "description": "A swarm of Combat Drones flying in sync.",
-    "abilities": [
+    "actions": [
       {
         "name": "Red Laser",
         "range": "Medium",

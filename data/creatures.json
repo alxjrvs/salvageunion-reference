@@ -4,7 +4,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Irradiated Scorpion",
     "description": "Mutated beyond their usual size, they have been known to kill entire camps of wasters.",
-    "abilities": [
+    "actions": [
       {
         "name": "Stinger",
         "range": "Close",
@@ -38,7 +38,7 @@
         "type": "burrower"
       }
     ],
-    "abilities": [
+    "actions": [
       {
         "name": "Acid Spit",
         "range": "Medium",
@@ -66,7 +66,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Chimeripede",
     "description": "A mutated, radiation scarred amalgamation of flesh.",
-    "abilities": [
+    "actions": [
       {
         "name": "Barbed Tentacles",
         "range": "Close",
@@ -99,7 +99,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Wasteland Bear",
     "description": "Large, hungry, and ferocious, these bears are not just after your picnic basket.",
-    "abilities": [
+    "actions": [
       {
         "name": "Bear Carnage",
         "range": "Close",
@@ -127,7 +127,7 @@
         "type": "burrower"
       }
     ],
-    "abilities": [
+    "actions": [
       {
         "name": "Iron Claw",
         "range": "Close",
@@ -155,7 +155,7 @@
         "type": "fly"
       }
     ],
-    "abilities": [
+    "actions": [
       {
         "name": "Talons",
         "range": "Close",

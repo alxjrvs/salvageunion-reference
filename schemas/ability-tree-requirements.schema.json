@@ -8,12 +8,12 @@
     "type": "object",
     "description": "Requirements for an ability tree",
     "additionalProperties": false,
-    "required": ["id", "tree", "requirement", "page", "source"],
+    "required": ["id", "name", "requirement", "page", "source"],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
       },
-      "tree": {
+      "name": {
         "$ref": "shared/common.schema.json#/definitions/tree"
       },
       "requirement": {

@@ -8,14 +8,22 @@
     "type": "object",
     "description": "A pilot ability",
     "additionalProperties": false,
-    "required": ["id", "name", "tree", "source", "page"],
+    "required": [
+      "id",
+      "name",
+      "tree",
+      "source",
+      "page"
+    ],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
       },
       "activationCurrency": {
         "type": "string",
-        "enum": ["Variable"],
+        "enum": [
+          "Variable"
+        ],
         "description": "Currency used to activate the ability"
       },
       "name": {
@@ -36,7 +44,9 @@
           },
           {
             "type": "string",
-            "enum": ["L"],
+            "enum": [
+              "L"
+            ],
             "description": "Legendary level (L) for legendary tree abilities"
           }
         ],
@@ -85,7 +95,10 @@
               "type": "object",
               "description": "Structured option with label and value",
               "additionalProperties": false,
-              "required": ["label", "value"],
+              "required": [
+                "label",
+                "value"
+              ],
               "properties": {
                 "label": {
                   "type": "string",
@@ -100,7 +113,7 @@
           ]
         }
       },
-      "subAbilities": {
+      "actions": {
         "type": "array",
         "description": "Named sub-abilities with separate mechanics",
         "items": {

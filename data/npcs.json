@@ -4,7 +4,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Wastelander",
     "description": "Represents the myriad of common denizens of the wastelands.",
-    "abilities": [
+    "actions": [
       {
         "name": "Improvised Melee Weapon",
         "range": "Close",
@@ -30,7 +30,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Raider",
     "description": "Wastelanders who take what they need by force.",
-    "abilities": [
+    "actions": [
       {
         "name": "Improvised Firearm",
         "range": "Close",
@@ -56,7 +56,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Trooper",
     "description": "Combat trained troops deployed in a wide range of roles.",
-    "abilities": [
+    "actions": [
       {
         "name": "Rifle",
         "range": "Medium",
@@ -82,7 +82,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Veteran",
     "description": "A well trained and seasoned soldier deployed on difficult operations.",
-    "abilities": [
+    "actions": [
       {
         "name": "Green Laser Rifle",
         "range": "Medium",
@@ -108,7 +108,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Combat Pilot",
     "description": "A combat trained Mech Pilot, such as a Union Salvager.",
-    "abilities": [
+    "actions": [
       {
         "name": "Pistol",
         "range": "Close",
@@ -134,7 +134,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Ace",
     "description": "A veteran Mech Pilot, usually with Corpo training.",
-    "abilities": [
+    "actions": [
       {
         "name": "Sniper Rifle",
         "range": "Long",

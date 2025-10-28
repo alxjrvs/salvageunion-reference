@@ -8,7 +8,13 @@
     "type": "object",
     "description": "A bio-titan creature",
     "additionalProperties": false,
-    "required": ["id", "name", "source", "structurePoints", "page"],
+    "required": [
+      "id",
+      "name",
+      "source",
+      "structurePoints",
+      "page"
+    ],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
@@ -28,7 +34,7 @@
       "structurePoints": {
         "$ref": "shared/common.schema.json#/definitions/structurePoints"
       },
-      "abilities": {
+      "actions": {
         "type": "array",
         "description": "Special abilities of this bio-titan",
         "items": {

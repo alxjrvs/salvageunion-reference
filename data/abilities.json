@@ -130,7 +130,7 @@
     "level": 1,
     "description": "Improved repair; gain an additional 4SP when using Repair abilities or Systems.",
     "effect": "You have specialised in getting your hands dirty, you can patch up even the most brutally damaged Mechs with ease, even in the midst of conflict.",
-    "subAbilities": [
+    "actions": [
       {
         "name": "Mender",
         "actionType": "Passive",
@@ -334,7 +334,7 @@
     "description": "Gain a set of integrated Bionic Arms. Gives an improved base attack.",
     "effect": "You gain a set of bionic arms, surgically installed to any specification you desire. In addition, you can heal a Minor Injury during Downtime by spending 2 Tech 1 Scrap at any Crafting Bay. You also increase your Pilot's Max HP by 2.",
     "actionType": "Passive",
-    "subAbilities": [
+    "actions": [
       {
         "name": "Bionic Arms Attack",
         "description": "Melee attack with your bionic arms, where X is equal to the Tech Level of your Union Crawler.",
@@ -649,7 +649,7 @@
     "level": 2,
     "description": "Improve your ability with the Mechapult System.",
     "effect": "You have become a master of the sacred art of scrap flinging, making you highly versed at using the Mechapult System (see p. 166).",
-    "subAbilities": [
+    "actions": [
       {
         "name": "Let me double check that",
         "actionType": "Free",
@@ -678,7 +678,7 @@
     "activationCost": 3,
     "range": "Medium",
     "actionType": "Turn",
-    "subAbilities": [
+    "actions": [
       {
         "name": "Cargo Charge (Pilot)",
         "description": "Make a special charge attack against a target in Range. Roll to hit as normal. On a hit, this deals HP damage equal to the amount of Inventory Slots your Pilot has filled. Non-Bio-Titan or Meld creatures hit by this attack are knocked Prone and gain the Vulnerable Trait.",
@@ -856,7 +856,7 @@
       "Silencer: The Custom Sniper Rifle gains the Silent Trait.",
       "Compact Design: The Custom Sniper Rifle is designed to fold down into a briefcase, making it easily concealable."
     ],
-    "subAbilities": [
+    "actions": [
       {
         "name": "Custom Sniper Rifle",
         "description": "Attack with your custom sniper rifle. Base damage is 2 SP at Tech 1, increasing by 1 SP per Tech Level.",
@@ -1035,7 +1035,7 @@
       "Expanded Warhead: The Custom Missile Launcher deals an additional 1 SP damage.",
       "Portable: The Custom Missile Launcher loses the Heavy Trait."
     ],
-    "subAbilities": [
+    "actions": [
       {
         "name": "Custom Missile Launcher",
         "description": "Attack with your custom missile launcher. Base damage is 3 SP at Tech 1, increasing by 1 SP per Tech Level.",
@@ -1219,7 +1219,7 @@
     "description": "You are now Meld. You can replicate Equipment and make Meld Tendril attacks.",
     "effect": "The Meld called to you from beyond the vast void of time and space. You are lonely as one, but together you are strong and will have great power. You have formed symbiotically with the Meld. You have all of the strengths and weaknesses of Meld as detailed in the Meld Section p. 288. Replica Pilot Equipment: You grow a replica of a Pilot Equipment of any Tech Level out of your body. This costs an amount of AP equal to the Tech Level of the Pilot Equipment. You now have a Meld version of this Pilot Equipment. Split Form: When you are reduced to 0 HP/SP you split into two. Each split version of you has half of your Max SP/HP and Ability Points. Split your remaining Ability points evenly between your two forms. Your equipped Pilot Equipment is copied across both forms. You control both of your forms and they act separately during each round. Your split forms",
     "actionType": "Passive",
-    "subAbilities": [
+    "actions": [
       {
         "name": "Meld Tendril Attack",
         "description": "Attack with your Meld tendrils.",

@@ -15,7 +15,7 @@
         }
       ]
     },
-    "abilities": [
+    "actions": [
       {
         "name": "Crawler Wide Augments",
         "description": "Every Pilot on the Union Crawler may train any Pilot Ability from the Augment Ability Tree in addition to their other abilities. When you choose this Crawler Type during character creation all Pilots gain an additional Training Point which they may only spend on the Augment Ability Tree."
@@ -45,7 +45,7 @@
       ],
       "hitPoints": 10
     },
-    "abilities": [
+    "actions": [
       {
         "name": "Improved Armour and Armaments",
         "description": "Your Union Crawler may mount two Weapons Systems in its Armament Bay instead of the usual one and make two attacks on its turn. In addition, the Crawler increases its Max SP by 5.",
@@ -54,7 +54,9 @@
             "id": "49dbf700-b4b4-4718-8847-5f24dbf033a2",
             "name": "Additional Armament Bay Weapons System",
             "description": "Choose a Weapons System to mount in the Armament Bay.",
-            "schema": ["systems"]
+            "schema": [
+              "systems"
+            ]
           }
         ]
       }
@@ -83,7 +85,7 @@
         }
       ]
     },
-    "abilities": [
+    "actions": [
       {
         "name": "Exceptional Engineering",
         "description": "Your Union Crawler reduces its upkeep cost by 2 Scrap of its Tech Level. In addition add 2 free Scrap of it’s Tech Level to its Upgrade Pool at the start of each Downtime."
@@ -113,7 +115,7 @@
         }
       ]
     },
-    "abilities": [
+    "actions": [
       {
         "name": "All Terrain Locomotion",
         "description": "Your Union Crawler has the ability to easily traverse over a vast range of terrain types from mountain ranges and ash-filled plains to dense forests and muddy swamplands. It is never slowed down by Difficult Terrain. It can also safely cross bodies of water amphibiously."
@@ -143,7 +145,7 @@
         }
       ]
     },
-    "abilities": [
+    "actions": [
       {
         "name": "Imrpoved Trading Bay",
         "description": "When you roll to see what is available in the Trading Bay use this table instead. Trade available is always one Tech Level higher than your Union Crawler and can be purchased for its Salvage Value as per the normal trading rules. Chassis, Systems, and Modules available for trade are determined randomly or by the Mediator.",
