@@ -5,57 +5,43 @@
   "description": "Tech levels for Union Crawlers in Salvage Union",
   "type": "array",
   "items": {
-    "type": "object",
-    "description": "A crawler tech level",
-    "additionalProperties": false,
-    "required": [
-      "id",
-      "name",
-      "techLevel",
-      "structurePoints",
-      "populationMin",
-      "populationMax",
-      "source",
-      "page"
-    ],
-    "properties": {
-      "id": {
-        "$ref": "shared/common.schema.json#/definitions/id"
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       },
-      "name": {
-        "type": "string",
-        "minLength": 1,
-        "description": "Name of the crawler tech level (e.g., 'Hamlet Crawler', 'Village Crawler')"
-      },
-      "techLevel": {
-        "type": "integer",
-        "minimum": 1,
-        "maximum": 6,
-        "description": "Tech level (1-6)"
-      },
-      "structurePoints": {
-        "type": "integer",
-        "minimum": 0,
-        "description": "Structure points for this tech level"
-      },
-      "populationMin": {
-        "type": "integer",
-        "minimum": 0,
-        "description": "Minimum approximate population"
-      },
-      "populationMax": {
-        "type": "integer",
-        "minimum": 0,
-        "description": "Maximum approximate population (0 means unlimited/25,000+)"
-      },
-      "source": {
-        "$ref": "shared/enums.schema.json#/definitions/source"
-      },
-      "page": {
-        "type": "integer",
-        "minimum": 1,
-        "description": "Page number in the source book"
+      {
+        "type": "object",
+        "description": "A crawler tech level",
+        "required": [
+          "techLevel",
+          "structurePoints",
+          "populationMin",
+          "populationMax"
+        ],
+        "properties": {
+          "techLevel": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6,
+            "description": "Tech level (1-6)"
+          },
+          "structurePoints": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Structure points for this tech level"
+          },
+          "populationMin": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Minimum approximate population"
+          },
+          "populationMax": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Maximum approximate population (0 means unlimited/25,000+)"
+          }
+        }
       }
-    }
+    ]
   }
 }

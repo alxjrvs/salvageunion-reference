@@ -5,32 +5,25 @@
   "description": "Requirements for ability trees in Salvage Union",
   "type": "array",
   "items": {
-    "type": "object",
-    "description": "Requirements for an ability tree",
-    "additionalProperties": false,
-    "required": ["id", "name", "requirement", "page", "source"],
-    "properties": {
-      "id": {
-        "$ref": "shared/common.schema.json#/definitions/id"
+    "allOf": [
+      {
+        "additionalProperties": false,
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       },
-      "name": {
-        "$ref": "shared/common.schema.json#/definitions/tree"
-      },
-      "requirement": {
-        "type": "array",
-        "description": "List of ability tree names required to access this tree",
-        "items": {
-          "$ref": "shared/common.schema.json#/definitions/tree"
+      {
+        "type": "object",
+        "description": "Requirements for an ability tree",
+        "required": ["requirement"],
+        "properties": {
+          "requirement": {
+            "type": "array",
+            "description": "List of ability tree names required to access this tree",
+            "items": {
+              "$ref": "shared/enums.schema.json#/definitions/tree"
+            }
+          }
         }
-      },
-      "page": {
-        "type": "integer",
-        "minimum": 1,
-        "description": "Page number in the source book"
-      },
-      "source": {
-        "$ref": "shared/enums.schema.json#/definitions/source"
       }
-    }
+    ]
   }
 }

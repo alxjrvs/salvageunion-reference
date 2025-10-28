@@ -161,16 +161,12 @@
     "action": {
       "type": "object",
       "description": "An action, ability, or attack that can be performed",
-      "additionalProperties": false,
       "required": ["name"],
       "properties": {
         "name": {
           "type": "string",
           "minLength": 1,
           "description": "Name of the action"
-        },
-        "source": {
-          "$ref": "enums.schema.json#/definitions/source"
         },
         "description": {
           "type": "string",
@@ -194,9 +190,6 @@
         },
         "damage": {
           "$ref": "#/definitions/damage"
-        },
-        "stats": {
-          "$ref": "#/definitions/stats"
         },
         "options": {
           "type": "array",
@@ -231,120 +224,91 @@
         },
         "table": {
           "$ref": "#/definitions/table"
-        },
-        "page": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "Page number in the source book"
         }
       }
     },
     "system": {
-      "type": "object",
       "description": "A system or module that can be installed on a mech",
-      "additionalProperties": false,
-      "required": [
-        "actions",
-        "description",
-        "id",
-        "name",
-        "page",
-        "salvageValue",
-        "slotsRequired",
-        "source",
-        "techLevel"
-      ],
-      "properties": {
-        "id": {
-          "$ref": "common.schema.json#/definitions/id"
+      "allOf": [
+        {
+          "$ref": "#/definitions/entry"
         },
-        "name": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Name of the system or module"
-        },
-        "source": {
-          "$ref": "enums.schema.json#/definitions/source"
-        },
-        "techLevel": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Technology level required"
-        },
-        "slotsRequired": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Number of slots required to install"
-        },
-        "salvageValue": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Salvage value in scrap"
-        },
-        "recommended": {
-          "type": "boolean",
-          "description": "Whether this is a recommended starting system"
-        },
-        "traits": {
-          "$ref": "#/definitions/traits"
-        },
-        "description": {
-          "type": "string",
-          "description": "Description of the system or module"
-        },
-        "notes": {
-          "type": "string",
-          "description": "Additional notes"
-        },
-        "activationCost": {
-          "$ref": "common.schema.json#/definitions/activationCost"
-        },
-        "range": {
-          "$ref": "enums.schema.json#/definitions/range"
-        },
-        "damage": {
-          "$ref": "#/definitions/damage"
-        },
-        "table": {
-          "$ref": "#/definitions/table"
-        },
-        "actionType": {
-          "$ref": "enums.schema.json#/definitions/actionType"
-        },
-        "actions": {
-          "type": "array",
-          "description": "Actions that can be performed with this system",
-          "items": {
-            "$ref": "#/definitions/action"
-          }
-        },
-        "statBonus": {
+        {
           "type": "object",
-          "description": "Bonus to a specific stat",
-          "additionalProperties": false,
-          "required": ["stat", "bonus"],
+          "required": ["actions", "salvageValue", "slotsRequired", "techLevel"],
           "properties": {
-            "stat": {
-              "type": "string",
-              "description": "Name of the stat to bonus"
-            },
-            "bonus": {
+            "techLevel": {
               "type": "integer",
-              "description": "Amount of bonus to apply"
+              "minimum": 0,
+              "description": "Technology level required"
+            },
+            "slotsRequired": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of slots required to install"
+            },
+            "salvageValue": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Salvage value in scrap"
+            },
+            "recommended": {
+              "type": "boolean",
+              "description": "Whether this is a recommended starting system"
+            },
+            "traits": {
+              "$ref": "#/definitions/traits"
+            },
+            "notes": {
+              "type": "string",
+              "description": "Additional notes"
+            },
+            "activationCost": {
+              "$ref": "common.schema.json#/definitions/activationCost"
+            },
+            "range": {
+              "$ref": "enums.schema.json#/definitions/range"
+            },
+            "damage": {
+              "$ref": "#/definitions/damage"
+            },
+            "table": {
+              "$ref": "#/definitions/table"
+            },
+            "actionType": {
+              "$ref": "enums.schema.json#/definitions/actionType"
+            },
+            "actions": {
+              "type": "array",
+              "description": "Actions that can be performed with this system",
+              "items": {
+                "$ref": "#/definitions/action"
+              }
+            },
+            "statBonus": {
+              "type": "object",
+              "description": "Bonus to a specific stat",
+              "additionalProperties": false,
+              "required": ["stat", "bonus"],
+              "properties": {
+                "stat": {
+                  "type": "string",
+                  "description": "Name of the stat to bonus"
+                },
+                "bonus": {
+                  "type": "integer",
+                  "description": "Amount of bonus to apply"
+                }
+              }
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of this system included"
             }
           }
-        },
-        "count": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Number of this system included"
-        },
-        "page": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "Page number in the source book"
         }
-      }
+      ]
     },
     "table": {
       "description": "Roll table for random outcomes based on d20 rolls",
@@ -416,7 +380,6 @@
         {
           "type": "object",
           "description": "Flat roll table with individual outcomes for each numeric result",
-          "additionalProperties": false,
           "required": [
             "type",
             "1",
@@ -512,7 +475,7 @@
     "entry": {
       "type": "object",
       "description": "Basic entry with name, description, source, and page reference",
-      "required": ["description", "id", "name", "page", "source"],
+      "required": ["id", "name", "page", "source"],
       "properties": {
         "id": {
           "$ref": "common.schema.json#/definitions/id"

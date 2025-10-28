@@ -67,7 +67,6 @@
     "id": "0050af76-7d88-43e7-b098-1a6af7656353",
     "source": "Salvage Union Workshop Manual",
     "name": "Reactor Overload",
-    "description": "",
     "section": "heat",
     "table": {
       "1": "Reactor Overload: Your Mech’s reactor goes into full meltdown and explodes. Your Mech, as well as any mounted Systems, Modules, and all Cargo, is destroyed in the explosion. Everything in Close Range of your Mech takes SP damage equal to your Mech’s Maximum Heat Capacity. They may take any Turn Action or Reaction in response to try to avoid this. Your Pilot dies unless they have a means to escape. The area your Mech was in becomes Irradiated",
@@ -83,7 +82,6 @@
     "id": "abca780b-da93-47b0-91e6-290da910e2fd",
     "source": "Salvage Union Workshop Manual",
     "name": "Area Salvage",
-    "description": "",
     "section": "salvaging",
     "table": {
       "1": "Nothing: You find nothing in this area.",
@@ -99,7 +97,6 @@
     "id": "acdc85ee-056c-4edc-95be-e25f0ab9b319",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Salvage",
-    "description": "",
     "section": "salvaging",
     "table": {
       "1": "Ashes and Dust: The Mech is unsalvageable: its Chassis, Systems and Modules are all considered destroyed.",
@@ -227,7 +224,6 @@
     "id": "a1b2c3d4-e5f6-47a8-b9c0-d1e2f3a4b5c6",
     "source": "Salvage Union Workshop Manual",
     "name": "Keepsake",
-    "description": "",
     "section": "character",
     "table": {
       "1": "Stuffed Toy",
@@ -258,7 +254,6 @@
     "id": "e5317ec5-241c-4bed-97cc-b8d9764e011f",
     "source": "Salvage Union Workshop Manual",
     "name": "Motto",
-    "description": "",
     "section": "character",
     "table": {
       "1": "Live and let live.",
@@ -289,7 +284,6 @@
     "id": "d07e8fbf-0750-45ad-9cb8-faa95d8cbaf3",
     "source": "Salvage Union Workshop Manual",
     "name": "Pilot Appearance",
-    "description": "",
     "section": "character",
     "table": {
       "1": "Stocky",
@@ -320,7 +314,6 @@
     "id": "d65de78f-3131-40fd-bd40-018e858c723b",
     "source": "Salvage Union Workshop Manual",
     "name": "A.I. Personality",
-    "description": "",
     "section": "character",
     "table": {
       "1": "Megalomaniacal to a fault.",
@@ -351,7 +344,6 @@
     "id": "3ba3c58c-4f75-454f-be16-6bd3236b79d8",
     "source": "Salvage Union Workshop Manual",
     "name": "Quirks",
-    "description": "",
     "section": "mech",
     "table": {
       "1": "Flashing RGB lights",
@@ -382,7 +374,6 @@
     "id": "f6a7b8c9-daeb-4cfd-a4b5-c6d7e8f9a0b1",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Appearance",
-    "description": "",
     "section": "mech",
     "table": {
       "1": "Flashy, bright, vibrant, paint job",
@@ -413,7 +404,6 @@
     "id": "a7b8c9da-ebfc-4dfe-b5c6-d7e8f9a0b1c2",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Pattern Names",
-    "description": "",
     "section": "mech",
     "table": {
       "1": "Bullseye",
@@ -444,7 +434,6 @@
     "id": "ea4227a6-8c57-4018-86b0-338bbf5a151f",
     "source": "Salvage Union Workshop Manual",
     "name": "Crawler Name",
-    "description": "",
     "section": "crawler",
     "table": {
       "1": "Big Smoke",

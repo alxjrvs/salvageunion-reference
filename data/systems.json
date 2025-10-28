@@ -397,7 +397,6 @@
     "description": "This mech-mountable riveting gun can be used to make field repairs to the most basic of Mechs, Systems, and Modules.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -405,7 +404,6 @@
         "description": "You restore up to 4 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -413,7 +411,6 @@
         "description": "You repair a damaged Tech 1 System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",
@@ -557,7 +554,6 @@
     "description": "This System launches a grappling spike attached to a high tensile wire. Fired into a rock or structure and it can be used to help the Mech cross rough terrain. Fired at a Mech, it can be used to pin the Mech down or even pulled towards the attacker. Raiders love using these to pin down targets enabling their mates to strip them apart.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Pin",
         "activationCost": 2,
         "range": "Medium",
@@ -570,7 +566,6 @@
         "description": "When activated, choose a target in Range. You deal 1 SP damage to the target and it cannot move beyond Medium Range of your Mech whilst the grappling harpoon is attached. You can detach the grappling harpoon as a Free Action. The target may attempt to remove the harpoon as a Turn Action on their turn, if they have some means to do so."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Swing",
         "activationCost": 2,
         "range": "Medium",
@@ -828,7 +823,6 @@
     "description": "This Mech-mountable welding laser allows you to make a wider range of repairs in the field. An invaluable tool that has become the official symbol of the Engineers' Union.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -836,7 +830,6 @@
         "description": "You restore up to 5 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -844,7 +837,6 @@
         "description": "You repair a damaged Tech 1 or Tech 2 System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",
@@ -1012,7 +1004,6 @@
     "description": "This multi-purpose fabrication arm produces a resilient form of metallic oxide epoxy allowing specialised field repairs.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -1020,7 +1011,6 @@
         "description": "You restore up to 6 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -1028,7 +1018,6 @@
         "description": "You repair a damaged Tech 1, 2, or 3 System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",
@@ -1340,7 +1329,6 @@
     "description": "Specially designed by Osiris Construction to repair Evantis Colossus Mechs during the Last War of Nations.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -1348,7 +1336,6 @@
         "description": "You restore up to 7 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -1356,7 +1343,6 @@
         "description": "You repair a damaged Tech 1, 2, 3, or 4 System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",
@@ -1706,7 +1692,6 @@
     "description": "This Locomotion System, alongside allowing your Mech to move as normal, includes heavy actuators, pistons, and struts which can dig into the ground, stabilising your Mech and increasing its resilience and damage output at the cost of not being able to move.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Stabilise",
         "activationCost": 3,
         "actionType": "Turn",
@@ -1725,7 +1710,6 @@
     "description": "Developed by Aeon as a means to charge their patented shielding technology whilst in the field. Tesla Coils fire an arc of super-charged electricity which can be used in offensive, defensive, and support roles.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Tesla Arc",
         "activationCost": 2,
         "range": "Medium",
@@ -1733,7 +1717,6 @@
         "description": "You may choose up to three different targets in Range. Roll to hit once as normal. On a successful hit, the first target takes 4 SP damage, the second target takes 3 SP damage, and the third target takes 2 SP damage."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Tesla Charge",
         "activationCost": 3,
         "range": "Close",
@@ -1741,7 +1724,6 @@
         "description": "You may restore up to 2 EP to a target Mech in Range."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Tesla Shield",
         "activationCost": 2,
         "range": "Close",
@@ -1769,7 +1751,6 @@
     "activationCost": 3,
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Repair",
         "description": "• Restore up to 15 SP to a target Mech within the Fabrication Bay with at least 1 SP.\n• Restore up to 2 EP to a target Mech within the Fabrication Bay.\n• Repair up to 3 damaged Systems or Modules of Tech 1-5 within the Fabrication Bay to Intact Condition.\n• Repair up to 2 damaged Mech Chassis or Vehicles of Tech 1-5 within the Fabrication Bay to Intact Condition."
       }
@@ -2152,7 +2133,6 @@
     "description": "Developed by Sakura Futures at the peak of their technological prowess before the Wasteland Reclamation, a Matter Phase Shield disintegrates anything that attempts to pass through it by stripping it apart at a molecular level.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Disintegrate",
         "activationCost": "X",
         "range": "Close",
@@ -2165,7 +2145,6 @@
         "description": "You extend the Matter Phase Shield outward from you. Everything within Close Range of you except for your own Mech and Pilot takes an amount of SP damage equal to 3× the EP you spend on this Ability."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Shield",
         "activationCost": 2,
         "range": "Close",
@@ -2199,7 +2178,6 @@
     "description": "This highly specialised repair arm, developed by the Stefanus Solitude research team from their experiments with the Nanite Sea, fires a stream of nanites at a damaged mech or part restoring it to full functionality. The nanites' highly adaptive nature means this can be used to repair just about anything you will find in the wastes.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Patch",
         "activationCost": 2,
         "range": "Close",
@@ -2207,7 +2185,6 @@
         "description": "You restore up to 10 Structure Points to any Mech in Range that has at least 1 SP."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "range": "Close",
@@ -2215,7 +2192,6 @@
         "description": "You repair any damaged System or Module in Range to Intact Condition. It is now usable."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Chassis Repair",
         "activationCost": 4,
         "range": "Close",

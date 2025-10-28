@@ -7,12 +7,53 @@
   "items": {
     "allOf": [
       {
+        "additionalProperties": false,
         "$ref": "shared/objects.schema.json#/definitions/entry"
       },
       {
         "type": "object",
         "required": ["stats", "chassisAbilities", "patterns"],
-        "properties": {}
+        "properties": {
+          "stats": {
+            "$ref": "shared/objects.schema.json#/definitions/stats"
+          },
+          "chassisAbilities": {
+            "type": "array",
+            "items": {
+              "$ref": "shared/objects.schema.json#/definitions/action"
+            }
+          },
+          "patterns": {
+            "type": "array",
+            "items": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Name of the pattern"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Description of the pattern"
+              },
+              "systems": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "modules": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "npc": {
+            "$ref": "shared/objects.schema.json#/definitions/npc"
+          }
+        }
       }
     ]
   }

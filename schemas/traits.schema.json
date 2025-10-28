@@ -3,8 +3,10 @@
   "$id": "https://salvageunion.com/schemas/traits.schema.json",
   "title": "Salvage Union Traits",
   "description": "Traits and special properties in Salvage Union",
+  "additionalProperties": false,
   "type": "array",
   "items": {
+    "additionalProperties": false,
     "$ref": "shared/objects.schema.json#/definitions/entry"
   }
 }

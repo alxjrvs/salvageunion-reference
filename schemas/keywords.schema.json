@@ -5,6 +5,7 @@
   "description": "Game keywords and terminology in Salvage Union",
   "type": "array",
   "items": {
+    "additionalProperties": false,
     "$ref": "shared/objects.schema.json#/definitions/entry"
   }
 }

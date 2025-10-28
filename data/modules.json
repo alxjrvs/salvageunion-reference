@@ -315,13 +315,11 @@
     "description": "A favourite of salvage teams across the globe, this Mech-mountable scanner lets you know when any Scrap is nearby.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Auto-Scan",
         "actionType": "Passive",
         "description": "This automated function passively alerts you when you move into an area that can be salvaged.\nIn addition, whenever you move from one area of the map to an location you have not yet visited, roll the die, on the result of a 20 you gain once piece of scrap of the Tech Level of the area as decided by the Mediator. By default this is the Tech Level of your Union Crawler."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Coolant Flush",
         "activationCost": 2,
         "actionType": "Short",
@@ -499,7 +497,6 @@
     "description": "The Auto-Doctor is a medical droid with a rudimentary A.I. that can heal a Pilot in the field via a complex array of mechanical surgery arms.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Heal",
         "activationCost": 2,
         "range": "Close",
@@ -507,7 +504,6 @@
         "description": "The Auto-Doctor heals a creature within Range up to 10 HP. If they were on 0 HP this restores them to consciousness and heals them to 10 HP."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Physio",
         "activationCost": 2,
         "range": "Close",
@@ -515,7 +511,6 @@
         "description": "The Auto-Doctor heals a creature within Range of a single Minor Injury."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Therapy",
         "activationCost": 2,
         "range": "Close",
@@ -523,7 +518,6 @@
         "description": "The Auto-Doctor engages its therapeutic and drinks dispensation protocols. A single People who talks through things with the Auto-Doctor feels a lot better about themselves, their life, and the situation they are in."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "First Aid",
         "activationCost": 2,
         "range": "Close",
@@ -574,14 +568,12 @@
     "description": "This manifold provides more control over the coolant flowing through your reactor, allowing you to inject more coolant as required.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Coolant Flow",
         "activationCost": 2,
         "actionType": "Free",
         "description": "Adjusted valves provide coolant where required. Reduce the Heat of your Mech by 4."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Coolant Flush",
         "activationCost": 1,
         "actionType": "Short",
@@ -820,21 +812,18 @@
     "description": "This compact repair droid with a rudimentary A.I. is hardwired into your Mech and can perform a variety of repair tasks on it whilst you focus on piloting.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Repair",
         "activationCost": 2,
         "actionType": "Free",
         "description": "You restore 6 SP to your Mech as long as it has at least 1 SP."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "System Repair",
         "activationCost": 2,
         "actionType": "Free",
         "description": "You repair a single, Tech 4 or lower, damaged System or Module mounted on your Mech to Intact Condition."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Coolant Flush",
         "activationCost": 2,
         "actionType": "Free",
@@ -985,7 +974,6 @@
     "description": "This mil-tech Module combines Laser Guidance, Pinpoint Targeter, and Multi-Targeter into one Module. You may activate each separately.",
     "actions": [
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Pinpoint Targeter",
         "activationCost": 3,
         "actionType": "Turn",
@@ -997,7 +985,6 @@
         "description": "Make an attack at a selected target. If it hits select a system or appendage to be damaged/injured. If you roll a 20 it is destroyed instead. You also deal damage as normal."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Multi-Targeter",
         "activationCost": "X",
         "actionType": "Turn",
@@ -1009,7 +996,6 @@
         "description": "Make an attack with any number of weapons. Each weapon must select a different target. Costs 1 EP per weapon fired."
       },
       {
-        "source": "Salvage Union Workshop Manual",
         "name": "Laser Guidance",
         "activationCost": 3,
         "actionType": "Free",
