@@ -4,14 +4,16 @@
     "name": "Mule",
     "source": "Salvage Union Workshop Manual",
     "page": 100,
-    "structurePts": 12,
-    "energyPts": 4,
-    "heatCap": 6,
-    "systemSlots": 16,
-    "moduleSlots": 2,
-    "cargoCap": 16,
-    "techLevel": 1,
-    "salvageValue": 7,
+    "stats": {
+      "structurePts": 12,
+      "energyPts": 4,
+      "heatCap": 6,
+      "systemSlots": 16,
+      "moduleSlots": 2,
+      "cargoCap": 16,
+      "techLevel": 1,
+      "salvageValue": 7
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Cargo Bay",
@@ -68,14 +70,16 @@
     "name": "Mazona",
     "source": "Salvage Union Workshop Manual",
     "page": 102,
-    "structurePts": 5,
-    "energyPts": 10,
-    "heatCap": 6,
-    "systemSlots": 7,
-    "moduleSlots": 3,
-    "cargoCap": 6,
-    "techLevel": 1,
-    "salvageValue": 4,
+    "stats": {
+      "structurePts": 5,
+      "energyPts": 10,
+      "heatCap": 6,
+      "systemSlots": 7,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 1,
+      "salvageValue": 4
+    },
     "chassisAbilities": [
       {
         "name": "Hover Drone",
@@ -114,14 +118,16 @@
     "name": "Scrapper",
     "source": "Salvage Union Workshop Manual",
     "page": 104,
-    "structurePts": 9,
-    "energyPts": 9,
-    "heatCap": 8,
-    "systemSlots": 12,
-    "moduleSlots": 2,
-    "cargoCap": 6,
-    "techLevel": 1,
-    "salvageValue": 6,
+    "stats": {
+      "structurePts": 9,
+      "energyPts": 9,
+      "heatCap": 8,
+      "systemSlots": 12,
+      "moduleSlots": 2,
+      "cargoCap": 6,
+      "techLevel": 1,
+      "salvageValue": 6
+    },
     "chassisAbilities": [
       {
         "name": "Hazard Protected Chassis",
@@ -176,14 +182,16 @@
     "name": "Spectrum",
     "source": "Salvage Union Workshop Manual",
     "page": 106,
-    "structurePts": 17,
-    "energyPts": 11,
-    "heatCap": 3,
-    "systemSlots": 7,
-    "moduleSlots": 4,
-    "cargoCap": 6,
-    "techLevel": 1,
-    "salvageValue": 10,
+    "stats": {
+      "structurePts": 17,
+      "energyPts": 11,
+      "heatCap": 3,
+      "systemSlots": 7,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 1,
+      "salvageValue": 10
+    },
     "chassisAbilities": [
       {
         "name": "Data Scanner",
@@ -252,14 +260,16 @@
     "name": "Thresher",
     "source": "Salvage Union Workshop Manual",
     "page": 108,
-    "structurePts": 15,
-    "energyPts": 6,
-    "heatCap": 10,
-    "systemSlots": 9,
-    "moduleSlots": 2,
-    "cargoCap": 6,
-    "techLevel": 1,
-    "salvageValue": 9,
+    "stats": {
+      "structurePts": 15,
+      "energyPts": 6,
+      "heatCap": 10,
+      "systemSlots": 9,
+      "moduleSlots": 2,
+      "cargoCap": 6,
+      "techLevel": 1,
+      "salvageValue": 9
+    },
     "chassisAbilities": [
       {
         "name": "Heavily Armoured Chassis",
@@ -310,14 +320,16 @@
     "name": "Forge",
     "source": "Salvage Union Workshop Manual",
     "page": 110,
-    "structurePts": 16,
-    "energyPts": 13,
-    "heatCap": 10,
-    "systemSlots": 15,
-    "moduleSlots": 4,
-    "cargoCap": 6,
-    "techLevel": 2,
-    "salvageValue": 10,
+    "stats": {
+      "structurePts": 16,
+      "energyPts": 13,
+      "heatCap": 10,
+      "systemSlots": 15,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 2,
+      "salvageValue": 10
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Epoxy Printer",
@@ -410,14 +422,16 @@
     "name": "Gopher",
     "source": "Salvage Union Workshop Manual",
     "page": 112,
-    "structurePts": 14,
-    "energyPts": 10,
-    "heatCap": 8,
-    "systemSlots": 12,
-    "moduleSlots": 3,
-    "cargoCap": 12,
-    "techLevel": 2,
-    "salvageValue": 4,
+    "stats": {
+      "structurePts": 14,
+      "energyPts": 10,
+      "heatCap": 8,
+      "systemSlots": 12,
+      "moduleSlots": 3,
+      "cargoCap": 12,
+      "techLevel": 2,
+      "salvageValue": 4
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Expanded Transport Hold",
@@ -469,14 +483,16 @@
     "name": "Hussar",
     "source": "Salvage Union Workshop Manual",
     "page": 114,
-    "structurePts": 12,
-    "energyPts": 10,
-    "heatCap": 12,
-    "systemSlots": 12,
-    "moduleSlots": 3,
-    "cargoCap": 6,
-    "techLevel": 2,
-    "salvageValue": 6,
+    "stats": {
+      "structurePts": 12,
+      "energyPts": 10,
+      "heatCap": 12,
+      "systemSlots": 12,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
+      "salvageValue": 6
+    },
     "chassisAbilities": [
       {
         "name": "Fast",
@@ -530,14 +546,16 @@
     "name": "Jackhammer",
     "source": "Salvage Union Workshop Manual",
     "page": 116,
-    "structurePts": 18,
-    "energyPts": 7,
-    "heatCap": 13,
-    "systemSlots": 15,
-    "moduleSlots": 3,
-    "cargoCap": 6,
-    "techLevel": 2,
-    "salvageValue": 6,
+    "stats": {
+      "structurePts": 18,
+      "energyPts": 7,
+      "heatCap": 13,
+      "systemSlots": 15,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
+      "salvageValue": 6
+    },
     "chassisAbilities": [
       {
         "name": "Reinforced Chassis",
@@ -598,6 +616,16 @@
     "name": "Kraken",
     "source": "Salvage Union Workshop Manual",
     "page": 118,
+    "stats": {
+      "structurePts": 24,
+      "energyPts": 10,
+      "heatCap": 14,
+      "systemSlots": 18,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
+      "salvageValue": 14
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Amphibious Locomotion System",
@@ -651,21 +679,23 @@
         ],
         "modules": ["Comms Module", "Multi-Targeter", "Thermal Optics"]
       }
-    ],
-    "structurePts": 24,
-    "energyPts": 10,
-    "heatCap": 14,
-    "systemSlots": 18,
-    "moduleSlots": 3,
-    "cargoCap": 6,
-    "techLevel": 2,
-    "salvageValue": 14
+    ]
   },
   {
     "id": "c505adcd-26af-4c2a-91f4-55ff1fd8fe72",
     "name": "Magpie",
     "source": "Salvage Union Workshop Manual",
     "page": 120,
+    "stats": {
+      "structurePts": 15,
+      "energyPts": 12,
+      "heatCap": 10,
+      "systemSlots": 15,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
+      "salvageValue": 5
+    },
     "chassisAbilities": [
       {
         "name": "Hot Swap Universal Mounts",
@@ -718,21 +748,23 @@
           "Electro-Magnetic Self-Destruct"
         ]
       }
-    ],
-    "structurePts": 15,
-    "energyPts": 12,
-    "heatCap": 10,
-    "systemSlots": 15,
-    "moduleSlots": 3,
-    "cargoCap": 6,
-    "techLevel": 2,
-    "salvageValue": 5
+    ]
   },
   {
     "id": "fdb9542b-d85e-468b-911a-517f8411efab",
     "name": "Mirrorball",
     "source": "Salvage Union Workshop Manual",
     "page": 122,
+    "stats": {
+      "structurePts": 16,
+      "energyPts": 14,
+      "heatCap": 8,
+      "systemSlots": 12,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 2,
+      "salvageValue": 8
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Advanced Shield Dome",
@@ -780,21 +812,23 @@
         "systems": ["Missile Pod", "Ejector Pod", "Locomotion System"],
         "modules": ["Comms Module", "IR Night Vision Optics", "Laser Guidance"]
       }
-    ],
-    "structurePts": 16,
-    "energyPts": 14,
-    "heatCap": 8,
-    "systemSlots": 12,
-    "moduleSlots": 3,
-    "cargoCap": 6,
-    "techLevel": 2,
-    "salvageValue": 8
+    ]
   },
   {
     "id": "4ba6cc9f-19b0-4ae7-9471-3552f5470d4a",
     "name": "Atlas",
     "source": "Salvage Union Workshop Manual",
     "page": 124,
+    "stats": {
+      "structurePts": 30,
+      "energyPts": 10,
+      "heatCap": 14,
+      "systemSlots": 21,
+      "moduleSlots": 2,
+      "cargoCap": 30,
+      "techLevel": 3,
+      "salvageValue": 12
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Colossal Cargo Bay",
@@ -849,21 +883,23 @@
           "Emergency Power Conduit"
         ]
       }
-    ],
-    "structurePts": 30,
-    "energyPts": 10,
-    "heatCap": 14,
-    "systemSlots": 21,
-    "moduleSlots": 2,
-    "cargoCap": 30,
-    "techLevel": 3,
-    "salvageValue": 12
+    ]
   },
   {
     "id": "d05330c9-e87e-4e1b-b1b4-cb70a97e7543",
     "name": "Brawler",
     "source": "Salvage Union Workshop Manual",
     "page": 126,
+    "stats": {
+      "structurePts": 25,
+      "energyPts": 10,
+      "heatCap": 14,
+      "systemSlots": 16,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 3,
+      "salvageValue": 5
+    },
     "chassisAbilities": [
       {
         "name": "Close Range Protocols",
@@ -913,21 +949,23 @@
         ],
         "modules": ["Comms Module", "Laser Guidance", "Offensive Protocols"]
       }
-    ],
-    "structurePts": 25,
-    "energyPts": 10,
-    "heatCap": 14,
-    "systemSlots": 16,
-    "moduleSlots": 3,
-    "cargoCap": 6,
-    "techLevel": 3,
-    "salvageValue": 5
+    ]
   },
   {
     "id": "01944f26-0843-4897-a72d-da19a56b1974",
     "name": "Little Sestra",
     "source": "Salvage Union Workshop Manual",
     "page": 128,
+    "stats": {
+      "structurePts": 15,
+      "energyPts": 8,
+      "heatCap": 10,
+      "systemSlots": 9,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 3,
+      "salvageValue": 7
+    },
     "chassisAbilities": [
       {
         "name": "Sestra Drone Controller",
@@ -997,21 +1035,23 @@
           "modules": ["Reactor Overload", "Laser Guidance"]
         }
       }
-    ],
-    "structurePts": 15,
-    "energyPts": 8,
-    "heatCap": 10,
-    "systemSlots": 9,
-    "moduleSlots": 3,
-    "cargoCap": 6,
-    "techLevel": 3,
-    "salvageValue": 7
+    ]
   },
   {
     "id": "c77fa33c-1c94-4b7f-a84e-dc6a37e1e527",
     "name": "Mantis",
     "source": "Salvage Union Workshop Manual",
     "page": 130,
+    "stats": {
+      "structurePts": 15,
+      "energyPts": 17,
+      "heatCap": 7,
+      "systemSlots": 9,
+      "moduleSlots": 6,
+      "cargoCap": 6,
+      "techLevel": 3,
+      "salvageValue": 7
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Frog Prince Module",
@@ -1112,21 +1152,23 @@
           "Reactor Overload"
         ]
       }
-    ],
-    "structurePts": 15,
-    "energyPts": 17,
-    "heatCap": 7,
-    "systemSlots": 9,
-    "moduleSlots": 6,
-    "cargoCap": 6,
-    "techLevel": 3,
-    "salvageValue": 7
+    ]
   },
   {
     "id": "7772b791-e24f-4944-b524-9105f0991d8f",
     "name": "Photon",
     "source": "Salvage Union Workshop Manual",
     "page": 132,
+    "stats": {
+      "structurePts": 20,
+      "energyPts": 10,
+      "heatCap": 12,
+      "systemSlots": 15,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 3,
+      "salvageValue": 8
+    },
     "chassisAbilities": [
       {
         "name": "Solar Reactor",
@@ -1181,21 +1223,23 @@
           "Energy Cell"
         ]
       }
-    ],
-    "structurePts": 20,
-    "energyPts": 10,
-    "heatCap": 12,
-    "systemSlots": 15,
-    "moduleSlots": 4,
-    "cargoCap": 6,
-    "techLevel": 3,
-    "salvageValue": 8
+    ]
   },
   {
     "id": "c1b7996e-6d98-44d8-bfc5-b6a029e0b4f4",
     "name": "Solo",
     "source": "Salvage Union Workshop Manual",
     "page": 134,
+    "stats": {
+      "structurePts": 16,
+      "energyPts": 13,
+      "heatCap": 10,
+      "systemSlots": 12,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 3,
+      "salvageValue": 4
+    },
     "chassisAbilities": [
       {
         "name": "Polycarbonate Stealth Chassis",
@@ -1256,21 +1300,23 @@
           "Laser Guidance"
         ]
       }
-    ],
-    "structurePts": 16,
-    "energyPts": 13,
-    "heatCap": 10,
-    "systemSlots": 12,
-    "moduleSlots": 4,
-    "cargoCap": 6,
-    "techLevel": 3,
-    "salvageValue": 4
+    ]
   },
   {
     "id": "c7dba8f0-cec4-4e32-a01f-5832da666afc",
     "name": "Terra",
     "source": "Salvage Union Workshop Manual",
     "page": 129,
+    "stats": {
+      "structurePts": 23,
+      "energyPts": 12,
+      "heatCap": 13,
+      "systemSlots": 18,
+      "moduleSlots": 3,
+      "cargoCap": 6,
+      "techLevel": 3,
+      "salvageValue": 9
+    },
     "chassisAbilities": [
       {
         "name": "Terraforming Bubble",
@@ -1322,21 +1368,23 @@
         ],
         "modules": ["Comms Module", "Deep Survey Scanner", "Energy Cell"]
       }
-    ],
-    "structurePts": 23,
-    "energyPts": 12,
-    "heatCap": 13,
-    "systemSlots": 18,
-    "moduleSlots": 3,
-    "cargoCap": 6,
-    "techLevel": 3,
-    "salvageValue": 9
+    ]
   },
   {
     "id": "70a37be9-5592-46b7-bbe5-5310ac2a0ed1",
     "name": "Aegis",
     "source": "Salvage Union Workshop Manual",
     "page": 138,
+    "stats": {
+      "structurePts": 24,
+      "energyPts": 16,
+      "heatCap": 14,
+      "systemSlots": 18,
+      "moduleSlots": 5,
+      "cargoCap": 6,
+      "techLevel": 4,
+      "salvageValue": 8
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Advanced Shield Projector",
@@ -1400,21 +1448,23 @@
           "Offensive Protocols"
         ]
       }
-    ],
-    "structurePts": 24,
-    "energyPts": 16,
-    "heatCap": 14,
-    "systemSlots": 18,
-    "moduleSlots": 5,
-    "cargoCap": 6,
-    "techLevel": 4,
-    "salvageValue": 8
+    ]
   },
   {
     "id": "e6f4410c-7356-4e05-9af2-9a48fe76e027",
     "name": "Colossus",
     "source": "Salvage Union Workshop Manual",
     "page": 140,
+    "stats": {
+      "structurePts": 36,
+      "energyPts": 12,
+      "heatCap": 16,
+      "systemSlots": 24,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 4,
+      "salvageValue": 16
+    },
     "chassisAbilities": [
       {
         "name": "Eradication Protocols",
@@ -1473,21 +1523,23 @@
           "Coolant Flow Manifold"
         ]
       }
-    ],
-    "structurePts": 36,
-    "energyPts": 12,
-    "heatCap": 16,
-    "systemSlots": 24,
-    "moduleSlots": 4,
-    "cargoCap": 6,
-    "techLevel": 4,
-    "salvageValue": 16
+    ]
   },
   {
     "id": "26850363-6398-4902-aff0-2acc9500027d",
     "name": "Consul",
     "source": "Salvage Union Workshop Manual",
     "page": 142,
+    "stats": {
+      "structurePts": 15,
+      "energyPts": 16,
+      "heatCap": 12,
+      "systemSlots": 12,
+      "moduleSlots": 5,
+      "cargoCap": 6,
+      "techLevel": 4,
+      "salvageValue": 3
+    },
     "chassisAbilities": [
       {
         "name": "Flashy",
@@ -1552,21 +1604,23 @@
           "Self-Destruct"
         ]
       }
-    ],
-    "structurePts": 15,
-    "energyPts": 16,
-    "heatCap": 12,
-    "systemSlots": 12,
-    "moduleSlots": 5,
-    "cargoCap": 6,
-    "techLevel": 4,
-    "salvageValue": 3
+    ]
   },
   {
     "id": "065ef9ea-4d21-449f-aed7-f67ac0d3dad6",
     "name": "Drop Bear",
     "source": "Salvage Union Workshop Manual",
     "page": 144,
+    "stats": {
+      "structurePts": 26,
+      "energyPts": 14,
+      "heatCap": 14,
+      "systemSlots": 16,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 4,
+      "salvageValue": 7
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Advanced Vectored Thrust Unit",
@@ -1630,21 +1684,23 @@
           "Thermal Optics"
         ]
       }
-    ],
-    "structurePts": 26,
-    "energyPts": 14,
-    "heatCap": 14,
-    "systemSlots": 16,
-    "moduleSlots": 4,
-    "cargoCap": 6,
-    "techLevel": 4,
-    "salvageValue": 7
+    ]
   },
   {
     "id": "175c3af3-8083-4733-8836-9596c210cd96",
     "name": "Vorpal",
     "source": "Salvage Union Workshop Manual",
     "page": 146,
+    "stats": {
+      "structurePts": 18,
+      "energyPts": 12,
+      "heatCap": 15,
+      "systemSlots": 15,
+      "moduleSlots": 4,
+      "cargoCap": 6,
+      "techLevel": 4,
+      "salvageValue": 4
+    },
     "chassisAbilities": [
       {
         "name": "Heat Efficient Reactor",
@@ -1698,29 +1754,23 @@
           "Weapon Link"
         ]
       }
-    ],
-    "structurePts": 18,
-    "energyPts": 12,
-    "heatCap": 15,
-    "systemSlots": 15,
-    "moduleSlots": 4,
-    "cargoCap": 6,
-    "techLevel": 4,
-    "salvageValue": 4
+    ]
   },
   {
     "id": "76abcfe2-5262-4f3b-953d-dcb88980871c",
     "name": "Carrier",
     "source": "Salvage Union Workshop Manual",
     "page": 148,
-    "structurePts": 35,
-    "energyPts": 16,
-    "heatCap": 12,
-    "systemSlots": 21,
-    "moduleSlots": 5,
-    "cargoCap": 6,
-    "techLevel": 5,
-    "salvageValue": 9,
+    "stats": {
+      "structurePts": 35,
+      "energyPts": 16,
+      "heatCap": 12,
+      "systemSlots": 21,
+      "moduleSlots": 5,
+      "cargoCap": 6,
+      "techLevel": 5,
+      "salvageValue": 9
+    },
     "chassisAbilities": [
       {
         "name": "Integrated Mech Bay",
@@ -1783,6 +1833,16 @@
     "name": "Eidolon",
     "source": "Salvage Union Workshop Manual",
     "page": 150,
+    "stats": {
+      "structurePts": 21,
+      "energyPts": 15,
+      "heatCap": 12,
+      "systemSlots": 15,
+      "moduleSlots": 7,
+      "cargoCap": 6,
+      "techLevel": 5,
+      "salvageValue": 5
+    },
     "chassisAbilities": [
       {
         "name": "Polycarbonate Stealth Chassis",
@@ -1854,21 +1914,23 @@
           "Offensive Protocols"
         ]
       }
-    ],
-    "structurePts": 21,
-    "energyPts": 15,
-    "heatCap": 12,
-    "systemSlots": 15,
-    "moduleSlots": 7,
-    "cargoCap": 6,
-    "techLevel": 5,
-    "salvageValue": 5
+    ]
   },
   {
     "id": "760d3f94-245d-4260-b071-2df4f8541905",
     "name": "Neura-Phage",
     "source": "Salvage Union Workshop Manual",
     "page": 152,
+    "stats": {
+      "structurePts": 29,
+      "energyPts": 11,
+      "heatCap": 13,
+      "systemSlots": 18,
+      "moduleSlots": 6,
+      "cargoCap": 6,
+      "techLevel": 5,
+      "salvageValue": 9
+    },
     "chassisAbilities": [
       {
         "name": "Cybernetic Neuralink",
@@ -1923,21 +1985,23 @@
           "Weapon Guidance"
         ]
       }
-    ],
-    "structurePts": 29,
-    "energyPts": 11,
-    "heatCap": 13,
-    "systemSlots": 18,
-    "moduleSlots": 6,
-    "cargoCap": 6,
-    "techLevel": 5,
-    "salvageValue": 9
+    ]
   },
   {
     "id": "33839393-b860-4fa7-a410-6ba6dc82d941",
     "name": "Iron Wyrm",
     "source": "Salvage Union Workshop Manual",
     "page": 154,
+    "stats": {
+      "structurePts": 46,
+      "energyPts": 15,
+      "heatCap": 19,
+      "systemSlots": 24,
+      "moduleSlots": 5,
+      "cargoCap": 6,
+      "techLevel": 6,
+      "salvageValue": 17
+    },
     "chassisAbilities": [
       {
         "name": "Burrower",
@@ -1996,21 +2060,23 @@
           "Thermal Optics"
         ]
       }
-    ],
-    "structurePts": 46,
-    "energyPts": 15,
-    "heatCap": 19,
-    "systemSlots": 24,
-    "moduleSlots": 5,
-    "cargoCap": 6,
-    "techLevel": 6,
-    "salvageValue": 17
+    ]
   },
   {
     "id": "bedfa4d4-b1b2-4130-8e7b-efcd235da430",
     "name": "Leviathan",
     "source": "Salvage Union Workshop Manual",
     "page": 156,
+    "stats": {
+      "structurePts": 76,
+      "energyPts": 14,
+      "heatCap": 18,
+      "systemSlots": 36,
+      "moduleSlots": 6,
+      "cargoCap": 6,
+      "techLevel": 6,
+      "salvageValue": 20
+    },
     "chassisAbilities": [
       {
         "name": "Juggernaut",
@@ -2088,21 +2154,23 @@
           "Firewall"
         ]
       }
-    ],
-    "structurePts": 76,
-    "energyPts": 14,
-    "heatCap": 18,
-    "systemSlots": 36,
-    "moduleSlots": 6,
-    "cargoCap": 6,
-    "techLevel": 6,
-    "salvageValue": 20
+    ]
   },
   {
     "id": "7b7f33cf-88db-41dd-8e11-fd7fc264c4bb",
     "name": "Shaitan",
     "source": "Salvage Union Workshop Manual",
     "page": 158,
+    "stats": {
+      "structurePts": 21,
+      "energyPts": 20,
+      "heatCap": 14,
+      "systemSlots": 15,
+      "moduleSlots": 10,
+      "cargoCap": 6,
+      "techLevel": 6,
+      "salvageValue": 6
+    },
     "chassisAbilities": [
       {
         "name": "Integrated VTU System",
@@ -2187,14 +2255,6 @@
           "Video Recording Array"
         ]
       }
-    ],
-    "structurePts": 21,
-    "energyPts": 20,
-    "heatCap": 14,
-    "systemSlots": 15,
-    "moduleSlots": 10,
-    "cargoCap": 6,
-    "techLevel": 6,
-    "salvageValue": 6
+    ]
   }
 ]

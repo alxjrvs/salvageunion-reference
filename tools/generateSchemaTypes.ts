@@ -228,14 +228,24 @@ async function generateTypes() {
     // The main type name - override the schema title
     const typeName = `SURef${singularName}`
 
-    // Override the title to control the generated type name
-    const schemaWithCustomTitle = {
-      ...schema,
-      title: typeName,
+    // Extract the items definition if this is an array schema
+    // This creates singular types instead of array types
+    let schemaToCompile
+    if (schema.type === 'array' && schema.items) {
+      schemaToCompile = {
+        ...schema.items,
+        title: typeName,
+        definitions: schema.definitions, // Preserve any definitions
+      }
+    } else {
+      schemaToCompile = {
+        ...schema,
+        title: typeName,
+      }
     }
 
     try {
-      const compiled = await compile(schemaWithCustomTitle, typeName, {
+      const compiled = await compile(schemaToCompile, typeName, {
         bannerComment: '',
         declareExternallyReferenced: false, // Inline all types to avoid duplicates
         cwd: SCHEMAS_DIR,
@@ -296,6 +306,49 @@ async function generateTypes() {
       console.error(`❌ Error processing ${schemaFile}:`, error)
     }
   }
+
+  // Add helper union types at the end
+  // Generate SURefSchemaName from SCHEMA_NAME_MAP keys
+  const schemaNames = Object.keys(SCHEMA_NAME_MAP)
+    .sort()
+    .map((name) => `  | '${name}'`)
+    .join('\n')
+
+  // Generate SURefEntity from SCHEMA_NAME_MAP values
+  const entityTypes = Object.values(SCHEMA_NAME_MAP)
+    .sort()
+    .map((name) => `  | SURef${name}`)
+    .join('\n')
+
+  const helperUnionTypes = `
+// ============================================
+// Helper Union Types
+// ============================================
+
+/**
+ * Union of all valid schema names (kebab-case file names)
+ */
+export type SURefSchemaName =
+${schemaNames}
+
+/**
+ * Union of all file-level schema entity types
+ */
+export type SURefEntity =
+${entityTypes}
+
+/**
+ * Union of all valid meta schema names (includes actions)
+ */
+export type SURefMetaSchemaName = SURefSchemaName | 'actions'
+
+/**
+ * Union of all meta entity types (includes actions)
+ */
+export type SURefMetaEntity = SURefEntity | SURefMetaAction
+`
+
+  typeDefinitions.push(helperUnionTypes)
 
   // Write output file
   const output = typeDefinitions.join('\n')
