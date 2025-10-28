@@ -38,7 +38,7 @@
         "description": "What happens when this bay is damaged"
       },
       "npc": {
-        "$ref": "shared/common.schema.json#/definitions/npc"
+        "$ref": "shared/objects.schema.json#/definitions/npc"
       },
       "techLevelEffects": {
         "type": "array",
@@ -46,11 +46,7 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "techLevelMin",
-            "techLevelMax",
-            "effect"
-          ],
+          "required": ["techLevelMin", "techLevelMax", "effect"],
           "properties": {
             "techLevelMin": {
               "type": "integer",
@@ -72,10 +68,10 @@
         }
       },
       "choices": {
-        "$ref": "shared/common.schema.json#/definitions/choices"
+        "$ref": "shared/objects.schema.json#/definitions/choices"
       },
       "table": {
-        "$ref": "shared/common.schema.json#/definitions/table"
+        "$ref": "shared/objects.schema.json#/definitions/table"
       },
       "actions": {
         "type": "array",

@@ -72,30 +72,27 @@ export type SURefTrait = SURefTraitList[number]
 export type SURefVehicle = SURefVehicleList[number]
 
 // Union type for all classes
-export type SURefClass = SURefAdvancedClass | SURefCoreClass | SURefHybridClass
-export type SURefClassList = Array<SURefClass>
+export type SURefMetaClass =
+  | SURefAdvancedClass
+  | SURefCoreClass
+  | SURefHybridClass
+export type SURefClassList = Array<SURefMetaClass>
 
 // Shared trait type (inferred from actual usage in data)
-export type SURefTraitMetaList = NonNullable<
-  | SURefAbility['traits']
-  | SURefEquipment['traits']
-  | SURefModule['traits']
-  | SURefSystem['traits']
->
+// Since all traits reference the same schema definition, we can use a single source
+export type SURefTraitMeta = NonNullable<SURefAbility['traits']>[number]
 
-export type SURefActionMetaList = NonNullable<
-  | NonNullable<SURefAbility['subAbilities']>[number]
-  | NonNullable<SURefSystem['actions']>[number]
-  | NonNullable<SURefModule['actions']>[number]
-  | NonNullable<SURefEquipment['actions']>[number]
-  | SURefBioTitan['abilities'][number]
-  | SURefNPC['abilities'][number]
-  | NonNullable<SURefMeld['abilities']>[number]
-  | NonNullable<SURefSquad['abilities']>[number]
-  | SURefCreature['abilities'][number]
->
+// Legacy alias for backwards compatibility
+export type SURefMetaTrait = SURefTraitMeta[]
 
-export type SURefMetaTable =
+// Action type - all actions reference shared/objects.schema.json#/definitions/action
+// So we can use any single source as the canonical type
+export type SURefActionMeta = NonNullable<SURefBioTitan['actions']>[number]
+
+// Legacy alias for backwards compatibility
+export type SURefActionMetaList = SURefActionMeta
+
+export type SURefTableMeta =
   | SURefRollTable['table']
   | SURefSystem['table']
   | SURefEquipment['table']
@@ -120,10 +117,11 @@ export type SURefEntity =
   | SURefRollTable
   | SURefCrawler
   | SURefCrawlerTechLevel
-  | SURefClass
+  | SURefMetaClass
   | SURefCrawlerBay
   | SURefChassis
 
+export type SURefMetaActionSchemaName = 'actions'
 export type SURefSchemaName =
   | 'vehicles'
   | 'creatures'
@@ -147,6 +145,7 @@ export type SURefSchemaName =
   | 'classes.hybrid'
   | 'crawler-bays'
   | 'chassis'
+  | SURefMetaActionSchemaName
 
 export type SURefEntityName =
   | 'Vehicle'

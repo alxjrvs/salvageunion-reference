@@ -4,6 +4,53 @@
   "title": "Salvage Union Object Definitions",
   "description": "Shared complex object definitions for Salvage Union game data",
   "definitions": {
+    "damage": {
+      "description": "Damage dealt by an attack or ability",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "amount"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["HP", "SP"],
+          "description": "Type of damage (Hit Points or Structure Points)"
+        },
+        "amount": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Amount of damage dealt"
+            },
+            {
+              "type": "string",
+              "description": "Variable damage formula"
+            }
+          ]
+        }
+      }
+    },
+    "traits": {
+      "type": "array",
+      "description": "Special traits and properties of items, systems, or abilities",
+      "items": {
+        "type": "object",
+        "description": "Trait without a numeric value",
+        "additionalProperties": false,
+        "required": ["type"],
+        "properties": {
+          "amount": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Numeric value for the trait"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of trait that doesn't require a numeric value"
+          }
+        }
+      }
+    },
     "stats": {
       "type": "object",
       "description": "Statistics for mechs, chassis, and vehicles",
@@ -55,6 +102,62 @@
         }
       }
     },
+    "npc": {
+      "type": "object",
+      "description": "NPC associated with an entity",
+      "additionalProperties": false,
+      "required": ["position", "description"],
+      "properties": {
+        "position": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Name of the NPC"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the NPC"
+        },
+        "hitPoints": {
+          "$ref": "common.schema.json#/definitions/hitPoints"
+        },
+        "choices": {
+          "$ref": "#/definitions/choices"
+        }
+      }
+    },
+    "choice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name"],
+      "properties": {
+        "id": {
+          "$ref": "common.schema.json#/definitions/id"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Name of the choice"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the choice"
+        },
+        "schema": {
+          "type": "array",
+          "description": "Schema for the choice",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "choices": {
+      "type": "array",
+      "description": "Choices available to the player when interacting with the NPC",
+      "items": {
+        "$ref": "#/definitions/choice"
+      }
+    },
     "action": {
       "type": "object",
       "description": "An action, ability, or attack that can be performed",
@@ -87,13 +190,13 @@
           "$ref": "enums.schema.json#/definitions/actionType"
         },
         "traits": {
-          "$ref": "common.schema.json#/definitions/traits"
+          "$ref": "#/definitions/traits"
         },
         "damage": {
-          "$ref": "common.schema.json#/definitions/damage"
+          "$ref": "#/definitions/damage"
         },
         "stats": {
-          "$ref": "objects.schema.json#/definitions/stats"
+          "$ref": "#/definitions/stats"
         },
         "options": {
           "type": "array",
@@ -124,10 +227,10 @@
           }
         },
         "choices": {
-          "$ref": "common.schema.json#/definitions/choices"
+          "$ref": "#/definitions/choices"
         },
         "table": {
-          "$ref": "common.schema.json#/definitions/table"
+          "$ref": "#/definitions/table"
         },
         "page": {
           "type": "integer",
@@ -173,7 +276,7 @@
           "description": "Whether this is a recommended starting system"
         },
         "traits": {
-          "$ref": "common.schema.json#/definitions/traits"
+          "$ref": "#/definitions/traits"
         },
         "description": {
           "type": "string",
@@ -190,10 +293,10 @@
           "$ref": "enums.schema.json#/definitions/range"
         },
         "damage": {
-          "$ref": "common.schema.json#/definitions/damage"
+          "$ref": "#/definitions/damage"
         },
         "table": {
-          "$ref": "common.schema.json#/definitions/table"
+          "$ref": "#/definitions/table"
         },
         "actionType": {
           "$ref": "enums.schema.json#/definitions/actionType"
@@ -202,7 +305,7 @@
           "type": "array",
           "description": "Actions that can be performed with this system",
           "items": {
-            "$ref": "objects.schema.json#/definitions/action"
+            "$ref": "#/definitions/action"
           }
         },
         "statBonus": {
@@ -233,92 +336,194 @@
         }
       }
     },
-    "embeddedSystem": {
+    "table": {
+      "description": "Roll table for random outcomes based on d20 rolls",
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "Standard roll table with 5 outcome ranges",
+          "additionalProperties": false,
+          "required": ["type", "1", "20", "11-19", "6-10", "2-5"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "standard"
+            },
+            "1": {
+              "type": "string",
+              "description": "Critical failure outcome"
+            },
+            "20": {
+              "type": "string",
+              "description": "Critical success outcome"
+            },
+            "11-19": {
+              "type": "string",
+              "description": "High success outcome"
+            },
+            "6-10": {
+              "type": "string",
+              "description": "Moderate outcome"
+            },
+            "2-5": {
+              "type": "string",
+              "description": "Low outcome"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "description": "Alternative standard roll table with different ranges",
+          "additionalProperties": false,
+          "required": ["type", "1", "19-20", "11-18", "6-10", "2-5"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "alternate"
+            },
+            "1": {
+              "type": "string",
+              "description": "Critical failure outcome"
+            },
+            "19-20": {
+              "type": "string",
+              "description": "Critical success outcome"
+            },
+            "11-18": {
+              "type": "string",
+              "description": "High success outcome"
+            },
+            "6-10": {
+              "type": "string",
+              "description": "Moderate outcome"
+            },
+            "2-5": {
+              "type": "string",
+              "description": "Low outcome"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "description": "Flat roll table with individual outcomes for each numeric result",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "flat"
+            },
+            "1": {
+              "type": "string"
+            },
+            "2": {
+              "type": "string"
+            },
+            "3": {
+              "type": "string"
+            },
+            "4": {
+              "type": "string"
+            },
+            "5": {
+              "type": "string"
+            },
+            "6": {
+              "type": "string"
+            },
+            "7": {
+              "type": "string"
+            },
+            "8": {
+              "type": "string"
+            },
+            "9": {
+              "type": "string"
+            },
+            "10": {
+              "type": "string"
+            },
+            "11": {
+              "type": "string"
+            },
+            "12": {
+              "type": "string"
+            },
+            "13": {
+              "type": "string"
+            },
+            "14": {
+              "type": "string"
+            },
+            "15": {
+              "type": "string"
+            },
+            "16": {
+              "type": "string"
+            },
+            "17": {
+              "type": "string"
+            },
+            "18": {
+              "type": "string"
+            },
+            "19": {
+              "type": "string"
+            },
+            "20": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "entry": {
       "type": "object",
-      "description": "A system or module embedded within another entity (drone, vehicle, etc.) that doesn't have its own page reference",
+      "description": "Basic entry with name, description, source, and page reference",
       "additionalProperties": false,
-      "required": ["name"],
+      "required": ["id", "name", "source", "page"],
       "properties": {
+        "id": {
+          "$ref": "common.schema.json#/definitions/id"
+        },
         "name": {
           "type": "string",
           "minLength": 1,
-          "description": "Name of the system or module"
+          "description": "Name of the entry"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the entry"
         },
         "source": {
           "$ref": "enums.schema.json#/definitions/source"
         },
-        "techLevel": {
+        "page": {
           "type": "integer",
-          "minimum": 0,
-          "description": "Technology level required"
-        },
-        "slotsRequired": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Number of slots required to install"
-        },
-        "salvageValue": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Salvage value in scrap"
-        },
-        "recommended": {
-          "type": "boolean",
-          "description": "Whether this is a recommended starting system"
-        },
-        "traits": {
-          "$ref": "common.schema.json#/definitions/traits"
-        },
-        "description": {
-          "type": "string",
-          "description": "Description of the system or module"
-        },
-        "notes": {
-          "type": "string",
-          "description": "Additional notes"
-        },
-        "activationCost": {
-          "$ref": "common.schema.json#/definitions/activationCost"
-        },
-        "range": {
-          "$ref": "enums.schema.json#/definitions/range"
-        },
-        "damage": {
-          "$ref": "common.schema.json#/definitions/damage"
-        },
-        "table": {
-          "$ref": "common.schema.json#/definitions/table"
-        },
-        "actionType": {
-          "$ref": "enums.schema.json#/definitions/actionType"
-        },
-        "actions": {
-          "type": "array",
-          "description": "Actions that can be performed with this system",
-          "items": {
-            "$ref": "objects.schema.json#/definitions/action"
-          }
-        },
-        "statBonus": {
-          "type": "object",
-          "description": "Bonus to a specific stat",
-          "additionalProperties": false,
-          "required": ["stat", "bonus"],
-          "properties": {
-            "stat": {
-              "type": "string",
-              "description": "Name of the stat to bonus"
-            },
-            "bonus": {
-              "type": "integer",
-              "description": "Amount of bonus to apply"
-            }
-          }
-        },
-        "count": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Number of this system included"
+          "minimum": 1,
+          "description": "Page number in the source book"
         }
       }
     }

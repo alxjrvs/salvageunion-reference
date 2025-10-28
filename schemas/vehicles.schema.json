@@ -42,7 +42,7 @@
         }
       },
       "traits": {
-        "$ref": "shared/common.schema.json#/definitions/traits"
+        "$ref": "shared/objects.schema.json#/definitions/traits"
       },
       "page": {
         "type": "integer",

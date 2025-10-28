@@ -25,7 +25,7 @@
         "$ref": "shared/common.schema.json#/definitions/techLevel"
       },
       "traits": {
-        "$ref": "shared/common.schema.json#/definitions/traits"
+        "$ref": "shared/objects.schema.json#/definitions/traits"
       },
       "description": {
         "type": "string",
@@ -42,13 +42,13 @@
         "$ref": "shared/enums.schema.json#/definitions/range"
       },
       "damage": {
-        "$ref": "shared/common.schema.json#/definitions/damage"
+        "$ref": "shared/objects.schema.json#/definitions/damage"
       },
       "actionType": {
         "$ref": "shared/enums.schema.json#/definitions/actionType"
       },
       "table": {
-        "$ref": "shared/common.schema.json#/definitions/table"
+        "$ref": "shared/objects.schema.json#/definitions/table"
       },
       "actions": {
         "type": "array",

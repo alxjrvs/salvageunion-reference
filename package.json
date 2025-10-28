@@ -28,6 +28,7 @@
     "validate:ids": "tsx tools/checkUniqueIds.ts",
     "fix:ids": "tsx tools/generateMissingIds.ts",
     "docs": "tsx tools/generateDocs.ts",
+    "generate:types": "tsx tools/generateSchemaTypes.ts",
     "typecheck": "tsc --project tsconfig.build.json --noEmit",
     "test": "vitest",
     "lint": "eslint .",

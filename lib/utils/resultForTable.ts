@@ -1,4 +1,4 @@
-import type { SURefMetaTable } from '../types/inferred.js'
+import type { SURefTableMeta } from '../types/inferred.js'
 
 /**
  * Result type for table roll resolution
@@ -22,7 +22,7 @@ export type TableRollResult = { success: boolean; result: string; key: string }
  * }
  */
 export function resultForTable(
-  table: SURefMetaTable | undefined,
+  table: SURefTableMeta | undefined,
   roll: number
 ): TableRollResult {
   if (!table) {

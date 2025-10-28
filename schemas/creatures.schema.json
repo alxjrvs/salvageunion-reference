@@ -8,13 +8,7 @@
     "type": "object",
     "description": "A creature",
     "additionalProperties": false,
-    "required": [
-      "id",
-      "name",
-      "source",
-      "hitPoints",
-      "page"
-    ],
+    "required": ["id", "name", "source", "hitPoints", "page"],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
@@ -42,7 +36,7 @@
         }
       },
       "traits": {
-        "$ref": "shared/common.schema.json#/definitions/traits"
+        "$ref": "shared/objects.schema.json#/definitions/traits"
       },
       "page": {
         "type": "integer",

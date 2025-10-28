@@ -8,22 +8,13 @@
     "type": "object",
     "description": "A meld-infected creature",
     "additionalProperties": false,
-    "required": [
-      "id",
-      "name",
-      "source",
-      "page"
-    ],
+    "required": ["id", "name", "source", "page"],
     "oneOf": [
       {
-        "required": [
-          "hitPoints"
-        ]
+        "required": ["hitPoints"]
       },
       {
-        "required": [
-          "structurePoints"
-        ]
+        "required": ["structurePoints"]
       }
     ],
     "properties": {
@@ -59,7 +50,7 @@
         }
       },
       "traits": {
-        "$ref": "shared/common.schema.json#/definitions/traits"
+        "$ref": "shared/objects.schema.json#/definitions/traits"
       },
       "page": {
         "type": "integer",

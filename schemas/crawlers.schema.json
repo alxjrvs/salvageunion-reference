@@ -8,12 +8,7 @@
     "type": "object",
     "description": "A crawler vehicle",
     "additionalProperties": false,
-    "required": [
-      "id",
-      "name",
-      "source",
-      "page"
-    ],
+    "required": ["id", "name", "source", "page"],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"
@@ -31,7 +26,7 @@
         "description": "Description of the crawler"
       },
       "npc": {
-        "$ref": "shared/common.schema.json#/definitions/npc"
+        "$ref": "shared/objects.schema.json#/definitions/npc"
       },
       "actions": {
         "type": "array",

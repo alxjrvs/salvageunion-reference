@@ -26,7 +26,7 @@
         "$ref": "shared/enums.schema.json#/definitions/source"
       },
       "table": {
-        "$ref": "shared/common.schema.json#/definitions/table"
+        "$ref": "shared/objects.schema.json#/definitions/table"
       },
       "page": {
         "type": "integer",

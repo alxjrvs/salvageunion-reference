@@ -21,8 +21,45 @@
       "source": {
         "$ref": "shared/enums.schema.json#/definitions/source"
       },
-      "stats": {
-        "$ref": "shared/objects.schema.json#/definitions/stats"
+      "structurePts": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Structure points (durability)"
+      },
+      "energyPts": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Energy points (power capacity)"
+      },
+      "heatCap": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Heat capacity"
+      },
+      "systemSlots": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Number of system slots"
+      },
+      "moduleSlots": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Number of module slots"
+      },
+      "cargoCap": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Cargo capacity"
+      },
+      "techLevel": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Technology level"
+      },
+      "salvageValue": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Salvage value in scrap"
       },
       "chassisAbilities": {
         "type": "array",
