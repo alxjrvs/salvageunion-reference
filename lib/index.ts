@@ -24,13 +24,13 @@ import type {
   SURefKeyword,
   SURefMeld,
   SURefModule,
-  SURefNPC,
+  SURefNpc,
   SURefRollTable,
   SURefSquad,
   SURefSystem,
   SURefTrait,
   SURefVehicle,
-} from './types/inferred.js'
+} from './types/generated.js'
 
 export { BaseModel } from './BaseModel.js'
 
@@ -38,12 +38,7 @@ export { getDataMaps, getSchemaCatalog } from './ModelFactory.js'
 
 export { resultForTable, type TableRollResult } from './utils/resultForTable.js'
 
-export type {
-  SURefEntity,
-  SURefSchemaName,
-  SURefEntityName,
-} from './types/inferred.js'
-export type * from './types/inferred.js'
+export type * from './types/generated.js'
 
 // Type mapping from schema names to entity types
 type SchemaToEntityMap = {
@@ -51,7 +46,7 @@ type SchemaToEntityMap = {
   creatures: SURefCreature
   drones: SURefDrone
   'bio-titans': SURefBioTitan
-  npcs: SURefNPC
+  npcs: SURefNpc
   squads: SURefSquad
   meld: SURefMeld
   keywords: SURefKeyword
@@ -130,7 +125,7 @@ export class SalvageUnionReference {
   public static readonly Keywords = models.Keywords as BaseModel<SURefKeyword>
   public static readonly Meld = models.Meld as BaseModel<SURefMeld>
   public static readonly Modules = models.Modules as BaseModel<SURefModule>
-  public static readonly NPCs = models.NPCs as BaseModel<SURefNPC>
+  public static readonly NPCs = models.NPCs as BaseModel<SURefNpc>
   public static readonly RollTables =
     models.RollTables as BaseModel<SURefRollTable>
   public static readonly Squads = models.Squads as BaseModel<SURefSquad>

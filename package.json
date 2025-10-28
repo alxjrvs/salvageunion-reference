@@ -22,8 +22,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "rm -rf dist && bun run docs && bun run validate && tsc --project tsconfig.build.json && bun run format && bun run lint",
-    "prepublishOnly": "npm run build && npm run validate && npm run typecheck",
+    "build": "rm -rf dist && bun run validate && bun run docs && bun run generate:types && tsc --project tsconfig.build.json && bun run format && bun run lint",
+    "prepublishOnly": "npm run build && npm run typecheck",
     "validate": "tsx tools/validateAll.ts",
     "validate:ids": "tsx tools/checkUniqueIds.ts",
     "fix:ids": "tsx tools/generateMissingIds.ts",

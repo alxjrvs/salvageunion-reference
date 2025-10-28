@@ -1,365 +1,312 @@
-#!/usr/bin/env tsx
+import { compile, JSONSchema } from 'json-schema-to-typescript'
+import * as fs from 'fs'
+import * as path from 'path'
+import { fileURLToPath } from 'url'
 
 /**
  * Generate TypeScript types from JSON Schema files
- * Uses json-schema-to-typescript to create clean, schema-based types
  *
- * Strategy:
- * 1. Generate shared types from definitions in shared schemas
- * 2. Generate main schema types
- * 3. Deduplicate and clean up output
+ * Naming conventions:
+ * - All types prefixed with SURef
+ * - objects.schema definitions: SURefMeta<SingularName> (e.g., SURefMetaDamage)
+ * - Main schema types: SURef<SingularName> (e.g., SURefAbility)
+ * - Arrays: SURef<PluralName>List (e.g., SURefAbilityList)
  */
 
-import { compile, type JSONSchema } from 'json-schema-to-typescript'
-import {
-  readFileSync,
-  writeFileSync,
-  readdirSync,
-  mkdirSync,
-  existsSync,
-} from 'fs'
-import { join } from 'path'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
-const SCHEMAS_DIR = join(process.cwd(), 'schemas')
-const SHARED_DIR = join(SCHEMAS_DIR, 'shared')
-const OUTPUT_DIR = join(process.cwd(), 'lib', 'types')
-const OUTPUT_FILE = join(OUTPUT_DIR, 'schema-generated.ts')
+const SCHEMAS_DIR = path.join(__dirname, '../schemas')
+const SHARED_DIR = path.join(SCHEMAS_DIR, 'shared')
+const OUTPUT_FILE = path.join(__dirname, '../lib/types/generated.ts')
 
-// Track generated type names to avoid duplicates
-const generatedTypes = new Set<string>()
-
-interface SchemaDefinition {
-  name: string
-  path: string
-  typeName: string
+// Mapping from schema file names to singular entity names
+const SCHEMA_NAME_MAP: Record<string, string> = {
+  abilities: 'Ability',
+  'ability-tree-requirements': 'AbilityTreeRequirement',
+  'bio-titans': 'BioTitan',
+  chassis: 'Chassis',
+  'classes.advanced': 'AdvancedClass',
+  'classes.core': 'CoreClass',
+  'classes.hybrid': 'HybridClass',
+  'crawler-bays': 'CrawlerBay',
+  'crawler-tech-levels': 'CrawlerTechLevel',
+  crawlers: 'Crawler',
+  creatures: 'Creature',
+  drones: 'Drone',
+  equipment: 'Equipment',
+  keywords: 'Keyword',
+  meld: 'Meld',
+  modules: 'Module',
+  npcs: 'Npc',
+  'roll-tables': 'RollTable',
+  squads: 'Squad',
+  systems: 'System',
+  traits: 'Trait',
+  vehicles: 'Vehicle',
 }
 
-/**
- * Get all schema files to process
- */
-function getSchemaFiles(): SchemaDefinition[] {
-  const schemaFiles = readdirSync(SCHEMAS_DIR)
-    .filter((f) => f.endsWith('.schema.json') && f !== 'index.json')
-    .map((f) => {
-      const name = f.replace('.schema.json', '')
-      const typeName = toTypeName(name)
-      return {
-        name,
-        path: join(SCHEMAS_DIR, f),
-        typeName,
-      }
-    })
-
-  return schemaFiles
+// Mapping for objects.schema definitions to singular names
+const OBJECTS_META_MAP: Record<string, string> = {
+  action: 'Action',
+  choice: 'Choice',
+  choices: 'Choices',
+  damage: 'Damage',
+  entry: 'Entry',
+  npc: 'Npc',
+  stats: 'Stats',
+  system: 'System',
+  table: 'Table',
+  traits: 'Traits',
 }
 
-/**
- * Get shared schema definitions
- */
-function getSharedSchemas(): SchemaDefinition[] {
-  return [
-    {
-      name: 'common',
-      path: join(SHARED_DIR, 'common.schema.json'),
-      typeName: 'Common',
-    },
-    {
-      name: 'enums',
-      path: join(SHARED_DIR, 'enums.schema.json'),
-      typeName: 'Enums',
-    },
-    {
-      name: 'objects',
-      path: join(SHARED_DIR, 'objects.schema.json'),
-      typeName: 'Objects',
-    },
-  ]
+// Capitalize first letter
+function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-/**
- * Convert schema name to TypeScript type name
- */
-function toTypeName(schemaName: string): string {
-  // Handle special cases
-  if (schemaName.includes('.')) {
-    const [prefix, suffix] = schemaName.split('.')
-    return toPascalCase(suffix) + toPascalCase(prefix)
-  }
-
-  return toPascalCase(schemaName)
-}
-
-/**
- * Convert kebab-case to PascalCase
- */
-function toPascalCase(str: string): string {
-  return str
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('')
-}
-
-/**
- * Resolve $ref in a schema by loading the referenced schema
- */
-function resolveRefs(schema: unknown, basePath: string): JSONSchema {
-  if (typeof schema !== 'object' || schema === null) {
-    return schema as JSONSchema
-  }
-
-  if (Array.isArray(schema)) {
-    return schema.map((item) => resolveRefs(item, basePath)) as JSONSchema
-  }
-
-  const resolved: Record<string, unknown> = {}
-  for (const [key, value] of Object.entries(schema)) {
-    if (key === '$ref' && typeof value === 'string') {
-      // Parse the $ref
-      const [filePath, defPath] = value.split('#')
-      if (filePath) {
-        // Load the referenced file
-        let refFilePath = join(basePath, filePath)
-
-        // If the file doesn't exist, it might be a shared schema referenced from another shared schema
-        // Try looking in the shared directory
-        if (!existsSync(refFilePath)) {
-          refFilePath = join(SHARED_DIR, filePath)
-        }
-
-        const refSchema = JSON.parse(readFileSync(refFilePath, 'utf-8'))
-        const newBasePath = join(refFilePath, '..')
-
-        // Navigate to the definition
-        if (defPath) {
-          const parts = defPath.split('/').filter(Boolean)
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          let def: any = refSchema
-          for (const part of parts) {
-            def = def[part]
-          }
-          return resolveRefs(def, newBasePath)
-        }
-        return resolveRefs(refSchema, newBasePath)
-      }
-    } else {
-      resolved[key] = resolveRefs(value, basePath)
-    }
-  }
-  return resolved as JSONSchema
-}
-
-/**
- * Compile shared definitions from a schema file
- */
-async function compileSharedDefinitions(
-  schemaPath: string,
-  schemaName: string
-): Promise<string> {
-  try {
-    const schemaContent = JSON.parse(readFileSync(schemaPath, 'utf-8'))
-    if (!schemaContent.definitions) {
-      return ''
-    }
-
-    const basePath = join(schemaPath, '..')
-    let output = ''
-
-    for (const [defName, defSchema] of Object.entries(
-      schemaContent.definitions
-    )) {
-      const typeName = toPascalCase(defName)
-
-      // Skip if already generated
-      if (generatedTypes.has(typeName)) {
-        continue
-      }
-
-      // Resolve all $refs in this definition
-      const resolvedSchema = resolveRefs(defSchema, basePath)
-
-      const typeCode = await compile(resolvedSchema, typeName, {
-        bannerComment: '',
-        unreachableDefinitions: true,
-        additionalProperties: false,
-      })
-
-      generatedTypes.add(typeName)
-      output += typeCode + '\n'
-    }
-    return output
-  } catch (error) {
-    console.error(
-      `❌ Error compiling shared definitions from ${schemaName}:`,
-      error
-    )
-    return `// Error compiling ${schemaName}\n`
-  }
-}
-
-/**
- * Compile a main schema file to TypeScript
- */
-async function compileMainSchema(schema: SchemaDefinition): Promise<string> {
-  try {
-    const schemaContent = JSON.parse(readFileSync(schema.path, 'utf-8'))
-    const basePath = join(schema.path, '..')
-
-    // For array schemas, compile the items schema
-    if (schemaContent.type === 'array' && schemaContent.items) {
-      const finalItemTypeName = schema.typeName.replace(/List$/, '')
-
-      // Check if this type was already generated (e.g., as a shared definition)
-      if (generatedTypes.has(finalItemTypeName)) {
-        // Just create the array type alias
-        return `\nexport type ${schema.typeName} = ${finalItemTypeName}[]\n`
-      }
-
-      // Use a temporary name for the item type, then rename it
-      const itemTypeName = finalItemTypeName + 'Item'
-
-      // Resolve all $refs in the items schema
-      const resolvedItems = resolveRefs(schemaContent.items, basePath)
-
-      const typeCode = await compile(resolvedItems, itemTypeName, {
-        bannerComment: '',
-        unreachableDefinitions: true,
-        additionalProperties: false,
-      })
-
-      // Extract only the main type, filter out duplicates, and rename
-      const cleanedCode = removeDuplicateTypes(typeCode).replace(
-        new RegExp(`\\b${itemTypeName}\\b`, 'g'),
-        finalItemTypeName
-      )
-
-      // Mark this type as generated
-      generatedTypes.add(finalItemTypeName)
-
-      const arrayType = `\nexport type ${schema.typeName} = ${finalItemTypeName}[]\n`
-
-      return cleanedCode + arrayType
-    }
-
-    // For non-array schemas, compile directly
-    const resolvedSchema = resolveRefs(schemaContent, basePath)
-    const typeCode = await compile(resolvedSchema, schema.typeName, {
-      bannerComment: '',
-      unreachableDefinitions: true,
-      additionalProperties: false,
-    })
-
-    generatedTypes.add(schema.typeName)
-    return removeDuplicateTypes(typeCode)
-  } catch (error) {
-    console.error(`❌ Error compiling ${schema.name}:`, error)
-    return `// Error compiling ${schema.name}\n`
-  }
-}
-
-/**
- * Remove duplicate type definitions that were already generated
- */
-function removeDuplicateTypes(typeCode: string): string {
-  const lines = typeCode.split('\n')
-  const output: string[] = []
-  let skipUntilNextExport = false
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i]
-
-    // Check if this is an export line
-    if (
-      line.startsWith('export type ') ||
-      line.startsWith('export interface ')
-    ) {
-      const match = line.match(/export (?:type|interface) (\w+)/)
-      if (match) {
-        const typeName = match[1]
-        if (generatedTypes.has(typeName)) {
-          // Skip this type definition
-          skipUntilNextExport = true
-          continue
-        }
-      }
-      skipUntilNextExport = false
-    }
-
-    if (!skipUntilNextExport) {
-      output.push(line)
-    }
-  }
-
-  return output.join('\n')
-}
-
-/**
- * Generate all types
- */
 async function generateTypes() {
-  console.log('🔧 Generating TypeScript types from JSON Schemas...\n')
+  console.log('🔧 Generating TypeScript types from JSON Schema...\n')
 
-  // Ensure output directory exists
-  mkdirSync(OUTPUT_DIR, { recursive: true })
+  const typeDefinitions: string[] = []
 
-  let output = `/**
- * AUTO-GENERATED FILE - DO NOT EDIT
- * Generated from JSON Schema files
- * Run 'bun run generate:types' to regenerate
- */
+  // Header
+  typeDefinitions.push('/**')
+  typeDefinitions.push(' * Auto-generated TypeScript types from JSON Schema')
+  typeDefinitions.push(' * DO NOT EDIT MANUALLY')
+  typeDefinitions.push(' * Generated by tools/generateSchemaTypes.ts')
+  typeDefinitions.push(' */\n')
 
-`
+  // Step 1: Generate types for shared schemas
+  console.log('📚 Processing shared schemas...')
 
-  // Step 1: Generate shared definitions first (these will be referenced by main schemas)
-  console.log('📦 Generating shared type definitions...')
-  const sharedSchemas = getSharedSchemas()
+  // Process common.schema.json
+  // Skip simple primitive wrappers - only generate types that add value (like enums)
+  const commonSchemaPath = path.join(SHARED_DIR, 'common.schema.json')
+  const commonSchema = JSON.parse(fs.readFileSync(commonSchemaPath, 'utf8'))
 
-  output += `// ============================================\n`
-  output += `// Shared Type Definitions\n`
-  output += `// ============================================\n\n`
+  // List of common definitions to skip (simple primitive wrappers with no utility)
+  const skipCommonTypes = new Set([
+    'id',
+    'name',
+    'nonNegativeInteger',
+    'positiveInteger',
+    'techLevel',
+    'salvageValue',
+    'hitPoints',
+    'structurePoints',
+  ])
 
-  for (const schema of sharedSchemas) {
-    console.log(`   - ${schema.name}`)
-    const typeCode = await compileSharedDefinitions(schema.path, schema.name)
-    if (typeCode.trim()) {
-      output += typeCode + '\n'
+  typeDefinitions.push('// ============================================')
+  typeDefinitions.push('// Common Type Definitions')
+  typeDefinitions.push('// ============================================\n')
+
+  for (const [defName, defSchema] of Object.entries(
+    (commonSchema.definitions as Record<string, JSONSchema>) || {}
+  )) {
+    // Skip simple primitive wrappers
+    if (skipCommonTypes.has(defName)) {
+      continue
+    }
+
+    const typeName = `SURef${capitalize(defName)}`
+
+    // Create a standalone schema with all definitions for proper $ref resolution
+    const standaloneSchema = {
+      ...defSchema,
+      definitions: commonSchema.definitions,
+    }
+
+    const compiled = await compile(standaloneSchema, typeName, {
+      bannerComment: '',
+      declareExternallyReferenced: false,
+    })
+    typeDefinitions.push(compiled.trim())
+  }
+
+  // Process enums.schema.json
+  const enumsSchemaPath = path.join(SHARED_DIR, 'enums.schema.json')
+  const enumsSchema = JSON.parse(fs.readFileSync(enumsSchemaPath, 'utf8'))
+
+  typeDefinitions.push('\n// ============================================')
+  typeDefinitions.push('// Enum Type Definitions')
+  typeDefinitions.push('// ============================================\n')
+
+  for (const [defName, defSchema] of Object.entries(
+    enumsSchema.definitions || {}
+  )) {
+    const typeName = `SURef${capitalize(defName)}`
+    const compiled = await compile(
+      defSchema as unknown as JSONSchema,
+      typeName,
+      {
+        bannerComment: '',
+        declareExternallyReferenced: false,
+      }
+    )
+    typeDefinitions.push(compiled.trim())
+  }
+
+  // Process objects.schema.json - these become SURefMeta* types
+  const objectsSchemaPath = path.join(SHARED_DIR, 'objects.schema.json')
+  const objectsSchema = JSON.parse(fs.readFileSync(objectsSchemaPath, 'utf8'))
+
+  typeDefinitions.push('\n// ============================================')
+  typeDefinitions.push('// Meta Object Type Definitions')
+  typeDefinitions.push('// ============================================\n')
+
+  const helperTypes = [
+    'Traits',
+    'Choices',
+    'Choice',
+    'Entry',
+    'System',
+    'Action',
+    'Npc',
+    'Table',
+    'Damage',
+    'Stats',
+  ]
+
+  for (const [defName, defSchema] of Object.entries(
+    (objectsSchema.definitions as Record<string, JSONSchema>) || {}
+  )) {
+    const singularName = OBJECTS_META_MAP[defName] || capitalize(defName)
+    const typeName = `SURefMeta${singularName}`
+
+    // Create a standalone schema for compilation
+    const standaloneSchema = {
+      ...defSchema,
+      definitions: objectsSchema.definitions,
+    }
+
+    const compiled = await compile(standaloneSchema, typeName, {
+      bannerComment: '',
+      declareExternallyReferenced: false,
+      cwd: SHARED_DIR,
+    })
+
+    // Replace helper type references with SURefMeta* versions
+    let processedOutput = compiled.trim()
+    for (const helperType of helperTypes) {
+      const metaType = `SURefMeta${helperType}`
+      processedOutput = processedOutput.replace(
+        new RegExp(`\\b${helperType}\\b`, 'g'),
+        metaType
+      )
+    }
+
+    typeDefinitions.push(processedOutput)
+  }
+
+  // Step 2: Generate types for main schemas
+  console.log('\n📋 Processing main schemas...')
+
+  typeDefinitions.push('\n// ============================================')
+  typeDefinitions.push('// Main Entity Type Definitions')
+  typeDefinitions.push('// ============================================\n')
+
+  const schemaFiles = fs
+    .readdirSync(SCHEMAS_DIR)
+    .filter((f) => f.endsWith('.schema.json') && f !== 'index.json')
+    .sort()
+
+  for (const schemaFile of schemaFiles) {
+    const schemaPath = path.join(SCHEMAS_DIR, schemaFile)
+    const schemaName = schemaFile.replace('.schema.json', '')
+    const singularName = SCHEMA_NAME_MAP[schemaName]
+
+    if (!singularName) {
+      console.log(`⚠️  Skipping ${schemaFile} - no mapping found`)
+      continue
+    }
+
+    console.log(`   Processing ${schemaFile} → SURef${singularName}`)
+
+    const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'))
+
+    // The main type name - override the schema title
+    const typeName = `SURef${singularName}`
+
+    // Override the title to control the generated type name
+    const schemaWithCustomTitle = {
+      ...schema,
+      title: typeName,
+    }
+
+    try {
+      const compiled = await compile(schemaWithCustomTitle, typeName, {
+        bannerComment: '',
+        declareExternallyReferenced: false, // Inline all types to avoid duplicates
+        cwd: SCHEMAS_DIR,
+        $refOptions: {
+          resolve: {
+            // Custom resolver for shared schemas
+            file: {
+              read: (file: { url: string }) => {
+                const filePath = file.url.replace('file://', '')
+                return fs.readFileSync(filePath, 'utf8')
+              },
+            },
+          },
+        },
+      })
+
+      // Remove duplicate type declarations by using SURefMeta* types for helper references
+      let processedOutput = compiled.trim()
+
+      const helperTypes = [
+        'Traits',
+        'Choices',
+        'Choice',
+        'Entry',
+        'System',
+        'Action',
+        'Npc',
+        'Table',
+        'Damage',
+        'Stats',
+      ]
+
+      // Replace all occurrences of helper type names with SURefMeta* versions
+      for (const helperType of helperTypes) {
+        const metaType = `SURefMeta${helperType}`
+
+        // Replace type/interface declarations (these shouldn't exist in main schemas, but just in case)
+        processedOutput = processedOutput.replace(
+          new RegExp(`export type ${helperType} =`, 'g'),
+          `export type ${metaType} =`
+        )
+        processedOutput = processedOutput.replace(
+          new RegExp(`export interface ${helperType}`, 'g'),
+          `export interface ${metaType}`
+        )
+
+        // Replace all references (with word boundaries to avoid partial matches)
+        processedOutput = processedOutput.replace(
+          new RegExp(`\\b${helperType}\\b`, 'g'),
+          metaType
+        )
+      }
+
+      typeDefinitions.push(`// ${singularName}`)
+      typeDefinitions.push(processedOutput)
+      typeDefinitions.push('')
+    } catch (error) {
+      console.error(`❌ Error processing ${schemaFile}:`, error)
     }
   }
-
-  // Step 2: Generate main schema types (duplicates will be filtered out)
-  console.log('\n📋 Generating main schema types...')
-  const schemas = getSchemaFiles()
-  for (const schema of schemas) {
-    console.log(`   - ${schema.name}`)
-    const typeCode = await compileMainSchema(schema)
-    output += `\n// ============================================\n`
-    output += `// ${schema.typeName}\n`
-    output += `// ============================================\n\n`
-    output += typeCode + '\n'
-  }
-
-  // Step 3: Add utility types
-  output += `\n// ============================================\n`
-  output += `// Utility Types\n`
-  output += `// ============================================\n\n`
-
-  output += `// Action type - all actions reference the same schema definition\n`
-  output += `export type SURefActionMeta = Action\n\n`
-
-  output += `// Trait type - all traits reference the same schema definition\n`
-  output += `export type SURefTraitMeta = Traits[number]\n\n`
-
-  output += `// Table type - union of all table types\n`
-  output += `export type SURefTableMeta = Table\n\n`
 
   // Write output file
-  writeFileSync(OUTPUT_FILE, output)
-  console.log(`\n✅ Generated ${OUTPUT_FILE}`)
-  console.log(`📊 Processed ${sharedSchemas.length + schemas.length} schemas`)
-  console.log(`🎯 Generated ${generatedTypes.size} unique types`)
+  const output = typeDefinitions.join('\n')
+  fs.writeFileSync(OUTPUT_FILE, output, 'utf8')
+
+  console.log(`\n✅ Types generated successfully!`)
+  console.log(`📄 Output: ${OUTPUT_FILE}`)
 }
 
 // Run the generator
 generateTypes().catch((error) => {
-  console.error('❌ Fatal error:', error)
+  console.error('❌ Type generation failed:', error)
   process.exit(1)
 })
