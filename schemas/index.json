@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "1.37.0",
-  "generated": "2025-10-28T21:11:36.471Z",
+  "version": "1.38.0",
+  "generated": "2025-10-28T22:41:00.230Z",
   "schemas": [
     {
       "id": "abilities",
@@ -12,7 +12,7 @@
       "dataFile": "data/abilities.json",
       "schemaFile": "schemas/abilities.schema.json",
       "itemCount": 103,
-      "requiredFields": ["id", "name", "tree", "source", "page"]
+      "requiredFields": []
     },
     {
       "id": "ability-tree-requirements",
@@ -30,7 +30,7 @@
       "dataFile": "data/bio-titans.json",
       "schemaFile": "schemas/bio-titans.schema.json",
       "itemCount": 6,
-      "requiredFields": ["id", "name", "source", "structurePoints", "page"]
+      "requiredFields": []
     },
     {
       "id": "chassis",
@@ -39,7 +39,7 @@
       "dataFile": "data/chassis.json",
       "schemaFile": "schemas/chassis.schema.json",
       "itemCount": 30,
-      "requiredFields": ["id", "name", "source", "page"]
+      "requiredFields": []
     },
     {
       "id": "classes.advanced",
@@ -48,14 +48,7 @@
       "dataFile": "data/classes.advanced.json",
       "schemaFile": "schemas/classes.advanced.schema.json",
       "itemCount": 5,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "advancedTree",
-        "legendaryTree",
-        "page"
-      ]
+      "requiredFields": []
     },
     {
       "id": "classes.core",
@@ -64,14 +57,7 @@
       "dataFile": "data/classes.core.json",
       "schemaFile": "schemas/classes.core.schema.json",
       "itemCount": 6,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "page",
-        "maxAbilities",
-        "advanceable"
-      ]
+      "requiredFields": []
     },
     {
       "id": "classes.hybrid",
@@ -80,14 +66,7 @@
       "dataFile": "data/classes.hybrid.json",
       "schemaFile": "schemas/classes.hybrid.schema.json",
       "itemCount": 5,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "advancedTree",
-        "legendaryTree",
-        "page"
-      ]
+      "requiredFields": []
     },
     {
       "id": "crawler-bays",
@@ -96,15 +75,7 @@
       "dataFile": "data/crawler-bays.json",
       "schemaFile": "schemas/crawler-bays.schema.json",
       "itemCount": 10,
-      "requiredFields": [
-        "id",
-        "name",
-        "source",
-        "description",
-        "damagedEffect",
-        "npc",
-        "page"
-      ]
+      "requiredFields": []
     },
     {
       "id": "crawler-tech-levels",
@@ -131,7 +102,7 @@
       "dataFile": "data/crawlers.json",
       "schemaFile": "schemas/crawlers.schema.json",
       "itemCount": 5,
-      "requiredFields": ["id", "name", "source", "page"]
+      "requiredFields": []
     },
     {
       "id": "creatures",
@@ -140,7 +111,7 @@
       "dataFile": "data/creatures.json",
       "schemaFile": "schemas/creatures.schema.json",
       "itemCount": 6,
-      "requiredFields": ["id", "name", "source", "hitPoints", "page"]
+      "requiredFields": []
     },
     {
       "id": "drones",
@@ -149,7 +120,7 @@
       "dataFile": "data/drones.json",
       "schemaFile": "schemas/drones.schema.json",
       "itemCount": 9,
-      "requiredFields": ["id", "name", "source", "structurePoints", "page"]
+      "requiredFields": []
     },
     {
       "id": "equipment",
@@ -158,7 +129,7 @@
       "dataFile": "data/equipment.json",
       "schemaFile": "schemas/equipment.schema.json",
       "itemCount": 44,
-      "requiredFields": ["id", "name", "source", "page"]
+      "requiredFields": []
     },
     {
       "id": "keywords",
@@ -176,7 +147,7 @@
       "dataFile": "data/meld.json",
       "schemaFile": "schemas/meld.schema.json",
       "itemCount": 5,
-      "requiredFields": ["id", "name", "source", "page"]
+      "requiredFields": []
     },
     {
       "id": "modules",
@@ -194,7 +165,7 @@
       "dataFile": "data/npcs.json",
       "schemaFile": "schemas/npcs.schema.json",
       "itemCount": 6,
-      "requiredFields": ["id", "name", "source", "hitPoints", "page"]
+      "requiredFields": []
     },
     {
       "id": "roll-tables",
@@ -203,7 +174,7 @@
       "dataFile": "data/roll-tables.json",
       "schemaFile": "schemas/roll-tables.schema.json",
       "itemCount": 22,
-      "requiredFields": ["id", "name", "source", "page"]
+      "requiredFields": []
     },
     {
       "id": "squads",
@@ -212,7 +183,7 @@
       "dataFile": "data/squads.json",
       "schemaFile": "schemas/squads.schema.json",
       "itemCount": 9,
-      "requiredFields": ["id", "name", "source", "page"]
+      "requiredFields": []
     },
     {
       "id": "systems",
@@ -239,7 +210,7 @@
       "dataFile": "data/vehicles.json",
       "schemaFile": "schemas/vehicles.schema.json",
       "itemCount": 7,
-      "requiredFields": ["id", "name", "source", "structurePoints", "page"]
+      "requiredFields": []
     }
   ]
 }

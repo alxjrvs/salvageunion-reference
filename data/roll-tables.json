@@ -4,6 +4,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Core Mechanic",
     "section": "core",
+    "description": "When a player declares an action within the game that has an uncertain, risky, or potentially inter- esting outcome, they roll a 20-sided die. This is referred to as a d20, or ‘the die’. Salvage Union only uses this one die, and it is all you need to resolve situations in the game.",
     "table": {
       "1": "Cascade Failure: Something has gone terribly wrong. You suffer a severe consequence of the Mediator’s choice. When attacking, you miss the target and suffer a Setback chosen by the Mediator.",
       "20": "Nailed it: You have overcome the odds and managed an outstanding success. You may achieve an additional bonus of your choice to the action. When dealing damage, you can choose to double it or pick another appropriate bonus effect.",
@@ -18,6 +19,7 @@
     "id": "cdbc20d9-ff63-4272-805b-f148f0c01752",
     "source": "Salvage Union Workshop Manual",
     "name": "Group Initiative",
+    "description": "When the group finds themselves in a combat or similar tense situation, the Mediator can decide which group in the action scene acts first.  If in doubt, one of the Pilots in the group can roll the die. This roll can be Pushed as normal. The Pilot can be chosen by the Mediator, or is whoever in the group initiated the altercation. Then check the table below to see who acts first and also determine the Group Initiative Order.",
     "section": "action scene",
     "table": {
       "1": "Ambush: Two NPCs chosen by the Mediator act first. Play then passes to the player group and one Pilot is chosen by the players to act next.",
@@ -33,6 +35,7 @@
     "id": "dcd888a2-dc2d-4f45-94eb-ae6138761931",
     "source": "Salvage Union Workshop Manual",
     "name": "Critical Injury",
+    "description": "This table determines what happens to your Pilot when they are reduced to 0 Hit Points or suffer a severe injury during play.",
     "section": "damage",
     "table": {
       "1": "Fatal Injury: Your Pilot suffers a fatal injury and dies.",
@@ -48,6 +51,7 @@
     "id": "aa54dcd4-efd0-4cbb-83dc-4cf6f0411066",
     "source": "Salvage Union Workshop Manual",
     "name": "Critical Damage",
+    "description": "Roll on this table when your Mech reaches 0 Structure Points. In addition, you can roll on this table to see what happens if a Mech suffers significant critical damage within a narrative situation in game.",
     "section": "damage",
     "table": {
       "1": "Catastrophic Damage: The Mech, as well as any mounted Systems and Modules as well as all Cargo, is destroyed. Your Pilot dies unless they have a means to escape the Mech.",
@@ -63,6 +67,7 @@
     "id": "0050af76-7d88-43e7-b098-1a6af7656353",
     "source": "Salvage Union Workshop Manual",
     "name": "Reactor Overload",
+    "description": "",
     "section": "heat",
     "table": {
       "1": "Reactor Overload: Your Mech’s reactor goes into full meltdown and explodes. Your Mech, as well as any mounted Systems, Modules, and all Cargo, is destroyed in the explosion. Everything in Close Range of your Mech takes SP damage equal to your Mech’s Maximum Heat Capacity. They may take any Turn Action or Reaction in response to try to avoid this. Your Pilot dies unless they have a means to escape. The area your Mech was in becomes Irradiated",
@@ -78,6 +83,7 @@
     "id": "abca780b-da93-47b0-91e6-290da910e2fd",
     "source": "Salvage Union Workshop Manual",
     "name": "Area Salvage",
+    "description": "",
     "section": "salvaging",
     "table": {
       "1": "Nothing: You find nothing in this area.",
@@ -93,6 +99,7 @@
     "id": "acdc85ee-056c-4edc-95be-e25f0ab9b319",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Salvage",
+    "description": "",
     "section": "salvaging",
     "table": {
       "1": "Ashes and Dust: The Mech is unsalvageable: its Chassis, Systems and Modules are all considered destroyed.",
@@ -108,6 +115,7 @@
     "id": "2bdb98de-31a2-4eb1-b8f5-cf42f44ff618",
     "source": "Salvage Union Workshop Manual",
     "name": "Reaction Roll",
+    "description": "Roll a d20 on this table when your Pilots meet a group of NPCs to determine how they react to them.  This sets the initial Reaction, and the rest of the scene can be roleplayed out from that point.",
     "section": "npc tables",
     "table": {
       "1": "Actively Hostile: The NPCs will launch an attack on the group if appropriate or flee from them, barricade themselves in, and avoid contact as though they were hostile.",
@@ -123,6 +131,7 @@
     "id": "3b30af52-8e82-4b55-bda8-e46e64bf141f",
     "source": "Salvage Union Workshop Manual",
     "name": "NPC Action",
+    "description": "When an NPC takes an action in the game, the Mediator rolls on their own table below. This table is similar to the player table, but reframes many of the options.",
     "section": "npc tables",
     "table": {
       "1": "Cascade Failure: The NPC has catastrophically failed at their action. They suffer a Severe Setback of the player’s choice. A weapon attack misses, with a Severe Setback chosen by the players.",
@@ -138,6 +147,7 @@
     "id": "30b5379a-45d5-4e7b-9dfa-45b2ecead926",
     "source": "Salvage Union Workshop Manual",
     "name": "Morale",
+    "description": "These rules cover whether or not NPCs in the game choose to retreat. The Pilots never roll Morale, and it is always the player’s choice whether their Pilots retreat or not. NPCs include both those the Pilots are actively fighting as well as any allied NPCs they may have with them.  • When an NPC Mech is reduced to 50% or less of its Structure Points, make a Morale check to determine if it stays in the fight.  • When a Creature is reduced to 50% or less of its Hit Points, make a Morale check to determine if it stays in the fight. You can also apply this to an entire group rather than individual creatures or Mechs.  • When a group of NPCs suffers 50% or more overall deaths or the destruction of 50% or more Mechs, make a Morale check to determine if the entire group stays in the fight.",
     "section": "npc tables",
     "table": {
       "1": "Surrender: The NPCs surrender to whoever is attacking them. If there is nobody to surrender to, they will recklessly flee.",
@@ -153,6 +163,7 @@
     "id": "70f6e979-f511-4407-a276-11b3e63f6758",
     "source": "Salvage Union Workshop Manual",
     "name": "Retreat",
+    "description": "Sometimes things go wrong and retreat becomes the only option. If the Pilots or a Group of NPCs choose to retreat, roll the die on the table below to find out what happens. If using Group Initiative, retreat may be chosen at the start of anyone in the group’s turn. The entire group must agree to retreat.",
     "section": "npc tables",
     "table": {
       "1": "Disastrous Escape: The group retreat to an adjacent location of their choice within the Region Map, but at a severe cost. They suffer a Severe Setback and may be pursued.",
@@ -168,6 +179,7 @@
     "id": "044f3890-2d62-4bbe-b851-cc978a68ae8e",
     "source": "Salvage Union Workshop Manual",
     "name": "Crawler Deterioration",
+    "description": "When you fail to pay upkeep, roll on this table.",
     "section": "crawler",
     "table": {
       "1": "Your Union Crawler loses 5 Structure Points and a Bay chosen at random is Damaged until repaired to the Intact Condition.",
@@ -183,6 +195,7 @@
     "id": "f4e866be-1092-4760-896c-fa3571b983d6",
     "source": "Salvage Union Workshop Manual",
     "name": "Crawler Damage",
+    "description": "Your Union Crawler can suffer damage from being attacked as well as through deterioration when you fail to pay its upkeep. When your Crawler reaches 0 Structure Points roll on this table.",
     "section": "crawler",
     "table": {
       "1": "Your Union Crawler is Destroyed as a mass series of malfunctions causes it to entirely collapse. Roll on the Union Crawler Destruction Table.",
@@ -198,6 +211,7 @@
     "id": "50f0dcca-d2ac-408d-a916-55027485299b",
     "source": "Salvage Union Workshop Manual",
     "name": "Crawler Destruction",
+    "description": "If your Union Crawler is destroyed, roll on this table to find out what happens.",
     "section": "crawler",
     "table": {
       "1": "The Union Crawler suffers critical damage, goes into a reactor meltdown, and explodes. The Union Crawler is destroyed beyond all recognition. It cannot be rebuilt.  Everyone and everything on board and within Medium Range takes 50 Structure Points of damage, and can be assumed destroyed or killed outright.",
@@ -213,6 +227,7 @@
     "id": "a1b2c3d4-e5f6-47a8-b9c0-d1e2f3a4b5c6",
     "source": "Salvage Union Workshop Manual",
     "name": "Keepsake",
+    "description": "",
     "section": "character",
     "table": {
       "1": "Stuffed Toy",
@@ -243,6 +258,7 @@
     "id": "e5317ec5-241c-4bed-97cc-b8d9764e011f",
     "source": "Salvage Union Workshop Manual",
     "name": "Motto",
+    "description": "",
     "section": "character",
     "table": {
       "1": "Live and let live.",
@@ -273,6 +289,7 @@
     "id": "d07e8fbf-0750-45ad-9cb8-faa95d8cbaf3",
     "source": "Salvage Union Workshop Manual",
     "name": "Pilot Appearance",
+    "description": "",
     "section": "character",
     "table": {
       "1": "Stocky",
@@ -303,6 +320,7 @@
     "id": "d65de78f-3131-40fd-bd40-018e858c723b",
     "source": "Salvage Union Workshop Manual",
     "name": "A.I. Personality",
+    "description": "",
     "section": "character",
     "table": {
       "1": "Megalomaniacal to a fault.",
@@ -333,6 +351,7 @@
     "id": "3ba3c58c-4f75-454f-be16-6bd3236b79d8",
     "source": "Salvage Union Workshop Manual",
     "name": "Quirks",
+    "description": "",
     "section": "mech",
     "table": {
       "1": "Flashing RGB lights",
@@ -363,6 +382,7 @@
     "id": "f6a7b8c9-daeb-4cfd-a4b5-c6d7e8f9a0b1",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Appearance",
+    "description": "",
     "section": "mech",
     "table": {
       "1": "Flashy, bright, vibrant, paint job",
@@ -393,6 +413,7 @@
     "id": "a7b8c9da-ebfc-4dfe-b5c6-d7e8f9a0b1c2",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Pattern Names",
+    "description": "",
     "section": "mech",
     "table": {
       "1": "Bullseye",
@@ -423,6 +444,7 @@
     "id": "ea4227a6-8c57-4018-86b0-338bbf5a151f",
     "source": "Salvage Union Workshop Manual",
     "name": "Crawler Name",
+    "description": "",
     "section": "crawler",
     "table": {
       "1": "Big Smoke",

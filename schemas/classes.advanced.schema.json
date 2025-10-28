@@ -5,44 +5,15 @@
   "description": "Advanced character classes in Salvage Union",
   "type": "array",
   "items": {
-    "type": "object",
-    "description": "An Advanced Core character class",
-    "additionalProperties": false,
-    "required": [
-      "id",
-      "name",
-      "source",
-      "advancedTree",
-      "legendaryTree",
-      "page"
-    ],
-    "properties": {
-      "id": {
-        "$ref": "shared/common.schema.json#/definitions/id"
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       },
-      "name": {
-        "$ref": "shared/common.schema.json#/definitions/name"
-      },
-      "source": {
-        "$ref": "shared/enums.schema.json#/definitions/source"
-      },
-      "description": {
-        "type": "string",
-        "description": "Description of the class"
-      },
-      "advancedTree": {
-        "description": "Advanced ability tree for this class",
-        "$ref": "shared/common.schema.json#/definitions/tree"
-      },
-      "legendaryTree": {
-        "description": "Legendary ability tree for this class",
-        "$ref": "shared/common.schema.json#/definitions/tree"
-      },
-      "page": {
-        "type": "integer",
-        "minimum": 1,
-        "description": "Page number in the source book"
+      {
+        "type": "object",
+        "required": ["advancedTree", "legendaryTree"],
+        "properties": {}
       }
-    }
+    ]
   }
 }

@@ -265,19 +265,19 @@ export interface SURefMetaSystem {
   /**
    * The source book or expansion for this content
    */
-  source?: 'Salvage Union Workshop Manual'
+  source: 'Salvage Union Workshop Manual'
   /**
    * Technology level required
    */
-  techLevel?: number
+  techLevel: number
   /**
    * Number of slots required to install
    */
-  slotsRequired?: number
+  slotsRequired: number
   /**
    * Salvage value in scrap
    */
-  salvageValue?: number
+  salvageValue: number
   /**
    * Whether this is a recommended starting system
    */
@@ -286,7 +286,7 @@ export interface SURefMetaSystem {
   /**
    * Description of the system or module
    */
-  description?: string
+  description: string
   /**
    * Additional notes
    */
@@ -315,7 +315,7 @@ export interface SURefMetaSystem {
   /**
    * Actions that can be performed with this system
    */
-  actions?: SURefMetaAction[]
+  actions: SURefMetaAction[]
   /**
    * Bonus to a specific stat
    */
@@ -426,7 +426,7 @@ export interface SURefMetaEntry {
   /**
    * Description of the entry
    */
-  description?: string
+  description: string
   /**
    * The source book or expansion for this content
    */
@@ -435,6 +435,7 @@ export interface SURefMetaEntry {
    * Page number in the source book
    */
   page: number
+  [k: string]: unknown
 }
 
 // ============================================
@@ -442,210 +443,8 @@ export interface SURefMetaEntry {
 // ============================================
 
 // Ability
-/**
- * A pilot ability
- */
-export interface SURefAbility {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Currency used to activate the ability
-   */
-  activationCurrency?: 'Variable'
-  /**
-   * Name of the entry
-   */
-  name: string
-  /**
-   * Ability tree name
-   */
-  tree:
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Level in the ability tree (1-3 for normal abilities, 'L' for legendary abilities)
-   */
-  level?: number | 'L'
-  /**
-   * Description of the ability
-   */
-  description?: string
-  /**
-   * Mechanical effect of the ability
-   */
-  effect?: string
-  /**
-   * Cost in ability points to activate an ability
-   */
-  activationCost?: number | 'X'
-  /**
-   * Range bands for abilities and weapons
-   */
-  range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
-  /**
-   * Type of action required to use an ability
-   */
-  actionType?:
-    | 'Passive'
-    | 'Free'
-    | 'Reaction'
-    | 'Turn'
-    | 'Short'
-    | 'Long'
-    | 'DownTime'
-  /**
-   * Type of action required to use an ability
-   */
-  mechActionType?:
-    | 'Passive'
-    | 'Free'
-    | 'Reaction'
-    | 'Turn'
-    | 'Short'
-    | 'Long'
-    | 'DownTime'
-  /**
-   * Additional notes or requirements for the ability
-   */
-  notes?: string
-  /**
-   * Roll table for random outcomes based on d20 rolls
-   */
-  table?:
-    | {
-        /**
-         * Critical failure outcome
-         */
-        '1': string
-        /**
-         * Critical success outcome
-         */
-        '20': string
-        type: 'standard'
-        /**
-         * High success outcome
-         */
-        '11-19': string
-        /**
-         * Moderate outcome
-         */
-        '6-10': string
-        /**
-         * Low outcome
-         */
-        '2-5': string
-      }
-    | {
-        /**
-         * Critical failure outcome
-         */
-        '1': string
-        type: 'alternate'
-        /**
-         * Critical success outcome
-         */
-        '19-20': string
-        /**
-         * High success outcome
-         */
-        '11-18': string
-        /**
-         * Moderate outcome
-         */
-        '6-10': string
-        /**
-         * Low outcome
-         */
-        '2-5': string
-      }
-    | {
-        '1': string
-        '2': string
-        '3': string
-        '4': string
-        '5': string
-        '6': string
-        '7': string
-        '8': string
-        '9': string
-        '10': string
-        '11': string
-        '12': string
-        '13': string
-        '14': string
-        '15': string
-        '16': string
-        '17': string
-        '18': string
-        '19': string
-        '20': string
-        type: 'flat'
-      }
-  traits?: SURefMetaTraits
-  /**
-   * List of options or choices for this ability
-   */
-  options?: (
-    | string
-    | {
-        /**
-         * Display label for the option
-         */
-        label: string
-        /**
-         * Value or effect of the option
-         */
-        value: string
-      }
-  )[]
-  /**
-   * Named sub-abilities with separate mechanics
-   */
-  actions?: SURefMetaAction[]
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefAbility = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // AbilityTreeRequirement
@@ -749,529 +548,33 @@ export interface SURefAbilityTreeRequirement {
 }
 
 // BioTitan
-/**
- * A bio-titan creature
- */
-export interface SURefBioTitan {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the bio-titan
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the bio-titan
-   */
-  description?: string
-  /**
-   * Structure points for mechs, vehicles, and titans
-   */
-  structurePoints: number
-  /**
-   * Special abilities of this bio-titan
-   */
-  actions?: SURefMetaAction[]
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefBioTitan = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // Chassis
-/**
- * A mech chassis
- */
-export interface SURefChassis {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the chassis
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  stats?: SURefMetaStats
-  /**
-   * Special abilities built into this chassis
-   */
-  chassisAbilities?: SURefMetaAction[]
-  /**
-   * Description of the chassis
-   */
-  description?: string
-  /**
-   * Loadout patterns for this chassis
-   */
-  patterns?: {
-    /**
-     * Name of the pattern
-     */
-    name: string
-    /**
-     * Description of the pattern
-     */
-    description?: string
-    /**
-     * Whether this pattern is legal for starting characters
-     */
-    legalStarting?: boolean
-    /**
-     * Systems included in this pattern
-     */
-    systems?: string[]
-    /**
-     * Modules included in this pattern
-     */
-    modules?: string[]
-    /**
-     * Drone loadout for patterns that include drones
-     */
-    drone?: {
-      /**
-       * Systems for the drone
-       */
-      systems?: string[]
-      /**
-       * Modules for the drone
-       */
-      modules?: string[]
-    }
-  }[]
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefChassis = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // AdvancedClass
-/**
- * An Advanced Core character class
- */
-export interface SURefAdvancedClass {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the entry
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the class
-   */
-  description?: string
-  /**
-   * Advanced ability tree for this class
-   */
-  advancedTree:
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-  /**
-   * Legendary ability tree for this class
-   */
-  legendaryTree:
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefAdvancedClass = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // CoreClass
-/**
- * A core character class
- */
-export interface SURefCoreClass {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Indicates if this class can advance into an advanced / hybrid class
-   */
-  advanceable: boolean
-  /**
-   * Maximum number of abilities a character can have
-   */
-  maxAbilities: number
-  /**
-   * Name of the entry
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the class
-   */
-  description?: string
-  /**
-   * Core ability trees for this class
-   */
-  coreTrees?: (
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-  )[]
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefCoreClass = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // HybridClass
-/**
- * An Advanced Core character class
- */
-export interface SURefHybridClass {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the entry
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the class
-   */
-  description?: string
-  /**
-   * Advanced ability tree for this class
-   */
-  advancedTree:
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-  /**
-   * Legendary ability tree for this class
-   */
-  legendaryTree:
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefHybridClass = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // CrawlerBay
-/**
- * A crawler bay or facility
- */
-export interface SURefCrawlerBay {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the bay (e.g., 'Command Bay', 'Mech Bay')
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Full description of the bay's function and capabilities
-   */
-  description: string
-  /**
-   * What happens when this bay is damaged
-   */
-  damagedEffect: string
-  npc: SURefMetaNpc
-  /**
-   * Effects that vary by tech level
-   */
-  techLevelEffects?: {
-    /**
-     * Minimum tech level for this effect
-     */
-    techLevelMin: number
-    /**
-     * Maximum tech level for this effect
-     */
-    techLevelMax: number
-    /**
-     * Description of the effect at this tech level range
-     */
-    effect: string
-  }[]
-  choices?: SURefMetaChoices
-  /**
-   * Roll table for random outcomes based on d20 rolls
-   */
-  table?:
-    | {
-        /**
-         * Critical failure outcome
-         */
-        '1': string
-        /**
-         * Critical success outcome
-         */
-        '20': string
-        type: 'standard'
-        /**
-         * High success outcome
-         */
-        '11-19': string
-        /**
-         * Moderate outcome
-         */
-        '6-10': string
-        /**
-         * Low outcome
-         */
-        '2-5': string
-      }
-    | {
-        /**
-         * Critical failure outcome
-         */
-        '1': string
-        type: 'alternate'
-        /**
-         * Critical success outcome
-         */
-        '19-20': string
-        /**
-         * High success outcome
-         */
-        '11-18': string
-        /**
-         * Moderate outcome
-         */
-        '6-10': string
-        /**
-         * Low outcome
-         */
-        '2-5': string
-      }
-    | {
-        '1': string
-        '2': string
-        '3': string
-        '4': string
-        '5': string
-        '6': string
-        '7': string
-        '8': string
-        '9': string
-        '10': string
-        '11': string
-        '12': string
-        '13': string
-        '14': string
-        '15': string
-        '16': string
-        '17': string
-        '18': string
-        '19': string
-        '20': string
-        type: 'flat'
-      }
-  /**
-   * Special abilities or features of this bay
-   */
-  actions?: SURefMetaAction[]
-  /**
-   * Additional notes or special rules
-   */
-  notes?: string
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefCrawlerBay = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // CrawlerTechLevel
@@ -1314,247 +617,23 @@ export interface SURefCrawlerTechLevel {
 }
 
 // Crawler
-/**
- * A crawler vehicle
- */
-export interface SURefCrawler {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the crawler
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the crawler
-   */
-  description?: string
-  npc?: SURefMetaNpc
-  /**
-   * Special abilities of this crawler
-   */
-  actions?: SURefMetaAction[]
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefCrawler = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // Creature
-/**
- * A creature
- */
-export interface SURefCreature {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the creature
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the creature
-   */
-  description?: string
-  /**
-   * Hit points for creatures and personnel
-   */
-  hitPoints: number
-  /**
-   * Special abilities of this creature
-   */
-  actions?: SURefMetaAction[]
-  traits?: SURefMetaTraits
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefCreature = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // Drone
-/**
- * An autonomous drone
- */
-export interface SURefDrone {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the drone
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the drone
-   */
-  description?: string
-  /**
-   * Structure points for mechs, vehicles, and titans
-   */
-  structurePoints: number
-  /**
-   * Technology level of the item or entity
-   */
-  techLevel?: number
-  /**
-   * Salvage value in credits
-   */
-  salvageValue?: number
-  /**
-   * Names of systems installed on this drone
-   */
-  systems?: string[]
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefDrone = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // Equipment
-/**
- * A piece of pilot equipment
- */
-export interface SURefEquipment {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the equipment
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Technology level of the item or entity
-   */
-  techLevel?: number
-  traits?: SURefMetaTraits
-  /**
-   * Description of the equipment
-   */
-  description?: string
-  /**
-   * Additional notes
-   */
-  notes?: string
-  /**
-   * Cost in ability points to activate an ability
-   */
-  activationCost?: number | 'X'
-  /**
-   * Range bands for abilities and weapons
-   */
-  range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
-  damage?: SURefMetaDamage
-  /**
-   * Type of action required to use an ability
-   */
-  actionType?:
-    | 'Passive'
-    | 'Free'
-    | 'Reaction'
-    | 'Turn'
-    | 'Short'
-    | 'Long'
-    | 'DownTime'
-  /**
-   * Roll table for random outcomes based on d20 rolls
-   */
-  table?:
-    | {
-        /**
-         * Critical failure outcome
-         */
-        '1': string
-        /**
-         * Critical success outcome
-         */
-        '20': string
-        type: 'standard'
-        /**
-         * High success outcome
-         */
-        '11-19': string
-        /**
-         * Moderate outcome
-         */
-        '6-10': string
-        /**
-         * Low outcome
-         */
-        '2-5': string
-      }
-    | {
-        /**
-         * Critical failure outcome
-         */
-        '1': string
-        type: 'alternate'
-        /**
-         * Critical success outcome
-         */
-        '19-20': string
-        /**
-         * High success outcome
-         */
-        '11-18': string
-        /**
-         * Moderate outcome
-         */
-        '6-10': string
-        /**
-         * Low outcome
-         */
-        '2-5': string
-      }
-    | {
-        '1': string
-        '2': string
-        '3': string
-        '4': string
-        '5': string
-        '6': string
-        '7': string
-        '8': string
-        '9': string
-        '10': string
-        '11': string
-        '12': string
-        '13': string
-        '14': string
-        '15': string
-        '16': string
-        '17': string
-        '18': string
-        '19': string
-        '20': string
-        type: 'flat'
-      }
-  /**
-   * Actions that can be performed with this equipment
-   */
-  actions?: SURefMetaAction[]
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefEquipment = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // Keyword
@@ -1573,7 +652,7 @@ export interface SURefKeyword {
   /**
    * Description of the entry
    */
-  description?: string
+  description: string
   /**
    * The source book or expansion for this content
    */
@@ -1582,51 +661,11 @@ export interface SURefKeyword {
    * Page number in the source book
    */
   page: number
+  [k: string]: unknown
 }
 
 // Meld
-/**
- * A meld-infected creature
- */
-export type SURefMeld = {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the meld creature
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the meld creature
-   */
-  description?: string
-  /**
-   * Hit points for creatures and personnel
-   */
-  hitPoints?: number
-  /**
-   * Structure points for mechs, vehicles, and titans
-   */
-  structurePoints?: number
-  /**
-   * Salvage value in credits
-   */
-  salvageValue?: number
-  /**
-   * Special abilities of this meld creature
-   */
-  actions?: SURefMetaAction[]
-  traits?: SURefMetaTraits
-  /**
-   * Page number in the source book
-   */
-  page: number
-} & {
+export type SURefMeld = SURefMetaEntry & {
   [k: string]: unknown
 }
 
@@ -1646,19 +685,19 @@ export interface SURefModule {
   /**
    * The source book or expansion for this content
    */
-  source?: 'Salvage Union Workshop Manual'
+  source: 'Salvage Union Workshop Manual'
   /**
    * Technology level required
    */
-  techLevel?: number
+  techLevel: number
   /**
    * Number of slots required to install
    */
-  slotsRequired?: number
+  slotsRequired: number
   /**
    * Salvage value in scrap
    */
-  salvageValue?: number
+  salvageValue: number
   /**
    * Whether this is a recommended starting system
    */
@@ -1667,7 +706,7 @@ export interface SURefModule {
   /**
    * Description of the system or module
    */
-  description?: string
+  description: string
   /**
    * Additional notes
    */
@@ -1768,7 +807,7 @@ export interface SURefModule {
   /**
    * Actions that can be performed with this system
    */
-  actions?: SURefMetaAction[]
+  actions: SURefMetaAction[]
   /**
    * Bonus to a specific stat
    */
@@ -1793,178 +832,17 @@ export interface SURefModule {
 }
 
 // Npc
-/**
- * An NPC or person
- */
-export interface SURefNpc {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the NPC
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the NPC
-   */
-  description?: string
-  /**
-   * Hit points for creatures and personnel
-   */
-  hitPoints: number
-  /**
-   * Special abilities of this NPC
-   */
-  actions?: SURefMetaAction[]
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefNpc = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // RollTable
-/**
- * A random table
- */
-export interface SURefRollTable {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the table
-   */
-  name: string
-  /**
-   * Section or category of the table
-   */
-  section?: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Roll table for random outcomes based on d20 rolls
-   */
-  table?:
-    | {
-        /**
-         * Critical failure outcome
-         */
-        '1': string
-        /**
-         * Critical success outcome
-         */
-        '20': string
-        type: 'standard'
-        /**
-         * High success outcome
-         */
-        '11-19': string
-        /**
-         * Moderate outcome
-         */
-        '6-10': string
-        /**
-         * Low outcome
-         */
-        '2-5': string
-      }
-    | {
-        /**
-         * Critical failure outcome
-         */
-        '1': string
-        type: 'alternate'
-        /**
-         * Critical success outcome
-         */
-        '19-20': string
-        /**
-         * High success outcome
-         */
-        '11-18': string
-        /**
-         * Moderate outcome
-         */
-        '6-10': string
-        /**
-         * Low outcome
-         */
-        '2-5': string
-      }
-    | {
-        '1': string
-        '2': string
-        '3': string
-        '4': string
-        '5': string
-        '6': string
-        '7': string
-        '8': string
-        '9': string
-        '10': string
-        '11': string
-        '12': string
-        '13': string
-        '14': string
-        '15': string
-        '16': string
-        '17': string
-        '18': string
-        '19': string
-        '20': string
-        type: 'flat'
-      }
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefRollTable = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // Squad
-/**
- * An NPC squad
- */
-export type SURefSquad = {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the squad
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the squad
-   */
-  description?: string
-  /**
-   * Hit points for creatures and personnel
-   */
-  hitPoints?: number
-  /**
-   * Structure points for mechs, vehicles, and titans
-   */
-  structurePoints?: number
-  /**
-   * Special abilities of this squad
-   */
-  actions?: SURefMetaAction[]
-  /**
-   * Page number in the source book
-   */
-  page: number
-} & {
+export type SURefSquad = SURefMetaEntry & {
   [k: string]: unknown
 }
 
@@ -1984,19 +862,19 @@ export interface SURefSystem {
   /**
    * The source book or expansion for this content
    */
-  source?: 'Salvage Union Workshop Manual'
+  source: 'Salvage Union Workshop Manual'
   /**
    * Technology level required
    */
-  techLevel?: number
+  techLevel: number
   /**
    * Number of slots required to install
    */
-  slotsRequired?: number
+  slotsRequired: number
   /**
    * Salvage value in scrap
    */
-  salvageValue?: number
+  salvageValue: number
   /**
    * Whether this is a recommended starting system
    */
@@ -2005,7 +883,7 @@ export interface SURefSystem {
   /**
    * Description of the system or module
    */
-  description?: string
+  description: string
   /**
    * Additional notes
    */
@@ -2106,7 +984,7 @@ export interface SURefSystem {
   /**
    * Actions that can be performed with this system
    */
-  actions?: SURefMetaAction[]
+  actions: SURefMetaAction[]
   /**
    * Bonus to a specific stat
    */
@@ -2146,7 +1024,7 @@ export interface SURefTrait {
   /**
    * Description of the entry
    */
-  description?: string
+  description: string
   /**
    * The source book or expansion for this content
    */
@@ -2155,50 +1033,12 @@ export interface SURefTrait {
    * Page number in the source book
    */
   page: number
+  [k: string]: unknown
 }
 
 // Vehicle
-/**
- * A conventional vehicle
- */
-export interface SURefVehicle {
-  /**
-   * Unique identifier for the entry
-   */
-  id: string
-  /**
-   * Name of the vehicle
-   */
-  name: string
-  /**
-   * The source book or expansion for this content
-   */
-  source: 'Salvage Union Workshop Manual'
-  /**
-   * Description of the vehicle
-   */
-  description?: string
-  /**
-   * Structure points for mechs, vehicles, and titans
-   */
-  structurePoints: number
-  /**
-   * Technology level of the item or entity
-   */
-  techLevel?: number
-  /**
-   * Salvage value in credits
-   */
-  salvageValue?: number
-  /**
-   * Names of systems installed on this vehicle
-   */
-  systems?: string[]
-  traits?: SURefMetaTraits
-  /**
-   * Page number in the source book
-   */
-  page: number
+export type SURefVehicle = SURefMetaEntry & {
+  [k: string]: unknown
 }
 
 // ============================================

@@ -5,34 +5,15 @@
   "description": "Random tables and roll tables in Salvage Union",
   "type": "array",
   "items": {
-    "type": "object",
-    "description": "A random table",
-    "additionalProperties": false,
-    "required": ["id", "name", "source", "page"],
-    "properties": {
-      "id": {
-        "$ref": "shared/common.schema.json#/definitions/id"
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       },
-      "name": {
-        "type": "string",
-        "minLength": 1,
-        "description": "Name of the table"
-      },
-      "section": {
-        "type": "string",
-        "description": "Section or category of the table"
-      },
-      "source": {
-        "$ref": "shared/enums.schema.json#/definitions/source"
-      },
-      "table": {
-        "$ref": "shared/objects.schema.json#/definitions/table"
-      },
-      "page": {
-        "type": "integer",
-        "minimum": 1,
-        "description": "Page number in the source book"
+      {
+        "type": "object",
+        "required": ["section", "table"],
+        "properties": {}
       }
-    }
+    ]
   }
 }

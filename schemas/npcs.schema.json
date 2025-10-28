@@ -5,41 +5,15 @@
   "description": "Non-player characters and people in Salvage Union",
   "type": "array",
   "items": {
-    "type": "object",
-    "description": "An NPC or person",
-    "additionalProperties": false,
-    "required": ["id", "name", "source", "hitPoints", "page"],
-    "properties": {
-      "id": {
-        "$ref": "shared/common.schema.json#/definitions/id"
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       },
-      "name": {
-        "type": "string",
-        "minLength": 1,
-        "description": "Name of the NPC"
-      },
-      "source": {
-        "$ref": "shared/enums.schema.json#/definitions/source"
-      },
-      "description": {
-        "type": "string",
-        "description": "Description of the NPC"
-      },
-      "hitPoints": {
-        "$ref": "shared/common.schema.json#/definitions/hitPoints"
-      },
-      "actions": {
-        "type": "array",
-        "description": "Special abilities of this NPC",
-        "items": {
-          "$ref": "shared/objects.schema.json#/definitions/action"
-        }
-      },
-      "page": {
-        "type": "integer",
-        "minimum": 1,
-        "description": "Page number in the source book"
+      {
+        "type": "object",
+        "required": ["hitPoints", "actions"],
+        "properties": {}
       }
-    }
+    ]
   }
 }

@@ -5,63 +5,15 @@
   "description": "Pilot equipment and gear in Salvage Union",
   "type": "array",
   "items": {
-    "type": "object",
-    "description": "A piece of pilot equipment",
-    "additionalProperties": false,
-    "required": ["id", "name", "source", "page"],
-    "properties": {
-      "id": {
-        "$ref": "shared/common.schema.json#/definitions/id"
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       },
-      "name": {
-        "type": "string",
-        "minLength": 1,
-        "description": "Name of the equipment"
-      },
-      "source": {
-        "$ref": "shared/enums.schema.json#/definitions/source"
-      },
-      "techLevel": {
-        "$ref": "shared/common.schema.json#/definitions/techLevel"
-      },
-      "traits": {
-        "$ref": "shared/objects.schema.json#/definitions/traits"
-      },
-      "description": {
-        "type": "string",
-        "description": "Description of the equipment"
-      },
-      "notes": {
-        "type": "string",
-        "description": "Additional notes"
-      },
-      "activationCost": {
-        "$ref": "shared/common.schema.json#/definitions/activationCost"
-      },
-      "range": {
-        "$ref": "shared/enums.schema.json#/definitions/range"
-      },
-      "damage": {
-        "$ref": "shared/objects.schema.json#/definitions/damage"
-      },
-      "actionType": {
-        "$ref": "shared/enums.schema.json#/definitions/actionType"
-      },
-      "table": {
-        "$ref": "shared/objects.schema.json#/definitions/table"
-      },
-      "actions": {
-        "type": "array",
-        "description": "Actions that can be performed with this equipment",
-        "items": {
-          "$ref": "shared/objects.schema.json#/definitions/action"
-        }
-      },
-      "page": {
-        "type": "integer",
-        "minimum": 1,
-        "description": "Page number in the source book"
+      {
+        "type": "object",
+        "required": ["techLevel"],
+        "properties": {}
       }
-    }
+    ]
   }
 }

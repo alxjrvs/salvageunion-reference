@@ -5,47 +5,15 @@
   "description": "Autonomous drones in Salvage Union",
   "type": "array",
   "items": {
-    "type": "object",
-    "description": "An autonomous drone",
-    "additionalProperties": false,
-    "required": ["id", "name", "source", "structurePoints", "page"],
-    "properties": {
-      "id": {
-        "$ref": "shared/common.schema.json#/definitions/id"
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       },
-      "name": {
-        "type": "string",
-        "minLength": 1,
-        "description": "Name of the drone"
-      },
-      "source": {
-        "$ref": "shared/enums.schema.json#/definitions/source"
-      },
-      "description": {
-        "type": "string",
-        "description": "Description of the drone"
-      },
-      "structurePoints": {
-        "$ref": "shared/common.schema.json#/definitions/structurePoints"
-      },
-      "techLevel": {
-        "$ref": "shared/common.schema.json#/definitions/techLevel"
-      },
-      "salvageValue": {
-        "$ref": "shared/common.schema.json#/definitions/salvageValue"
-      },
-      "systems": {
-        "type": "array",
-        "description": "Names of systems installed on this drone",
-        "items": {
-          "type": "string"
-        }
-      },
-      "page": {
-        "type": "integer",
-        "minimum": 1,
-        "description": "Page number in the source book"
+      {
+        "type": "object",
+        "required": ["structurePoints", "techLevel", "salvageValue", "systems"],
+        "properties": {}
       }
-    }
+    ]
   }
 }

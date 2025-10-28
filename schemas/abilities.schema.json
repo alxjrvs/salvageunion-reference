@@ -5,113 +5,15 @@
   "description": "Pilot abilities and skills in Salvage Union",
   "type": "array",
   "items": {
-    "type": "object",
-    "description": "A pilot ability",
-    "additionalProperties": false,
-    "required": ["id", "name", "tree", "source", "page"],
-    "properties": {
-      "id": {
-        "$ref": "shared/common.schema.json#/definitions/id"
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       },
-      "activationCurrency": {
-        "type": "string",
-        "enum": ["Variable"],
-        "description": "Currency used to activate the ability"
-      },
-      "name": {
-        "$ref": "shared/common.schema.json#/definitions/name"
-      },
-      "tree": {
-        "$ref": "shared/common.schema.json#/definitions/tree"
-      },
-      "source": {
-        "$ref": "shared/enums.schema.json#/definitions/source"
-      },
-      "level": {
-        "oneOf": [
-          {
-            "type": "integer",
-            "minimum": 1,
-            "description": "Numeric level in the ability tree"
-          },
-          {
-            "type": "string",
-            "enum": ["L"],
-            "description": "Legendary level (L) for legendary tree abilities"
-          }
-        ],
-        "description": "Level in the ability tree (1-3 for normal abilities, 'L' for legendary abilities)"
-      },
-      "description": {
-        "type": "string",
-        "description": "Description of the ability"
-      },
-      "effect": {
-        "type": "string",
-        "description": "Mechanical effect of the ability"
-      },
-      "activationCost": {
-        "$ref": "shared/common.schema.json#/definitions/activationCost"
-      },
-      "range": {
-        "$ref": "shared/enums.schema.json#/definitions/range"
-      },
-      "actionType": {
-        "$ref": "shared/enums.schema.json#/definitions/actionType"
-      },
-      "mechActionType": {
-        "$ref": "shared/enums.schema.json#/definitions/actionType"
-      },
-      "notes": {
-        "type": "string",
-        "description": "Additional notes or requirements for the ability"
-      },
-      "table": {
-        "$ref": "shared/objects.schema.json#/definitions/table"
-      },
-      "traits": {
-        "$ref": "shared/objects.schema.json#/definitions/traits"
-      },
-      "options": {
-        "type": "array",
-        "description": "List of options or choices for this ability",
-        "items": {
-          "oneOf": [
-            {
-              "type": "string",
-              "description": "Simple text option"
-            },
-            {
-              "type": "object",
-              "description": "Structured option with label and value",
-              "additionalProperties": false,
-              "required": ["label", "value"],
-              "properties": {
-                "label": {
-                  "type": "string",
-                  "description": "Display label for the option"
-                },
-                "value": {
-                  "type": "string",
-                  "description": "Value or effect of the option"
-                }
-              }
-            }
-          ]
-        }
-      },
-      "actions": {
-        "type": "array",
-        "description": "Named sub-abilities with separate mechanics",
-        "items": {
-          "$ref": "shared/objects.schema.json#/definitions/action"
-        }
-      },
-      "page": {
-        "type": "integer",
-        "minimum": 1,
-        "description": "Page number in the source book"
+      {
+        "type": "object",
+        "required": ["tree"],
+        "properties": {}
       }
-    }
+    ]
   }
 }
