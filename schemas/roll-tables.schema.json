@@ -9,8 +9,7 @@
     "required": ["section", "table"],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry",
-        "additionalProperties": false
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       }
     ],
     "properties": {
@@ -19,11 +18,7 @@
         "description": "Section or category of the roll table"
       },
       "table": {
-        "type": "object",
-        "description": "Roll table entries keyed by roll result ranges",
-        "additionalProperties": {
-          "type": "string"
-        }
+        "$ref": "shared/objects.schema.json#/definitions/table"
       }
     }
   }

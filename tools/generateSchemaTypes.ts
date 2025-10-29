@@ -120,6 +120,7 @@ async function generateTypes() {
     const compiled = await compile(standaloneSchema, typeName, {
       bannerComment: '',
       declareExternallyReferenced: false,
+      additionalProperties: false, // Treat all schemas as closed by default
     })
     typeDefinitions.push(compiled.trim())
   }
@@ -142,6 +143,7 @@ async function generateTypes() {
       {
         bannerComment: '',
         declareExternallyReferenced: false,
+        additionalProperties: false, // Treat all schemas as closed by default
       }
     )
     typeDefinitions.push(compiled.trim())
@@ -184,6 +186,7 @@ async function generateTypes() {
       bannerComment: '',
       declareExternallyReferenced: false,
       cwd: SHARED_DIR,
+      additionalProperties: false, // Treat all schemas as closed by default
     })
 
     // Replace helper type references with SURefMeta* versions
@@ -249,6 +252,7 @@ async function generateTypes() {
         bannerComment: '',
         declareExternallyReferenced: false, // Inline all types to avoid duplicates
         cwd: SCHEMAS_DIR,
+        additionalProperties: false, // Treat all schemas as closed by default
         $refOptions: {
           resolve: {
             // Custom resolver for shared schemas

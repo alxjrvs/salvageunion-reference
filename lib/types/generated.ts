@@ -240,7 +240,6 @@ export interface SURefMetaAction {
   )[]
   choices?: SURefMetaChoices
   table?: SURefMetaTable
-  [k: string]: unknown
 }
 /**
  * A system or module that can be installed on a mech
@@ -309,7 +308,6 @@ export type SURefMetaSystem = SURefMetaEntry & {
    * Number of this system included
    */
   count?: number
-  [k: string]: unknown
 }
 /**
  * Roll table for random outcomes based on d20 rolls
@@ -383,7 +381,6 @@ export type SURefMetaTable =
       '19': string
       '20': string
       type: 'flat'
-      [k: string]: unknown
     }
 /**
  * Basic entry with name, description, source, and page reference
@@ -409,7 +406,6 @@ export interface SURefMetaEntry {
    * Page number in the source book
    */
   page: number
-  [k: string]: unknown
 }
 
 // ============================================
@@ -460,7 +456,6 @@ export type SURefAbility = SURefMetaEntry &
       | 'Trading'
       | 'Union Rep'
     level: number | 'L' | 'G'
-    [k: string]: unknown
   }
 
 // AbilityTreeRequirement
@@ -509,7 +504,6 @@ export type SURefAbilityTreeRequirement = SURefMetaEntry & {
     | 'Trading'
     | 'Union Rep'
   )[]
-  [k: string]: unknown
 }
 
 // BioTitan
@@ -520,7 +514,6 @@ export type SURefBioTitan = SURefMetaEntry & {
   structurePoints: number
   actions: SURefMetaAction[]
   traits?: SURefMetaTraits
-  [k: string]: unknown
 }
 
 // Chassis
@@ -528,10 +521,29 @@ export type SURefChassis = SURefMetaEntry & {
   stats: SURefMetaStats
   chassisAbilities: SURefMetaAction[]
   patterns: {
-    [k: string]: unknown
+    /**
+     * Name of the pattern
+     */
+    name: string
+    /**
+     * Description of the pattern
+     */
+    description?: string
+    /**
+     * Whether this pattern is legal for starting characters
+     */
+    legalStarting?: boolean
+    systems: string[]
+    modules: string[]
+    /**
+     * Optional drone configuration for this pattern
+     */
+    drone?: {
+      systems: string[]
+      modules: string[]
+    }
   }[]
   npc?: SURefMetaNpc
-  [k: string]: unknown
 }
 
 // AdvancedClass
@@ -616,7 +628,6 @@ export type SURefAdvancedClass = SURefMetaEntry & {
     | 'Tactical Warfare'
     | 'Trading'
     | 'Union Rep'
-  [k: string]: unknown
 }
 
 // CoreClass
@@ -670,7 +681,6 @@ export type SURefCoreClass = SURefMetaEntry & {
     | 'Trading'
     | 'Union Rep'
   )[]
-  [k: string]: unknown
 }
 
 // HybridClass
@@ -755,7 +765,6 @@ export type SURefHybridClass = SURefMetaEntry & {
     | 'Tactical Warfare'
     | 'Trading'
     | 'Union Rep'
-  [k: string]: unknown
 }
 
 // CrawlerBay
@@ -770,9 +779,19 @@ export type SURefCrawlerBay = SURefMetaEntry & {
    * Effects that scale with tech level
    */
   techLevelEffects: {
-    [k: string]: unknown
+    /**
+     * Minimum tech level for this effect
+     */
+    techLevelMin: number
+    /**
+     * Maximum tech level for this effect
+     */
+    techLevelMax: number
+    /**
+     * Description of the effect
+     */
+    effect: string
   }[]
-  [k: string]: unknown
 }
 
 // CrawlerTechLevel
@@ -796,14 +815,12 @@ export type SURefCrawlerTechLevel = SURefMetaEntry & {
    * Maximum approximate population (0 means unlimited/25,000+)
    */
   populationMax: number
-  [k: string]: unknown
 }
 
 // Crawler
 export type SURefCrawler = SURefMetaEntry & {
   npc: SURefMetaNpc
   actions: SURefMetaAction[]
-  [k: string]: unknown
 }
 
 // Creature
@@ -814,7 +831,6 @@ export type SURefCreature = SURefMetaEntry & {
   hitPoints: number
   actions: SURefMetaAction[]
   traits?: SURefMetaTraits
-  [k: string]: unknown
 }
 
 // Drone
@@ -829,7 +845,6 @@ export type SURefDrone = SURefMetaEntry & {
    */
   salvageValue: number
   systems: string[]
-  [k: string]: unknown
 }
 
 // Equipment
@@ -842,7 +857,6 @@ export type SURefEquipment = SURefMetaEntry & {
   range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
   notes?: string
   actions?: SURefMetaAction[]
-  [k: string]: unknown
 }
 
 // Keyword
@@ -876,7 +890,6 @@ export interface SURefKeyword {
 export type SURefMeld = SURefMetaEntry & {
   actions: SURefMetaAction[]
   traits?: SURefMetaTraits
-  [k: string]: unknown
 }
 
 // Module
@@ -986,7 +999,6 @@ export type SURefModule = SURefMetaEntry & {
         '19': string
         '20': string
         type: 'flat'
-        [k: string]: unknown
       }
   /**
    * Type of action required to use an ability
@@ -1020,7 +1032,6 @@ export type SURefModule = SURefMetaEntry & {
    * Number of this system included
    */
   count?: number
-  [k: string]: unknown
 }
 
 // Npc
@@ -1031,7 +1042,6 @@ export type SURefNpc = SURefMetaEntry & {
   hitPoints: number
   actions: SURefMetaAction[]
   traits?: SURefMetaTraits
-  [k: string]: unknown
 }
 
 // RollTable
@@ -1041,12 +1051,78 @@ export type SURefRollTable = SURefMetaEntry & {
    */
   section: string
   /**
-   * Roll table entries keyed by roll result ranges
+   * Roll table for random outcomes based on d20 rolls
    */
-  table: {
-    [k: string]: string
-  }
-  [k: string]: unknown
+  table:
+    | {
+        /**
+         * Critical failure outcome
+         */
+        '1': string
+        /**
+         * Critical success outcome
+         */
+        '20': string
+        type: 'standard'
+        /**
+         * High success outcome
+         */
+        '11-19': string
+        /**
+         * Moderate outcome
+         */
+        '6-10': string
+        /**
+         * Low outcome
+         */
+        '2-5': string
+      }
+    | {
+        /**
+         * Critical failure outcome
+         */
+        '1': string
+        type: 'alternate'
+        /**
+         * Critical success outcome
+         */
+        '19-20': string
+        /**
+         * High success outcome
+         */
+        '11-18': string
+        /**
+         * Moderate outcome
+         */
+        '6-10': string
+        /**
+         * Low outcome
+         */
+        '2-5': string
+      }
+    | {
+        '1': string
+        '2': string
+        '3': string
+        '4': string
+        '5': string
+        '6': string
+        '7': string
+        '8': string
+        '9': string
+        '10': string
+        '11': string
+        '12': string
+        '13': string
+        '14': string
+        '15': string
+        '16': string
+        '17': string
+        '18': string
+        '19': string
+        '20': string
+        type: 'flat'
+      }
 }
 
 // Squad
@@ -1057,7 +1133,6 @@ export type SURefSquad = SURefMetaEntry & {
   hitPoints?: number
   actions: SURefMetaAction[]
   traits?: SURefMetaTraits
-  [k: string]: unknown
 }
 
 // System
@@ -1167,7 +1242,6 @@ export type SURefSystem = SURefMetaEntry & {
         '19': string
         '20': string
         type: 'flat'
-        [k: string]: unknown
       }
   /**
    * Type of action required to use an ability
@@ -1201,7 +1275,6 @@ export type SURefSystem = SURefMetaEntry & {
    * Number of this system included
    */
   count?: number
-  [k: string]: unknown
 }
 
 // Trait
@@ -1244,7 +1317,6 @@ export type SURefVehicle = SURefMetaEntry & {
   salvageValue: number
   systems: string[]
   traits?: SURefMetaTraits
-  [k: string]: unknown
 }
 
 // ============================================

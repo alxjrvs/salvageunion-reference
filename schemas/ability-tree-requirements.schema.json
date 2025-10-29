@@ -10,8 +10,7 @@
     "required": ["requirement"],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry",
-        "additionalProperties": false
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       }
     ],
     "properties": {

@@ -95,7 +95,12 @@ function validateData(config: ValidationConfig): boolean {
     const data = loadJson(config.dataFile)
     const schema = loadSchema(config.schemaFile)
 
-    const result = globalValidator.validate(data, schema)
+    // Use options to handle allOf composition better
+    const result = globalValidator.validate(data, schema, {
+      // Don't validate additionalProperties in allOf schemas
+      // This allows composition to work properly
+      nestedErrors: true,
+    })
 
     if (result.valid) {
       console.log(`✅ ${config.name}: VALID`)

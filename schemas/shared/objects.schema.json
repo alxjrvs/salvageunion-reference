@@ -233,8 +233,7 @@
       "required": ["actions", "salvageValue", "slotsRequired", "techLevel"],
       "allOf": [
         {
-          "$ref": "#/definitions/entry",
-          "additionalProperties": false
+          "$ref": "#/definitions/entry"
         }
       ],
       "properties": {
@@ -379,6 +378,7 @@
         {
           "type": "object",
           "description": "Flat roll table with individual outcomes for each numeric result",
+          "additionalProperties": false,
           "required": [
             "type",
             "1",

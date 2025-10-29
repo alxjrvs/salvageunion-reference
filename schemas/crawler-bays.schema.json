@@ -9,8 +9,7 @@
     "required": ["damagedEffect", "npc", "actions", "techLevelEffects"],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry",
-        "additionalProperties": false
+        "$ref": "shared/objects.schema.json#/definitions/entry"
       }
     ],
     "properties": {
@@ -31,7 +30,25 @@
         "type": "array",
         "description": "Effects that scale with tech level",
         "items": {
-          "type": "object"
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["techLevelMin", "techLevelMax", "effect"],
+          "properties": {
+            "techLevelMin": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Minimum tech level for this effect"
+            },
+            "techLevelMax": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Maximum tech level for this effect"
+            },
+            "effect": {
+              "type": "string",
+              "description": "Description of the effect"
+            }
+          }
         }
       }
     }
