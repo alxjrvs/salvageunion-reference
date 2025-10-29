@@ -58,9 +58,18 @@
         "name": "Titanic Actions",
         "description": "Scylla can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Scylla regains spent Titanic Actions at the start of their turn.",
         "options": [
-          "Scylla moves one Range Band.",
-          "Scylla makes a single Scythe Attack. This does not have the Multi-Attack Trait.",
-          "Scylla makes a Tail Sweep Attack (Costs 2 Titanic Actions)."
+          {
+            "label": "",
+            "value": "Scylla moves one Range Band."
+          },
+          {
+            "label": "",
+            "value": "Scylla makes a single Scythe Attack. This does not have the Multi-Attack Trait."
+          },
+          {
+            "label": "",
+            "value": "Scylla makes a Tail Sweep Attack (Costs 2 Titanic Actions)."
+          }
         ]
       }
     ],
@@ -109,9 +118,18 @@
         "name": "Titanic Actions",
         "description": "Typhon can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Typhon regains spent Titanic Actions at the start of their turn.",
         "options": [
-          "Typhon uses their Burrower Ability to either burrow or unburrow.",
-          "Typhon moves one Range Band.",
-          "Typhon makes a Swallow Whole Attack (Costs three Titanic Actions)."
+          {
+            "label": "",
+            "value": "Typhon uses their Burrower Ability to either burrow or unburrow."
+          },
+          {
+            "label": "",
+            "value": "Typhon moves one Range Band."
+          },
+          {
+            "label": "",
+            "value": "Typhon makes a Swallow Whole Attack (Costs three Titanic Actions)."
+          }
         ]
       }
     ],
@@ -183,10 +201,22 @@
         "name": "Titanic Actions",
         "description": "Chrysalis can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Chrysalis regains spent Titanic Actions at the start of their turn.",
         "options": [
-          "Chrysalis moves one Range Band.",
-          "Chrysalis uses their Entrancing Song (Costs 2 Titanic Actions).",
-          "Chrysalis attacks with Cluster Energy Bomb. This does not have the Multi-Attack Trait.",
-          "Chrysalis uses its Cocoon Ability (Costs 2 Titanic Actions)."
+          {
+            "label": "",
+            "value": "Chrysalis moves one Range Band."
+          },
+          {
+            "label": "",
+            "value": "Chrysalis uses their Entrancing Song (Costs 2 Titanic Actions)."
+          },
+          {
+            "label": "",
+            "value": "Chrysalis attacks with Cluster Energy Bomb. This does not have the Multi-Attack Trait."
+          },
+          {
+            "label": "",
+            "value": "Chrysalis uses its Cocoon Ability (Costs 2 Titanic Actions)."
+          }
         ]
       }
     ],
@@ -232,9 +262,18 @@
         "name": "Titanic Actions",
         "description": "Phantom can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Phantom regains spent Titanic Actions at the start of their turn.",
         "options": [
-          "Phantom moves one Range Band.",
-          "Phantom makes a single Morph Scythe Attack. This does not have the Multi-Attack Trait.",
-          "Phantom uses its Nether Teleport Ability."
+          {
+            "label": "",
+            "value": "Phantom moves one Range Band."
+          },
+          {
+            "label": "",
+            "value": "Phantom makes a single Morph Scythe Attack. This does not have the Multi-Attack Trait."
+          },
+          {
+            "label": "",
+            "value": "Phantom uses its Nether Teleport Ability."
+          }
         ]
       }
     ],
@@ -300,9 +339,18 @@
         "name": "Titanic Actions",
         "description": "Electrophorus can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Electrophorus regains spent Titanic Actions at the start of their turn.",
         "options": [
-          "Electrophorus moves one Range Band.",
-          "Electrophorus makes a Electrified Spines Attack.",
-          "Electrophorus makes a Bio-Electric Arc Attack (Uses 2 Titanic Actions)."
+          {
+            "label": "",
+            "value": "Electrophorus moves one Range Band."
+          },
+          {
+            "label": "",
+            "value": "Electrophorus makes a Electrified Spines Attack."
+          },
+          {
+            "label": "",
+            "value": "Electrophorus makes a Bio-Electric Arc Attack (Uses 2 Titanic Actions)."
+          }
         ]
       }
     ],
@@ -412,9 +460,18 @@
         "name": "Titanic Actions",
         "description": "The Tyrant can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. The Tyrant regains spent Titanic Actions at the start of their turn.",
         "options": [
-          "Tyrant moves one Range Band.",
-          "Tyrant regains 10 SP.",
-          "Tyrant makes a single Claw Swipe Attack. This does not have the Multi-Attack Trait."
+          {
+            "label": "",
+            "value": "Tyrant moves one Range Band."
+          },
+          {
+            "label": "",
+            "value": "Tyrant regains 10 SP."
+          },
+          {
+            "label": "",
+            "value": "Tyrant makes a single Claw Swipe Attack. This does not have the Multi-Attack Trait."
+          }
         ]
       }
     ],

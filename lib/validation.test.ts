@@ -95,14 +95,14 @@ describe('Schema Validation', () => {
         const displayErrors = errorMessages.slice(0, 10)
         const remainingCount = errorMessages.length - 10
 
-        let errorOutput = `\n${config.title} validation failed with ${result.errors.length} error(s):\n`
+        let errorOutput = `${config.title} validation failed with ${result.errors.length} error(s):\n`
         errorOutput += displayErrors.join('\n')
 
         if (remainingCount > 0) {
           errorOutput += `\n  ... and ${remainingCount} more error(s)`
         }
 
-        expect.fail(errorOutput)
+        throw new Error(errorOutput)
       }
 
       expect(result.valid).toBe(true)

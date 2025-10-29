@@ -226,19 +226,16 @@ export interface SURefMetaAction {
   /**
    * List of options or choices for this action
    */
-  options?: (
-    | string
-    | {
-        /**
-         * Display label for the option
-         */
-        label: string
-        /**
-         * Value or effect of the option
-         */
-        value: string
-      }
-  )[]
+  options?: {
+    /**
+     * Display label for the option (empty string if no label)
+     */
+    label?: string
+    /**
+     * Description or effect of the option
+     */
+    value: string
+  }[]
   choices?: SURefMetaChoices
   table?: SURefMetaTable
 }
@@ -457,6 +454,17 @@ export type SURefAbility = SURefMetaEntry &
       | 'Trading'
       | 'Union Rep'
     level: number | 'L' | 'G'
+    /**
+     * Type of action required to use an ability
+     */
+    mechActionType?:
+      | 'Passive'
+      | 'Free'
+      | 'Reaction'
+      | 'Turn'
+      | 'Short'
+      | 'Long'
+      | 'DownTime'
   }
 
 // AbilityTreeRequirement

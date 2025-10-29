@@ -35,6 +35,9 @@
             "const": "G"
           }
         ]
+      },
+      "mechActionType": {
+        "$ref": "shared/enums.schema.json#/definitions/actionType"
       }
     }
   }

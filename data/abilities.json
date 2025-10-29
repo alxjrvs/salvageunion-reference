@@ -20,11 +20,26 @@
     "description": "Build rapport, and ask favours of other mechanics, salvagers, and workers.",
     "effect": "You can easily converse and build rapport with other mechanics, salvagers, workers, and similar wasteland folk. You invent a local saying to exchange with the person you are talking to, something like, \"The only thing that overcomes hard luck is hard work\" or \"Get the show on the road\". Explain what this means. You are now friendly with this NPC and can ask them for three of the following favours. You may choose the same option multiple times. If you meet that same person again you may repeat the phrase and they will offer you a single favour.",
     "options": [
-      "Restore up to 4 SP on a single Mech or Vehicle with at least 1 SP.",
-      "Answer any question about the local area, Mechs, and mechanical & engineering topics.",
-      "Repair a single damaged System or Module to Intact Condition. This must be of a Tech Level the wastelander could reasonably repair as decided by the Mediator.",
-      "Provide food, shelter, and lodgings for you and the other salvagers in your crew.",
-      "Provide a favour within their power and ability to grant as adjudicated by the Mediator."
+      {
+        "label": "",
+        "value": "Restore up to 4 SP on a single Mech or Vehicle with at least 1 SP."
+      },
+      {
+        "label": "",
+        "value": "Answer any question about the local area, Mechs, and mechanical & engineering topics."
+      },
+      {
+        "label": "",
+        "value": "Repair a single damaged System or Module to Intact Condition. This must be of a Tech Level the wastelander could reasonably repair as decided by the Mediator."
+      },
+      {
+        "label": "",
+        "value": "Provide food, shelter, and lodgings for you and the other salvagers in your crew."
+      },
+      {
+        "label": "",
+        "value": "Provide a favour within their power and ability to grant as adjudicated by the Mediator."
+      }
     ],
     "activationCost": 3,
     "actionType": "Turn",
@@ -134,7 +149,7 @@
       {
         "name": "Mender",
         "actionType": "Passive",
-        "description": "When you, or a Mech you are piloting uses any Ability that restores Structure Points, the Ability restores an additional 4 SP each time you use it. For example, if you use the Welding Laser's 'Weld' Ability, it restores an additional 4 Structure Points when used."
+        "value": "When you, or a Mech you are piloting uses any Ability that restores Structure Points, the Ability restores an additional 4 SP each time you use it. For example, if you use the Welding Laser's 'Weld' Ability, it restores an additional 4 Structure Points when used."
       },
       {
         "name": "Quick Fix",
@@ -337,7 +352,7 @@
     "actions": [
       {
         "name": "Bionic Arms Attack",
-        "description": "Melee attack with your bionic arms, where X is equal to the Tech Level of your Union Crawler.",
+        "value": "Melee attack with your bionic arms, where X is equal to the Tech Level of your Union Crawler.",
         "damage": {
           "type": "SP",
           "amount": "X"
@@ -502,10 +517,22 @@
     "description": "Retrieve Chassis, Systems, Modules, Scrap, and Equipment from your Crawler.",
     "effect": "You can call in an emergency salvage drop that deploys from your Union Crawler. When you activate this Ability, choose one of the following options and it will be delivered to you from your Union Crawler in 10 minutes. You must be in the same region as Union Crawler.",
     "options": [
-      "Any Mech Chassis you currently have stored in your Union Crawler.",
-      "Any System or Module you currently have stored in your Union Crawler.",
-      "Up to 10 Scrap of any type you have stored in your Union Crawler.",
-      "Up to 5 of any Pilot Equipment you currently have stored in your Union Crawler."
+      {
+        "label": "",
+        "value": "Any Mech Chassis you currently have stored in your Union Crawler."
+      },
+      {
+        "label": "",
+        "value": "Any System or Module you currently have stored in your Union Crawler."
+      },
+      {
+        "label": "",
+        "value": "Up to 10 Scrap of any type you have stored in your Union Crawler."
+      },
+      {
+        "label": "",
+        "value": "Up to 5 of any Pilot Equipment you currently have stored in your Union Crawler."
+      }
     ],
     "activationCost": 3,
     "actionType": "Short",
@@ -520,12 +547,30 @@
     "description": "Learn information about an NPC you’re conversing with.",
     "effect": "You have a knack for being able to read people during a conversation. Choose an NPC that you are in conversation with. During the conversation, you can spend 1 AP to learn one of the following options. You can do this as many times as you wish during the conversation.",
     "options": [
-      "You learn something the target intends to do soon.",
-      "You learn something the target wants.",
-      "You learn what the target is currently feeling.",
-      "You learn what internally motivates the target.",
-      "You learn one of the target's weaknesses or flaws.",
-      "You learn if the target is telling the truth or not."
+      {
+        "label": "",
+        "value": "You learn something the target intends to do soon."
+      },
+      {
+        "label": "",
+        "value": "You learn something the target wants."
+      },
+      {
+        "label": "",
+        "value": "You learn what the target is currently feeling."
+      },
+      {
+        "label": "",
+        "value": "You learn what internally motivates the target."
+      },
+      {
+        "label": "",
+        "value": "You learn one of the target's weaknesses or flaws."
+      },
+      {
+        "label": "",
+        "value": "You learn if the target is telling the truth or not."
+      }
     ],
     "activationCost": 1,
     "actionType": "Turn",
@@ -681,7 +726,7 @@
     "actions": [
       {
         "name": "Cargo Charge (Pilot)",
-        "description": "Make a special charge attack against a target in Range. Roll to hit as normal. On a hit, this deals HP damage equal to the amount of Inventory Slots your Pilot has filled. Non-Bio-Titan or Meld creatures hit by this attack are knocked Prone and gain the Vulnerable Trait.",
+        "value": "Make a special charge attack against a target in Range. Roll to hit as normal. On a hit, this deals HP damage equal to the amount of Inventory Slots your Pilot has filled. Non-Bio-Titan or Meld creatures hit by this attack are knocked Prone and gain the Vulnerable Trait.",
         "range": "Medium",
         "traits": [
           {
@@ -691,7 +736,7 @@
       },
       {
         "name": "Cargo Charge (Mech)",
-        "description": "Make a special charge attack against a target in Range while piloting a Mech. Roll to hit as normal. On a hit, this deals SP damage equal to the amount of Cargo Slots you currently have filled on your Mech. Any target hit by this attack is knocked Prone and gains the Vulnerable Trait.",
+        "value": "Make a special charge attack against a target in Range while piloting a Mech. Roll to hit as normal. On a hit, this deals SP damage equal to the amount of Cargo Slots you currently have filled on your Mech. Any target hit by this attack is knocked Prone and gains the Vulnerable Trait.",
         "range": "Medium",
         "traits": [
           {
@@ -846,20 +891,47 @@
     "description": "Gain a specialised sniper rifle that only you can use.",
     "effect": "You acquire and train in the use of a Custom Sniper Rifle that only you can use. Choose if it is a Ballistic or Energy weapon and it gains the respective Energy or Ballistic Trait. At each Tech Level you may choose an additional modification for your Custom Sniper Rifle. In addition, its damage increases by 1 SP per Tech Level after the first, e.g. a Tech 3 Custom Sniper Rifle would deal 4 SP damage and you would be able to choose three modifications for it.",
     "options": [
-      "Rangefinder: The Custom Sniper Rifle increases its Range to Far.",
-      "Laser Guidance: You may spend 2 AP to automatically hit with the Custom Sniper Rifle. It also gains the Targeter Trait.",
-      "Pinpoint Targeter: You may spend 2 AP when you make an attack. If it hits, a System, Module, or appendage of your choice on the target is damaged. It also gains the Targeter Trait.",
-      "Dum Dum Rounds: The Custom Sniper Rifle gains the Anti-Organic Trait.",
-      "High Calibre Rounds: The Custom Sniper Rifle deals an additional 1 SP damage.",
-      "Anti-Matter: The Custom Sniper Rifle gains the Deadly Trait.",
-      "Flashy: The Custom Sniper Rifle gains the Flashy Trait.",
-      "Silencer: The Custom Sniper Rifle gains the Silent Trait.",
-      "Compact Design: The Custom Sniper Rifle is designed to fold down into a briefcase, making it easily concealable."
+      {
+        "label": "Rangefinder",
+        "value": "The Custom Sniper Rifle increases its Range to Far."
+      },
+      {
+        "label": "Laser Guidance",
+        "value": "You may spend 2 AP to automatically hit with the Custom Sniper Rifle. It also gains the Targeter Trait."
+      },
+      {
+        "label": "Pinpoint Targeter",
+        "value": "You may spend 2 AP when you make an attack. If it hits, a System, Module, or appendage of your choice on the target is damaged. It also gains the Targeter Trait."
+      },
+      {
+        "label": "Dum Dum Rounds",
+        "value": "The Custom Sniper Rifle gains the Anti-Organic Trait."
+      },
+      {
+        "label": "High Calibre Rounds",
+        "value": "The Custom Sniper Rifle deals an additional 1 SP damage."
+      },
+      {
+        "label": "Anti-Matter",
+        "value": "The Custom Sniper Rifle gains the Deadly Trait."
+      },
+      {
+        "label": "Flashy",
+        "value": "The Custom Sniper Rifle gains the Flashy Trait."
+      },
+      {
+        "label": "Silencer",
+        "value": "The Custom Sniper Rifle gains the Silent Trait."
+      },
+      {
+        "label": "Compact Design",
+        "value": "The Custom Sniper Rifle is designed to fold down into a briefcase, making it easily concealable."
+      }
     ],
     "actions": [
       {
         "name": "Custom Sniper Rifle",
-        "description": "Attack with your custom sniper rifle. Base damage is 2 SP at Tech 1, increasing by 1 SP per Tech Level.",
+        "value": "Attack with your custom sniper rifle. Base damage is 2 SP at Tech 1, increasing by 1 SP per Tech Level.",
         "damage": {
           "type": "SP",
           "amount": 2
@@ -1026,19 +1098,43 @@
     "description": "Gain a specialised Missile Launcher that only you can use.",
     "effect": "You acquire and train in the use of a Custom Missile Launcher that only you can use. It can be customised how you desire. Its Tech level is equal to that of your Union Crawler. At each Tech Level you may choose an additional modification for your Custom Missile Launcher. In addition, its damage increases by 1 SP per Tech Level after the first. e.g. a Tech 3 Custom Missile Launcher would deal 5 SP damage and you would be able to choose three modifications for it. If your Custom Missile Launcher is misplaced, damaged, or destroyed you can acquire a new one during Downtime of a Tech Level equal to your Union Crawler. You may only ever have one Custom Missile Launcher at a time.",
     "options": [
-      "Rangefinder: The Custom Missile increases its Range to Long.",
-      "Laser Guidance: You may spend 2 AP to automatically hit with the Custom Missile Launcher. This attack counts as having the Targeter Trait.",
-      "A.I. Tracking: You may spend 1 AP to give the Custom Missile Launcher the Guided Trait for the next attack. This attack counts as having the Targeter Trait.",
-      "Napalm Rounds: The Custom Missile Launcher gains the Anti-Organic and Burn (1) Trait.",
-      "Bigger Boom: The Custom Missile Launcher gains the Explosive (2) Trait.",
-      "Flashy: The Custom Missile Launcher gains the Flashy Trait.",
-      "Expanded Warhead: The Custom Missile Launcher deals an additional 1 SP damage.",
-      "Portable: The Custom Missile Launcher loses the Heavy Trait."
+      {
+        "label": "Rangefinder",
+        "value": "The Custom Missile increases its Range to Long."
+      },
+      {
+        "label": "Laser Guidance",
+        "value": "You may spend 2 AP to automatically hit with the Custom Missile Launcher. This attack counts as having the Targeter Trait."
+      },
+      {
+        "label": "A.I. Tracking",
+        "value": "You may spend 1 AP to give the Custom Missile Launcher the Guided Trait for the next attack. This attack counts as having the Targeter Trait."
+      },
+      {
+        "label": "Napalm Rounds",
+        "value": "The Custom Missile Launcher gains the Anti-Organic and Burn (1) Trait."
+      },
+      {
+        "label": "Bigger Boom",
+        "value": "The Custom Missile Launcher gains the Explosive (2) Trait."
+      },
+      {
+        "label": "Flashy",
+        "value": "The Custom Missile Launcher gains the Flashy Trait."
+      },
+      {
+        "label": "Expanded Warhead",
+        "value": "The Custom Missile Launcher deals an additional 1 SP damage."
+      },
+      {
+        "label": "Portable",
+        "value": "The Custom Missile Launcher loses the Heavy Trait."
+      }
     ],
     "actions": [
       {
         "name": "Custom Missile Launcher",
-        "description": "Attack with your custom missile launcher. Base damage is 3 SP at Tech 1, increasing by 1 SP per Tech Level.",
+        "value": "Attack with your custom missile launcher. Base damage is 3 SP at Tech 1, increasing by 1 SP per Tech Level.",
         "damage": {
           "type": "SP",
           "amount": 3
@@ -1222,7 +1318,7 @@
     "actions": [
       {
         "name": "Meld Tendril Attack",
-        "description": "Attack with your Meld tendrils.",
+        "value": "Attack with your Meld tendrils.",
         "damage": {
           "type": "SP",
           "amount": 5
