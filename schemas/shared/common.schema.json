@@ -45,8 +45,15 @@
       "description": "Salvage value in credits"
     },
     "hitPoints": {
-      "$ref": "#/definitions/positiveInteger",
-      "description": "Hit points for creatures and personnel"
+      "oneOf": [
+        {
+          "$ref": "#/definitions/positiveInteger",
+          "description": "Hit points for creatures and personnel"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "structurePoints": {
       "$ref": "#/definitions/positiveInteger",

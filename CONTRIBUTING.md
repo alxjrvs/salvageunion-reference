@@ -119,10 +119,10 @@ Traits can be simple or have numeric values:
 ```json
 {
   "traits": [
-    { "type": "melee" },
-    { "type": "ballistic" },
-    { "type": "explosive", "amount": 2 },
-    { "type": "multi-attack", "amount": 3 }
+    { "damageType": "melee" },
+    { "damageType": "ballistic" },
+    { "damageType": "explosive", "amount": 2 },
+    { "damageType": "multi-attack", "amount": 3 }
   ]
 }
 ```
@@ -134,7 +134,7 @@ For abilities with roll outcomes, include the full roll table:
 ```json
 {
   "table": {
-    "type": "standard",
+    "damageType": "standard",
     "1": "Critical failure outcome text",
     "2-5": "Low outcome text",
     "6-10": "Moderate outcome text",

@@ -8,7 +8,7 @@
     "salvageValue": 2,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 2
     },
     "traits": [
@@ -89,7 +89,7 @@
     "salvageValue": 3,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 2
     },
     "traits": [
@@ -126,7 +126,7 @@
     "salvageValue": 3,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 1
     },
     "traits": [
@@ -176,7 +176,7 @@
     "salvageValue": 4,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 3
     },
     "traits": [
@@ -268,7 +268,7 @@
     "salvageValue": 5,
     "range": "Medium",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 5
     },
     "traits": [
@@ -294,7 +294,7 @@
     "salvageValue": 5,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 4
     },
     "traits": [
@@ -321,7 +321,7 @@
     "salvageValue": 3,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 3
     },
     "traits": [
@@ -380,7 +380,7 @@
     "description": "A compressor and nozzle which propels an abrasive material like sand to slowly erode, clean, or shape a surface. Any target hit cannot use any System or Module with the Targeter Trait for 1 turn.",
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 1
     },
     "page": 167,
@@ -457,7 +457,7 @@
     "salvageValue": 3,
     "range": "Medium",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 4
     },
     "traits": [
@@ -481,7 +481,7 @@
     "salvageValue": 5,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 6
     },
     "traits": [
@@ -584,7 +584,7 @@
     "salvageValue": 2,
     "range": "Medium",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 4
     },
     "traits": [
@@ -649,7 +649,7 @@
     "salvageValue": 2,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 3
     },
     "traits": [
@@ -769,7 +769,7 @@
     "salvageValue": 5,
     "range": "Close/Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 6
     },
     "traits": [
@@ -855,7 +855,7 @@
     "salvageValue": 4,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 6
     },
     "traits": [
@@ -1036,7 +1036,7 @@
     "salvageValue": 4,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 6
     },
     "traits": [
@@ -1066,7 +1066,7 @@
     "salvageValue": 2,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 4
     },
     "traits": [
@@ -1091,7 +1091,7 @@
     "salvageValue": 2,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 5
     },
     "traits": [
@@ -1115,7 +1115,7 @@
     "salvageValue": 5,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 8
     },
     "traits": [
@@ -1171,7 +1171,7 @@
     "salvageValue": 4,
     "range": "Medium",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 4
     },
     "traits": [
@@ -1218,7 +1218,7 @@
     "salvageValue": 4,
     "range": "Far",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 5
     },
     "traits": [
@@ -1243,7 +1243,7 @@
     "salvageValue": 3,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 5
     },
     "traits": [
@@ -1403,7 +1403,7 @@
     "description": "A gimble mounted .50 Cal Machine gun with automated optical tracking.",
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 2
     },
     "traits": [
@@ -1427,7 +1427,7 @@
     "description": "A tri-axis gyroscope controlled Green Laser, with No-Scope LIDAR tracking.",
     "range": "Medium",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 4
     },
     "traits": [
@@ -1452,7 +1452,7 @@
     "description": "A Herrsch 360° RealSteel Turret Enclosure, controls this 120mm Cannon.",
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 6
     },
     "traits": [
@@ -1490,7 +1490,7 @@
     "salvageValue": 5,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 5
     },
     "traits": [
@@ -1582,7 +1582,7 @@
     "salvageValue": 4,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 1
     },
     "traits": [
@@ -1607,7 +1607,7 @@
     "salvageValue": 8,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 9
     },
     "traits": [
@@ -1664,7 +1664,7 @@
     "salvageValue": 2,
     "range": "Medium",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 3
     },
     "traits": [
@@ -1766,7 +1766,7 @@
     "salvageValue": 4,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 3
     },
     "traits": [
@@ -1793,7 +1793,7 @@
     "salvageValue": 5,
     "range": "Medium",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 5
     },
     "traits": [
@@ -1853,7 +1853,7 @@
     "salvageValue": 5,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 7
     },
     "traits": [
@@ -1887,7 +1887,7 @@
     "salvageValue": 3,
     "range": "Close",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 7
     },
     "traits": [
@@ -1968,7 +1968,7 @@
     "salvageValue": 4,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": "X"
     },
     "traits": [
@@ -2007,7 +2007,7 @@
     "salvageValue": 7,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 6
     },
     "traits": [
@@ -2051,7 +2051,7 @@
     "salvageValue": 10,
     "range": "Long",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": "2d20"
     },
     "traits": [

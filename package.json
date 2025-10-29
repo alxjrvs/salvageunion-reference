@@ -1,8 +1,8 @@
 {
   "name": "salvageunion-reference",
-  "version": "1.38.0",
+  "version": "1.39.0",
   "description": "Comprehensive, schema-validated JSON dataset and TypeScript ORM for the Salvage Union tabletop RPG",
-  "type": "module",
+  "damageType": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -39,7 +39,7 @@
     "pdf:update-pages": "tsx tools/rules-parser/updatePageNumbers.ts"
   },
   "repository": {
-    "type": "git",
+    "damageType": "git",
     "url": "https://github.com/alxjrvs/salvageunion-data.git"
   },
   "keywords": [

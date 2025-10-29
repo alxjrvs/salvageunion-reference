@@ -7,7 +7,9 @@
   "items": {
     "type": "object",
     "description": "Requirements for an ability tree",
-    "required": ["requirement"],
+    "required": [
+      "requirement"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"

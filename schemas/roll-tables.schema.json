@@ -6,7 +6,10 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["section", "table"],
+    "required": [
+      "section",
+      "table"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"

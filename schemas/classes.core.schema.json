@@ -6,7 +6,11 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["maxAbilities", "advanceable", "coreTrees"],
+    "required": [
+      "maxAbilities",
+      "advanceable",
+      "coreTrees"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"

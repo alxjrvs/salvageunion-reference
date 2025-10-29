@@ -11,7 +11,7 @@
         "range": "Close",
         "damage": {
           "amount": 4,
-          "type": "SP"
+          "damageType": "SP"
         },
         "traits": [
           {
@@ -136,7 +136,7 @@
         "range": "Long",
         "damage": {
           "amount": 5,
-          "type": "SP"
+          "damageType": "SP"
         },
         "traits": [
           {
@@ -216,7 +216,7 @@
         "range": "Close",
         "damage": {
           "amount": 5,
-          "type": "SP"
+          "damageType": "SP"
         },
         "traits": [
           {
@@ -254,7 +254,7 @@
         "range": "Close",
         "damage": {
           "amount": 8,
-          "type": "SP"
+          "damageType": "SP"
         },
         "traits": [
           {
@@ -322,7 +322,7 @@
         "range": "Close",
         "damage": {
           "amount": 10,
-          "type": "SP"
+          "damageType": "SP"
         },
         "traits": [
           {
@@ -356,7 +356,7 @@
         "range": "Medium",
         "damage": {
           "amount": 15,
-          "type": "SP"
+          "damageType": "SP"
         },
         "traits": [
           {
@@ -371,7 +371,7 @@
         "range": "Close",
         "damage": {
           "amount": 20,
-          "type": "SP"
+          "damageType": "SP"
         },
         "traits": [
           {
@@ -389,7 +389,7 @@
         "range": "Long",
         "damage": {
           "amount": 40,
-          "type": "SP"
+          "damageType": "SP"
         },
         "traits": [
           {

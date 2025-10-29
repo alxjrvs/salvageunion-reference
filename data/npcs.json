@@ -10,7 +10,7 @@
         "range": "Close",
         "damage": {
           "amount": 2,
-          "type": "HP"
+          "damageType": "HP"
         },
         "traits": [
           {
@@ -36,7 +36,7 @@
         "range": "Close",
         "damage": {
           "amount": 3,
-          "type": "HP"
+          "damageType": "HP"
         },
         "traits": [
           {
@@ -62,7 +62,7 @@
         "range": "Medium",
         "damage": {
           "amount": 5,
-          "type": "HP"
+          "damageType": "HP"
         },
         "traits": [
           {
@@ -88,7 +88,7 @@
         "range": "Medium",
         "damage": {
           "amount": 5,
-          "type": "HP"
+          "damageType": "HP"
         },
         "traits": [
           {
@@ -114,7 +114,7 @@
         "range": "Close",
         "damage": {
           "amount": 3,
-          "type": "HP"
+          "damageType": "HP"
         },
         "traits": [
           {
@@ -140,7 +140,7 @@
         "range": "Long",
         "damage": {
           "amount": 6,
-          "type": "HP"
+          "damageType": "HP"
         },
         "traits": [
           {

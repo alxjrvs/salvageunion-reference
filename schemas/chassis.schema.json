@@ -6,7 +6,11 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["stats", "chassisAbilities", "patterns"],
+    "required": [
+      "stats",
+      "chassisAbilities",
+      "patterns"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
@@ -27,7 +31,11 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["name", "systems", "modules"],
+          "required": [
+            "name",
+            "systems",
+            "modules"
+          ],
           "properties": {
             "name": {
               "type": "string",
@@ -58,7 +66,10 @@
               "type": "object",
               "description": "Optional drone configuration for this pattern",
               "additionalProperties": false,
-              "required": ["systems", "modules"],
+              "required": [
+                "systems",
+                "modules"
+              ],
               "properties": {
                 "systems": {
                   "type": "array",

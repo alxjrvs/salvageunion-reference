@@ -6,12 +6,20 @@
   "definitions": {
     "source": {
       "type": "string",
-      "enum": ["Salvage Union Workshop Manual"],
+      "enum": [
+        "Salvage Union Workshop Manual"
+      ],
       "description": "The source book or expansion for this content"
     },
     "range": {
       "type": "string",
-      "enum": ["Close", "Medium", "Long", "Far", "Close/Long"],
+      "enum": [
+        "Close",
+        "Medium",
+        "Long",
+        "Far",
+        "Close/Long"
+      ],
       "description": "Range bands for abilities and weapons"
     },
     "actionType": {
@@ -26,6 +34,14 @@
         "DownTime"
       ],
       "description": "Type of action required to use an ability"
+    },
+    "damageType": {
+      "type": "string",
+      "enum": [
+        "HP",
+        "SP"
+      ],
+      "description": "Type of damage"
     },
     "tree": {
       "type": "string",

@@ -6,7 +6,10 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["advancedTree", "legendaryTree"],
+    "required": [
+      "advancedTree",
+      "legendaryTree"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"

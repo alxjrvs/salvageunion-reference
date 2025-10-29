@@ -6,7 +6,10 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["hitPoints", "actions"],
+    "required": [
+      "hitPoints",
+      "actions"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"

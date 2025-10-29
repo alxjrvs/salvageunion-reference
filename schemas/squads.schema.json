@@ -6,7 +6,9 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["actions"],
+    "required": [
+      "actions"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
@@ -24,6 +26,9 @@
       },
       "traits": {
         "$ref": "shared/objects.schema.json#/definitions/traits"
+      },
+      "damageType": {
+        "$ref": "shared/enums.schema.json#/definitions/damageType"
       }
     }
   }

@@ -7,6 +7,7 @@
     "npc": {
       "position": "Union Crawler A.I.",
       "description": "Your Union Crawler has an advanced, intelligent A.I. on board which controls its core functions. The A.I. is jacked into the Corpo Net, once per Downtime you can ask them two questions about any topic and they will answer you truthfully. Name your A.I. and roll on the A.I. Personality Table for their personality.",
+      "hitPoints": null,
       "choices": [
         {
           "id": "c7e2b66a-6b62-446d-90ff-11873089bfe0",
@@ -54,7 +55,9 @@
             "id": "49dbf700-b4b4-4718-8847-5f24dbf033a2",
             "name": "Additional Armament Bay Weapons System",
             "description": "Choose a Weapons System to mount in the Armament Bay.",
-            "schema": ["systems"]
+            "schema": [
+              "systems"
+            ]
           }
         ]
       }

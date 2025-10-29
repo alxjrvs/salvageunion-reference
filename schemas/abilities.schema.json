@@ -6,7 +6,10 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["tree", "level"],
+    "required": [
+      "tree",
+      "level"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
