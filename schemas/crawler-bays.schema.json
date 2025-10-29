@@ -6,7 +6,12 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["damagedEffect", "npc", "actions", "techLevelEffects"],
+    "required": [
+      "damagedEffect",
+      "npc",
+      "actions",
+      "techLevelEffects"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
@@ -32,7 +37,11 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["techLevelMin", "techLevelMax", "effect"],
+          "required": [
+            "techLevelMin",
+            "techLevelMax",
+            "effect"
+          ],
           "properties": {
             "techLevelMin": {
               "type": "integer",
@@ -47,6 +56,9 @@
             "effect": {
               "type": "string",
               "description": "Description of the effect"
+            },
+            "choices": {
+              "$ref": "shared/objects.schema.json#/definitions/choices"
             }
           }
         }
