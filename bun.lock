@@ -5,7 +5,7 @@
       "name": "salvageunion-data",
       "devDependencies": {
         "@eslint/js": "^9.38.0",
-        "@types/node": "^24.9.1",
+        "@types/node": "^24.9.2",
         "@types/pdf-parse": "^1.1.5",
         "jsonschema": "^1.5.0",
         "pdf-parse": "^2.4.5",

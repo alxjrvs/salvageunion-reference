@@ -312,11 +312,7 @@ async function generateTypes() {
   }
 
   // Add helper union types at the end
-  // Generate SURefSchemaName from SCHEMA_NAME_MAP keys
-  const schemaNames = Object.keys(SCHEMA_NAME_MAP)
-    .sort()
-    .map((name) => `  | '${name}'`)
-    .join('\n')
+  // Note: SURefSchemaName is now auto-generated from enums.schema.json#/definitions/schemaName
 
   // Generate SURefEntity from SCHEMA_NAME_MAP values
   const entityTypes = Object.values(SCHEMA_NAME_MAP)
@@ -330,12 +326,6 @@ async function generateTypes() {
 // ============================================
 
 /**
- * Union of all valid schema names (kebab-case file names)
- */
-export type SURefSchemaName =
-${schemaNames}
-
-/**
  * Union of all file-level schema entity types
  */
 export type SURefEntity =
@@ -343,6 +333,7 @@ ${entityTypes}
 
 /**
  * Union of all valid meta schema names (includes actions)
+ * Note: SURefSchemaName is auto-generated from enums.schema.json
  */
 export type SURefMetaSchemaName = SURefSchemaName | 'actions'
 

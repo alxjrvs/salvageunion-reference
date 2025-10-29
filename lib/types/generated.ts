@@ -11,7 +11,7 @@
 /**
  * Cost in ability points to activate an ability
  */
-export type SURefActivationCost = number | 'X'
+export type SURefActivationCost = number | "X";
 
 // ============================================
 // Enum Type Definitions
@@ -20,66 +20,85 @@ export type SURefActivationCost = number | 'X'
 /**
  * The source book or expansion for this content
  */
-export type SURefSource = 'Salvage Union Workshop Manual'
+export type SURefSource = "Salvage Union Workshop Manual";
 /**
  * Range bands for abilities and weapons
  */
-export type SURefRange = 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
+export type SURefRange = "Close" | "Medium" | "Long" | "Far" | "Close/Long";
 /**
  * Type of action required to use an ability
  */
-export type SURefActionType =
-  | 'Passive'
-  | 'Free'
-  | 'Reaction'
-  | 'Turn'
-  | 'Short'
-  | 'Long'
-  | 'DownTime'
+export type SURefActionType = "Passive" | "Free" | "Reaction" | "Turn" | "Short" | "Long" | "DownTime";
 /**
  * Type of damage
  */
-export type SURefDamageType = 'HP' | 'SP'
+export type SURefDamageType = "HP" | "SP";
 /**
  * Ability tree name
  */
 export type SURefTree =
-  | 'Advanced Engineer'
-  | 'Advanced Hacking'
-  | 'Advanced Hauler'
-  | 'Advanced Scout'
-  | 'Advanced Soldier'
-  | 'Augmentation'
-  | 'Cyborg'
-  | 'Electronics'
-  | 'Fabricator'
-  | 'Forging'
-  | 'Generic'
-  | 'Gladitorial Combat'
-  | 'Hacking'
-  | 'Leadership'
-  | 'Legendary Cyborg'
-  | 'Legendary Engineer'
-  | 'Legendary Fabricator'
-  | 'Legendary Hacker'
-  | 'Legendary Hauler'
-  | 'Legendary Ranger'
-  | 'Legendary Scout'
-  | 'Legendary Smuggler'
-  | 'Legendary Soldier'
-  | 'Legendary Union Rep'
-  | 'Mech-Tech'
-  | 'Mechanical Knowledge'
-  | 'Ranger'
-  | 'Recon'
-  | 'Salvaging'
-  | 'Sleuth'
-  | 'Smuggler'
-  | 'Sniper'
-  | 'Survivalist'
-  | 'Tactical Warfare'
-  | 'Trading'
-  | 'Union Rep'
+  | "Advanced Engineer"
+  | "Advanced Hacking"
+  | "Advanced Hauler"
+  | "Advanced Scout"
+  | "Advanced Soldier"
+  | "Augmentation"
+  | "Cyborg"
+  | "Electronics"
+  | "Fabricator"
+  | "Forging"
+  | "Generic"
+  | "Gladitorial Combat"
+  | "Hacking"
+  | "Leadership"
+  | "Legendary Cyborg"
+  | "Legendary Engineer"
+  | "Legendary Fabricator"
+  | "Legendary Hacker"
+  | "Legendary Hauler"
+  | "Legendary Ranger"
+  | "Legendary Scout"
+  | "Legendary Smuggler"
+  | "Legendary Soldier"
+  | "Legendary Union Rep"
+  | "Mech-Tech"
+  | "Mechanical Knowledge"
+  | "Ranger"
+  | "Recon"
+  | "Salvaging"
+  | "Sleuth"
+  | "Smuggler"
+  | "Sniper"
+  | "Survivalist"
+  | "Tactical Warfare"
+  | "Trading"
+  | "Union Rep";
+/**
+ * Name of the schema
+ */
+export type SURefSchemaName =
+  | "abilities"
+  | "ability-tree-requirements"
+  | "bio-titans"
+  | "chassis"
+  | "classes.advanced"
+  | "classes.core"
+  | "classes.hybrid"
+  | "crawler-bays"
+  | "crawler-tech-levels"
+  | "crawlers"
+  | "creatures"
+  | "drones"
+  | "equipment"
+  | "keywords"
+  | "meld"
+  | "modules"
+  | "npcs"
+  | "roll-tables"
+  | "squads"
+  | "systems"
+  | "traits"
+  | "vehicles";
 
 // ============================================
 // Meta Object Type Definitions
@@ -92,8 +111,8 @@ export interface SURefMetaDamage {
   /**
    * Type of damage
    */
-  damageType: 'HP' | 'SP'
-  amount: number | string
+  damageType: "HP" | "SP";
+  amount: number | string;
 }
 /**
  * Special traits and properties of items, systems, or abilities
@@ -102,12 +121,12 @@ export type SURefMetaTraits = {
   /**
    * Numeric value for the trait
    */
-  amount?: number
+  amount?: number;
   /**
    * Type of trait that doesn't require a numeric value
    */
-  type: string
-}[]
+  type: string;
+}[];
 /**
  * Statistics for mechs, chassis, and vehicles
  */
@@ -115,39 +134,35 @@ export interface SURefMetaStats {
   /**
    * Structure points (durability)
    */
-  structurePts?: number
+  structurePts: number;
   /**
    * Energy points (power capacity)
    */
-  energyPts?: number
+  energyPts: number;
   /**
    * Heat capacity
    */
-  heatCap?: number
+  heatCap: number;
   /**
    * Number of system slots
    */
-  systemSlots?: number
+  systemSlots: number;
   /**
    * Number of module slots
    */
-  moduleSlots?: number
+  moduleSlots: number;
   /**
    * Cargo capacity
    */
-  cargoCap?: number
+  cargoCap: number;
   /**
    * Technology level
    */
-  techLevel?: number
+  techLevel: number;
   /**
    * Salvage value in scrap
    */
-  salvageValue?: number
-  /**
-   * Additional notes
-   */
-  notes?: string
+  salvageValue: number;
 }
 /**
  * NPC associated with an entity
@@ -156,36 +171,62 @@ export interface SURefMetaNpc {
   /**
    * Name of the NPC
    */
-  position: string
+  position: string;
   /**
    * Description of the NPC
    */
-  description: string
-  hitPoints: number | null
-  choices?: SURefMetaChoices
+  description: string;
+  /**
+   * Hit points for creatures and personnel
+   */
+  hitPoints: number;
+  choices?: SURefMetaChoices;
 }
 export interface SURefMetaChoice {
   /**
    * Unique identifier for the entry
    */
-  id: string
+  id: string;
   /**
    * Name of the choice
    */
-  name: string
+  name: string;
   /**
    * Description of the choice
    */
-  description?: string
+  description?: string;
   /**
    * Schema for the choice
    */
-  schema?: string[]
+  schema?: (
+    | "abilities"
+    | "ability-tree-requirements"
+    | "bio-titans"
+    | "chassis"
+    | "classes.advanced"
+    | "classes.core"
+    | "classes.hybrid"
+    | "crawler-bays"
+    | "crawler-tech-levels"
+    | "crawlers"
+    | "creatures"
+    | "drones"
+    | "equipment"
+    | "keywords"
+    | "meld"
+    | "modules"
+    | "npcs"
+    | "roll-tables"
+    | "squads"
+    | "systems"
+    | "traits"
+    | "vehicles"
+  )[];
 }
 /**
  * SURefMetaChoices available to the player when interacting with the NPC
  */
-export type SURefMetaChoices = SURefMetaChoice[]
+export type SURefMetaChoices = SURefMetaChoice[];
 /**
  * An action, ability, or attack that can be performed
  */
@@ -193,36 +234,29 @@ export interface SURefMetaAction {
   /**
    * Name of the action
    */
-  name: string
+  name: string;
   /**
    * Description of what the action does
    */
-  description?: string
+  description?: string;
   /**
    * Mechanical effect of the action
    */
-  effect?: string
+  effect?: string;
   /**
    * Cost in ability points to activate an ability
    */
-  activationCost?: number | 'X'
+  activationCost?: number | "X";
   /**
    * Range bands for abilities and weapons
    */
-  range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
+  range?: "Close" | "Medium" | "Long" | "Far" | "Close/Long";
   /**
    * Type of action required to use an ability
    */
-  actionType?:
-    | 'Passive'
-    | 'Free'
-    | 'Reaction'
-    | 'Turn'
-    | 'Short'
-    | 'Long'
-    | 'DownTime'
-  traits?: SURefMetaTraits
-  damage?: SURefMetaDamage
+  actionType?: "Passive" | "Free" | "Reaction" | "Turn" | "Short" | "Long" | "DownTime";
+  traits?: SURefMetaTraits;
+  damage?: SURefMetaDamage;
   /**
    * List of options or choices for this action
    */
@@ -230,14 +264,14 @@ export interface SURefMetaAction {
     /**
      * Display label for the option (empty string if no label)
      */
-    label?: string
+    label: string;
     /**
      * Description or effect of the option
      */
-    value: string
-  }[]
-  choices?: SURefMetaChoices
-  table?: SURefMetaTable
+    value: string;
+  }[];
+  choices?: SURefMetaChoices;
+  table?: SURefMetaTable;
 }
 /**
  * A system or module that can be installed on a mech
@@ -246,49 +280,42 @@ export type SURefMetaSystem = SURefMetaEntry & {
   /**
    * Technology level required
    */
-  techLevel: number
+  techLevel: number;
   /**
    * Number of slots required to install
    */
-  slotsRequired: number
+  slotsRequired: number;
   /**
    * Salvage value in scrap
    */
-  salvageValue: number
+  salvageValue: number;
   /**
    * Whether this is a recommended starting system
    */
-  recommended?: boolean
-  traits?: SURefMetaTraits
+  recommended?: boolean;
+  traits?: SURefMetaTraits;
   /**
    * Additional notes
    */
-  notes?: string
+  notes?: string;
   /**
    * Cost in ability points to activate an ability
    */
-  activationCost?: number | 'X'
+  activationCost?: number | "X";
   /**
    * Range bands for abilities and weapons
    */
-  range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
-  damage?: SURefMetaDamage
-  table?: SURefMetaTable
+  range?: "Close" | "Medium" | "Long" | "Far" | "Close/Long";
+  damage?: SURefMetaDamage;
+  table?: SURefMetaTable;
   /**
    * Type of action required to use an ability
    */
-  actionType?:
-    | 'Passive'
-    | 'Free'
-    | 'Reaction'
-    | 'Turn'
-    | 'Short'
-    | 'Long'
-    | 'DownTime'
+  actionType?: "Passive" | "Free" | "Reaction" | "Turn" | "Short" | "Long" | "DownTime";
   /**
    * Actions that can be performed with this system
    */
-  actions: SURefMetaAction[]
+  actions: SURefMetaAction[];
   /**
    * Bonus to a specific stat
    */
@@ -296,17 +323,17 @@ export type SURefMetaSystem = SURefMetaEntry & {
     /**
      * Name of the stat to bonus
      */
-    stat: string
+    stat: string;
     /**
      * Amount of bonus to apply
      */
-    bonus: number
-  }
+    bonus: number;
+  };
   /**
    * Number of this system included
    */
-  count?: number
-}
+  count?: number;
+};
 /**
  * Roll table for random outcomes based on d20 rolls
  */
@@ -315,71 +342,71 @@ export type SURefMetaTable =
       /**
        * Critical failure outcome
        */
-      '1': string
+      "1": string;
       /**
        * Critical success outcome
        */
-      '20': string
-      type: 'standard'
+      "20": string;
+      type: "standard";
       /**
        * High success outcome
        */
-      '11-19': string
+      "11-19": string;
       /**
        * Moderate outcome
        */
-      '6-10': string
+      "6-10": string;
       /**
        * Low outcome
        */
-      '2-5': string
+      "2-5": string;
     }
   | {
       /**
        * Critical failure outcome
        */
-      '1': string
-      type: 'alternate'
+      "1": string;
+      type: "alternate";
       /**
        * Critical success outcome
        */
-      '19-20': string
+      "19-20": string;
       /**
        * High success outcome
        */
-      '11-18': string
+      "11-18": string;
       /**
        * Moderate outcome
        */
-      '6-10': string
+      "6-10": string;
       /**
        * Low outcome
        */
-      '2-5': string
+      "2-5": string;
     }
   | {
-      '1': string
-      '2': string
-      '3': string
-      '4': string
-      '5': string
-      '6': string
-      '7': string
-      '8': string
-      '9': string
-      '10': string
-      '11': string
-      '12': string
-      '13': string
-      '14': string
-      '15': string
-      '16': string
-      '17': string
-      '18': string
-      '19': string
-      '20': string
-      type: 'flat'
-    }
+      "1": string;
+      "2": string;
+      "3": string;
+      "4": string;
+      "5": string;
+      "6": string;
+      "7": string;
+      "8": string;
+      "9": string;
+      "10": string;
+      "11": string;
+      "12": string;
+      "13": string;
+      "14": string;
+      "15": string;
+      "16": string;
+      "17": string;
+      "18": string;
+      "19": string;
+      "20": string;
+      type: "flat";
+    };
 /**
  * Basic entry with name, description, source, and page reference
  */
@@ -387,23 +414,23 @@ export interface SURefMetaEntry {
   /**
    * Unique identifier for the entry
    */
-  id: string
+  id: string;
   /**
    * Name of the entry
    */
-  name: string
+  name: string;
   /**
    * Description of the entry
    */
-  description?: string
+  description?: string;
   /**
    * The source book or expansion for this content
    */
-  source: 'Salvage Union Workshop Manual'
+  source: "Salvage Union Workshop Manual";
   /**
    * Page number in the source book
    */
-  page: number
+  page: number;
 }
 
 // ============================================
@@ -417,55 +444,48 @@ export type SURefAbility = SURefMetaEntry &
      * Ability tree name
      */
     tree:
-      | 'Advanced Engineer'
-      | 'Advanced Hacking'
-      | 'Advanced Hauler'
-      | 'Advanced Scout'
-      | 'Advanced Soldier'
-      | 'Augmentation'
-      | 'Cyborg'
-      | 'Electronics'
-      | 'Fabricator'
-      | 'Forging'
-      | 'Generic'
-      | 'Gladitorial Combat'
-      | 'Hacking'
-      | 'Leadership'
-      | 'Legendary Cyborg'
-      | 'Legendary Engineer'
-      | 'Legendary Fabricator'
-      | 'Legendary Hacker'
-      | 'Legendary Hauler'
-      | 'Legendary Ranger'
-      | 'Legendary Scout'
-      | 'Legendary Smuggler'
-      | 'Legendary Soldier'
-      | 'Legendary Union Rep'
-      | 'Mech-Tech'
-      | 'Mechanical Knowledge'
-      | 'Ranger'
-      | 'Recon'
-      | 'Salvaging'
-      | 'Sleuth'
-      | 'Smuggler'
-      | 'Sniper'
-      | 'Survivalist'
-      | 'Tactical Warfare'
-      | 'Trading'
-      | 'Union Rep'
-    level: number | 'L' | 'G'
+      | "Advanced Engineer"
+      | "Advanced Hacking"
+      | "Advanced Hauler"
+      | "Advanced Scout"
+      | "Advanced Soldier"
+      | "Augmentation"
+      | "Cyborg"
+      | "Electronics"
+      | "Fabricator"
+      | "Forging"
+      | "Generic"
+      | "Gladitorial Combat"
+      | "Hacking"
+      | "Leadership"
+      | "Legendary Cyborg"
+      | "Legendary Engineer"
+      | "Legendary Fabricator"
+      | "Legendary Hacker"
+      | "Legendary Hauler"
+      | "Legendary Ranger"
+      | "Legendary Scout"
+      | "Legendary Smuggler"
+      | "Legendary Soldier"
+      | "Legendary Union Rep"
+      | "Mech-Tech"
+      | "Mechanical Knowledge"
+      | "Ranger"
+      | "Recon"
+      | "Salvaging"
+      | "Sleuth"
+      | "Smuggler"
+      | "Sniper"
+      | "Survivalist"
+      | "Tactical Warfare"
+      | "Trading"
+      | "Union Rep";
+    level: number | "L" | "G";
     /**
      * Type of action required to use an ability
      */
-    mechActionType?:
-      | 'Passive'
-      | 'Free'
-      | 'Reaction'
-      | 'Turn'
-      | 'Short'
-      | 'Long'
-      | 'DownTime'
-  }
+    mechActionType?: "Passive" | "Free" | "Reaction" | "Turn" | "Short" | "Long" | "DownTime";
+  };
 
 // AbilityTreeRequirement
 /**
@@ -476,84 +496,84 @@ export type SURefAbilityTreeRequirement = SURefMetaEntry & {
    * List of ability tree names required to access this tree
    */
   requirement: (
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-  )[]
-}
+    | "Advanced Engineer"
+    | "Advanced Hacking"
+    | "Advanced Hauler"
+    | "Advanced Scout"
+    | "Advanced Soldier"
+    | "Augmentation"
+    | "Cyborg"
+    | "Electronics"
+    | "Fabricator"
+    | "Forging"
+    | "Generic"
+    | "Gladitorial Combat"
+    | "Hacking"
+    | "Leadership"
+    | "Legendary Cyborg"
+    | "Legendary Engineer"
+    | "Legendary Fabricator"
+    | "Legendary Hacker"
+    | "Legendary Hauler"
+    | "Legendary Ranger"
+    | "Legendary Scout"
+    | "Legendary Smuggler"
+    | "Legendary Soldier"
+    | "Legendary Union Rep"
+    | "Mech-Tech"
+    | "Mechanical Knowledge"
+    | "Ranger"
+    | "Recon"
+    | "Salvaging"
+    | "Sleuth"
+    | "Smuggler"
+    | "Sniper"
+    | "Survivalist"
+    | "Tactical Warfare"
+    | "Trading"
+    | "Union Rep"
+  )[];
+};
 
 // BioTitan
 export type SURefBioTitan = SURefMetaEntry & {
   /**
    * Positive integer (1 or greater)
    */
-  structurePoints: number
-  actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
-}
+  structurePoints: number;
+  actions: SURefMetaAction[];
+  traits?: SURefMetaTraits;
+};
 
 // Chassis
 export type SURefChassis = SURefMetaEntry & {
-  stats: SURefMetaStats
-  chassisAbilities: SURefMetaAction[]
+  stats: SURefMetaStats;
+  chassisAbilities: SURefMetaAction[];
   patterns: {
     /**
      * Name of the pattern
      */
-    name: string
+    name: string;
     /**
      * Description of the pattern
      */
-    description?: string
+    description?: string;
     /**
      * Whether this pattern is legal for starting characters
      */
-    legalStarting?: boolean
-    systems: string[]
-    modules: string[]
+    legalStarting?: boolean;
+    systems: string[];
+    modules: string[];
     /**
      * Optional drone configuration for this pattern
      */
     drone?: {
-      systems: string[]
-      modules: string[]
-    }
-  }[]
-  npc?: SURefMetaNpc
-}
+      systems: string[];
+      modules: string[];
+    };
+  }[];
+  npc?: SURefMetaNpc;
+};
 
 // AdvancedClass
 export type SURefAdvancedClass = SURefMetaEntry & {
@@ -561,136 +581,136 @@ export type SURefAdvancedClass = SURefMetaEntry & {
    * Ability tree name
    */
   advancedTree:
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
+    | "Advanced Engineer"
+    | "Advanced Hacking"
+    | "Advanced Hauler"
+    | "Advanced Scout"
+    | "Advanced Soldier"
+    | "Augmentation"
+    | "Cyborg"
+    | "Electronics"
+    | "Fabricator"
+    | "Forging"
+    | "Generic"
+    | "Gladitorial Combat"
+    | "Hacking"
+    | "Leadership"
+    | "Legendary Cyborg"
+    | "Legendary Engineer"
+    | "Legendary Fabricator"
+    | "Legendary Hacker"
+    | "Legendary Hauler"
+    | "Legendary Ranger"
+    | "Legendary Scout"
+    | "Legendary Smuggler"
+    | "Legendary Soldier"
+    | "Legendary Union Rep"
+    | "Mech-Tech"
+    | "Mechanical Knowledge"
+    | "Ranger"
+    | "Recon"
+    | "Salvaging"
+    | "Sleuth"
+    | "Smuggler"
+    | "Sniper"
+    | "Survivalist"
+    | "Tactical Warfare"
+    | "Trading"
+    | "Union Rep";
   /**
    * Ability tree name
    */
   legendaryTree:
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-}
+    | "Advanced Engineer"
+    | "Advanced Hacking"
+    | "Advanced Hauler"
+    | "Advanced Scout"
+    | "Advanced Soldier"
+    | "Augmentation"
+    | "Cyborg"
+    | "Electronics"
+    | "Fabricator"
+    | "Forging"
+    | "Generic"
+    | "Gladitorial Combat"
+    | "Hacking"
+    | "Leadership"
+    | "Legendary Cyborg"
+    | "Legendary Engineer"
+    | "Legendary Fabricator"
+    | "Legendary Hacker"
+    | "Legendary Hauler"
+    | "Legendary Ranger"
+    | "Legendary Scout"
+    | "Legendary Smuggler"
+    | "Legendary Soldier"
+    | "Legendary Union Rep"
+    | "Mech-Tech"
+    | "Mechanical Knowledge"
+    | "Ranger"
+    | "Recon"
+    | "Salvaging"
+    | "Sleuth"
+    | "Smuggler"
+    | "Sniper"
+    | "Survivalist"
+    | "Tactical Warfare"
+    | "Trading"
+    | "Union Rep";
+};
 
 // CoreClass
 export type SURefCoreClass = SURefMetaEntry & {
   /**
    * Maximum number of abilities this class can have
    */
-  maxAbilities: number
+  maxAbilities: number;
   /**
    * Whether this class can advance to hybrid classes
    */
-  advanceable: boolean
+  advanceable: boolean;
   /**
    * Core ability trees available to this class
    */
   coreTrees: (
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-  )[]
-}
+    | "Advanced Engineer"
+    | "Advanced Hacking"
+    | "Advanced Hauler"
+    | "Advanced Scout"
+    | "Advanced Soldier"
+    | "Augmentation"
+    | "Cyborg"
+    | "Electronics"
+    | "Fabricator"
+    | "Forging"
+    | "Generic"
+    | "Gladitorial Combat"
+    | "Hacking"
+    | "Leadership"
+    | "Legendary Cyborg"
+    | "Legendary Engineer"
+    | "Legendary Fabricator"
+    | "Legendary Hacker"
+    | "Legendary Hauler"
+    | "Legendary Ranger"
+    | "Legendary Scout"
+    | "Legendary Smuggler"
+    | "Legendary Soldier"
+    | "Legendary Union Rep"
+    | "Mech-Tech"
+    | "Mechanical Knowledge"
+    | "Ranger"
+    | "Recon"
+    | "Salvaging"
+    | "Sleuth"
+    | "Smuggler"
+    | "Sniper"
+    | "Survivalist"
+    | "Tactical Warfare"
+    | "Trading"
+    | "Union Rep"
+  )[];
+};
 
 // HybridClass
 export type SURefHybridClass = SURefMetaEntry & {
@@ -698,92 +718,92 @@ export type SURefHybridClass = SURefMetaEntry & {
    * Ability tree name
    */
   advancedTree:
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
+    | "Advanced Engineer"
+    | "Advanced Hacking"
+    | "Advanced Hauler"
+    | "Advanced Scout"
+    | "Advanced Soldier"
+    | "Augmentation"
+    | "Cyborg"
+    | "Electronics"
+    | "Fabricator"
+    | "Forging"
+    | "Generic"
+    | "Gladitorial Combat"
+    | "Hacking"
+    | "Leadership"
+    | "Legendary Cyborg"
+    | "Legendary Engineer"
+    | "Legendary Fabricator"
+    | "Legendary Hacker"
+    | "Legendary Hauler"
+    | "Legendary Ranger"
+    | "Legendary Scout"
+    | "Legendary Smuggler"
+    | "Legendary Soldier"
+    | "Legendary Union Rep"
+    | "Mech-Tech"
+    | "Mechanical Knowledge"
+    | "Ranger"
+    | "Recon"
+    | "Salvaging"
+    | "Sleuth"
+    | "Smuggler"
+    | "Sniper"
+    | "Survivalist"
+    | "Tactical Warfare"
+    | "Trading"
+    | "Union Rep";
   /**
    * Ability tree name
    */
   legendaryTree:
-    | 'Advanced Engineer'
-    | 'Advanced Hacking'
-    | 'Advanced Hauler'
-    | 'Advanced Scout'
-    | 'Advanced Soldier'
-    | 'Augmentation'
-    | 'Cyborg'
-    | 'Electronics'
-    | 'Fabricator'
-    | 'Forging'
-    | 'Generic'
-    | 'Gladitorial Combat'
-    | 'Hacking'
-    | 'Leadership'
-    | 'Legendary Cyborg'
-    | 'Legendary Engineer'
-    | 'Legendary Fabricator'
-    | 'Legendary Hacker'
-    | 'Legendary Hauler'
-    | 'Legendary Ranger'
-    | 'Legendary Scout'
-    | 'Legendary Smuggler'
-    | 'Legendary Soldier'
-    | 'Legendary Union Rep'
-    | 'Mech-Tech'
-    | 'Mechanical Knowledge'
-    | 'Ranger'
-    | 'Recon'
-    | 'Salvaging'
-    | 'Sleuth'
-    | 'Smuggler'
-    | 'Sniper'
-    | 'Survivalist'
-    | 'Tactical Warfare'
-    | 'Trading'
-    | 'Union Rep'
-}
+    | "Advanced Engineer"
+    | "Advanced Hacking"
+    | "Advanced Hauler"
+    | "Advanced Scout"
+    | "Advanced Soldier"
+    | "Augmentation"
+    | "Cyborg"
+    | "Electronics"
+    | "Fabricator"
+    | "Forging"
+    | "Generic"
+    | "Gladitorial Combat"
+    | "Hacking"
+    | "Leadership"
+    | "Legendary Cyborg"
+    | "Legendary Engineer"
+    | "Legendary Fabricator"
+    | "Legendary Hacker"
+    | "Legendary Hauler"
+    | "Legendary Ranger"
+    | "Legendary Scout"
+    | "Legendary Smuggler"
+    | "Legendary Soldier"
+    | "Legendary Union Rep"
+    | "Mech-Tech"
+    | "Mechanical Knowledge"
+    | "Ranger"
+    | "Recon"
+    | "Salvaging"
+    | "Sleuth"
+    | "Smuggler"
+    | "Sniper"
+    | "Survivalist"
+    | "Tactical Warfare"
+    | "Trading"
+    | "Union Rep";
+};
 
 // CrawlerBay
 export type SURefCrawlerBay = SURefMetaEntry & {
   /**
    * Effect when this bay is damaged
    */
-  damagedEffect: string
-  npc: SURefMetaNpc
-  actions: SURefMetaAction[]
+  damagedEffect: string;
+  npc: SURefMetaNpc;
+  actions: SURefMetaAction[];
   /**
    * Effects that scale with tech level
    */
@@ -791,17 +811,17 @@ export type SURefCrawlerBay = SURefMetaEntry & {
     /**
      * Minimum tech level for this effect
      */
-    techLevelMin: number
+    techLevelMin: number;
     /**
      * Maximum tech level for this effect
      */
-    techLevelMax: number
+    techLevelMax: number;
     /**
      * Description of the effect
      */
-    effect: string
-  }[]
-}
+    effect: string;
+  }[];
+};
 
 // CrawlerTechLevel
 /**
@@ -811,59 +831,62 @@ export type SURefCrawlerTechLevel = SURefMetaEntry & {
   /**
    * Tech level (1-6)
    */
-  techLevel: number
+  techLevel: number;
   /**
    * Structure points for this tech level
    */
-  structurePoints: number
+  structurePoints: number;
   /**
    * Minimum approximate population
    */
-  populationMin: number
+  populationMin: number;
   /**
    * Maximum approximate population (0 means unlimited/25,000+)
    */
-  populationMax: number
-}
+  populationMax: number;
+};
 
 // Crawler
 export type SURefCrawler = SURefMetaEntry & {
-  npc: SURefMetaNpc
-  actions: SURefMetaAction[]
-}
+  npc: SURefMetaNpc;
+  actions: SURefMetaAction[];
+};
 
 // Creature
 export type SURefCreature = SURefMetaEntry & {
-  hitPoints: number | null
-  actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
-}
+  /**
+   * Hit points for creatures and personnel
+   */
+  hitPoints: number;
+  actions: SURefMetaAction[];
+  traits?: SURefMetaTraits;
+};
 
 // Drone
 export type SURefDrone = SURefMetaEntry & {
   /**
    * Positive integer (1 or greater)
    */
-  structurePoints: number
-  techLevel: number
+  structurePoints: number;
+  techLevel: number;
   /**
    * Salvage value in credits
    */
-  salvageValue: number
-  systems: string[]
-}
+  salvageValue: number;
+  systems: string[];
+};
 
 // Equipment
 export type SURefEquipment = SURefMetaEntry & {
-  techLevel: number
-  traits?: SURefMetaTraits
+  techLevel: number;
+  traits?: SURefMetaTraits;
   /**
    * Range bands for abilities and weapons
    */
-  range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
-  notes?: string
-  actions?: SURefMetaAction[]
-}
+  range?: "Close" | "Medium" | "Long" | "Far" | "Close/Long";
+  notes?: string;
+  actions?: SURefMetaAction[];
+};
 
 // Keyword
 /**
@@ -873,30 +896,30 @@ export interface SURefKeyword {
   /**
    * Unique identifier for the entry
    */
-  id: string
+  id: string;
   /**
    * Name of the entry
    */
-  name: string
+  name: string;
   /**
    * Description of the entry
    */
-  description?: string
+  description?: string;
   /**
    * The source book or expansion for this content
    */
-  source: 'Salvage Union Workshop Manual'
+  source: "Salvage Union Workshop Manual";
   /**
    * Page number in the source book
    */
-  page: number
+  page: number;
 }
 
 // Meld
 export type SURefMeld = SURefMetaEntry & {
-  actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
-}
+  actions: SURefMetaAction[];
+  traits?: SURefMetaTraits;
+};
 
 // Module
 /**
@@ -906,33 +929,33 @@ export type SURefModule = SURefMetaEntry & {
   /**
    * Technology level required
    */
-  techLevel: number
+  techLevel: number;
   /**
    * Number of slots required to install
    */
-  slotsRequired: number
+  slotsRequired: number;
   /**
    * Salvage value in scrap
    */
-  salvageValue: number
+  salvageValue: number;
   /**
    * Whether this is a recommended starting system
    */
-  recommended?: boolean
-  traits?: SURefMetaTraits
+  recommended?: boolean;
+  traits?: SURefMetaTraits;
   /**
    * Additional notes
    */
-  notes?: string
+  notes?: string;
   /**
    * Cost in ability points to activate an ability
    */
-  activationCost?: number | 'X'
+  activationCost?: number | "X";
   /**
    * Range bands for abilities and weapons
    */
-  range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
-  damage?: SURefMetaDamage
+  range?: "Close" | "Medium" | "Long" | "Far" | "Close/Long";
+  damage?: SURefMetaDamage;
   /**
    * Roll table for random outcomes based on d20 rolls
    */
@@ -941,86 +964,79 @@ export type SURefModule = SURefMetaEntry & {
         /**
          * Critical failure outcome
          */
-        '1': string
+        "1": string;
         /**
          * Critical success outcome
          */
-        '20': string
-        type: 'standard'
+        "20": string;
+        type: "standard";
         /**
          * High success outcome
          */
-        '11-19': string
+        "11-19": string;
         /**
          * Moderate outcome
          */
-        '6-10': string
+        "6-10": string;
         /**
          * Low outcome
          */
-        '2-5': string
+        "2-5": string;
       }
     | {
         /**
          * Critical failure outcome
          */
-        '1': string
-        type: 'alternate'
+        "1": string;
+        type: "alternate";
         /**
          * Critical success outcome
          */
-        '19-20': string
+        "19-20": string;
         /**
          * High success outcome
          */
-        '11-18': string
+        "11-18": string;
         /**
          * Moderate outcome
          */
-        '6-10': string
+        "6-10": string;
         /**
          * Low outcome
          */
-        '2-5': string
+        "2-5": string;
       }
     | {
-        '1': string
-        '2': string
-        '3': string
-        '4': string
-        '5': string
-        '6': string
-        '7': string
-        '8': string
-        '9': string
-        '10': string
-        '11': string
-        '12': string
-        '13': string
-        '14': string
-        '15': string
-        '16': string
-        '17': string
-        '18': string
-        '19': string
-        '20': string
-        type: 'flat'
-      }
+        "1": string;
+        "2": string;
+        "3": string;
+        "4": string;
+        "5": string;
+        "6": string;
+        "7": string;
+        "8": string;
+        "9": string;
+        "10": string;
+        "11": string;
+        "12": string;
+        "13": string;
+        "14": string;
+        "15": string;
+        "16": string;
+        "17": string;
+        "18": string;
+        "19": string;
+        "20": string;
+        type: "flat";
+      };
   /**
    * Type of action required to use an ability
    */
-  actionType?:
-    | 'Passive'
-    | 'Free'
-    | 'Reaction'
-    | 'Turn'
-    | 'Short'
-    | 'Long'
-    | 'DownTime'
+  actionType?: "Passive" | "Free" | "Reaction" | "Turn" | "Short" | "Long" | "DownTime";
   /**
    * Actions that can be performed with this system
    */
-  actions: SURefMetaAction[]
+  actions: SURefMetaAction[];
   /**
    * Bonus to a specific stat
    */
@@ -1028,31 +1044,34 @@ export type SURefModule = SURefMetaEntry & {
     /**
      * Name of the stat to bonus
      */
-    stat: string
+    stat: string;
     /**
      * Amount of bonus to apply
      */
-    bonus: number
-  }
+    bonus: number;
+  };
   /**
    * Number of this system included
    */
-  count?: number
-}
+  count?: number;
+};
 
 // Npc
 export type SURefNpc = SURefMetaEntry & {
-  hitPoints: number | null
-  actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
-}
+  /**
+   * Hit points for creatures and personnel
+   */
+  hitPoints: number;
+  actions: SURefMetaAction[];
+  traits?: SURefMetaTraits;
+};
 
 // RollTable
 export type SURefRollTable = SURefMetaEntry & {
   /**
    * Section or category of the roll table
    */
-  section: string
+  section: string;
   /**
    * Roll table for random outcomes based on d20 rolls
    */
@@ -1061,83 +1080,86 @@ export type SURefRollTable = SURefMetaEntry & {
         /**
          * Critical failure outcome
          */
-        '1': string
+        "1": string;
         /**
          * Critical success outcome
          */
-        '20': string
-        type: 'standard'
+        "20": string;
+        type: "standard";
         /**
          * High success outcome
          */
-        '11-19': string
+        "11-19": string;
         /**
          * Moderate outcome
          */
-        '6-10': string
+        "6-10": string;
         /**
          * Low outcome
          */
-        '2-5': string
+        "2-5": string;
       }
     | {
         /**
          * Critical failure outcome
          */
-        '1': string
-        type: 'alternate'
+        "1": string;
+        type: "alternate";
         /**
          * Critical success outcome
          */
-        '19-20': string
+        "19-20": string;
         /**
          * High success outcome
          */
-        '11-18': string
+        "11-18": string;
         /**
          * Moderate outcome
          */
-        '6-10': string
+        "6-10": string;
         /**
          * Low outcome
          */
-        '2-5': string
+        "2-5": string;
       }
     | {
-        '1': string
-        '2': string
-        '3': string
-        '4': string
-        '5': string
-        '6': string
-        '7': string
-        '8': string
-        '9': string
-        '10': string
-        '11': string
-        '12': string
-        '13': string
-        '14': string
-        '15': string
-        '16': string
-        '17': string
-        '18': string
-        '19': string
-        '20': string
-        type: 'flat'
-      }
-}
+        "1": string;
+        "2": string;
+        "3": string;
+        "4": string;
+        "5": string;
+        "6": string;
+        "7": string;
+        "8": string;
+        "9": string;
+        "10": string;
+        "11": string;
+        "12": string;
+        "13": string;
+        "14": string;
+        "15": string;
+        "16": string;
+        "17": string;
+        "18": string;
+        "19": string;
+        "20": string;
+        type: "flat";
+      };
+};
 
 // Squad
 export type SURefSquad = SURefMetaEntry & {
-  hitPoints?: number | null
-  actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
+  /**
+   * Hit points for creatures and personnel
+   */
+  hitPoints?: number;
+  actions: SURefMetaAction[];
+  traits?: SURefMetaTraits;
   /**
    * Type of damage
    */
-  damageType?: 'HP' | 'SP'
-}
+  damageType?: "HP" | "SP";
+};
 
 // System
 /**
@@ -1147,33 +1169,33 @@ export type SURefSystem = SURefMetaEntry & {
   /**
    * Technology level required
    */
-  techLevel: number
+  techLevel: number;
   /**
    * Number of slots required to install
    */
-  slotsRequired: number
+  slotsRequired: number;
   /**
    * Salvage value in scrap
    */
-  salvageValue: number
+  salvageValue: number;
   /**
    * Whether this is a recommended starting system
    */
-  recommended?: boolean
-  traits?: SURefMetaTraits
+  recommended?: boolean;
+  traits?: SURefMetaTraits;
   /**
    * Additional notes
    */
-  notes?: string
+  notes?: string;
   /**
    * Cost in ability points to activate an ability
    */
-  activationCost?: number | 'X'
+  activationCost?: number | "X";
   /**
    * Range bands for abilities and weapons
    */
-  range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
-  damage?: SURefMetaDamage
+  range?: "Close" | "Medium" | "Long" | "Far" | "Close/Long";
+  damage?: SURefMetaDamage;
   /**
    * Roll table for random outcomes based on d20 rolls
    */
@@ -1182,86 +1204,79 @@ export type SURefSystem = SURefMetaEntry & {
         /**
          * Critical failure outcome
          */
-        '1': string
+        "1": string;
         /**
          * Critical success outcome
          */
-        '20': string
-        type: 'standard'
+        "20": string;
+        type: "standard";
         /**
          * High success outcome
          */
-        '11-19': string
+        "11-19": string;
         /**
          * Moderate outcome
          */
-        '6-10': string
+        "6-10": string;
         /**
          * Low outcome
          */
-        '2-5': string
+        "2-5": string;
       }
     | {
         /**
          * Critical failure outcome
          */
-        '1': string
-        type: 'alternate'
+        "1": string;
+        type: "alternate";
         /**
          * Critical success outcome
          */
-        '19-20': string
+        "19-20": string;
         /**
          * High success outcome
          */
-        '11-18': string
+        "11-18": string;
         /**
          * Moderate outcome
          */
-        '6-10': string
+        "6-10": string;
         /**
          * Low outcome
          */
-        '2-5': string
+        "2-5": string;
       }
     | {
-        '1': string
-        '2': string
-        '3': string
-        '4': string
-        '5': string
-        '6': string
-        '7': string
-        '8': string
-        '9': string
-        '10': string
-        '11': string
-        '12': string
-        '13': string
-        '14': string
-        '15': string
-        '16': string
-        '17': string
-        '18': string
-        '19': string
-        '20': string
-        type: 'flat'
-      }
+        "1": string;
+        "2": string;
+        "3": string;
+        "4": string;
+        "5": string;
+        "6": string;
+        "7": string;
+        "8": string;
+        "9": string;
+        "10": string;
+        "11": string;
+        "12": string;
+        "13": string;
+        "14": string;
+        "15": string;
+        "16": string;
+        "17": string;
+        "18": string;
+        "19": string;
+        "20": string;
+        type: "flat";
+      };
   /**
    * Type of action required to use an ability
    */
-  actionType?:
-    | 'Passive'
-    | 'Free'
-    | 'Reaction'
-    | 'Turn'
-    | 'Short'
-    | 'Long'
-    | 'DownTime'
+  actionType?: "Passive" | "Free" | "Reaction" | "Turn" | "Short" | "Long" | "DownTime";
   /**
    * Actions that can be performed with this system
    */
-  actions: SURefMetaAction[]
+  actions: SURefMetaAction[];
   /**
    * Bonus to a specific stat
    */
@@ -1269,17 +1284,17 @@ export type SURefSystem = SURefMetaEntry & {
     /**
      * Name of the stat to bonus
      */
-    stat: string
+    stat: string;
     /**
      * Amount of bonus to apply
      */
-    bonus: number
-  }
+    bonus: number;
+  };
   /**
    * Number of this system included
    */
-  count?: number
-}
+  count?: number;
+};
 
 // Trait
 /**
@@ -1289,23 +1304,23 @@ export interface SURefTrait {
   /**
    * Unique identifier for the entry
    */
-  id: string
+  id: string;
   /**
    * Name of the entry
    */
-  name: string
+  name: string;
   /**
    * Description of the entry
    */
-  description?: string
+  description?: string;
   /**
    * The source book or expansion for this content
    */
-  source: 'Salvage Union Workshop Manual'
+  source: "Salvage Union Workshop Manual";
   /**
    * Page number in the source book
    */
-  page: number
+  page: number;
 }
 
 // Vehicle
@@ -1313,46 +1328,20 @@ export type SURefVehicle = SURefMetaEntry & {
   /**
    * Positive integer (1 or greater)
    */
-  structurePoints: number
-  techLevel: number
+  structurePoints: number;
+  techLevel: number;
   /**
    * Salvage value in credits
    */
-  salvageValue: number
-  systems: string[]
-  traits?: SURefMetaTraits
-}
+  salvageValue: number;
+  systems: string[];
+  traits?: SURefMetaTraits;
+};
+
 
 // ============================================
 // Helper Union Types
 // ============================================
-
-/**
- * Union of all valid schema names (kebab-case file names)
- */
-export type SURefSchemaName =
-  | 'abilities'
-  | 'ability-tree-requirements'
-  | 'bio-titans'
-  | 'chassis'
-  | 'classes.advanced'
-  | 'classes.core'
-  | 'classes.hybrid'
-  | 'crawler-bays'
-  | 'crawler-tech-levels'
-  | 'crawlers'
-  | 'creatures'
-  | 'drones'
-  | 'equipment'
-  | 'keywords'
-  | 'meld'
-  | 'modules'
-  | 'npcs'
-  | 'roll-tables'
-  | 'squads'
-  | 'systems'
-  | 'traits'
-  | 'vehicles'
 
 /**
  * Union of all file-level schema entity types
@@ -1383,6 +1372,7 @@ export type SURefEntity =
 
 /**
  * Union of all valid meta schema names (includes actions)
+ * Note: SURefSchemaName is auto-generated from enums.schema.json
  */
 export type SURefMetaSchemaName = SURefSchemaName | 'actions'
 

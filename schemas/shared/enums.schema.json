@@ -6,12 +6,20 @@
   "definitions": {
     "source": {
       "type": "string",
-      "enum": ["Salvage Union Workshop Manual"],
+      "enum": [
+        "Salvage Union Workshop Manual"
+      ],
       "description": "The source book or expansion for this content"
     },
     "range": {
       "type": "string",
-      "enum": ["Close", "Medium", "Long", "Far", "Close/Long"],
+      "enum": [
+        "Close",
+        "Medium",
+        "Long",
+        "Far",
+        "Close/Long"
+      ],
       "description": "Range bands for abilities and weapons"
     },
     "actionType": {
@@ -29,7 +37,10 @@
     },
     "damageType": {
       "type": "string",
-      "enum": ["HP", "SP"],
+      "enum": [
+        "HP",
+        "SP"
+      ],
       "description": "Type of damage"
     },
     "tree": {
@@ -73,6 +84,34 @@
         "Union Rep"
       ],
       "description": "Ability tree name"
+    },
+    "schemaName": {
+      "type": "string",
+      "enum": [
+        "abilities",
+        "ability-tree-requirements",
+        "bio-titans",
+        "chassis",
+        "classes.advanced",
+        "classes.core",
+        "classes.hybrid",
+        "crawler-bays",
+        "crawler-tech-levels",
+        "crawlers",
+        "creatures",
+        "drones",
+        "equipment",
+        "keywords",
+        "meld",
+        "modules",
+        "npcs",
+        "roll-tables",
+        "squads",
+        "systems",
+        "traits",
+        "vehicles"
+      ],
+      "description": "Name of the schema"
     }
   }
 }
