@@ -5,16 +5,21 @@
   "description": "Advanced character classes in Salvage Union",
   "type": "array",
   "items": {
+    "type": "object",
+    "required": ["advancedTree", "legendaryTree"],
     "allOf": [
       {
-        "additionalProperties": false,
-        "$ref": "shared/objects.schema.json#/definitions/entry"
-      },
-      {
-        "type": "object",
-        "required": ["advancedTree", "legendaryTree"],
-        "properties": {}
+        "$ref": "shared/objects.schema.json#/definitions/entry",
+        "additionalProperties": false
       }
-    ]
+    ],
+    "properties": {
+      "advancedTree": {
+        "$ref": "shared/enums.schema.json#/definitions/tree"
+      },
+      "legendaryTree": {
+        "$ref": "shared/enums.schema.json#/definitions/tree"
+      }
+    }
   }
 }

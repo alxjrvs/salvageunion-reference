@@ -5,56 +5,49 @@
   "description": "Mech chassis definitions in Salvage Union",
   "type": "array",
   "items": {
+    "type": "object",
+    "required": ["stats", "chassisAbilities", "patterns"],
     "allOf": [
       {
-        "additionalProperties": false,
-        "$ref": "shared/objects.schema.json#/definitions/entry"
+        "$ref": "shared/objects.schema.json#/definitions/entry",
+        "additionalProperties": false
+      }
+    ],
+    "properties": {
+      "stats": {
+        "$ref": "shared/objects.schema.json#/definitions/stats"
       },
-      {
-        "type": "object",
-        "required": ["stats", "chassisAbilities", "patterns"],
-        "properties": {
-          "stats": {
-            "$ref": "shared/objects.schema.json#/definitions/stats"
+      "chassisAbilities": {
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
+      },
+      "patterns": {
+        "type": "array",
+        "items": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Name of the pattern"
           },
-          "chassisAbilities": {
+          "systems": {
             "type": "array",
             "items": {
-              "$ref": "shared/objects.schema.json#/definitions/action"
+              "type": "string"
             }
           },
-          "patterns": {
+          "modules": {
             "type": "array",
             "items": {
-              "name": {
-                "type": "string",
-                "minLength": 1,
-                "description": "Name of the pattern"
-              },
-              "description": {
-                "type": "string",
-                "minLength": 1,
-                "description": "Description of the pattern"
-              },
-              "systems": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "modules": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
+              "type": "string"
             }
-          },
-          "npc": {
-            "$ref": "shared/objects.schema.json#/definitions/npc"
           }
         }
+      },
+      "npc": {
+        "$ref": "shared/objects.schema.json#/definitions/npc"
       }
-    ]
+    }
   }
 }

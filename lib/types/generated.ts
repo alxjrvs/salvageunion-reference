@@ -464,6 +464,9 @@ export type SURefAbility = SURefMetaEntry &
   }
 
 // AbilityTreeRequirement
+/**
+ * Requirements for an ability tree
+ */
 export type SURefAbilityTreeRequirement = SURefMetaEntry & {
   /**
    * List of ability tree names required to access this tree
@@ -516,6 +519,7 @@ export type SURefBioTitan = SURefMetaEntry & {
    */
   structurePoints: number
   actions: SURefMetaAction[]
+  traits?: SURefMetaTraits
   [k: string]: unknown
 }
 
@@ -532,25 +536,249 @@ export type SURefChassis = SURefMetaEntry & {
 
 // AdvancedClass
 export type SURefAdvancedClass = SURefMetaEntry & {
+  /**
+   * Ability tree name
+   */
+  advancedTree:
+    | 'Advanced Engineer'
+    | 'Advanced Hacking'
+    | 'Advanced Hauler'
+    | 'Advanced Scout'
+    | 'Advanced Soldier'
+    | 'Augmentation'
+    | 'Cyborg'
+    | 'Electronics'
+    | 'Fabricator'
+    | 'Forging'
+    | 'Generic'
+    | 'Gladitorial Combat'
+    | 'Hacking'
+    | 'Leadership'
+    | 'Legendary Cyborg'
+    | 'Legendary Engineer'
+    | 'Legendary Fabricator'
+    | 'Legendary Hacker'
+    | 'Legendary Hauler'
+    | 'Legendary Ranger'
+    | 'Legendary Scout'
+    | 'Legendary Smuggler'
+    | 'Legendary Soldier'
+    | 'Legendary Union Rep'
+    | 'Mech-Tech'
+    | 'Mechanical Knowledge'
+    | 'Ranger'
+    | 'Recon'
+    | 'Salvaging'
+    | 'Sleuth'
+    | 'Smuggler'
+    | 'Sniper'
+    | 'Survivalist'
+    | 'Tactical Warfare'
+    | 'Trading'
+    | 'Union Rep'
+  /**
+   * Ability tree name
+   */
+  legendaryTree:
+    | 'Advanced Engineer'
+    | 'Advanced Hacking'
+    | 'Advanced Hauler'
+    | 'Advanced Scout'
+    | 'Advanced Soldier'
+    | 'Augmentation'
+    | 'Cyborg'
+    | 'Electronics'
+    | 'Fabricator'
+    | 'Forging'
+    | 'Generic'
+    | 'Gladitorial Combat'
+    | 'Hacking'
+    | 'Leadership'
+    | 'Legendary Cyborg'
+    | 'Legendary Engineer'
+    | 'Legendary Fabricator'
+    | 'Legendary Hacker'
+    | 'Legendary Hauler'
+    | 'Legendary Ranger'
+    | 'Legendary Scout'
+    | 'Legendary Smuggler'
+    | 'Legendary Soldier'
+    | 'Legendary Union Rep'
+    | 'Mech-Tech'
+    | 'Mechanical Knowledge'
+    | 'Ranger'
+    | 'Recon'
+    | 'Salvaging'
+    | 'Sleuth'
+    | 'Smuggler'
+    | 'Sniper'
+    | 'Survivalist'
+    | 'Tactical Warfare'
+    | 'Trading'
+    | 'Union Rep'
   [k: string]: unknown
 }
 
 // CoreClass
 export type SURefCoreClass = SURefMetaEntry & {
+  /**
+   * Maximum number of abilities this class can have
+   */
+  maxAbilities: number
+  /**
+   * Whether this class can advance to hybrid classes
+   */
+  advanceable: boolean
+  /**
+   * Core ability trees available to this class
+   */
+  coreTrees: (
+    | 'Advanced Engineer'
+    | 'Advanced Hacking'
+    | 'Advanced Hauler'
+    | 'Advanced Scout'
+    | 'Advanced Soldier'
+    | 'Augmentation'
+    | 'Cyborg'
+    | 'Electronics'
+    | 'Fabricator'
+    | 'Forging'
+    | 'Generic'
+    | 'Gladitorial Combat'
+    | 'Hacking'
+    | 'Leadership'
+    | 'Legendary Cyborg'
+    | 'Legendary Engineer'
+    | 'Legendary Fabricator'
+    | 'Legendary Hacker'
+    | 'Legendary Hauler'
+    | 'Legendary Ranger'
+    | 'Legendary Scout'
+    | 'Legendary Smuggler'
+    | 'Legendary Soldier'
+    | 'Legendary Union Rep'
+    | 'Mech-Tech'
+    | 'Mechanical Knowledge'
+    | 'Ranger'
+    | 'Recon'
+    | 'Salvaging'
+    | 'Sleuth'
+    | 'Smuggler'
+    | 'Sniper'
+    | 'Survivalist'
+    | 'Tactical Warfare'
+    | 'Trading'
+    | 'Union Rep'
+  )[]
   [k: string]: unknown
 }
 
 // HybridClass
 export type SURefHybridClass = SURefMetaEntry & {
+  /**
+   * Ability tree name
+   */
+  advancedTree:
+    | 'Advanced Engineer'
+    | 'Advanced Hacking'
+    | 'Advanced Hauler'
+    | 'Advanced Scout'
+    | 'Advanced Soldier'
+    | 'Augmentation'
+    | 'Cyborg'
+    | 'Electronics'
+    | 'Fabricator'
+    | 'Forging'
+    | 'Generic'
+    | 'Gladitorial Combat'
+    | 'Hacking'
+    | 'Leadership'
+    | 'Legendary Cyborg'
+    | 'Legendary Engineer'
+    | 'Legendary Fabricator'
+    | 'Legendary Hacker'
+    | 'Legendary Hauler'
+    | 'Legendary Ranger'
+    | 'Legendary Scout'
+    | 'Legendary Smuggler'
+    | 'Legendary Soldier'
+    | 'Legendary Union Rep'
+    | 'Mech-Tech'
+    | 'Mechanical Knowledge'
+    | 'Ranger'
+    | 'Recon'
+    | 'Salvaging'
+    | 'Sleuth'
+    | 'Smuggler'
+    | 'Sniper'
+    | 'Survivalist'
+    | 'Tactical Warfare'
+    | 'Trading'
+    | 'Union Rep'
+  /**
+   * Ability tree name
+   */
+  legendaryTree:
+    | 'Advanced Engineer'
+    | 'Advanced Hacking'
+    | 'Advanced Hauler'
+    | 'Advanced Scout'
+    | 'Advanced Soldier'
+    | 'Augmentation'
+    | 'Cyborg'
+    | 'Electronics'
+    | 'Fabricator'
+    | 'Forging'
+    | 'Generic'
+    | 'Gladitorial Combat'
+    | 'Hacking'
+    | 'Leadership'
+    | 'Legendary Cyborg'
+    | 'Legendary Engineer'
+    | 'Legendary Fabricator'
+    | 'Legendary Hacker'
+    | 'Legendary Hauler'
+    | 'Legendary Ranger'
+    | 'Legendary Scout'
+    | 'Legendary Smuggler'
+    | 'Legendary Soldier'
+    | 'Legendary Union Rep'
+    | 'Mech-Tech'
+    | 'Mechanical Knowledge'
+    | 'Ranger'
+    | 'Recon'
+    | 'Salvaging'
+    | 'Sleuth'
+    | 'Smuggler'
+    | 'Sniper'
+    | 'Survivalist'
+    | 'Tactical Warfare'
+    | 'Trading'
+    | 'Union Rep'
   [k: string]: unknown
 }
 
 // CrawlerBay
 export type SURefCrawlerBay = SURefMetaEntry & {
+  /**
+   * Effect when this bay is damaged
+   */
+  damagedEffect: string
+  npc: SURefMetaNpc
+  actions: SURefMetaAction[]
+  /**
+   * Effects that scale with tech level
+   */
+  techLevelEffects: {
+    [k: string]: unknown
+  }[]
   [k: string]: unknown
 }
 
 // CrawlerTechLevel
+/**
+ * A crawler tech level
+ */
 export type SURefCrawlerTechLevel = SURefMetaEntry & {
   /**
    * Tech level (1-6)
@@ -573,21 +801,47 @@ export type SURefCrawlerTechLevel = SURefMetaEntry & {
 
 // Crawler
 export type SURefCrawler = SURefMetaEntry & {
+  npc: SURefMetaNpc
+  actions: SURefMetaAction[]
   [k: string]: unknown
 }
 
 // Creature
 export type SURefCreature = SURefMetaEntry & {
+  /**
+   * Hit points for creatures and personnel
+   */
+  hitPoints: number
+  actions: SURefMetaAction[]
+  traits?: SURefMetaTraits
   [k: string]: unknown
 }
 
 // Drone
 export type SURefDrone = SURefMetaEntry & {
+  /**
+   * Positive integer (1 or greater)
+   */
+  structurePoints: number
+  techLevel: number
+  /**
+   * Salvage value in credits
+   */
+  salvageValue: number
+  systems: string[]
   [k: string]: unknown
 }
 
 // Equipment
 export type SURefEquipment = SURefMetaEntry & {
+  techLevel: number
+  traits?: SURefMetaTraits
+  /**
+   * Range bands for abilities and weapons
+   */
+  range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
+  notes?: string
+  actions?: SURefMetaAction[]
   [k: string]: unknown
 }
 
@@ -621,6 +875,7 @@ export interface SURefKeyword {
 // Meld
 export type SURefMeld = SURefMetaEntry & {
   actions: SURefMetaAction[]
+  traits?: SURefMetaTraits
   [k: string]: unknown
 }
 
@@ -770,16 +1025,38 @@ export type SURefModule = SURefMetaEntry & {
 
 // Npc
 export type SURefNpc = SURefMetaEntry & {
+  /**
+   * Hit points for creatures and personnel
+   */
+  hitPoints: number
+  actions: SURefMetaAction[]
+  traits?: SURefMetaTraits
   [k: string]: unknown
 }
 
 // RollTable
 export type SURefRollTable = SURefMetaEntry & {
+  /**
+   * Section or category of the roll table
+   */
+  section: string
+  /**
+   * Roll table entries keyed by roll result ranges
+   */
+  table: {
+    [k: string]: string
+  }
   [k: string]: unknown
 }
 
 // Squad
 export type SURefSquad = SURefMetaEntry & {
+  /**
+   * Hit points for creatures and personnel
+   */
+  hitPoints?: number
+  actions: SURefMetaAction[]
+  traits?: SURefMetaTraits
   [k: string]: unknown
 }
 
@@ -956,6 +1233,17 @@ export interface SURefTrait {
 
 // Vehicle
 export type SURefVehicle = SURefMetaEntry & {
+  /**
+   * Positive integer (1 or greater)
+   */
+  structurePoints: number
+  techLevel: number
+  /**
+   * Salvage value in credits
+   */
+  salvageValue: number
+  systems: string[]
+  traits?: SURefMetaTraits
   [k: string]: unknown
 }
 

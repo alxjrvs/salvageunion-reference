@@ -5,15 +5,27 @@
   "description": "Non-player characters and people in Salvage Union",
   "type": "array",
   "items": {
+    "type": "object",
+    "required": ["hitPoints", "actions"],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry"
-      },
-      {
-        "type": "object",
-        "required": ["hitPoints", "actions"],
-        "properties": {}
+        "$ref": "shared/objects.schema.json#/definitions/entry",
+        "additionalProperties": false
       }
-    ]
+    ],
+    "properties": {
+      "hitPoints": {
+        "$ref": "shared/common.schema.json#/definitions/hitPoints"
+      },
+      "actions": {
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
+      },
+      "traits": {
+        "$ref": "shared/objects.schema.json#/definitions/traits"
+      }
+    }
   }
 }

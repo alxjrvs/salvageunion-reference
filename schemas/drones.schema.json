@@ -5,15 +5,31 @@
   "description": "Autonomous drones in Salvage Union",
   "type": "array",
   "items": {
+    "type": "object",
+    "required": ["structurePoints", "techLevel", "salvageValue", "systems"],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry"
-      },
-      {
-        "type": "object",
-        "required": ["structurePoints", "techLevel", "salvageValue", "systems"],
-        "properties": {}
+        "$ref": "shared/objects.schema.json#/definitions/entry",
+        "additionalProperties": false
       }
-    ]
+    ],
+    "properties": {
+      "structurePoints": {
+        "$ref": "shared/common.schema.json#/definitions/positiveInteger"
+      },
+      "techLevel": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "salvageValue": {
+        "$ref": "shared/common.schema.json#/definitions/salvageValue"
+      },
+      "systems": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
   }
 }

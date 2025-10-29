@@ -5,25 +5,24 @@
   "description": "Meld-infected creatures in Salvage Union",
   "type": "array",
   "items": {
+    "type": "object",
+    "required": ["actions"],
     "allOf": [
       {
-        "additionalProperties": false,
-        "$ref": "shared/objects.schema.json#/definitions/entry"
-      },
-      {
-        "type": "object",
-        "required": [
-          "actions"
-        ],
-        "properties": {
-          "actions": {
-            "type": "array",
-            "items": {
-              "$ref": "shared/objects.schema.json#/definitions/action"
-            }
-          }
-        }
+        "$ref": "shared/objects.schema.json#/definitions/entry",
+        "additionalProperties": false
       }
-    ]
+    ],
+    "properties": {
+      "actions": {
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
+      },
+      "traits": {
+        "$ref": "shared/objects.schema.json#/definitions/traits"
+      }
+    }
   }
 }

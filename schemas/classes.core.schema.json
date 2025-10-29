@@ -5,15 +5,31 @@
   "description": "Core character classes in Salvage Union",
   "type": "array",
   "items": {
+    "type": "object",
+    "required": ["maxAbilities", "advanceable", "coreTrees"],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry"
-      },
-      {
-        "type": "object",
-        "required": ["maxAbilities", "advanceable", "coreTrees"],
-        "properties": {}
+        "$ref": "shared/objects.schema.json#/definitions/entry",
+        "additionalProperties": false
       }
-    ]
+    ],
+    "properties": {
+      "maxAbilities": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Maximum number of abilities this class can have"
+      },
+      "advanceable": {
+        "type": "boolean",
+        "description": "Whether this class can advance to hybrid classes"
+      },
+      "coreTrees": {
+        "type": "array",
+        "description": "Core ability trees available to this class",
+        "items": {
+          "$ref": "shared/enums.schema.json#/definitions/tree"
+        }
+      }
+    }
   }
 }

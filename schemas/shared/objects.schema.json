@@ -229,86 +229,85 @@
     },
     "system": {
       "description": "A system or module that can be installed on a mech",
+      "type": "object",
+      "required": ["actions", "salvageValue", "slotsRequired", "techLevel"],
       "allOf": [
         {
-          "$ref": "#/definitions/entry"
+          "$ref": "#/definitions/entry",
+          "additionalProperties": false
+        }
+      ],
+      "properties": {
+        "techLevel": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Technology level required"
         },
-        {
+        "slotsRequired": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of slots required to install"
+        },
+        "salvageValue": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Salvage value in scrap"
+        },
+        "recommended": {
+          "type": "boolean",
+          "description": "Whether this is a recommended starting system"
+        },
+        "traits": {
+          "$ref": "#/definitions/traits"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes"
+        },
+        "activationCost": {
+          "$ref": "common.schema.json#/definitions/activationCost"
+        },
+        "range": {
+          "$ref": "enums.schema.json#/definitions/range"
+        },
+        "damage": {
+          "$ref": "#/definitions/damage"
+        },
+        "table": {
+          "$ref": "#/definitions/table"
+        },
+        "actionType": {
+          "$ref": "enums.schema.json#/definitions/actionType"
+        },
+        "actions": {
+          "type": "array",
+          "description": "Actions that can be performed with this system",
+          "items": {
+            "$ref": "#/definitions/action"
+          }
+        },
+        "statBonus": {
           "type": "object",
-          "required": ["actions", "salvageValue", "slotsRequired", "techLevel"],
+          "description": "Bonus to a specific stat",
+          "additionalProperties": false,
+          "required": ["stat", "bonus"],
           "properties": {
-            "techLevel": {
-              "type": "integer",
-              "minimum": 0,
-              "description": "Technology level required"
-            },
-            "slotsRequired": {
-              "type": "integer",
-              "minimum": 0,
-              "description": "Number of slots required to install"
-            },
-            "salvageValue": {
-              "type": "integer",
-              "minimum": 0,
-              "description": "Salvage value in scrap"
-            },
-            "recommended": {
-              "type": "boolean",
-              "description": "Whether this is a recommended starting system"
-            },
-            "traits": {
-              "$ref": "#/definitions/traits"
-            },
-            "notes": {
+            "stat": {
               "type": "string",
-              "description": "Additional notes"
+              "description": "Name of the stat to bonus"
             },
-            "activationCost": {
-              "$ref": "common.schema.json#/definitions/activationCost"
-            },
-            "range": {
-              "$ref": "enums.schema.json#/definitions/range"
-            },
-            "damage": {
-              "$ref": "#/definitions/damage"
-            },
-            "table": {
-              "$ref": "#/definitions/table"
-            },
-            "actionType": {
-              "$ref": "enums.schema.json#/definitions/actionType"
-            },
-            "actions": {
-              "type": "array",
-              "description": "Actions that can be performed with this system",
-              "items": {
-                "$ref": "#/definitions/action"
-              }
-            },
-            "statBonus": {
-              "type": "object",
-              "description": "Bonus to a specific stat",
-              "additionalProperties": false,
-              "required": ["stat", "bonus"],
-              "properties": {
-                "stat": {
-                  "type": "string",
-                  "description": "Name of the stat to bonus"
-                },
-                "bonus": {
-                  "type": "integer",
-                  "description": "Amount of bonus to apply"
-                }
-              }
-            },
-            "count": {
+            "bonus": {
               "type": "integer",
-              "minimum": 0,
-              "description": "Number of this system included"
+              "description": "Amount of bonus to apply"
             }
           }
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of this system included"
         }
-      ]
+      }
     },
     "table": {
       "description": "Roll table for random outcomes based on d20 rolls",

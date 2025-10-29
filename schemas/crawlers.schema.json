@@ -5,16 +5,24 @@
   "description": "Crawler vehicles in Salvage Union",
   "type": "array",
   "items": {
+    "type": "object",
+    "required": ["npc", "actions"],
     "allOf": [
       {
-        "additionalProperties": false,
-        "$ref": "shared/objects.schema.json#/definitions/entry"
-      },
-      {
-        "type": "object",
-        "required": ["npc", "actions"],
-        "properties": {}
+        "$ref": "shared/objects.schema.json#/definitions/entry",
+        "additionalProperties": false
       }
-    ]
+    ],
+    "properties": {
+      "npc": {
+        "$ref": "shared/objects.schema.json#/definitions/npc"
+      },
+      "actions": {
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
+      }
+    }
   }
 }

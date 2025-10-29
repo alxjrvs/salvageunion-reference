@@ -37,35 +37,19 @@
       "description": "Name of the entry"
     },
     "techLevel": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/nonNegativeInteger"
-        }
-      ],
+      "$ref": "#/definitions/nonNegativeInteger",
       "description": "Technology level of the item or entity"
     },
     "salvageValue": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/nonNegativeInteger"
-        }
-      ],
+      "$ref": "#/definitions/nonNegativeInteger",
       "description": "Salvage value in credits"
     },
     "hitPoints": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/positiveInteger"
-        }
-      ],
+      "$ref": "#/definitions/positiveInteger",
       "description": "Hit points for creatures and personnel"
     },
     "structurePoints": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/positiveInteger"
-        }
-      ],
+      "$ref": "#/definitions/positiveInteger",
       "description": "Structure points for mechs, vehicles, and titans"
     }
   }

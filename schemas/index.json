@@ -3,7 +3,7 @@
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
   "version": "1.38.0",
-  "generated": "2025-10-28T23:17:26.367Z",
+  "generated": "2025-10-29T00:03:20.989Z",
   "schemas": [
     {
       "id": "abilities",
@@ -12,7 +12,7 @@
       "dataFile": "data/abilities.json",
       "schemaFile": "schemas/abilities.schema.json",
       "itemCount": 103,
-      "requiredFields": []
+      "requiredFields": ["tree", "level"]
     },
     {
       "id": "ability-tree-requirements",
@@ -21,7 +21,7 @@
       "dataFile": "data/ability-tree-requirements.json",
       "schemaFile": "schemas/ability-tree-requirements.schema.json",
       "itemCount": 20,
-      "requiredFields": []
+      "requiredFields": ["requirement"]
     },
     {
       "id": "bio-titans",
@@ -30,7 +30,7 @@
       "dataFile": "data/bio-titans.json",
       "schemaFile": "schemas/bio-titans.schema.json",
       "itemCount": 6,
-      "requiredFields": []
+      "requiredFields": ["structurePoints", "actions"]
     },
     {
       "id": "chassis",
@@ -39,7 +39,7 @@
       "dataFile": "data/chassis.json",
       "schemaFile": "schemas/chassis.schema.json",
       "itemCount": 30,
-      "requiredFields": []
+      "requiredFields": ["stats", "chassisAbilities", "patterns"]
     },
     {
       "id": "classes.advanced",
@@ -48,7 +48,7 @@
       "dataFile": "data/classes.advanced.json",
       "schemaFile": "schemas/classes.advanced.schema.json",
       "itemCount": 5,
-      "requiredFields": []
+      "requiredFields": ["advancedTree", "legendaryTree"]
     },
     {
       "id": "classes.core",
@@ -57,7 +57,7 @@
       "dataFile": "data/classes.core.json",
       "schemaFile": "schemas/classes.core.schema.json",
       "itemCount": 6,
-      "requiredFields": []
+      "requiredFields": ["maxAbilities", "advanceable", "coreTrees"]
     },
     {
       "id": "classes.hybrid",
@@ -66,7 +66,7 @@
       "dataFile": "data/classes.hybrid.json",
       "schemaFile": "schemas/classes.hybrid.schema.json",
       "itemCount": 5,
-      "requiredFields": []
+      "requiredFields": ["advancedTree", "legendaryTree"]
     },
     {
       "id": "crawler-bays",
@@ -75,7 +75,7 @@
       "dataFile": "data/crawler-bays.json",
       "schemaFile": "schemas/crawler-bays.schema.json",
       "itemCount": 10,
-      "requiredFields": []
+      "requiredFields": ["damagedEffect", "npc", "actions", "techLevelEffects"]
     },
     {
       "id": "crawler-tech-levels",
@@ -84,7 +84,12 @@
       "dataFile": "data/crawler-tech-levels.json",
       "schemaFile": "schemas/crawler-tech-levels.schema.json",
       "itemCount": 6,
-      "requiredFields": []
+      "requiredFields": [
+        "techLevel",
+        "structurePoints",
+        "populationMin",
+        "populationMax"
+      ]
     },
     {
       "id": "crawlers",
@@ -93,7 +98,7 @@
       "dataFile": "data/crawlers.json",
       "schemaFile": "schemas/crawlers.schema.json",
       "itemCount": 5,
-      "requiredFields": []
+      "requiredFields": ["npc", "actions"]
     },
     {
       "id": "creatures",
@@ -102,7 +107,7 @@
       "dataFile": "data/creatures.json",
       "schemaFile": "schemas/creatures.schema.json",
       "itemCount": 6,
-      "requiredFields": []
+      "requiredFields": ["hitPoints", "actions"]
     },
     {
       "id": "drones",
@@ -111,7 +116,12 @@
       "dataFile": "data/drones.json",
       "schemaFile": "schemas/drones.schema.json",
       "itemCount": 9,
-      "requiredFields": []
+      "requiredFields": [
+        "structurePoints",
+        "techLevel",
+        "salvageValue",
+        "systems"
+      ]
     },
     {
       "id": "equipment",
@@ -120,7 +130,7 @@
       "dataFile": "data/equipment.json",
       "schemaFile": "schemas/equipment.schema.json",
       "itemCount": 44,
-      "requiredFields": []
+      "requiredFields": ["techLevel"]
     },
     {
       "id": "keywords",
@@ -138,7 +148,7 @@
       "dataFile": "data/meld.json",
       "schemaFile": "schemas/meld.schema.json",
       "itemCount": 5,
-      "requiredFields": []
+      "requiredFields": ["actions"]
     },
     {
       "id": "modules",
@@ -156,7 +166,7 @@
       "dataFile": "data/npcs.json",
       "schemaFile": "schemas/npcs.schema.json",
       "itemCount": 6,
-      "requiredFields": []
+      "requiredFields": ["hitPoints", "actions"]
     },
     {
       "id": "roll-tables",
@@ -165,7 +175,7 @@
       "dataFile": "data/roll-tables.json",
       "schemaFile": "schemas/roll-tables.schema.json",
       "itemCount": 22,
-      "requiredFields": []
+      "requiredFields": ["section", "table"]
     },
     {
       "id": "squads",
@@ -174,7 +184,7 @@
       "dataFile": "data/squads.json",
       "schemaFile": "schemas/squads.schema.json",
       "itemCount": 9,
-      "requiredFields": []
+      "requiredFields": ["actions"]
     },
     {
       "id": "systems",
@@ -201,7 +211,12 @@
       "dataFile": "data/vehicles.json",
       "schemaFile": "schemas/vehicles.schema.json",
       "itemCount": 7,
-      "requiredFields": []
+      "requiredFields": [
+        "structurePoints",
+        "techLevel",
+        "salvageValue",
+        "systems"
+      ]
     }
   ]
 }
