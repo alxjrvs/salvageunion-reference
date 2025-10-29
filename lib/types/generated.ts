@@ -831,6 +831,7 @@ export type SURefCrawlerBay = SURefMetaEntry & {
    */
   damagedEffect: string
   npc: SURefMetaNpc
+  choices?: SURefMetaChoices
   actions: SURefMetaAction[]
   /**
    * Effects that scale with tech level
