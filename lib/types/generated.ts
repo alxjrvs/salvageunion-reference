@@ -37,6 +37,10 @@ export type SURefActionType =
   | 'Long'
   | 'DownTime'
 /**
+ * Type of damage
+ */
+export type SURefDamageType = 'HP' | 'SP'
+/**
  * Ability tree name
  */
 export type SURefTree =
@@ -86,9 +90,9 @@ export type SURefTree =
  */
 export interface SURefMetaDamage {
   /**
-   * Type of damage (Hit Points or Structure Points)
+   * Type of damage
    */
-  type: 'HP' | 'SP'
+  damageType: 'HP' | 'SP'
   amount: number | string
 }
 /**
@@ -157,10 +161,7 @@ export interface SURefMetaNpc {
    * Description of the NPC
    */
   description: string
-  /**
-   * Hit points for creatures and personnel
-   */
-  hitPoints?: number
+  hitPoints: number | null
   choices?: SURefMetaChoices
 }
 export interface SURefMetaChoice {
@@ -825,10 +826,7 @@ export type SURefCrawler = SURefMetaEntry & {
 
 // Creature
 export type SURefCreature = SURefMetaEntry & {
-  /**
-   * Hit points for creatures and personnel
-   */
-  hitPoints: number
+  hitPoints: number | null
   actions: SURefMetaAction[]
   traits?: SURefMetaTraits
 }
@@ -1036,10 +1034,7 @@ export type SURefModule = SURefMetaEntry & {
 
 // Npc
 export type SURefNpc = SURefMetaEntry & {
-  /**
-   * Hit points for creatures and personnel
-   */
-  hitPoints: number
+  hitPoints: number | null
   actions: SURefMetaAction[]
   traits?: SURefMetaTraits
 }
@@ -1127,12 +1122,13 @@ export type SURefRollTable = SURefMetaEntry & {
 
 // Squad
 export type SURefSquad = SURefMetaEntry & {
-  /**
-   * Hit points for creatures and personnel
-   */
-  hitPoints?: number
+  hitPoints?: number | null
   actions: SURefMetaAction[]
   traits?: SURefMetaTraits
+  /**
+   * Type of damage
+   */
+  damageType?: 'HP' | 'SP'
 }
 
 // System

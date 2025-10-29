@@ -119,10 +119,10 @@ Traits can be simple or have numeric values:
 ```json
 {
   "traits": [
-    { "damageType": "melee" },
-    { "damageType": "ballistic" },
-    { "damageType": "explosive", "amount": 2 },
-    { "damageType": "multi-attack", "amount": 3 }
+    { "type": "melee" },
+    { "type": "ballistic" },
+    { "type": "explosive", "amount": 2 },
+    { "type": "multi-attack", "amount": 3 }
   ]
 }
 ```
@@ -134,7 +134,7 @@ For abilities with roll outcomes, include the full roll table:
 ```json
 {
   "table": {
-    "damageType": "standard",
+    "type": "standard",
     "1": "Critical failure outcome text",
     "2-5": "Low outcome text",
     "6-10": "Moderate outcome text",
@@ -148,10 +148,18 @@ For abilities with roll outcomes, include the full roll table:
 
 #### Before Submitting
 
-1. **Validate your changes**:
+1. **Run tests (includes validation)**:
+
+   ```bash
+   bun test
+   ```
+
+   Or just validate schemas:
+
    ```bash
    npm run validate
    ```
+
 2. **Format your code**:
 
    ```bash

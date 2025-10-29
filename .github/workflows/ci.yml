@@ -29,11 +29,8 @@ jobs:
       - name: Check formatting
         run: bun run format --check
 
-      - name: Run tests
-        run: bun run test
-
-      - name: Run validation
-        run: bun run validate
+      - name: Run tests (includes validation)
+        run: bun test
 
       - name: Validate unique IDs
         run: bun run validate:ids
