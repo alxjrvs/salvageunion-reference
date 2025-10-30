@@ -11,7 +11,8 @@
       }
     ],
     "range": "Close",
-    "description": "This set of bandages, plasters, gauze, painkillers, and antiseptics allows you to patch up wounds in the field. A target creature of your choice in Range regains 3 Hit Points. If they were on 0 Hit Points this restores them to consciousness with 3 HP.",
+    "description": "This set of bandages, plasters, gauze, painkillers, and antiseptics allows you to patch up wounds in the field.",
+    "effect": "A target creature of your choice in Range regains 3 Hit Points. If they were on 0 Hit Points this restores them to consciousness with 3 HP.",
     "notes": "*Union Safety Guideline 305.15 recommends each Union Crawler salvage crew equip a First Aid Kit for all active field work.*",
     "page": 78
   },
@@ -29,7 +30,7 @@
         "actionType": "Turn",
         "activationCost": 2,
         "range": "Close",
-        "description": "When activated, a target Mech or Vehicle of your choice in Range with at least 1 SP regains 2 SP."
+        "effect": "When activated, a target Mech or Vehicle of your choice in Range with at least 1 SP regains 2 SP."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -37,7 +38,7 @@
         "actionType": "Short",
         "activationCost": 2,
         "range": "Close",
-        "description": "You repair a damaged Tech 1 System or Module in Range to Intact Condition. It is now usable."
+        "effect": "You repair a damaged Tech 1 System or Module in Range to Intact Condition. It is now usable."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -45,7 +46,7 @@
         "actionType": "Long",
         "activationCost": 4,
         "range": "Close",
-        "description": "You repair a damaged Tech 1 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
+        "effect": "You repair a damaged Tech 1 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
     ],
     "page": 78
@@ -57,7 +58,8 @@
     "techLevel": 1,
     "actionType": "Free",
     "range": "Close",
-    "description": "A handheld worker’s torch that runs on a rechargeable lithium-ion battery. This lights up an area in Close Range of the Pilot, allowing them to see more clearly in dark or foggy conditions.",
+    "description": "A handheld worker’s torch that runs on a rechargeable lithium-ion battery.",
+    "effect": "This lights up an area in Close Range of the Pilot, allowing them to see more clearly in dark or foggy conditions.",
     "page": 78
   },
   {
@@ -72,7 +74,8 @@
     ],
     "actionType": "Turn",
     "range": "Close",
-    "description": "Strong and durable wire, with multiple potential creative applications.This can be attached to anything within Range, allowing you to climb the wire. It can also be used to aid in the dragging of heavy objects.",
+    "description": "Strong and durable wire, with multiple potential creative applications.",
+    "effect": "This can be attached to anything within Range, allowing you to climb the wire. It can also be used to aid in the dragging of heavy objects.",
     "page": 78
   },
   {
@@ -91,7 +94,8 @@
       }
     ],
     "range": "Close",
-    "description": "This covers any number of homemade explosives. Exploding powder and bits of shrapnel are easy to find amongst the wastes. An IED can be thrown at a target as an attack. It can also be planted as a proximity mine which triggers when a target comes within Close Range of the IED. In either case, roll an attack as normal to find out what happens.",
+    "description": "This covers any number of homemade explosives. Exploding powder and bits of shrapnel are easy to find amongst the wastes.",
+    "effect": "An IED can be thrown at a target as an attack. It can also be planted as a proximity mine which triggers when a target comes within Close Range of the IED. In either case, roll an attack as normal to find out what happens.",
     "damage": {
       "type": "SP",
       "amount": 3
@@ -152,7 +156,8 @@
     ],
     "actionType": "Free",
     "range": "Medium",
-    "description": "A handheld communications device that uses a radio frequency. This allows you to communicate with anything that has the Communicator Trait within Range.",
+    "description": "A handheld communications device that uses a radio frequency.",
+    "effect": "This allows you to communicate with anything that has the Communicator Trait within Range.",
     "page": 301
   },
   {
@@ -165,7 +170,8 @@
         "type": "salvaging"
       }
     ],
-    "description": "This covers a wide array of tools, from jacks to hammers to angle grinders, that are used in salvaging. This allows your Pilot to salvage in the field, because sometimes you need to get your hands dirty.",
+    "description": "This covers a wide array of tools, from jacks to hammers to angle grinders, that are used in salvaging.",
+    "effect": "This allows your Pilot to salvage in the field, because sometimes you need to get your hands dirty.",
     "page": 298
   },
   {
@@ -181,7 +187,8 @@
     ],
     "actionType": "Turn",
     "range": "Far",
-    "description": "A launcher for a flare intended to be used as a distress signal, beacon, or in a pinch, to light up an area. When fired, the flare can be seen from anywhere up to Far Range. It lights up an area within Close Range of its target for 1 hour.",
+    "description": "A launcher for a flare intended to be used as a distress signal, beacon, or in a pinch, to light up an area.",
+    "effect": "When fired, the flare can be seen from anywhere up to Far Range. It lights up an area within Close Range of its target for 1 hour.",
     "page": 78
   },
   {
@@ -190,7 +197,8 @@
     "name": "Holofoil Tent",
     "techLevel": 2,
     "actionType": "Short",
-    "description": "A large, sturdy but light tent made out of a strong, waterproof, and insulating material. The tent can comfortably fit up to five people. Everyone inside the tent suffers no damage or effect from dangerous environmental effects such as radiation storms, cold snaps, or acid rain, and half damage from severe environmental effects such as tornadoes and firestorms.",
+    "description": "A large, sturdy but light tent made out of a strong, waterproof, and insulating material.",
+    "effect": "The tent can comfortably fit up to five people. Everyone inside the tent suffers no damage or effect from dangerous environmental effects such as radiation storms, cold snaps, or acid rain, and half damage from severe environmental effects such as tornadoes and firestorms.",
     "page": 78
   },
   {
@@ -240,7 +248,7 @@
         "actionType": "Turn",
         "activationCost": 2,
         "range": "Close",
-        "description": "When activated, a target Mech or Vehicle of your choice in Range with at least 1 SP regains 3 SP."
+        "effect": "When activated, a target Mech or Vehicle of your choice in Range with at least 1 SP regains 3 SP."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -248,7 +256,7 @@
         "actionType": "Short",
         "activationCost": 2,
         "range": "Close",
-        "description": "You repair a damaged Tech 1 or 2 System or Module in Range to Intact Condition. It is now usable."
+        "effect": "You repair a damaged Tech 1 or 2 System or Module in Range to Intact Condition. It is now usable."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -256,7 +264,7 @@
         "actionType": "Long",
         "activationCost": 4,
         "range": "Close",
-        "description": "You repair a damaged Tech 1 or 2 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
+        "effect": "You repair a damaged Tech 1 or 2 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
     ],
     "page": 82
@@ -289,7 +297,8 @@
         "type": "rigging"
       }
     ],
-    "description": "This hydraulic jack can aid in the heavy lifting of salvage. The Rigging Jack can carry 1 Scrap upon it.",
+    "description": "This hydraulic jack can aid in the heavy lifting of salvage.",
+    "effect": "The Rigging Jack can carry 1 Scrap upon it.",
     "page": 78
   },
   {
@@ -306,7 +315,8 @@
       }
     ],
     "actionType": "Reaction",
-    "description": "Typically used in breaching and boarding actions, as well as for riot control, this large shield protects its wearer from harm. When your Pilot is hit by an attack you may destroy the Reinforced Polycarbonate Shield to take half damage from the attack and suffer none of its effects.",
+    "description": "Typically used in breaching and boarding actions, as well as for riot control, this large shield protects its wearer from harm.",
+    "effect": "When your Pilot is hit by an attack you may destroy the Reinforced Polycarbonate Shield to take half damage from the attack and suffer none of its effects.",
     "page": 81
   },
   {
@@ -363,7 +373,8 @@
         "type": "heavy"
       }
     ],
-    "description": "This all-purpose bio-hazard suit can protect you from the ravages of the wastes once you are zipped up all comfy inside. The suit protects you from dangerous environmental hazards such as radiation storms, cold snaps, or acid rain. In addition, you take half damage from any severe environmental hazards such as tornadoes, firestorms, or bubbling pools of toxic waste.",
+    "description": "This all-purpose bio-hazard suit can protect you from the ravages of the wastes once you are zipped up all comfy inside.",
+    "effect": "The suit protects you from dangerous environmental hazards such as radiation storms, cold snaps, or acid rain. In addition, you take half damage from any severe environmental hazards such as tornadoes, firestorms, or bubbling pools of toxic waste.",
     "page": 78
   },
   {
@@ -384,14 +395,14 @@
         "name": "Healing Spray",
         "actionType": "Turn",
         "range": "Close",
-        "description": "A target creature of your choice in Range regains 5 Hit Points. If they were on 0 Hit Points this restores them to consciousness with 5 HP."
+        "effect": "A target creature of your choice in Range regains 5 Hit Points. If they were on 0 Hit Points this restores them to consciousness with 5 HP."
       },
       {
         "source": "Salvage Union Workshop Manual",
         "name": "Suturing Spray",
         "actionType": "Short",
         "range": "Close",
-        "description": "A target creature of your choice in Range heals a Minor Injury."
+        "effect": "A target creature of your choice in Range heals a Minor Injury."
       }
     ],
     "page": 83
@@ -409,7 +420,7 @@
         "actionType": "Turn",
         "activationCost": 2,
         "range": "Close",
-        "description": "You restore up to 4 SP to a target Mech in Range with at least 1 SP."
+        "effect": "You restore up to 4 SP to a target Mech in Range with at least 1 SP."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -417,7 +428,7 @@
         "actionType": "Short",
         "activationCost": 2,
         "range": "Close",
-        "description": "You repair a damaged Tech 1, 2, or 3 System or Module in Range to Intact Condition."
+        "effect": "You repair a damaged Tech 1, 2, or 3 System or Module in Range to Intact Condition."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -425,7 +436,7 @@
         "actionType": "Long",
         "activationCost": 4,
         "range": "Close",
-        "description": "You repair a damaged Tech 1, 2, or 3 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
+        "effect": "You repair a damaged Tech 1, 2, or 3 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
     ],
     "page": 83
@@ -443,7 +454,8 @@
         "type": "hover"
       }
     ],
-    "description": "This floating sled allows you to store cargo on it that your Pilot would not otherwise be able to carry. It ignores any Difficult Terrain or obstacles as it moves, and has a Cargo Capacity of 4 and 3 SP.",
+    "description": "This floating sled allows you to store cargo on it that your Pilot would not otherwise be able to carry.",
+    "effect": "It ignores any Difficult Terrain or obstacles as it moves, and has a Cargo Capacity of 4 and 3 SP.",
     "page": 78
   },
   {
@@ -508,7 +520,8 @@
         "type": "heavy"
       }
     ],
-    "description": "Layers of reactive heavy carbonate protect a Pilot against various types of damage, from ballistic and laser damage to explosive and shrapnel damage. Reduce all damage your Pilot takes by 1 to a minimum of 1 when this Armour is equipped. Apply this after other modifiers.",
+    "description": "Layers of reactive heavy carbonate protect a Pilot against various types of damage, from ballistic and laser damage to explosive and shrapnel damage.",
+    "effect": "Reduce all damage your Pilot takes by 1 to a minimum of 1 when this Armour is equipped. Apply this after other modifiers.",
     "page": 333
   },
   {
@@ -540,7 +553,8 @@
       }
     ],
     "range": "Close",
-    "description": "This weapon covers all manner of ballistic firearms designed to discharge small-pellet-like shot at targets. When you hit with this weapon up to one other target of your choice in Close Range takes 2 HP damage.",
+    "description": "This weapon covers all manner of ballistic firearms designed to discharge small-pellet-like shot at targets.",
+    "effect": "When you hit with this weapon up to one other target of your choice in Close Range takes 2 HP damage.",
     "damage": {
       "type": "HP",
       "amount": 4
@@ -562,7 +576,8 @@
       }
     ],
     "range": "Medium",
-    "description": "This weapon fires a dart loaded with a strong anaesthetic that knocks out the target. If a creature is hit with the tranquiliser rifle they fall unconscious for 10 minutes. Making any attack with this weapon reduces its Uses by 1. This does not affect Bio-Titans or Meld.",
+    "description": "This weapon fires a dart loaded with a strong anaesthetic that knocks out the target.",
+    "effect": " If a creature is hit with the tranquiliser rifle they fall unconscious for 10 minutes. Making any attack with this weapon reduces its Uses by 1. This does not affect Bio-Titans or Meld.",
     "page": 78
   },
   {
@@ -578,7 +593,7 @@
         "actionType": "Turn",
         "activationCost": 2,
         "range": "Close",
-        "description": "You restore up to 5 SP to a target Mech in Range with at least 1 SP."
+        "effect": "You restore up to 5 SP to a target Mech in Range with at least 1 SP."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -586,7 +601,7 @@
         "actionType": "Short",
         "activationCost": 2,
         "range": "Close",
-        "description": "You repair a damaged Tech 1, 2, 3, or 4 System or Module in Range to Intact Condition. It is now usable."
+        "effect": "You repair a damaged Tech 1, 2, 3, or 4 System or Module in Range to Intact Condition. It is now usable."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -594,7 +609,7 @@
         "actionType": "Long",
         "activationCost": 4,
         "range": "Close",
-        "description": "You repair a damaged Tech 1, 2, 3, or 4 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
+        "effect": "You repair a damaged Tech 1, 2, 3, or 4 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
     ],
     "page": 84
@@ -620,7 +635,8 @@
     "techLevel": 4,
     "actionType": "Free",
     "range": "Long",
-    "description": "An array of infravision optical mounts worn via a specialised helmet. When activated, your Pilot can see in darkness via a green tinted visor, in any area within Range. This effect lasts for 1 hour.",
+    "description": "An array of infravision optical mounts worn via a specialised helmet.",
+    "effect": "When activated, your Pilot can see in darkness via a green tinted visor, in any area within Range. This effect lasts for 1 hour.",
     "page": 79
   },
   {
@@ -663,7 +679,8 @@
       }
     ],
     "range": "Close",
-    "description": "An explosive device that can be remotely detonated. You may place and set the Remote Mine as a Turn Action. It can be detonated remotely as a Turn Action from Medium Range. When it detonates, roll to make an attack as normal. On a hit all targets within Range take 4 SP damage.",
+    "description": "An explosive device that can be remotely detonated.",
+    "effect": "You may place and set the Remote Mine as a Turn Action. It can be detonated remotely as a Turn Action from Medium Range. When it detonates, roll to make an attack as normal. On a hit all targets within Range take 4 SP damage.",
     "damage": {
       "type": "SP",
       "amount": 4
@@ -788,7 +805,8 @@
         "type": "heavy"
       }
     ],
-    "description": "Heavy layers of reinforced carbonate provide excellent protection in the field against all manner of harm one could find in the wastelands. Reduce all damage your Pilot takes by 2 to a minimum of 1 when this Armour is equipped. Apply this after other modifiers.",
+    "description": "Heavy layers of reinforced carbonate provide excellent protection in the field against all manner of harm one could find in the wastelands.",
+    "effect": "Reduce all damage your Pilot takes by 2 to a minimum of 1 when this Armour is equipped. Apply this after other modifiers.",
     "page": 86
   },
   {
@@ -804,7 +822,7 @@
         "actionType": "Turn",
         "activationCost": 2,
         "range": "Close",
-        "description": "You restore up to 6 SP to a target Mech in Range with at least 1 SP."
+        "effect": "You restore up to 6 SP to a target Mech in Range with at least 1 SP."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -812,7 +830,7 @@
         "actionType": "Short",
         "activationCost": 2,
         "range": "Close",
-        "description": "You repair a damaged Tech 1, 2, 3, 4, or 5 System or Module in Range to Intact Condition. It is now usable."
+        "effect": "You repair a damaged Tech 1, 2, 3, 4, or 5 System or Module in Range to Intact Condition. It is now usable."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -820,7 +838,7 @@
         "actionType": "Long",
         "activationCost": 4,
         "range": "Close",
-        "description": "You repair a damaged Tech 1, 2, 3, 4, or 5 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
+        "effect": "You repair a damaged Tech 1, 2, 3, 4, or 5 Mech Chassis or Vehicle in Range to Intact Condition. It is now usable with 1 SP."
       }
     ],
     "page": 86
@@ -835,7 +853,8 @@
         "type": "hover"
       }
     ],
-    "description": "This belt straps onto your Pilot and allows them to defy the laws of physics. Whilst equipped, this allows your Pilot to levitate, moving over obstacles and terrain, and float onto buildings and other tall structures, gaining the Hover Trait for all of their movement.",
+    "description": "This belt straps onto your Pilot and allows them to defy the laws of physics.",
+    "effect": "Whilst equipped, this allows your Pilot to levitate, moving over obstacles and terrain, and float onto buildings and other tall structures, gaining the Hover Trait for all of their movement.",
     "page": 79
   },
   {
@@ -866,7 +885,7 @@
     ],
     "actionType": "Turn",
     "range": "Far",
-    "description": "This specialised controller allows you to tap into one of the many defunct orbital satellites floating around the globe and call down a one-off laser strike against a target of your choice within Range. You must be able to identify the target, but you do not need to be able to directly see them.",
+    "effect": "This specialised controller allows you to tap into one of the many defunct orbital satellites floating around the globe and call down a one-off laser strike against a target of your choice within Range. You must be able to identify the target, but you do not need to be able to directly see them.",
     "notes": "There are a limited number of operational satellites in orbit, placed there by different corpos and other factions. None of them use compatible systems or codes. An Orbital Lance Controller has links to one operational satellite which has sufficient energy in its banks to fire three strikes. This means that an Orbital Lance Controller can only ever be used three times and does not regain it’s uses. \n\nThe laser strike that the Orbital Lance fires can be either focussed or wide. This allows you to specify any target of your choice from the huge to the small. You can choose a wide blast to destroy a settlement, or Mech convoy, or a pinpoint strike to kill a single person. The Orbital Lance only deals as much collateral damage as you want it to. The target you choose is killed or destroyed entirely.\n\nYou may only claim one Orbital Lance Controller per Union Crawler, others must be found in the wastelands. There are few of these just lying around!",
     "page": 87
   },
@@ -883,7 +902,7 @@
         "actionType": "Turn",
         "activationCost": 2,
         "range": "Close",
-        "description": "You restore up to 8 SP to a target Mech in Range with at least 1 SP."
+        "effect": "You restore up to 8 SP to a target Mech in Range with at least 1 SP."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -891,7 +910,7 @@
         "actionType": "Short",
         "activationCost": 2,
         "range": "Close",
-        "description": "You repair any damaged System or Module in Range to Intact Condition. It is now usable."
+        "effect": "You repair any damaged System or Module in Range to Intact Condition. It is now usable."
       },
       {
         "source": "Salvage Union Workshop Manual",
@@ -899,7 +918,7 @@
         "actionType": "Long",
         "activationCost": 4,
         "range": "Close",
-        "description": "You repair any damaged Mech Chassis in Range to Intact Condition. It is now usable with 1 SP."
+        "effect": "You repair any damaged Mech Chassis in Range to Intact Condition. It is now usable with 1 SP."
       }
     ],
     "page": 79

@@ -6,7 +6,7 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["stats", "chassisAbilities", "patterns"],
+    "required": ["stats", "actions", "patterns"],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
@@ -16,7 +16,7 @@
       "stats": {
         "$ref": "shared/objects.schema.json#/definitions/stats"
       },
-      "chassisAbilities": {
+      "actions": {
         "type": "array",
         "items": {
           "$ref": "shared/objects.schema.json#/definitions/action"

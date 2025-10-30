@@ -155,7 +155,7 @@
         "name": "Quick Fix",
         "actionType": "Free",
         "activationCost": 1,
-        "description": "When you activate this Ability, you may use any Turn Action Ability you have access to that restores Structure Points as a Free Action. For example, you could use the Welding Lasers 'Weld' Ability as a Free Action instead of a Turn Action. This allows you to use the Ability multiple times in a turn."
+        "effect": "When you activate this Ability, you may use any Turn Action Ability you have access to that restores Structure Points as a Free Action. For example, you could use the Welding Lasers 'Weld' Ability as a Free Action instead of a Turn Action. This allows you to use the Ability multiple times in a turn."
       }
     ],
     "activationCost": 1,
@@ -699,13 +699,13 @@
         "name": "Let me double check that",
         "actionType": "Free",
         "activationCost": 1,
-        "description": "You may activate this Ability when you make an attack with the Mechapult System. You may roll three times on the Mechapult Table and choose the result you want."
+        "effect": "You may activate this Ability when you make an attack with the Mechapult System. You may roll three times on the Mechapult Table and choose the result you want."
       },
       {
         "name": "Load 'er up!",
         "actionType": "Free",
         "activationCost": 1,
-        "description": "When you activate this Ability you may attack twice with the Mechapult System on your turn. Make each attack separately. You may only activate this Ability once per turn. This follows all other normal rules for using the Mechapult."
+        "effect": "When you activate this Ability you may attack twice with the Mechapult System on your turn. Make each attack separately. You may only activate this Ability once per turn. This follows all other normal rules for using the Mechapult."
       }
     ],
     "activationCost": 1,
@@ -1670,12 +1670,12 @@
     "mechActionType": "Short",
     "notes": "Requires the Rigging Trait.",
     "table": {
-      "1": "The Mech is unsalvageable: its Chassis, Systems, and Modules are all considered destroyed.",
       "20": "You salvage the Mech Chassis, a System, and a Module of your choice mounted on it. They have the Damaged Condition. Everything else is considered destroyed.",
-      "type": "standard",
-      "2-5": "You salvage half of the Salvage Value of the Mech Chassis in Scrap of its Tech Level, to a minimum of 1. Everything else is considered destroyed.",
+      "11-19": "You salvage the Mech Chassis, or a System, or Module of your choice mounted on it. It has the Damaged Condition. Everything else is considered destroyed.",
       "6-10": "You salvage a System or Module of your choice mounted on the Mech. It has the Damaged Condition. Everything else is considered destroyed.",
-      "11-19": "You salvage the Mech Chassis, or a System, or Module of your choice mounted on it. It has the Damaged Condition. Everything else is considered destroyed."
+      "2-5": "You salvage half of the Salvage Value of the Mech Chassis in Scrap of its Tech Level, to a minimum of 1. Everything else is considered destroyed.",
+      "1": "its Chassis, Systems, and Modules are all considered destroyed.",
+      "type": "standard"
     },
     "traits": [],
     "page": 248
@@ -1716,8 +1716,7 @@
     "tree": "Generic",
     "level": "G",
     "source": "Salvage Union Workshop Manual",
-    "description": "You Mount a System or Module onto a target Mech in Range. The Mech must have enough System or Module Slots to mount the new System or Module and the slots must be empty.\n\nAs part of this action you may dismount any number of Systems or Modules on the Mech to make room for the new System or Module. You may not Mount a damaged System or Module onto a Mech.",
-    "effect": "",
+    "effect": "You Mount a System or Module onto a target Mech in Range. The Mech must have enough System or Module Slots to mount the new System or Module and the slots must be empty.\n\nAs part of this action you may dismount any number of Systems or Modules on the Mech to make room for the new System or Module. You may not Mount a damaged System or Module onto a Mech.",
     "range": "Close",
     "actionType": "Long",
     "mechActionType": "Short",
@@ -1731,8 +1730,7 @@
     "tree": "Generic",
     "level": "G",
     "source": "Salvage Union Workshop Manual",
-    "description": "You restore up to 3 + X Structure Points on a target Mech or Vehicle, where X is equal to the Tech Level of the Scrap you spend when you use this Ability.\n\nYou must spend 1 Scrap of the Mech or Vehicles Tech Level or higher to use this Ability. The Mech or Vehicle must have at least 1 SP to use this Ability on it.",
-    "effect": "",
+    "effect": "You restore up to 3 + X Structure Points on a target Mech or Vehicle, where X is equal to the Tech Level of the Scrap you spend when you use this Ability.\n\nYou must spend 1 Scrap of the Mech or Vehicles Tech Level or higher to use this Ability. The Mech or Vehicle must have at least 1 SP to use this Ability on it.",
     "range": "Close",
     "actionType": "Long",
     "mechActionType": "Short",
@@ -1746,8 +1744,7 @@
     "tree": "Generic",
     "level": "G",
     "source": "Salvage Union Workshop Manual",
-    "description": "You pick up and load a Mech Chassis, System, Module, or piece of Scrap in Range onto your Mech or an allied Mech. This takes up a number of Cargo Slots equal to its Salvage Value. Scrap takes up 1 Cargo Slot.\n\nAlternatively, a Pilot may use this action to pick up a Mech Chassis, System, Module, or Scrap, and carry it. Scrap takes up 3 Pilot Inventory Slots. Mech Chassis, Systems, and Modules take up a number of Inventory Slots equal to 3× their Salvage Value. This does make some things impossible for a Pilot to carry without help.",
-    "effect": "",
+    "effect": "You pick up and load a Mech Chassis, System, Module, or piece of Scrap in Range onto your Mech or an allied Mech. This takes up a number of Cargo Slots equal to its Salvage Value. Scrap takes up 1 Cargo Slot.\n\nAlternatively, a Pilot may use this action to pick up a Mech Chassis, System, Module, or Scrap, and carry it. Scrap takes up 3 Pilot Inventory Slots. Mech Chassis, Systems, and Modules take up a number of Inventory Slots equal to 3× their Salvage Value. This does make some things impossible for a Pilot to carry without help.",
     "range": "Close",
     "actionType": "Short",
     "mechActionType": "Turn",
@@ -1761,8 +1758,7 @@
     "level": "G",
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
-    "description": "You craft a Mech Chassis, System, or Module. This costs a number of Scrap equal to the Salvage Value of the Mech Chassis, System, or Module. This Scrap must be of a Tech Level equal to or higher than the Mech Chassis, System, or Module. You may only craft a Mech Chassis, System, or Module of a Tech Level equal to or lower than the Crafting Bay you are working in. This will typically be the same level as your Union Crawler.\n\nYou may perform this Ability as many times as you wish during Downtime, but cannot do it in the field.",
-    "effect": "",
+    "effect": "You craft a Mech Chassis, System, or Module. This costs a number of Scrap equal to the Salvage Value of the Mech Chassis, System, or Module. This Scrap must be of a Tech Level equal to or higher than the Mech Chassis, System, or Module. You may only craft a Mech Chassis, System, or Module of a Tech Level equal to or lower than the Crafting Bay you are working in. This will typically be the same level as your Union Crawler.\n\nYou may perform this Ability as many times as you wish during Downtime, but cannot do it in the field.",
     "actionType": "DownTime",
     "notes": "Requires Crafting Bay.",
     "traits": [],

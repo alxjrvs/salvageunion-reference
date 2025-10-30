@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "1.40.8",
-  "generated": "2025-10-29T02:29:47.621Z",
+  "version": "1.41.0",
+  "generated": "2025-10-30T00:55:01.347Z",
   "schemas": [
     {
       "id": "abilities",
@@ -39,7 +39,7 @@
       "dataFile": "data/chassis.json",
       "schemaFile": "schemas/chassis.schema.json",
       "itemCount": 30,
-      "requiredFields": ["stats", "chassisAbilities", "patterns"]
+      "requiredFields": ["stats", "actions", "patterns"]
     },
     {
       "id": "classes.advanced",

@@ -55,7 +55,7 @@
       },
       {
         "name": "Corrosive Skin Glands",
-        "description": "When hit by a melee attack, the attacker takes 2 HP damage."
+        "effect": "When hit by a melee attack, the attacker takes 2 HP damage."
       }
     ],
     "hitPoints": 2,

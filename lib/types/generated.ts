@@ -576,7 +576,7 @@ export type SURefBioTitan = SURefMetaEntry & {
 // Chassis
 export type SURefChassis = SURefMetaEntry & {
   stats: SURefMetaStats
-  chassisAbilities: SURefMetaAction[]
+  actions: SURefMetaAction[]
   patterns: {
     /**
      * Name of the pattern
