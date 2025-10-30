@@ -97,7 +97,7 @@
     "description": "This covers any number of homemade explosives. Exploding powder and bits of shrapnel are easy to find amongst the wastes.",
     "effect": "An IED can be thrown at a target as an attack. It can also be planted as a proximity mine which triggers when a target comes within Close Range of the IED. In either case, roll an attack as normal to find out what happens.",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 3
     },
     "page": 80
@@ -118,7 +118,7 @@
     "range": "Close",
     "description": "This covers any number of improvised firearms such as pipe guns, zip guns, and slam guns. The humble boomstick has got many a salvager out of a sticky situation.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 3
     },
     "page": 78
@@ -139,7 +139,7 @@
     "range": "Close",
     "description": "This covers any number of melee weapons from wrenches and hammers to shards of metal and sharpened metal posts. There are a lot of things you can use to bludgeon, stab, or otherwise injure someone, to be found in the wastes.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 2
     },
     "page": 298
@@ -214,7 +214,7 @@
     "range": "Close",
     "description": "This weapon covers a wide variety of standard issue pistols such as revolvers and semi-automatic pistols.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 3
     },
     "page": 314
@@ -282,7 +282,7 @@
     "range": "Close",
     "description": "This weapon covers a wide variety of standard issue handheld lasers such as blasters, phasers, and zap guns.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 3
     },
     "page": 78
@@ -332,7 +332,7 @@
     "range": "Medium",
     "description": "This weapon covers a wide variety of standard issue shoulder-mounted energy laser rifles such as beam guns, pulse lasers, and ray rifles.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 5
     },
     "page": 313
@@ -355,7 +355,7 @@
     "range": "Medium",
     "description": "A handheld explosive device that can be thrown towards a target dealing high damage in an area.",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 4
     },
     "page": 78
@@ -474,7 +474,7 @@
     "range": "Close",
     "description": "This covers a wide range of high quality melee weapons that your Pilot can acquire, from standard issue survival knives and hatchets to katanas and claymores.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 4
     },
     "page": 78
@@ -502,7 +502,7 @@
     "range": "Close",
     "description": "This portable flamethrower fires superheated liquid flame at a target.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 2
     },
     "page": 83
@@ -537,7 +537,7 @@
     "range": "Medium",
     "description": "This weapon covers a wide variety of standard issue ballistic rifles, including assault rifles, semi-automatic rifles, and bolt-action rifles.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 5
     },
     "page": 127
@@ -556,7 +556,7 @@
     "description": "This weapon covers all manner of ballistic firearms designed to discharge small-pellet-like shot at targets.",
     "effect": "When you hit with this weapon up to one other target of your choice in Close Range takes 2 HP damage.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 4
     },
     "page": 78
@@ -682,7 +682,7 @@
     "description": "An explosive device that can be remotely detonated.",
     "effect": "You may place and set the Remote Mine as a Turn Action. It can be detonated remotely as a Turn Action from Medium Range. When it detonates, roll to make an attack as normal. On a hit all targets within Range take 4 SP damage.",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 4
     },
     "notes": "*Whist use of Remote Mines is allowed under Corporate Council policy; Union Safety Regulation 402.36 bans their use in civilian occupied territory.*",
@@ -712,7 +712,7 @@
     "range": "Long",
     "description": "This weapon fires unguided, explosive warheads at its targets and is a great way to make an entrance at your next hoedown.",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 5
     },
     "page": 79
@@ -730,7 +730,7 @@
     "range": "Long",
     "description": "This weapon covers a wide variety of scoped rifles designed for taking out targets at a distance.",
     "damage": {
-      "type": "HP",
+      "damageType": "HP",
       "amount": 6
     },
     "page": 47
@@ -754,7 +754,7 @@
     "range": "Close",
     "description": "This blade is formed from a super-hardened carbon lattice, held together by an electro-static charge, and honed to the width of a single mole-cule. They give off the smell of ozone in the atmosphere as the moisture in the air is cut.",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 4
     },
     "page": 301
@@ -787,7 +787,7 @@
     "range": "Medium",
     "description": "This frankly over-designed weapon fires a huge blast of supercharged fission which engulfs an entire area in superheated green flame.",
     "damage": {
-      "type": "SP",
+      "damageType": "SP",
       "amount": 7
     },
     "page": 79
