@@ -195,7 +195,8 @@
     "tree": "Legendary Engineer",
     "level": "L",
     "description": "Your Union Crawler no longer needs to pay upkeep and does not deteriorate.",
-    "effect": "You have learned every inch of your Union Crawler, and know it better than the back of your own hand. The team of onboard engineers you work with are at peak efficiency when you are on board. Your Union Crawler no longer needs to pay Upkeep as long as you are on board during Downtime, and it does not deteriorate.",
+    "notes": "You have learned every inch of your Union Crawler, and know it better than the back of your own hand. The team of onboard engineers you work with are at peak efficiency when you are on board.",
+    "effect": " Your Union Crawler no longer needs to pay Upkeep as long as you are on board during Downtime, and it does not deteriorate.",
     "actionType": "Passive",
     "page": 27
   },
@@ -385,7 +386,8 @@
     "tree": "Advanced Hacking",
     "level": 1,
     "description": "Gain control of a Mech in Range as if it were yours for 10 minutes.",
-    "effect": "You have learned how to hack into the root control systems of a Mech in order to pwn them. When you activate this Ability you gain full control of a Mech within Range for 10 minutes. You learn all of its Stats, Systems, Modules, and Abilities, and can control it as though it was your Mech. Whilst it is under your control, you cannot take any actions as a Pilot or with your Mech except for free actions such as talking. You can choose to end control of the Mech at any time as a Free Action. If you are reduced to 0 HP, or your Mech is reduced to 0 SP, you also lose control of the hacked Mech.",
+    "notes": "You have learned how to hack into the root control systems of a Mech in order to pwn them.",
+    "effect": "When you activate this Ability you gain full control of a Mech within Range for 10 minutes. You learn all of its Stats, Systems, Modules, and Abilities, and can control it as though it was your Mech. Whilst it is under your control, you cannot take any actions as a Pilot or with your Mech except for free actions such as talking. You can choose to end control of the Mech at any time as a Free Action. If you are reduced to 0 HP, or your Mech is reduced to 0 SP, you also lose control of the hacked Mech.",
     "activationCost": 4,
     "range": "Medium",
     "actionType": "Turn",
@@ -693,7 +695,7 @@
     "tree": "Advanced Hauler",
     "level": 2,
     "description": "Improve your ability with the Mechapult System.",
-    "effect": "You have become a master of the sacred art of scrap flinging, making you highly versed at using the Mechapult System (see p. 166).",
+    "notes": "You have become a master of the sacred art of scrap flinging, making you highly versed at using the Mechapult System (see p. 166).",
     "actions": [
       {
         "name": "Let me double check that",
@@ -719,7 +721,8 @@
     "tree": "Advanced Hauler",
     "level": 3,
     "description": "Gain a special charge attack. Damage is based on cargo carried.",
-    "effect": "You have learned to use the momentum and bulk of the vast weight of cargo you can carry to crush your enemies and see them driven before you. Any target hit by this attack is knocked Prone and gains the Vulnerable Trait.",
+    "notes": "You have learned to use the momentum and bulk of the vast weight of cargo you can carry to crush your enemies and see them driven before you.",
+    "effect": "Any target hit by this attack is knocked Prone and gains the Vulnerable Trait.",
     "activationCost": 3,
     "range": "Medium",
     "actionType": "Turn",
@@ -1228,7 +1231,8 @@
     "tree": "Advanced Soldier",
     "level": 3,
     "description": "Make an attack against all targets in Range with an equipped weapon.",
-    "effect": "You have learned to deliver a flurry of attacks against your foes. Choose a weapon you are equipped with or Weapons System on your Mech. You can attack all enemies in Range of that weapon with a single whirlwind salvo. If the weapon causes you to gain Heat or has any additional costs you must pay them for each target.",
+    "notes": "You have learned to deliver a flurry of attacks against your foes.",
+    "effect": "Choose a weapon you are equipped with or Weapons System on your Mech. You can attack all enemies in Range of that weapon with a single whirlwind salvo. If the weapon causes you to gain Heat or has any additional costs you must pay them for each target.",
     "activationCost": 3,
     "actionType": "Turn",
     "table": {
