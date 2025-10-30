@@ -136,6 +136,9 @@ export function toPascalCase(id: string): string {
   if (id === 'classes.hybrid') return 'HybridClasses'
   if (id === 'classes.advanced') return 'AdvancedClasses'
 
+  // Handle special case for NPCs (all caps)
+  if (id === 'npcs') return 'NPCs'
+
   // Handle hyphenated and dotted names
   return id
     .split(/[-.]/)
