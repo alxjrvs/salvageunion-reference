@@ -658,9 +658,7 @@
     "choices": [
       {
         "name": "Industrial Body Kit Choice",
-        "schema": [
-          "chassis"
-        ],
+        "schema": ["chassis"],
         "constraint": {
           "field": "techLevel",
           "min": 1,
@@ -1591,9 +1589,7 @@
           "min": 3,
           "max": 4
         },
-        "schema": [
-          "chassis"
-        ],
+        "schema": ["chassis"],
         "id": "8286393e-daf8-4a1d-8b91-dd8457da6251"
       }
     ],
