@@ -10,6 +10,7 @@ import {
   loadSchemaIndex,
   getSingularTypeName,
   toPascalCase,
+  type SchemaIndexEntry,
 } from './generatorUtils.js'
 
 const __dirname = getDirname(import.meta.url)
@@ -20,7 +21,7 @@ function generateIndexFile() {
 
   // Generate type imports
   const typeImports = schemaIndex.schemas
-    .map((entry: any) => {
+    .map((entry: SchemaIndexEntry) => {
       const singularName = getSingularTypeName(entry.id)
       return `  SURef${singularName}`
     })
@@ -28,7 +29,7 @@ function generateIndexFile() {
 
   // Generate SchemaToEntityMap
   const schemaToEntityEntries = schemaIndex.schemas
-    .map((entry: any) => {
+    .map((entry: SchemaIndexEntry) => {
       const singularName = getSingularTypeName(entry.id)
       return `  '${entry.id}': SURef${singularName}`
     })
@@ -36,7 +37,7 @@ function generateIndexFile() {
 
   // Generate SchemaToModelMap
   const schemaToModelEntries = schemaIndex.schemas
-    .map((entry: any) => {
+    .map((entry: SchemaIndexEntry) => {
       const modelName = toPascalCase(entry.id)
       return `  '${entry.id}': '${modelName}'`
     })
@@ -44,7 +45,7 @@ function generateIndexFile() {
 
   // Generate SURefEntity union type
   const entityUnion = schemaIndex.schemas
-    .map((entry: any) => {
+    .map((entry: SchemaIndexEntry) => {
       const singularName = getSingularTypeName(entry.id)
       return `  | SURef${singularName}`
     })
@@ -119,7 +120,7 @@ export type SURefSchemaName = keyof SchemaToEntityMap
 export class SalvageUnionReference {
   // Initialize static properties from generated models
   ${schemaIndex.schemas
-    .map((entry: any) => {
+    .map((entry: SchemaIndexEntry) => {
       const modelName = toPascalCase(entry.id)
       return `static ${modelName} = models.${modelName} as BaseModel<SchemaToEntityMap['${entry.id}']>`
     })
@@ -188,7 +189,7 @@ export class SalvageUnionReference {
     }
 
     // Find entity
-    const entity = this.findIn(schemaName, (e: any) => e.id === id)
+    const entity = this.findIn(schemaName, (e: SchemaToEntityMap[T]) => e.id === id)
 
     // Cache if found
     if (entity) {

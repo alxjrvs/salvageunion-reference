@@ -9,7 +9,7 @@ import {
   getDirname,
   loadSchemaIndex,
   getSingularTypeName,
-  capitalize,
+  type SchemaIndexEntry,
 } from './generatorUtils.js'
 
 const __dirname = getDirname(import.meta.url)
@@ -79,18 +79,19 @@ function getActualRequiredFields(schemaId: string): string[] {
 
     // Load the referenced schema file
     const refSchemaPath = path.join(__dirname, '..', 'schemas', refFile)
-    const refSchema = JSON.parse(fs.readFileSync(refSchemaPath, 'utf-8'))
+    const refSchema = JSON.parse(
+      fs.readFileSync(refSchemaPath, 'utf-8')
+    ) as Record<string, unknown>
 
     // Navigate to the definition
     const pathParts = refPath.split('/').filter((p: string) => p)
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let definition: any = refSchema
+    let definition: Record<string, unknown> = refSchema
     for (const part of pathParts) {
-      definition = definition[part]
+      definition = definition[part] as Record<string, unknown>
     }
 
     // Get required fields from the definition
-    required = definition?.required || []
+    required = (definition?.required as string[]) || []
   }
 
   // Filter out base fields that all entities have (from entry definition)
@@ -213,7 +214,7 @@ function generateUtilitiesFile() {
 
   // Auto-generate type imports from schema catalog
   const typeImports = schemaIndex.schemas
-    .map((entry: any) => {
+    .map((entry: SchemaIndexEntry) => {
       const singularName = getSingularTypeName(entry.id)
       return `  SURef${singularName}`
     })

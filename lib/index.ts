@@ -64,54 +64,54 @@ export type * from './types/generated.js'
 
 // Type mapping from schema names to entity types
 type SchemaToEntityMap = {
-  'abilities': SURefAbility
+  abilities: SURefAbility
   'ability-tree-requirements': SURefAbilityTreeRequirement
   'bio-titans': SURefBioTitan
-  'chassis': SURefChassis
+  chassis: SURefChassis
   'classes.advanced': SURefAdvancedClass
   'classes.core': SURefCoreClass
   'classes.hybrid': SURefHybridClass
   'crawler-bays': SURefCrawlerBay
   'crawler-tech-levels': SURefCrawlerTechLevel
-  'crawlers': SURefCrawler
-  'creatures': SURefCreature
-  'drones': SURefDrone
-  'equipment': SURefEquipment
-  'keywords': SURefKeyword
-  'meld': SURefMeld
-  'modules': SURefModule
-  'npcs': SURefNPC
+  crawlers: SURefCrawler
+  creatures: SURefCreature
+  drones: SURefDrone
+  equipment: SURefEquipment
+  keywords: SURefKeyword
+  meld: SURefMeld
+  modules: SURefModule
+  npcs: SURefNPC
   'roll-tables': SURefRollTable
-  'squads': SURefSquad
-  'systems': SURefSystem
-  'traits': SURefTrait
-  'vehicles': SURefVehicle
+  squads: SURefSquad
+  systems: SURefSystem
+  traits: SURefTrait
+  vehicles: SURefVehicle
 }
 
 // Runtime mapping from schema names to model property names
 const SchemaToModelMap = {
-  'abilities': 'Abilities',
+  abilities: 'Abilities',
   'ability-tree-requirements': 'AbilityTreeRequirements',
   'bio-titans': 'BioTitans',
-  'chassis': 'Chassis',
+  chassis: 'Chassis',
   'classes.advanced': 'AdvancedClasses',
   'classes.core': 'CoreClasses',
   'classes.hybrid': 'HybridClasses',
   'crawler-bays': 'CrawlerBays',
   'crawler-tech-levels': 'CrawlerTechLevels',
-  'crawlers': 'Crawlers',
-  'creatures': 'Creatures',
-  'drones': 'Drones',
-  'equipment': 'Equipment',
-  'keywords': 'Keywords',
-  'meld': 'Meld',
-  'modules': 'Modules',
-  'npcs': 'NPCs',
+  crawlers: 'Crawlers',
+  creatures: 'Creatures',
+  drones: 'Drones',
+  equipment: 'Equipment',
+  keywords: 'Keywords',
+  meld: 'Meld',
+  modules: 'Modules',
+  npcs: 'NPCs',
   'roll-tables': 'RollTables',
-  'squads': 'Squads',
-  'systems': 'Systems',
-  'traits': 'Traits',
-  'vehicles': 'Vehicles',
+  squads: 'Squads',
+  systems: 'Systems',
+  traits: 'Traits',
+  vehicles: 'Vehicles',
 } as const
 
 // Auto-generate models from schema catalog (synchronous)
@@ -150,24 +150,46 @@ export type SURefSchemaName = keyof SchemaToEntityMap
  */
 export class SalvageUnionReference {
   // Initialize static properties from generated models
-  static Abilities = models.Abilities as BaseModel<SchemaToEntityMap['abilities']>
-  static AbilityTreeRequirements = models.AbilityTreeRequirements as BaseModel<SchemaToEntityMap['ability-tree-requirements']>
-  static BioTitans = models.BioTitans as BaseModel<SchemaToEntityMap['bio-titans']>
+  static Abilities = models.Abilities as BaseModel<
+    SchemaToEntityMap['abilities']
+  >
+  static AbilityTreeRequirements = models.AbilityTreeRequirements as BaseModel<
+    SchemaToEntityMap['ability-tree-requirements']
+  >
+  static BioTitans = models.BioTitans as BaseModel<
+    SchemaToEntityMap['bio-titans']
+  >
   static Chassis = models.Chassis as BaseModel<SchemaToEntityMap['chassis']>
-  static AdvancedClasses = models.AdvancedClasses as BaseModel<SchemaToEntityMap['classes.advanced']>
-  static CoreClasses = models.CoreClasses as BaseModel<SchemaToEntityMap['classes.core']>
-  static HybridClasses = models.HybridClasses as BaseModel<SchemaToEntityMap['classes.hybrid']>
-  static CrawlerBays = models.CrawlerBays as BaseModel<SchemaToEntityMap['crawler-bays']>
-  static CrawlerTechLevels = models.CrawlerTechLevels as BaseModel<SchemaToEntityMap['crawler-tech-levels']>
+  static AdvancedClasses = models.AdvancedClasses as BaseModel<
+    SchemaToEntityMap['classes.advanced']
+  >
+  static CoreClasses = models.CoreClasses as BaseModel<
+    SchemaToEntityMap['classes.core']
+  >
+  static HybridClasses = models.HybridClasses as BaseModel<
+    SchemaToEntityMap['classes.hybrid']
+  >
+  static CrawlerBays = models.CrawlerBays as BaseModel<
+    SchemaToEntityMap['crawler-bays']
+  >
+  static CrawlerTechLevels = models.CrawlerTechLevels as BaseModel<
+    SchemaToEntityMap['crawler-tech-levels']
+  >
   static Crawlers = models.Crawlers as BaseModel<SchemaToEntityMap['crawlers']>
-  static Creatures = models.Creatures as BaseModel<SchemaToEntityMap['creatures']>
+  static Creatures = models.Creatures as BaseModel<
+    SchemaToEntityMap['creatures']
+  >
   static Drones = models.Drones as BaseModel<SchemaToEntityMap['drones']>
-  static Equipment = models.Equipment as BaseModel<SchemaToEntityMap['equipment']>
+  static Equipment = models.Equipment as BaseModel<
+    SchemaToEntityMap['equipment']
+  >
   static Keywords = models.Keywords as BaseModel<SchemaToEntityMap['keywords']>
   static Meld = models.Meld as BaseModel<SchemaToEntityMap['meld']>
   static Modules = models.Modules as BaseModel<SchemaToEntityMap['modules']>
   static NPCs = models.NPCs as BaseModel<SchemaToEntityMap['npcs']>
-  static RollTables = models.RollTables as BaseModel<SchemaToEntityMap['roll-tables']>
+  static RollTables = models.RollTables as BaseModel<
+    SchemaToEntityMap['roll-tables']
+  >
   static Squads = models.Squads as BaseModel<SchemaToEntityMap['squads']>
   static Systems = models.Systems as BaseModel<SchemaToEntityMap['systems']>
   static Traits = models.Traits as BaseModel<SchemaToEntityMap['traits']>
@@ -236,7 +258,10 @@ export class SalvageUnionReference {
     }
 
     // Find entity
-    const entity = this.findIn(schemaName, (e: any) => e.id === id)
+    const entity = this.findIn(
+      schemaName,
+      (e: SchemaToEntityMap[T]) => e.id === id
+    )
 
     // Cache if found
     if (entity) {

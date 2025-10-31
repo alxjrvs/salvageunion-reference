@@ -53,7 +53,9 @@ export function isAbility(entity: SURefEntity): entity is SURefAbility {
  * @param entity - The entity to check
  * @returns True if the entity matches the AbilityTreeRequirement type
  */
-export function isAbilityTreeRequirement(entity: SURefEntity): entity is SURefAbilityTreeRequirement {
+export function isAbilityTreeRequirement(
+  entity: SURefEntity
+): entity is SURefAbilityTreeRequirement {
   if (!entity || typeof entity !== 'object') return false
   if (!('requirement' in entity)) return false
   return true
@@ -92,7 +94,9 @@ export function isChassis(entity: SURefEntity): entity is SURefChassis {
  * @param entity - The entity to check
  * @returns True if the entity matches the AdvancedClass type
  */
-export function isAdvancedClass(entity: SURefEntity): entity is SURefAdvancedClass {
+export function isAdvancedClass(
+  entity: SURefEntity
+): entity is SURefAdvancedClass {
   if (!entity || typeof entity !== 'object') return false
   if (!('advancedTree' in entity)) return false
   if (!('legendaryTree' in entity)) return false
@@ -147,7 +151,9 @@ export function isCrawlerBay(entity: SURefEntity): entity is SURefCrawlerBay {
  * @param entity - The entity to check
  * @returns True if the entity matches the CrawlerTechLevel type
  */
-export function isCrawlerTechLevel(entity: SURefEntity): entity is SURefCrawlerTechLevel {
+export function isCrawlerTechLevel(
+  entity: SURefEntity
+): entity is SURefCrawlerTechLevel {
   if (!entity || typeof entity !== 'object') return false
   if (!('techLevel' in entity)) return false
   if (!('structurePoints' in entity)) return false
@@ -339,7 +345,9 @@ export function isVehicle(entity: SURefEntity): entity is SURefVehicle {
  * @returns The structurePoints value or undefined
  */
 export function getStructurePoints(entity: SURefEntity): unknown | undefined {
-  return 'structurePoints' in entity ? (entity as unknown as Record<string, unknown>).structurePoints : undefined
+  return 'structurePoints' in entity
+    ? (entity as unknown as Record<string, unknown>).structurePoints
+    : undefined
 }
 
 /**
@@ -349,7 +357,9 @@ export function getStructurePoints(entity: SURefEntity): unknown | undefined {
  * @returns The actions value or undefined
  */
 export function getActions(entity: SURefEntity): unknown | undefined {
-  return 'actions' in entity ? (entity as unknown as Record<string, unknown>).actions : undefined
+  return 'actions' in entity
+    ? (entity as unknown as Record<string, unknown>).actions
+    : undefined
 }
 
 /**
@@ -359,7 +369,9 @@ export function getActions(entity: SURefEntity): unknown | undefined {
  * @returns The traits value or undefined
  */
 export function getTraits(entity: SURefEntity): unknown | undefined {
-  return 'traits' in entity ? (entity as unknown as Record<string, unknown>).traits : undefined
+  return 'traits' in entity
+    ? (entity as unknown as Record<string, unknown>).traits
+    : undefined
 }
 
 /**
@@ -369,7 +381,9 @@ export function getTraits(entity: SURefEntity): unknown | undefined {
  * @returns The npc value or undefined
  */
 export function getNpc(entity: SURefEntity): unknown | undefined {
-  return 'npc' in entity ? (entity as unknown as Record<string, unknown>).npc : undefined
+  return 'npc' in entity
+    ? (entity as unknown as Record<string, unknown>).npc
+    : undefined
 }
 
 /**
@@ -379,7 +393,9 @@ export function getNpc(entity: SURefEntity): unknown | undefined {
  * @returns The advancedTree value or undefined
  */
 export function getAdvancedTree(entity: SURefEntity): unknown | undefined {
-  return 'advancedTree' in entity ? (entity as unknown as Record<string, unknown>).advancedTree : undefined
+  return 'advancedTree' in entity
+    ? (entity as unknown as Record<string, unknown>).advancedTree
+    : undefined
 }
 
 /**
@@ -389,7 +405,9 @@ export function getAdvancedTree(entity: SURefEntity): unknown | undefined {
  * @returns The legendaryTree value or undefined
  */
 export function getLegendaryTree(entity: SURefEntity): unknown | undefined {
-  return 'legendaryTree' in entity ? (entity as unknown as Record<string, unknown>).legendaryTree : undefined
+  return 'legendaryTree' in entity
+    ? (entity as unknown as Record<string, unknown>).legendaryTree
+    : undefined
 }
 
 /**
@@ -399,7 +417,9 @@ export function getLegendaryTree(entity: SURefEntity): unknown | undefined {
  * @returns The techLevel value or undefined
  */
 export function getTechLevel(entity: SURefEntity): number | undefined {
-  return 'techLevel' in entity ? (entity as unknown as Record<string, number>).techLevel : undefined
+  return 'techLevel' in entity
+    ? (entity as unknown as Record<string, number>).techLevel
+    : undefined
 }
 
 /**
@@ -409,7 +429,9 @@ export function getTechLevel(entity: SURefEntity): number | undefined {
  * @returns The hitPoints value or undefined
  */
 export function getHitPoints(entity: SURefEntity): unknown | undefined {
-  return 'hitPoints' in entity ? (entity as unknown as Record<string, unknown>).hitPoints : undefined
+  return 'hitPoints' in entity
+    ? (entity as unknown as Record<string, unknown>).hitPoints
+    : undefined
 }
 
 /**
@@ -419,7 +441,9 @@ export function getHitPoints(entity: SURefEntity): unknown | undefined {
  * @returns The salvageValue value or undefined
  */
 export function getSalvageValue(entity: SURefEntity): unknown | undefined {
-  return 'salvageValue' in entity ? (entity as unknown as Record<string, unknown>).salvageValue : undefined
+  return 'salvageValue' in entity
+    ? (entity as unknown as Record<string, unknown>).salvageValue
+    : undefined
 }
 
 /**
@@ -429,7 +453,9 @@ export function getSalvageValue(entity: SURefEntity): unknown | undefined {
  * @returns The systems value or undefined
  */
 export function getSystems(entity: SURefEntity): unknown | undefined {
-  return 'systems' in entity ? (entity as unknown as Record<string, unknown>).systems : undefined
+  return 'systems' in entity
+    ? (entity as unknown as Record<string, unknown>).systems
+    : undefined
 }
 
 /**
@@ -439,5 +465,7 @@ export function getSystems(entity: SURefEntity): unknown | undefined {
  * @returns The page number or undefined
  */
 export function getPageReference(entity: SURefEntity): number | undefined {
-  return 'page' in entity ? (entity as unknown as Record<string, number>).page : undefined
+  return 'page' in entity
+    ? (entity as unknown as Record<string, number>).page
+    : undefined
 }

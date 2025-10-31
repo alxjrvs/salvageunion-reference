@@ -42,14 +42,18 @@ function getObjectsMetaMap(): Record<string, string> {
 // Derive list of simple primitive types to skip from common.schema
 function getSkipCommonTypes(): Set<string> {
   const commonSchemaPath = path.join(SHARED_DIR, 'common.schema.json')
-  const commonSchema = JSON.parse(fs.readFileSync(commonSchemaPath, 'utf8'))
+  const commonSchema = JSON.parse(
+    fs.readFileSync(commonSchemaPath, 'utf8')
+  ) as {
+    definitions?: Record<string, unknown>
+  }
 
   const skip = new Set<string>()
 
   for (const [defName, defSchema] of Object.entries(
     commonSchema.definitions || {}
   )) {
-    const schema = defSchema as any
+    const schema = defSchema as Record<string, unknown>
 
     // Skip if it's just a simple type wrapper (type: integer/string with no complex structure)
     if (schema.type && !schema.oneOf && !schema.anyOf && !schema.allOf) {

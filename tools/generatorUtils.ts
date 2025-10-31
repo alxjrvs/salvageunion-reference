@@ -9,6 +9,31 @@ import { fileURLToPath } from 'url'
 import { SCHEMA_NAME_MAP } from './schemaNameMap.js'
 
 /**
+ * Schema index entry structure
+ */
+export interface SchemaIndexEntry {
+  id: string
+  title: string
+  description: string
+  dataFile: string
+  schemaFile: string
+  itemCount: number
+  requiredFields: string[]
+}
+
+/**
+ * Schema index structure
+ */
+export interface SchemaIndex {
+  $schema: string
+  title: string
+  description: string
+  version: string
+  generated: string
+  schemas: SchemaIndexEntry[]
+}
+
+/**
  * Get __dirname equivalent for ES modules
  */
 export function getDirname(importMetaUrl: string): string {
@@ -19,9 +44,9 @@ export function getDirname(importMetaUrl: string): string {
 /**
  * Load and parse the schema index
  */
-export function loadSchemaIndex(dirname: string): any {
+export function loadSchemaIndex(dirname: string): SchemaIndex {
   const schemaIndexPath = path.join(dirname, '../schemas/index.json')
-  return JSON.parse(fs.readFileSync(schemaIndexPath, 'utf-8'))
+  return JSON.parse(fs.readFileSync(schemaIndexPath, 'utf-8')) as SchemaIndex
 }
 
 /**
@@ -41,10 +66,10 @@ export function toPascalCase(id: string): string {
   if (id === 'classes.core') return 'CoreClasses'
   if (id === 'classes.hybrid') return 'HybridClasses'
   if (id === 'classes.advanced') return 'AdvancedClasses'
-  
+
   // Handle special case for NPCs (all caps)
   if (id === 'npcs') return 'NPCs'
-  
+
   // Handle hyphenated and dotted names
   return id
     .split(/[-.]/)
@@ -58,4 +83,3 @@ export function toPascalCase(id: string): string {
 export function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
-

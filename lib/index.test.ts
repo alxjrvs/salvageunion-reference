@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test'
-import { SalvageUnionReference } from './index.js'
+import { SalvageUnionReference, SURefEntity } from './index.js'
 import { BaseModel } from './BaseModel.js'
 import {
   isAbility,
@@ -331,8 +331,8 @@ describe('Type Guards', () => {
   })
 
   it('should return false for null or undefined', () => {
-    expect(isAbility(null as any)).toBe(false)
-    expect(isAbility(undefined as any)).toBe(false)
+    expect(isAbility(null as unknown as SURefEntity)).toBe(false)
+    expect(isAbility(undefined as unknown as SURefEntity)).toBe(false)
   })
 })
 

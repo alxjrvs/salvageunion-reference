@@ -27,4 +27,3 @@ export const SCHEMA_NAME_MAP: Record<string, string> = {
   traits: 'Trait',
   vehicles: 'Vehicle',
 }
-
