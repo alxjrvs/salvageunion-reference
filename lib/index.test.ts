@@ -1,6 +1,15 @@
 import { describe, expect, it } from 'bun:test'
 import { SalvageUnionReference } from './index.js'
 import { BaseModel } from './BaseModel.js'
+import {
+  isAbility,
+  isSystem,
+  isModule,
+  isChassis,
+  getTechLevel,
+  getSalvageValue,
+  getPageReference,
+} from './utilities.js'
 
 describe('SalvageUnionReference static properties', () => {
   it('should have all model properties defined and returning data', () => {
@@ -8,17 +17,25 @@ describe('SalvageUnionReference static properties', () => {
     const staticProps = Object.getOwnPropertyNames(
       SalvageUnionReference
     ).filter((prop) => {
-      // Filter out constructor and methods (findIn, findAllIn, search, searchIn, getSuggestions)
-      return (
-        prop !== 'length' &&
-        prop !== 'prototype' &&
-        prop !== 'name' &&
-        prop !== 'findIn' &&
-        prop !== 'findAllIn' &&
-        prop !== 'search' &&
-        prop !== 'searchIn' &&
-        prop !== 'getSuggestions'
-      )
+      // Filter out constructor and methods
+      const methodNames = [
+        'length',
+        'prototype',
+        'name',
+        'findIn',
+        'findAllIn',
+        'search',
+        'searchIn',
+        'getSuggestions',
+        'get',
+        'exists',
+        'getMany',
+        'composeRef',
+        'parseRef',
+        'getByRef',
+        'entityCache',
+      ]
+      return !methodNames.includes(prop)
     })
 
     // Ensure we found some properties
@@ -157,5 +174,206 @@ describe('SalvageUnionReference.findAllIn', () => {
       () => true
     )
     expect(coreClasses.length).toBeGreaterThan(0)
+  })
+})
+
+describe('SalvageUnionReference.get', () => {
+  it('should get an entity by schema name and ID', () => {
+    // First, find an ability to get its ID
+    const allAbilities = SalvageUnionReference.Abilities.all()
+    const firstAbility = allAbilities[0]
+
+    // Now use get() to retrieve it
+    const ability = SalvageUnionReference.get('abilities', firstAbility.id)
+    expect(ability).toBeDefined()
+    expect(ability?.id).toBe(firstAbility.id)
+    expect(ability?.name).toBe(firstAbility.name)
+  })
+
+  it('should return undefined for non-existent ID', () => {
+    const ability = SalvageUnionReference.get('abilities', 'non-existent-id')
+    expect(ability).toBeUndefined()
+  })
+
+  it('should work with different schema types', () => {
+    const allSystems = SalvageUnionReference.Systems.all()
+    const firstSystem = allSystems[0]
+
+    const system = SalvageUnionReference.get('systems', firstSystem.id)
+    expect(system).toBeDefined()
+    expect(system?.id).toBe(firstSystem.id)
+  })
+
+  it('should use caching for repeated lookups', () => {
+    const allAbilities = SalvageUnionReference.Abilities.all()
+    const firstAbility = allAbilities[0]
+
+    // First lookup
+    const ability1 = SalvageUnionReference.get('abilities', firstAbility.id)
+    // Second lookup (should use cache)
+    const ability2 = SalvageUnionReference.get('abilities', firstAbility.id)
+
+    expect(ability1).toBe(ability2) // Same reference
+  })
+})
+
+describe('SalvageUnionReference.exists', () => {
+  it('should return true for existing entity', () => {
+    const allAbilities = SalvageUnionReference.Abilities.all()
+    const firstAbility = allAbilities[0]
+
+    const exists = SalvageUnionReference.exists('abilities', firstAbility.id)
+    expect(exists).toBe(true)
+  })
+
+  it('should return false for non-existent entity', () => {
+    const exists = SalvageUnionReference.exists('abilities', 'non-existent-id')
+    expect(exists).toBe(false)
+  })
+})
+
+describe('SalvageUnionReference.getMany', () => {
+  it('should get multiple entities', () => {
+    const allAbilities = SalvageUnionReference.Abilities.all()
+    const allSystems = SalvageUnionReference.Systems.all()
+
+    const entities = SalvageUnionReference.getMany([
+      { schemaName: 'abilities', id: allAbilities[0].id },
+      { schemaName: 'systems', id: allSystems[0].id },
+    ])
+
+    expect(entities.length).toBe(2)
+    expect(entities[0]).toBeDefined()
+    expect(entities[1]).toBeDefined()
+    expect(entities[0]?.id).toBe(allAbilities[0].id)
+    expect(entities[1]?.id).toBe(allSystems[0].id)
+  })
+
+  it('should return undefined for non-existent entities', () => {
+    const entities = SalvageUnionReference.getMany([
+      { schemaName: 'abilities', id: 'non-existent-1' },
+      { schemaName: 'systems', id: 'non-existent-2' },
+    ])
+
+    expect(entities.length).toBe(2)
+    expect(entities[0]).toBeUndefined()
+    expect(entities[1]).toBeUndefined()
+  })
+})
+
+describe('SalvageUnionReference.composeRef', () => {
+  it('should compose a reference string', () => {
+    const ref = SalvageUnionReference.composeRef('abilities', 'test-id')
+    expect(ref).toBe('abilities::test-id')
+  })
+})
+
+describe('SalvageUnionReference.parseRef', () => {
+  it('should parse a valid reference string', () => {
+    const parsed = SalvageUnionReference.parseRef('abilities::test-id')
+    expect(parsed).toBeDefined()
+    expect(parsed?.schemaName).toBe('abilities')
+    expect(parsed?.id).toBe('test-id')
+  })
+
+  it('should return null for invalid reference string', () => {
+    const parsed = SalvageUnionReference.parseRef('invalid-ref')
+    expect(parsed).toBeNull()
+  })
+
+  it('should return null for invalid schema name', () => {
+    const parsed = SalvageUnionReference.parseRef('invalid-schema::test-id')
+    expect(parsed).toBeNull()
+  })
+})
+
+describe('SalvageUnionReference.getByRef', () => {
+  it('should get an entity by reference string', () => {
+    const allAbilities = SalvageUnionReference.Abilities.all()
+    const firstAbility = allAbilities[0]
+
+    const ref = SalvageUnionReference.composeRef('abilities', firstAbility.id)
+    const entity = SalvageUnionReference.getByRef(ref)
+
+    expect(entity).toBeDefined()
+    expect(entity?.id).toBe(firstAbility.id)
+  })
+
+  it('should return undefined for invalid reference', () => {
+    const entity = SalvageUnionReference.getByRef('invalid-ref')
+    expect(entity).toBeUndefined()
+  })
+})
+
+describe('Type Guards', () => {
+  it('should correctly identify abilities', () => {
+    const ability = SalvageUnionReference.Abilities.all()[0]
+    expect(isAbility(ability)).toBe(true)
+    expect(isSystem(ability)).toBe(false)
+  })
+
+  it('should correctly identify systems', () => {
+    const system = SalvageUnionReference.Systems.all()[0]
+    expect(isSystem(system)).toBe(true)
+    expect(isAbility(system)).toBe(false)
+  })
+
+  it('should correctly identify modules', () => {
+    const module = SalvageUnionReference.Modules.all()[0]
+    expect(isModule(module)).toBe(true)
+    expect(isAbility(module)).toBe(false)
+  })
+
+  it('should correctly identify chassis', () => {
+    const chassis = SalvageUnionReference.Chassis.all()[0]
+    expect(isChassis(chassis)).toBe(true)
+    expect(isAbility(chassis)).toBe(false)
+  })
+
+  it('should return false for null or undefined', () => {
+    expect(isAbility(null as any)).toBe(false)
+    expect(isAbility(undefined as any)).toBe(false)
+  })
+})
+
+describe('Property Extractors', () => {
+  it('should extract techLevel from systems', () => {
+    const system = SalvageUnionReference.Systems.all()[0]
+    const techLevel = getTechLevel(system)
+    expect(techLevel).toBeDefined()
+    expect(typeof techLevel).toBe('number')
+  })
+
+  it('should extract techLevel from modules', () => {
+    const module = SalvageUnionReference.Modules.all()[0]
+    const techLevel = getTechLevel(module)
+    expect(techLevel).toBeDefined()
+    expect(typeof techLevel).toBe('number')
+  })
+
+  it('should return undefined for entities without techLevel', () => {
+    const ability = SalvageUnionReference.Abilities.all()[0]
+    const techLevel = getTechLevel(ability)
+    expect(techLevel).toBeUndefined()
+  })
+
+  it('should extract salvageValue from systems', () => {
+    const system = SalvageUnionReference.Systems.all()[0]
+    const salvageValue = getSalvageValue(system)
+    expect(salvageValue).toBeDefined()
+    expect(typeof salvageValue).toBe('number')
+  })
+
+  it('should extract page reference from all entities', () => {
+    const ability = SalvageUnionReference.Abilities.all()[0]
+    const system = SalvageUnionReference.Systems.all()[0]
+
+    const abilityPage = getPageReference(ability)
+    const systemPage = getPageReference(system)
+
+    expect(abilityPage).toBeDefined()
+    expect(systemPage).toBeDefined()
+    expect(typeof abilityPage).toBe('number')
+    expect(typeof systemPage).toBe('number')
   })
 })

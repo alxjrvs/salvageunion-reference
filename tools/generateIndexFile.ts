@@ -1,4 +1,65 @@
 /**
+ * Generate lib/index.ts with auto-generated imports and mappings
+ * Eliminates hardcoded type imports and schema mappings
+ */
+
+import fs from 'fs'
+import path from 'path'
+import {
+  getDirname,
+  loadSchemaIndex,
+  getSingularTypeName,
+  toPascalCase,
+} from './generatorUtils.js'
+
+const __dirname = getDirname(import.meta.url)
+const schemaIndex = loadSchemaIndex(__dirname)
+
+function generateIndexFile() {
+  console.log('🔧 Generating lib/index.ts from schema catalog...\n')
+
+  // Generate type imports
+  const typeImports = schemaIndex.schemas
+    .map((entry: any) => {
+      const singularName = getSingularTypeName(entry.id)
+      return `  SURef${singularName}`
+    })
+    .join(',\n')
+
+  // Generate SchemaToEntityMap
+  const schemaToEntityEntries = schemaIndex.schemas
+    .map((entry: any) => {
+      const singularName = getSingularTypeName(entry.id)
+      return `  '${entry.id}': SURef${singularName}`
+    })
+    .join('\n')
+
+  // Generate SchemaToModelMap
+  const schemaToModelEntries = schemaIndex.schemas
+    .map((entry: any) => {
+      const modelName = toPascalCase(entry.id)
+      return `  '${entry.id}': '${modelName}'`
+    })
+    .join(',\n')
+
+  // Generate SURefEntity union type
+  const entityUnion = schemaIndex.schemas
+    .map((entry: any) => {
+      const singularName = getSingularTypeName(entry.id)
+      return `  | SURef${singularName}`
+    })
+    .join('\n')
+
+  // Generate model interface properties
+  const modelInterfaceProps = schemaIndex.schemas
+    .map((entry: any) => {
+      const modelName = toPascalCase(entry.id)
+      const singularName = getSingularTypeName(entry.id)
+      return `  readonly ${modelName}: BaseModel<SURef${singularName}>`
+    })
+    .join('\n')
+
+  const output = `/**
  * Salvage Union Data ORM
  *
  * Type-safe query interface for Salvage Union game data
@@ -10,28 +71,7 @@
 import { BaseModel } from './BaseModel.js'
 import { generateModels } from './ModelFactory.js'
 import type {
-  SURefAbility,
-  SURefAbilityTreeRequirement,
-  SURefBioTitan,
-  SURefChassis,
-  SURefAdvancedClass,
-  SURefCoreClass,
-  SURefHybridClass,
-  SURefCrawlerBay,
-  SURefCrawlerTechLevel,
-  SURefCrawler,
-  SURefCreature,
-  SURefDrone,
-  SURefEquipment,
-  SURefKeyword,
-  SURefMeld,
-  SURefModule,
-  SURefNPC,
-  SURefRollTable,
-  SURefSquad,
-  SURefSystem,
-  SURefTrait,
-  SURefVehicle,
+${typeImports},
 } from './types/generated.js'
 import {
   search as searchFn,
@@ -64,54 +104,12 @@ export type * from './types/generated.js'
 
 // Type mapping from schema names to entity types
 type SchemaToEntityMap = {
-  'abilities': SURefAbility
-  'ability-tree-requirements': SURefAbilityTreeRequirement
-  'bio-titans': SURefBioTitan
-  'chassis': SURefChassis
-  'classes.advanced': SURefAdvancedClass
-  'classes.core': SURefCoreClass
-  'classes.hybrid': SURefHybridClass
-  'crawler-bays': SURefCrawlerBay
-  'crawler-tech-levels': SURefCrawlerTechLevel
-  'crawlers': SURefCrawler
-  'creatures': SURefCreature
-  'drones': SURefDrone
-  'equipment': SURefEquipment
-  'keywords': SURefKeyword
-  'meld': SURefMeld
-  'modules': SURefModule
-  'npcs': SURefNPC
-  'roll-tables': SURefRollTable
-  'squads': SURefSquad
-  'systems': SURefSystem
-  'traits': SURefTrait
-  'vehicles': SURefVehicle
+${schemaToEntityEntries}
 }
 
 // Runtime mapping from schema names to model property names
 const SchemaToModelMap = {
-  'abilities': 'Abilities',
-  'ability-tree-requirements': 'AbilityTreeRequirements',
-  'bio-titans': 'BioTitans',
-  'chassis': 'Chassis',
-  'classes.advanced': 'AdvancedClasses',
-  'classes.core': 'CoreClasses',
-  'classes.hybrid': 'HybridClasses',
-  'crawler-bays': 'CrawlerBays',
-  'crawler-tech-levels': 'CrawlerTechLevels',
-  'crawlers': 'Crawlers',
-  'creatures': 'Creatures',
-  'drones': 'Drones',
-  'equipment': 'Equipment',
-  'keywords': 'Keywords',
-  'meld': 'Meld',
-  'modules': 'Modules',
-  'npcs': 'NPCs',
-  'roll-tables': 'RollTables',
-  'squads': 'Squads',
-  'systems': 'Systems',
-  'traits': 'Traits',
-  'vehicles': 'Vehicles',
+${schemaToModelEntries},
 } as const
 
 // Auto-generate models from schema catalog (synchronous)
@@ -119,28 +117,7 @@ const models = generateModels()
 
 // Union type for all entity types
 export type SURefEntity =
-  | SURefAbility
-  | SURefAbilityTreeRequirement
-  | SURefBioTitan
-  | SURefChassis
-  | SURefAdvancedClass
-  | SURefCoreClass
-  | SURefHybridClass
-  | SURefCrawlerBay
-  | SURefCrawlerTechLevel
-  | SURefCrawler
-  | SURefCreature
-  | SURefDrone
-  | SURefEquipment
-  | SURefKeyword
-  | SURefMeld
-  | SURefModule
-  | SURefNPC
-  | SURefRollTable
-  | SURefSquad
-  | SURefSystem
-  | SURefTrait
-  | SURefVehicle
+${entityUnion}
 
 // Union type for all schema names
 export type SURefSchemaName = keyof SchemaToEntityMap
@@ -149,52 +126,15 @@ export type SURefSchemaName = keyof SchemaToEntityMap
  * Main ORM class with static model accessors
  */
 export class SalvageUnionReference {
-  readonly Abilities: BaseModel<SURefAbility>
-  readonly AbilityTreeRequirements: BaseModel<SURefAbilityTreeRequirement>
-  readonly BioTitans: BaseModel<SURefBioTitan>
-  readonly Chassis: BaseModel<SURefChassis>
-  readonly AdvancedClasses: BaseModel<SURefAdvancedClass>
-  readonly CoreClasses: BaseModel<SURefCoreClass>
-  readonly HybridClasses: BaseModel<SURefHybridClass>
-  readonly CrawlerBays: BaseModel<SURefCrawlerBay>
-  readonly CrawlerTechLevels: BaseModel<SURefCrawlerTechLevel>
-  readonly Crawlers: BaseModel<SURefCrawler>
-  readonly Creatures: BaseModel<SURefCreature>
-  readonly Drones: BaseModel<SURefDrone>
-  readonly Equipment: BaseModel<SURefEquipment>
-  readonly Keywords: BaseModel<SURefKeyword>
-  readonly Meld: BaseModel<SURefMeld>
-  readonly Modules: BaseModel<SURefModule>
-  readonly NPCs: BaseModel<SURefNPC>
-  readonly RollTables: BaseModel<SURefRollTable>
-  readonly Squads: BaseModel<SURefSquad>
-  readonly Systems: BaseModel<SURefSystem>
-  readonly Traits: BaseModel<SURefTrait>
-  readonly Vehicles: BaseModel<SURefVehicle>
+${modelInterfaceProps}
 
   // Initialize static properties from generated models
-  static Abilities = models.Abilities as BaseModel<SchemaToEntityMap['abilities']>
-  static AbilityTreeRequirements = models.AbilityTreeRequirements as BaseModel<SchemaToEntityMap['ability-tree-requirements']>
-  static BioTitans = models.BioTitans as BaseModel<SchemaToEntityMap['bio-titans']>
-  static Chassis = models.Chassis as BaseModel<SchemaToEntityMap['chassis']>
-  static AdvancedClasses = models.AdvancedClasses as BaseModel<SchemaToEntityMap['classes.advanced']>
-  static CoreClasses = models.CoreClasses as BaseModel<SchemaToEntityMap['classes.core']>
-  static HybridClasses = models.HybridClasses as BaseModel<SchemaToEntityMap['classes.hybrid']>
-  static CrawlerBays = models.CrawlerBays as BaseModel<SchemaToEntityMap['crawler-bays']>
-  static CrawlerTechLevels = models.CrawlerTechLevels as BaseModel<SchemaToEntityMap['crawler-tech-levels']>
-  static Crawlers = models.Crawlers as BaseModel<SchemaToEntityMap['crawlers']>
-  static Creatures = models.Creatures as BaseModel<SchemaToEntityMap['creatures']>
-  static Drones = models.Drones as BaseModel<SchemaToEntityMap['drones']>
-  static Equipment = models.Equipment as BaseModel<SchemaToEntityMap['equipment']>
-  static Keywords = models.Keywords as BaseModel<SchemaToEntityMap['keywords']>
-  static Meld = models.Meld as BaseModel<SchemaToEntityMap['meld']>
-  static Modules = models.Modules as BaseModel<SchemaToEntityMap['modules']>
-  static NPCs = models.NPCs as BaseModel<SchemaToEntityMap['npcs']>
-  static RollTables = models.RollTables as BaseModel<SchemaToEntityMap['roll-tables']>
-  static Squads = models.Squads as BaseModel<SchemaToEntityMap['squads']>
-  static Systems = models.Systems as BaseModel<SchemaToEntityMap['systems']>
-  static Traits = models.Traits as BaseModel<SchemaToEntityMap['traits']>
-  static Vehicles = models.Vehicles as BaseModel<SchemaToEntityMap['vehicles']>
+  ${schemaIndex.schemas
+    .map((entry: any) => {
+      const modelName = toPascalCase(entry.id)
+      return `static ${modelName} = models.${modelName} as BaseModel<SchemaToEntityMap['${entry.id}']>`
+    })
+    .join('\n  ')}
 
   /**
    * Find a single entity in a specific schema
@@ -251,7 +191,7 @@ export class SalvageUnionReference {
     schemaName: T,
     id: string
   ): SchemaToEntityMap[T] | undefined {
-    const cacheKey = `${schemaName}::${id}`
+    const cacheKey = \`\${schemaName}::\${id}\`
 
     // Check cache first
     if (this.entityCache.has(cacheKey)) {
@@ -319,7 +259,7 @@ export class SalvageUnionReference {
     schemaName: T,
     id: string
   ): string {
-    return `${schemaName}::${id}`
+    return \`\${schemaName}::\${id}\`
   }
 
   /**
@@ -378,3 +318,13 @@ export class SalvageUnionReference {
    */
   public static getSuggestions = getSuggestionsFn
 }
+`
+
+  const outputPath = path.join(__dirname, '../lib/index.ts')
+  fs.writeFileSync(outputPath, output)
+
+  console.log('✅ Generated lib/index.ts successfully!')
+  console.log(`📄 Output: ${outputPath}\n`)
+}
+
+generateIndexFile()

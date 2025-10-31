@@ -136,3 +136,22 @@ describe('Schema Files', () => {
     }
   })
 })
+
+describe('Schema Catalog Enhancement', () => {
+  it('should have display names for all schemas', () => {
+    const catalog = import('../lib/ModelFactory.js').then((m) =>
+      m.getSchemaCatalog()
+    )
+
+    catalog.then((cat) => {
+      for (const schema of cat.schemas) {
+        expect(schema.displayName).toBeDefined()
+        expect(schema.displayNamePlural).toBeDefined()
+        expect(typeof schema.displayName).toBe('string')
+        expect(typeof schema.displayNamePlural).toBe('string')
+        expect(schema.displayName.length).toBeGreaterThan(0)
+        expect(schema.displayNamePlural.length).toBeGreaterThan(0)
+      }
+    })
+  })
+})

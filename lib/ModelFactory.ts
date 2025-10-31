@@ -4,6 +4,7 @@
  */
 import { BaseModel } from './BaseModel.js'
 import schemaIndex from '../schemas/index.json' with { type: 'json' }
+import { toPascalCase as toPascalCaseUtil } from '../tools/generatorUtils.js'
 
 // Import all data files
 import abilitiesData from '../data/abilities.json' with { type: 'json' }
@@ -129,21 +130,10 @@ export function getDataMaps(): {
  *   classes.hybrid -> HybridClasses
  *
  * Exposed for client use
+ * Delegates to shared implementation in tools/generatorUtils.ts
  */
 export function toPascalCase(id: string): string {
-  // Handle special cases for classes
-  if (id === 'classes.core') return 'CoreClasses'
-  if (id === 'classes.hybrid') return 'HybridClasses'
-  if (id === 'classes.advanced') return 'AdvancedClasses'
-
-  // Handle special case for NPCs (all caps)
-  if (id === 'npcs') return 'NPCs'
-
-  // Handle hyphenated and dotted names
-  return id
-    .split(/[-.]/)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('')
+  return toPascalCaseUtil(id)
 }
 
 /**
@@ -175,9 +165,76 @@ export function generateModels(): Record<string, BaseModel<unknown>> {
 }
 
 /**
- * Get schema catalog
+ * Schema display name mappings
+ */
+const schemaDisplayNames: Record<string, { singular: string; plural: string }> =
+  {
+    abilities: { singular: 'Ability', plural: 'Abilities' },
+    'ability-tree-requirements': {
+      singular: 'Ability Tree Requirement',
+      plural: 'Ability Tree Requirements',
+    },
+    'bio-titans': { singular: 'Bio-Titan', plural: 'Bio-Titans' },
+    chassis: { singular: 'Chassis', plural: 'Chassis' },
+    'classes.advanced': {
+      singular: 'Advanced Class',
+      plural: 'Advanced Classes',
+    },
+    'classes.core': { singular: 'Core Class', plural: 'Core Classes' },
+    'classes.hybrid': { singular: 'Hybrid Class', plural: 'Hybrid Classes' },
+    'crawler-bays': { singular: 'Crawler Bay', plural: 'Crawler Bays' },
+    'crawler-tech-levels': {
+      singular: 'Crawler Tech Level',
+      plural: 'Crawler Tech Levels',
+    },
+    crawlers: { singular: 'Crawler', plural: 'Crawlers' },
+    creatures: { singular: 'Creature', plural: 'Creatures' },
+    drones: { singular: 'Drone', plural: 'Drones' },
+    equipment: { singular: 'Equipment', plural: 'Equipment' },
+    keywords: { singular: 'Keyword', plural: 'Keywords' },
+    meld: { singular: 'Meld', plural: 'Meld' },
+    modules: { singular: 'Module', plural: 'Modules' },
+    npcs: { singular: 'NPC', plural: 'NPCs' },
+    'roll-tables': { singular: 'Roll Table', plural: 'Roll Tables' },
+    squads: { singular: 'Squad', plural: 'Squads' },
+    systems: { singular: 'System', plural: 'Systems' },
+    traits: { singular: 'Trait', plural: 'Traits' },
+    vehicles: { singular: 'Vehicle', plural: 'Vehicles' },
+  }
+
+/**
+ * Enhanced schema metadata interface
+ */
+export interface EnhancedSchemaMetadata {
+  id: string
+  title: string
+  description: string
+  dataFile: string
+  schemaFile: string
+  itemCount: number
+  requiredFields: string[]
+  displayName: string
+  displayNamePlural: string
+}
+
+/**
+ * Get schema catalog with enhanced metadata
  * Exposed for client use
  */
-export function getSchemaCatalog() {
-  return schemaIndex
+export function getSchemaCatalog(): {
+  $schema: string
+  title: string
+  description: string
+  version: string
+  generated: string
+  schemas: EnhancedSchemaMetadata[]
+} {
+  return {
+    ...schemaIndex,
+    schemas: schemaIndex.schemas.map((schema) => ({
+      ...schema,
+      displayName: schemaDisplayNames[schema.id]?.singular || schema.title,
+      displayNamePlural: schemaDisplayNames[schema.id]?.plural || schema.title,
+    })),
+  }
 }
