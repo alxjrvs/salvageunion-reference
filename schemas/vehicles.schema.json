@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/vehicles.schema.json",
   "title": "Salvage Union Vehicles",
   "description": "Conventional vehicles in Salvage Union",
@@ -32,6 +32,7 @@
       "traits": {
         "$ref": "shared/objects.schema.json#/definitions/traits"
       }
-    }
+    },
+    "unevaluatedProperties": false
   }
 }

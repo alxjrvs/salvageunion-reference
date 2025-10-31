@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/equipment.schema.json",
   "title": "Salvage Union Equipment",
   "description": "Pilot equipment and gear in Salvage Union",
@@ -23,6 +23,22 @@
       "range": {
         "$ref": "shared/enums.schema.json#/definitions/range"
       },
+      "effect": {
+        "type": "string",
+        "description": "Mechanical effect of the equipment"
+      },
+      "actionType": {
+        "$ref": "shared/enums.schema.json#/definitions/actionType"
+      },
+      "damage": {
+        "$ref": "shared/objects.schema.json#/definitions/damage"
+      },
+      "activationCost": {
+        "$ref": "shared/common.schema.json#/definitions/activationCost"
+      },
+      "table": {
+        "$ref": "shared/objects.schema.json#/definitions/table"
+      },
       "notes": {
         "type": "string"
       },
@@ -32,6 +48,7 @@
           "$ref": "shared/objects.schema.json#/definitions/action"
         }
       }
-    }
+    },
+    "unevaluatedProperties": false
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/chassis.schema.json",
   "title": "Salvage Union Mech Chassis",
   "description": "Mech chassis definitions in Salvage Union",
@@ -80,6 +80,7 @@
       "npc": {
         "$ref": "shared/objects.schema.json#/definitions/npc"
       }
-    }
+    },
+    "unevaluatedProperties": false
   }
 }

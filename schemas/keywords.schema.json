@@ -1,11 +1,11 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/keywords.schema.json",
   "title": "Salvage Union Keywords",
   "description": "Game keywords and terminology in Salvage Union",
   "type": "array",
   "items": {
-    "additionalProperties": false,
-    "$ref": "shared/objects.schema.json#/definitions/entry"
+    "$ref": "shared/objects.schema.json#/definitions/entry",
+    "unevaluatedProperties": false
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/ability-tree-requirements.schema.json",
   "title": "Salvage Union Ability Tree Requirements",
   "description": "Requirements for ability trees in Salvage Union",
@@ -21,6 +21,7 @@
           "$ref": "shared/enums.schema.json#/definitions/tree"
         }
       }
-    }
+    },
+    "unevaluatedProperties": false
   }
 }

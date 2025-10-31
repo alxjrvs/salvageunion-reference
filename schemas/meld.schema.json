@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/meld.schema.json",
   "title": "Salvage Union Meld",
   "description": "Meld-infected creatures in Salvage Union",
@@ -21,7 +21,23 @@
       },
       "traits": {
         "$ref": "shared/objects.schema.json#/definitions/traits"
+      },
+      "salvageValue": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Salvage value of the meld creature"
+      },
+      "hitPoints": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Hit points of the meld creature"
+      },
+      "structurePoints": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Structure points of the meld creature"
       }
-    }
+    },
+    "unevaluatedProperties": false
   }
 }

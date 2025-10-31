@@ -170,7 +170,7 @@
     "table": {
       "1": "Nothing is available for trade during this Downtime.",
       "20": "An Intact Mech Chassis is available for trade.",
-      "damageType": "standard",
+      "type": "standard",
       "2-5": "An Intact Module is available for trade.",
       "6-10": "An Intact System is available for trade.",
       "11-19": "An Intact System and an Intact Module are available for trade."

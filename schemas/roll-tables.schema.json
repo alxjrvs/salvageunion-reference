@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/roll-tables.schema.json",
   "title": "Salvage Union Roll Tables",
   "description": "Random tables and roll tables in Salvage Union",
@@ -20,6 +20,7 @@
       "table": {
         "$ref": "shared/objects.schema.json#/definitions/table"
       }
-    }
+    },
+    "unevaluatedProperties": false
   }
 }

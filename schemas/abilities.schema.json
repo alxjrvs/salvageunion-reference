@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/abilities.schema.json",
   "title": "Salvage Union Abilities",
   "description": "Pilot abilities and skills in Salvage Union",
@@ -39,6 +39,7 @@
       "mechActionType": {
         "$ref": "shared/enums.schema.json#/definitions/actionType"
       }
-    }
+    },
+    "unevaluatedProperties": false
   }
 }

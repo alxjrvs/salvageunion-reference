@@ -2,8 +2,12 @@ import { describe, expect, it, beforeAll } from 'vitest'
 import { readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { Validator } from 'jsonschema'
+import Ajv2019Import from 'ajv/dist/2019.js'
+import addFormatsImport from 'ajv-formats'
 import schemaIndex from '../schemas/index.json' with { type: 'json' }
+
+const Ajv2019 = Ajv2019Import.default || Ajv2019Import
+const addFormats = addFormatsImport.default || addFormatsImport
 
 // Get the project root directory
 const __filename = fileURLToPath(import.meta.url)
@@ -38,7 +42,13 @@ interface JSONSchemaObject {
   [key: string]: unknown
 }
 
-const globalValidator = new Validator()
+// Create AJV instance with draft 2019-09 support
+const ajv = new Ajv2019({
+  strict: false,
+  allErrors: true,
+  verbose: true,
+})
+addFormats(ajv)
 
 // Load shared schemas once before all tests
 beforeAll(() => {
@@ -59,14 +69,7 @@ beforeAll(() => {
 
   for (const sharedInfo of sharedSchemas) {
     const sharedSchema = loadJson(sharedInfo.path) as JSONSchemaObject
-
-    // Register with the relative ID for $ref resolution
-    globalValidator.addSchema(sharedSchema, sharedInfo.relativeId)
-
-    // Also register with the $id URL if present
-    if (sharedSchema.$id) {
-      globalValidator.addSchema(sharedSchema, sharedSchema.$id)
-    }
+    ajv.addSchema(sharedSchema, sharedInfo.relativeId)
   }
 })
 
@@ -81,21 +84,21 @@ describe('Schema Validation', () => {
       const data = loadJson(config.dataFile)
       const schema = loadSchema(config.schemaFile)
 
-      const result = globalValidator.validate(data, schema, {
-        nestedErrors: true,
-      })
+      const validate = ajv.compile(schema)
+      const valid = validate(data)
 
-      if (!result.valid) {
+      if (!valid && validate.errors) {
         // Format errors for better test output
-        const errorMessages = result.errors.map((error, index) => {
-          return `  ${index + 1}. ${error.property}: ${error.message}`
+        const errorMessages = validate.errors.map((error, index) => {
+          const path = error.instancePath || 'root'
+          return `  ${index + 1}. ${path}: ${error.message}`
         })
 
         // Show first 10 errors in the test output
         const displayErrors = errorMessages.slice(0, 10)
         const remainingCount = errorMessages.length - 10
 
-        let errorOutput = `${config.title} validation failed with ${result.errors.length} error(s):\n`
+        let errorOutput = `${config.title} validation failed with ${validate.errors.length} error(s):\n`
         errorOutput += displayErrors.join('\n')
 
         if (remainingCount > 0) {
@@ -105,7 +108,7 @@ describe('Schema Validation', () => {
         throw new Error(errorOutput)
       }
 
-      expect(result.valid).toBe(true)
+      expect(valid).toBe(true)
     })
   }
 })

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/bio-titans.schema.json",
   "title": "Salvage Union Bio-Titans",
   "description": "Massive bio-engineered titan creatures in Salvage Union",
@@ -25,6 +25,7 @@
       "traits": {
         "$ref": "shared/objects.schema.json#/definitions/traits"
       }
-    }
+    },
+    "unevaluatedProperties": false
   }
 }

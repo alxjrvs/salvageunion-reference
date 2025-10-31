@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/shared/objects.schema.json",
   "title": "Salvage Union Object Definitions",
   "description": "Shared complex object definitions for Salvage Union game data",
@@ -8,9 +8,12 @@
       "description": "Damage dealt by an attack or ability",
       "type": "object",
       "additionalProperties": false,
-      "required": ["damageType", "amount"],
+      "required": ["amount"],
       "properties": {
         "damageType": {
+          "$ref": "enums.schema.json#/definitions/damageType"
+        },
+        "type": {
           "$ref": "enums.schema.json#/definitions/damageType"
         },
         "amount": {
@@ -26,7 +29,15 @@
             }
           ]
         }
-      }
+      },
+      "oneOf": [
+        {
+          "required": ["damageType"]
+        },
+        {
+          "required": ["type"]
+        }
+      ]
     },
     "traits": {
       "type": "array",
@@ -245,8 +256,16 @@
           "type": "string",
           "description": "Mechanical effect of the action"
         },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes or flavor text for the action"
+        },
         "activationCost": {
           "$ref": "common.schema.json#/definitions/activationCost"
+        },
+        "activationCurrency": {
+          "type": "string",
+          "description": "Currency or resource type required for activation"
         },
         "range": {
           "$ref": "enums.schema.json#/definitions/range"
@@ -285,6 +304,13 @@
         },
         "table": {
           "$ref": "#/definitions/table"
+        },
+        "actions": {
+          "type": "array",
+          "description": "Sub-actions or nested actions for this ability",
+          "items": {
+            "$ref": "#/definitions/action"
+          }
         }
       }
     },
@@ -548,6 +574,10 @@
         "description": {
           "type": "string",
           "description": "Description of the entry"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes or flavor text for the entry"
         },
         "source": {
           "$ref": "enums.schema.json#/definitions/source"
