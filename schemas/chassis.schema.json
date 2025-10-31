@@ -45,13 +45,13 @@
             "systems": {
               "type": "array",
               "items": {
-                "type": "string"
+                "$ref": "shared/objects.schema.json#/definitions/patternSystemModule"
               }
             },
             "modules": {
               "type": "array",
               "items": {
-                "type": "string"
+                "$ref": "shared/objects.schema.json#/definitions/patternSystemModule"
               }
             },
             "drone": {

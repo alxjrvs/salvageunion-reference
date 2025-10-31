@@ -189,6 +189,20 @@ export interface SURefMetaNpc {
   hitPoints: number
   choices?: SURefMetaChoices
 }
+export interface SURefMetaPatternSystemModule {
+  /**
+   * Name of the system or module
+   */
+  name: string
+  /**
+   * Number of this system or module included
+   */
+  count: number
+  /**
+   * Predefined choice for this system or module
+   */
+  premadeChoice?: string
+}
 export interface SURefMetaChoice {
   /**
    * Unique identifier for the entry
@@ -233,6 +247,27 @@ export interface SURefMetaChoice {
     | 'traits'
     | 'vehicles'
   )[]
+  /**
+   * Options for the choice
+   */
+  customSystemOptions?: SURefMetaSystem[]
+  /**
+   * Constraints for the choice
+   */
+  constraints?: {
+    /**
+     * Field to apply the constraint to
+     */
+    field?: string
+    /**
+     * Minimum number of choices
+     */
+    min?: number
+    /**
+     * Maximum number of choices
+     */
+    max?: number
+  }
 }
 /**
  * SURefMetaChoices available to the player when interacting with the NPC
@@ -594,8 +629,8 @@ export type SURefChassis = SURefMetaEntry & {
      * Whether this pattern is legal for starting characters
      */
     legalStarting?: boolean
-    systems: string[]
-    modules: string[]
+    systems: SURefMetaPatternSystemModule[]
+    modules: SURefMetaPatternSystemModule[]
     /**
      * Optional drone configuration for this pattern
      */

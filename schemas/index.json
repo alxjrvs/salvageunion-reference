@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "1.44.0",
-  "generated": "2025-10-31T00:59:24.118Z",
+  "version": "1.45.0",
+  "generated": "2025-10-31T02:27:40.217Z",
   "schemas": [
     {
       "id": "abilities",
@@ -192,7 +192,7 @@
       "description": "Mech systems in Salvage Union",
       "dataFile": "data/systems.json",
       "schemaFile": "schemas/systems.schema.json",
-      "itemCount": 99,
+      "itemCount": 96,
       "requiredFields": ["name", "page"]
     },
     {
