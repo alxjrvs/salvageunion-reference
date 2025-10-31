@@ -81,6 +81,35 @@ All models are auto-generated from the schema catalog and accessible via the `Sa
 
 ## API Reference
 
+### Search API
+
+The package includes a powerful search API for finding entities across all schemas:
+
+```typescript
+import { SalvageUnionReference } from 'salvageunion-data'
+
+// Search across all schemas
+const results = SalvageUnionReference.search({ query: 'laser' })
+
+// Search within specific schemas
+const systems = SalvageUnionReference.searchIn('systems', 'laser')
+
+// Get search suggestions
+const suggestions = SalvageUnionReference.getSuggestions('las')
+```
+
+**Features:**
+
+- Full-text search across name, description, and effect fields
+- Relevance scoring with automatic result sorting
+- Schema filtering for targeted searches
+- Case-sensitive/insensitive options
+- Result limiting for performance
+
+See [Search API Documentation](docs/SEARCH_API.md) for complete details and examples.
+
+### Model API
+
 All models provide a simple, consistent API with just three methods:
 
 ```typescript
