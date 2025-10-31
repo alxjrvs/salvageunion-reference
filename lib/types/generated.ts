@@ -133,7 +133,7 @@ export interface SURefMetaDamage {
 /**
  * Special traits and properties of items, systems, or abilities
  */
-export type SURefMetaTrait = {
+export type SURefMetaTraits = {
   /**
    * Numeric value for the trait
    */
@@ -606,7 +606,7 @@ export type SURefBioTitan = SURefMetaEntry & {
    */
   structurePoints: number;
   actions: SURefMetaAction[];
-  traits?: Traits;
+  traits?: SURefMetaTraits;
 };
 
 // Chassis
@@ -924,7 +924,7 @@ export type SURefCreature = SURefMetaEntry & {
    */
   hitPoints: number;
   actions: SURefMetaAction[];
-  traits?: Traits;
+  traits?: SURefMetaTraits;
 };
 
 // Drone
@@ -944,7 +944,7 @@ export type SURefDrone = SURefMetaEntry & {
 // Equipment
 export type SURefEquipment = SURefMetaEntry & {
   techLevel: number;
-  traits?: Traits;
+  traits?: SURefMetaTraits;
   /**
    * Range bands for abilities and weapons
    */
@@ -983,7 +983,7 @@ export interface SURefKeyword {
 // Meld
 export type SURefMeld = SURefMetaEntry & {
   actions: SURefMetaAction[];
-  traits?: Traits;
+  traits?: SURefMetaTraits;
 };
 
 // Module
@@ -1007,7 +1007,7 @@ export type SURefModule = SURefMetaEntry & {
    * Whether this is a recommended starting system
    */
   recommended?: boolean;
-  traits?: Traits;
+  traits?: SURefMetaTraits;
   /**
    * Additional notes
    */
@@ -1128,7 +1128,7 @@ export type SURefNPC = SURefMetaEntry & {
    */
   hitPoints: number;
   actions: SURefMetaAction[];
-  traits?: Traits;
+  traits?: SURefMetaTraits;
 };
 
 // RollTable
@@ -1219,7 +1219,7 @@ export type SURefSquad = SURefMetaEntry & {
    */
   hitPoints?: number;
   actions: SURefMetaAction[];
-  traits?: Traits;
+  traits?: SURefMetaTraits;
   /**
    * Type of damage
    */
@@ -1247,7 +1247,7 @@ export type SURefSystem = SURefMetaEntry & {
    * Whether this is a recommended starting system
    */
   recommended?: boolean;
-  traits?: Traits;
+  traits?: SURefMetaTraits;
   /**
    * Additional notes
    */
@@ -1400,7 +1400,7 @@ export type SURefVehicle = SURefMetaEntry & {
    */
   salvageValue: number;
   systems: string[];
-  traits?: Traits;
+  traits?: SURefMetaTraits;
 };
 
 

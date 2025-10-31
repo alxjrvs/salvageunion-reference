@@ -149,29 +149,6 @@ export type SURefSchemaName = keyof SchemaToEntityMap
  * Main ORM class with static model accessors
  */
 export class SalvageUnionReference {
-  readonly Abilities: BaseModel<SURefAbility>
-  readonly AbilityTreeRequirements: BaseModel<SURefAbilityTreeRequirement>
-  readonly BioTitans: BaseModel<SURefBioTitan>
-  readonly Chassis: BaseModel<SURefChassis>
-  readonly AdvancedClasses: BaseModel<SURefAdvancedClass>
-  readonly CoreClasses: BaseModel<SURefCoreClass>
-  readonly HybridClasses: BaseModel<SURefHybridClass>
-  readonly CrawlerBays: BaseModel<SURefCrawlerBay>
-  readonly CrawlerTechLevels: BaseModel<SURefCrawlerTechLevel>
-  readonly Crawlers: BaseModel<SURefCrawler>
-  readonly Creatures: BaseModel<SURefCreature>
-  readonly Drones: BaseModel<SURefDrone>
-  readonly Equipment: BaseModel<SURefEquipment>
-  readonly Keywords: BaseModel<SURefKeyword>
-  readonly Meld: BaseModel<SURefMeld>
-  readonly Modules: BaseModel<SURefModule>
-  readonly NPCs: BaseModel<SURefNPC>
-  readonly RollTables: BaseModel<SURefRollTable>
-  readonly Squads: BaseModel<SURefSquad>
-  readonly Systems: BaseModel<SURefSystem>
-  readonly Traits: BaseModel<SURefTrait>
-  readonly Vehicles: BaseModel<SURefVehicle>
-
   // Initialize static properties from generated models
   static Abilities = models.Abilities as BaseModel<SchemaToEntityMap['abilities']>
   static AbilityTreeRequirements = models.AbilityTreeRequirements as BaseModel<SchemaToEntityMap['ability-tree-requirements']>

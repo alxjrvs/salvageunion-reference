@@ -25,10 +25,15 @@ function getObjectsMetaMap(): Record<string, string> {
   const objectsSchema = JSON.parse(fs.readFileSync(objectsSchemaPath, 'utf8'))
 
   const map: Record<string, string> = {}
+
+  // Special cases for objects.schema definitions
+  const specialCases: Record<string, string> = {
+    npc: 'Npc', // Keep as Npc (not NPC) for objects definition
+  }
+
   for (const defName of Object.keys(objectsSchema.definitions || {})) {
-    // Use SCHEMA_NAME_MAP if available (for special cases like 'npc' -> 'NPC')
-    // Otherwise capitalize the definition name
-    map[defName] = SCHEMA_NAME_MAP[defName] || capitalize(defName)
+    // Use special cases if available, otherwise capitalize the definition name
+    map[defName] = specialCases[defName] || capitalize(defName)
   }
 
   return map

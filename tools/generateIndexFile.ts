@@ -50,15 +50,6 @@ function generateIndexFile() {
     })
     .join('\n')
 
-  // Generate model interface properties
-  const modelInterfaceProps = schemaIndex.schemas
-    .map((entry: any) => {
-      const modelName = toPascalCase(entry.id)
-      const singularName = getSingularTypeName(entry.id)
-      return `  readonly ${modelName}: BaseModel<SURef${singularName}>`
-    })
-    .join('\n')
-
   const output = `/**
  * Salvage Union Data ORM
  *
@@ -126,8 +117,6 @@ export type SURefSchemaName = keyof SchemaToEntityMap
  * Main ORM class with static model accessors
  */
 export class SalvageUnionReference {
-${modelInterfaceProps}
-
   // Initialize static properties from generated models
   ${schemaIndex.schemas
     .map((entry: any) => {

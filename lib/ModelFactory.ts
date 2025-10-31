@@ -4,7 +4,6 @@
  */
 import { BaseModel } from './BaseModel.js'
 import schemaIndex from '../schemas/index.json' with { type: 'json' }
-import { toPascalCase as toPascalCaseUtil } from '../tools/generatorUtils.js'
 
 // Import all data files
 import abilitiesData from '../data/abilities.json' with { type: 'json' }
@@ -130,10 +129,21 @@ export function getDataMaps(): {
  *   classes.hybrid -> HybridClasses
  *
  * Exposed for client use
- * Delegates to shared implementation in tools/generatorUtils.ts
  */
 export function toPascalCase(id: string): string {
-  return toPascalCaseUtil(id)
+  // Handle special cases for classes
+  if (id === 'classes.core') return 'CoreClasses'
+  if (id === 'classes.hybrid') return 'HybridClasses'
+  if (id === 'classes.advanced') return 'AdvancedClasses'
+
+  // Handle special case for NPCs (all caps)
+  if (id === 'npcs') return 'NPCs'
+
+  // Handle hyphenated and dotted names
+  return id
+    .split(/[-.]/)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')
 }
 
 /**
