@@ -155,23 +155,13 @@
           "minimum": 0,
           "description": "Number of this system or module included"
         },
-        "premadeChoice": {
+        "preselectedChoices": {
           "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "id",
-            "value"
-          ],
-          "properties": {
-            "id": {
-              "description": "ID of the choice",
-              "$ref": "common.schema.json#/definitions/id"
-            },
-            "value": {
-              "type": "string",
-              "minLength": 1,
-              "description": "Name of the choice"
-            }
+          "description": "Preselected choices for this system or module, keyed by choice ID",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Name of the choice"
           }
         }
       }

@@ -1686,9 +1686,8 @@
         "systems": [
           {
             "name": "Mech Melee Armament",
-            "premadeChoice": {
-              "id": "1d0f3be8-3cf9-4c3a-a6d1-d2f221b02832",
-              "value": "Iron Spear"
+            "preselectedChoices": {
+              "1d0f3be8-3cf9-4c3a-a6d1-d2f221b02832": "Iron Spear"
             }
           },
           {
@@ -1726,9 +1725,8 @@
           },
           {
             "name": "Mech Melee Armament",
-            "premadeChoice": {
-              "id": "1d0f3be8-3cf9-4c3a-a6d1-d2f221b02832",
-              "value": "Steel Axe"
+            "preselectedChoices": {
+              "1d0f3be8-3cf9-4c3a-a6d1-d2f221b02832": "Steel Axe"
             }
           },
           {
@@ -1773,8 +1771,10 @@
     "actions": [
       {
         "name": "Sestra Drone Controller",
-        "effect": "The Little Sestra comes with a single Sestra Drone that it controls up to Far Range. Roll on the A.I. Personality Table for the drone's personality. The Sestra Drone acts separately to the Little Sestra on its own turn, and is controlled by the Pilot. It functions effectively as a Mech, but cannot Push. It can be installed with Systems and Modules and restores its SP and EP in a T3 or higher Mech Bay during Downtime. If the Drone is damaged it can be repaired as though it was a Mech. If it is destroyed you may craft a new Sestra Drone for 2 Tech 3 Scrap as per the crafting rules. The Little Sestra may have one active Sestra Drone at a time.",
-        "source": "Salvage Union Workshop Manual",
+        "effect": "The Little Sestra comes with a single Sestra Drone that it controls up to Far Range. Roll on the A.I. Personality Table for the drone's personality. The Sestra Drone acts separately to the Little Sestra on its own turn, and is controlled by the Pilot. It functions effectively as a Mech, but cannot Push. It can be installed with Systems and Modules and restores its SP and EP in a T3 or higher Mech Bay during Downtime. If the Drone is damaged it can be repaired as though it was a Mech. If it is destroyed you may craft a new Sestra Drone for 2 Tech 3 Scrap as per the crafting rules. The Little Sestra may have one active Sestra Drone at a time."
+      },
+      {
+        "name": "Sestra Drone",
         "stats": {
           "structurePts": 7,
           "energyPts": 8,
@@ -2269,9 +2269,8 @@
           },
           {
             "name": "Industrial Body Kit",
-            "premadeChoice": {
-              "id": "ed8cb1b3-3b38-4c92-9f0c-2638356edfc7",
-              "value": "Mule"
+            "preselectedChoices": {
+              "ed8cb1b3-3b38-4c92-9f0c-2638356edfc7": "Mule"
             }
           },
           {
@@ -2499,9 +2498,8 @@
           },
           {
             "name": "Mech Melee Armament",
-            "premadeChoice": {
-              "id": "1d0f3be8-3cf9-4c3a-a6d1-d2f221b02832",
-              "value": "Great Sword"
+            "preselectedChoices": {
+              "1d0f3be8-3cf9-4c3a-a6d1-d2f221b02832": "Great Sword"
             }
           },
           {
@@ -2670,9 +2668,8 @@
           },
           {
             "name": "Automated Weapon Turret",
-            "premadeChoice": {
-              "id": "b246abab-05e8-4946-9324-b6bdd8ab1b48",
-              "value": "Automated Green Laser Turret"
+            "preselectedChoices": {
+              "b246abab-05e8-4946-9324-b6bdd8ab1b48": "Automated Green Laser Turret"
             }
           },
           {

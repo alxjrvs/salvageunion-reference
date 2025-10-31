@@ -1,20 +1,15 @@
 /**
- * Fix premadeChoice to be objects with id and name instead of strings
+ * Fix preselectedChoices to be objects with ID as key and value as the choice name
  */
 
 import fs from 'fs'
 import path from 'path'
 import { randomUUID } from 'crypto'
 
-interface PremadeChoice {
-  id: string
-  name: string
-}
-
 interface PatternItem {
   name: string
   count?: number
-  premadeChoice?: string | PremadeChoice
+  preselectedChoices?: string | { [id: string]: string }
 }
 
 interface Pattern {
@@ -35,7 +30,7 @@ const systemsPath = path.join(process.cwd(), 'data', 'systems.json')
 const chassisData: Chassis[] = JSON.parse(fs.readFileSync(chassisPath, 'utf-8'))
 const systemsData = JSON.parse(fs.readFileSync(systemsPath, 'utf-8'))
 
-console.log('🔧 Converting premadeChoice strings to objects...\n')
+console.log('🔧 Converting preselectedChoices strings to objects...\n')
 
 // Build a map of custom system option names to their IDs
 const customSystemOptionMap = new Map<string, string>()
@@ -60,63 +55,62 @@ for (const chassis of chassisData) {
   for (const pattern of chassis.patterns) {
     // Process systems
     for (const system of pattern.systems) {
-      if (system.premadeChoice && typeof system.premadeChoice === 'string') {
-        const choiceName = system.premadeChoice
-        
-        // Check if this is a custom system option with an ID
-        const id = customSystemOptionMap.get(choiceName)
-        
-        if (id) {
-          // Use the actual ID from custom system options
-          system.premadeChoice = {
-            id,
-            name: choiceName,
+      if (system.preselectedChoices) {
+        // If it's a string, convert to object with ID as key
+        if (typeof system.preselectedChoices === 'string') {
+          const choiceName = system.preselectedChoices
+          const id = customSystemOptionMap.get(choiceName)
+
+          if (id) {
+            system.preselectedChoices = { [id]: choiceName }
+            console.log(
+              `✓ Fixed: ${choiceName} (found ID: ${id.substring(0, 8)}...)`
+            )
+          } else {
+            const newId = randomUUID()
+            system.preselectedChoices = { [newId]: choiceName }
+            console.log(
+              `✓ Fixed: ${choiceName} (generated new ID: ${newId.substring(0, 8)}...)`
+            )
           }
-          console.log(`✓ Fixed: ${choiceName} (found ID: ${id.substring(0, 8)}...)`)
-        } else {
-          // Generate a new UUID for flavor text choices
-          const newId = randomUUID()
-          system.premadeChoice = {
-            id: newId,
-            name: choiceName,
-          }
-          console.log(`✓ Fixed: ${choiceName} (generated new ID: ${newId.substring(0, 8)}...)`)
+          fixedCount++
         }
-        
-        fixedCount++
       }
     }
-    
+
     // Process modules (in case there are any)
     for (const module of pattern.modules) {
-      if (module.premadeChoice && typeof module.premadeChoice === 'string') {
-        const choiceName = module.premadeChoice
-        const id = customSystemOptionMap.get(choiceName)
-        
-        if (id) {
-          module.premadeChoice = {
-            id,
-            name: choiceName,
+      if (module.preselectedChoices) {
+        // If it's a string, convert to object with ID as key
+        if (typeof module.preselectedChoices === 'string') {
+          const choiceName = module.preselectedChoices
+          const id = customSystemOptionMap.get(choiceName)
+
+          if (id) {
+            module.preselectedChoices = { [id]: choiceName }
+            console.log(
+              `✓ Fixed: ${choiceName} (found ID: ${id.substring(0, 8)}...)`
+            )
+          } else {
+            const newId = randomUUID()
+            module.preselectedChoices = { [newId]: choiceName }
+            console.log(
+              `✓ Fixed: ${choiceName} (generated new ID: ${newId.substring(0, 8)}...)`
+            )
           }
-          console.log(`✓ Fixed: ${choiceName} (found ID: ${id.substring(0, 8)}...)`)
-        } else {
-          const newId = randomUUID()
-          module.premadeChoice = {
-            id: newId,
-            name: choiceName,
-          }
-          console.log(`✓ Fixed: ${choiceName} (generated new ID: ${newId.substring(0, 8)}...)`)
+          fixedCount++
         }
-        
-        fixedCount++
       }
     }
   }
 }
 
 // Write back to file
-fs.writeFileSync(chassisPath, JSON.stringify(chassisData, null, 2) + '\n', 'utf-8')
+fs.writeFileSync(
+  chassisPath,
+  JSON.stringify(chassisData, null, 2) + '\n',
+  'utf-8'
+)
 
 console.log(`\n✅ Conversion complete!`)
-console.log(`   Total premadeChoice entries fixed: ${fixedCount}`)
-
+console.log(`   Total preselectedChoices entries fixed: ${fixedCount}`)

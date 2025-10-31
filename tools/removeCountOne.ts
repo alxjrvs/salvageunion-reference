@@ -9,7 +9,7 @@ import path from 'path'
 interface PatternItem {
   name: string
   count: number
-  premadeChoice?: string
+  preselectedChoices?: { [id: string]: string }
 }
 
 interface Pattern {

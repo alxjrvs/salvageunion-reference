@@ -12,7 +12,7 @@ import path from 'path'
 interface ModulePattern {
   name: string
   count: number
-  premadeChoice?: string
+  preselectedChoices?: { [id: string]: string }
 }
 
 interface Pattern {
