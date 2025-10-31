@@ -222,6 +222,10 @@ export interface SURefMetaChoice {
    */
   description?: string
   /**
+   * Roll table name for the choice
+   */
+  rollTable?: string
+  /**
    * Entities that can be chosen
    */
   schemaEntities?: string[]

@@ -1462,8 +1462,13 @@
     "actions": [],
     "choices": [
       {
+        "name": "Turret Personality ",
+        "rollTable": "A.I. Personality",
+        "id": "cce464f5-c443-4d19-982f-13b010400860"
+      },
+      {
         "id": "c05fd7f4-cd5a-4c0d-8518-3566cece416d",
-        "name": "Automated Weapon Turret Choice",
+        "name": "Turret Model",
         "customSystemOptions": [
           {
             "name": "Automated Machine Gun Turret",

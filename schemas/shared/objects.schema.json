@@ -172,6 +172,10 @@
           "type": "string",
           "description": "Description of the choice"
         },
+        "rollTable": {
+          "type": "string",
+          "description": "Roll table name for the choice"
+        },
         "schemaEntities": {
           "type": "array",
           "description": "Entities that can be chosen",
