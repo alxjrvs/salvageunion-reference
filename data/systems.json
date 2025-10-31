@@ -658,7 +658,9 @@
     "choices": [
       {
         "name": "Industrial Body Kit Choice",
-        "schema": ["chassis"],
+        "schema": [
+          "chassis"
+        ],
         "constraint": {
           "field": "techLevel",
           "min": 1,
@@ -1466,7 +1468,6 @@
         "name": "Automated Weapon Turret Choice",
         "customSystemOptions": [
           {
-            "id": "c05fd7f4-cd5a-4c0d-8518-3566cece416d",
             "name": "Automated Machine Gun Turret",
             "techLevel": 4,
             "slotsRequired": 5,
@@ -1487,7 +1488,6 @@
             ]
           },
           {
-            "id": "47f3299a-2bdc-4bb9-8efe-ecec6c4b6b19",
             "name": "Automated Green Laser Turret",
             "techLevel": 4,
             "slotsRequired": 9,
@@ -1509,7 +1509,6 @@
             ]
           },
           {
-            "id": "0312bf43-e138-42b4-8bce-0a048e88634c",
             "name": "Automated 120mm Cannon Turret",
             "techLevel": 4,
             "slotsRequired": 7,
@@ -1592,7 +1591,9 @@
           "min": 3,
           "max": 4
         },
-        "schema": ["chassis"],
+        "schema": [
+          "chassis"
+        ],
         "id": "8286393e-daf8-4a1d-8b91-dd8457da6251"
       }
     ],
