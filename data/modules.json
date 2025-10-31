@@ -484,7 +484,7 @@
   {
     "id": "10498cb2-a869-4d73-81c5-7ac82f149448",
     "source": "Salvage Union Workshop Manual",
-    "name": "Advanced Weapon Link",
+    "name": "Adv. Weapon Link",
     "techLevel": 3,
     "slotsRequired": 2,
     "salvageValue": 3,
@@ -782,7 +782,7 @@
   {
     "id": "01ef98c2-3b7c-4a75-9659-4baf5f51f0bd",
     "source": "Salvage Union Workshop Manual",
-    "name": "Advanced Reactor Safety Protocols",
+    "name": "Adv. Reactor Safety Protocols",
     "techLevel": 4,
     "slotsRequired": 2,
     "salvageValue": 2,

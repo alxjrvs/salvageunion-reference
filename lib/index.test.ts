@@ -8,13 +8,16 @@ describe('SalvageUnionReference static properties', () => {
     const staticProps = Object.getOwnPropertyNames(
       SalvageUnionReference
     ).filter((prop) => {
-      // Filter out constructor and methods (findIn, findAllIn)
+      // Filter out constructor and methods (findIn, findAllIn, search, searchIn, getSuggestions)
       return (
         prop !== 'length' &&
         prop !== 'prototype' &&
         prop !== 'name' &&
         prop !== 'findIn' &&
-        prop !== 'findAllIn'
+        prop !== 'findAllIn' &&
+        prop !== 'search' &&
+        prop !== 'searchIn' &&
+        prop !== 'getSuggestions'
       )
     })
 

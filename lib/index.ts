@@ -31,12 +31,25 @@ import type {
   SURefTrait,
   SURefVehicle,
 } from './types/generated.js'
+import {
+  search as searchFn,
+  searchIn as searchInFn,
+  getSuggestions as getSuggestionsFn,
+} from './search.js'
 
 export { BaseModel } from './BaseModel.js'
 
 export { getDataMaps, getSchemaCatalog } from './ModelFactory.js'
 
 export { resultForTable, type TableRollResult } from './utils/resultForTable.js'
+
+export {
+  search,
+  searchIn,
+  getSuggestions,
+  type SearchOptions,
+  type SearchResult,
+} from './search.js'
 
 export type * from './types/generated.js'
 
@@ -177,5 +190,75 @@ export class SalvageUnionReference {
       modelName as keyof typeof SalvageUnionReference
     ] as BaseModel<SchemaToEntityMap[T]>
     return model.findAll(predicate)
+  }
+
+  /**
+   * Search across all schemas or specific schemas
+   *
+   * @param options - Search options including query, schemas filter, limit, etc.
+   * @returns Array of search results with relevance scores
+   *
+   * @example
+   * // Search everything
+   * const results = SalvageUnionReference.search({ query: 'laser' })
+   *
+   * // Search specific schemas
+   * const results = SalvageUnionReference.search({
+   *   query: 'laser',
+   *   schemas: ['systems', 'modules']
+   * })
+   *
+   * // Limit results
+   * const results = SalvageUnionReference.search({
+   *   query: 'laser',
+   *   limit: 50
+   * })
+   */
+  public static search(
+    options: import('./search.js').SearchOptions
+  ): import('./search.js').SearchResult[] {
+    return searchFn(options)
+  }
+
+  /**
+   * Search within a specific schema
+   *
+   * @param schemaName - The schema to search in
+   * @param query - Search query string
+   * @param options - Optional search options (limit, caseSensitive)
+   * @returns Array of matching entities
+   *
+   * @example
+   * const systems = SalvageUnionReference.searchIn('systems', 'laser')
+   * const modules = SalvageUnionReference.searchIn('modules', 'targeting', { limit: 10 })
+   */
+  public static searchIn<T extends keyof SchemaToEntityMap>(
+    schemaName: T,
+    query: string,
+    options?: { limit?: number; caseSensitive?: boolean }
+  ): SchemaToEntityMap[T][] {
+    return searchInFn(schemaName, query, options) as SchemaToEntityMap[T][]
+  }
+
+  /**
+   * Get search suggestions based on partial query
+   *
+   * @param query - Partial search query
+   * @param options - Optional search options
+   * @returns Array of unique entity names that match
+   *
+   * @example
+   * const suggestions = SalvageUnionReference.getSuggestions('las')
+   * // Returns: ['Laser', 'Blue Beam Laser', 'Green Laser', ...]
+   */
+  public static getSuggestions(
+    query: string,
+    options?: {
+      schemas?: (keyof SchemaToEntityMap)[]
+      limit?: number
+      caseSensitive?: boolean
+    }
+  ): string[] {
+    return getSuggestionsFn(query, options)
   }
 }

@@ -92,12 +92,8 @@
         "name": "Buzzard Pattern",
         "description": "Buzzards of the wastes, raiders relish these builds as it lets them overheat larger Mechs whilst stripping the flesh off of anything else.",
         "legalStarting": true,
-        "systems": ["FM-3 Flamethrower × 2", "Loudspeakers"],
-        "modules": [
-          "Comms Module",
-          "Self-Destruct Module",
-          "Weapon Link (FM-3 Flamethrower × 2)"
-        ]
+        "systems": ["FM-3 Flamethrower", "FM-3 Flamethrower", "Loudspeakers"],
+        "modules": ["Comms Module", "Self-Destruct", "Weapon Link"]
       },
       {
         "name": "Scrap Flinger Pattern",
@@ -297,10 +293,10 @@
         "systems": [
           "Chainsaw Arm",
           "FM-3 Flamethrower",
-          "Loudspeaker",
+          "Loudspeakers",
           "Locomotion System"
         ],
-        "modules": ["Advanced Weapon Link"]
+        "modules": ["Adv. Weapon Link"]
       },
       {
         "name": "H&V Pattern",
@@ -594,7 +590,8 @@
           "Blue Mining Laser",
           "Locomotion System",
           "Rigging Arm",
-          "Heat Sink × 2"
+          "Heat Sink",
+          "Heat Sink"
         ],
         "modules": ["Comms Module", "Thermal Optics"]
       },
@@ -713,7 +710,7 @@
           "Escape Hatch",
           "Floodlights",
           "Locomotion System",
-          "Loudspeaker",
+          "Loudspeakers",
           "Rigging Arm",
           "Welding Laser"
         ],
@@ -730,7 +727,7 @@
           "Locomotion System",
           "Welding Laser"
         ],
-        "modules": ["Barometric Sensor", "Comms Module", "Eggs Mayhem"]
+        "modules": ["Barometric Weather Sensor", "Comms Module", "Eggs Mayhem"]
       },
       {
         "name": "Stefanus Pattern",
@@ -1262,7 +1259,7 @@
         ],
         "modules": [
           "Comms Module",
-          "Concealed Equipment Locker",
+          "Concealed Locker",
           "Encrypted Comms",
           "Voice Modulator"
         ]
@@ -1443,7 +1440,7 @@
           "Vectored Thrust Unit"
         ],
         "modules": [
-          "Advanced Reactor Safety Protocols",
+          "Adv. Reactor Safety Protocols",
           "Comms Module",
           "Laser Guidance",
           "Offensive Protocols"
@@ -1497,7 +1494,7 @@
           "Blue Beam Laser",
           "Needle Missile Pod",
           "Automated Turret System - Green Laser",
-          "Stabilising",
+          "Stabilising Locomotion System",
           "Locomotion System",
           "Ejection System"
         ],
@@ -1514,12 +1511,12 @@
         "systems": [
           "Railgun",
           "Railgun",
-          "Stabilising",
+          "Stabilising Locomotion System",
           "Locomotion System",
           "Ejection System"
         ],
         "modules": [
-          "Advanced Targeting Array",
+          "Adv. Targeting Array",
           "Comms Module",
           "Coolant Flow Manifold"
         ]
@@ -1734,7 +1731,7 @@
           "Blue Beam Laser",
           "Locomotion System",
           "Ejection System",
-          "Aeon Shield Dome"
+          "Shield Dome"
         ],
         "modules": ["Comms Module", "MRSI Co-Ordinator", "Multi-Optics"]
       },
@@ -1750,7 +1747,7 @@
           "Escape Hatch"
         ],
         "modules": [
-          "Advanced Reactor Safety Protocols",
+          "Adv. Reactor Safety Protocols",
           "Comms Module",
           "Weapon Link"
         ]
@@ -1951,9 +1948,9 @@
           "Locomotion System"
         ],
         "modules": [
-          "Advanced Targeting Array",
+          "Adv. Targeting Array",
           "Omega Push Module",
-          "Advanced Reactor Safety Protocols"
+          "Adv. Reactor Safety Protocols"
         ]
       },
       {
@@ -1965,9 +1962,9 @@
           "Electro-Magnetic Shield Projector"
         ],
         "modules": [
-          "Advanced Targeting Array",
+          "Adv. Targeting Array",
           "Reaction Protocols",
-          "Advanced Reactor Safety Protocols"
+          "Adv. Reactor Safety Protocols"
         ]
       },
       {
@@ -2042,7 +2039,7 @@
           "Ejection System",
           "Multi-Phase Shield"
         ],
-        "modules": ["Advanced Targeting", "Comms Module", "Multi-Optics"]
+        "modules": ["Adv. Targeting Array", "Comms Module", "Multi-Optics"]
       },
       {
         "name": "M.A.D. Pattern",
@@ -2131,7 +2128,7 @@
           "Stabilising Locomotion System"
         ],
         "modules": [
-          "Advanced Targeting",
+          "Adv. Targeting Array",
           "Comms Module",
           "Coolant Flow Manifold",
           "Firewall",
@@ -2148,7 +2145,7 @@
           "Ejector Pod"
         ],
         "modules": [
-          "Advanced Targeting",
+          "Adv. Targeting Array",
           "Alpha Strike Module",
           "Comms Module",
           "Coolant Flow Manifold",
@@ -2245,7 +2242,7 @@
           "Radomes"
         ],
         "modules": [
-          "Advanced Reactor Safety Protocols",
+          "Adv. Reactor Safety Protocols",
           "Comms Module",
           "Coolant Flow Manifold",
           "Dash Protocols",

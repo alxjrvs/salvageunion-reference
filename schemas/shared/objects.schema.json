@@ -146,6 +146,13 @@
           "type": "string",
           "description": "Description of the choice"
         },
+        "schemaEntities": {
+          "type": "array",
+          "description": "Entities that can be chosen",
+          "items": {
+            "type": "string"
+          }
+        },
         "schema": {
           "type": "array",
           "description": "Schema for the choice",

@@ -44,7 +44,7 @@
         "description": "The Tech Level of the Union Crawler determines what Mech Chassis, Systems, and Modules it can repair during Downtime. A damaged Mech Chassis as well as any damaged Systems or Modules are repaired to Intact Condition during Downtime as long as they are of an equal to or lower Tech Level than the Union Crawler."
       },
       {
-        "name": "Advanced Repair",
+        "name": "Adv. Repair",
         "description": "You may choose to repair anything that cannot be repaired in this way by spending an amount of Scrap equal to half its Salvage Value of it's Tech Level or higher. For example, if your Crawler is Tech 3 and you are repairing a Damaged Colossus Chassis which is a Tech 4 Chassis with a Salvage Value of 16, you must spend 8× Tech 4 Scrap to repair it to an Intact Condition."
       },
       {

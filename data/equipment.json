@@ -583,7 +583,7 @@
   {
     "id": "dc41d5e6-03d5-456c-b7c2-51cdc162112d",
     "source": "Salvage Union Workshop Manual",
-    "name": "Advanced Epoxy Applicator",
+    "name": "Adv. Epoxy Applicator",
     "techLevel": 4,
     "description": "This specialised device scans and automatically applies layers of metallic oxide that fill and repair damaged Mechs based on their blueprints. This allows repair of some of the most advanced Mechs in production.",
     "actions": [

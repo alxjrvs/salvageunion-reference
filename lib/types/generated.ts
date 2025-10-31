@@ -203,6 +203,10 @@ export interface SURefMetaChoice {
    */
   description?: string
   /**
+   * Entities that can be chosen
+   */
+  schemaEntities?: string[]
+  /**
    * Schema for the choice
    */
   schema?: (

@@ -6,6 +6,7 @@ A comprehensive, schema-validated JSON reference and TypeScript ORM for the **Sa
 
 ✅ **513+ game data items** across 18 categories
 ✅ **Type-safe TypeScript ORM** with inferred types
+✅ **Powerful search API** with relevance scoring
 ✅ **JSON Schema validation** for all data
 ✅ **Zero runtime dependencies**
 ✅ **ESM-only** for modern JavaScript
