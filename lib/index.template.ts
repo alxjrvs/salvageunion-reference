@@ -8,33 +8,11 @@
  * Run 'npm run generate:index' to regenerate
  */
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- used in generated type annotations
 import { BaseModel, type ModelWithMetadata } from './BaseModel.js'
 import { generateModels } from './ModelFactory.js'
 
-import type {
-  SURefAbility,
-  SURefAbilityTreeRequirement,
-  SURefBioTitan,
-  SURefChassis,
-  SURefAdvancedClass,
-  SURefCoreClass,
-  SURefHybridClass,
-  SURefCrawlerBay,
-  SURefCrawlerTechLevel,
-  SURefCrawler,
-  SURefCreature,
-  SURefDrone,
-  SURefEquipment,
-  SURefKeyword,
-  SURefMeld,
-  SURefModule,
-  SURefNPC,
-  SURefRollTable,
-  SURefSquad,
-  SURefSystem,
-  SURefTrait,
-  SURefVehicle,
-} from './types/generated.js'
+// INJECT:TYPE_IMPORTS
 import {
   search as searchFn,
   searchIn as searchInFn,
@@ -64,111 +42,16 @@ export {
 
 export type * from './types/generated.js'
 
-// Type mapping from schema names to entity types
-type SchemaToEntityMap = {
-  abilities: SURefAbility
-  'ability-tree-requirements': SURefAbilityTreeRequirement
-  'bio-titans': SURefBioTitan
-  chassis: SURefChassis
-  'classes.advanced': SURefAdvancedClass
-  'classes.core': SURefCoreClass
-  'classes.hybrid': SURefHybridClass
-  'crawler-bays': SURefCrawlerBay
-  'crawler-tech-levels': SURefCrawlerTechLevel
-  crawlers: SURefCrawler
-  creatures: SURefCreature
-  drones: SURefDrone
-  equipment: SURefEquipment
-  keywords: SURefKeyword
-  meld: SURefMeld
-  modules: SURefModule
-  npcs: SURefNPC
-  'roll-tables': SURefRollTable
-  squads: SURefSquad
-  systems: SURefSystem
-  traits: SURefTrait
-  vehicles: SURefVehicle
-}
+// INJECT:SCHEMA_TO_ENTITY_MAP
 
-// Runtime mapping from schema names to model property names
-const SchemaToModelMap = {
-  abilities: 'Abilities',
-  'ability-tree-requirements': 'AbilityTreeRequirements',
-  'bio-titans': 'BioTitans',
-  chassis: 'Chassis',
-  'classes.advanced': 'AdvancedClasses',
-  'classes.core': 'CoreClasses',
-  'classes.hybrid': 'HybridClasses',
-  'crawler-bays': 'CrawlerBays',
-  'crawler-tech-levels': 'CrawlerTechLevels',
-  crawlers: 'Crawlers',
-  creatures: 'Creatures',
-  drones: 'Drones',
-  equipment: 'Equipment',
-  keywords: 'Keywords',
-  meld: 'Meld',
-  modules: 'Modules',
-  npcs: 'NPCs',
-  'roll-tables': 'RollTables',
-  squads: 'Squads',
-  systems: 'Systems',
-  traits: 'Traits',
-  vehicles: 'Vehicles',
-} as const
+// INJECT:SCHEMA_TO_MODEL_MAP
 
-// Runtime mapping from schema names to display names
-export const SchemaToDisplayName = {
-  abilities: 'Abilities',
-  'ability-tree-requirements': 'Ability Tree Requirements',
-  'bio-titans': 'Bio-Titans',
-  chassis: 'Chassis',
-  'classes.advanced': 'Advanced Classes',
-  'classes.core': 'Core Classes',
-  'classes.hybrid': 'Hybrid Classes',
-  'crawler-bays': 'Crawler Bays',
-  'crawler-tech-levels': 'Crawler Tech Levels',
-  crawlers: 'Crawlers',
-  creatures: 'Creatures',
-  drones: 'Drones',
-  equipment: 'Equipment',
-  keywords: 'Keywords',
-  meld: 'Meld',
-  modules: 'Modules',
-  npcs: 'NPCs',
-  'roll-tables': 'Roll Tables',
-  squads: 'Squads',
-  systems: 'Systems',
-  traits: 'Traits',
-  vehicles: 'Vehicles',
-} as const
+// INJECT:SCHEMA_TO_DISPLAY_NAME
 
 // Auto-generate models from schema catalog (synchronous)
 const models = generateModels()
 
-// Union type for all entity types
-export type SURefEntity =
-  | SURefAbility
-  | SURefAbilityTreeRequirement
-  | SURefBioTitan
-  | SURefChassis
-  | SURefAdvancedClass
-  | SURefCoreClass
-  | SURefHybridClass
-  | SURefCrawlerBay
-  | SURefCrawlerTechLevel
-  | SURefCrawler
-  | SURefCreature
-  | SURefDrone
-  | SURefEquipment
-  | SURefKeyword
-  | SURefMeld
-  | SURefModule
-  | SURefNPC
-  | SURefRollTable
-  | SURefSquad
-  | SURefSystem
-  | SURefTrait
-  | SURefVehicle
+// INJECT:ENTITY_UNION
 
 // Union type for all schema names
 export type SURefSchemaName = keyof SchemaToEntityMap
@@ -177,70 +60,7 @@ export type SURefSchemaName = keyof SchemaToEntityMap
  * Main ORM class with static model accessors
  */
 export class SalvageUnionReference {
-  // Initialize static properties from generated models
-  static Abilities = models.Abilities as ModelWithMetadata<
-    SchemaToEntityMap['abilities']
-  >
-  static AbilityTreeRequirements =
-    models.AbilityTreeRequirements as ModelWithMetadata<
-      SchemaToEntityMap['ability-tree-requirements']
-    >
-  static BioTitans = models.BioTitans as ModelWithMetadata<
-    SchemaToEntityMap['bio-titans']
-  >
-  static Chassis = models.Chassis as ModelWithMetadata<
-    SchemaToEntityMap['chassis']
-  >
-  static AdvancedClasses = models.AdvancedClasses as ModelWithMetadata<
-    SchemaToEntityMap['classes.advanced']
-  >
-  static CoreClasses = models.CoreClasses as ModelWithMetadata<
-    SchemaToEntityMap['classes.core']
-  >
-  static HybridClasses = models.HybridClasses as ModelWithMetadata<
-    SchemaToEntityMap['classes.hybrid']
-  >
-  static CrawlerBays = models.CrawlerBays as ModelWithMetadata<
-    SchemaToEntityMap['crawler-bays']
-  >
-  static CrawlerTechLevels = models.CrawlerTechLevels as ModelWithMetadata<
-    SchemaToEntityMap['crawler-tech-levels']
-  >
-  static Crawlers = models.Crawlers as ModelWithMetadata<
-    SchemaToEntityMap['crawlers']
-  >
-  static Creatures = models.Creatures as ModelWithMetadata<
-    SchemaToEntityMap['creatures']
-  >
-  static Drones = models.Drones as ModelWithMetadata<
-    SchemaToEntityMap['drones']
-  >
-  static Equipment = models.Equipment as ModelWithMetadata<
-    SchemaToEntityMap['equipment']
-  >
-  static Keywords = models.Keywords as ModelWithMetadata<
-    SchemaToEntityMap['keywords']
-  >
-  static Meld = models.Meld as ModelWithMetadata<SchemaToEntityMap['meld']>
-  static Modules = models.Modules as ModelWithMetadata<
-    SchemaToEntityMap['modules']
-  >
-  static NPCs = models.NPCs as ModelWithMetadata<SchemaToEntityMap['npcs']>
-  static RollTables = models.RollTables as ModelWithMetadata<
-    SchemaToEntityMap['roll-tables']
-  >
-  static Squads = models.Squads as ModelWithMetadata<
-    SchemaToEntityMap['squads']
-  >
-  static Systems = models.Systems as ModelWithMetadata<
-    SchemaToEntityMap['systems']
-  >
-  static Traits = models.Traits as ModelWithMetadata<
-    SchemaToEntityMap['traits']
-  >
-  static Vehicles = models.Vehicles as ModelWithMetadata<
-    SchemaToEntityMap['vehicles']
-  >
+  // INJECT:MODEL_PROPERTIES
 
   /**
    * Find a single entity in a specific schema

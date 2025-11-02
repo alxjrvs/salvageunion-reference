@@ -19,6 +19,7 @@ export interface SchemaIndexEntry {
   schemaFile: string
   itemCount: number
   requiredFields: string[]
+  displayName: string
 }
 
 /**

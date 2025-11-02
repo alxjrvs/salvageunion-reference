@@ -10,5 +10,12 @@
     "noEmit": false
   },
   "include": ["lib/**/*"],
-  "exclude": ["node_modules", "dist", "examples", "tools", "**/*.test.ts"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "examples",
+    "tools",
+    "**/*.test.ts",
+    "**/*.template.ts"
+  ]
 }

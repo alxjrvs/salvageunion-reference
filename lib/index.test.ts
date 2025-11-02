@@ -8,6 +8,7 @@ import {
   isChassis,
   getTechLevel,
   getSalvageValue,
+  getSlotsRequired,
   getPageReference,
 } from './utilities.js'
 
@@ -33,6 +34,13 @@ describe('SalvageUnionReference static properties', () => {
         'composeRef',
         'parseRef',
         'getByRef',
+        'getManyByRef',
+        'getTechLevel',
+        'getSalvageValue',
+        'getSlotsRequired',
+        'getAllClasses',
+        'findClassById',
+        'getAbilitiesForClass',
         'entityCache',
       ]
       return !methodNames.includes(prop)
@@ -375,5 +383,163 @@ describe('Property Extractors', () => {
     expect(systemPage).toBeDefined()
     expect(typeof abilityPage).toBe('number')
     expect(typeof systemPage).toBe('number')
+  })
+})
+
+describe('SalvageUnionReference.getManyByRef', () => {
+  it('should batch fetch entities by reference strings', () => {
+    const abilities = SalvageUnionReference.Abilities.all().slice(0, 3)
+    const refs = abilities.map((a) =>
+      SalvageUnionReference.composeRef('abilities', a.id)
+    )
+
+    const entities = SalvageUnionReference.getManyByRef(refs)
+
+    expect(entities.size).toBe(3)
+    for (let i = 0; i < refs.length; i++) {
+      const entity = entities.get(refs[i])
+      expect(entity).toBeDefined()
+      expect(entity?.id).toBe(abilities[i].id)
+    }
+  })
+
+  it('should return undefined for invalid references', () => {
+    const entities = SalvageUnionReference.getManyByRef([
+      'abilities::invalid-1',
+      'systems::invalid-2',
+    ])
+
+    expect(entities.size).toBe(2)
+    expect(entities.get('abilities::invalid-1')).toBeUndefined()
+    expect(entities.get('systems::invalid-2')).toBeUndefined()
+  })
+})
+
+describe('getTechLevel', () => {
+  it('should get tech level from systems', () => {
+    const system = SalvageUnionReference.Systems.all()[0]
+    const techLevel = getTechLevel(system)
+
+    expect(techLevel).toBeDefined()
+    expect(typeof techLevel).toBe('number')
+    expect(techLevel).toBe(system.techLevel)
+  })
+
+  it('should get tech level from chassis (in stats)', () => {
+    const chassis = SalvageUnionReference.Chassis.all()[0]
+    const techLevel = getTechLevel(chassis)
+
+    expect(techLevel).toBeDefined()
+    expect(typeof techLevel).toBe('number')
+    expect(techLevel).toBe(chassis.techLevel)
+  })
+
+  it('should return undefined for entities without tech level', () => {
+    const ability = SalvageUnionReference.Abilities.all()[0]
+    const techLevel = getTechLevel(ability)
+
+    expect(techLevel).toBeUndefined()
+  })
+})
+
+describe('getSalvageValue', () => {
+  it('should get salvage value from systems', () => {
+    const system = SalvageUnionReference.Systems.all()[0]
+    const salvageValue = getSalvageValue(system)
+
+    expect(salvageValue).toBeDefined()
+    expect(typeof salvageValue).toBe('number')
+    expect(salvageValue).toBe(system.salvageValue)
+  })
+
+  it('should get salvage value from chassis (in stats)', () => {
+    const chassis = SalvageUnionReference.Chassis.all()[0]
+    const salvageValue = getSalvageValue(chassis)
+
+    expect(salvageValue).toBeDefined()
+    expect(typeof salvageValue).toBe('number')
+    expect(salvageValue).toBe(chassis.salvageValue)
+  })
+
+  it('should return undefined for entities without salvage value', () => {
+    const ability = SalvageUnionReference.Abilities.all()[0]
+    const salvageValue = getSalvageValue(ability)
+
+    expect(salvageValue).toBeUndefined()
+  })
+})
+
+describe('getSlotsRequired', () => {
+  it('should get slots required from systems', () => {
+    const system = SalvageUnionReference.Systems.all()[0]
+    const slots = getSlotsRequired(system)
+
+    expect(slots).toBeDefined()
+    expect(typeof slots).toBe('number')
+    expect(slots).toBe(system.slotsRequired)
+  })
+
+  it('should return undefined for entities without slots required', () => {
+    const ability = SalvageUnionReference.Abilities.all()[0]
+    const slots = getSlotsRequired(ability)
+
+    expect(slots).toBeUndefined()
+  })
+})
+
+describe('SalvageUnionReference.getAllClasses', () => {
+  it('should return all classes from all types', () => {
+    const allClasses = SalvageUnionReference.getAllClasses()
+
+    expect(allClasses.length).toBeGreaterThan(0)
+
+    const coreCount = SalvageUnionReference.CoreClasses.all().length
+    const advancedCount = SalvageUnionReference.AdvancedClasses.all().length
+    const hybridCount = SalvageUnionReference.HybridClasses.all().length
+
+    expect(allClasses.length).toBe(coreCount + advancedCount + hybridCount)
+  })
+})
+
+describe('SalvageUnionReference.findClassById', () => {
+  it('should find a core class by ID', () => {
+    const coreClass = SalvageUnionReference.CoreClasses.all()[0]
+    const found = SalvageUnionReference.findClassById(coreClass.id)
+
+    expect(found).toBeDefined()
+    expect(found?.id).toBe(coreClass.id)
+  })
+
+  it('should find an advanced class by ID', () => {
+    const advancedClass = SalvageUnionReference.AdvancedClasses.all()[0]
+    const found = SalvageUnionReference.findClassById(advancedClass.id)
+
+    expect(found).toBeDefined()
+    expect(found?.id).toBe(advancedClass.id)
+  })
+
+  it('should return undefined for non-existent class', () => {
+    const found = SalvageUnionReference.findClassById('non-existent-class')
+    expect(found).toBeUndefined()
+  })
+})
+
+describe('SalvageUnionReference.getAbilitiesForClass', () => {
+  it('should get abilities for a class by tree names', () => {
+    const allAbilities = SalvageUnionReference.Abilities.all()
+    const uniqueTrees = [...new Set(allAbilities.map((a) => a.tree))]
+    const testTrees = uniqueTrees.slice(0, 2)
+
+    const abilities = SalvageUnionReference.getAbilitiesForClass(testTrees)
+
+    expect(abilities.length).toBeGreaterThan(0)
+    expect(abilities.every((a) => testTrees.includes(a.tree))).toBe(true)
+  })
+
+  it('should return empty array for non-existent trees', () => {
+    const abilities = SalvageUnionReference.getAbilitiesForClass([
+      'NonExistentTree',
+    ])
+    expect(abilities).toEqual([])
   })
 })

@@ -38,11 +38,7 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "name",
-            "systems",
-            "modules"
-          ],
+          "required": ["name", "systems", "modules"],
           "properties": {
             "name": {
               "type": "string",
@@ -73,10 +69,7 @@
               "type": "object",
               "description": "Optional drone configuration for this pattern",
               "additionalProperties": false,
-              "required": [
-                "systems",
-                "modules"
-              ],
+              "required": ["systems", "modules"],
               "properties": {
                 "systems": {
                   "type": "array",

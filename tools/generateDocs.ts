@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { SCHEMA_DISPLAY_NAME_MAP } from './schemaNameMap.js'
 
 interface SchemaInfo {
   id: string
@@ -9,6 +10,7 @@ interface SchemaInfo {
   schemaFile: string
   itemCount: number
   requiredFields: string[]
+  displayName: string
 }
 
 // Get version from package.json
@@ -104,6 +106,7 @@ function parseSchemaFile(schemaFile: string): SchemaInfo | null {
       schemaFile: `schemas/${schemaFile}`,
       itemCount: getItemCount(dataFile),
       requiredFields: getRequiredFields(schema, id),
+      displayName: SCHEMA_DISPLAY_NAME_MAP[id] || id,
     }
   } catch (error) {
     console.error(`Error parsing ${schemaFile}:`, error)
@@ -125,6 +128,7 @@ interface SchemaIndex {
     schemaFile: string
     itemCount: number
     requiredFields: string[]
+    displayName: string
   }>
 }
 
@@ -154,6 +158,7 @@ function generateSchemaIndex(schemas: SchemaInfo[]): void {
       schemaFile: s.schemaFile,
       itemCount: s.itemCount,
       requiredFields: s.requiredFields,
+      displayName: s.displayName,
     })),
   }
 

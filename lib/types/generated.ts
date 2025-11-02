@@ -186,10 +186,6 @@ export interface SURefMetaStats {
    * Salvage value in scrap
    */
   salvageValue: number
-  /**
-   * Additional notes about the stats
-   */
-  notes?: string
 }
 /**
  * NPC associated with an entity
@@ -307,6 +303,38 @@ export type SURefMetaChoices = SURefMetaChoice[]
  */
 export interface SURefMetaAction {
   /**
+   * Structure Points (SP) - the health/durability of the entity
+   */
+  structurePts?: number
+  /**
+   * Energy Points (EP) - the energy/power capacity of the entity
+   */
+  energyPts?: number
+  /**
+   * Heat Capacity - how much heat the entity can handle
+   */
+  heatCap?: number
+  /**
+   * Number of system slots available
+   */
+  systemSlots?: number
+  /**
+   * Number of module slots available
+   */
+  moduleSlots?: number
+  /**
+   * Cargo capacity
+   */
+  cargoCap?: number
+  /**
+   * Technology level (1-6)
+   */
+  techLevel?: number
+  /**
+   * Salvage value when scrapped
+   */
+  salvageValue?: number
+  /**
    * Name of the action
    */
   name: string
@@ -362,7 +390,6 @@ export interface SURefMetaAction {
    * Sub-actions or nested actions for this ability
    */
   actions?: SURefMetaAction[]
-  stats?: SURefMetaStats
 }
 /**
  * A system or module that can be installed on a mech
@@ -594,6 +621,7 @@ export type SURefAbility = SURefMetaEntry &
       | 'Short'
       | 'Long'
       | 'DownTime'
+    activationCurrency?: 'Variable'
   }
 
 // AbilityTreeRequirement
@@ -655,65 +683,34 @@ export type SURefBioTitan = SURefMetaEntry & {
 }
 
 // Chassis
-export type SURefChassis = SURefMetaEntry & {
-  actions: SURefMetaAction[]
-  /**
-   * Structure points (durability)
-   */
-  structurePts: number
-  /**
-   * Energy points (power capacity)
-   */
-  energyPts: number
-  /**
-   * Heat capacity
-   */
-  heatCap: number
-  /**
-   * Number of system slots
-   */
-  systemSlots: number
-  /**
-   * Number of module slots
-   */
-  moduleSlots: number
-  /**
-   * Cargo capacity
-   */
-  cargoCap: number
-  /**
-   * Technology level
-   */
-  techLevel: number
-  /**
-   * Salvage value in scrap
-   */
-  salvageValue: number
-  patterns: {
-    /**
-     * Name of the pattern
-     */
-    name: string
-    /**
-     * Description of the pattern
-     */
-    description?: string
-    /**
-     * Whether this pattern is legal for starting characters
-     */
-    legalStarting?: boolean
-    systems: SURefMetaPatternSystemModule[]
-    modules: SURefMetaPatternSystemModule[]
-    /**
-     * Optional drone configuration for this pattern
-     */
-    drone?: {
-      systems: string[]
-      modules: string[]
-    }
-  }[]
-  npc?: SURefMetaNpc
-}
+export type SURefChassis = SURefMetaEntry &
+  SURefMetaStats & {
+    actions: SURefMetaAction[]
+    patterns: {
+      /**
+       * Name of the pattern
+       */
+      name: string
+      /**
+       * Description of the pattern
+       */
+      description?: string
+      /**
+       * Whether this pattern is legal for starting characters
+       */
+      legalStarting?: boolean
+      systems: SURefMetaPatternSystemModule[]
+      modules: SURefMetaPatternSystemModule[]
+      /**
+       * Optional drone configuration for this pattern
+       */
+      drone?: {
+        systems: string[]
+        modules: string[]
+      }
+    }[]
+    npc?: SURefMetaNpc
+  }
 
 // AdvancedClass
 export type SURefAdvancedClass = SURefMetaEntry & {

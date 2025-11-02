@@ -1,6 +1,5 @@
 /**
- * Generate utility functions (type guards and property extractors) from schema catalog
- * This script analyzes the schema catalog and generates TypeScript utility functions
+ * Generate lib/utilities.ts from template by injecting dynamic schema-based code
  */
 
 import fs from 'fs'
@@ -72,7 +71,6 @@ function getActualRequiredFields(schemaId: string): string[] {
   // If the schema uses a $ref, we need to look up the definition
   if (schema.items?.$ref && typeof schema.items.$ref === 'string') {
     // Parse the $ref to get the file and definition path
-    // Example: "shared/objects.schema.json#/definitions/system"
     const refParts = schema.items.$ref.split('#')
     const refFile = refParts[0]
     const refPath = refParts[1]
@@ -111,6 +109,12 @@ function generateTypeGuards(): string {
     // Get actual required fields (excluding base fields)
     const requiredFields = getActualRequiredFields(schemaName)
 
+    // Format required fields as array literal
+    const fieldsArray =
+      requiredFields.length > 0
+        ? `[${requiredFields.map((f) => `'${f}'`).join(', ')}]`
+        : '[]'
+
     guards.push(`
 /**
  * Type guard to check if an entity is a ${singularName}
@@ -119,23 +123,11 @@ function generateTypeGuards(): string {
  * @returns True if the entity matches the ${singularName} type
  */
 export function is${singularName}(entity: SURefEntity): entity is ${typeName} {
-  if (!entity || typeof entity !== 'object') return false
-  ${generateRequiredFieldsCheck(requiredFields)}
-  return true
+  return hasRequiredFields(entity, ${fieldsArray})
 }`)
   }
 
   return guards.join('\n')
-}
-
-// Generate required fields check for type guard
-function generateRequiredFieldsCheck(requiredFields: string[]): string {
-  if (!requiredFields || requiredFields.length === 0) {
-    return '// No required fields to check'
-  }
-  return requiredFields
-    .map((field) => `if (!('${field}' in entity)) return false`)
-    .join('\n  ')
 }
 
 // Generate property extractor functions
@@ -176,7 +168,7 @@ function generatePropertyExtractors(
  * @returns The ${propName} value or undefined
  */
 export function ${functionName}(entity: SURefEntity): ${returnType} | undefined {
-  return '${propName}' in entity ? (entity as unknown as Record<string, ${returnType}>).${propName} : undefined
+  return extractProperty<${returnType}>(entity, '${propName}')
 }`)
   }
 
@@ -189,7 +181,7 @@ export function ${functionName}(entity: SURefEntity): ${returnType} | undefined 
  * @returns The page number or undefined
  */
 export function getPageReference(entity: SURefEntity): number | undefined {
-  return 'page' in entity ? (entity as unknown as Record<string, number>).page : undefined
+  return extractProperty<number>(entity, 'page')
 }`)
 
   return extractors.join('\n')
@@ -197,7 +189,16 @@ export function getPageReference(entity: SURefEntity): number | undefined {
 
 // Generate the utilities file
 function generateUtilitiesFile() {
-  console.log('🔧 Generating utility functions from schema catalog...\n')
+  console.log('🔧 Generating lib/utilities.ts from template...\n')
+
+  // Read the template file
+  const templatePath = path.join(
+    __dirname,
+    '..',
+    'lib',
+    'utilities.template.ts'
+  )
+  let template = fs.readFileSync(templatePath, 'utf-8')
 
   const propertyMap = analyzeSchemas()
 
@@ -220,34 +221,28 @@ function generateUtilitiesFile() {
     })
     .join(',\n')
 
-  const output = `/**
- * Auto-generated utility functions for Salvage Union entities
- * Generated from schema catalog
- * DO NOT EDIT MANUALLY - Run 'npm run generate:utilities' to regenerate
- */
-
-import type { SURefEntity } from './index.js'
-import type {
+  // Inject all dynamic parts into template
+  template = template.replace(
+    '// INJECT:TYPE_IMPORTS',
+    `import type {
 ${typeImports},
-} from './types/generated.js'
+} from './types/generated.js'`
+  )
 
-// ============================================================================
-// TYPE GUARDS
-// ============================================================================
-${typeGuards}
+  template = template.replace('// INJECT:TYPE_GUARDS', typeGuards)
 
-// ============================================================================
-// PROPERTY EXTRACTORS
-// ============================================================================
-${propertyExtractors}
-`
+  template = template.replace(
+    '// INJECT:PROPERTY_EXTRACTORS',
+    propertyExtractors
+  )
 
-  const outputPath = path.join(__dirname, '../lib/utilities.ts')
-  fs.writeFileSync(outputPath, output, 'utf-8')
+  // Write the generated file
+  const outputPath = path.join(__dirname, '..', 'lib', 'utilities.ts')
+  fs.writeFileSync(outputPath, template, 'utf-8')
 
-  console.log('✅ Utilities generated successfully!')
-  console.log(`📄 Output: ${outputPath}\n`)
+  console.log('✅ Generated lib/utilities.ts')
+  console.log(`   - ${schemaIndex.schemas.length} type guards`)
+  console.log(`   - ${propertyMap.size} properties analyzed`)
 }
 
-// Run the generator
 generateUtilitiesFile()

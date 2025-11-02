@@ -27,3 +27,32 @@ export const SCHEMA_NAME_MAP: Record<string, string> = {
   traits: 'Trait',
   vehicles: 'Vehicle',
 }
+
+/**
+ * Shared mapping from schema IDs to display names (plural form)
+ * Used for UI display and documentation
+ */
+export const SCHEMA_DISPLAY_NAME_MAP: Record<string, string> = {
+  abilities: 'Abilities',
+  'ability-tree-requirements': 'Ability Tree Requirements',
+  'bio-titans': 'Bio-Titans',
+  chassis: 'Chassis',
+  'classes.advanced': 'Advanced Classes',
+  'classes.core': 'Core Classes',
+  'classes.hybrid': 'Hybrid Classes',
+  'crawler-bays': 'Crawler Bays',
+  'crawler-tech-levels': 'Crawler Tech Levels',
+  crawlers: 'Crawlers',
+  creatures: 'Creatures',
+  drones: 'Drones',
+  equipment: 'Equipment',
+  keywords: 'Keywords',
+  meld: 'Meld',
+  modules: 'Modules',
+  npcs: 'NPCs',
+  'roll-tables': 'Roll Tables',
+  squads: 'Squads',
+  systems: 'Systems',
+  traits: 'Traits',
+  vehicles: 'Vehicles',
+}
