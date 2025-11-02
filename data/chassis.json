@@ -1784,10 +1784,7 @@
             "High Gain Antenna",
             "Cargo Pod"
           ],
-          "modules": [
-            "Survey Scanner",
-            "M315 Motion Scanner"
-          ]
+          "modules": ["Survey Scanner", "M315 Motion Scanner"]
         }
       },
       {
@@ -1816,15 +1813,8 @@
           }
         ],
         "drone": {
-          "systems": [
-            "Red Laser",
-            "Fabrication Arm",
-            "High Gain Antenna"
-          ],
-          "modules": [
-            "Survey Scanner",
-            "Damage Assessor"
-          ]
+          "systems": ["Red Laser", "Fabrication Arm", "High Gain Antenna"],
+          "modules": ["Survey Scanner", "Damage Assessor"]
         }
       },
       {
@@ -1853,13 +1843,8 @@
           }
         ],
         "drone": {
-          "systems": [
-            "Rail Rifle"
-          ],
-          "modules": [
-            "Reactor Overload",
-            "Laser Guidance"
-          ]
+          "systems": ["Rail Rifle"],
+          "modules": ["Reactor Overload", "Laser Guidance"]
         }
       }
     ],
