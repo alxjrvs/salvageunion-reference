@@ -1,545 +1,306 @@
 /**
- * Auto-generated utility functions for Salvage Union entities
- * Generated from schema catalog
- * DO NOT EDIT MANUALLY - Run 'npm run generate:utilities' to regenerate
+ * Utility functions for Salvage Union entities
+ * Manually defined type guards and property extractors
  */
 
 import type { SURefEntity } from './index.js'
+import type { SURefMetaEntity } from './types/generated.js'
 import type {
   SURefAbility,
-  SURefAbilityTreeRequirement,
-  SURefBioTitan,
-  SURefChassis,
   SURefAdvancedClass,
+  SURefChassis,
   SURefCoreClass,
   SURefHybridClass,
-  SURefCrawlerBay,
-  SURefCrawlerTechLevel,
-  SURefCrawler,
-  SURefCreature,
-  SURefDrone,
-  SURefEquipment,
-  SURefKeyword,
-  SURefMeld,
   SURefModule,
-  SURefNPC,
-  SURefRollTable,
-  SURefSquad,
   SURefSystem,
-  SURefTrait,
-  SURefVehicle,
 } from './types/generated.js'
 
 // ============================================================================
-// TYPE GUARD HELPERS
+// TYPE UTILITIES
 // ============================================================================
 
 /**
- * Helper function to check if an entity has all required fields
- * @param entity - The entity to check
- * @param requiredFields - Array of required field names
- * @returns True if entity is valid and has all required fields
+ * Get all possible keys from a union type
  */
-
-function hasRequiredFields(
-  entity: unknown,
-  requiredFields: string[]
-): entity is SURefEntity {
-  if (!entity || typeof entity !== 'object') return false
-  return requiredFields.every((field) => field in entity)
-}
-
-// ============================================================================
-// TYPE GUARDS
-// ============================================================================
+type AllKeys<T> = T extends unknown ? keyof T : never
 
 /**
- * Type guard to check if an entity is a Ability
- * Checks if the entity has the required fields for the 'abilities' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Ability type
+ * All possible property keys across all SURefMetaEntity types
  */
-export function isAbility(entity: SURefEntity): entity is SURefAbility {
-  return hasRequiredFields(entity, ['tree', 'level'])
-}
+type SURefMetaEntityKeys = AllKeys<SURefMetaEntity>
 
 /**
- * Type guard to check if an entity is a AbilityTreeRequirement
- * Checks if the entity has the required fields for the 'ability-tree-requirements' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the AbilityTreeRequirement type
+ * Get the type of a property across all types in the union
+ * Returns the union of all possible types for that property
  */
-export function isAbilityTreeRequirement(
-  entity: SURefEntity
-): entity is SURefAbilityTreeRequirement {
-  return hasRequiredFields(entity, ['requirement'])
-}
-
-/**
- * Type guard to check if an entity is a BioTitan
- * Checks if the entity has the required fields for the 'bio-titans' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the BioTitan type
- */
-export function isBioTitan(entity: SURefEntity): entity is SURefBioTitan {
-  return hasRequiredFields(entity, ['structurePoints', 'actions'])
-}
-
-/**
- * Type guard to check if an entity is a Chassis
- * Checks if the entity has the required fields for the 'chassis' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Chassis type
- */
-export function isChassis(entity: SURefEntity): entity is SURefChassis {
-  return hasRequiredFields(entity, [
-    'actions',
-    'patterns',
-    'structurePts',
-    'energyPts',
-    'heatCap',
-    'systemSlots',
-    'moduleSlots',
-    'cargoCap',
-    'techLevel',
-    'salvageValue',
-  ])
-}
-
-/**
- * Type guard to check if an entity is a AdvancedClass
- * Checks if the entity has the required fields for the 'classes.advanced' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the AdvancedClass type
- */
-export function isAdvancedClass(
-  entity: SURefEntity
-): entity is SURefAdvancedClass {
-  return hasRequiredFields(entity, ['advancedTree', 'legendaryTree'])
-}
-
-/**
- * Type guard to check if an entity is a CoreClass
- * Checks if the entity has the required fields for the 'classes.core' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the CoreClass type
- */
-export function isCoreClass(entity: SURefEntity): entity is SURefCoreClass {
-  return hasRequiredFields(entity, ['maxAbilities', 'advanceable', 'coreTrees'])
-}
-
-/**
- * Type guard to check if an entity is a HybridClass
- * Checks if the entity has the required fields for the 'classes.hybrid' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the HybridClass type
- */
-export function isHybridClass(entity: SURefEntity): entity is SURefHybridClass {
-  return hasRequiredFields(entity, ['advancedTree', 'legendaryTree'])
-}
-
-/**
- * Type guard to check if an entity is a CrawlerBay
- * Checks if the entity has the required fields for the 'crawler-bays' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the CrawlerBay type
- */
-export function isCrawlerBay(entity: SURefEntity): entity is SURefCrawlerBay {
-  return hasRequiredFields(entity, [
-    'damagedEffect',
-    'npc',
-    'actions',
-    'techLevelEffects',
-  ])
-}
-
-/**
- * Type guard to check if an entity is a CrawlerTechLevel
- * Checks if the entity has the required fields for the 'crawler-tech-levels' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the CrawlerTechLevel type
- */
-export function isCrawlerTechLevel(
-  entity: SURefEntity
-): entity is SURefCrawlerTechLevel {
-  return hasRequiredFields(entity, [
-    'techLevel',
-    'structurePoints',
-    'populationMin',
-    'populationMax',
-  ])
-}
-
-/**
- * Type guard to check if an entity is a Crawler
- * Checks if the entity has the required fields for the 'crawlers' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Crawler type
- */
-export function isCrawler(entity: SURefEntity): entity is SURefCrawler {
-  return hasRequiredFields(entity, ['npc', 'actions'])
-}
-
-/**
- * Type guard to check if an entity is a Creature
- * Checks if the entity has the required fields for the 'creatures' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Creature type
- */
-export function isCreature(entity: SURefEntity): entity is SURefCreature {
-  return hasRequiredFields(entity, ['hitPoints', 'actions'])
-}
-
-/**
- * Type guard to check if an entity is a Drone
- * Checks if the entity has the required fields for the 'drones' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Drone type
- */
-export function isDrone(entity: SURefEntity): entity is SURefDrone {
-  return hasRequiredFields(entity, [
-    'structurePoints',
-    'techLevel',
-    'salvageValue',
-    'systems',
-  ])
-}
-
-/**
- * Type guard to check if an entity is a Equipment
- * Checks if the entity has the required fields for the 'equipment' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Equipment type
- */
-export function isEquipment(entity: SURefEntity): entity is SURefEquipment {
-  return hasRequiredFields(entity, ['techLevel'])
-}
-
-/**
- * Type guard to check if an entity is a Keyword
- * Checks if the entity has the required fields for the 'keywords' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Keyword type
- */
-export function isKeyword(entity: SURefEntity): entity is SURefKeyword {
-  return hasRequiredFields(entity, [])
-}
-
-/**
- * Type guard to check if an entity is a Meld
- * Checks if the entity has the required fields for the 'meld' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Meld type
- */
-export function isMeld(entity: SURefEntity): entity is SURefMeld {
-  return hasRequiredFields(entity, ['actions'])
-}
-
-/**
- * Type guard to check if an entity is a Module
- * Checks if the entity has the required fields for the 'modules' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Module type
- */
-export function isModule(entity: SURefEntity): entity is SURefModule {
-  return hasRequiredFields(entity, [
-    'actions',
-    'salvageValue',
-    'slotsRequired',
-    'techLevel',
-  ])
-}
-
-/**
- * Type guard to check if an entity is a NPC
- * Checks if the entity has the required fields for the 'npcs' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the NPC type
- */
-export function isNPC(entity: SURefEntity): entity is SURefNPC {
-  return hasRequiredFields(entity, ['hitPoints', 'actions'])
-}
-
-/**
- * Type guard to check if an entity is a RollTable
- * Checks if the entity has the required fields for the 'roll-tables' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the RollTable type
- */
-export function isRollTable(entity: SURefEntity): entity is SURefRollTable {
-  return hasRequiredFields(entity, ['section', 'table'])
-}
-
-/**
- * Type guard to check if an entity is a Squad
- * Checks if the entity has the required fields for the 'squads' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Squad type
- */
-export function isSquad(entity: SURefEntity): entity is SURefSquad {
-  return hasRequiredFields(entity, ['actions'])
-}
-
-/**
- * Type guard to check if an entity is a System
- * Checks if the entity has the required fields for the 'systems' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the System type
- */
-export function isSystem(entity: SURefEntity): entity is SURefSystem {
-  return hasRequiredFields(entity, [
-    'actions',
-    'salvageValue',
-    'slotsRequired',
-    'techLevel',
-  ])
-}
-
-/**
- * Type guard to check if an entity is a Trait
- * Checks if the entity has the required fields for the 'traits' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Trait type
- */
-export function isTrait(entity: SURefEntity): entity is SURefTrait {
-  return hasRequiredFields(entity, [])
-}
-
-/**
- * Type guard to check if an entity is a Vehicle
- * Checks if the entity has the required fields for the 'vehicles' schema
- * @param entity - The entity to check
- * @returns True if the entity matches the Vehicle type
- */
-export function isVehicle(entity: SURefEntity): entity is SURefVehicle {
-  return hasRequiredFields(entity, [
-    'structurePoints',
-    'techLevel',
-    'salvageValue',
-    'systems',
-  ])
-}
-
-// ============================================================================
-// PROPERTY EXTRACTOR HELPERS
-// ============================================================================
-
-/**
- * Generic helper to extract a property from an entity
- * @param entity - The entity to extract from
- * @param propertyName - The property name to extract
- * @returns The property value or undefined
- */
-
-function extractProperty<T>(
-  entity: SURefEntity,
-  propertyName: string
-): T | undefined {
-  return propertyName in entity
-    ? (entity as unknown as Record<string, T>)[propertyName]
-    : undefined
-}
+type PropertyType<T, K extends PropertyKey> = T extends unknown
+  ? K extends keyof T
+    ? T[K]
+    : never
+  : never
 
 // ============================================================================
 // PROPERTY EXTRACTORS
 // ============================================================================
 
 /**
- * Extract structurePoints from an entity if it exists
- * Supported schemas: bio-titans, crawler-tech-levels, drones, meld, vehicles
+ * Type-safe property extractor for SURefMetaEntity
  * @param entity - The entity to extract from
- * @returns The structurePoints value or undefined
+ * @param propertyName - The property name to extract
+ * @returns The property value or undefined if not present
  */
-export function getStructurePoints(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'structurePoints')
+export function extractProperty<K extends SURefMetaEntityKeys>(
+  entity: SURefMetaEntity,
+  propertyName: K
+): PropertyType<SURefMetaEntity, K> | undefined {
+  if (entity !== null && typeof entity === 'object' && propertyName in entity) {
+    return (entity as unknown as Record<string, unknown>)[
+      propertyName as string
+    ] as PropertyType<SURefMetaEntity, K>
+  }
+  return undefined
 }
 
 /**
- * Extract actions from an entity if it exists
- * Supported schemas: bio-titans, chassis, crawler-bays, crawlers, creatures, equipment, meld, npcs, squads
+ * Extract tech level from an entity
  * @param entity - The entity to extract from
- * @returns The actions value or undefined
+ * @returns The tech level or undefined
  */
-export function getActions(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'actions')
+export function getTechLevel(entity: SURefMetaEntity): number | undefined {
+  if ('techLevel' in entity && typeof entity.techLevel === 'number') {
+    return entity.techLevel
+  }
+  // Check stats object for chassis
+  if (
+    'stats' in entity &&
+    entity.stats &&
+    typeof entity.stats === 'object' &&
+    'techLevel' in entity.stats &&
+    typeof entity.stats.techLevel === 'number'
+  ) {
+    return entity.stats.techLevel
+  }
+  return undefined
 }
 
 /**
- * Extract traits from an entity if it exists
- * Supported schemas: bio-titans, creatures, equipment, meld, npcs, squads, vehicles
+ * Extract salvage value from an entity
  * @param entity - The entity to extract from
- * @returns The traits value or undefined
+ * @returns The salvage value or undefined
  */
-export function getTraits(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'traits')
-}
-
-/**
- * Extract npc from an entity if it exists
- * Supported schemas: chassis, crawler-bays, crawlers
- * @param entity - The entity to extract from
- * @returns The npc value or undefined
- */
-export function getNpc(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'npc')
-}
-
-/**
- * Extract advancedTree from an entity if it exists
- * Supported schemas: classes.advanced, classes.hybrid
- * @param entity - The entity to extract from
- * @returns The advancedTree value or undefined
- */
-export function getAdvancedTree(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'advancedTree')
-}
-
-/**
- * Extract legendaryTree from an entity if it exists
- * Supported schemas: classes.advanced, classes.hybrid
- * @param entity - The entity to extract from
- * @returns The legendaryTree value or undefined
- */
-export function getLegendaryTree(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'legendaryTree')
-}
-
-/**
- * Extract table from an entity if it exists
- * Supported schemas: crawler-bays, equipment, roll-tables
- * @param entity - The entity to extract from
- * @returns The table value or undefined
- */
-export function getTable(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'table')
-}
-
-/**
- * Extract techLevel from an entity if it exists
- * Supported schemas: crawler-tech-levels, drones, equipment, vehicles
- * @param entity - The entity to extract from
- * @returns The techLevel value or undefined
- */
-export function getTechLevel(entity: SURefEntity): number | undefined {
-  return extractProperty<number>(entity, 'techLevel')
-}
-
-/**
- * Extract hitPoints from an entity if it exists
- * Supported schemas: creatures, meld, npcs, squads
- * @param entity - The entity to extract from
- * @returns The hitPoints value or undefined
- */
-export function getHitPoints(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'hitPoints')
-}
-
-/**
- * Extract salvageValue from an entity if it exists
- * Supported schemas: drones, meld, vehicles
- * @param entity - The entity to extract from
- * @returns The salvageValue value or undefined
- */
-export function getSalvageValue(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'salvageValue')
-}
-
-/**
- * Extract systems from an entity if it exists
- * Supported schemas: drones, vehicles
- * @param entity - The entity to extract from
- * @returns The systems value or undefined
- */
-export function getSystems(entity: SURefEntity): unknown | undefined {
-  return extractProperty<unknown>(entity, 'systems')
-}
-
-/**
- * Extract page reference from an entity
- * All entities have a page reference from the entry definition
- * @param entity - The entity to extract from
- * @returns The page number or undefined
- */
-export function getPageReference(entity: SURefEntity): number | undefined {
-  return extractProperty<number>(entity, 'page')
-}
-
-// ============================================================================
-// ADDITIONAL TYPE GUARDS FOR COMMON PATTERNS
-// ============================================================================
-
-/**
- * Type guard to check if an entity has a techLevel property
- * Entities with techLevel: Chassis, Systems, Modules, Drones, Vehicles
- * @param entity - The entity to check
- * @returns True if the entity has a techLevel property
- */
-export function hasTechLevel(
-  entity: SURefEntity
-): entity is SURefEntity & { techLevel: number } {
-  return 'techLevel' in entity && typeof entity.techLevel === 'number'
-}
-
-/**
- * Type guard to check if an entity has a salvageValue property
- * Entities with salvageValue: Chassis, Systems, Modules, Drones, Vehicles, Meld
- * @param entity - The entity to check
- * @returns True if the entity has a salvageValue property
- */
-export function hasSalvageValue(
-  entity: SURefEntity
-): entity is SURefEntity & { salvageValue: number } {
-  return 'salvageValue' in entity && typeof entity.salvageValue === 'number'
-}
-
-/**
- * Type guard to check if an entity has a slotsRequired property
- * Entities with slotsRequired: Systems, Modules
- * @param entity - The entity to check
- * @returns True if the entity has a slotsRequired property
- */
-export function hasSlotsRequired(
-  entity: SURefEntity
-): entity is SURefEntity & { slotsRequired: number } {
-  return 'slotsRequired' in entity && typeof entity.slotsRequired === 'number'
+export function getSalvageValue(entity: SURefMetaEntity): number | undefined {
+  if ('salvageValue' in entity && typeof entity.salvageValue === 'number') {
+    return entity.salvageValue
+  }
+  // Check stats object for chassis
+  if (
+    'stats' in entity &&
+    entity.stats &&
+    typeof entity.stats === 'object' &&
+    'salvageValue' in entity.stats &&
+    typeof entity.stats.salvageValue === 'number'
+  ) {
+    return entity.stats.salvageValue
+  }
+  return undefined
 }
 
 /**
  * Extract slots required from an entity
- * Entities with slotsRequired: Systems, Modules
  * @param entity - The entity to extract from
- * @returns The slotsRequired value or undefined
+ * @returns The slots required or undefined
  */
-export function getSlotsRequired(entity: SURefEntity): number | undefined {
+export function getSlotsRequired(entity: SURefMetaEntity): number | undefined {
   return 'slotsRequired' in entity && typeof entity.slotsRequired === 'number'
     ? entity.slotsRequired
     : undefined
 }
 
 /**
+ * Extract page reference from an entity
+ * @param entity - The entity to extract from
+ * @returns The page number or undefined
+ */
+export function getPageReference(entity: SURefMetaEntity): number | undefined {
+  return 'page' in entity && typeof entity.page === 'number'
+    ? entity.page
+    : undefined
+}
+
+// ============================================================================
+// TYPE GUARDS - Property-based
+// ============================================================================
+
+/**
+ * Type guard to check if an entity has a techLevel property
+ * @param entity - The entity to check
+ * @returns True if the entity has a techLevel property
+ */
+export function hasTechLevel(
+  entity: SURefMetaEntity
+): entity is SURefMetaEntity & { techLevel: number } {
+  return 'techLevel' in entity && typeof entity.techLevel === 'number'
+}
+
+/**
+ * Type guard to check if an entity has a salvageValue property
+ * @param entity - The entity to check
+ * @returns True if the entity has a salvageValue property
+ */
+export function hasSalvageValue(
+  entity: SURefMetaEntity
+): entity is SURefMetaEntity & { salvageValue: number } {
+  return 'salvageValue' in entity && typeof entity.salvageValue === 'number'
+}
+
+/**
+ * Type guard to check if an entity has a slotsRequired property
+ * @param entity - The entity to check
+ * @returns True if the entity has a slotsRequired property
+ */
+export function hasSlotsRequired(
+  entity: SURefMetaEntity
+): entity is SURefMetaEntity & { slotsRequired: number } {
+  return 'slotsRequired' in entity && typeof entity.slotsRequired === 'number'
+}
+
+/**
  * Type guard to check if an entity has actions
- * Entities with actions: Chassis, Bio-Titans, Crawler Bays, Creatures, Meld, Modules, NPCs, Squads, Systems
  * @param entity - The entity to check
  * @returns True if the entity has an actions array
  */
 export function hasActions(
-  entity: SURefEntity
-): entity is SURefEntity & { actions: unknown[] } {
+  entity: SURefMetaEntity
+): entity is SURefMetaEntity & { actions: unknown[] } {
   return 'actions' in entity && Array.isArray(entity.actions)
 }
 
 /**
  * Type guard to check if an entity has traits
- * Entities with traits: Creatures, Meld, Modules, NPCs, Squads, Systems, Vehicles
  * @param entity - The entity to check
- * @returns True if the entity has a traits array
+ * @returns True if the entity has a traits property
  */
 export function hasTraits(
-  entity: SURefEntity
-): entity is SURefEntity & { traits?: unknown[] } {
+  entity: SURefMetaEntity
+): entity is SURefMetaEntity & { traits?: unknown[] } {
   return (
     'traits' in entity &&
     (entity.traits === undefined || Array.isArray(entity.traits))
+  )
+}
+
+// ============================================================================
+// TYPE GUARDS - Schema-specific
+// ============================================================================
+
+/**
+ * Type guard to check if an entity is an Ability
+ * @param entity - The entity to check
+ * @returns True if the entity is an Ability
+ */
+export function isAbility(entity: SURefEntity): entity is SURefAbility {
+  return (
+    entity !== null &&
+    typeof entity === 'object' &&
+    'tree' in entity &&
+    'level' in entity
+  )
+}
+
+/**
+ * Type guard to check if an entity is a System
+ * Note: Systems and Modules share the same schema, so this checks for
+ * the presence of required system/module properties
+ * @param entity - The entity to check
+ * @returns True if the entity is a System
+ */
+export function isSystem(entity: SURefEntity): entity is SURefSystem {
+  return (
+    entity !== null &&
+    typeof entity === 'object' &&
+    'techLevel' in entity &&
+    'salvageValue' in entity &&
+    'slotsRequired' in entity &&
+    'actions' in entity
+  )
+}
+
+/**
+ * Type guard to check if an entity is a Module
+ * Note: Systems and Modules share the same schema, so this checks for
+ * the presence of required system/module properties
+ * @param entity - The entity to check
+ * @returns True if the entity is a Module
+ */
+export function isModule(entity: SURefEntity): entity is SURefModule {
+  return (
+    entity !== null &&
+    typeof entity === 'object' &&
+    'techLevel' in entity &&
+    'salvageValue' in entity &&
+    'slotsRequired' in entity &&
+    'actions' in entity
+  )
+}
+
+/**
+ * Type guard to check if an entity is a Chassis
+ * @param entity - The entity to check
+ * @returns True if the entity is a Chassis
+ */
+export function isChassis(entity: SURefEntity): entity is SURefChassis {
+  return (
+    entity !== null &&
+    typeof entity === 'object' &&
+    'patterns' in entity &&
+    'structurePts' in entity &&
+    'energyPts' in entity &&
+    'heatCap' in entity
+  )
+}
+
+/**
+ * Type guard to check if an entity is a Core Class
+ * @param entity - The entity to check
+ * @returns True if the entity is a Core Class
+ */
+export function isCoreClass(entity: SURefEntity): entity is SURefCoreClass {
+  return (
+    entity !== null &&
+    typeof entity === 'object' &&
+    'maxAbilities' in entity &&
+    'coreTrees' in entity &&
+    'advanceable' in entity
+  )
+}
+
+/**
+ * Type guard to check if an entity is an Advanced Class
+ * @param entity - The entity to check
+ * @returns True if the entity is an Advanced Class
+ */
+export function isAdvancedClass(
+  entity: SURefEntity
+): entity is SURefAdvancedClass {
+  return (
+    entity !== null &&
+    typeof entity === 'object' &&
+    'advancedTree' in entity &&
+    !('hybridTree' in entity)
+  )
+}
+
+/**
+ * Type guard to check if an entity is a Hybrid Class
+ * @param entity - The entity to check
+ * @returns True if the entity is a Hybrid Class
+ */
+export function isHybridClass(entity: SURefEntity): entity is SURefHybridClass {
+  return (
+    entity !== null &&
+    typeof entity === 'object' &&
+    'advancedTree' in entity &&
+    'hybridTree' in entity
   )
 }
 
