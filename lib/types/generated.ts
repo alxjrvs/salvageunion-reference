@@ -157,15 +157,15 @@ export interface SURefMetaStats {
   /**
    * Structure points (durability)
    */
-  structurePts: number
+  structurePoints: number
   /**
    * Energy points (power capacity)
    */
-  energyPts: number
+  energyPoints: number
   /**
    * Heat capacity
    */
-  heatCap: number
+  heatCapacity: number
   /**
    * Number of system slots
    */
@@ -177,7 +177,7 @@ export interface SURefMetaStats {
   /**
    * Cargo capacity
    */
-  cargoCap: number
+  cargoCapacity: number
   /**
    * Technology level
    */
@@ -305,15 +305,15 @@ export interface SURefMetaAction {
   /**
    * Structure Points (SP) - the health/durability of the entity
    */
-  structurePts?: number
+  structurePoints?: number
   /**
    * Energy Points (EP) - the energy/power capacity of the entity
    */
-  energyPts?: number
+  energyPoints?: number
   /**
    * Heat Capacity - how much heat the entity can handle
    */
-  heatCap?: number
+  heatCapacity?: number
   /**
    * Number of system slots available
    */
@@ -325,7 +325,7 @@ export interface SURefMetaAction {
   /**
    * Cargo capacity
    */
-  cargoCap?: number
+  cargoCapacity?: number
   /**
    * Technology level (1-6)
    */
@@ -441,19 +441,6 @@ export type SURefMetaSystem = SURefMetaEntry & {
    * Actions that can be performed with this system
    */
   actions: SURefMetaAction[]
-  /**
-   * Bonus to a specific stat
-   */
-  statBonus?: {
-    /**
-     * Name of the stat to bonus
-     */
-    stat: string
-    /**
-     * Amount of bonus to apply
-     */
-    bonus: number
-  }
   /**
    * Number of this system included
    */
@@ -1365,19 +1352,6 @@ export type SURefModule = SURefMetaEntry & {
    */
   actions: SURefMetaAction[]
   /**
-   * Bonus to a specific stat
-   */
-  statBonus?: {
-    /**
-     * Name of the stat to bonus
-     */
-    stat: string
-    /**
-     * Amount of bonus to apply
-     */
-    bonus: number
-  }
-  /**
    * Number of this system included
    */
   count?: number
@@ -1611,19 +1585,6 @@ export type SURefSystem = SURefMetaEntry & {
    * Actions that can be performed with this system
    */
   actions: SURefMetaAction[]
-  /**
-   * Bonus to a specific stat
-   */
-  statBonus?: {
-    /**
-     * Name of the stat to bonus
-     */
-    stat: string
-    /**
-     * Amount of bonus to apply
-     */
-    bonus: number
-  }
   /**
    * Number of this system included
    */

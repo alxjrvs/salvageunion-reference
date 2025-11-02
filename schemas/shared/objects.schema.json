@@ -38,9 +38,17 @@
         "required": ["type"],
         "properties": {
           "amount": {
-            "type": "integer",
-            "minimum": 0,
-            "description": "Numeric value for the trait"
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Numeric value for the trait"
+              },
+              {
+                "type": "string",
+                "description": "Variable value for the trait"
+              }
+            ]
           },
           "type": {
             "type": "string",
@@ -53,27 +61,27 @@
       "type": "object",
       "description": "Statistics for mechs, chassis, and vehicles",
       "required": [
-        "structurePts",
-        "energyPts",
-        "heatCap",
+        "structurePoints",
+        "energyPoints",
+        "heatCapacity",
         "systemSlots",
         "moduleSlots",
-        "cargoCap",
+        "cargoCapacity",
         "techLevel",
         "salvageValue"
       ],
       "properties": {
-        "structurePts": {
+        "structurePoints": {
           "type": "integer",
           "minimum": 0,
           "description": "Structure points (durability)"
         },
-        "energyPts": {
+        "energyPoints": {
           "type": "integer",
           "minimum": 0,
           "description": "Energy points (power capacity)"
         },
-        "heatCap": {
+        "heatCapacity": {
           "type": "integer",
           "minimum": 0,
           "description": "Heat capacity"
@@ -88,7 +96,7 @@
           "minimum": 0,
           "description": "Number of module slots"
         },
-        "cargoCap": {
+        "cargoCapacity": {
           "type": "integer",
           "minimum": 0,
           "description": "Cargo capacity"
@@ -231,15 +239,15 @@
       "description": "An action, ability, or attack that can be performed",
       "required": ["name"],
       "properties": {
-        "structurePts": {
+        "structurePoints": {
           "type": "number",
           "description": "Structure Points (SP) - the health/durability of the entity"
         },
-        "energyPts": {
+        "energyPoints": {
           "type": "number",
           "description": "Energy Points (EP) - the energy/power capacity of the entity"
         },
-        "heatCap": {
+        "heatCapacity": {
           "type": "number",
           "description": "Heat Capacity - how much heat the entity can handle"
         },
@@ -251,7 +259,7 @@
           "type": "number",
           "description": "Number of module slots available"
         },
-        "cargoCap": {
+        "cargoCapacity": {
           "type": "number",
           "description": "Cargo capacity"
         },
@@ -386,22 +394,6 @@
           "description": "Actions that can be performed with this system",
           "items": {
             "$ref": "#/definitions/action"
-          }
-        },
-        "statBonus": {
-          "type": "object",
-          "description": "Bonus to a specific stat",
-          "additionalProperties": false,
-          "required": ["stat", "bonus"],
-          "properties": {
-            "stat": {
-              "type": "string",
-              "description": "Name of the stat to bonus"
-            },
-            "bonus": {
-              "type": "integer",
-              "description": "Amount of bonus to apply"
-            }
           }
         },
         "count": {

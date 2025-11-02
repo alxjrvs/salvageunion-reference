@@ -9,12 +9,12 @@
     "required": [
       "actions",
       "patterns",
-      "structurePts",
-      "energyPts",
-      "heatCap",
+      "structurePoints",
+      "energyPoints",
+      "heatCapacity",
       "systemSlots",
       "moduleSlots",
-      "cargoCap",
+      "cargoCapacity",
       "techLevel",
       "salvageValue"
     ],

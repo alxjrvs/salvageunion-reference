@@ -3,8 +3,7 @@
  * Manually defined type guards and property extractors
  */
 
-import type { SURefEntity } from './index.js'
-import type { SURefMetaEntity } from './types/generated.js'
+import type { SURefMetaEntity, SURefMetaAction } from './types/generated.js'
 import type {
   SURefAbility,
   SURefAdvancedClass,
@@ -67,20 +66,9 @@ export function extractProperty<K extends SURefMetaEntityKeys>(
  * @returns The tech level or undefined
  */
 export function getTechLevel(entity: SURefMetaEntity): number | undefined {
-  if ('techLevel' in entity && typeof entity.techLevel === 'number') {
-    return entity.techLevel
-  }
-  // Check stats object for chassis
-  if (
-    'stats' in entity &&
-    entity.stats &&
-    typeof entity.stats === 'object' &&
-    'techLevel' in entity.stats &&
-    typeof entity.stats.techLevel === 'number'
-  ) {
-    return entity.stats.techLevel
-  }
-  return undefined
+  return 'techLevel' in entity && typeof entity.techLevel === 'number'
+    ? entity.techLevel
+    : undefined
 }
 
 /**
@@ -89,20 +77,9 @@ export function getTechLevel(entity: SURefMetaEntity): number | undefined {
  * @returns The salvage value or undefined
  */
 export function getSalvageValue(entity: SURefMetaEntity): number | undefined {
-  if ('salvageValue' in entity && typeof entity.salvageValue === 'number') {
-    return entity.salvageValue
-  }
-  // Check stats object for chassis
-  if (
-    'stats' in entity &&
-    entity.stats &&
-    typeof entity.stats === 'object' &&
-    'salvageValue' in entity.stats &&
-    typeof entity.stats.salvageValue === 'number'
-  ) {
-    return entity.stats.salvageValue
-  }
-  return undefined
+  return 'salvageValue' in entity && typeof entity.salvageValue === 'number'
+    ? entity.salvageValue
+    : undefined
 }
 
 /**
@@ -117,6 +94,15 @@ export function getSlotsRequired(entity: SURefMetaEntity): number | undefined {
 }
 
 /**
+ * Extract required slots from an entity (alias for getSlotsRequired)
+ * @param entity - The entity to extract from
+ * @returns The required slots or undefined
+ */
+export function getRequiredSlots(entity: SURefMetaEntity): number | undefined {
+  return getSlotsRequired(entity)
+}
+
+/**
  * Extract page reference from an entity
  * @param entity - The entity to extract from
  * @returns The page number or undefined
@@ -124,6 +110,100 @@ export function getSlotsRequired(entity: SURefMetaEntity): number | undefined {
 export function getPageReference(entity: SURefMetaEntity): number | undefined {
   return 'page' in entity && typeof entity.page === 'number'
     ? entity.page
+    : undefined
+}
+
+/**
+ * Extract actions from an entity
+ * @param entity - The entity to extract from
+ * @returns The actions array or undefined
+ */
+export function extractActions(
+  entity: SURefMetaEntity
+): SURefMetaAction[] | undefined {
+  return 'actions' in entity && Array.isArray(entity.actions)
+    ? entity.actions
+    : undefined
+}
+
+/**
+ * Extract structure points from an entity
+ * @param entity - The entity to extract from
+ * @returns The structure points or undefined
+ */
+export function getStructurePoints(
+  entity: SURefMetaEntity
+): number | undefined {
+  return 'structurePoints' in entity &&
+    typeof entity.structurePoints === 'number'
+    ? entity.structurePoints
+    : undefined
+}
+
+/**
+ * Extract energy points from an entity
+ * @param entity - The entity to extract from
+ * @returns The energy points or undefined
+ */
+export function getEnergyPoints(entity: SURefMetaEntity): number | undefined {
+  return 'energyPoints' in entity && typeof entity.energyPoints === 'number'
+    ? entity.energyPoints
+    : undefined
+}
+
+/**
+ * Extract heat capacity from an entity
+ * @param entity - The entity to extract from
+ * @returns The heat capacity or undefined
+ */
+export function getHeatCapacity(entity: SURefMetaEntity): number | undefined {
+  return 'heatCapacity' in entity && typeof entity.heatCapacity === 'number'
+    ? entity.heatCapacity
+    : undefined
+}
+
+/**
+ * Extract system slots from an entity
+ * @param entity - The entity to extract from
+ * @returns The number of system slots or undefined
+ */
+export function getSystemSlots(entity: SURefMetaEntity): number | undefined {
+  return 'systemSlots' in entity && typeof entity.systemSlots === 'number'
+    ? entity.systemSlots
+    : undefined
+}
+
+/**
+ * Extract module slots from an entity
+ * @param entity - The entity to extract from
+ * @returns The number of module slots or undefined
+ */
+export function getModuleSlots(entity: SURefMetaEntity): number | undefined {
+  return 'moduleSlots' in entity && typeof entity.moduleSlots === 'number'
+    ? entity.moduleSlots
+    : undefined
+}
+
+/**
+ * Extract cargo capacity from an entity
+ * @param entity - The entity to extract from
+ * @returns The cargo capacity or undefined
+ */
+export function getCargoCapacity(entity: SURefMetaEntity): number | undefined {
+  return 'cargoCapacity' in entity && typeof entity.cargoCapacity === 'number'
+    ? entity.cargoCapacity
+    : undefined
+}
+
+/**
+ * Extract hit points from an entity
+ * Used for NPCs, Creatures, Squads, and Meld
+ * @param entity - The entity to extract from
+ * @returns The hit points or undefined
+ */
+export function getHitPoints(entity: SURefMetaEntity): number | undefined {
+  return 'hitPoints' in entity && typeof entity.hitPoints === 'number'
+    ? entity.hitPoints
     : undefined
 }
 
@@ -198,7 +278,7 @@ export function hasTraits(
  * @param entity - The entity to check
  * @returns True if the entity is an Ability
  */
-export function isAbility(entity: SURefEntity): entity is SURefAbility {
+export function isAbility(entity: SURefMetaEntity): entity is SURefAbility {
   return (
     entity !== null &&
     typeof entity === 'object' &&
@@ -214,7 +294,7 @@ export function isAbility(entity: SURefEntity): entity is SURefAbility {
  * @param entity - The entity to check
  * @returns True if the entity is a System
  */
-export function isSystem(entity: SURefEntity): entity is SURefSystem {
+export function isSystem(entity: SURefMetaEntity): entity is SURefSystem {
   return (
     entity !== null &&
     typeof entity === 'object' &&
@@ -232,7 +312,7 @@ export function isSystem(entity: SURefEntity): entity is SURefSystem {
  * @param entity - The entity to check
  * @returns True if the entity is a Module
  */
-export function isModule(entity: SURefEntity): entity is SURefModule {
+export function isModule(entity: SURefMetaEntity): entity is SURefModule {
   return (
     entity !== null &&
     typeof entity === 'object' &&
@@ -248,14 +328,14 @@ export function isModule(entity: SURefEntity): entity is SURefModule {
  * @param entity - The entity to check
  * @returns True if the entity is a Chassis
  */
-export function isChassis(entity: SURefEntity): entity is SURefChassis {
+export function isChassis(entity: SURefMetaEntity): entity is SURefChassis {
   return (
     entity !== null &&
     typeof entity === 'object' &&
     'patterns' in entity &&
-    'structurePts' in entity &&
-    'energyPts' in entity &&
-    'heatCap' in entity
+    'structurePoints' in entity &&
+    'energyPoints' in entity &&
+    'heatCapacity' in entity
   )
 }
 
@@ -264,7 +344,7 @@ export function isChassis(entity: SURefEntity): entity is SURefChassis {
  * @param entity - The entity to check
  * @returns True if the entity is a Core Class
  */
-export function isCoreClass(entity: SURefEntity): entity is SURefCoreClass {
+export function isCoreClass(entity: SURefMetaEntity): entity is SURefCoreClass {
   return (
     entity !== null &&
     typeof entity === 'object' &&
@@ -280,7 +360,7 @@ export function isCoreClass(entity: SURefEntity): entity is SURefCoreClass {
  * @returns True if the entity is an Advanced Class
  */
 export function isAdvancedClass(
-  entity: SURefEntity
+  entity: SURefMetaEntity
 ): entity is SURefAdvancedClass {
   return (
     entity !== null &&
@@ -295,7 +375,9 @@ export function isAdvancedClass(
  * @param entity - The entity to check
  * @returns True if the entity is a Hybrid Class
  */
-export function isHybridClass(entity: SURefEntity): entity is SURefHybridClass {
+export function isHybridClass(
+  entity: SURefMetaEntity
+): entity is SURefHybridClass {
   return (
     entity !== null &&
     typeof entity === 'object' &&
@@ -310,7 +392,7 @@ export function isHybridClass(entity: SURefEntity): entity is SURefHybridClass {
  * @returns True if the entity is a Core, Advanced, or Hybrid class
  */
 export function isClass(
-  entity: SURefEntity
+  entity: SURefMetaEntity
 ): entity is SURefCoreClass | SURefAdvancedClass | SURefHybridClass {
   return isCoreClass(entity) || isAdvancedClass(entity) || isHybridClass(entity)
 }
@@ -321,7 +403,26 @@ export function isClass(
  * @returns True if the entity is a System or Module
  */
 export function isSystemOrModule(
-  entity: SURefEntity
+  entity: SURefMetaEntity
 ): entity is SURefSystem | SURefModule {
   return isSystem(entity) || isModule(entity)
+}
+
+/**
+ * Type guard to check if an entity is a MetaAction
+ * @param entity - The entity to check
+ * @returns True if the entity is a MetaAction
+ */
+export function isMetaAction(
+  entity: SURefMetaEntity
+): entity is SURefMetaAction {
+  return (
+    entity !== null &&
+    typeof entity === 'object' &&
+    'name' in entity &&
+    typeof entity.name === 'string' &&
+    // MetaActions don't have 'id' or 'source' properties (which all SURefEntity types have)
+    !('id' in entity) &&
+    !('source' in entity)
+  )
 }

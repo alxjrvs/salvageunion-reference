@@ -8,7 +8,6 @@
  * Run 'npm run generate:index' to regenerate
  */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- used in generated type annotations
 import { BaseModel, type ModelWithMetadata } from './BaseModel.js'
 import { generateModels } from './ModelFactory.js'
 

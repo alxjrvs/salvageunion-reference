@@ -113,12 +113,12 @@
         ]
       }
     ],
-    "structurePts": 12,
-    "energyPts": 4,
-    "heatCap": 6,
+    "structurePoints": 12,
+    "energyPoints": 4,
+    "heatCapacity": 6,
     "systemSlots": 16,
     "moduleSlots": 2,
-    "cargoCap": 16,
+    "cargoCapacity": 16,
     "techLevel": 1,
     "salvageValue": 7
   },
@@ -210,12 +210,12 @@
         ]
       }
     ],
-    "structurePts": 5,
-    "energyPts": 10,
-    "heatCap": 6,
+    "structurePoints": 5,
+    "energyPoints": 10,
+    "heatCapacity": 6,
     "systemSlots": 7,
     "moduleSlots": 3,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 1,
     "salvageValue": 4
   },
@@ -327,12 +327,12 @@
         ]
       }
     ],
-    "structurePts": 9,
-    "energyPts": 9,
-    "heatCap": 8,
+    "structurePoints": 9,
+    "energyPoints": 9,
+    "heatCapacity": 8,
     "systemSlots": 12,
     "moduleSlots": 2,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 1,
     "salvageValue": 6
   },
@@ -453,12 +453,12 @@
         ]
       }
     ],
-    "structurePts": 17,
-    "energyPts": 11,
-    "heatCap": 3,
+    "structurePoints": 17,
+    "energyPoints": 11,
+    "heatCapacity": 3,
     "systemSlots": 7,
     "moduleSlots": 4,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 1,
     "salvageValue": 10
   },
@@ -553,12 +553,12 @@
         ]
       }
     ],
-    "structurePts": 15,
-    "energyPts": 6,
-    "heatCap": 10,
+    "structurePoints": 15,
+    "energyPoints": 6,
+    "heatCapacity": 10,
     "systemSlots": 9,
     "moduleSlots": 2,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 1,
     "salvageValue": 9
   },
@@ -711,12 +711,12 @@
         ]
       }
     ],
-    "structurePts": 16,
-    "energyPts": 13,
-    "heatCap": 10,
+    "structurePoints": 16,
+    "energyPoints": 13,
+    "heatCapacity": 10,
     "systemSlots": 15,
     "moduleSlots": 4,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 2,
     "salvageValue": 10
   },
@@ -831,12 +831,12 @@
         ]
       }
     ],
-    "structurePts": 14,
-    "energyPts": 10,
-    "heatCap": 8,
+    "structurePoints": 14,
+    "energyPoints": 10,
+    "heatCapacity": 8,
     "systemSlots": 12,
     "moduleSlots": 3,
-    "cargoCap": 12,
+    "cargoCapacity": 12,
     "techLevel": 2,
     "salvageValue": 4
   },
@@ -956,12 +956,12 @@
         ]
       }
     ],
-    "structurePts": 12,
-    "energyPts": 10,
-    "heatCap": 12,
+    "structurePoints": 12,
+    "energyPoints": 10,
+    "heatCapacity": 12,
     "systemSlots": 12,
     "moduleSlots": 3,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 2,
     "salvageValue": 6
   },
@@ -1078,12 +1078,12 @@
         ]
       }
     ],
-    "structurePts": 18,
-    "energyPts": 7,
-    "heatCap": 13,
+    "structurePoints": 18,
+    "energyPoints": 7,
+    "heatCapacity": 13,
     "systemSlots": 15,
     "moduleSlots": 3,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 2,
     "salvageValue": 6
   },
@@ -1222,12 +1222,12 @@
         ]
       }
     ],
-    "structurePts": 24,
-    "energyPts": 10,
-    "heatCap": 14,
+    "structurePoints": 24,
+    "energyPoints": 10,
+    "heatCapacity": 14,
     "systemSlots": 18,
     "moduleSlots": 3,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 2,
     "salvageValue": 14
   },
@@ -1351,12 +1351,12 @@
         ]
       }
     ],
-    "structurePts": 15,
-    "energyPts": 12,
-    "heatCap": 10,
+    "structurePoints": 15,
+    "energyPoints": 12,
+    "heatCapacity": 10,
     "systemSlots": 15,
     "moduleSlots": 3,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 2,
     "salvageValue": 5
   },
@@ -1475,12 +1475,12 @@
         ]
       }
     ],
-    "structurePts": 16,
-    "energyPts": 14,
-    "heatCap": 8,
+    "structurePoints": 16,
+    "energyPoints": 14,
+    "heatCapacity": 8,
     "systemSlots": 12,
     "moduleSlots": 3,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 2,
     "salvageValue": 8
   },
@@ -1592,12 +1592,12 @@
         ]
       }
     ],
-    "structurePts": 30,
-    "energyPts": 10,
-    "heatCap": 14,
+    "structurePoints": 30,
+    "energyPoints": 10,
+    "heatCapacity": 14,
     "systemSlots": 21,
     "moduleSlots": 2,
-    "cargoCap": 30,
+    "cargoCapacity": 30,
     "techLevel": 3,
     "salvageValue": 12
   },
@@ -1716,12 +1716,12 @@
         ]
       }
     ],
-    "structurePts": 25,
-    "energyPts": 10,
-    "heatCap": 14,
+    "structurePoints": 25,
+    "energyPoints": 10,
+    "heatCapacity": 14,
     "systemSlots": 16,
     "moduleSlots": 3,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 3,
     "salvageValue": 5
   },
@@ -1833,12 +1833,12 @@
         }
       }
     ],
-    "structurePts": 15,
-    "energyPts": 8,
-    "heatCap": 10,
+    "structurePoints": 15,
+    "energyPoints": 8,
+    "heatCapacity": 10,
     "systemSlots": 9,
     "moduleSlots": 3,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 3,
     "salvageValue": 7
   },
@@ -2006,12 +2006,12 @@
         ]
       }
     ],
-    "structurePts": 15,
-    "energyPts": 17,
-    "heatCap": 7,
+    "structurePoints": 15,
+    "energyPoints": 17,
+    "heatCapacity": 7,
     "systemSlots": 9,
     "moduleSlots": 6,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 3,
     "salvageValue": 7
   },
@@ -2124,12 +2124,12 @@
         ]
       }
     ],
-    "structurePts": 20,
-    "energyPts": 10,
-    "heatCap": 12,
+    "structurePoints": 20,
+    "energyPoints": 10,
+    "heatCapacity": 12,
     "systemSlots": 15,
     "moduleSlots": 4,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 3,
     "salvageValue": 8
   },
@@ -2258,12 +2258,12 @@
         ]
       }
     ],
-    "structurePts": 16,
-    "energyPts": 13,
-    "heatCap": 10,
+    "structurePoints": 16,
+    "energyPoints": 13,
+    "heatCapacity": 10,
     "systemSlots": 12,
     "moduleSlots": 4,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 3,
     "salvageValue": 4
   },
@@ -2382,12 +2382,12 @@
         ]
       }
     ],
-    "structurePts": 23,
-    "energyPts": 12,
-    "heatCap": 13,
+    "structurePoints": 23,
+    "energyPoints": 12,
+    "heatCapacity": 13,
     "systemSlots": 18,
     "moduleSlots": 3,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 3,
     "salvageValue": 9
   },
@@ -2521,12 +2521,12 @@
         ]
       }
     ],
-    "structurePts": 24,
-    "energyPts": 16,
-    "heatCap": 14,
+    "structurePoints": 24,
+    "energyPoints": 16,
+    "heatCapacity": 14,
     "systemSlots": 18,
     "moduleSlots": 5,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 4,
     "salvageValue": 8
   },
@@ -2649,12 +2649,12 @@
         ]
       }
     ],
-    "structurePts": 36,
-    "energyPts": 12,
-    "heatCap": 16,
+    "structurePoints": 36,
+    "energyPoints": 12,
+    "heatCapacity": 16,
     "systemSlots": 24,
     "moduleSlots": 4,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 4,
     "salvageValue": 16
   },
@@ -2780,12 +2780,12 @@
         ]
       }
     ],
-    "structurePts": 15,
-    "energyPts": 16,
-    "heatCap": 12,
+    "structurePoints": 15,
+    "energyPoints": 16,
+    "heatCapacity": 12,
     "systemSlots": 12,
     "moduleSlots": 5,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 4,
     "salvageValue": 3
   },
@@ -2915,12 +2915,12 @@
         ]
       }
     ],
-    "structurePts": 26,
-    "energyPts": 14,
-    "heatCap": 14,
+    "structurePoints": 26,
+    "energyPoints": 14,
+    "heatCapacity": 14,
     "systemSlots": 16,
     "moduleSlots": 4,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 4,
     "salvageValue": 7
   },
@@ -3029,12 +3029,12 @@
         ]
       }
     ],
-    "structurePts": 18,
-    "energyPts": 12,
-    "heatCap": 15,
+    "structurePoints": 18,
+    "energyPoints": 12,
+    "heatCapacity": 15,
     "systemSlots": 15,
     "moduleSlots": 4,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 4,
     "salvageValue": 4
   },
@@ -3157,12 +3157,12 @@
         ]
       }
     ],
-    "structurePts": 35,
-    "energyPts": 16,
-    "heatCap": 12,
+    "structurePoints": 35,
+    "energyPoints": 16,
+    "heatCapacity": 12,
     "systemSlots": 21,
     "moduleSlots": 5,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 5,
     "salvageValue": 9
   },
@@ -3309,12 +3309,12 @@
         ]
       }
     ],
-    "structurePts": 21,
-    "energyPts": 15,
-    "heatCap": 12,
+    "structurePoints": 21,
+    "energyPoints": 15,
+    "heatCapacity": 12,
     "systemSlots": 15,
     "moduleSlots": 7,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 5,
     "salvageValue": 5
   },
@@ -3422,12 +3422,12 @@
         ]
       }
     ],
-    "structurePts": 29,
-    "energyPts": 11,
-    "heatCap": 13,
+    "structurePoints": 29,
+    "energyPoints": 11,
+    "heatCapacity": 13,
     "systemSlots": 18,
     "moduleSlots": 6,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 5,
     "salvageValue": 9
   },
@@ -3553,12 +3553,12 @@
         ]
       }
     ],
-    "structurePts": 46,
-    "energyPts": 15,
-    "heatCap": 19,
+    "structurePoints": 46,
+    "energyPoints": 15,
+    "heatCapacity": 19,
     "systemSlots": 24,
     "moduleSlots": 5,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 6,
     "salvageValue": 17
   },
@@ -3694,12 +3694,12 @@
         ]
       }
     ],
-    "structurePts": 76,
-    "energyPts": 14,
-    "heatCap": 18,
+    "structurePoints": 76,
+    "energyPoints": 14,
+    "heatCapacity": 18,
     "systemSlots": 36,
     "moduleSlots": 6,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 6,
     "salvageValue": 20
   },
@@ -3871,12 +3871,12 @@
         ]
       }
     ],
-    "structurePts": 21,
-    "energyPts": 20,
-    "heatCap": 14,
+    "structurePoints": 21,
+    "energyPoints": 20,
+    "heatCapacity": 14,
     "systemSlots": 15,
     "moduleSlots": 10,
-    "cargoCap": 6,
+    "cargoCapacity": 6,
     "techLevel": 6,
     "salvageValue": 6
   }
