@@ -27,6 +27,7 @@ import {
   getModuleSlots,
   getCargoCapacity,
   getHitPoints,
+  getAssetUrl,
 } from './utilities.js'
 
 describe('Additional Type Guards', () => {
@@ -570,6 +571,74 @@ describe('Property Extractors', () => {
       const chassis = SalvageUnionReference.Chassis.all()[0]
       const hitPoints = getHitPoints(chassis)
       expect(hitPoints).toBeUndefined()
+    })
+  })
+
+  describe('getAssetUrl', () => {
+    it('should extract asset_url from chassis', () => {
+      const chassis = SalvageUnionReference.Chassis.find(
+        (c) => c.name === 'Mule'
+      )
+      const assetUrl = getAssetUrl(chassis!)
+      expect(assetUrl).toBeDefined()
+      expect(typeof assetUrl).toBe('string')
+      expect(assetUrl).toContain('chassis/mule.png')
+    })
+
+    it('should extract asset_url from bio-titans', () => {
+      const bioTitan = SalvageUnionReference.BioTitans.find(
+        (b) => b.name === 'Typhon'
+      )
+      const assetUrl = getAssetUrl(bioTitan!)
+      expect(assetUrl).toBeDefined()
+      expect(typeof assetUrl).toBe('string')
+      expect(assetUrl).toContain('bio-titans/typhon.jpg')
+    })
+
+    it('should extract asset_url from creatures', () => {
+      const creature = SalvageUnionReference.Creatures.find(
+        (c) => c.name === 'Artl'
+      )
+      const assetUrl = getAssetUrl(creature!)
+      expect(assetUrl).toBeDefined()
+      expect(typeof assetUrl).toBe('string')
+      expect(assetUrl).toContain('creatures/artl.jpg')
+    })
+
+    it('should extract asset_url from NPCs', () => {
+      const npc = SalvageUnionReference.NPCs.find(
+        (n) => n.name === 'Wastelander'
+      )
+      const assetUrl = getAssetUrl(npc!)
+      expect(assetUrl).toBeDefined()
+      expect(typeof assetUrl).toBe('string')
+      expect(assetUrl).toContain('npcs/wastelander.jpg')
+    })
+
+    it('should extract asset_url from core classes', () => {
+      const coreClass = SalvageUnionReference.CoreClasses.find(
+        (c) => c.name === 'Engineer'
+      )
+      const assetUrl = getAssetUrl(coreClass!)
+      expect(assetUrl).toBeDefined()
+      expect(typeof assetUrl).toBe('string')
+      expect(assetUrl).toContain('classes.core/engineer.jpg')
+    })
+
+    it('should extract asset_url from hybrid classes', () => {
+      const hybridClass = SalvageUnionReference.HybridClasses.find(
+        (c) => c.name === 'Cyborg'
+      )
+      const assetUrl = getAssetUrl(hybridClass!)
+      expect(assetUrl).toBeDefined()
+      expect(typeof assetUrl).toBe('string')
+      expect(assetUrl).toContain('classes.hybrid/cyborg.jpg')
+    })
+
+    it('should return undefined for entities without asset_url', () => {
+      const ability = SalvageUnionReference.Abilities.all()[0]
+      const assetUrl = getAssetUrl(ability)
+      expect(assetUrl).toBeUndefined()
     })
   })
 })

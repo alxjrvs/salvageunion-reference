@@ -207,6 +207,17 @@ export function getHitPoints(entity: SURefMetaEntity): number | undefined {
     : undefined
 }
 
+/**
+ * Extract asset URL from an entity
+ * @param entity - The entity to extract from
+ * @returns The asset URL or undefined
+ */
+export function getAssetUrl(entity: SURefMetaEntity): string | undefined {
+  return 'asset_url' in entity && typeof entity.asset_url === 'string'
+    ? entity.asset_url
+    : undefined
+}
+
 // ============================================================================
 // TYPE GUARDS - Property-based
 // ============================================================================
