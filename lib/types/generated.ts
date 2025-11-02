@@ -201,7 +201,7 @@ export interface SURefMetaNpc {
    */
   hitPoints: number
   /**
-   * SURefMetaChoices available to the player when interacting with the NPC
+   * Choices available to the player when interacting with the NPC
    */
   choices?: SURefMetaChoice[]
 }
@@ -384,7 +384,7 @@ export interface SURefMetaAction {
     value: string
   }[]
   /**
-   * SURefMetaChoices available to the player when interacting with the NPC
+   * Choices available to the player when interacting with the NPC
    */
   choices?: SURefMetaChoice[]
   table?: SURefMetaTable

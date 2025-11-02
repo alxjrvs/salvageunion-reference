@@ -1784,7 +1784,10 @@
             "High Gain Antenna",
             "Cargo Pod"
           ],
-          "modules": ["Survey Scanner", "M315 Motion Scanner"]
+          "modules": [
+            "Survey Scanner",
+            "M315 Motion Scanner"
+          ]
         }
       },
       {
@@ -1813,8 +1816,15 @@
           }
         ],
         "drone": {
-          "systems": ["Red Laser", "Fabrication Arm", "High Gain Antenna"],
-          "modules": ["Survey Scanner", "Damage Assessor"]
+          "systems": [
+            "Red Laser",
+            "Fabrication Arm",
+            "High Gain Antenna"
+          ],
+          "modules": [
+            "Survey Scanner",
+            "Damage Assessor"
+          ]
         }
       },
       {
@@ -1843,8 +1853,13 @@
           }
         ],
         "drone": {
-          "systems": ["Rail Rifle"],
-          "modules": ["Reactor Overload", "Laser Guidance"]
+          "systems": [
+            "Rail Rifle"
+          ],
+          "modules": [
+            "Reactor Overload",
+            "Laser Guidance"
+          ]
         }
       }
     ],
@@ -2816,7 +2831,7 @@
     "name": "Drop Bear",
     "source": "Salvage Union Workshop Manual",
     "page": 144,
-    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/drop-bear.png",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/drop%20bear.png",
     "actions": [
       {
         "name": "Integrated Advanced Vectored Thrust Unit",
@@ -3463,7 +3478,7 @@
     "name": "Iron Wyrm",
     "source": "Salvage Union Workshop Manual",
     "page": 154,
-    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/iron-wyrm.png",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/iron%20wyrm.png",
     "actions": [
       {
         "name": "Burrower",

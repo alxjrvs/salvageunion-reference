@@ -36,6 +36,7 @@
     "description": "You have chosen the path of the Smuggler. Your cargo hides contraband goods, your comms unit whispers dark deals, and nothing is beyond your reach. What escapades will you find yourself in?",
     "advancedTree": "Smuggler",
     "legendaryTree": "Legendary Smuggler",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.hybrid/smuggler.jpg",
     "page": 70
   },
   {
