@@ -21,7 +21,11 @@
         "$ref": "shared/objects.schema.json#/definitions/npc"
       },
       "choices": {
-        "$ref": "shared/objects.schema.json#/definitions/choices"
+        "type": "array",
+        "description": "Choices available to the player when interacting with the NPC",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/choice"
+        }
       },
       "actions": {
         "type": "array",

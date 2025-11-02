@@ -4,6 +4,7 @@
     "name": "Mule",
     "source": "Salvage Union Workshop Manual",
     "page": 100,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/mule.png",
     "actions": [
       {
         "name": "Integrated Cargo Bay",
@@ -127,6 +128,7 @@
     "name": "Mazona",
     "source": "Salvage Union Workshop Manual",
     "page": 102,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/mazona.png",
     "actions": [
       {
         "name": "Hover Drone",
@@ -224,6 +226,7 @@
     "name": "Scrapper",
     "source": "Salvage Union Workshop Manual",
     "page": 104,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/scrapper.png",
     "actions": [
       {
         "name": "Hazard Protected Chassis",
@@ -341,6 +344,7 @@
     "name": "Spectrum",
     "source": "Salvage Union Workshop Manual",
     "page": 106,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/spectrum.png",
     "actions": [
       {
         "name": "Data Scanner",
@@ -467,6 +471,7 @@
     "name": "Thresher",
     "source": "Salvage Union Workshop Manual",
     "page": 108,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/thresher.png",
     "actions": [
       {
         "name": "Heavily Armoured Chassis",
@@ -567,6 +572,7 @@
     "name": "Forge",
     "source": "Salvage Union Workshop Manual",
     "page": 110,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/forge.png",
     "actions": [
       {
         "name": "Integrated Epoxy Printer",
@@ -725,6 +731,7 @@
     "name": "Gopher",
     "source": "Salvage Union Workshop Manual",
     "page": 112,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/gopher.jpg",
     "actions": [
       {
         "name": "Integrated Expanded Transport Hold",
@@ -845,6 +852,7 @@
     "name": "Hussar",
     "source": "Salvage Union Workshop Manual",
     "page": 114,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/hussar.png",
     "actions": [
       {
         "name": "Fast",
@@ -970,6 +978,7 @@
     "name": "Jackhammer",
     "source": "Salvage Union Workshop Manual",
     "page": 116,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/jackhammer.png",
     "actions": [
       {
         "name": "Reinforced Chassis",
@@ -1092,6 +1101,7 @@
     "name": "Kraken",
     "source": "Salvage Union Workshop Manual",
     "page": 118,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/kraken.png",
     "actions": [
       {
         "name": "Integrated Amphibious Locomotion System",
@@ -1236,6 +1246,7 @@
     "name": "Magpie",
     "source": "Salvage Union Workshop Manual",
     "page": 120,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/magpie.png",
     "actions": [
       {
         "name": "Hot Swap Universal Mounts",
@@ -1365,6 +1376,7 @@
     "name": "Mirrorball",
     "source": "Salvage Union Workshop Manual",
     "page": 122,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/mirrorball.png",
     "actions": [
       {
         "name": "Integrated Advanced Shield Dome",
@@ -1489,6 +1501,7 @@
     "name": "Atlas",
     "source": "Salvage Union Workshop Manual",
     "page": 124,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/atlas.png",
     "actions": [
       {
         "name": "Integrated Colossal Cargo Bay",
@@ -1606,6 +1619,7 @@
     "name": "Brawler",
     "source": "Salvage Union Workshop Manual",
     "page": 126,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/brawler.png",
     "actions": [
       {
         "name": "Close Range Protocols",
@@ -1730,6 +1744,7 @@
     "name": "Little Sestra",
     "source": "Salvage Union Workshop Manual",
     "page": 128,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/little-sestra.png",
     "actions": [
       {
         "name": "Sestra Drone Controller",
@@ -1847,6 +1862,7 @@
     "name": "Mantis",
     "source": "Salvage Union Workshop Manual",
     "page": 130,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/mantis.png",
     "actions": [
       {
         "name": "Integrated Frog Prince Module",
@@ -2020,6 +2036,7 @@
     "name": "Photon",
     "source": "Salvage Union Workshop Manual",
     "page": 132,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/photon.png",
     "actions": [
       {
         "name": "Solar Reactor",
@@ -2138,6 +2155,7 @@
     "name": "Solo",
     "source": "Salvage Union Workshop Manual",
     "page": 134,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/solo.png",
     "actions": [
       {
         "name": "Polycarbonate Stealth Chassis",
@@ -2272,6 +2290,7 @@
     "name": "Terra",
     "source": "Salvage Union Workshop Manual",
     "page": 129,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/terra.png",
     "actions": [
       {
         "name": "Terraforming Bubble",
@@ -2396,6 +2415,7 @@
     "name": "Aegis",
     "source": "Salvage Union Workshop Manual",
     "page": 138,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/aegis.png",
     "actions": [
       {
         "name": "Integrated Advanced Shield Projector",
@@ -2535,6 +2555,7 @@
     "name": "Colossus",
     "source": "Salvage Union Workshop Manual",
     "page": 140,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/colossus.png",
     "actions": [
       {
         "name": "Eradication Protocols",
@@ -2663,6 +2684,7 @@
     "name": "Consul",
     "source": "Salvage Union Workshop Manual",
     "page": 142,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/consul.png",
     "actions": [
       {
         "name": "Flashy",
@@ -2794,6 +2816,7 @@
     "name": "Drop Bear",
     "source": "Salvage Union Workshop Manual",
     "page": 144,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/drop-bear.png",
     "actions": [
       {
         "name": "Integrated Advanced Vectored Thrust Unit",
@@ -2929,6 +2952,7 @@
     "name": "Vorpal",
     "source": "Salvage Union Workshop Manual",
     "page": 146,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/vorpal.png",
     "actions": [
       {
         "name": "Heat Efficient Reactor",
@@ -3043,6 +3067,7 @@
     "name": "Carrier",
     "source": "Salvage Union Workshop Manual",
     "page": 148,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/carrier.png",
     "actions": [
       {
         "name": "Integrated Mech Bay",
@@ -3171,6 +3196,7 @@
     "name": "Eidolon",
     "source": "Salvage Union Workshop Manual",
     "page": 150,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/eidolon.png",
     "actions": [
       {
         "name": "Polycarbonate Stealth Chassis",
@@ -3323,6 +3349,7 @@
     "name": "Neura-Phage",
     "source": "Salvage Union Workshop Manual",
     "page": 152,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/neura-phage.png",
     "actions": [
       {
         "name": "Cybernetic Neuralink",
@@ -3436,6 +3463,7 @@
     "name": "Iron Wyrm",
     "source": "Salvage Union Workshop Manual",
     "page": 154,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/iron-wyrm.png",
     "actions": [
       {
         "name": "Burrower",
@@ -3567,6 +3595,7 @@
     "name": "Leviathan",
     "source": "Salvage Union Workshop Manual",
     "page": 156,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/leviathan.png",
     "actions": [
       {
         "name": "Juggernaut",
@@ -3708,6 +3737,7 @@
     "name": "Shaitan",
     "source": "Salvage Union Workshop Manual",
     "page": 158,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/shaitan.png",
     "actions": [
       {
         "name": "Integrated VTU System",

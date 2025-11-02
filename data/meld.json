@@ -90,6 +90,7 @@
     ],
     "structurePoints": 5,
     "salvageValue": 5,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/meld/meld%20nanoid.jpg",
     "page": 271
   },
   {
@@ -126,6 +127,7 @@
     ],
     "structurePoints": 10,
     "salvageValue": 10,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/meld/meld%20splitter.jpg",
     "page": 270
   },
   {
@@ -178,6 +180,7 @@
       }
     ],
     "structurePoints": 60,
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/meld/meld%20behemoth.jpg",
     "page": 290
   }
 ]

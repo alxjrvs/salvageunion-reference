@@ -140,16 +140,13 @@ export interface SURefMetaDamage {
 /**
  * Special traits and properties of items, systems, or abilities
  */
-export type SURefMetaTraits = {
-  /**
-   * Numeric value for the trait
-   */
-  amount?: number
+export interface SURefMetaTrait {
+  amount?: number | string
   /**
    * Type of trait that doesn't require a numeric value
    */
   type: string
-}[]
+}
 /**
  * Statistics for mechs, chassis, and vehicles
  */
@@ -203,7 +200,10 @@ export interface SURefMetaNpc {
    * Hit points for creatures and personnel
    */
   hitPoints: number
-  choices?: SURefMetaChoices
+  /**
+   * SURefMetaChoices available to the player when interacting with the NPC
+   */
+  choices?: SURefMetaChoice[]
 }
 export interface SURefMetaPatternSystemModule {
   /**
@@ -295,10 +295,6 @@ export interface SURefMetaChoice {
   }
 }
 /**
- * SURefMetaChoices available to the player when interacting with the NPC
- */
-export type SURefMetaChoices = SURefMetaChoice[]
-/**
  * An action, ability, or attack that can be performed
  */
 export interface SURefMetaAction {
@@ -369,7 +365,10 @@ export interface SURefMetaAction {
     | 'Short'
     | 'Long'
     | 'DownTime'
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
   damage?: SURefMetaDamage
   /**
    * List of options or choices for this action
@@ -384,7 +383,10 @@ export interface SURefMetaAction {
      */
     value: string
   }[]
-  choices?: SURefMetaChoices
+  /**
+   * SURefMetaChoices available to the player when interacting with the NPC
+   */
+  choices?: SURefMetaChoice[]
   table?: SURefMetaTable
   /**
    * Sub-actions or nested actions for this ability
@@ -411,7 +413,10 @@ export type SURefMetaSystem = SURefMetaEntry & {
    * Whether this is a recommended starting system
    */
   recommended?: boolean
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
   /**
    * Additional notes
    */
@@ -523,6 +528,10 @@ export type SURefMetaTable =
  * Basic entry with name, description, source, and page reference
  */
 export interface SURefMetaEntry {
+  /**
+   * URL to an image asset for this entry
+   */
+  asset_url?: string
   /**
    * Unique identifier for the entry
    */
@@ -666,7 +675,10 @@ export type SURefBioTitan = SURefMetaEntry & {
    */
   structurePoints: number
   actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
 }
 
 // Chassis
@@ -927,7 +939,10 @@ export type SURefCrawlerBay = SURefMetaEntry & {
    */
   damagedEffect: string
   npc: SURefMetaNpc
-  choices?: SURefMetaChoices
+  /**
+   * Choices available to the player when interacting with the NPC
+   */
+  choices?: SURefMetaChoice[]
   actions: SURefMetaAction[]
   /**
    * Effects that scale with tech level
@@ -1057,7 +1072,10 @@ export type SURefCreature = SURefMetaEntry & {
    */
   hitPoints: number
   actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
 }
 
 // Drone
@@ -1077,7 +1095,10 @@ export type SURefDrone = SURefMetaEntry & {
 // Equipment
 export type SURefEquipment = SURefMetaEntry & {
   techLevel: number
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
   /**
    * Range bands for abilities and weapons
    */
@@ -1185,6 +1206,10 @@ export type SURefEquipment = SURefMetaEntry & {
  */
 export interface SURefKeyword {
   /**
+   * URL to an image asset for this entry
+   */
+  asset_url?: string
+  /**
    * Unique identifier for the entry
    */
   id: string
@@ -1213,7 +1238,10 @@ export interface SURefKeyword {
 // Meld
 export type SURefMeld = SURefMetaEntry & {
   actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
   /**
    * Salvage value of the meld creature
    */
@@ -1249,7 +1277,10 @@ export type SURefModule = SURefMetaEntry & {
    * Whether this is a recommended starting system
    */
   recommended?: boolean
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
   /**
    * Additional notes
    */
@@ -1364,7 +1395,10 @@ export type SURefNPC = SURefMetaEntry & {
    */
   hitPoints: number
   actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
 }
 
 // RollTable
@@ -1455,7 +1489,10 @@ export type SURefSquad = SURefMetaEntry & {
    */
   hitPoints?: number
   actions: SURefMetaAction[]
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
   /**
    * Type of damage
    */
@@ -1483,7 +1520,10 @@ export type SURefSystem = SURefMetaEntry & {
    * Whether this is a recommended starting system
    */
   recommended?: boolean
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
   /**
    * Additional notes
    */
@@ -1597,6 +1637,10 @@ export type SURefSystem = SURefMetaEntry & {
  */
 export interface SURefTrait {
   /**
+   * URL to an image asset for this entry
+   */
+  asset_url?: string
+  /**
    * Unique identifier for the entry
    */
   id: string
@@ -1634,7 +1678,10 @@ export type SURefVehicle = SURefMetaEntry & {
    */
   salvageValue: number
   systems: string[]
-  traits?: SURefMetaTraits
+  /**
+   * Special traits and properties of items, systems, or abilities
+   */
+  traits?: SURefMetaTrait[]
 }
 
 // ============================================

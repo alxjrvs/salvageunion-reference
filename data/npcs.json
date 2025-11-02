@@ -4,6 +4,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Wastelander",
     "description": "Represents the myriad of common denizens of the wastelands.",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/npcs/wastelander.jpg",
     "actions": [
       {
         "name": "Improvised Melee Weapon",

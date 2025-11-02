@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test'
-import { SalvageUnionReference, SURefEntity } from './index.js'
+import { SalvageUnionReference, SURefAbility, SURefEntity } from './index.js'
 import { BaseModel } from './BaseModel.js'
 import {
   isAbility,
@@ -533,7 +533,11 @@ describe('SalvageUnionReference.getAbilitiesForClass', () => {
     const abilities = SalvageUnionReference.getAbilitiesForClass(testTrees)
 
     expect(abilities.length).toBeGreaterThan(0)
-    expect(abilities.every((a) => testTrees.includes(a.tree))).toBe(true)
+    expect(
+      abilities.every((a) =>
+        (testTrees as string[]).includes((a as SURefAbility).tree)
+      )
+    ).toBe(true)
   })
 
   it('should return empty array for non-existent trees', () => {

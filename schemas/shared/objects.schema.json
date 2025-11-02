@@ -28,32 +28,28 @@
         }
       }
     },
-    "traits": {
-      "type": "array",
+    "trait": {
+      "type": "object",
       "description": "Special traits and properties of items, systems, or abilities",
-      "items": {
-        "type": "object",
-        "description": "Trait without a numeric value",
-        "additionalProperties": false,
-        "required": ["type"],
-        "properties": {
-          "amount": {
-            "oneOf": [
-              {
-                "type": "integer",
-                "minimum": 0,
-                "description": "Numeric value for the trait"
-              },
-              {
-                "type": "string",
-                "description": "Variable value for the trait"
-              }
-            ]
-          },
-          "type": {
-            "type": "string",
-            "description": "Type of trait that doesn't require a numeric value"
-          }
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "amount": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Numeric value for the trait"
+            },
+            {
+              "type": "string",
+              "description": "Variable value for the trait"
+            }
+          ]
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of trait that doesn't require a numeric value"
         }
       }
     },
@@ -132,7 +128,10 @@
           "$ref": "common.schema.json#/definitions/hitPoints"
         },
         "choices": {
-          "$ref": "#/definitions/choices"
+          "description": "Choices available to the player when interacting with the NPC",
+          "items": {
+            "$ref": "#/definitions/choice"
+          }
         }
       }
     },
@@ -227,13 +226,6 @@
         }
       }
     },
-    "choices": {
-      "type": "array",
-      "description": "Choices available to the player when interacting with the NPC",
-      "items": {
-        "$ref": "#/definitions/choice"
-      }
-    },
     "action": {
       "type": "object",
       "description": "An action, ability, or attack that can be performed",
@@ -298,7 +290,11 @@
           "$ref": "enums.schema.json#/definitions/actionType"
         },
         "traits": {
-          "$ref": "#/definitions/traits"
+          "type": "array",
+          "description": "Special traits and properties of items, systems, or abilities",
+          "items": {
+            "$ref": "#/definitions/trait"
+          }
         },
         "damage": {
           "$ref": "#/definitions/damage"
@@ -324,7 +320,11 @@
           }
         },
         "choices": {
-          "$ref": "#/definitions/choices"
+          "type": "array",
+          "description": "Choices available to the player when interacting with the NPC",
+          "items": {
+            "$ref": "#/definitions/choice"
+          }
         },
         "table": {
           "$ref": "#/definitions/table"
@@ -368,7 +368,11 @@
           "description": "Whether this is a recommended starting system"
         },
         "traits": {
-          "$ref": "#/definitions/traits"
+          "type": "array",
+          "description": "Special traits and properties of items, systems, or abilities",
+          "items": {
+            "$ref": "#/definitions/trait"
+          }
         },
         "notes": {
           "type": "string",
@@ -571,6 +575,9 @@
       "description": "Basic entry with name, description, source, and page reference",
       "required": ["id", "name", "page", "source"],
       "properties": {
+        "asset_url": {
+          "$ref": "common.schema.json#/definitions/asset_url"
+        },
         "id": {
           "$ref": "common.schema.json#/definitions/id"
         },

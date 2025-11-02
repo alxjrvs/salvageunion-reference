@@ -20,7 +20,11 @@
         }
       },
       "traits": {
-        "$ref": "shared/objects.schema.json#/definitions/traits"
+        "type": "array",
+        "description": "Special traits and properties of items, systems, or abilities",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/trait"
+        }
       },
       "salvageValue": {
         "type": "integer",

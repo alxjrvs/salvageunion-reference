@@ -33,6 +33,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Artl",
     "description": "Burrowing, ambush predators that liquify their prey for easier digestion.",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/creatures/artl.jpg",
     "traits": [
       {
         "type": "burrower"
@@ -66,6 +67,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Chimeripede",
     "description": "A mutated, radiation scarred amalgamation of flesh.",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/creatures/chimeripede.jpg",
     "actions": [
       {
         "name": "Barbed Tentacles",
@@ -122,6 +124,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Molebear",
     "description": "Terrifying, huge burrowing predators known to rend through metal.",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/creatures/molebear.jpg",
     "traits": [
       {
         "type": "burrower"

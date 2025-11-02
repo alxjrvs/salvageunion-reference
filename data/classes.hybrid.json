@@ -4,6 +4,7 @@
     "name": "Fabricator",
     "source": "Salvage Union Workshop Manual",
     "description": "You have chosen the path of the Fabricator. Technology is an extension of yourself which you can toy and tinker with to your steel heart's content. What beautiful creations will you form?",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.hybrid/fabricator.jpg",
     "advancedTree": "Fabricator",
     "legendaryTree": "Legendary Fabricator",
     "page": 62
@@ -13,6 +14,7 @@
     "name": "Cyborg",
     "source": "Salvage Union Workshop Manual",
     "description": "You have chosen the path of the Cyborg. Augmenting your body with mechanical and electronic parts to give you powers beyond the frailty of flesh. Some Cyborgs find themselves losing grip of their humanity, others find a duality between their flesh and mechanical forms. All are welcomed by the Salvage Unions who find Cyborgs an invaluable part of the crew. How will you adapt to your cybernetic form?",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.hybrid/cyborg.jpg",
     "advancedTree": "Cyborg",
     "legendaryTree": "Legendary Cyborg",
     "page": 58
@@ -22,6 +24,7 @@
     "name": "Union Rep",
     "source": "Salvage Union Workshop Manual",
     "description": "You have chosen the path of the Union Rep. You are the prime representative of your Union Crawler on any diplomatic mission, able to rub shoulders with corpos or share drinks with Union Reps from other Union Crawlers as you negotiate for the best terms possible for you and your crew. What will your leadership bring to the table? ",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.hybrid/union%20rep.jpg",
     "advancedTree": "Union Rep",
     "legendaryTree": "Legendary Union Rep",
     "page": 5
@@ -40,6 +43,7 @@
     "name": "Ranger",
     "source": "Salvage Union Workshop Manual",
     "description": "You have chosen the path of the Ranger. You have become one with the wastes, able to survive on vast treks, shrugging off danger, and picking off targets with ease. What challenges will you overcome?",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.hybrid/ranger.jpg",
     "advancedTree": "Ranger",
     "legendaryTree": "Legendary Ranger",
     "page": 66

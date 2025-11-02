@@ -152,8 +152,7 @@ async function generateTypes() {
   typeDefinitions.push('// ============================================\n')
 
   const helperTypes = [
-    'Traits',
-    'Choices',
+    'Trait', // Singular form used in array references
     'Choice',
     'Entry',
     'System',
