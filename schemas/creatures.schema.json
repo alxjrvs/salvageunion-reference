@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/creatures.schema.json",
-  "title": "Salvage Union Creatures",
+  "title": "creatures",
   "description": "Creatures and wildlife in Salvage Union",
   "type": "array",
   "items": {

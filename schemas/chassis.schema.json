@@ -1,21 +1,32 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/chassis.schema.json",
-  "title": "Salvage Union Mech Chassis",
+  "title": "chassis",
   "description": "Mech chassis definitions in Salvage Union",
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["stats", "actions", "patterns"],
+    "required": [
+      "actions",
+      "patterns",
+      "structurePts",
+      "energyPts",
+      "heatCap",
+      "systemSlots",
+      "moduleSlots",
+      "cargoCap",
+      "techLevel",
+      "salvageValue"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
+      },
+      {
+        "$ref": "shared/objects.schema.json#/definitions/stats"
       }
     ],
     "properties": {
-      "stats": {
-        "$ref": "shared/objects.schema.json#/definitions/stats"
-      },
       "actions": {
         "type": "array",
         "items": {
@@ -27,7 +38,11 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["name", "systems", "modules"],
+          "required": [
+            "name",
+            "systems",
+            "modules"
+          ],
           "properties": {
             "name": {
               "type": "string",
@@ -58,7 +73,10 @@
               "type": "object",
               "description": "Optional drone configuration for this pattern",
               "additionalProperties": false,
-              "required": ["systems", "modules"],
+              "required": [
+                "systems",
+                "modules"
+              ],
               "properties": {
                 "systems": {
                   "type": "array",

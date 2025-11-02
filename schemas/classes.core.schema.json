@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/classes.core.schema.json",
-  "title": "Salvage Union Core Classes",
+  "title": "classes.core",
   "description": "Core character classes in Salvage Union",
   "type": "array",
   "items": {

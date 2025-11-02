@@ -1,12 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/abilities.schema.json",
-  "title": "Salvage Union Abilities",
+  "title": "abilities",
   "description": "Pilot abilities and skills in Salvage Union",
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["tree", "level"],
+    "required": [
+      "tree",
+      "level"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
@@ -38,6 +41,12 @@
       },
       "mechActionType": {
         "$ref": "shared/enums.schema.json#/definitions/actionType"
+      },
+      "activationCurrency": {
+        "type": "string",
+        "enum": [
+          "Variable"
+        ]
       }
     },
     "unevaluatedProperties": false

@@ -186,6 +186,10 @@ export interface SURefMetaStats {
    * Salvage value in scrap
    */
   salvageValue: number
+  /**
+   * Additional notes about the stats
+   */
+  notes?: string
 }
 /**
  * NPC associated with an entity
@@ -315,6 +319,10 @@ export interface SURefMetaAction {
    */
   effect?: string
   /**
+   * Additional notes or flavor text for the action
+   */
+  notes?: string
+  /**
    * Cost in ability points to activate an ability
    */
   activationCost?: number | 'X'
@@ -350,6 +358,11 @@ export interface SURefMetaAction {
   }[]
   choices?: SURefMetaChoices
   table?: SURefMetaTable
+  /**
+   * Sub-actions or nested actions for this ability
+   */
+  actions?: SURefMetaAction[]
+  stats?: SURefMetaStats
 }
 /**
  * A system or module that can be installed on a mech
@@ -509,6 +522,10 @@ export interface SURefMetaEntry {
    */
   description?: string
   /**
+   * Additional notes about the entry
+   */
+  notes?: string
+  /**
    * The source book or expansion for this content
    */
   source: 'Salvage Union Workshop Manual'
@@ -639,8 +656,39 @@ export type SURefBioTitan = SURefMetaEntry & {
 
 // Chassis
 export type SURefChassis = SURefMetaEntry & {
-  stats: SURefMetaStats
   actions: SURefMetaAction[]
+  /**
+   * Structure points (durability)
+   */
+  structurePts: number
+  /**
+   * Energy points (power capacity)
+   */
+  energyPts: number
+  /**
+   * Heat capacity
+   */
+  heatCap: number
+  /**
+   * Number of system slots
+   */
+  systemSlots: number
+  /**
+   * Number of module slots
+   */
+  moduleSlots: number
+  /**
+   * Cargo capacity
+   */
+  cargoCap: number
+  /**
+   * Technology level
+   */
+  techLevel: number
+  /**
+   * Salvage value in scrap
+   */
+  salvageValue: number
   patterns: {
     /**
      * Name of the pattern
@@ -914,6 +962,79 @@ export type SURefCrawlerBay = SURefMetaEntry & {
      */
     effect: string
   }[]
+  /**
+   * Roll table for random outcomes based on d20 rolls
+   */
+  table?:
+    | {
+        /**
+         * Critical failure outcome
+         */
+        '1': string
+        /**
+         * Critical success outcome
+         */
+        '20': string
+        type: 'standard'
+        /**
+         * High success outcome
+         */
+        '11-19': string
+        /**
+         * Moderate outcome
+         */
+        '6-10': string
+        /**
+         * Low outcome
+         */
+        '2-5': string
+      }
+    | {
+        /**
+         * Critical failure outcome
+         */
+        '1': string
+        type: 'alternate'
+        /**
+         * Critical success outcome
+         */
+        '19-20': string
+        /**
+         * High success outcome
+         */
+        '11-18': string
+        /**
+         * Moderate outcome
+         */
+        '6-10': string
+        /**
+         * Low outcome
+         */
+        '2-5': string
+      }
+    | {
+        '1': string
+        '2': string
+        '3': string
+        '4': string
+        '5': string
+        '6': string
+        '7': string
+        '8': string
+        '9': string
+        '10': string
+        '11': string
+        '12': string
+        '13': string
+        '14': string
+        '15': string
+        '16': string
+        '17': string
+        '18': string
+        '19': string
+        '20': string
+        type: 'flat'
+      }
 }
 
 // CrawlerTechLevel
@@ -977,6 +1098,99 @@ export type SURefEquipment = SURefMetaEntry & {
    * Range bands for abilities and weapons
    */
   range?: 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
+  /**
+   * Mechanical effect of the equipment
+   */
+  effect?: string
+  /**
+   * Type of action required to use an ability
+   */
+  actionType?:
+    | 'Passive'
+    | 'Free'
+    | 'Reaction'
+    | 'Turn'
+    | 'Short'
+    | 'Long'
+    | 'DownTime'
+  damage?: SURefMetaDamage
+  /**
+   * Cost in ability points to activate an ability
+   */
+  activationCost?: number | 'X'
+  /**
+   * Roll table for random outcomes based on d20 rolls
+   */
+  table?:
+    | {
+        /**
+         * Critical failure outcome
+         */
+        '1': string
+        /**
+         * Critical success outcome
+         */
+        '20': string
+        type: 'standard'
+        /**
+         * High success outcome
+         */
+        '11-19': string
+        /**
+         * Moderate outcome
+         */
+        '6-10': string
+        /**
+         * Low outcome
+         */
+        '2-5': string
+      }
+    | {
+        /**
+         * Critical failure outcome
+         */
+        '1': string
+        type: 'alternate'
+        /**
+         * Critical success outcome
+         */
+        '19-20': string
+        /**
+         * High success outcome
+         */
+        '11-18': string
+        /**
+         * Moderate outcome
+         */
+        '6-10': string
+        /**
+         * Low outcome
+         */
+        '2-5': string
+      }
+    | {
+        '1': string
+        '2': string
+        '3': string
+        '4': string
+        '5': string
+        '6': string
+        '7': string
+        '8': string
+        '9': string
+        '10': string
+        '11': string
+        '12': string
+        '13': string
+        '14': string
+        '15': string
+        '16': string
+        '17': string
+        '18': string
+        '19': string
+        '20': string
+        type: 'flat'
+      }
   notes?: string
   actions?: SURefMetaAction[]
 }
@@ -999,6 +1213,10 @@ export interface SURefKeyword {
    */
   description?: string
   /**
+   * Additional notes about the entry
+   */
+  notes?: string
+  /**
    * The source book or expansion for this content
    */
   source: 'Salvage Union Workshop Manual'
@@ -1012,6 +1230,18 @@ export interface SURefKeyword {
 export type SURefMeld = SURefMetaEntry & {
   actions: SURefMetaAction[]
   traits?: SURefMetaTraits
+  /**
+   * Salvage value of the meld creature
+   */
+  salvageValue?: number
+  /**
+   * Hit points of the meld creature
+   */
+  hitPoints?: number
+  /**
+   * Structure points of the meld creature
+   */
+  structurePoints?: number
 }
 
 // Module
@@ -1420,6 +1650,10 @@ export interface SURefTrait {
    * Description of the entry
    */
   description?: string
+  /**
+   * Additional notes about the entry
+   */
+  notes?: string
   /**
    * The source book or expansion for this content
    */

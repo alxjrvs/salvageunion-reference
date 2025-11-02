@@ -148,8 +148,12 @@ export function toPascalCase(id: string): string {
 
 /**
  * Create a model instance for a given schema entry (synchronous)
+ * Returns an object with instance methods and readonly metadata properties
  */
-function createModel<T>(schemaId: string): BaseModel<T> {
+function createModel<T>(schemaId: string): BaseModel<T> & {
+  readonly schemaName: string
+  readonly displayName: string
+} {
   const data = dataMap[schemaId]
   const schema = schemaMap[schemaId]
 
@@ -157,7 +161,35 @@ function createModel<T>(schemaId: string): BaseModel<T> {
     throw new Error(`No data or schema found for schema ID: ${schemaId}`)
   }
 
-  return new BaseModel<T>(data as T[], schema)
+  const displayNameValue = schemaDisplayNames[schemaId]?.plural || schemaId
+
+  const model = new BaseModel<T>(
+    data as T[],
+    schema,
+    schemaId,
+    displayNameValue
+  )
+
+  // Add readonly metadata properties directly to the instance
+  Object.defineProperties(model, {
+    schemaName: {
+      value: schemaId,
+      writable: false,
+      enumerable: true,
+      configurable: false,
+    },
+    displayName: {
+      value: displayNameValue,
+      writable: false,
+      enumerable: true,
+      configurable: false,
+    },
+  })
+
+  return model as BaseModel<T> & {
+    readonly schemaName: string
+    readonly displayName: string
+  }
 }
 
 /**

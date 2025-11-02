@@ -7,7 +7,7 @@
  * DO NOT EDIT MANUALLY - Run 'npm run generate:index' to regenerate
  */
 
-import { BaseModel } from './BaseModel.js'
+import { BaseModel, type ModelWithMetadata } from './BaseModel.js'
 import { generateModels } from './ModelFactory.js'
 import type {
   SURefAbility,
@@ -114,6 +114,32 @@ const SchemaToModelMap = {
   vehicles: 'Vehicles',
 } as const
 
+// Runtime mapping from schema names to display names
+export const SchemaToDisplayName = {
+  abilities: 'Abilities',
+  'ability-tree-requirements': 'Ability Tree Requirements',
+  'bio-titans': 'Bio-Titans',
+  chassis: 'Chassis',
+  'classes.advanced': 'Advanced Classes',
+  'classes.core': 'Core Classes',
+  'classes.hybrid': 'Hybrid Classes',
+  'crawler-bays': 'Crawler Bays',
+  'crawler-tech-levels': 'Crawler Tech Levels',
+  crawlers: 'Crawlers',
+  creatures: 'Creatures',
+  drones: 'Drones',
+  equipment: 'Equipment',
+  keywords: 'Keywords',
+  meld: 'Meld',
+  modules: 'Modules',
+  npcs: 'NPCs',
+  'roll-tables': 'Roll Tables',
+  squads: 'Squads',
+  systems: 'Systems',
+  traits: 'Traits',
+  vehicles: 'Vehicles',
+} as const
+
 // Auto-generate models from schema catalog (synchronous)
 const models = generateModels()
 
@@ -150,50 +176,69 @@ export type SURefSchemaName = keyof SchemaToEntityMap
  */
 export class SalvageUnionReference {
   // Initialize static properties from generated models
-  static Abilities = models.Abilities as BaseModel<
+  static Abilities = models.Abilities as ModelWithMetadata<
     SchemaToEntityMap['abilities']
   >
-  static AbilityTreeRequirements = models.AbilityTreeRequirements as BaseModel<
-    SchemaToEntityMap['ability-tree-requirements']
-  >
-  static BioTitans = models.BioTitans as BaseModel<
+  static AbilityTreeRequirements =
+    models.AbilityTreeRequirements as ModelWithMetadata<
+      SchemaToEntityMap['ability-tree-requirements']
+    >
+  static BioTitans = models.BioTitans as ModelWithMetadata<
     SchemaToEntityMap['bio-titans']
   >
-  static Chassis = models.Chassis as BaseModel<SchemaToEntityMap['chassis']>
-  static AdvancedClasses = models.AdvancedClasses as BaseModel<
+  static Chassis = models.Chassis as ModelWithMetadata<
+    SchemaToEntityMap['chassis']
+  >
+  static AdvancedClasses = models.AdvancedClasses as ModelWithMetadata<
     SchemaToEntityMap['classes.advanced']
   >
-  static CoreClasses = models.CoreClasses as BaseModel<
+  static CoreClasses = models.CoreClasses as ModelWithMetadata<
     SchemaToEntityMap['classes.core']
   >
-  static HybridClasses = models.HybridClasses as BaseModel<
+  static HybridClasses = models.HybridClasses as ModelWithMetadata<
     SchemaToEntityMap['classes.hybrid']
   >
-  static CrawlerBays = models.CrawlerBays as BaseModel<
+  static CrawlerBays = models.CrawlerBays as ModelWithMetadata<
     SchemaToEntityMap['crawler-bays']
   >
-  static CrawlerTechLevels = models.CrawlerTechLevels as BaseModel<
+  static CrawlerTechLevels = models.CrawlerTechLevels as ModelWithMetadata<
     SchemaToEntityMap['crawler-tech-levels']
   >
-  static Crawlers = models.Crawlers as BaseModel<SchemaToEntityMap['crawlers']>
-  static Creatures = models.Creatures as BaseModel<
+  static Crawlers = models.Crawlers as ModelWithMetadata<
+    SchemaToEntityMap['crawlers']
+  >
+  static Creatures = models.Creatures as ModelWithMetadata<
     SchemaToEntityMap['creatures']
   >
-  static Drones = models.Drones as BaseModel<SchemaToEntityMap['drones']>
-  static Equipment = models.Equipment as BaseModel<
+  static Drones = models.Drones as ModelWithMetadata<
+    SchemaToEntityMap['drones']
+  >
+  static Equipment = models.Equipment as ModelWithMetadata<
     SchemaToEntityMap['equipment']
   >
-  static Keywords = models.Keywords as BaseModel<SchemaToEntityMap['keywords']>
-  static Meld = models.Meld as BaseModel<SchemaToEntityMap['meld']>
-  static Modules = models.Modules as BaseModel<SchemaToEntityMap['modules']>
-  static NPCs = models.NPCs as BaseModel<SchemaToEntityMap['npcs']>
-  static RollTables = models.RollTables as BaseModel<
+  static Keywords = models.Keywords as ModelWithMetadata<
+    SchemaToEntityMap['keywords']
+  >
+  static Meld = models.Meld as ModelWithMetadata<SchemaToEntityMap['meld']>
+  static Modules = models.Modules as ModelWithMetadata<
+    SchemaToEntityMap['modules']
+  >
+  static NPCs = models.NPCs as ModelWithMetadata<SchemaToEntityMap['npcs']>
+  static RollTables = models.RollTables as ModelWithMetadata<
     SchemaToEntityMap['roll-tables']
   >
-  static Squads = models.Squads as BaseModel<SchemaToEntityMap['squads']>
-  static Systems = models.Systems as BaseModel<SchemaToEntityMap['systems']>
-  static Traits = models.Traits as BaseModel<SchemaToEntityMap['traits']>
-  static Vehicles = models.Vehicles as BaseModel<SchemaToEntityMap['vehicles']>
+  static Squads = models.Squads as ModelWithMetadata<
+    SchemaToEntityMap['squads']
+  >
+  static Systems = models.Systems as ModelWithMetadata<
+    SchemaToEntityMap['systems']
+  >
+  static Traits = models.Traits as ModelWithMetadata<
+    SchemaToEntityMap['traits']
+  >
+  static Vehicles = models.Vehicles as ModelWithMetadata<
+    SchemaToEntityMap['vehicles']
+  >
 
   /**
    * Find a single entity in a specific schema

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/vehicles.schema.json",
-  "title": "Salvage Union Vehicles",
+  "title": "vehicles",
   "description": "Conventional vehicles in Salvage Union",
   "type": "array",
   "items": {

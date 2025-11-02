@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/ability-tree-requirements.schema.json",
-  "title": "Salvage Union Ability Tree Requirements",
+  "title": "ability-tree-requirements",
   "description": "Requirements for ability trees in Salvage Union",
   "type": "array",
   "items": {

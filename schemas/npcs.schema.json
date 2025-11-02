@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/npcs.schema.json",
-  "title": "Salvage Union NPCs",
+  "title": "npcs",
   "description": "Non-player characters and people in Salvage Union",
   "type": "array",
   "items": {

@@ -4,16 +4,6 @@
     "name": "Mule",
     "source": "Salvage Union Workshop Manual",
     "page": 100,
-    "stats": {
-      "structurePts": 12,
-      "energyPts": 4,
-      "heatCap": 6,
-      "systemSlots": 16,
-      "moduleSlots": 2,
-      "cargoCap": 16,
-      "techLevel": 1,
-      "salvageValue": 7
-    },
     "actions": [
       {
         "name": "Integrated Cargo Bay",
@@ -122,23 +112,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 12,
+    "energyPts": 4,
+    "heatCap": 6,
+    "systemSlots": 16,
+    "moduleSlots": 2,
+    "cargoCap": 16,
+    "techLevel": 1,
+    "salvageValue": 7
   },
   {
     "id": "df6b7872-5fbe-4602-b564-564157864746",
     "name": "Mazona",
     "source": "Salvage Union Workshop Manual",
     "page": 102,
-    "stats": {
-      "structurePts": 5,
-      "energyPts": 10,
-      "heatCap": 6,
-      "systemSlots": 7,
-      "moduleSlots": 3,
-      "cargoCap": 6,
-      "techLevel": 1,
-      "salvageValue": 4
-    },
     "actions": [
       {
         "name": "Hover Drone",
@@ -221,23 +209,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 5,
+    "energyPts": 10,
+    "heatCap": 6,
+    "systemSlots": 7,
+    "moduleSlots": 3,
+    "cargoCap": 6,
+    "techLevel": 1,
+    "salvageValue": 4
   },
   {
     "id": "105055e2-eb07-4329-8dc0-a344d6d77212",
     "name": "Scrapper",
     "source": "Salvage Union Workshop Manual",
     "page": 104,
-    "stats": {
-      "structurePts": 9,
-      "energyPts": 9,
-      "heatCap": 8,
-      "systemSlots": 12,
-      "moduleSlots": 2,
-      "cargoCap": 6,
-      "techLevel": 1,
-      "salvageValue": 6
-    },
     "actions": [
       {
         "name": "Hazard Protected Chassis",
@@ -340,23 +326,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 9,
+    "energyPts": 9,
+    "heatCap": 8,
+    "systemSlots": 12,
+    "moduleSlots": 2,
+    "cargoCap": 6,
+    "techLevel": 1,
+    "salvageValue": 6
   },
   {
     "id": "c465ea55-0230-41c9-a014-2baf453e2d2b",
     "name": "Spectrum",
     "source": "Salvage Union Workshop Manual",
     "page": 106,
-    "stats": {
-      "structurePts": 17,
-      "energyPts": 11,
-      "heatCap": 3,
-      "systemSlots": 7,
-      "moduleSlots": 4,
-      "cargoCap": 6,
-      "techLevel": 1,
-      "salvageValue": 10
-    },
     "actions": [
       {
         "name": "Data Scanner",
@@ -468,23 +452,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 17,
+    "energyPts": 11,
+    "heatCap": 3,
+    "systemSlots": 7,
+    "moduleSlots": 4,
+    "cargoCap": 6,
+    "techLevel": 1,
+    "salvageValue": 10
   },
   {
     "id": "61e24c6d-fc2f-4ff7-b9ca-3d8325764666",
     "name": "Thresher",
     "source": "Salvage Union Workshop Manual",
     "page": 108,
-    "stats": {
-      "structurePts": 15,
-      "energyPts": 6,
-      "heatCap": 10,
-      "systemSlots": 9,
-      "moduleSlots": 2,
-      "cargoCap": 6,
-      "techLevel": 1,
-      "salvageValue": 9
-    },
     "actions": [
       {
         "name": "Heavily Armoured Chassis",
@@ -570,23 +552,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 15,
+    "energyPts": 6,
+    "heatCap": 10,
+    "systemSlots": 9,
+    "moduleSlots": 2,
+    "cargoCap": 6,
+    "techLevel": 1,
+    "salvageValue": 9
   },
   {
     "id": "b9ad42f1-55a8-4e87-aa9a-e135ad434831",
     "name": "Forge",
     "source": "Salvage Union Workshop Manual",
     "page": 110,
-    "stats": {
-      "structurePts": 16,
-      "energyPts": 13,
-      "heatCap": 10,
-      "systemSlots": 15,
-      "moduleSlots": 4,
-      "cargoCap": 6,
-      "techLevel": 2,
-      "salvageValue": 10
-    },
     "actions": [
       {
         "name": "Integrated Epoxy Printer",
@@ -730,23 +710,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 16,
+    "energyPts": 13,
+    "heatCap": 10,
+    "systemSlots": 15,
+    "moduleSlots": 4,
+    "cargoCap": 6,
+    "techLevel": 2,
+    "salvageValue": 10
   },
   {
     "id": "9782857d-ccf4-4d95-8da2-d3912a6da8e3",
     "name": "Gopher",
     "source": "Salvage Union Workshop Manual",
     "page": 112,
-    "stats": {
-      "structurePts": 14,
-      "energyPts": 10,
-      "heatCap": 8,
-      "systemSlots": 12,
-      "moduleSlots": 3,
-      "cargoCap": 12,
-      "techLevel": 2,
-      "salvageValue": 4
-    },
     "actions": [
       {
         "name": "Integrated Expanded Transport Hold",
@@ -852,23 +830,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 14,
+    "energyPts": 10,
+    "heatCap": 8,
+    "systemSlots": 12,
+    "moduleSlots": 3,
+    "cargoCap": 12,
+    "techLevel": 2,
+    "salvageValue": 4
   },
   {
     "id": "a7134396-92a6-47a7-b6fe-bd2e8a93c4fb",
     "name": "Hussar",
     "source": "Salvage Union Workshop Manual",
     "page": 114,
-    "stats": {
-      "structurePts": 12,
-      "energyPts": 10,
-      "heatCap": 12,
-      "systemSlots": 12,
-      "moduleSlots": 3,
-      "cargoCap": 6,
-      "techLevel": 2,
-      "salvageValue": 6
-    },
     "actions": [
       {
         "name": "Fast",
@@ -979,23 +955,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 12,
+    "energyPts": 10,
+    "heatCap": 12,
+    "systemSlots": 12,
+    "moduleSlots": 3,
+    "cargoCap": 6,
+    "techLevel": 2,
+    "salvageValue": 6
   },
   {
     "id": "bc0be363-b45b-4f3f-8ce1-67406cb2c24c",
     "name": "Jackhammer",
     "source": "Salvage Union Workshop Manual",
     "page": 116,
-    "stats": {
-      "structurePts": 18,
-      "energyPts": 7,
-      "heatCap": 13,
-      "systemSlots": 15,
-      "moduleSlots": 3,
-      "cargoCap": 6,
-      "techLevel": 2,
-      "salvageValue": 6
-    },
     "actions": [
       {
         "name": "Reinforced Chassis",
@@ -1103,23 +1077,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 18,
+    "energyPts": 7,
+    "heatCap": 13,
+    "systemSlots": 15,
+    "moduleSlots": 3,
+    "cargoCap": 6,
+    "techLevel": 2,
+    "salvageValue": 6
   },
   {
     "id": "1ba741eb-5b33-496f-81f8-7f9d05e27985",
     "name": "Kraken",
     "source": "Salvage Union Workshop Manual",
     "page": 118,
-    "stats": {
-      "structurePts": 24,
-      "energyPts": 10,
-      "heatCap": 14,
-      "systemSlots": 18,
-      "moduleSlots": 3,
-      "cargoCap": 6,
-      "techLevel": 2,
-      "salvageValue": 14
-    },
     "actions": [
       {
         "name": "Integrated Amphibious Locomotion System",
@@ -1249,23 +1221,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 24,
+    "energyPts": 10,
+    "heatCap": 14,
+    "systemSlots": 18,
+    "moduleSlots": 3,
+    "cargoCap": 6,
+    "techLevel": 2,
+    "salvageValue": 14
   },
   {
     "id": "c505adcd-26af-4c2a-91f4-55ff1fd8fe72",
     "name": "Magpie",
     "source": "Salvage Union Workshop Manual",
     "page": 120,
-    "stats": {
-      "structurePts": 15,
-      "energyPts": 12,
-      "heatCap": 10,
-      "systemSlots": 15,
-      "moduleSlots": 3,
-      "cargoCap": 6,
-      "techLevel": 2,
-      "salvageValue": 5
-    },
     "actions": [
       {
         "name": "Hot Swap Universal Mounts",
@@ -1380,23 +1350,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 15,
+    "energyPts": 12,
+    "heatCap": 10,
+    "systemSlots": 15,
+    "moduleSlots": 3,
+    "cargoCap": 6,
+    "techLevel": 2,
+    "salvageValue": 5
   },
   {
     "id": "fdb9542b-d85e-468b-911a-517f8411efab",
     "name": "Mirrorball",
     "source": "Salvage Union Workshop Manual",
     "page": 122,
-    "stats": {
-      "structurePts": 16,
-      "energyPts": 14,
-      "heatCap": 8,
-      "systemSlots": 12,
-      "moduleSlots": 3,
-      "cargoCap": 6,
-      "techLevel": 2,
-      "salvageValue": 8
-    },
     "actions": [
       {
         "name": "Integrated Advanced Shield Dome",
@@ -1506,23 +1474,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 16,
+    "energyPts": 14,
+    "heatCap": 8,
+    "systemSlots": 12,
+    "moduleSlots": 3,
+    "cargoCap": 6,
+    "techLevel": 2,
+    "salvageValue": 8
   },
   {
     "id": "4ba6cc9f-19b0-4ae7-9471-3552f5470d4a",
     "name": "Atlas",
     "source": "Salvage Union Workshop Manual",
     "page": 124,
-    "stats": {
-      "structurePts": 30,
-      "energyPts": 10,
-      "heatCap": 14,
-      "systemSlots": 21,
-      "moduleSlots": 2,
-      "cargoCap": 30,
-      "techLevel": 3,
-      "salvageValue": 12
-    },
     "actions": [
       {
         "name": "Integrated Colossal Cargo Bay",
@@ -1625,23 +1591,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 30,
+    "energyPts": 10,
+    "heatCap": 14,
+    "systemSlots": 21,
+    "moduleSlots": 2,
+    "cargoCap": 30,
+    "techLevel": 3,
+    "salvageValue": 12
   },
   {
     "id": "d05330c9-e87e-4e1b-b1b4-cb70a97e7543",
     "name": "Brawler",
     "source": "Salvage Union Workshop Manual",
     "page": 126,
-    "stats": {
-      "structurePts": 25,
-      "energyPts": 10,
-      "heatCap": 14,
-      "systemSlots": 16,
-      "moduleSlots": 3,
-      "cargoCap": 6,
-      "techLevel": 3,
-      "salvageValue": 5
-    },
     "actions": [
       {
         "name": "Close Range Protocols",
@@ -1751,41 +1715,25 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 25,
+    "energyPts": 10,
+    "heatCap": 14,
+    "systemSlots": 16,
+    "moduleSlots": 3,
+    "cargoCap": 6,
+    "techLevel": 3,
+    "salvageValue": 5
   },
   {
     "id": "01944f26-0843-4897-a72d-da19a56b1974",
     "name": "Little Sestra",
     "source": "Salvage Union Workshop Manual",
     "page": 128,
-    "stats": {
-      "structurePts": 15,
-      "energyPts": 8,
-      "heatCap": 10,
-      "systemSlots": 9,
-      "moduleSlots": 3,
-      "cargoCap": 6,
-      "techLevel": 3,
-      "salvageValue": 7
-    },
     "actions": [
       {
         "name": "Sestra Drone Controller",
-        "effect": "The Little Sestra comes with a single Sestra Drone that it controls up to Far Range. Roll on the A.I. Personality Table for the drone's personality. The Sestra Drone acts separately to the Little Sestra on its own turn, and is controlled by the Pilot. It functions effectively as a Mech, but cannot Push. It can be installed with Systems and Modules and restores its SP and EP in a T3 or higher Mech Bay during Downtime. If the Drone is damaged it can be repaired as though it was a Mech. If it is destroyed you may craft a new Sestra Drone for 2 Tech 3 Scrap as per the crafting rules. The Little Sestra may have one active Sestra Drone at a time."
-      },
-      {
-        "name": "Sestra Drone",
-        "stats": {
-          "structurePts": 7,
-          "energyPts": 8,
-          "heatCap": 6,
-          "systemSlots": 7,
-          "moduleSlots": 2,
-          "cargoCap": 3,
-          "techLevel": 3,
-          "salvageValue": 2,
-          "notes": "Integrated Hover Locomotion System"
-        }
+        "effect": "The Little Sestra comes with a single Sestra Drone that it controls up to Far Range. Roll on the A.I. Personality Table for the drone's personality. The Sestra Drone acts separately to the Little Sestra on its own turn, and is controlled by the Pilot. It functions effectively as a Mech, but cannot Push. It can be installed with Systems and Modules and restores its SP and EP in a T3 or higher Mech Bay during Downtime. If the Drone is damaged it can be repaired as though it was a Mech. If it is destroyed you may craft a new Sestra Drone for 2 Tech 3 Scrap as per the crafting rules. The Little Sestra may have one active Sestra Drone at a time. Sestra Drone Stats: 7 SP, 8 EP, 6 Heat Cap, 7 System Slots, 2 Module Slots, 3 Cargo Cap, Tech Level 3, Salvage Value 2. Integrated Hover Locomotion System."
       }
     ],
     "description": "The 'НC-15' Little Sestra is a Mech designed by DronTek Systems to control a Sestra Drone in the field. Little Sestra Mechs are utilised for reconnaissance or in larger numbers to support DronTek's Big Brother Mechs in battle. Sestra Mechs were utilised effectively in the First Corpo War to pick off retreating Evantis forces following their failed invasion of the Northern Wastes. The majority of remote drones are unusable in the wastes, but the Little Sestra's high end, specialised drone controller continues to function where others have failed.",
@@ -1899,23 +1847,21 @@
           ]
         }
       }
-    ]
+    ],
+    "structurePts": 15,
+    "energyPts": 8,
+    "heatCap": 10,
+    "systemSlots": 9,
+    "moduleSlots": 3,
+    "cargoCap": 6,
+    "techLevel": 3,
+    "salvageValue": 7
   },
   {
     "id": "c77fa33c-1c94-4b7f-a84e-dc6a37e1e527",
     "name": "Mantis",
     "source": "Salvage Union Workshop Manual",
     "page": 130,
-    "stats": {
-      "structurePts": 15,
-      "energyPts": 17,
-      "heatCap": 7,
-      "systemSlots": 9,
-      "moduleSlots": 6,
-      "cargoCap": 6,
-      "techLevel": 3,
-      "salvageValue": 7
-    },
     "actions": [
       {
         "name": "Integrated Frog Prince Module",
@@ -2074,23 +2020,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 15,
+    "energyPts": 17,
+    "heatCap": 7,
+    "systemSlots": 9,
+    "moduleSlots": 6,
+    "cargoCap": 6,
+    "techLevel": 3,
+    "salvageValue": 7
   },
   {
     "id": "7772b791-e24f-4944-b524-9105f0991d8f",
     "name": "Photon",
     "source": "Salvage Union Workshop Manual",
     "page": 132,
-    "stats": {
-      "structurePts": 20,
-      "energyPts": 10,
-      "heatCap": 12,
-      "systemSlots": 15,
-      "moduleSlots": 4,
-      "cargoCap": 6,
-      "techLevel": 3,
-      "salvageValue": 8
-    },
     "actions": [
       {
         "name": "Solar Reactor",
@@ -2194,23 +2138,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 20,
+    "energyPts": 10,
+    "heatCap": 12,
+    "systemSlots": 15,
+    "moduleSlots": 4,
+    "cargoCap": 6,
+    "techLevel": 3,
+    "salvageValue": 8
   },
   {
     "id": "c1b7996e-6d98-44d8-bfc5-b6a029e0b4f4",
     "name": "Solo",
     "source": "Salvage Union Workshop Manual",
     "page": 134,
-    "stats": {
-      "structurePts": 16,
-      "energyPts": 13,
-      "heatCap": 10,
-      "systemSlots": 12,
-      "moduleSlots": 4,
-      "cargoCap": 6,
-      "techLevel": 3,
-      "salvageValue": 4
-    },
     "actions": [
       {
         "name": "Polycarbonate Stealth Chassis",
@@ -2330,23 +2272,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 16,
+    "energyPts": 13,
+    "heatCap": 10,
+    "systemSlots": 12,
+    "moduleSlots": 4,
+    "cargoCap": 6,
+    "techLevel": 3,
+    "salvageValue": 4
   },
   {
     "id": "c7dba8f0-cec4-4e32-a01f-5832da666afc",
     "name": "Terra",
     "source": "Salvage Union Workshop Manual",
     "page": 129,
-    "stats": {
-      "structurePts": 23,
-      "energyPts": 12,
-      "heatCap": 13,
-      "systemSlots": 18,
-      "moduleSlots": 3,
-      "cargoCap": 6,
-      "techLevel": 3,
-      "salvageValue": 9
-    },
     "actions": [
       {
         "name": "Terraforming Bubble",
@@ -2456,23 +2396,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 23,
+    "energyPts": 12,
+    "heatCap": 13,
+    "systemSlots": 18,
+    "moduleSlots": 3,
+    "cargoCap": 6,
+    "techLevel": 3,
+    "salvageValue": 9
   },
   {
     "id": "70a37be9-5592-46b7-bbe5-5310ac2a0ed1",
     "name": "Aegis",
     "source": "Salvage Union Workshop Manual",
     "page": 138,
-    "stats": {
-      "structurePts": 24,
-      "energyPts": 16,
-      "heatCap": 14,
-      "systemSlots": 18,
-      "moduleSlots": 5,
-      "cargoCap": 6,
-      "techLevel": 4,
-      "salvageValue": 8
-    },
     "actions": [
       {
         "name": "Integrated Advanced Shield Projector",
@@ -2597,23 +2535,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 24,
+    "energyPts": 16,
+    "heatCap": 14,
+    "systemSlots": 18,
+    "moduleSlots": 5,
+    "cargoCap": 6,
+    "techLevel": 4,
+    "salvageValue": 8
   },
   {
     "id": "e6f4410c-7356-4e05-9af2-9a48fe76e027",
     "name": "Colossus",
     "source": "Salvage Union Workshop Manual",
     "page": 140,
-    "stats": {
-      "structurePts": 36,
-      "energyPts": 12,
-      "heatCap": 16,
-      "systemSlots": 24,
-      "moduleSlots": 4,
-      "cargoCap": 6,
-      "techLevel": 4,
-      "salvageValue": 16
-    },
     "actions": [
       {
         "name": "Eradication Protocols",
@@ -2727,23 +2663,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 36,
+    "energyPts": 12,
+    "heatCap": 16,
+    "systemSlots": 24,
+    "moduleSlots": 4,
+    "cargoCap": 6,
+    "techLevel": 4,
+    "salvageValue": 16
   },
   {
     "id": "26850363-6398-4902-aff0-2acc9500027d",
     "name": "Consul",
     "source": "Salvage Union Workshop Manual",
     "page": 142,
-    "stats": {
-      "structurePts": 15,
-      "energyPts": 16,
-      "heatCap": 12,
-      "systemSlots": 12,
-      "moduleSlots": 5,
-      "cargoCap": 6,
-      "techLevel": 4,
-      "salvageValue": 3
-    },
     "actions": [
       {
         "name": "Flashy",
@@ -2860,23 +2794,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 15,
+    "energyPts": 16,
+    "heatCap": 12,
+    "systemSlots": 12,
+    "moduleSlots": 5,
+    "cargoCap": 6,
+    "techLevel": 4,
+    "salvageValue": 3
   },
   {
     "id": "065ef9ea-4d21-449f-aed7-f67ac0d3dad6",
     "name": "Drop Bear",
     "source": "Salvage Union Workshop Manual",
     "page": 144,
-    "stats": {
-      "structurePts": 26,
-      "energyPts": 14,
-      "heatCap": 14,
-      "systemSlots": 16,
-      "moduleSlots": 4,
-      "cargoCap": 6,
-      "techLevel": 4,
-      "salvageValue": 7
-    },
     "actions": [
       {
         "name": "Integrated Advanced Vectored Thrust Unit",
@@ -2997,23 +2929,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 26,
+    "energyPts": 14,
+    "heatCap": 14,
+    "systemSlots": 16,
+    "moduleSlots": 4,
+    "cargoCap": 6,
+    "techLevel": 4,
+    "salvageValue": 7
   },
   {
     "id": "175c3af3-8083-4733-8836-9596c210cd96",
     "name": "Vorpal",
     "source": "Salvage Union Workshop Manual",
     "page": 146,
-    "stats": {
-      "structurePts": 18,
-      "energyPts": 12,
-      "heatCap": 15,
-      "systemSlots": 15,
-      "moduleSlots": 4,
-      "cargoCap": 6,
-      "techLevel": 4,
-      "salvageValue": 4
-    },
     "actions": [
       {
         "name": "Heat Efficient Reactor",
@@ -3113,23 +3043,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 18,
+    "energyPts": 12,
+    "heatCap": 15,
+    "systemSlots": 15,
+    "moduleSlots": 4,
+    "cargoCap": 6,
+    "techLevel": 4,
+    "salvageValue": 4
   },
   {
     "id": "76abcfe2-5262-4f3b-953d-dcb88980871c",
     "name": "Carrier",
     "source": "Salvage Union Workshop Manual",
     "page": 148,
-    "stats": {
-      "structurePts": 35,
-      "energyPts": 16,
-      "heatCap": 12,
-      "systemSlots": 21,
-      "moduleSlots": 5,
-      "cargoCap": 6,
-      "techLevel": 5,
-      "salvageValue": 9
-    },
     "actions": [
       {
         "name": "Integrated Mech Bay",
@@ -3243,23 +3171,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 35,
+    "energyPts": 16,
+    "heatCap": 12,
+    "systemSlots": 21,
+    "moduleSlots": 5,
+    "cargoCap": 6,
+    "techLevel": 5,
+    "salvageValue": 9
   },
   {
     "id": "3995435a-fab2-411e-bb58-85afefb179d8",
     "name": "Eidolon",
     "source": "Salvage Union Workshop Manual",
     "page": 150,
-    "stats": {
-      "structurePts": 21,
-      "energyPts": 15,
-      "heatCap": 12,
-      "systemSlots": 15,
-      "moduleSlots": 7,
-      "cargoCap": 6,
-      "techLevel": 5,
-      "salvageValue": 5
-    },
     "actions": [
       {
         "name": "Polycarbonate Stealth Chassis",
@@ -3397,23 +3323,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 21,
+    "energyPts": 15,
+    "heatCap": 12,
+    "systemSlots": 15,
+    "moduleSlots": 7,
+    "cargoCap": 6,
+    "techLevel": 5,
+    "salvageValue": 5
   },
   {
     "id": "760d3f94-245d-4260-b071-2df4f8541905",
     "name": "Neura-Phage",
     "source": "Salvage Union Workshop Manual",
     "page": 152,
-    "stats": {
-      "structurePts": 29,
-      "energyPts": 11,
-      "heatCap": 13,
-      "systemSlots": 18,
-      "moduleSlots": 6,
-      "cargoCap": 6,
-      "techLevel": 5,
-      "salvageValue": 9
-    },
     "actions": [
       {
         "name": "Cybernetic Neuralink",
@@ -3512,23 +3436,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 29,
+    "energyPts": 11,
+    "heatCap": 13,
+    "systemSlots": 18,
+    "moduleSlots": 6,
+    "cargoCap": 6,
+    "techLevel": 5,
+    "salvageValue": 9
   },
   {
     "id": "33839393-b860-4fa7-a410-6ba6dc82d941",
     "name": "Iron Wyrm",
     "source": "Salvage Union Workshop Manual",
     "page": 154,
-    "stats": {
-      "structurePts": 46,
-      "energyPts": 15,
-      "heatCap": 19,
-      "systemSlots": 24,
-      "moduleSlots": 5,
-      "cargoCap": 6,
-      "techLevel": 6,
-      "salvageValue": 17
-    },
     "actions": [
       {
         "name": "Burrower",
@@ -3645,23 +3567,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 46,
+    "energyPts": 15,
+    "heatCap": 19,
+    "systemSlots": 24,
+    "moduleSlots": 5,
+    "cargoCap": 6,
+    "techLevel": 6,
+    "salvageValue": 17
   },
   {
     "id": "bedfa4d4-b1b2-4130-8e7b-efcd235da430",
     "name": "Leviathan",
     "source": "Salvage Union Workshop Manual",
     "page": 156,
-    "stats": {
-      "structurePts": 76,
-      "energyPts": 14,
-      "heatCap": 18,
-      "systemSlots": 36,
-      "moduleSlots": 6,
-      "cargoCap": 6,
-      "techLevel": 6,
-      "salvageValue": 20
-    },
     "actions": [
       {
         "name": "Juggernaut",
@@ -3788,23 +3708,21 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 76,
+    "energyPts": 14,
+    "heatCap": 18,
+    "systemSlots": 36,
+    "moduleSlots": 6,
+    "cargoCap": 6,
+    "techLevel": 6,
+    "salvageValue": 20
   },
   {
     "id": "7b7f33cf-88db-41dd-8e11-fd7fc264c4bb",
     "name": "Shaitan",
     "source": "Salvage Union Workshop Manual",
     "page": 158,
-    "stats": {
-      "structurePts": 21,
-      "energyPts": 20,
-      "heatCap": 14,
-      "systemSlots": 15,
-      "moduleSlots": 10,
-      "cargoCap": 6,
-      "techLevel": 6,
-      "salvageValue": 6
-    },
     "actions": [
       {
         "name": "Integrated VTU System",
@@ -3967,6 +3885,14 @@
           }
         ]
       }
-    ]
+    ],
+    "structurePts": 21,
+    "energyPts": 20,
+    "heatCap": 14,
+    "systemSlots": 15,
+    "moduleSlots": 10,
+    "cargoCap": 6,
+    "techLevel": 6,
+    "salvageValue": 6
   }
 ]

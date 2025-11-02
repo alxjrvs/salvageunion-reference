@@ -8,12 +8,12 @@
       "description": "Damage dealt by an attack or ability",
       "type": "object",
       "additionalProperties": false,
-      "required": ["amount"],
+      "required": [
+        "damageType",
+        "amount"
+      ],
       "properties": {
         "damageType": {
-          "$ref": "enums.schema.json#/definitions/damageType"
-        },
-        "type": {
           "$ref": "enums.schema.json#/definitions/damageType"
         },
         "amount": {
@@ -29,15 +29,7 @@
             }
           ]
         }
-      },
-      "oneOf": [
-        {
-          "required": ["damageType"]
-        },
-        {
-          "required": ["type"]
-        }
-      ]
+      }
     },
     "traits": {
       "type": "array",
@@ -46,7 +38,9 @@
         "type": "object",
         "description": "Trait without a numeric value",
         "additionalProperties": false,
-        "required": ["type"],
+        "required": [
+          "type"
+        ],
         "properties": {
           "amount": {
             "type": "integer",
@@ -63,7 +57,6 @@
     "stats": {
       "type": "object",
       "description": "Statistics for mechs, chassis, and vehicles",
-      "additionalProperties": false,
       "required": [
         "structurePts",
         "energyPts",
@@ -121,7 +114,11 @@
       "type": "object",
       "description": "NPC associated with an entity",
       "additionalProperties": false,
-      "required": ["position", "description", "hitPoints"],
+      "required": [
+        "position",
+        "description",
+        "hitPoints"
+      ],
       "properties": {
         "position": {
           "type": "string",
@@ -143,7 +140,9 @@
     "patternSystemModule": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -169,7 +168,10 @@
     "choice": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name"],
+      "required": [
+        "id",
+        "name"
+      ],
       "properties": {
         "id": {
           "$ref": "common.schema.json#/definitions/id"
@@ -241,8 +243,42 @@
     "action": {
       "type": "object",
       "description": "An action, ability, or attack that can be performed",
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
+        "structurePts": {
+          "type": "number",
+          "description": "Structure Points (SP) - the health/durability of the entity"
+        },
+        "energyPts": {
+          "type": "number",
+          "description": "Energy Points (EP) - the energy/power capacity of the entity"
+        },
+        "heatCap": {
+          "type": "number",
+          "description": "Heat Capacity - how much heat the entity can handle"
+        },
+        "systemSlots": {
+          "type": "number",
+          "description": "Number of system slots available"
+        },
+        "moduleSlots": {
+          "type": "number",
+          "description": "Number of module slots available"
+        },
+        "cargoCap": {
+          "type": "number",
+          "description": "Cargo capacity"
+        },
+        "techLevel": {
+          "type": "number",
+          "description": "Technology level (1-6)"
+        },
+        "salvageValue": {
+          "type": "number",
+          "description": "Salvage value when scrapped"
+        },
         "name": {
           "type": "string",
           "minLength": 1,
@@ -263,10 +299,6 @@
         "activationCost": {
           "$ref": "common.schema.json#/definitions/activationCost"
         },
-        "activationCurrency": {
-          "type": "string",
-          "description": "Currency or resource type required for activation"
-        },
         "range": {
           "$ref": "enums.schema.json#/definitions/range"
         },
@@ -286,7 +318,10 @@
             "type": "object",
             "description": "Structured option with label and value",
             "additionalProperties": false,
-            "required": ["value", "label"],
+            "required": [
+              "value",
+              "label"
+            ],
             "properties": {
               "label": {
                 "type": "string",
@@ -317,7 +352,12 @@
     "system": {
       "description": "A system or module that can be installed on a mech",
       "type": "object",
-      "required": ["actions", "salvageValue", "slotsRequired", "techLevel"],
+      "required": [
+        "actions",
+        "salvageValue",
+        "slotsRequired",
+        "techLevel"
+      ],
       "allOf": [
         {
           "$ref": "#/definitions/entry"
@@ -376,7 +416,10 @@
           "type": "object",
           "description": "Bonus to a specific stat",
           "additionalProperties": false,
-          "required": ["stat", "bonus"],
+          "required": [
+            "stat",
+            "bonus"
+          ],
           "properties": {
             "stat": {
               "type": "string",
@@ -402,7 +445,14 @@
           "type": "object",
           "description": "Standard roll table with 5 outcome ranges",
           "additionalProperties": false,
-          "required": ["type", "1", "20", "11-19", "6-10", "2-5"],
+          "required": [
+            "type",
+            "1",
+            "20",
+            "11-19",
+            "6-10",
+            "2-5"
+          ],
           "properties": {
             "1": {
               "type": "string",
@@ -434,7 +484,14 @@
           "type": "object",
           "description": "Alternative standard roll table with different ranges",
           "additionalProperties": false,
-          "required": ["type", "1", "19-20", "11-18", "6-10", "2-5"],
+          "required": [
+            "type",
+            "1",
+            "19-20",
+            "11-18",
+            "6-10",
+            "2-5"
+          ],
           "properties": {
             "1": {
               "type": "string",
@@ -561,7 +618,12 @@
     "entry": {
       "type": "object",
       "description": "Basic entry with name, description, source, and page reference",
-      "required": ["id", "name", "page", "source"],
+      "required": [
+        "id",
+        "name",
+        "page",
+        "source"
+      ],
       "properties": {
         "id": {
           "$ref": "common.schema.json#/definitions/id"
@@ -577,7 +639,7 @@
         },
         "notes": {
           "type": "string",
-          "description": "Additional notes or flavor text for the entry"
+          "description": "Additional notes about the entry"
         },
         "source": {
           "$ref": "enums.schema.json#/definitions/source"

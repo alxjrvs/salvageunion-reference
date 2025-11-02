@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/classes.advanced.schema.json",
-  "title": "Salvage Union Advanced Core Classes",
+  "title": "classes.advanced",
   "description": "Advanced character classes in Salvage Union",
   "type": "array",
   "items": {

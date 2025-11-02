@@ -348,7 +348,9 @@
           "Zoom Optics",
           "IR Night Vision Optics"
         ],
-        "schema": ["modules"]
+        "schema": [
+          "modules"
+        ]
       }
     ],
     "page": 33
@@ -367,7 +369,7 @@
         "name": "Bionic Arms Attack",
         "value": "Melee attack with your bionic arms, where X is equal to the Tech Level of your Union Crawler.",
         "damage": {
-          "type": "SP",
+          "damageType": "SP",
           "amount": "X"
         },
         "range": "Close",
@@ -948,7 +950,7 @@
         "name": "Custom Sniper Rifle",
         "value": "Attack with your custom sniper rifle. Base damage is 2 SP at Tech 1, increasing by 1 SP per Tech Level.",
         "damage": {
-          "type": "SP",
+          "damageType": "SP",
           "amount": 2
         },
         "range": "Long"
@@ -1151,7 +1153,7 @@
         "name": "Custom Missile Launcher",
         "value": "Attack with your custom missile launcher. Base damage is 3 SP at Tech 1, increasing by 1 SP per Tech Level.",
         "damage": {
-          "type": "SP",
+          "damageType": "SP",
           "amount": 3
         },
         "range": "Medium",
@@ -1336,7 +1338,7 @@
         "name": "Meld Tendril Attack",
         "value": "Attack with your Meld tendrils.",
         "damage": {
-          "type": "SP",
+          "damageType": "SP",
           "amount": 5
         },
         "range": "Medium",
@@ -1774,10 +1776,10 @@
     "level": "G",
     "tree": "Generic",
     "source": "Salvage Union Workshop Manual",
+    "description": "You craft a Mech Chassis, System, or Module.",
     "effect": "You craft a Mech Chassis, System, or Module. This costs a number of Scrap equal to the Salvage Value of the Mech Chassis, System, or Module. This Scrap must be of a Tech Level equal to or higher than the Mech Chassis, System, or Module. You may only craft a Mech Chassis, System, or Module of a Tech Level equal to or lower than the Crafting Bay you are working in. This will typically be the same level as your Union Crawler.\n\nYou may perform this Ability as many times as you wish during Downtime, but cannot do it in the field.",
     "actionType": "DownTime",
     "notes": "Requires Crafting Bay.",
-    "traits": [],
     "page": 249
   }
 ]

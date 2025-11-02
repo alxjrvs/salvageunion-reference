@@ -82,7 +82,7 @@ export function isBioTitan(entity: SURefEntity): entity is SURefBioTitan {
  */
 export function isChassis(entity: SURefEntity): entity is SURefChassis {
   if (!entity || typeof entity !== 'object') return false
-  if (!('stats' in entity)) return false
+  if (!('structurePts' in entity)) return false
   if (!('actions' in entity)) return false
   if (!('patterns' in entity)) return false
   return true
@@ -340,7 +340,7 @@ export function isVehicle(entity: SURefEntity): entity is SURefVehicle {
 
 /**
  * Extract structurePoints from an entity if it exists
- * Supported schemas: bio-titans, crawler-tech-levels, drones, vehicles
+ * Supported schemas: bio-titans, crawler-tech-levels, drones, meld, vehicles
  * @param entity - The entity to extract from
  * @returns The structurePoints value or undefined
  */
@@ -411,6 +411,18 @@ export function getLegendaryTree(entity: SURefEntity): unknown | undefined {
 }
 
 /**
+ * Extract table from an entity if it exists
+ * Supported schemas: crawler-bays, equipment, roll-tables
+ * @param entity - The entity to extract from
+ * @returns The table value or undefined
+ */
+export function getTable(entity: SURefEntity): unknown | undefined {
+  return 'table' in entity
+    ? (entity as unknown as Record<string, unknown>).table
+    : undefined
+}
+
+/**
  * Extract techLevel from an entity if it exists
  * Supported schemas: crawler-tech-levels, drones, equipment, vehicles
  * @param entity - The entity to extract from
@@ -424,7 +436,7 @@ export function getTechLevel(entity: SURefEntity): number | undefined {
 
 /**
  * Extract hitPoints from an entity if it exists
- * Supported schemas: creatures, npcs, squads
+ * Supported schemas: creatures, meld, npcs, squads
  * @param entity - The entity to extract from
  * @returns The hitPoints value or undefined
  */
@@ -436,7 +448,7 @@ export function getHitPoints(entity: SURefEntity): unknown | undefined {
 
 /**
  * Extract salvageValue from an entity if it exists
- * Supported schemas: drones, vehicles
+ * Supported schemas: drones, meld, vehicles
  * @param entity - The entity to extract from
  * @returns The salvageValue value or undefined
  */

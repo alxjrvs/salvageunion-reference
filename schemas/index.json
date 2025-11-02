@@ -2,12 +2,12 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "1.50.0",
-  "generated": "2025-10-31T16:20:41.534Z",
+  "version": "1.51.0",
+  "generated": "2025-11-02T05:16:21.668Z",
   "schemas": [
     {
       "id": "abilities",
-      "title": "Salvage Union Abilities",
+      "title": "abilities",
       "description": "Pilot abilities and skills in Salvage Union",
       "dataFile": "data/abilities.json",
       "schemaFile": "schemas/abilities.schema.json",
@@ -16,7 +16,7 @@
     },
     {
       "id": "ability-tree-requirements",
-      "title": "Salvage Union Ability Tree Requirements",
+      "title": "ability-tree-requirements",
       "description": "Requirements for ability trees in Salvage Union",
       "dataFile": "data/ability-tree-requirements.json",
       "schemaFile": "schemas/ability-tree-requirements.schema.json",
@@ -25,7 +25,7 @@
     },
     {
       "id": "bio-titans",
-      "title": "Salvage Union Bio-Titans",
+      "title": "bio-titans",
       "description": "Massive bio-engineered titan creatures in Salvage Union",
       "dataFile": "data/bio-titans.json",
       "schemaFile": "schemas/bio-titans.schema.json",
@@ -34,7 +34,7 @@
     },
     {
       "id": "chassis",
-      "title": "Salvage Union Mech Chassis",
+      "title": "chassis",
       "description": "Mech chassis definitions in Salvage Union",
       "dataFile": "data/chassis.json",
       "schemaFile": "schemas/chassis.schema.json",
@@ -43,7 +43,7 @@
     },
     {
       "id": "classes.advanced",
-      "title": "Salvage Union Advanced Core Classes",
+      "title": "classes.advanced",
       "description": "Advanced character classes in Salvage Union",
       "dataFile": "data/classes.advanced.json",
       "schemaFile": "schemas/classes.advanced.schema.json",
@@ -52,7 +52,7 @@
     },
     {
       "id": "classes.core",
-      "title": "Salvage Union Core Classes",
+      "title": "classes.core",
       "description": "Core character classes in Salvage Union",
       "dataFile": "data/classes.core.json",
       "schemaFile": "schemas/classes.core.schema.json",
@@ -61,7 +61,7 @@
     },
     {
       "id": "classes.hybrid",
-      "title": "Salvage Union Hybrid Classes",
+      "title": "classes.hybrid",
       "description": "Hybrid character classes in Salvage Union",
       "dataFile": "data/classes.hybrid.json",
       "schemaFile": "schemas/classes.hybrid.schema.json",
@@ -70,7 +70,7 @@
     },
     {
       "id": "crawler-bays",
-      "title": "Salvage Union Crawler Bays",
+      "title": "crawler-bays",
       "description": "Bays and facilities on Union Crawlers in Salvage Union",
       "dataFile": "data/crawler-bays.json",
       "schemaFile": "schemas/crawler-bays.schema.json",
@@ -79,7 +79,7 @@
     },
     {
       "id": "crawler-tech-levels",
-      "title": "Salvage Union Crawler Tech Levels",
+      "title": "crawler-tech-levels",
       "description": "Tech levels for Union Crawlers in Salvage Union",
       "dataFile": "data/crawler-tech-levels.json",
       "schemaFile": "schemas/crawler-tech-levels.schema.json",
@@ -93,7 +93,7 @@
     },
     {
       "id": "crawlers",
-      "title": "Salvage Union Crawlers",
+      "title": "crawlers",
       "description": "Crawler vehicles in Salvage Union",
       "dataFile": "data/crawlers.json",
       "schemaFile": "schemas/crawlers.schema.json",
@@ -102,7 +102,7 @@
     },
     {
       "id": "creatures",
-      "title": "Salvage Union Creatures",
+      "title": "creatures",
       "description": "Creatures and wildlife in Salvage Union",
       "dataFile": "data/creatures.json",
       "schemaFile": "schemas/creatures.schema.json",
@@ -111,7 +111,7 @@
     },
     {
       "id": "drones",
-      "title": "Salvage Union Drones",
+      "title": "drones",
       "description": "Autonomous drones in Salvage Union",
       "dataFile": "data/drones.json",
       "schemaFile": "schemas/drones.schema.json",
@@ -125,7 +125,7 @@
     },
     {
       "id": "equipment",
-      "title": "Salvage Union Equipment",
+      "title": "equipment",
       "description": "Pilot equipment and gear in Salvage Union",
       "dataFile": "data/equipment.json",
       "schemaFile": "schemas/equipment.schema.json",
@@ -134,7 +134,7 @@
     },
     {
       "id": "keywords",
-      "title": "Salvage Union Keywords",
+      "title": "keywords",
       "description": "Game keywords and terminology in Salvage Union",
       "dataFile": "data/keywords.json",
       "schemaFile": "schemas/keywords.schema.json",
@@ -143,7 +143,7 @@
     },
     {
       "id": "meld",
-      "title": "Salvage Union Meld",
+      "title": "meld",
       "description": "Meld-infected creatures in Salvage Union",
       "dataFile": "data/meld.json",
       "schemaFile": "schemas/meld.schema.json",
@@ -152,7 +152,7 @@
     },
     {
       "id": "modules",
-      "title": "Salvage Union Modules",
+      "title": "modules",
       "description": "Mech modules in Salvage Union",
       "dataFile": "data/modules.json",
       "schemaFile": "schemas/modules.schema.json",
@@ -161,7 +161,7 @@
     },
     {
       "id": "npcs",
-      "title": "Salvage Union NPCs",
+      "title": "npcs",
       "description": "Non-player characters and people in Salvage Union",
       "dataFile": "data/npcs.json",
       "schemaFile": "schemas/npcs.schema.json",
@@ -170,7 +170,7 @@
     },
     {
       "id": "roll-tables",
-      "title": "Salvage Union Roll Tables",
+      "title": "roll-tables",
       "description": "Random tables and roll tables in Salvage Union",
       "dataFile": "data/roll-tables.json",
       "schemaFile": "schemas/roll-tables.schema.json",
@@ -179,7 +179,7 @@
     },
     {
       "id": "squads",
-      "title": "Salvage Union Squads",
+      "title": "squads",
       "description": "NPC squads and groups in Salvage Union",
       "dataFile": "data/squads.json",
       "schemaFile": "schemas/squads.schema.json",
@@ -188,7 +188,7 @@
     },
     {
       "id": "systems",
-      "title": "Salvage Union Systems",
+      "title": "systems",
       "description": "Mech systems in Salvage Union",
       "dataFile": "data/systems.json",
       "schemaFile": "schemas/systems.schema.json",
@@ -197,7 +197,7 @@
     },
     {
       "id": "traits",
-      "title": "Salvage Union Traits",
+      "title": "traits",
       "description": "Traits and special properties in Salvage Union",
       "dataFile": "data/traits.json",
       "schemaFile": "schemas/traits.schema.json",
@@ -206,7 +206,7 @@
     },
     {
       "id": "vehicles",
-      "title": "Salvage Union Vehicles",
+      "title": "vehicles",
       "description": "Conventional vehicles in Salvage Union",
       "dataFile": "data/vehicles.json",
       "schemaFile": "schemas/vehicles.schema.json",
