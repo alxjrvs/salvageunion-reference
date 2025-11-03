@@ -74,10 +74,7 @@
         "type": "object",
         "description": "Structured option with label and value",
         "additionalProperties": false,
-        "required": [
-          "value",
-          "label"
-        ],
+        "required": ["value", "label"],
         "properties": {
           "label": {
             "type": "string",

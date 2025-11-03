@@ -354,9 +354,7 @@
           "Zoom Optics",
           "IR Night Vision Optics"
         ],
-        "schema": [
-          "modules"
-        ]
+        "schema": ["modules"]
       }
     ],
     "page": 33

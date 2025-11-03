@@ -661,7 +661,7 @@ export type SURefAbility = SURefMetaEntry &
      * Type of action required to use an ability
      */
     mechActionType?: SURefActionType;
-    grants?: Grants;
+    grants?: SURefMetaGrants;
     activationCurrency?: "Variable";
   };
 

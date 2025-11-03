@@ -12,10 +12,7 @@
       "dataFile": "data/abilities.json",
       "schemaFile": "schemas/abilities.schema.json",
       "itemCount": 103,
-      "requiredFields": [
-        "tree",
-        "level"
-      ],
+      "requiredFields": ["tree", "level"],
       "displayName": "Abilities"
     },
     {
@@ -25,9 +22,7 @@
       "dataFile": "data/ability-tree-requirements.json",
       "schemaFile": "schemas/ability-tree-requirements.schema.json",
       "itemCount": 20,
-      "requiredFields": [
-        "requirement"
-      ],
+      "requiredFields": ["requirement"],
       "displayName": "Ability Tree Requirements"
     },
     {
@@ -37,10 +32,7 @@
       "dataFile": "data/bio-titans.json",
       "schemaFile": "schemas/bio-titans.schema.json",
       "itemCount": 6,
-      "requiredFields": [
-        "structurePoints",
-        "actions"
-      ],
+      "requiredFields": ["structurePoints", "actions"],
       "displayName": "Bio-Titans"
     },
     {
@@ -81,11 +73,7 @@
       "dataFile": "data/classes.core.json",
       "schemaFile": "schemas/classes.core.schema.json",
       "itemCount": 6,
-      "requiredFields": [
-        "maxAbilities",
-        "advanceable",
-        "coreTrees"
-      ],
+      "requiredFields": ["maxAbilities", "advanceable", "coreTrees"],
       "displayName": "Core Classes"
     },
     {
@@ -95,12 +83,7 @@
       "dataFile": "data/crawler-bays.json",
       "schemaFile": "schemas/crawler-bays.schema.json",
       "itemCount": 10,
-      "requiredFields": [
-        "damagedEffect",
-        "npc",
-        "actions",
-        "techLevelEffects"
-      ],
+      "requiredFields": ["damagedEffect", "npc", "actions", "techLevelEffects"],
       "displayName": "Crawler Bays"
     },
     {
@@ -125,10 +108,7 @@
       "dataFile": "data/crawlers.json",
       "schemaFile": "schemas/crawlers.schema.json",
       "itemCount": 5,
-      "requiredFields": [
-        "npc",
-        "actions"
-      ],
+      "requiredFields": ["npc", "actions"],
       "displayName": "Crawlers"
     },
     {
@@ -138,10 +118,7 @@
       "dataFile": "data/creatures.json",
       "schemaFile": "schemas/creatures.schema.json",
       "itemCount": 6,
-      "requiredFields": [
-        "hitPoints",
-        "actions"
-      ],
+      "requiredFields": ["hitPoints", "actions"],
       "displayName": "Creatures"
     },
     {
@@ -166,9 +143,7 @@
       "dataFile": "data/equipment.json",
       "schemaFile": "schemas/equipment.schema.json",
       "itemCount": 45,
-      "requiredFields": [
-        "techLevel"
-      ],
+      "requiredFields": ["techLevel"],
       "displayName": "Equipment"
     },
     {
@@ -178,11 +153,7 @@
       "dataFile": "data/keywords.json",
       "schemaFile": "schemas/keywords.schema.json",
       "itemCount": 73,
-      "requiredFields": [
-        "name",
-        "source",
-        "page"
-      ],
+      "requiredFields": ["name", "source", "page"],
       "displayName": "Keywords"
     },
     {
@@ -192,9 +163,7 @@
       "dataFile": "data/meld.json",
       "schemaFile": "schemas/meld.schema.json",
       "itemCount": 5,
-      "requiredFields": [
-        "actions"
-      ],
+      "requiredFields": ["actions"],
       "displayName": "Meld"
     },
     {
@@ -204,10 +173,7 @@
       "dataFile": "data/modules.json",
       "schemaFile": "schemas/modules.schema.json",
       "itemCount": 61,
-      "requiredFields": [
-        "name",
-        "page"
-      ],
+      "requiredFields": ["name", "page"],
       "displayName": "Modules"
     },
     {
@@ -217,10 +183,7 @@
       "dataFile": "data/npcs.json",
       "schemaFile": "schemas/npcs.schema.json",
       "itemCount": 6,
-      "requiredFields": [
-        "hitPoints",
-        "actions"
-      ],
+      "requiredFields": ["hitPoints", "actions"],
       "displayName": "NPCs"
     },
     {
@@ -230,10 +193,7 @@
       "dataFile": "data/roll-tables.json",
       "schemaFile": "schemas/roll-tables.schema.json",
       "itemCount": 22,
-      "requiredFields": [
-        "section",
-        "table"
-      ],
+      "requiredFields": ["section", "table"],
       "displayName": "Roll Tables"
     },
     {
@@ -243,9 +203,7 @@
       "dataFile": "data/squads.json",
       "schemaFile": "schemas/squads.schema.json",
       "itemCount": 9,
-      "requiredFields": [
-        "actions"
-      ],
+      "requiredFields": ["actions"],
       "displayName": "Squads"
     },
     {
@@ -255,10 +213,7 @@
       "dataFile": "data/systems.json",
       "schemaFile": "schemas/systems.schema.json",
       "itemCount": 96,
-      "requiredFields": [
-        "name",
-        "page"
-      ],
+      "requiredFields": ["name", "page"],
       "displayName": "Systems"
     },
     {
@@ -268,11 +223,7 @@
       "dataFile": "data/traits.json",
       "schemaFile": "schemas/traits.schema.json",
       "itemCount": 43,
-      "requiredFields": [
-        "name",
-        "source",
-        "page"
-      ],
+      "requiredFields": ["name", "source", "page"],
       "displayName": "Traits"
     },
     {

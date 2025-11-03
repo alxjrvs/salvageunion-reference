@@ -519,6 +519,8 @@ async function generateTypes() {
         'Actions', // Array type from arrays.schema
         'Traits', // Array type from arrays.schema
         'Choices', // Array type from arrays.schema
+        'Grants', // Array type from arrays.schema
+        'Grantable', // Object type from objects.schema
         'SchemaEntities', // Array type from arrays.schema
         'SchemaNames', // Array type from arrays.schema
         'Systems', // Array type from arrays.schema
