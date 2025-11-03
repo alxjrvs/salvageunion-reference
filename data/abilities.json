@@ -339,6 +339,12 @@
     "description": "Gain integrated Thermal Optics, Zoom Optics, or IR Night Vision Optics.",
     "effect": "You gain your choice of integrated Thermal Optics, Zoom Optics, or IR Night Vision Optics. This is installed in your cranium via surgical procedure, and grants your Pilot all of the Abilities of the chosen Module. You must spend AP instead of EP to use any of these Abilities. During Downtime you may undergo a further surgical procedure in a Med Bay to remove your current integrated optics and install another one of your choice from the list above.",
     "actionType": "Passive",
+    "grants": [
+      {
+        "name": "Bionic Senses",
+        "schema": "choice"
+      }
+    ],
     "choices": [
       {
         "id": "0cbc2a80-bf97-4acb-ad26-9e2f8f5ed0d7",
@@ -348,7 +354,9 @@
           "Zoom Optics",
           "IR Night Vision Optics"
         ],
-        "schema": ["modules"]
+        "schema": [
+          "modules"
+        ]
       }
     ],
     "page": 33
@@ -905,6 +913,12 @@
     "level": 3,
     "description": "Gain a specialised sniper rifle that only you can use.",
     "effect": "You acquire and train in the use of a Custom Sniper Rifle that only you can use. Choose if it is a Ballistic or Energy weapon and it gains the respective Energy or Ballistic Trait. At each Tech Level you may choose an additional modification for your Custom Sniper Rifle. In addition, its damage increases by 1 SP per Tech Level after the first, e.g. a Tech 3 Custom Sniper Rifle would deal 4 SP damage and you would be able to choose three modifications for it.",
+    "grants": [
+      {
+        "name": "Custom Sniper Rifle",
+        "schema": "equipment"
+      }
+    ],
     "options": [
       {
         "label": "Rangefinder",

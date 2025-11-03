@@ -137,7 +137,6 @@ const dataFiles = [
   'chassis.json',
   'classes.advanced.json',
   'classes.core.json',
-  'classes.hybrid.json',
   'crawler-bays.json',
   'crawler-tech-levels.json',
   'crawlers.json',

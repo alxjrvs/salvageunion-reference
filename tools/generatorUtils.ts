@@ -65,7 +65,6 @@ export function getSingularTypeName(schemaId: string): string {
 export function toPascalCase(id: string): string {
   // Handle special cases for classes
   if (id === 'classes.core') return 'CoreClasses'
-  if (id === 'classes.hybrid') return 'HybridClasses'
   if (id === 'classes.advanced') return 'AdvancedClasses'
 
   // Handle special case for NPCs (all caps)

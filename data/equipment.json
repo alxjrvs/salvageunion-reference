@@ -922,5 +922,62 @@
       }
     ],
     "page": 79
+  },
+  {
+    "source": "Salvage Union Workshop Manual",
+    "name": "Custom Sniper Rifle",
+    "techLevel": 3,
+    "indexable": false,
+    "traits": [
+      {
+        "type": "ballistic"
+      }
+    ],
+    "effect": "Attack with your custom sniper rifle. Base damage is 2 SP at Tech 1, increasing by 1 SP per Tech Level.",
+    "options": [
+      {
+        "label": "Rangefinder",
+        "value": "The Custom Sniper Rifle increases its Range to Far."
+      },
+      {
+        "label": "Laser Guidance",
+        "value": "You may spend 2 AP to automatically hit with the Custom Sniper Rifle. It also gains the Targeter Trait."
+      },
+      {
+        "label": "Pinpoint Targeter",
+        "value": "You may spend 2 AP when you make an attack. If it hits, a System, Module, or appendage of your choice on the target is damaged. It also gains the Targeter Trait."
+      },
+      {
+        "label": "Dum Dum Rounds",
+        "value": "The Custom Sniper Rifle gains the Anti-Organic Trait."
+      },
+      {
+        "label": "High Calibre Rounds",
+        "value": "The Custom Sniper Rifle deals an additional 1 SP damage."
+      },
+      {
+        "label": "Anti-Matter",
+        "value": "The Custom Sniper Rifle gains the Deadly Trait."
+      },
+      {
+        "label": "Flashy",
+        "value": "The Custom Sniper Rifle gains the Flashy Trait."
+      },
+      {
+        "label": "Silencer",
+        "value": "The Custom Sniper Rifle gains the Silent Trait."
+      },
+      {
+        "label": "Compact Design",
+        "value": "The Custom Sniper Rifle is designed to fold down into a briefcase, making it easily concealable."
+      }
+    ],
+    "damage": {
+      "damageType": "SP",
+      "amount": 2
+    },
+    "range": "Long",
+    "page": 79,
+    "id": "fc761f88-48ef-4925-8335-b7a6908a27f3"
   }
 ]

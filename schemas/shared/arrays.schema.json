@@ -4,6 +4,13 @@
   "title": "Salvage Union Array Definitions",
   "description": "Shared array type definitions for Salvage Union game data. This schema contains ONLY array definitions - object definitions belong in objects.schema.json",
   "definitions": {
+    "grants": {
+      "type": "array",
+      "description": "Entities that can be granted",
+      "items": {
+        "$ref": "objects.schema.json#/definitions/grantable"
+      }
+    },
     "traits": {
       "type": "array",
       "description": "Special traits and properties of items, systems, or abilities",
@@ -67,7 +74,10 @@
         "type": "object",
         "description": "Structured option with label and value",
         "additionalProperties": false,
-        "required": ["value", "label"],
+        "required": [
+          "value",
+          "label"
+        ],
         "properties": {
           "label": {
             "type": "string",

@@ -6,7 +6,9 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["techLevel"],
+    "required": [
+      "techLevel"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
@@ -25,6 +27,9 @@
       "effect": {
         "type": "string",
         "description": "Mechanical effect of the equipment"
+      },
+      "options": {
+        "$ref": "shared/arrays.schema.json#/definitions/actionOptions"
       },
       "actionType": {
         "$ref": "shared/enums.schema.json#/definitions/actionType"
