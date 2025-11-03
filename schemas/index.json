@@ -3,7 +3,7 @@
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
   "version": "1.53.1",
-  "generated": "2025-11-02T23:34:30.055Z",
+  "generated": "2025-11-03T13:42:17.125Z",
   "schemas": [
     {
       "id": "abilities",
@@ -59,11 +59,11 @@
     {
       "id": "classes.advanced",
       "title": "classes.advanced",
-      "description": "Advanced character classes in Salvage Union",
+      "description": "Advanced and Hybrid character classes in Salvage Union",
       "dataFile": "data/classes.advanced.json",
       "schemaFile": "schemas/classes.advanced.schema.json",
-      "itemCount": 5,
-      "requiredFields": ["advancedTree", "legendaryTree"],
+      "itemCount": 10,
+      "requiredFields": [],
       "displayName": "Advanced Classes"
     },
     {
@@ -75,16 +75,6 @@
       "itemCount": 6,
       "requiredFields": ["maxAbilities", "advanceable", "coreTrees"],
       "displayName": "Core Classes"
-    },
-    {
-      "id": "classes.hybrid",
-      "title": "classes.hybrid",
-      "description": "Hybrid character classes in Salvage Union",
-      "dataFile": "data/classes.hybrid.json",
-      "schemaFile": "schemas/classes.hybrid.schema.json",
-      "itemCount": 5,
-      "requiredFields": ["advancedTree", "legendaryTree"],
-      "displayName": "Hybrid Classes"
     },
     {
       "id": "crawler-bays",

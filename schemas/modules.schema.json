@@ -5,6 +5,6 @@
   "description": "Mech modules in Salvage Union",
   "type": "array",
   "items": {
-    "$ref": "shared/objects.schema.json#/definitions/system"
+    "$ref": "shared/objects.schema.json#/definitions/systemModule"
   }
 }

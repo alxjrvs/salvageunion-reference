@@ -14,15 +14,10 @@
     ],
     "properties": {
       "techLevel": {
-        "type": "integer",
-        "minimum": 0
+        "$ref": "shared/common.schema.json#/definitions/techLevel"
       },
       "traits": {
-        "type": "array",
-        "description": "Special traits and properties of items, systems, or abilities",
-        "items": {
-          "$ref": "shared/objects.schema.json#/definitions/trait"
-        }
+        "$ref": "shared/arrays.schema.json#/definitions/traits"
       },
       "range": {
         "$ref": "shared/enums.schema.json#/definitions/range"

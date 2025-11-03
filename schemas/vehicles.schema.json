@@ -17,8 +17,7 @@
         "$ref": "shared/common.schema.json#/definitions/positiveInteger"
       },
       "techLevel": {
-        "type": "integer",
-        "minimum": 0
+        "$ref": "shared/common.schema.json#/definitions/techLevel"
       },
       "salvageValue": {
         "$ref": "shared/common.schema.json#/definitions/salvageValue"

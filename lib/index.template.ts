@@ -10,13 +10,7 @@
 
 import { BaseModel, type ModelWithMetadata } from './BaseModel.js'
 import { generateModels } from './ModelFactory.js'
-
 // INJECT:TYPE_IMPORTS
-import {
-  search as searchFn,
-  searchIn as searchInFn,
-  getSuggestions as getSuggestionsFn,
-} from './search.js'
 
 export { BaseModel } from './BaseModel.js'
 
@@ -35,6 +29,15 @@ export {
   search,
   searchIn,
   getSuggestions,
+  type SearchOptions,
+  type SearchResult,
+} from './search.js'
+
+// Import search functions for use in class methods
+import {
+  search as searchFn,
+  searchIn as searchInFn,
+  getSuggestions as getSuggestionsFn,
   type SearchOptions,
   type SearchResult,
 } from './search.js'
@@ -251,90 +254,90 @@ export class SalvageUnionReference {
   }
 
   /**
-   * Get all classes across all class types (core, advanced, hybrid)
+   * Get tech level from an entity
    *
-   * @returns Array of all classes
+   * @param entity - Any Salvage Union entity
+   * @returns Tech level or undefined if not present
    *
    * @example
-   * const allClasses = SalvageUnionReference.getAllClasses()
+   * const techLevel = SalvageUnionReference.getTechLevel(chassis)
    */
-  public static getAllClasses(): SURefEntity[] {
-    return [
-      ...this.CoreClasses.all(),
-      ...this.AdvancedClasses.all(),
-      ...this.HybridClasses.all(),
-    ]
+  public static getTechLevel(entity: SURefEntity): number | undefined {
+    // Check if entity has top-level techLevel (Chassis, Systems, Modules, Drones, Vehicles)
+    if ('techLevel' in entity && typeof entity.techLevel === 'number') {
+      return entity.techLevel
+    }
+    return undefined
   }
 
   /**
-   * Find a class by ID across all class types
+   * Get salvage value from an entity
    *
-   * @param id - The class ID
-   * @returns The class or undefined if not found
+   * @param entity - Any Salvage Union entity
+   * @returns Salvage value or undefined if not present
    *
    * @example
-   * const engineerClass = SalvageUnionReference.findClassById('engineer-id')
+   * const salvageValue = SalvageUnionReference.getSalvageValue(system)
    */
-  public static findClassById(id: string): SURefEntity | undefined {
-    return (
-      this.CoreClasses.find((c) => c.id === id) ||
-      this.AdvancedClasses.find((c) => c.id === id) ||
-      this.HybridClasses.find((c) => c.id === id)
-    )
+  public static getSalvageValue(entity: SURefEntity): number | undefined {
+    // Check if entity has top-level salvageValue (Chassis, Systems, Modules, Drones, Vehicles, Meld)
+    if ('salvageValue' in entity && typeof entity.salvageValue === 'number') {
+      return entity.salvageValue
+    }
+    return undefined
   }
 
   /**
-   * Get abilities for a class by tree names
+   * Search across all or specific schemas
    *
-   * @param treeNames - Array of ability tree names
-   * @returns Array of abilities in those trees
+   * @param options - Search options including query, schemas filter, limit, and case sensitivity
+   * @returns Array of search results sorted by relevance
    *
    * @example
-   * const abilities = SalvageUnionReference.getAbilitiesForClass(['Hacking', 'Electronics'])
+   * const results = SalvageUnionReference.search({ query: 'laser' })
+   * const systemResults = SalvageUnionReference.search({ query: 'laser', schemas: ['systems'] })
    */
-  public static getAbilitiesForClass(treeNames: string[]): SURefEntity[] {
-    return this.Abilities.findAll((a) => {
-      if ('tree' in a && typeof a.tree === 'string') {
-        return treeNames.includes(a.tree)
-      }
-      return false
-    })
+  public static search(options: SearchOptions): SearchResult[] {
+    return searchFn(options)
   }
-
-  /**
-   * Search across all schemas
-   *
-   * @param query - Search query string
-   * @param options - Search options
-   * @returns Array of search results
-   *
-   * @example
-   * const results = SalvageUnionReference.search('energy shield')
-   */
-  public static search = searchFn
 
   /**
    * Search within a specific schema
    *
-   * @param schemaName - Schema to search in
+   * @param schemaName - The schema to search in
    * @param query - Search query string
-   * @param options - Search options
-   * @returns Array of search results
+   * @param options - Optional search options (limit, case sensitivity)
+   * @returns Array of matching entities
    *
    * @example
-   * const results = SalvageUnionReference.searchIn('systems', 'energy')
+   * const systems = SalvageUnionReference.searchIn('systems', 'laser')
    */
-  public static searchIn = searchInFn
+  public static searchIn<T extends SURefEntity>(
+    schemaName: SURefSchemaName,
+    query: string,
+    options?: { limit?: number; caseSensitive?: boolean }
+  ): T[] {
+    return searchInFn(schemaName, query, options)
+  }
 
   /**
-   * Get search suggestions (autocomplete)
+   * Get search suggestions based on partial query
    *
-   * @param query - Partial query string
-   * @param options - Search options
-   * @returns Array of suggestion strings
+   * @param query - Partial search query
+   * @param options - Optional search options (schemas filter, limit, case sensitivity)
+   * @returns Array of unique entity names matching the query
    *
    * @example
-   * const suggestions = SalvageUnionReference.getSuggestions('ener')
+   * const suggestions = SalvageUnionReference.getSuggestions('las')
    */
-  public static getSuggestions = getSuggestionsFn
+  public static getSuggestions(
+    query: string,
+    options?: {
+      schemas?: SURefSchemaName[]
+      limit?: number
+      caseSensitive?: boolean
+    }
+  ): string[] {
+    return getSuggestionsFn(query, options)
+  }
 }

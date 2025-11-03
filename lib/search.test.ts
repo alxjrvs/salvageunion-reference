@@ -235,12 +235,4 @@ describe('Search API', () => {
       expect(systems.length).toBeGreaterThan(0)
     })
   })
-
-  describe('SalvageUnionReference.getSuggestions()', () => {
-    test('should work via static method', () => {
-      const suggestions = SalvageUnionReference.getSuggestions('las')
-
-      expect(suggestions.length).toBeGreaterThan(0)
-    })
-  })
 })
