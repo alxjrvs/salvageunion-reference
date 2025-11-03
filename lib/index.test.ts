@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test'
-import { SalvageUnionReference, SURefAbility, SURefEntity } from './index.js'
+import { SalvageUnionReference, SURefEntity } from './index.js'
 import { BaseModel } from './BaseModel.js'
 import {
   isAbility,
@@ -484,66 +484,5 @@ describe('getSlotsRequired', () => {
     const slots = getSlotsRequired(ability)
 
     expect(slots).toBeUndefined()
-  })
-})
-
-describe('SalvageUnionReference.getAllClasses', () => {
-  it('should return all classes from all types', () => {
-    const allClasses = SalvageUnionReference.getAllClasses()
-
-    expect(allClasses.length).toBeGreaterThan(0)
-
-    const coreCount = SalvageUnionReference.CoreClasses.all().length
-    const advancedCount = SalvageUnionReference.AdvancedClasses.all().length
-    const hybridCount = SalvageUnionReference.HybridClasses.all().length
-
-    expect(allClasses.length).toBe(coreCount + advancedCount + hybridCount)
-  })
-})
-
-describe('SalvageUnionReference.findClassById', () => {
-  it('should find a core class by ID', () => {
-    const coreClass = SalvageUnionReference.CoreClasses.all()[0]
-    const found = SalvageUnionReference.findClassById(coreClass.id)
-
-    expect(found).toBeDefined()
-    expect(found?.id).toBe(coreClass.id)
-  })
-
-  it('should find an advanced class by ID', () => {
-    const advancedClass = SalvageUnionReference.AdvancedClasses.all()[0]
-    const found = SalvageUnionReference.findClassById(advancedClass.id)
-
-    expect(found).toBeDefined()
-    expect(found?.id).toBe(advancedClass.id)
-  })
-
-  it('should return undefined for non-existent class', () => {
-    const found = SalvageUnionReference.findClassById('non-existent-class')
-    expect(found).toBeUndefined()
-  })
-})
-
-describe('SalvageUnionReference.getAbilitiesForClass', () => {
-  it('should get abilities for a class by tree names', () => {
-    const allAbilities = SalvageUnionReference.Abilities.all()
-    const uniqueTrees = [...new Set(allAbilities.map((a) => a.tree))]
-    const testTrees = uniqueTrees.slice(0, 2)
-
-    const abilities = SalvageUnionReference.getAbilitiesForClass(testTrees)
-
-    expect(abilities.length).toBeGreaterThan(0)
-    expect(
-      abilities.every((a) =>
-        (testTrees as string[]).includes((a as SURefAbility).tree)
-      )
-    ).toBe(true)
-  })
-
-  it('should return empty array for non-existent trees', () => {
-    const abilities = SalvageUnionReference.getAbilitiesForClass([
-      'NonExistentTree',
-    ])
-    expect(abilities).toEqual([])
   })
 })

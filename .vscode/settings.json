@@ -25,10 +25,6 @@
       "url": "./schemas/classes.core.schema.json"
     },
     {
-      "fileMatch": ["data/classes.hybrid.json"],
-      "url": "./schemas/classes.hybrid.schema.json"
-    },
-    {
       "fileMatch": ["data/crawler-bays.json"],
       "url": "./schemas/crawler-bays.schema.json"
     },

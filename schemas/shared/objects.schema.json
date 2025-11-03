@@ -4,6 +4,29 @@
   "title": "Salvage Union Object Definitions",
   "description": "Shared complex object definitions for Salvage Union game data",
   "definitions": {
+    "grantable": {
+      "type": "object",
+      "description": "Grantable entity with a name and description",
+      "additionalProperties": false,
+      "required": ["name", "schema"],
+      "properties": {
+        "schema": {
+          "oneOf": [
+            {
+              "$ref": "enums.schema.json#/definitions/schemaName"
+            },
+            {
+              "type": "string",
+              "description": "Name of the schema",
+              "const": "choice"
+            }
+          ]
+        },
+        "name": {
+          "$ref": "common.schema.json#/definitions/name"
+        }
+      }
+    },
     "damage": {
       "description": "Damage dealt by an attack or ability",
       "type": "object",
@@ -98,9 +121,7 @@
           "description": "Cargo capacity"
         },
         "techLevel": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Technology level"
+          "$ref": "common.schema.json#/definitions/techLevel"
         },
         "salvageValue": {
           "type": "integer",
@@ -200,7 +221,7 @@
           "type": "array",
           "description": "Options for the choice",
           "items": {
-            "$ref": "#/definitions/system"
+            "$ref": "#/definitions/systemModule"
           }
         },
         "constraints": {
@@ -256,8 +277,7 @@
           "description": "Cargo capacity"
         },
         "techLevel": {
-          "type": "number",
-          "description": "Technology level (1-6)"
+          "$ref": "common.schema.json#/definitions/techLevel"
         },
         "salvageValue": {
           "type": "number",
@@ -338,7 +358,7 @@
         }
       }
     },
-    "system": {
+    "systemModule": {
       "description": "A system or module that can be installed on a mech",
       "type": "object",
       "required": ["actions", "salvageValue", "slotsRequired", "techLevel"],
@@ -349,9 +369,7 @@
       ],
       "properties": {
         "techLevel": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Technology level required"
+          "$ref": "common.schema.json#/definitions/techLevel"
         },
         "slotsRequired": {
           "type": "integer",
@@ -394,11 +412,7 @@
           "$ref": "enums.schema.json#/definitions/actionType"
         },
         "actions": {
-          "type": "array",
-          "description": "Actions that can be performed with this system",
-          "items": {
-            "$ref": "#/definitions/action"
-          }
+          "$ref": "arrays.schema.json#/definitions/actions"
         },
         "count": {
           "type": "integer",
@@ -581,6 +595,11 @@
         "id": {
           "$ref": "common.schema.json#/definitions/id"
         },
+        "indexable": {
+          "type": "boolean",
+          "description": "Whether this entry should be included in search indexes",
+          "default": true
+        },
         "name": {
           "type": "string",
           "minLength": 1,
@@ -603,6 +622,28 @@
           "description": "Page number in the source book"
         }
       }
+    },
+    "advancedClass": {
+      "type": "object",
+      "description": "Advanced or hybrid character class",
+      "required": ["type", "advancedTree", "legendaryTree"],
+      "allOf": [
+        {
+          "$ref": "#/definitions/entry"
+        }
+      ],
+      "properties": {
+        "type": {
+          "$ref": "enums.schema.json#/definitions/classType"
+        },
+        "advancedTree": {
+          "$ref": "enums.schema.json#/definitions/tree"
+        },
+        "legendaryTree": {
+          "$ref": "enums.schema.json#/definitions/tree"
+        }
+      },
+      "unevaluatedProperties": false
     }
   }
 }

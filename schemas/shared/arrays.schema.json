@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$id": "https://salvageunion.com/schemas/shared/arrays.schema.json",
+  "title": "Salvage Union Array Definitions",
+  "description": "Shared array type definitions for Salvage Union game data. This schema contains ONLY array definitions - object definitions belong in objects.schema.json",
+  "definitions": {
+    "grants": {
+      "type": "array",
+      "description": "Entities that can be granted",
+      "items": {
+        "$ref": "objects.schema.json#/definitions/grantable"
+      }
+    },
+    "traits": {
+      "type": "array",
+      "description": "Special traits and properties of items, systems, or abilities",
+      "items": {
+        "$ref": "objects.schema.json#/definitions/trait"
+      }
+    },
+    "actions": {
+      "type": "array",
+      "description": "Actions that can be performed with this entity",
+      "items": {
+        "$ref": "objects.schema.json#/definitions/action"
+      }
+    },
+    "choices": {
+      "type": "array",
+      "description": "Choices available to the player when interacting with the entity",
+      "items": {
+        "$ref": "objects.schema.json#/definitions/choice"
+      }
+    },
+    "schemaEntities": {
+      "type": "array",
+      "description": "Entity names that can be chosen",
+      "items": {
+        "type": "string"
+      }
+    },
+    "schemaNames": {
+      "type": "array",
+      "description": "Schema names for filtering choices",
+      "items": {
+        "$ref": "enums.schema.json#/definitions/schemaName"
+      }
+    },
+    "systems": {
+      "type": "array",
+      "description": "System names (string references)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "modules": {
+      "type": "array",
+      "description": "Module names (string references)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "customSystemOptions": {
+      "type": "array",
+      "description": "Custom system options for choices",
+      "items": {
+        "$ref": "objects.schema.json#/definitions/systemModule"
+      }
+    },
+    "actionOptions": {
+      "type": "array",
+      "description": "List of options or choices for an action",
+      "items": {
+        "type": "object",
+        "description": "Structured option with label and value",
+        "additionalProperties": false,
+        "required": ["value", "label"],
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Display label for the option (empty string if no label)"
+          },
+          "value": {
+            "type": "string",
+            "description": "Description or effect of the option"
+          }
+        }
+      }
+    }
+  }
+}

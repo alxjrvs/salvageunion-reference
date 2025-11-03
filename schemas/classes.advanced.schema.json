@@ -2,24 +2,9 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
   "$id": "https://salvageunion.com/schemas/classes.advanced.schema.json",
   "title": "classes.advanced",
-  "description": "Advanced character classes in Salvage Union",
+  "description": "Advanced and Hybrid character classes in Salvage Union",
   "type": "array",
   "items": {
-    "type": "object",
-    "required": ["advancedTree", "legendaryTree"],
-    "allOf": [
-      {
-        "$ref": "shared/objects.schema.json#/definitions/entry"
-      }
-    ],
-    "properties": {
-      "advancedTree": {
-        "$ref": "shared/enums.schema.json#/definitions/tree"
-      },
-      "legendaryTree": {
-        "$ref": "shared/enums.schema.json#/definitions/tree"
-      }
-    },
-    "unevaluatedProperties": false
+    "$ref": "shared/objects.schema.json#/definitions/advancedClass"
   }
 }

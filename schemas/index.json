@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "1.53.1",
-  "generated": "2025-11-02T23:34:30.055Z",
+  "version": "1.54.2",
+  "generated": "2025-11-03T22:10:48.435Z",
   "schemas": [
     {
       "id": "abilities",
@@ -59,11 +59,11 @@
     {
       "id": "classes.advanced",
       "title": "classes.advanced",
-      "description": "Advanced character classes in Salvage Union",
+      "description": "Advanced and Hybrid character classes in Salvage Union",
       "dataFile": "data/classes.advanced.json",
       "schemaFile": "schemas/classes.advanced.schema.json",
-      "itemCount": 5,
-      "requiredFields": ["advancedTree", "legendaryTree"],
+      "itemCount": 10,
+      "requiredFields": [],
       "displayName": "Advanced Classes"
     },
     {
@@ -75,16 +75,6 @@
       "itemCount": 6,
       "requiredFields": ["maxAbilities", "advanceable", "coreTrees"],
       "displayName": "Core Classes"
-    },
-    {
-      "id": "classes.hybrid",
-      "title": "classes.hybrid",
-      "description": "Hybrid character classes in Salvage Union",
-      "dataFile": "data/classes.hybrid.json",
-      "schemaFile": "schemas/classes.hybrid.schema.json",
-      "itemCount": 5,
-      "requiredFields": ["advancedTree", "legendaryTree"],
-      "displayName": "Hybrid Classes"
     },
     {
       "id": "crawler-bays",
@@ -152,7 +142,7 @@
       "description": "Pilot equipment and gear in Salvage Union",
       "dataFile": "data/equipment.json",
       "schemaFile": "schemas/equipment.schema.json",
-      "itemCount": 44,
+      "itemCount": 45,
       "requiredFields": ["techLevel"],
       "displayName": "Equipment"
     },

@@ -19,6 +19,125 @@ const SCHEMAS_DIR = path.join(__dirname, '../schemas')
 const SHARED_DIR = path.join(SCHEMAS_DIR, 'shared')
 const OUTPUT_FILE = path.join(__dirname, '../lib/types/generated.ts')
 
+// Map of inline enum patterns to their SURef type names
+// This is used to replace inlined enum values with type references
+interface EnumPattern {
+  // The exact inline pattern to match (as a string for exact matching)
+  pattern: string
+  // The SURef type name to replace it with
+  typeName: string
+  // Whether this is an array type
+  isArray?: boolean
+}
+
+/**
+ * Build enum patterns from the enums.schema.json file
+ *
+ * This function automatically discovers all enum definitions and creates
+ * patterns for replacing inlined enum values with type references.
+ *
+ * HOW IT WORKS:
+ * 1. Scans enums.schema.json for all enum definitions
+ * 2. For each enum, creates a pattern matching how json-schema-to-typescript
+ *    inlines the values (e.g., "val1" | "val2" | "val3")
+ * 3. Maps each pattern to its SURef type name (e.g., SURefActionType)
+ *
+ * AUTOMATIC EXPANSION:
+ * When you add a new enum to enums.schema.json and reference it via $ref
+ * in any schema, this function will automatically:
+ * - Detect the new enum
+ * - Create a replacement pattern for it
+ * - Replace all inlined occurrences with the type reference
+ *
+ * No manual updates needed!
+ */
+function getEnumPatterns(): EnumPattern[] {
+  const enumsSchemaPath = path.join(SHARED_DIR, 'enums.schema.json')
+  const enumsSchema = JSON.parse(fs.readFileSync(enumsSchemaPath, 'utf8'))
+
+  const patterns: EnumPattern[] = []
+
+  for (const [defName, defSchema] of Object.entries(
+    enumsSchema.definitions || {}
+  )) {
+    const typeName = `SURef${capitalize(defName)}`
+    const schema = defSchema as { enum?: string[] }
+
+    if (schema.enum && Array.isArray(schema.enum)) {
+      // Create the inline pattern that json-schema-to-typescript generates
+      const inlinePattern = schema.enum.map((value) => `"${value}"`).join(' | ')
+
+      patterns.push({
+        pattern: inlinePattern,
+        typeName,
+        isArray: false,
+      })
+    }
+  }
+
+  return patterns
+}
+
+/**
+ * Replace inline enum patterns with SURef type references
+ *
+ * json-schema-to-typescript inlines enum values instead of preserving $ref.
+ * This function post-processes the output to replace those inline values
+ * with references to the already-generated SURef enum types.
+ *
+ * PATTERNS HANDLED:
+ * - Standalone: `field: "val1" | "val2"` → `field: SURefEnumType`
+ * - Arrays: `field: ("val1" | "val2")[]` → `field: SURefEnumType[]`
+ * - Multi-line: `field:\n  | "val1"\n  | "val2"` → `field: SURefEnumType`
+ * - Multi-line arrays: `field: (\n  | "val1"\n  | "val2"\n)[]` → `field: SURefEnumType[]`
+ *
+ * This works automatically for any enum defined in enums.schema.json
+ * and referenced via $ref in other schemas.
+ */
+function replaceInlineEnums(
+  output: string,
+  enumPatterns: EnumPattern[]
+): string {
+  let result = output
+
+  for (const { pattern, typeName } of enumPatterns) {
+    // Replace standalone inline enums (field: "val1" | "val2" | ...)
+    const standaloneRegex = new RegExp(
+      `:\\s*${pattern.replace(/[|()]/g, '\\$&')}`,
+      'g'
+    )
+    result = result.replace(standaloneRegex, `: ${typeName}`)
+
+    // Replace array inline enums (field: ("val1" | "val2" | ...)[])
+    const arrayRegex = new RegExp(
+      `:\\s*\\(\\s*${pattern.replace(/[|()]/g, '\\$&')}\\s*\\)\\[\\]`,
+      'g'
+    )
+    result = result.replace(arrayRegex, `: ${typeName}[]`)
+
+    // Replace multi-line inline enums (field:\n    | "val1"\n    | "val2"\n    ...)
+    // This handles the case where json-schema-to-typescript formats enums across multiple lines
+    const values = pattern.split(' | ')
+    const multilinePattern = values
+      .map((val) => `\\s*\\|\\s*${val.replace(/"/g, '\\"')}`)
+      .join('\\s*\\n')
+    const multilineRegex = new RegExp(`:\\s*\\n${multilinePattern}\\s*;`, 'g')
+    result = result.replace(multilineRegex, `: ${typeName};`)
+
+    // Replace multi-line array inline enums (field: (\n    | "val1"\n    | "val2"\n    ...)[];)
+    const multilineArrayPattern = values
+      .map((val) => `\\s*\\|\\s*${val.replace(/"/g, '\\"')}`)
+      .join('\\s*\\n')
+    const multilineArrayRegex = new RegExp(
+      `:\\s*\\(\\s*\\n${multilineArrayPattern}\\s*\\n\\s*\\)\\[\\];`,
+      'g'
+    )
+    result = result.replace(multilineArrayRegex, `: ${typeName}[];`)
+  }
+
+  return result
+}
+
 // Derive objects.schema definitions from the schema file itself
 function getObjectsMetaMap(): Record<string, string> {
   const objectsSchemaPath = path.join(SHARED_DIR, 'objects.schema.json')
@@ -82,6 +201,7 @@ async function generateTypes() {
   // Derive metadata from schemas
   const OBJECTS_META_MAP = getObjectsMetaMap()
   const skipCommonTypes = getSkipCommonTypes()
+  const enumPatterns = getEnumPatterns()
 
   // Step 1: Generate types for shared schemas
   console.log('📚 Processing shared schemas...')
@@ -143,6 +263,105 @@ async function generateTypes() {
     typeDefinitions.push(compiled.trim())
   }
 
+  // Process arrays.schema.json - these become SURefMeta* array types
+  const arraysSchemaPath = path.join(SHARED_DIR, 'arrays.schema.json')
+  const arraysSchema = JSON.parse(fs.readFileSync(arraysSchemaPath, 'utf8'))
+
+  typeDefinitions.push('\n// ============================================')
+  typeDefinitions.push('// Meta Array Type Definitions')
+  typeDefinitions.push('// ============================================\n')
+
+  // Helper types that need to be replaced in array definitions
+  const arrayHelperTypes = [
+    'Trait',
+    'Action',
+    'Choice',
+    'System',
+    'SystemModule',
+    'Entry',
+    'Damage',
+    'Table',
+    'Actions',
+  ]
+
+  for (const [defName, defSchema] of Object.entries(
+    (arraysSchema.definitions as Record<string, JSONSchema>) || {}
+  )) {
+    const singularName = capitalize(defName)
+    const typeName = `SURefMeta${singularName}`
+
+    // Check if this array just references an object definition
+    // If so, create a simple array type alias instead of re-expanding the type
+    if (
+      defSchema.type === 'array' &&
+      defSchema.items &&
+      !Array.isArray(defSchema.items) &&
+      defSchema.items.$ref &&
+      defSchema.items.$ref.includes('objects.schema.json#/definitions/')
+    ) {
+      const refName = defSchema.items.$ref.split('/').pop()
+      const metaTypeName = `SURefMeta${capitalize(refName || '')}`
+
+      typeDefinitions.push(`/**`)
+      typeDefinitions.push(` * ${defSchema.description || typeName}`)
+      typeDefinitions.push(` */`)
+      typeDefinitions.push(`export type ${typeName} = ${metaTypeName}[]`)
+      continue
+    }
+
+    // Create a standalone schema for compilation
+    const standaloneSchema = {
+      ...defSchema,
+      definitions: arraysSchema.definitions,
+    }
+
+    const compiled = await compile(standaloneSchema, typeName, {
+      bannerComment: '',
+      declareExternallyReferenced: false,
+      cwd: SHARED_DIR,
+      additionalProperties: false,
+    })
+
+    // Replace helper type references with SURefMeta* versions
+    let processedOutput = compiled.trim()
+    for (const helperType of arrayHelperTypes) {
+      const metaType = `SURefMeta${helperType}`
+
+      // Replace type declarations
+      processedOutput = processedOutput.replace(
+        new RegExp(`export type ${helperType} =`, 'g'),
+        `export type ${metaType} =`
+      )
+      processedOutput = processedOutput.replace(
+        new RegExp(`export interface ${helperType}`, 'g'),
+        `export interface ${metaType}`
+      )
+
+      // Replace array references
+      processedOutput = processedOutput.replace(
+        new RegExp(`\\b${helperType}\\[\\]`, 'g'),
+        `${metaType}[]`
+      )
+
+      // Replace numbered variants (Action1, Action2, etc.)
+      processedOutput = processedOutput.replace(
+        new RegExp(`\\b${helperType}\\d+\\b`, 'g'),
+        metaType
+      )
+
+      // Replace all other references (with word boundaries)
+      processedOutput = processedOutput.replace(
+        new RegExp(`\\b${helperType}\\b`, 'g'),
+        metaType
+      )
+    }
+
+    // Replace inline enums with SURef enum types
+    processedOutput = replaceInlineEnums(processedOutput, enumPatterns)
+
+    typeDefinitions.push(processedOutput)
+  }
+
   // Process objects.schema.json - these become SURefMeta* types
   const objectsSchemaPath = path.join(SHARED_DIR, 'objects.schema.json')
   const objectsSchema = JSON.parse(fs.readFileSync(objectsSchemaPath, 'utf8'))
@@ -156,11 +375,15 @@ async function generateTypes() {
     'Choice',
     'Entry',
     'System',
+    'SystemModule',
     'Action',
     'Npc',
     'Table',
     'Damage',
     'Stats',
+    'Actions', // Array type from arrays.schema
+    'Traits', // Array type from arrays.schema
+    'Choices', // Array type from arrays.schema
   ]
 
   for (const [defName, defSchema] of Object.entries(
@@ -186,11 +409,22 @@ async function generateTypes() {
     let processedOutput = compiled.trim()
     for (const helperType of helperTypes) {
       const metaType = `SURefMeta${helperType}`
+
+      // Replace the base type name
       processedOutput = processedOutput.replace(
         new RegExp(`\\b${helperType}\\b`, 'g'),
         metaType
       )
+
+      // Replace numbered variants (Action1, Action2, etc.) that json-schema-to-typescript generates
+      processedOutput = processedOutput.replace(
+        new RegExp(`\\b${helperType}\\d+\\b`, 'g'),
+        metaType
+      )
     }
+
+    // Replace inline enums with SURef enum types
+    processedOutput = replaceInlineEnums(processedOutput, enumPatterns)
 
     typeDefinitions.push(processedOutput)
   }
@@ -240,6 +474,22 @@ async function generateTypes() {
       }
     }
 
+    // Check if this schema just references an object definition
+    // If so, create a simple type alias instead of re-expanding the type
+    if (
+      schema.type === 'array' &&
+      schema.items?.$ref &&
+      schema.items.$ref.includes('objects.schema.json#/definitions/')
+    ) {
+      const refName = schema.items.$ref.split('/').pop()
+      const metaTypeName = `SURefMeta${capitalize(refName || '')}`
+
+      typeDefinitions.push(`// ${singularName}`)
+      typeDefinitions.push(`export type ${typeName} = ${metaTypeName}`)
+      typeDefinitions.push('')
+      continue
+    }
+
     try {
       const compiled = await compile(schemaToCompile, typeName, {
         bannerComment: '',
@@ -263,7 +513,21 @@ async function generateTypes() {
       let processedOutput = compiled.trim()
 
       // Derive helper types from OBJECTS_META_MAP (these are the shared object definitions)
-      const helperTypes = Object.values(OBJECTS_META_MAP)
+      // Also include array type names from arrays.schema
+      const helperTypes = [
+        ...Object.values(OBJECTS_META_MAP),
+        'Actions', // Array type from arrays.schema
+        'Traits', // Array type from arrays.schema
+        'Choices', // Array type from arrays.schema
+        'Grants', // Array type from arrays.schema
+        'Grantable', // Object type from objects.schema
+        'SchemaEntities', // Array type from arrays.schema
+        'SchemaNames', // Array type from arrays.schema
+        'Systems', // Array type from arrays.schema
+        'Modules', // Array type from arrays.schema
+        'CustomSystemOptions', // Array type from arrays.schema
+        'ActionOptions', // Array type from arrays.schema
+      ]
 
       // Replace all occurrences of helper type names with SURefMeta* versions
       for (const helperType of helperTypes) {
@@ -285,6 +549,23 @@ async function generateTypes() {
           metaType
         )
       }
+
+      // Replace inline enum definitions with references to SURef enum types
+      // This handles cases where json-schema-to-typescript inlines enum values
+      // instead of using $ref to the enum definitions
+      processedOutput = replaceInlineEnums(processedOutput, enumPatterns)
+
+      // Replace inline table definitions with SURefMetaTable
+      // The table field is a complex union type that should reference SURefMetaTable
+      // Handle both optional (table?:) and required (table:) fields
+      processedOutput = processedOutput.replace(
+        /table\?:\s*\n\s*\|\s*\{\s*\n[^}]*"1":\s*string;[^}]*type:\s*"standard";[^}]*\}\s*\n\s*\|\s*\{[^}]*type:\s*"alternate";[^}]*\}\s*\n\s*\|\s*\{[^}]*"20":\s*string;[^}]*\};/gs,
+        'table?: SURefMetaTable;'
+      )
+      processedOutput = processedOutput.replace(
+        /table:\s*\n\s*\|\s*\{\s*\n[^}]*"1":\s*string;[^}]*type:\s*"standard";[^}]*\}\s*\n\s*\|\s*\{[^}]*type:\s*"alternate";[^}]*\}\s*\n\s*\|\s*\{[^}]*"20":\s*string;[^}]*\};/gs,
+        'table: SURefMetaTable;'
+      )
 
       typeDefinitions.push(`// ${singularName}`)
       typeDefinitions.push(processedOutput)

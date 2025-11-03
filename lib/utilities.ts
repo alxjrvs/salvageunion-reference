@@ -9,7 +9,6 @@ import type {
   SURefAdvancedClass,
   SURefChassis,
   SURefCoreClass,
-  SURefHybridClass,
   SURefModule,
   SURefSystem,
 } from './types/generated.js'
@@ -370,7 +369,7 @@ export function isCoreClass(entity: SURefMetaEntity): entity is SURefCoreClass {
  * @param entity - The entity to check
  * @returns True if the entity is an Advanced Class
  */
-export function isAdvancedClass(
+export function isBaseAdvancedClass(
   entity: SURefMetaEntity
 ): entity is SURefAdvancedClass {
   return (
@@ -382,19 +381,25 @@ export function isAdvancedClass(
 }
 
 /**
+ * Type guard to check if an entity is an Advanced Class
+ * @param entity - The entity to check
+ * @returns True if the entity is an Advanced Class
+ */
+export function isAdvancedClass(
+  entity: SURefMetaEntity
+): entity is SURefAdvancedClass {
+  return isBaseAdvancedClass(entity) && entity.type === 'Advanced'
+}
+
+/**
  * Type guard to check if an entity is a Hybrid Class
  * @param entity - The entity to check
  * @returns True if the entity is a Hybrid Class
  */
 export function isHybridClass(
   entity: SURefMetaEntity
-): entity is SURefHybridClass {
-  return (
-    entity !== null &&
-    typeof entity === 'object' &&
-    'advancedTree' in entity &&
-    'hybridTree' in entity
-  )
+): entity is SURefAdvancedClass {
+  return isBaseAdvancedClass(entity) && entity.type === 'Hybrid'
 }
 
 /**
@@ -404,7 +409,7 @@ export function isHybridClass(
  */
 export function isClass(
   entity: SURefMetaEntity
-): entity is SURefCoreClass | SURefAdvancedClass | SURefHybridClass {
+): entity is SURefCoreClass | SURefAdvancedClass {
   return isCoreClass(entity) || isAdvancedClass(entity) || isHybridClass(entity)
 }
 

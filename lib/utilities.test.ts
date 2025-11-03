@@ -143,8 +143,12 @@ describe('Additional Type Guards', () => {
     })
 
     it('should return true for hybrid classes', () => {
-      const hybridClass = SalvageUnionReference.HybridClasses.all()[0]
-      expect(isClass(hybridClass)).toBe(true)
+      // Hybrid classes are now in AdvancedClasses with type: "Hybrid"
+      const hybridClass = SalvageUnionReference.AdvancedClasses.find(
+        (c) => c.type === 'Hybrid'
+      )
+      expect(hybridClass).toBeDefined()
+      expect(isClass(hybridClass!)).toBe(true)
     })
 
     it('should return false for abilities', () => {
@@ -626,7 +630,8 @@ describe('Property Extractors', () => {
     })
 
     it('should extract asset_url from hybrid classes', () => {
-      const hybridClass = SalvageUnionReference.HybridClasses.find(
+      // Hybrid classes are now in AdvancedClasses with type: "Hybrid"
+      const hybridClass = SalvageUnionReference.AdvancedClasses.find(
         (c) => c.name === 'Cyborg'
       )
       const assetUrl = getAssetUrl(hybridClass!)
