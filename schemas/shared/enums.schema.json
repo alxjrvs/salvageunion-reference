@@ -6,7 +6,7 @@
   "definitions": {
     "source": {
       "type": "string",
-      "enum": ["Salvage Union Workshop Manual"],
+      "enum": ["Salvage Union Workshop Manual", "Mech Monday"],
       "description": "The source book or expansion for this content"
     },
     "range": {

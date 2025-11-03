@@ -1097,6 +1097,28 @@
     "salvageValue": 6
   },
   {
+    "name": "Goliath",
+    "source": "Mech Monday",
+    "structurePoints": 13,
+    "energyPoints": 11,
+    "heatCapacity": 12,
+    "systemSlots": 20,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": 2,
+    "salvageValue": 8,
+    "description": "The salvager answer to the Leviathan Chassis. This junker Mech is built out of a hodgepodge of scrap parts, giving it a hulking appearance. Layers of expendable scrap armour built into its hull make it rugged, and resilient for its tech level, despite a relatively fragile core. The Goliath is used extensively by salvagers in regions where scrap is ripe.",
+    "actions": [
+      {
+        "name": "Scrap Plating",
+        "effect": "The salvager answer to the Leviathan Chassis. This junker Mech is built out of a hodgepodge of scrap parts, giving it a hulking appearance. Layers of expendable scrap armour built into its hull make it rugged, and resilient for its tech level, despite a relatively fragile core. The Goliath is used extensively by salvagers in regions where scrap is ripe."
+      }
+    ],
+    "patterns": [],
+    "page": 4,
+    "id": "76345263-a5a4-4fb0-8aa3-0b154cff797c"
+  },
+  {
     "id": "1ba741eb-5b33-496f-81f8-7f9d05e27985",
     "name": "Kraken",
     "source": "Salvage Union Workshop Manual",
@@ -1744,7 +1766,7 @@
     "name": "Little Sestra",
     "source": "Salvage Union Workshop Manual",
     "page": 128,
-    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/little-sestra.png",
+    "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/chassis/little%20sestra.png",
     "actions": [
       {
         "name": "Sestra Drone Controller",

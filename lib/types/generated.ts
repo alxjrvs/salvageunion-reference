@@ -36,7 +36,7 @@ export type SURefStructurePoints = number
 /**
  * The source book or expansion for this content
  */
-export type SURefSource = 'Salvage Union Workshop Manual'
+export type SURefSource = 'Salvage Union Workshop Manual' | 'Mech Monday'
 /**
  * Range bands for abilities and weapons
  */
