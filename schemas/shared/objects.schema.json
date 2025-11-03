@@ -79,16 +79,6 @@
     "stats": {
       "type": "object",
       "description": "Statistics for mechs, chassis, and vehicles",
-      "required": [
-        "structurePoints",
-        "energyPoints",
-        "heatCapacity",
-        "systemSlots",
-        "moduleSlots",
-        "cargoCapacity",
-        "techLevel",
-        "salvageValue"
-      ],
       "properties": {
         "structurePoints": {
           "type": "integer",
@@ -364,7 +354,7 @@
       "required": ["actions", "salvageValue", "slotsRequired", "techLevel"],
       "allOf": [
         {
-          "$ref": "#/definitions/entry"
+          "$ref": "#/definitions/stats"
         }
       ],
       "properties": {
@@ -622,6 +612,15 @@
           "description": "Page number in the source book"
         }
       }
+    },
+    "bonusPerTechLevel": {
+      "type": "object",
+      "description": "Bonus values that increase with tech level",
+      "allOf": [
+        {
+          "$ref": "#/definitions/stats"
+        }
+      ]
     },
     "advancedClass": {
       "type": "object",

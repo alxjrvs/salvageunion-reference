@@ -979,5 +979,31 @@
     "range": "Long",
     "page": 79,
     "id": "fc761f88-48ef-4925-8335-b7a6908a27f3"
+  },
+  {
+    "source": "Salvage Union Workshop Manual",
+    "name": "Auto-Turret",
+    "techLevel": 1,
+    "indexable": false,
+    "moduleSlots": 4,
+    "systemSlots": 15,
+    "structurePoints": 15,
+    "energyPoints": 10,
+    "heatCapacity": 10,
+    "cargoCapacity": 0,
+    "salvageValue": 1,
+    "bonusPerTechLevel": {
+      "structurePoints": 3,
+      "energyPoints": 2,
+      "heatCapacity": 2,
+      "systemSlots": 3,
+      "moduleSlots": 1,
+      "cargoCapacity": 0,
+      "techLevel": 1,
+      "salvageValue": 0
+    },
+    "page": 30,
+    "actions": [],
+    "id": "f5f04072-9e81-4c9d-a835-b71f45120d66"
   }
 ]

@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "1.54.4",
-  "generated": "2025-11-03T22:50:18.020Z",
+  "version": "1.54.5",
+  "generated": "2025-11-03T23:41:59.046Z",
   "schemas": [
     {
       "id": "abilities",
@@ -142,7 +142,7 @@
       "description": "Pilot equipment and gear in Salvage Union",
       "dataFile": "data/equipment.json",
       "schemaFile": "schemas/equipment.schema.json",
-      "itemCount": 45,
+      "itemCount": 46,
       "requiredFields": ["techLevel"],
       "displayName": "Equipment"
     },

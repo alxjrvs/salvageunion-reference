@@ -5,6 +5,13 @@
   "description": "Mech systems in Salvage Union",
   "type": "array",
   "items": {
-    "$ref": "shared/objects.schema.json#/definitions/systemModule"
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/systemModule"
+      },
+      {
+        "$ref": "shared/objects.schema.json#/definitions/entry"
+      }
+    ]
   }
 }

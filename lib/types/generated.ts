@@ -267,35 +267,35 @@ export interface SURefMetaStats {
   /**
    * Structure points (durability)
    */
-  structurePoints: number
+  structurePoints?: number
   /**
    * Energy points (power capacity)
    */
-  energyPoints: number
+  energyPoints?: number
   /**
    * Heat capacity
    */
-  heatCapacity: number
+  heatCapacity?: number
   /**
    * Number of system slots
    */
-  systemSlots: number
+  systemSlots?: number
   /**
    * Number of module slots
    */
-  moduleSlots: number
+  moduleSlots?: number
   /**
    * Cargo capacity
    */
-  cargoCapacity: number
+  cargoCapacity?: number
   /**
    * Technology level of the item or entity
    */
-  techLevel: number
+  techLevel?: number
   /**
    * Salvage value in scrap
    */
-  salvageValue: number
+  salvageValue?: number
 }
 /**
  * NPC associated with an entity
@@ -479,7 +479,7 @@ export interface SURefMetaAction {
 /**
  * A system or module that can be installed on a mech
  */
-export type SURefMetaSystemModule = SURefMetaEntry & {
+export type SURefMetaSystemModule = SURefMetaStats & {
   /**
    * Technology level of the item or entity
    */
@@ -634,6 +634,10 @@ export interface SURefMetaEntry {
    */
   page: number
 }
+/**
+ * Bonus values that increase with tech level
+ */
+export type SURefMetaBonusPerTechLevel = SURefMetaStats
 /**
  * Advanced or hybrid character class
  */
@@ -840,37 +844,39 @@ export type SURefDrone = SURefMetaEntry & {
 }
 
 // Equipment
-export type SURefEquipment = SURefMetaEntry & {
-  /**
-   * Technology level of the item or entity
-   */
-  techLevel: number
-  traits?: SURefMetaTraits
-  /**
-   * Range bands for abilities and weapons
-   */
-  range?: SURefRange
-  /**
-   * Mechanical effect of the equipment
-   */
-  effect?: string
-  options?: SURefMetaActionOptions
-  /**
-   * Type of action required to use an ability
-   */
-  actionType?: SURefActionType
-  damage?: SURefMetaDamage
-  /**
-   * Cost in ability points to activate an ability
-   */
-  activationCost?: number | 'X'
-  /**
-   * Roll table for random outcomes based on d20 rolls
-   */
-  table?: SURefMetaTable
-  notes?: string
-  actions?: SURefMetaAction[]
-}
+export type SURefEquipment = SURefMetaEntry &
+  SURefMetaStats & {
+    bonusPerTechLevel?: SURefMetaBonusPerTechLevel
+    /**
+     * Technology level of the item or entity
+     */
+    techLevel: number
+    traits?: SURefMetaTraits
+    /**
+     * Range bands for abilities and weapons
+     */
+    range?: SURefRange
+    /**
+     * Mechanical effect of the equipment
+     */
+    effect?: string
+    options?: SURefMetaActionOptions
+    /**
+     * Type of action required to use an ability
+     */
+    actionType?: SURefActionType
+    damage?: SURefMetaDamage
+    /**
+     * Cost in ability points to activate an ability
+     */
+    activationCost?: number | 'X'
+    /**
+     * Roll table for random outcomes based on d20 rolls
+     */
+    table?: SURefMetaTable
+    notes?: string
+    actions?: SURefMetaAction[]
+  }
 
 // Keyword
 export type SURefKeyword = SURefMetaEntry
@@ -897,7 +903,7 @@ export type SURefMeld = SURefMetaEntry & {
 }
 
 // Module
-export type SURefModule = SURefMetaSystemModule
+export type SURefModule = SURefMetaSystemModule & SURefMetaEntry
 
 // NPC
 export type SURefNPC = SURefMetaEntry & {
@@ -942,7 +948,7 @@ export type SURefSquad = SURefMetaEntry & {
 }
 
 // System
-export type SURefSystem = SURefMetaSystemModule
+export type SURefSystem = SURefMetaSystemModule & SURefMetaEntry
 
 // Trait
 export type SURefTrait = SURefMetaEntry

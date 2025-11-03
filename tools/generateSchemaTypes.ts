@@ -521,6 +521,7 @@ async function generateTypes() {
         'Choices', // Array type from arrays.schema
         'Grants', // Array type from arrays.schema
         'Grantable', // Object type from objects.schema
+        'SystemModule', // Object type from objects.schema (used by systems and modules)
         'SchemaEntities', // Array type from arrays.schema
         'SchemaNames', // Array type from arrays.schema
         'Systems', // Array type from arrays.schema
@@ -566,6 +567,68 @@ async function generateTypes() {
         /table:\s*\n\s*\|\s*\{\s*\n[^}]*"1":\s*string;[^}]*type:\s*"standard";[^}]*\}\s*\n\s*\|\s*\{[^}]*type:\s*"alternate";[^}]*\}\s*\n\s*\|\s*\{[^}]*"20":\s*string;[^}]*\};/gs,
         'table: SURefMetaTable;'
       )
+
+      // Remove duplicate type declarations for SURefMeta* types that were already defined in shared schemas
+      // json-schema-to-typescript sometimes inlines these even though we've already defined them
+      // We need to remove the entire type declaration including nested braces
+      for (const helperType of helperTypes) {
+        const metaType = `SURefMeta${helperType}`
+
+        // Find and remove duplicate declarations by matching balanced braces
+        // This is a simple approach: find the start of the declaration, then count braces to find the end
+        let searchPos = 0
+        while (true) {
+          const exportMatch = processedOutput.indexOf(
+            `export type ${metaType} =`,
+            searchPos
+          )
+          if (exportMatch === -1) break
+
+          // Find the start of this declaration (including any JSDoc before it)
+          let declStart = exportMatch
+          // Look backwards for JSDoc comment
+          const beforeDecl = processedOutput.substring(
+            Math.max(0, exportMatch - 500),
+            exportMatch
+          )
+          const jsdocMatch = beforeDecl.lastIndexOf('/**')
+          if (jsdocMatch !== -1) {
+            declStart = exportMatch - (beforeDecl.length - jsdocMatch)
+          }
+
+          // Find the end by counting braces
+          let braceCount = 0
+          let inBraces = false
+          let declEnd = exportMatch
+
+          for (let i = exportMatch; i < processedOutput.length; i++) {
+            const char = processedOutput[i]
+            if (char === '{') {
+              braceCount++
+              inBraces = true
+            } else if (char === '}') {
+              braceCount--
+              if (inBraces && braceCount === 0) {
+                // Found the closing brace, now find the semicolon
+                const afterBrace = processedOutput.substring(i, i + 10)
+                const semiMatch = afterBrace.indexOf(';')
+                if (semiMatch !== -1) {
+                  declEnd = i + semiMatch + 1
+                  break
+                }
+              }
+            }
+          }
+
+          // Remove this declaration
+          processedOutput =
+            processedOutput.substring(0, declStart) +
+            processedOutput.substring(declEnd)
+
+          // Continue searching from the same position (since we removed text)
+          searchPos = declStart
+        }
+      }
 
       typeDefinitions.push(`// ${singularName}`)
       typeDefinitions.push(processedOutput)

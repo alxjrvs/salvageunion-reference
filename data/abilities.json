@@ -130,6 +130,12 @@
     "effect": "You construct an immobile Auto-Turret and train yourself in using it. Only you may use the Auto-Turret. It is powered by a simple reactor and controlled by a rudimentary A.I. It can be used to defend an area and obey simple commands. It acts independently of you, and has its own turn in the round. An Auto-Turret uses the same rules as Mechs for attaching Systems and Modules; taking damage and being repaired; as well as Heat and Heat Checks. Your Auto-Turret cannot Push. You may deploy your Auto-Turret in a location you are in as a Turn Action. Your Auto-Turret has a unique personality. Choose this or roll on the A.I. Personality Table p. 91. Name your Auto-Turret if you want to get especially attached. Your Auto-Turret has a Tech Level equal to your Union Crawler. Your Auto-Turret is upgraded along with your Union Crawler, it gains additional stats as shown for each Tech level above the first. If your Auto-Turret becomes destroyed or is misplaced you can acquire a new one during Downtime. You may only ever have one Auto-Turret at a time.",
     "activationCost": 3,
     "actionType": "Turn",
+    "grants": [
+      {
+        "name": "Auto-Turret",
+        "schema": "equipment"
+      }
+    ],
     "traits": [
       {
         "type": "pilot equipment"
@@ -339,12 +345,6 @@
     "description": "Gain integrated Thermal Optics, Zoom Optics, or IR Night Vision Optics.",
     "effect": "You gain your choice of integrated Thermal Optics, Zoom Optics, or IR Night Vision Optics. This is installed in your cranium via surgical procedure, and grants your Pilot all of the Abilities of the chosen Module. You must spend AP instead of EP to use any of these Abilities. During Downtime you may undergo a further surgical procedure in a Med Bay to remove your current integrated optics and install another one of your choice from the list above.",
     "actionType": "Passive",
-    "grants": [
-      {
-        "name": "Bionic Senses",
-        "schema": "choice"
-      }
-    ],
     "choices": [
       {
         "id": "0cbc2a80-bf97-4acb-ad26-9e2f8f5ed0d7",

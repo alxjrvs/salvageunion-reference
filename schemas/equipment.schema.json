@@ -10,9 +10,15 @@
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
+      },
+      {
+        "$ref": "shared/objects.schema.json#/definitions/stats"
       }
     ],
     "properties": {
+      "bonusPerTechLevel": {
+        "$ref": "shared/objects.schema.json#/definitions/bonusPerTechLevel"
+      },
       "techLevel": {
         "$ref": "shared/common.schema.json#/definitions/techLevel"
       },
