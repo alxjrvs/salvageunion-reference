@@ -23,7 +23,7 @@
         "$ref": "shared/common.schema.json#/definitions/techLevel"
       },
       "traits": {
-        "$ref": "shared/arrays.schema.json#/definitions/traits"
+        "$ref": "shared/objects.schema.json#/definitions/traits"
       },
       "range": {
         "$ref": "shared/enums.schema.json#/definitions/range"
@@ -33,7 +33,7 @@
         "description": "Mechanical effect of the equipment"
       },
       "options": {
-        "$ref": "shared/arrays.schema.json#/definitions/actionOptions"
+        "$ref": "shared/objects.schema.json#/definitions/actionOptions"
       },
       "actionType": {
         "$ref": "shared/enums.schema.json#/definitions/actionType"

@@ -17,7 +17,7 @@
         "$ref": "shared/common.schema.json#/definitions/hitPoints"
       },
       "actions": {
-        "$ref": "shared/arrays.schema.json#/definitions/actions"
+        "$ref": "shared/objects.schema.json#/definitions/actions"
       },
       "traits": {
         "type": "array",

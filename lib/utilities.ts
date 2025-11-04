@@ -3,7 +3,7 @@
  * Manually defined type guards and property extractors
  */
 
-import type { SURefMetaEntity, SURefMetaAction } from './types/generated.js'
+import type { SURefMetaEntity, SURefMetaAction } from './types/index.js'
 import type {
   SURefAbility,
   SURefAdvancedClass,
@@ -11,7 +11,7 @@ import type {
   SURefCoreClass,
   SURefModule,
   SURefSystem,
-} from './types/generated.js'
+} from './types/index.js'
 
 // ============================================================================
 // TYPE UTILITIES

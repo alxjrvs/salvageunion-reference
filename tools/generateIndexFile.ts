@@ -30,6 +30,9 @@ function generateIndexFile() {
     })
     .join(',\n')
 
+  // Add union types to imports
+  const allTypeImports = `${typeImports},\n  SURefEntity,\n  SURefSchemaName`
+
   // Generate SchemaToEntityMap
   const schemaToEntityEntries = schemaIndex.schemas
     .map((entry: SchemaIndexEntry) => {
@@ -53,14 +56,6 @@ function generateIndexFile() {
     })
     .join(',\n')
 
-  // Generate SURefEntity union type
-  const entityUnion = schemaIndex.schemas
-    .map((entry: SchemaIndexEntry) => {
-      const singularName = getSingularTypeName(entry.id)
-      return `  | SURef${singularName}`
-    })
-    .join('\n')
-
   // Generate static model properties
   const modelProperties = schemaIndex.schemas
     .map((entry: SchemaIndexEntry) => {
@@ -75,8 +70,8 @@ function generateIndexFile() {
   template = template.replace(
     '// INJECT:TYPE_IMPORTS',
     `import type {
-${typeImports},
-} from './types/generated.js'`
+${allTypeImports},
+} from './types/index.js'`
   )
 
   template = template.replace(
@@ -101,13 +96,6 @@ ${schemaToModelEntries},
 export const SchemaToDisplayName = {
 ${schemaToDisplayNameEntries},
 } as const`
-  )
-
-  template = template.replace(
-    '// INJECT:ENTITY_UNION',
-    `// Union type for all entity types
-export type SURefEntity =
-${entityUnion}`
   )
 
   template = template.replace(

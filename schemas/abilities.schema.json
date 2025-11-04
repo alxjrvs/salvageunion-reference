@@ -40,7 +40,7 @@
         "$ref": "shared/enums.schema.json#/definitions/actionType"
       },
       "grants": {
-        "$ref": "shared/arrays.schema.json#/definitions/grants"
+        "$ref": "shared/objects.schema.json#/definitions/grants"
       },
       "activationCurrency": {
         "type": "string",

@@ -28,7 +28,7 @@
         }
       },
       "actions": {
-        "$ref": "shared/arrays.schema.json#/definitions/actions"
+        "$ref": "shared/objects.schema.json#/definitions/actions"
       },
       "techLevelEffects": {
         "type": "array",

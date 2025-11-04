@@ -42,7 +42,7 @@ import {
   type SearchResult,
 } from './search.js'
 
-export type * from './types/generated.js'
+export type * from './types/index.js'
 
 // INJECT:SCHEMA_TO_ENTITY_MAP
 
@@ -52,11 +52,6 @@ export type * from './types/generated.js'
 
 // Auto-generate models from schema catalog (synchronous)
 const models = generateModels()
-
-// INJECT:ENTITY_UNION
-
-// Union type for all schema names
-export type SURefSchemaName = keyof SchemaToEntityMap
 
 /**
  * Main ORM class with static model accessors

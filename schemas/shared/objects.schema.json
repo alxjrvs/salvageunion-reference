@@ -382,6 +382,11 @@
             "$ref": "#/definitions/trait"
           }
         },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Name of the system or module"
+        },
         "notes": {
           "type": "string",
           "description": "Additional notes"
@@ -402,7 +407,7 @@
           "$ref": "enums.schema.json#/definitions/actionType"
         },
         "actions": {
-          "$ref": "arrays.schema.json#/definitions/actions"
+          "$ref": "#/definitions/actions"
         },
         "count": {
           "type": "integer",
@@ -643,6 +648,89 @@
         }
       },
       "unevaluatedProperties": false
+    },
+    "grants": {
+      "type": "array",
+      "description": "Entities that can be granted",
+      "items": {
+        "$ref": "#/definitions/grantable"
+      }
+    },
+    "traits": {
+      "type": "array",
+      "description": "Special traits and properties of items, systems, or abilities",
+      "items": {
+        "$ref": "#/definitions/trait"
+      }
+    },
+    "actions": {
+      "type": "array",
+      "description": "Actions that can be performed with this entity",
+      "items": {
+        "$ref": "#/definitions/action"
+      }
+    },
+    "choices": {
+      "type": "array",
+      "description": "Choices available to the player when interacting with the entity",
+      "items": {
+        "$ref": "#/definitions/choice"
+      }
+    },
+    "schemaEntities": {
+      "type": "array",
+      "description": "Entity names that can be chosen",
+      "items": {
+        "type": "string"
+      }
+    },
+    "schemaNames": {
+      "type": "array",
+      "description": "Schema names for filtering choices",
+      "items": {
+        "$ref": "enums.schema.json#/definitions/schemaName"
+      }
+    },
+    "systems": {
+      "type": "array",
+      "description": "System names (string references)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "modules": {
+      "type": "array",
+      "description": "Module names (string references)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "customSystemOptions": {
+      "type": "array",
+      "description": "Custom system options for choices",
+      "items": {
+        "$ref": "#/definitions/systemModule"
+      }
+    },
+    "actionOptions": {
+      "type": "array",
+      "description": "List of options or choices for an action",
+      "items": {
+        "type": "object",
+        "description": "Structured option with label and value",
+        "additionalProperties": false,
+        "required": ["value", "label"],
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Display label for the option (empty string if no label)"
+          },
+          "value": {
+            "type": "string",
+            "description": "Description or effect of the option"
+          }
+        }
+      }
     }
   }
 }

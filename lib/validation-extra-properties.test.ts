@@ -43,10 +43,6 @@ beforeAll(() => {
       path: 'schemas/shared/objects.schema.json',
       relativeId: 'shared/objects.schema.json',
     },
-    {
-      path: 'schemas/shared/arrays.schema.json',
-      relativeId: 'shared/arrays.schema.json',
-    },
   ]
 
   for (const sharedInfo of sharedSchemas) {

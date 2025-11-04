@@ -32,7 +32,9 @@ import type {
   SURefSystem,
   SURefTrait,
   SURefVehicle,
-} from './types/generated.js'
+  SURefEntity,
+  SURefSchemaName,
+} from './types/index.js'
 
 export { BaseModel } from './BaseModel.js'
 
@@ -64,7 +66,7 @@ import {
   type SearchResult,
 } from './search.js'
 
-export type * from './types/generated.js'
+export type * from './types/index.js'
 
 // Type mapping from schema names to entity types
 type SchemaToEntityMap = {
@@ -143,33 +145,6 @@ export const SchemaToDisplayName = {
 
 // Auto-generate models from schema catalog (synchronous)
 const models = generateModels()
-
-// Union type for all entity types
-export type SURefEntity =
-  | SURefAbility
-  | SURefAbilityTreeRequirement
-  | SURefBioTitan
-  | SURefChassis
-  | SURefAdvancedClass
-  | SURefCoreClass
-  | SURefCrawlerBay
-  | SURefCrawlerTechLevel
-  | SURefCrawler
-  | SURefCreature
-  | SURefDrone
-  | SURefEquipment
-  | SURefKeyword
-  | SURefMeld
-  | SURefModule
-  | SURefNPC
-  | SURefRollTable
-  | SURefSquad
-  | SURefSystem
-  | SURefTrait
-  | SURefVehicle
-
-// Union type for all schema names
-export type SURefSchemaName = keyof SchemaToEntityMap
 
 /**
  * Main ORM class with static model accessors

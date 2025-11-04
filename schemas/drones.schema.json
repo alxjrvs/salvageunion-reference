@@ -23,7 +23,7 @@
         "$ref": "shared/common.schema.json#/definitions/salvageValue"
       },
       "systems": {
-        "$ref": "shared/arrays.schema.json#/definitions/systems"
+        "$ref": "shared/objects.schema.json#/definitions/systems"
       }
     },
     "unevaluatedProperties": false

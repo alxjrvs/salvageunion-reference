@@ -1,4 +1,4 @@
-import type { SURefMetaTable } from '../types/generated.js'
+import type { SURefMetaTable } from '../types/index.js'
 
 /**
  * Result type for table roll resolution
