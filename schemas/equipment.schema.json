@@ -6,7 +6,9 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["techLevel"],
+    "required": [
+      "techLevel"
+    ],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/entry"
@@ -18,6 +20,9 @@
     "properties": {
       "bonusPerTechLevel": {
         "$ref": "shared/objects.schema.json#/definitions/bonusPerTechLevel"
+      },
+      "choices": {
+        "$ref": "shared/objects.schema.json#/definitions/choices"
       },
       "techLevel": {
         "$ref": "shared/common.schema.json#/definitions/techLevel"

@@ -992,6 +992,8 @@
     "heatCapacity": 10,
     "cargoCapacity": 0,
     "salvageValue": 1,
+    "description": "",
+    "effect": "An Auto-Turret uses the same rules as Mechs for attaching Systems and Modules; taking damage and being repaired; as well as Heat Advanced Engineer Tree and Heat Checks. Your Auto-Turret cannot Push",
     "bonusPerTechLevel": {
       "structurePoints": 3,
       "energyPoints": 2,
@@ -1002,6 +1004,39 @@
       "techLevel": 1,
       "salvageValue": 0
     },
+    "choices": [
+      {
+        "name": "A.I. Personality",
+        "description": "Roll on the A.I. Personality Table for their personality.",
+        "id": "24a447f7-5986-4164-9dc5-31e3694895f1"
+      },
+      {
+        "name": "Name",
+        "id": "54ebcf26-e6a3-4da5-babb-a47c79402912"
+      }
+    ],
+    "options": [
+      {
+        "label": "Deploy",
+        "value": "You may deploy your Auto-Turret in a location you are in as a Turn Action."
+      },
+      {
+        "label": "Upgrades",
+        "value": "Your Auto-Turret has a Tech Level equal to your Union Crawler. Your Auto-Turret is upgraded along with your Union Crawler, it gains addi- tional stats as shown for each Tech level above the first. "
+      },
+      {
+        "label": "Customisation",
+        "value": "If your Auto-Turret becomes destroyed or is misplaced you can acquire a new one during Downtime. You may only ever have one Auto-Turret at a time.  "
+      }
+    ],
+    "traits": [
+      {
+        "type": "immobile"
+      },
+      {
+        "type": "portable"
+      }
+    ],
     "page": 30,
     "actions": [],
     "id": "f5f04072-9e81-4c9d-a835-b71f45120d66"
