@@ -30,10 +30,12 @@ import type {
   SURefMetaEntry,
   SURefMetaGrants,
   SURefMetaNpc,
+  SURefMetaPatterns,
   SURefMetaStats,
   SURefMetaSystemModule,
   SURefMetaSystems,
   SURefMetaTable,
+  SURefMetaTechLevelEffects,
   SURefMetaTrait,
   SURefMetaTraits,
 } from './objects.js'
@@ -76,7 +78,7 @@ export interface SURefBioTitan extends SURefMetaEntry {
  */
 export interface SURefChassis extends SURefMetaEntry, SURefMetaStats {
   actions: SURefMetaActions
-  patterns: object[]
+  patterns: SURefMetaPatterns
   npc?: SURefMetaNpc
 }
 
@@ -117,10 +119,7 @@ export interface SURefCrawlerBay extends SURefMetaEntry {
    */
   choices?: SURefMetaChoice[]
   actions: SURefMetaActions
-  /**
-   * Effects that scale with tech level
-   */
-  techLevelEffects: object[]
+  techLevelEffects: SURefMetaTechLevelEffects
   table?: SURefMetaTable
 }
 

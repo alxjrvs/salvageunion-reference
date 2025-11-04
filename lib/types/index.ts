@@ -42,7 +42,7 @@ import type {
 } from './schemas.js'
 
 // Import object types for union type
-import type { SURefMetaAction } from './objects.js'
+import type { SURefMetaAction, SURefMetaSystemModule } from './objects.js'
 
 // Import enum types for union type
 import type { SURefSchemaName } from './enums.js'
@@ -72,7 +72,10 @@ export type SURefEntity =
   | SURefVehicle
 
 // Union type for all entities and meta actions
-export type SURefMetaEntity = SURefEntity | SURefMetaAction
+export type SURefMetaEntity =
+  | SURefEntity
+  | SURefMetaAction
+  | SURefMetaSystemModule
 
 // Union type for all schema names including meta actions
 export type SURefMetaSchemaName = SURefSchemaName | 'actions'

@@ -419,6 +419,8 @@ async function generateObjectTypes() {
     'choice',
     'npc',
     'patternSystemModule',
+    'pattern',
+    'techLevelEffect',
     'action',
     'systemModule',
     'table',

@@ -31,59 +31,7 @@
         "$ref": "shared/objects.schema.json#/definitions/actions"
       },
       "patterns": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["name", "systems", "modules"],
-          "properties": {
-            "name": {
-              "type": "string",
-              "minLength": 1,
-              "description": "Name of the pattern"
-            },
-            "description": {
-              "type": "string",
-              "description": "Description of the pattern"
-            },
-            "legalStarting": {
-              "type": "boolean",
-              "description": "Whether this pattern is legal for starting characters"
-            },
-            "systems": {
-              "type": "array",
-              "items": {
-                "$ref": "shared/objects.schema.json#/definitions/patternSystemModule"
-              }
-            },
-            "modules": {
-              "type": "array",
-              "items": {
-                "$ref": "shared/objects.schema.json#/definitions/patternSystemModule"
-              }
-            },
-            "drone": {
-              "type": "object",
-              "description": "Optional drone configuration for this pattern",
-              "additionalProperties": false,
-              "required": ["systems", "modules"],
-              "properties": {
-                "systems": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "modules": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        }
+        "$ref": "shared/objects.schema.json#/definitions/patterns"
       },
       "npc": {
         "$ref": "shared/objects.schema.json#/definitions/npc"

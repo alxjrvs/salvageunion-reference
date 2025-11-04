@@ -139,10 +139,7 @@
           "$ref": "common.schema.json#/definitions/hitPoints"
         },
         "choices": {
-          "description": "Choices available to the player when interacting with the NPC",
-          "items": {
-            "$ref": "#/definitions/choice"
-          }
+          "$ref": "#/definitions/choices"
         }
       }
     },
@@ -169,6 +166,81 @@
             "minLength": 1,
             "description": "Name of the choice"
           }
+        }
+      }
+    },
+    "pattern": {
+      "type": "object",
+      "description": "Mech chassis pattern configuration",
+      "additionalProperties": false,
+      "required": ["name", "systems", "modules"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Name of the pattern"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the pattern"
+        },
+        "legalStarting": {
+          "type": "boolean",
+          "description": "Whether this pattern is legal for starting characters"
+        },
+        "systems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/patternSystemModule"
+          }
+        },
+        "modules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/patternSystemModule"
+          }
+        },
+        "drone": {
+          "type": "object",
+          "description": "Optional drone configuration for this pattern",
+          "additionalProperties": false,
+          "required": ["systems", "modules"],
+          "properties": {
+            "systems": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "modules": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "techLevelEffect": {
+      "type": "object",
+      "description": "Effect that scales with tech level",
+      "additionalProperties": false,
+      "required": ["techLevelMin", "techLevelMax", "effect"],
+      "properties": {
+        "techLevelMin": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Minimum tech level for this effect"
+        },
+        "techLevelMax": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Maximum tech level for this effect"
+        },
+        "effect": {
+          "type": "string",
+          "description": "Description of the effect"
         }
       }
     },
@@ -730,6 +802,20 @@
             "description": "Description or effect of the option"
           }
         }
+      }
+    },
+    "patterns": {
+      "type": "array",
+      "description": "Mech chassis pattern configurations",
+      "items": {
+        "$ref": "#/definitions/pattern"
+      }
+    },
+    "techLevelEffects": {
+      "type": "array",
+      "description": "Effects that scale with tech level",
+      "items": {
+        "$ref": "#/definitions/techLevelEffect"
       }
     }
   }

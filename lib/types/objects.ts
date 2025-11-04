@@ -172,10 +172,7 @@ export interface SURefMetaNpc {
    */
   description: string
   hitPoints: SURefHitPoints
-  /**
-   * Choices available to the player when interacting with the NPC
-   */
-  choices?: unknown
+  choices?: SURefMetaChoices
 }
 
 export interface SURefMetaPatternSystemModule {
@@ -191,6 +188,51 @@ export interface SURefMetaPatternSystemModule {
    * Preselected choices for this system or module, keyed by choice ID
    */
   preselectedChoices?: Record<string, string>
+}
+
+/**
+ * Mech chassis pattern configuration
+ */
+export interface SURefMetaPattern {
+  /**
+   * Name of the pattern
+   */
+  name: string
+  /**
+   * Description of the pattern
+   */
+  description?: string
+  /**
+   * Whether this pattern is legal for starting characters
+   */
+  legalStarting?: boolean
+  systems: SURefMetaPatternSystemModule[]
+  modules: SURefMetaPatternSystemModule[]
+  /**
+   * Optional drone configuration for this pattern
+   */
+  drone?: {
+    systems: string[]
+    modules: string[]
+  }
+}
+
+/**
+ * Effect that scales with tech level
+ */
+export interface SURefMetaTechLevelEffect {
+  /**
+   * Minimum tech level for this effect
+   */
+  techLevelMin: number
+  /**
+   * Maximum tech level for this effect
+   */
+  techLevelMax: number
+  /**
+   * Description of the effect
+   */
+  effect: string
 }
 
 /**
@@ -443,6 +485,11 @@ export type SURefMetaGrants = SURefMetaGrantable[]
 export type SURefMetaModules = string[]
 
 /**
+ * Mech chassis pattern configurations
+ */
+export type SURefMetaPatterns = SURefMetaPattern[]
+
+/**
  * Entity names that can be chosen
  */
 export type SURefMetaSchemaEntities = string[]
@@ -456,6 +503,11 @@ export type SURefMetaSchemaNames = SURefSchemaName[]
  * System names (string references)
  */
 export type SURefMetaSystems = string[]
+
+/**
+ * Effects that scale with tech level
+ */
+export type SURefMetaTechLevelEffects = SURefMetaTechLevelEffect[]
 
 /**
  * Special traits and properties of items, systems, or abilities

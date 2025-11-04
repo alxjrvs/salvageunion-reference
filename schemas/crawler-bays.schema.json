@@ -31,29 +31,7 @@
         "$ref": "shared/objects.schema.json#/definitions/actions"
       },
       "techLevelEffects": {
-        "type": "array",
-        "description": "Effects that scale with tech level",
-        "items": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["techLevelMin", "techLevelMax", "effect"],
-          "properties": {
-            "techLevelMin": {
-              "type": "integer",
-              "minimum": 1,
-              "description": "Minimum tech level for this effect"
-            },
-            "techLevelMax": {
-              "type": "integer",
-              "minimum": 1,
-              "description": "Maximum tech level for this effect"
-            },
-            "effect": {
-              "type": "string",
-              "description": "Description of the effect"
-            }
-          }
-        }
+        "$ref": "shared/objects.schema.json#/definitions/techLevelEffects"
       },
       "table": {
         "$ref": "shared/objects.schema.json#/definitions/table"
