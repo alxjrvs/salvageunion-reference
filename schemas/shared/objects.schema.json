@@ -8,7 +8,10 @@
       "type": "object",
       "description": "Grantable entity with a name and description",
       "additionalProperties": false,
-      "required": ["name", "schema"],
+      "required": [
+        "name",
+        "schema"
+      ],
       "properties": {
         "schema": {
           "oneOf": [
@@ -31,7 +34,10 @@
       "description": "Damage dealt by an attack or ability",
       "type": "object",
       "additionalProperties": false,
-      "required": ["damageType", "amount"],
+      "required": [
+        "damageType",
+        "amount"
+      ],
       "properties": {
         "damageType": {
           "$ref": "enums.schema.json#/definitions/damageType"
@@ -55,7 +61,9 @@
       "type": "object",
       "description": "Special traits and properties of items, systems, or abilities",
       "additionalProperties": false,
-      "required": ["type"],
+      "required": [
+        "type"
+      ],
       "properties": {
         "amount": {
           "oneOf": [
@@ -124,7 +132,11 @@
       "type": "object",
       "description": "NPC associated with an entity",
       "additionalProperties": false,
-      "required": ["position", "description", "hitPoints"],
+      "required": [
+        "position",
+        "description",
+        "hitPoints"
+      ],
       "properties": {
         "position": {
           "type": "string",
@@ -146,7 +158,9 @@
     "patternSystemModule": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -173,7 +187,11 @@
       "type": "object",
       "description": "Mech chassis pattern configuration",
       "additionalProperties": false,
-      "required": ["name", "systems", "modules"],
+      "required": [
+        "name",
+        "systems",
+        "modules"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -204,7 +222,10 @@
           "type": "object",
           "description": "Optional drone configuration for this pattern",
           "additionalProperties": false,
-          "required": ["systems", "modules"],
+          "required": [
+            "systems",
+            "modules"
+          ],
           "properties": {
             "systems": {
               "type": "array",
@@ -226,7 +247,11 @@
       "type": "object",
       "description": "Effect that scales with tech level",
       "additionalProperties": false,
-      "required": ["techLevelMin", "techLevelMax", "effect"],
+      "required": [
+        "techLevelMin",
+        "techLevelMax",
+        "effects"
+      ],
       "properties": {
         "techLevelMin": {
           "type": "integer",
@@ -238,16 +263,18 @@
           "minimum": 1,
           "description": "Maximum tech level for this effect"
         },
-        "effect": {
-          "type": "string",
-          "description": "Description of the effect"
+        "effects": {
+          "$ref": "#/definitions/effects"
         }
       }
     },
     "choice": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name"],
+      "required": [
+        "id",
+        "name"
+      ],
       "properties": {
         "id": {
           "$ref": "common.schema.json#/definitions/id"
@@ -312,7 +339,9 @@
     "action": {
       "type": "object",
       "description": "An action, ability, or attack that can be performed",
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
         "structurePoints": {
           "type": "number",
@@ -354,9 +383,8 @@
           "type": "string",
           "description": "Description of what the action does"
         },
-        "effect": {
-          "type": "string",
-          "description": "Mechanical effect of the action"
+        "effects": {
+          "$ref": "#/definitions/effects"
         },
         "notes": {
           "type": "string",
@@ -388,7 +416,10 @@
             "type": "object",
             "description": "Structured option with label and value",
             "additionalProperties": false,
-            "required": ["value", "label"],
+            "required": [
+              "value",
+              "label"
+            ],
             "properties": {
               "label": {
                 "type": "string",
@@ -423,7 +454,12 @@
     "systemModule": {
       "description": "A system or module that can be installed on a mech",
       "type": "object",
-      "required": ["actions", "salvageValue", "slotsRequired", "techLevel"],
+      "required": [
+        "actions",
+        "salvageValue",
+        "slotsRequired",
+        "techLevel"
+      ],
       "allOf": [
         {
           "$ref": "#/definitions/stats"
@@ -495,7 +531,14 @@
           "type": "object",
           "description": "Standard roll table with 5 outcome ranges",
           "additionalProperties": false,
-          "required": ["type", "1", "20", "11-19", "6-10", "2-5"],
+          "required": [
+            "type",
+            "1",
+            "20",
+            "11-19",
+            "6-10",
+            "2-5"
+          ],
           "properties": {
             "1": {
               "type": "string",
@@ -527,7 +570,14 @@
           "type": "object",
           "description": "Alternative standard roll table with different ranges",
           "additionalProperties": false,
-          "required": ["type", "1", "19-20", "11-18", "6-10", "2-5"],
+          "required": [
+            "type",
+            "1",
+            "19-20",
+            "11-18",
+            "6-10",
+            "2-5"
+          ],
           "properties": {
             "1": {
               "type": "string",
@@ -654,7 +704,12 @@
     "entry": {
       "type": "object",
       "description": "Basic entry with name, description, source, and page reference",
-      "required": ["id", "name", "page", "source"],
+      "required": [
+        "id",
+        "name",
+        "page",
+        "source"
+      ],
       "properties": {
         "asset_url": {
           "$ref": "common.schema.json#/definitions/asset_url"
@@ -702,7 +757,11 @@
     "advancedClass": {
       "type": "object",
       "description": "Advanced or hybrid character class",
-      "required": ["type", "advancedTree", "legendaryTree"],
+      "required": [
+        "type",
+        "advancedTree",
+        "legendaryTree"
+      ],
       "allOf": [
         {
           "$ref": "#/definitions/entry"
@@ -720,6 +779,24 @@
         }
       },
       "unevaluatedProperties": false
+    },
+    "effect": {
+      "type": "object",
+      "description": "Related entry or reference",
+      "additionalProperties": false,
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "Display label for the effect (empty string if no label)"
+        },
+        "value": {
+          "type": "string",
+          "description": "Name of the related entry or reference"
+        }
+      }
     },
     "grants": {
       "type": "array",
@@ -747,6 +824,13 @@
       "description": "Choices available to the player when interacting with the entity",
       "items": {
         "$ref": "#/definitions/choice"
+      }
+    },
+    "effects": {
+      "type": "array",
+      "description": "Related entries or references",
+      "items": {
+        "$ref": "#/definitions/effect"
       }
     },
     "schemaEntities": {
@@ -791,7 +875,10 @@
         "type": "object",
         "description": "Structured option with label and value",
         "additionalProperties": false,
-        "required": ["value", "label"],
+        "required": [
+          "value",
+          "label"
+        ],
         "properties": {
           "label": {
             "type": "string",

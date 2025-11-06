@@ -111,7 +111,9 @@
         "id": "383de916-bbd6-4e34-9cfc-1b37e12178c8",
         "name": "Armament Bay Weapons System",
         "description": "Choose a Weapons System to mount in the Armament Bay.",
-        "schema": ["systems"]
+        "schema": [
+          "systems"
+        ]
       }
     ],
     "page": 222,
@@ -214,17 +216,29 @@
       {
         "techLevelMin": 1,
         "techLevelMax": 2,
-        "effect": "Heals a Pilot to full Hit Points during Downtime."
+        "effects": [
+          {
+            "value": "Heals a Pilot to full Hit Points during Downtime."
+          }
+        ]
       },
       {
         "techLevelMin": 3,
         "techLevelMax": 4,
-        "effect": "Heals a Pilot to full Hit Points, and heals any Minor Injuries fully during Downtime."
+        "effects": [
+          {
+            "value": "Heals a Pilot to full Hit Points, and heals any Minor Injuries fully during Downtime."
+          }
+        ]
       },
       {
         "techLevelMin": 5,
         "techLevelMax": 6,
-        "effect": "Heals a Pilot to full Hit Points, and heals any Major and Minor Injuries fully during Downtime."
+        "effects": [
+          {
+            "value": "Heals a Pilot to full Hit Points, and heals any Major and Minor Injuries fully during Downtime."
+          }
+        ]
       }
     ],
     "actions": [],
@@ -257,47 +271,83 @@
       {
         "techLevelMin": 1,
         "techLevelMax": 2,
-        "effect": "Allows training of all Core Pilot Abilities."
+        "effects": [
+          {
+            "value": "Allows training of all Core Pilot Abilities."
+          }
+        ]
       },
       {
         "techLevelMin": 3,
         "techLevelMax": 4,
-        "effect": "Allows training of all Core, Advanced, and Hybrid Class Pilot Abilities."
+        "effects": [
+          {
+            "value": "Allows training of all Core, Advanced, and Hybrid Class Pilot Abilities."
+          }
+        ]
       },
       {
         "techLevelMin": 5,
         "techLevelMax": 6,
-        "effect": "Allows training of all Core, Advanced, Hybrid Class, and Legendary Pilot Abilities."
+        "effects": [
+          {
+            "value": "Allows training of all Core, Advanced, Hybrid Class, and Legendary Pilot Abilities."
+          }
+        ]
       },
       {
         "techLevelMin": 1,
         "techLevelMax": 1,
-        "effect": "Training during Downtime on your Union Crawler in a Tech 2 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+        "effects": [
+          {
+            "value": "Training during Downtime on your Union Crawler in a Tech 2 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+          }
+        ]
       },
       {
         "techLevelMin": 2,
         "techLevelMax": 2,
-        "effect": "Training during Downtime on your Union Crawler in a Tech 3 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+        "effects": [
+          {
+            "value": "Training during Downtime on your Union Crawler in a Tech 3 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+          }
+        ]
       },
       {
         "techLevelMin": 3,
         "techLevelMax": 3,
-        "effect": "Training during Downtime on your Union Crawler in a Tech 4 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+        "effects": [
+          {
+            "value": "Training during Downtime on your Union Crawler in a Tech 4 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+          }
+        ]
       },
       {
         "techLevelMin": 4,
         "techLevelMax": 4,
-        "effect": "Training during Downtime on your Union Crawler in a Tech 5 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+        "effects": [
+          {
+            "value": "Training during Downtime on your Union Crawler in a Tech 5 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+          }
+        ]
       },
       {
         "techLevelMin": 5,
         "techLevelMax": 5,
-        "effect": "Training during Downtime on your Union Crawler in a Tech 6 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+        "effects": [
+          {
+            "value": "Training during Downtime on your Union Crawler in a Tech 6 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+          }
+        ]
       },
       {
         "techLevelMin": 6,
         "techLevelMax": 6,
-        "effect": "Training during Downtime on your Union Crawler in a Tech 6 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+        "effects": [
+          {
+            "value": "Training during Downtime on your Union Crawler in a Tech 6 Pilot Bay grants a Pilot a one-off improvement of +2 HP and +1 AP."
+          }
+        ]
       }
     ],
     "actions": [],

@@ -7,7 +7,6 @@
     "actions": [
       {
         "name": "Scythe Attack",
-        "effect": "Scylla stabs with its forearms attempting to pierce it's prey.",
         "range": "Close",
         "damage": {
           "amount": 4,
@@ -21,42 +20,62 @@
             "type": "multi-attack",
             "amount": 2
           }
+        ],
+        "effects": [
+          {
+            "value": "Scylla stabs with its forearms attempting to pierce it's prey."
+          }
         ]
       },
       {
         "name": "Tail Sweep",
-        "effect": "Scylla makes one giant sweeping attack with their tail. This hits every target within Medium Range, dealing 3 SP damage on a hit. Targets hit are knocked Prone and gain the Vulnerable Trait.",
         "actionType": "Turn",
         "traits": [
           {
             "type": "melee"
           }
+        ],
+        "effects": [
+          {
+            "value": "Scylla makes one giant sweeping attack with their tail. This hits every target within Medium Range, dealing 3 SP damage on a hit. Targets hit are knocked Prone and gain the Vulnerable Trait."
+          }
         ]
       },
       {
         "name": "Climb",
-        "effect": "Scylla can effortlessly climb over difficult and vertical terrain, rocky surfaces, and other obstacles.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "Scylla can effortlessly climb over difficult and vertical terrain, rocky surfaces, and other obstacles."
+          }
+        ]
       },
       {
         "name": "Armour Plating",
-        "effect": "When Scylla takes damage, instead destroy a layer of Armour Plating and negate all of the damage and any effects.",
         "actionType": "Passive",
         "traits": [
           {
             "type": "uses",
             "amount": 3
           }
+        ],
+        "effects": [
+          {
+            "value": "When Scylla takes damage, instead destroy a layer of Armour Plating and negate all of the damage and any effects."
+          }
         ]
       },
       {
         "name": "Ambush Predator",
-        "effect": "Unless detected, Scylla always acts first in combat.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "Unless detected, Scylla always acts first in combat."
+          }
+        ]
       },
       {
         "name": "Titanic Actions",
-        "effect": "Scylla can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Scylla regains spent Titanic Actions at the start of their turn.",
         "options": [
           {
             "label": "",
@@ -69,6 +88,11 @@
           {
             "label": "",
             "value": "Scylla makes a Tail Sweep Attack (Costs 2 Titanic Actions)."
+          }
+        ],
+        "effects": [
+          {
+            "value": "Scylla can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Scylla regains spent Titanic Actions at the start of their turn."
           }
         ]
       }
@@ -85,39 +109,54 @@
     "actions": [
       {
         "name": "Burrower",
-        "effect": "Typhon can move freely on land and traverse underground through earth, even through the hardest of rock deposits. It can burrow into the earth as a Turn Action and unburrow as a Free Action. Whilst burrowed, it cannot be seen or targeted by anything on the ground, but can be spotted via the huge amounts of earth it kicks up.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "Typhon can move freely on land and traverse underground through earth, even through the hardest of rock deposits. It can burrow into the earth as a Turn Action and unburrow as a Free Action. Whilst burrowed, it cannot be seen or targeted by anything on the ground, but can be spotted via the huge amounts of earth it kicks up."
+          }
+        ]
       },
       {
         "name": "Armour Plating",
-        "effect": "When Typhon takes damage, instead destroy a layer of Armour Plating and negate all of the damage and any effects.",
         "actionType": "Passive",
         "traits": [
           {
             "type": "uses",
             "amount": 2
           }
+        ],
+        "effects": [
+          {
+            "value": "When Typhon takes damage, instead destroy a layer of Armour Plating and negate all of the damage and any effects."
+          }
         ]
       },
       {
         "name": "Swallow Whole",
-        "effect": "Typhon attempts to swallow a target into its humongous maw. Typhon may have multiple targets swallowed at once.",
         "actionType": "Turn",
         "range": "Close",
         "traits": [
           {
             "type": "melee"
           }
+        ],
+        "effects": [
+          {
+            "value": "Typhon attempts to swallow a target into its humongous maw. Typhon may have multiple targets swallowed at once."
+          }
         ]
       },
       {
         "name": "Spiked Carapace",
-        "effect": "When Typhon unborrows all targets within Close Range of the area it unburrows up to take 5 SP damage from its spiked carapace. In addition, any target that attacks Typhon with an attack that has the Melee Trait takes 3 SP damage on a hit.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "When Typhon unborrows all targets within Close Range of the area it unburrows up to take 5 SP damage from its spiked carapace. In addition, any target that attacks Typhon with an attack that has the Melee Trait takes 3 SP damage on a hit."
+          }
+        ]
       },
       {
         "name": "Titanic Actions",
-        "effect": "Typhon can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Typhon regains spent Titanic Actions at the start of their turn.",
         "options": [
           {
             "label": "",
@@ -130,6 +169,11 @@
           {
             "label": "",
             "value": "Typhon makes a Swallow Whole Attack (Costs three Titanic Actions)."
+          }
+        ],
+        "effects": [
+          {
+            "value": "Typhon can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Typhon regains spent Titanic Actions at the start of their turn."
           }
         ]
       }
@@ -146,12 +190,15 @@
     "actions": [
       {
         "name": "Flying",
-        "effect": "Chrysalis can fly in the air, moving over all obstacles and terrain. All attacks against Chrysalis when it is flying treat it as though it is in Long Range.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "Chrysalis can fly in the air, moving over all obstacles and terrain. All attacks against Chrysalis when it is flying treat it as though it is in Long Range."
+          }
+        ]
       },
       {
         "name": "Cluster Energy Bombs",
-        "effect": "Chrysalis scatters a series of glowing cluster bombs upon its foes.",
         "actionType": "Turn",
         "range": "Long",
         "damage": {
@@ -170,38 +217,54 @@
             "type": "multi-attack",
             "amount": 3
           }
+        ],
+        "effects": [
+          {
+            "value": "Chrysalis scatters a series of glowing cluster bombs upon its foes."
+          }
         ]
       },
       {
         "name": "Entrancing Song",
-        "effect": "Chrysalis emits an entrancing song by vibrating its wings at a series of different frequencies. This Ability affects all targets that can hear Chrysalis within Medium Range including those in a Mech unless it is somehow sound sealed.",
         "actionType": "Turn",
         "traits": [
           {
             "type": "uses",
             "amount": 1
+          }
+        ],
+        "effects": [
+          {
+            "value": "Chrysalis emits an entrancing song by vibrating its wings at a series of different frequencies. This Ability affects all targets that can hear Chrysalis within Medium Range including those in a Mech unless it is somehow sound sealed."
           }
         ]
       },
       {
         "name": "Cocoon",
-        "effect": "Chrysalis forms itself into a Cocoon. Whilst in the Cocoon it cannot move or take any other actions, but regains 10 SP at the start of each round. The Cocoon has 50 SP; if it is destroyed Chrysalis cannot use this Ability again for 24 hours.",
-        "actionType": "Turn"
+        "actionType": "Turn",
+        "effects": [
+          {
+            "value": "Chrysalis forms itself into a Cocoon. Whilst in the Cocoon it cannot move or take any other actions, but regains 10 SP at the start of each round. The Cocoon has 50 SP; if it is destroyed Chrysalis cannot use this Ability again for 24 hours."
+          }
+        ]
       },
       {
         "name": "Birth Pods",
-        "effect": "Chrysalis Lays d20 Egg Sacs in an area within Close Range. At the start of its next turn they are born as a Child of Chrysalis and join the combat. Egg Sacs have 1 SP before they hatch.",
         "actionType": "Turn",
         "traits": [
           {
             "type": "uses",
             "amount": 1
           }
+        ],
+        "effects": [
+          {
+            "value": "Chrysalis Lays d20 Egg Sacs in an area within Close Range. At the start of its next turn they are born as a Child of Chrysalis and join the combat. Egg Sacs have 1 SP before they hatch."
+          }
         ]
       },
       {
         "name": "Titanic Actions",
-        "effect": "Chrysalis can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Chrysalis regains spent Titanic Actions at the start of their turn.",
         "options": [
           {
             "label": "",
@@ -219,6 +282,11 @@
             "label": "",
             "value": "Chrysalis uses its Cocoon Ability (Costs 2 Titanic Actions)."
           }
+        ],
+        "effects": [
+          {
+            "value": "Chrysalis can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Chrysalis regains spent Titanic Actions at the start of their turn."
+          }
         ]
       }
     ],
@@ -234,17 +302,24 @@
     "actions": [
       {
         "name": "Nether Teleport",
-        "effect": "Phantom teleports itself to the Nether Zone or teleports from the Nether Zone to the material world. After Phantom uses this Ability it may not act on its next turn.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "Phantom teleports itself to the Nether Zone or teleports from the Nether Zone to the material world. After Phantom uses this Ability it may not act on its next turn."
+          }
+        ]
       },
       {
         "name": "Phasic Core",
-        "effect": "Phantom is permanently phased. It can move through walls and obstacles and is invisible except for a faint blue outline. Phantom can make attacks whilst phased.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "Phantom is permanently phased. It can move through walls and obstacles and is invisible except for a faint blue outline. Phantom can make attacks whilst phased."
+          }
+        ]
       },
       {
         "name": "Morph Scythes",
-        "effect": "The molecular structure of a target hit by Phantom's Morph Scythes begins to unravel with bizarre results.",
         "actionType": "Turn",
         "range": "Close",
         "damage": {
@@ -259,11 +334,15 @@
             "type": "multi-attack",
             "amount": 3
           }
+        ],
+        "effects": [
+          {
+            "value": "The molecular structure of a target hit by Phantom's Morph Scythes begins to unravel with bizarre results."
+          }
         ]
       },
       {
         "name": "Titanic Actions",
-        "effect": "Phantom can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Phantom regains spent Titanic Actions at the start of their turn.",
         "options": [
           {
             "label": "",
@@ -276,6 +355,11 @@
           {
             "label": "",
             "value": "Phantom uses its Nether Teleport Ability."
+          }
+        ],
+        "effects": [
+          {
+            "value": "Phantom can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Phantom regains spent Titanic Actions at the start of their turn."
           }
         ]
       }
@@ -292,7 +376,6 @@
     "actions": [
       {
         "name": "Electrified Spines",
-        "effect": "Electrophorus gouges a target with its spines.",
         "actionType": "Turn",
         "range": "Close",
         "damage": {
@@ -306,42 +389,62 @@
           {
             "type": "ion"
           }
+        ],
+        "effects": [
+          {
+            "value": "Electrophorus gouges a target with its spines."
+          }
         ]
       },
       {
         "name": "Static Field",
-        "effect": "Anything that starts its turn or enters within Close Range of the Electrophorus will take 5 SP damage.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "Anything that starts its turn or enters within Close Range of the Electrophorus will take 5 SP damage."
+          }
+        ]
       },
       {
         "name": "Hover",
-        "effect": "Electrophorus is able to use its bioelectric energy to hover over obstacles, creatures, Mechs, and terrain as a Free Action.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "Electrophorus is able to use its bioelectric energy to hover over obstacles, creatures, Mechs, and terrain as a Free Action."
+          }
+        ]
       },
       {
         "name": "Bio-Electric Arc",
-        "effect": "Electrophorus fires an arc of bioelectricity. Choose up to three targets in Medium Range and make a single attack roll. On a successful hit the first target takes 10 SP damage, the second target takes 5 SP damage, and the third target takes 3 SP damage.",
         "actionType": "Turn",
         "range": "Medium",
         "traits": [
           {
             "type": "energy"
           }
+        ],
+        "effects": [
+          {
+            "value": "Electrophorus fires an arc of bioelectricity. Choose up to three targets in Medium Range and make a single attack roll. On a successful hit the first target takes 10 SP damage, the second target takes 5 SP damage, and the third target takes 3 SP damage."
+          }
         ]
       },
       {
         "name": "Bio-Electric Shield",
-        "effect": "As a Reaction may when hit by an attack, Electrophorus may trigger its Bio-Electric Shield to deflect the blow.",
         "actionType": "Reaction",
         "traits": [
           {
             "type": "shield"
           }
+        ],
+        "effects": [
+          {
+            "value": "As a Reaction may when hit by an attack, Electrophorus may trigger its Bio-Electric Shield to deflect the blow."
+          }
         ]
       },
       {
         "name": "Titanic Actions",
-        "effect": "Electrophorus can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Electrophorus regains spent Titanic Actions at the start of their turn.",
         "options": [
           {
             "label": "",
@@ -354,6 +457,11 @@
           {
             "label": "",
             "value": "Electrophorus makes a Bio-Electric Arc Attack (Uses 2 Titanic Actions)."
+          }
+        ],
+        "effects": [
+          {
+            "value": "Electrophorus can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Electrophorus regains spent Titanic Actions at the start of their turn."
           }
         ]
       }
@@ -370,7 +478,6 @@
     "actions": [
       {
         "name": "Claw Swipes",
-        "effect": "The Tyrant makes a frenetic series of claw swipes.",
         "actionType": "Turn",
         "range": "Close",
         "damage": {
@@ -385,26 +492,42 @@
             "type": "multi-attack",
             "amount": 2
           }
+        ],
+        "effects": [
+          {
+            "value": "The Tyrant makes a frenetic series of claw swipes."
+          }
         ]
       },
       {
         "name": "Amphibious",
-        "effect": "The Tyrant is able to move swiftly in all bodies of water at any depth as well as on land. It can breathe underwater as well as on land.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "The Tyrant is able to move swiftly in all bodies of water at any depth as well as on land. It can breathe underwater as well as on land."
+          }
+        ]
       },
       {
         "name": "Destroyer of Worlds",
-        "effect": "The destructive power of The Tyrant is unparalleled. It will destroy any Arco, City, Settlement, or Crawler within a day of attacking it.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "The destructive power of The Tyrant is unparalleled. It will destroy any Arco, City, Settlement, or Crawler within a day of attacking it."
+          }
+        ]
       },
       {
         "name": "Regeneration",
-        "effect": "The Tyrant regains 10 SP at the start of its turn. This triggers even when reduced to 0 SP.",
-        "actionType": "Passive"
+        "actionType": "Passive",
+        "effects": [
+          {
+            "value": "The Tyrant regains 10 SP at the start of its turn. This triggers even when reduced to 0 SP."
+          }
+        ]
       },
       {
         "name": "Tail Swat",
-        "effect": "The Tyrant swipes with its tail, casually knocking over skyscrapers and swatting away projectiles.",
         "actionType": "Reaction",
         "range": "Medium",
         "damage": {
@@ -415,11 +538,15 @@
           {
             "type": "melee"
           }
+        ],
+        "effects": [
+          {
+            "value": "The Tyrant swipes with its tail, casually knocking over skyscrapers and swatting away projectiles."
+          }
         ]
       },
       {
         "name": "Rending Bite",
-        "effect": "The Tyrant rips apart a target with a mammoth bite.",
         "actionType": "Turn",
         "range": "Close",
         "damage": {
@@ -433,11 +560,15 @@
           {
             "type": "melee"
           }
+        ],
+        "effects": [
+          {
+            "value": "The Tyrant rips apart a target with a mammoth bite."
+          }
         ]
       },
       {
         "name": "Irradiated Beam",
-        "effect": "The Tyrant produces a humongous beam of Irradiated energy from its maw. This must recharge after being fired, and can only be made every other turn. Any target hit by the Irradiated Beam as well as the entire area within Close Range becomes Irradiated.",
         "actionType": "Turn",
         "range": "Long",
         "damage": {
@@ -459,11 +590,15 @@
           {
             "type": "irradiated"
           }
+        ],
+        "effects": [
+          {
+            "value": "The Tyrant produces a humongous beam of Irradiated energy from its maw. This must recharge after being fired, and can only be made every other turn. Any target hit by the Irradiated Beam as well as the entire area within Close Range becomes Irradiated."
+          }
         ]
       },
       {
         "name": "Titanic Actions",
-        "effect": "The Tyrant can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. The Tyrant regains spent Titanic Actions at the start of their turn.",
         "options": [
           {
             "label": "",
@@ -476,6 +611,11 @@
           {
             "label": "",
             "value": "Tyrant makes a single Claw Swipe Attack. This does not have the Multi-Attack Trait."
+          }
+        ],
+        "effects": [
+          {
+            "value": "The Tyrant can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. The Tyrant regains spent Titanic Actions at the start of their turn."
           }
         ]
       }

@@ -26,6 +26,7 @@ import type {
   SURefMetaAdvancedClass,
   SURefMetaBonusPerTechLevel,
   SURefMetaChoice,
+  SURefMetaChoices,
   SURefMetaDamage,
   SURefMetaEntry,
   SURefMetaGrants,
@@ -180,6 +181,7 @@ export interface SURefDrone extends SURefMetaEntry {
  */
 export interface SURefEquipment extends SURefMetaEntry, SURefMetaStats {
   bonusPerTechLevel?: SURefMetaBonusPerTechLevel
+  choices?: SURefMetaChoices
   techLevel: SURefTechLevel
   traits?: SURefMetaTraits
   range?: SURefRange

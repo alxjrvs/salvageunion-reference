@@ -33,9 +33,8 @@
       "range": {
         "$ref": "shared/enums.schema.json#/definitions/range"
       },
-      "effect": {
-        "type": "string",
-        "description": "Mechanical effect of the equipment"
+      "effects": {
+        "$ref": "shared/objects.schema.json#/definitions/effects"
       },
       "options": {
         "$ref": "shared/objects.schema.json#/definitions/actionOptions"

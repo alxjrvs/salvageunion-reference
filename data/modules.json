@@ -15,9 +15,13 @@
     "actionType": "Free",
     "range": "Long",
     "description": "This Opus Institute-developed array of telecommunications wires and receivers allows communication with anything with the Communicator Trait in Range.",
-    "effect": "This allows for both voice and text communications via your Mech's HUD. You may also use your Comms Module to send and receive images and data, such as data you gather when using a Scanner. If the Mech does not have a Comms Module or equivalent with the Communicator Trait you cannot talk to your Allies from their Mech whilst out in the field.",
     "page": 190,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "This allows for both voice and text communications via your Mech's HUD. You may also use your Comms Module to send and receive images and data, such as data you gather when using a Scanner. If the Mech does not have a Comms Module or equivalent with the Communicator Trait you cannot talk to your Allies from their Mech whilst out in the field."
+      }
+    ]
   },
   {
     "id": "f8acedfb-56da-4ca2-8bb8-511d95a23abe",
@@ -27,9 +31,13 @@
     "slotsRequired": 1,
     "salvageValue": 1,
     "actionType": "Passive",
-    "effect": "This Module allows storage of up to 10 pieces of Pilot Equipment within it, allowing easy access when in the field.",
     "page": 190,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "This Module allows storage of up to 10 pieces of Pilot Equipment within it, allowing easy access when in the field."
+      }
+    ]
   },
   {
     "id": "25ca5163-7ac1-47d3-b36c-377aaf2773fe",
@@ -47,7 +55,6 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "This hacking program developed by Stefanus Industries allows you to tap into a Mech, database, or computer system to gather information about it.",
-    "effect": "This can only be used to read data and not to write or manipulate it.",
     "table": {
       "1": "The hack fails and the target is alerted to your hacking attempt. They can retaliate as appropriate.",
       "20": "You masterfully hack into the system and can ask 5 questions to the Mediator about it. The answers they give must be true.",
@@ -57,7 +64,12 @@
       "type": "standard"
     },
     "page": 190,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "This can only be used to read data and not to write or manipulate it."
+      }
+    ]
   },
   {
     "id": "dde4b6c5-fe3c-4d18-a6c3-15ba7630db96",
@@ -75,7 +87,6 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "This Firewall, made open source by the Opus Institute, is designed to block hacking attempts.",
-    "effect": "When activated, roll on the table below to determine the result.",
     "table": {
       "1": "You fail to block the hack, and your Firewall is breached, it becomes damaged and cannot be used until repaired to the Intact Condition.",
       "20": "You successfully block the hack and you and your Allies cannot be affected by anything with the Hacking Trait for the next 10 minutes.",
@@ -85,7 +96,12 @@
       "type": "standard"
     },
     "page": 191,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, roll on the table below to determine the result."
+      }
+    ]
   },
   {
     "id": "ab7c2af1-f474-4cc0-8dc9-3942d6f24d8b",
@@ -96,10 +112,14 @@
     "salvageValue": 1,
     "actionType": "Short",
     "activationCost": 1,
-    "effect": "When activated, a single Pilot may use the Personal Recreation Device to relax and get themselves into a flow state. The next time they or a Mech they are controlling roll the die, they may re-roll it. They must accept the result of the second roll.",
     "notes": "*It is against Union Regulation to install a Mech with a Personal Recreation Device designed to do what you're thinking.*",
     "page": 191,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, a single Pilot may use the Personal Recreation Device to relax and get themselves into a flow state. The next time they or a Mech they are controlling roll the die, they may re-roll it. They must accept the result of the second roll."
+      }
+    ]
   },
   {
     "id": "92677d7f-3490-48ee-9554-513355c967ce",
@@ -112,9 +132,13 @@
     "range": "Long",
     "activationCost": 1,
     "description": "An open source Opus Institute blueprint, this Module is frequently used by emergency or rescue services. The Opus Institute developed it for use in the long winters where their headquarters are located; due to the pitch dark environments and constant threat of snowstorms and avalanches.",
-    "effect": "When activated, this Module fires a reactor-fuelled flare to any point within Range. The flare is clearly visible up to anywhere within Far Range as well as anyone in any adjacent area to you on the Region Map. The flare burns enough to provide illumination nearly equal to that of daylight. The flare lasts for an hour before dissipating.",
     "page": 191,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, this Module fires a reactor-fuelled flare to any point within Range. The flare is clearly visible up to anywhere within Far Range as well as anyone in any adjacent area to you on the Region Map. The flare burns enough to provide illumination nearly equal to that of daylight. The flare lasts for an hour before dissipating."
+      }
+    ]
   },
   {
     "id": "a93614fa-1e90-4fed-b806-4f2f4ea77dab",
@@ -124,9 +148,13 @@
     "slotsRequired": 1,
     "salvageValue": 1,
     "actionType": "Reaction",
-    "effect": "When activated, your Mech self-destructs, its reactor going into overdrive and causing a localised thermonuclear explosion. Your Mech, as well as all mounted Systems, Modules, and all Cargo, are destroyed. Everything within Close Range of your Mech takes SP damage equal to the Maximum Heat Capacity of your Mech. The area where your Mech was located before the Self-Destruct was activated, is now Irradiated.",
     "page": 192,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, your Mech self-destructs, its reactor going into overdrive and causing a localised thermonuclear explosion. Your Mech, as well as all mounted Systems, Modules, and all Cargo, are destroyed. Everything within Close Range of your Mech takes SP damage equal to the Maximum Heat Capacity of your Mech. The area where your Mech was located before the Self-Destruct was activated, is now Irradiated."
+      }
+    ]
   },
   {
     "id": "655c1325-9525-4a7f-a601-e302e5240208",
@@ -143,7 +171,6 @@
     "actionType": "Short",
     "range": "Long",
     "activationCost": 2,
-    "effect": "When activated, a Survey Scanner allows you to scan a specific point of interest within Range.",
     "table": {
       "1": "Your scan returns inaccurate data. You may ask the Mediator 2 questions about the area and both answers will contain false information which you believe to be true.",
       "20": "You make a thorough scan of the area and may ask the Mediator 5 questions about it. The answers they give must be true.",
@@ -153,7 +180,12 @@
       "type": "standard"
     },
     "page": 194,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, a Survey Scanner allows you to scan a specific point of interest within Range."
+      }
+    ]
   },
   {
     "id": "d54471d7-562a-4f25-8f3d-740ffc520dc3",
@@ -168,9 +200,13 @@
       }
     ],
     "actionType": "Turn",
-    "effect": "A Weapons Link Module allows you to connect any number of identical Weapons Systems together. You make an attack with all weapons linked together with this Module against a single target in Range of your choice. Make and resolve each attack separately. You gain 1 Heat for each linked weapon you attack with and must make a Heat Check after the attacks have been resolved.",
     "page": 193,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "A Weapons Link Module allows you to connect any number of identical Weapons Systems together. You make an attack with all weapons linked together with this Module against a single target in Range of your choice. Make and resolve each attack separately. You gain 1 Heat for each linked weapon you attack with and must make a Heat Check after the attacks have been resolved."
+      }
+    ]
   },
   {
     "id": "301a86b9-2508-41ed-939f-f416c050dccc",
@@ -186,9 +222,13 @@
     ],
     "actionType": "Free",
     "activationCost": 1,
-    "effect": "When activated, this optical array extends the Range of any single Ranged Weapons System mounted on your Mech by one band, to a maximum of Long Range. It further allows you to zoom in and see one Range Band further than you currently are. This effect lasts for 1 hour.",
     "page": 193,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, this optical array extends the Range of any single Ranged Weapons System mounted on your Mech by one band, to a maximum of Long Range. It further allows you to zoom in and see one Range Band further than you currently are. This effect lasts for 1 hour."
+      }
+    ]
   },
   {
     "id": "bca31633-15d8-4441-9d84-1857546b50cb",
@@ -204,9 +244,13 @@
     ],
     "actionType": "Passive",
     "description": "This device constantly measures and analyses air pressure, wind speed, temperature, and humidity.",
-    "effect": "When entering an area you are able to get an up to date report on the weather of that area and any potential hazardous environmental conditions.",
     "page": 193,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When entering an area you are able to get an up to date report on the weather of that area and any potential hazardous environmental conditions."
+      }
+    ]
   },
   {
     "id": "5360e2ed-f25f-4d7a-9ec0-7b0bdc0af758",
@@ -223,9 +267,13 @@
     "actionType": "Turn",
     "range": "Medium",
     "activationCost": 1,
-    "effect": "When activated, you scan a Mech or Vehicle in Range to get a full report on it. You learn its Chassis, Systems and Modules, its current and Max Structure Points, Heat, and Energy, and the Condition (Intact, Damaged, Destroyed) of its Chassis, Systems, and Modules.",
     "page": 193,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, you scan a Mech or Vehicle in Range to get a full report on it. You learn its Chassis, Systems and Modules, its current and Max Structure Points, Heat, and Energy, and the Condition (Intact, Damaged, Destroyed) of its Chassis, Systems, and Modules."
+      }
+    ]
   },
   {
     "id": "ffa5abd0-c7b4-4adb-8411-132040d385a5",
@@ -236,9 +284,13 @@
     "salvageValue": 2,
     "actionType": "Reaction",
     "description": "For when you need that extra boost of energy on a long haul. This nuclear powered conduit can be drained of energy to provide your Mech's reactor with a temporary boost.",
-    "effect": "When activated, your Mech regains 3 EP and the Energy Cell Module is destroyed.",
     "page": 194,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, your Mech regains 3 EP and the Energy Cell Module is destroyed."
+      }
+    ]
   },
   {
     "id": "10ccfd99-5580-4a94-a9b7-50c24fd7faf3",
@@ -256,9 +308,13 @@
     "range": "Long",
     "activationCost": 2,
     "description": "A scanner designed by Thatcher Steel to analyse underground areas prior to mining excavations.",
-    "effect": "When activated, you scan a point within Range to detect the presence of any underground structures, cave networks, ruins, or bases. This can be a specific terrain feature or location such as a mountain range, military complex, settlement, or area in the landscape. If a point is not worth scanning because it holds nothing of interest, the Mediator must tell you before you make your scan. The scan returns a basic datamap of the underground area, including its size as well as the first three main sections as well as any passageways between those sections. The Mediator will draw you a rudimentary map noting any major features such as bridges, columns, or crevasses, and lets you know if the area can fit Mechs or Pilots.",
     "page": 194,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, you scan a point within Range to detect the presence of any underground structures, cave networks, ruins, or bases. This can be a specific terrain feature or location such as a mountain range, military complex, settlement, or area in the landscape. If a point is not worth scanning because it holds nothing of interest, the Mediator must tell you before you make your scan. The scan returns a basic datamap of the underground area, including its size as well as the first three main sections as well as any passageways between those sections. The Mediator will draw you a rudimentary map noting any major features such as bridges, columns, or crevasses, and lets you know if the area can fit Mechs or Pilots."
+      }
+    ]
   },
   {
     "id": "746b6003-1100-4c22-ab2a-5593fafe3e41",
@@ -274,9 +330,13 @@
     ],
     "actionType": "Reaction",
     "description": "This Module enables a Mech to make a series of rapid movements in an attempt to avoid damage from an attack or hazard. The infamous 'Devils Run' Pilot training route in the Arid Steppes contains a gauntlet of hazards that the Evasion Protocols Module has proved crucial in avoiding.",
-    "effect": "If an attack hits your Mech, you may activate the Evasion Protocols as a Reaction to force the attacker to re-roll the attack and choose the lower result.",
     "page": 194,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "If an attack hits your Mech, you may activate the Evasion Protocols as a Reaction to force the attacker to re-roll the attack and choose the lower result."
+      }
+    ]
   },
   {
     "id": "3d096dd7-7437-4af1-a8ab-28cf9886cae4",
@@ -289,10 +349,14 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "A byproduct of Drontek anti-grav technology, the Hull Magnetiser has become much loved by salvagers who want to slap some extra scrap on their Chassis.",
-    "effect": "When activated, the hull of your Mech becomes temporarily magnetised, drawing metallic objects towards it and allowing all manner of scrap and salvage to be easily carried.",
     "notes": "This increases your Mech's Cargo Capacity by its System Slot Value. This effect lasts for 1 hour and can be deactivated any time as a Free Action. The Union unofficially encourages creative and unorthodox uses of the Hull Magnetiser.",
     "page": 194,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, the hull of your Mech becomes temporarily magnetised, drawing metallic objects towards it and allowing all manner of scrap and salvage to be easily carried."
+      }
+    ]
   },
   {
     "id": "91256ee6-a6d8-4bee-a457-1f7b87b177a4",
@@ -309,9 +373,13 @@
     "actionType": "Free",
     "range": "Far",
     "activationCost": 1,
-    "effect": "When activated, this specialised, green tinted optical array allows you to see in darkness from your Mech up to Far Range. This effect lasts for 1 hour.",
     "page": 195,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, this specialised, green tinted optical array allows you to see in darkness from your Mech up to Far Range. This effect lasts for 1 hour."
+      }
+    ]
   },
   {
     "id": "893a303c-7b53-4956-945e-ee8619859ca2",
@@ -326,7 +394,11 @@
       {
         "name": "Auto-Scan",
         "actionType": "Passive",
-        "effect": "This automated function passively alerts you when you move into an area that can be salvaged.\nIn addition, whenever you move from one area of the map to an location you have not yet visited, roll the die, on the result of a 20 you gain once piece of scrap of the Tech Level of the area as decided by the Mediator. By default this is the Tech Level of your Union Crawler."
+        "effects": [
+          {
+            "value": "This automated function passively alerts you when you move into an area that can be salvaged.\nIn addition, whenever you move from one area of the map to an location you have not yet visited, roll the die, on the result of a 20 you gain once piece of scrap of the Tech Level of the area as decided by the Mediator. By default this is the Tech Level of your Union Crawler."
+          }
+        ]
       },
       {
         "name": "Coolant Flush",
@@ -338,7 +410,11 @@
             "type": "scanner"
           }
         ],
-        "effect": "In addition, when activated for its EP cost, this Module scans an area within Range. This reveals any Scrap, Systems, Chassis, or Modules, or Area Salvage points in the location as well as any buried or hidden metallic threats such as mines or Mechs waiting in ambush."
+        "effects": [
+          {
+            "value": "In addition, when activated for its EP cost, this Module scans an area within Range. This reveals any Scrap, Systems, Chassis, or Modules, or Area Salvage points in the location as well as any buried or hidden metallic threats such as mines or Mechs waiting in ambush."
+          }
+        ]
       }
     ],
     "page": 195
@@ -359,9 +435,13 @@
     "range": "Medium",
     "activationCost": 1,
     "description": "Developed by Sakura Futures to aid in target acquisition, after a classified incident at a mining colony. This scanner is able to detect movement within an area via a high-powered ultrasound scanner.",
-    "effect": "When activated, you scan a point within the area map or a specific area of interest such as a ruined building, bunker, or dense area of foliage for any signs of movement. You detect if anything is moving in the area, the number of separate things that are moving, and whether they are People or Mech-sized.",
     "page": 195,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, you scan a point within the area map or a specific area of interest such as a ruined building, bunker, or dense area of foliage for any signs of movement. You detect if anything is moving in the area, the number of separate things that are moving, and whether they are People or Mech-sized."
+      }
+    ]
   },
   {
     "id": "c753cba0-29f8-4690-82f7-ca146251682c",
@@ -378,9 +458,13 @@
     "actionType": "Turn",
     "range": "Medium",
     "activationCost": 1,
-    "effect": "When you activate this Module you are able to plot a safe course for you and your Allies to either a known location within the Region Map you are in or one of the following locations in the wasteland.",
     "page": 196,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When you activate this Module you are able to plot a safe course for you and your Allies to either a known location within the Region Map you are in or one of the following locations in the wasteland."
+      }
+    ]
   },
   {
     "id": "09409fcc-9463-465b-91e5-5580bc1ce7bd",
@@ -396,9 +480,13 @@
     ],
     "actionType": "Turn",
     "activationCost": 3,
-    "effect": "When activated, make an attack with a Weapons System of your choice against a target. If the attack hits choose a System, Module, or appendage on the target. You deal damage as normal, but the System, Module, or appendage is now damaged, or injured. On a critical success (20), the System, Module, or appendage is instead destroyed.",
     "page": 196,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, make an attack with a Weapons System of your choice against a target. If the attack hits choose a System, Module, or appendage on the target. You deal damage as normal, but the System, Module, or appendage is now damaged, or injured. On a critical success (20), the System, Module, or appendage is instead destroyed."
+      }
+    ]
   },
   {
     "id": "d0eeed2b-690e-486e-936a-ec2baac2a48e",
@@ -415,9 +503,13 @@
     ],
     "range": "Medium",
     "activationCost": 2,
-    "effect": "When you activate this Module, a target Mech in Range must roll on the Reactor Overload Table.",
     "page": 196,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When you activate this Module, a target Mech in Range must roll on the Reactor Overload Table."
+      }
+    ]
   },
   {
     "id": "f1c9860f-949c-44ee-9d77-baf6016b38fb",
@@ -429,9 +521,13 @@
     "actionType": "Turn",
     "range": "Long",
     "activationCost": 1,
-    "effect": "This Module projects a video or series of images of your choice onto a surface of your choice within Range.",
     "page": 196,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "This Module projects a video or series of images of your choice onto a surface of your choice within Range."
+      }
+    ]
   },
   {
     "id": "df8846de-8b69-4199-a20e-09bac424e6a1",
@@ -442,9 +538,13 @@
     "salvageValue": 2,
     "actionType": "Reaction",
     "activationCost": 2,
-    "effect": "When activated, you and all allied Mechs within Close Range go into a feigned reactor Shutdown. The Mechs are operational, but appear as though they are Shutdown to sensors. Anything with the Scanner, Targeter, or Hacking Trait cannot be used against them. The Mechs can move, but if they activate any Systems, Modules, Abilities, or attack, they become active again and this effect ceases.",
     "page": 197,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, you and all allied Mechs within Close Range go into a feigned reactor Shutdown. The Mechs are operational, but appear as though they are Shutdown to sensors. Anything with the Scanner, Targeter, or Hacking Trait cannot be used against them. The Mechs can move, but if they activate any Systems, Modules, Abilities, or attack, they become active again and this effect ceases."
+      }
+    ]
   },
   {
     "id": "2cf1bba0-3614-4559-adfe-f353ff04bbd0",
@@ -455,7 +555,6 @@
     "salvageValue": 2,
     "actionType": "Passive",
     "description": "This Module increases the efficiency and cooling capability of your Mech's reactor, mitigating damage in the event of an overload.",
-    "effect": "When you make a Heat Check, roll on the table below instead of the standard Heat Check table.",
     "table": {
       "1": "Reactor Damage: The Chassis of your Mech becomes damaged as your reactor wildly overheats.",
       "20": "Reactor Stabilisation: Your Mech's reactor stabilises and its Heat is reduced to 0.",
@@ -465,7 +564,12 @@
       "type": "standard"
     },
     "page": 197,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When you make a Heat Check, roll on the table below instead of the standard Heat Check table."
+      }
+    ]
   },
   {
     "id": "db7d6cfa-4947-4543-8a4f-e8b7b67da979",
@@ -477,9 +581,13 @@
     "actionType": "Turn",
     "range": "Far",
     "activationCost": 1,
-    "effect": "When activated, the video begins to record and automatically stops after one hour. The video is saved on a mini disc for watching later and can be kept as a Keepsake.",
     "page": 197,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, the video begins to record and automatically stops after one hour. The video is saved on a mini disc for watching later and can be kept as a Keepsake."
+      }
+    ]
   },
   {
     "id": "10498cb2-a869-4d73-81c5-7ac82f149448",
@@ -494,9 +602,13 @@
         "type": "heat spike"
       }
     ],
-    "effect": "An Advanced Weapons Link Module allows you to connect any number of different Weapons Systems together. You make an attack with all weapons linked together with this Module against a single target in Range of all linked weapons. Make and resolve each attack separately. You gain 1 Heat for each linked weapon you attack with and must make a Heat Check after the attacks have been resolved.",
     "page": 198,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "An Advanced Weapons Link Module allows you to connect any number of different Weapons Systems together. You make an attack with all weapons linked together with this Module against a single target in Range of all linked weapons. Make and resolve each attack separately. You gain 1 Heat for each linked weapon you attack with and must make a Heat Check after the attacks have been resolved."
+      }
+    ]
   },
   {
     "id": "8879315d-3e6b-491a-8f12-64781984c3bf",
@@ -506,38 +618,58 @@
     "slotsRequired": 2,
     "salvageValue": 4,
     "description": "The Auto-Doctor is a medical droid with a rudimentary A.I. that can heal a Pilot in the field via a complex array of mechanical surgery arms.",
-    "effect": "The Auto-Doctor has multiple functions that can be activated separately.",
     "actions": [
       {
         "name": "Heal",
         "activationCost": 2,
         "range": "Close",
         "actionType": "Short",
-        "effect": "The Auto-Doctor heals a creature within Range up to 10 HP. If they were on 0 HP this restores them to consciousness and heals them to 10 HP."
+        "effects": [
+          {
+            "value": "The Auto-Doctor heals a creature within Range up to 10 HP. If they were on 0 HP this restores them to consciousness and heals them to 10 HP."
+          }
+        ]
       },
       {
         "name": "Physio",
         "activationCost": 2,
         "range": "Close",
         "actionType": "Short",
-        "effect": "The Auto-Doctor heals a creature within Range of a single Minor Injury."
+        "effects": [
+          {
+            "value": "The Auto-Doctor heals a creature within Range of a single Minor Injury."
+          }
+        ]
       },
       {
         "name": "Therapy",
         "activationCost": 2,
         "range": "Close",
         "actionType": "Short",
-        "effect": "The Auto-Doctor engages its therapeutic and drinks dispensation protocols. A single People who talks through things with the Auto-Doctor feels a lot better about themselves, their life, and the situation they are in."
+        "effects": [
+          {
+            "value": "The Auto-Doctor engages its therapeutic and drinks dispensation protocols. A single People who talks through things with the Auto-Doctor feels a lot better about themselves, their life, and the situation they are in."
+          }
+        ]
       },
       {
         "name": "First Aid",
         "activationCost": 2,
         "range": "Close",
         "actionType": "Free",
-        "effect": "The Auto-Doctor heals a creature within Range of up to 4 HP. If they were on 0 HP this restores them to consciousness and heals them 4 HP."
+        "effects": [
+          {
+            "value": "The Auto-Doctor heals a creature within Range of up to 4 HP. If they were on 0 HP this restores them to consciousness and heals them 4 HP."
+          }
+        ]
       }
     ],
-    "page": 198
+    "page": 198,
+    "effects": [
+      {
+        "value": "The Auto-Doctor has multiple functions that can be activated separately."
+      }
+    ]
   },
   {
     "id": "f4fbab3e-e726-40b0-9a48-1303dc043cac",
@@ -554,9 +686,13 @@
     ],
     "range": "Long",
     "activationCost": 2,
-    "effect": "You may target anything with the Communicator Trait in Range and listen in on it for 10 minutes, hearing all inbound and outbound comms traffic.",
     "page": 199,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "You may target anything with the Communicator Trait in Range and listen in on it for 10 minutes, hearing all inbound and outbound comms traffic."
+      }
+    ]
   },
   {
     "id": "5effd37d-f1a9-48e8-bc8e-228e5bd66d7b",
@@ -566,9 +702,13 @@
     "slotsRequired": 2,
     "salvageValue": 3,
     "actionType": "Passive",
-    "effect": "This equipment locker can carry up to 6 pieces of Pilot Equipment in your Mech Cockpit for easy access. Any Pilot Equipment stored in this locker cannot be found via inspection, or be seen or affected by anything with the Scanner, Hacking, or Targeter Trait.",
     "page": 199,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "This equipment locker can carry up to 6 pieces of Pilot Equipment in your Mech Cockpit for easy access. Any Pilot Equipment stored in this locker cannot be found via inspection, or be seen or affected by anything with the Scanner, Hacking, or Targeter Trait."
+      }
+    ]
   },
   {
     "id": "84d90e6d-2a58-4f66-b246-5aa80dbc7a3e",
@@ -578,22 +718,34 @@
     "slotsRequired": 1,
     "salvageValue": 2,
     "description": "This manifold provides more control over the coolant flowing through your reactor, allowing you to inject more coolant as required.",
-    "effect": "The Coolant Flow Manifold has multiple functions that can be activated separately.",
     "actions": [
       {
         "name": "Coolant Flow",
         "activationCost": 2,
         "actionType": "Free",
-        "effect": "Adjusted valves provide coolant where required. Reduce the Heat of your Mech by 4."
+        "effects": [
+          {
+            "value": "Adjusted valves provide coolant where required. Reduce the Heat of your Mech by 4."
+          }
+        ]
       },
       {
         "name": "Coolant Flush",
         "activationCost": 1,
         "actionType": "Short",
-        "effect": "The coolant system runs through a flush cycle. Reduce the Heat of your Mech to 0."
+        "effects": [
+          {
+            "value": "The coolant system runs through a flush cycle. Reduce the Heat of your Mech to 0."
+          }
+        ]
       }
     ],
-    "page": 199
+    "page": 199,
+    "effects": [
+      {
+        "value": "The Coolant Flow Manifold has multiple functions that can be activated separately."
+      }
+    ]
   },
   {
     "id": "3394e0b0-0fb9-4226-9c6d-b5e99b9ca522",
@@ -605,9 +757,13 @@
     "actionType": "Turn",
     "range": "Long",
     "activationCost": 3,
-    "effect": "When activated, all enemy Pilots, Mechs, and Vehicles within Range cannot activate or use any Pilot Equipment, Systems, Modules, or Abilities that have the Targeter, Hacking, Shield or Communicator Trait. This effect lasts for 10 minutes.",
     "page": 199,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, all enemy Pilots, Mechs, and Vehicles within Range cannot activate or use any Pilot Equipment, Systems, Modules, or Abilities that have the Targeter, Hacking, Shield or Communicator Trait. This effect lasts for 10 minutes."
+      }
+    ]
   },
   {
     "id": "b8b38922-fe44-4710-9d36-5fe48b713e87",
@@ -618,9 +774,13 @@
     "salvageValue": 3,
     "actionType": "Passive",
     "description": "If your Mech is Shutdown, either voluntarily or involuntarily, the Emergency Power Conduit activates automatically.",
-    "effect": "Whilst the Emergency Power Conduit is active your Mech can move and your Pilot is protected internally via any life support systems. It also does not have the Vulnerable Trait.",
     "page": 199,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "Whilst the Emergency Power Conduit is active your Mech can move and your Pilot is protected internally via any life support systems. It also does not have the Vulnerable Trait."
+      }
+    ]
   },
   {
     "id": "a342f3f7-d504-4df3-9ee1-276382f3332f",
@@ -630,9 +790,13 @@
     "slotsRequired": 1,
     "salvageValue": 2,
     "actionType": "Passive",
-    "effect": "Anything you have installed on your Mech the Comms Trait becomes encrypted. This means any voice or text communications you send or receive cannot be listened to, tapped into, hacked, or analysed. Anything with the Hacking or Scanner Trait does not work on them.",
     "page": 200,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "Anything you have installed on your Mech the Comms Trait becomes encrypted. This means any voice or text communications you send or receive cannot be listened to, tapped into, hacked, or analysed. Anything with the Hacking or Scanner Trait does not work on them."
+      }
+    ]
   },
   {
     "id": "b873392d-434d-4327-9fc7-2762b88fb37d",
@@ -649,9 +813,13 @@
     ],
     "range": "Long",
     "activationCost": 1,
-    "effect": "When activated, your Mech acts as a range extender to various electronic devices. Any Ally within Long Range of you may use any System, Module, or Ability with the Communicator, Hacking, Scanner, or Optics Trait as though it originated from your Mech. This effect lasts for 1 hour.",
     "page": 200,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, your Mech acts as a range extender to various electronic devices. Any Ally within Long Range of you may use any System, Module, or Ability with the Communicator, Hacking, Scanner, or Optics Trait as though it originated from your Mech. This effect lasts for 1 hour."
+      }
+    ]
   },
   {
     "id": "5ec148d7-7297-4247-b6e2-b6c2df965c80",
@@ -666,9 +834,13 @@
         "type": "targeter"
       }
     ],
-    "effect": "When activated, you may attack with any number of Weapons Systems mounted on your Mech. Each attack must have a different target, which you must choose before you make any attacks. Make and resolve each attack separately. This Ability costs 1 EP per weapon you attack with.",
     "page": 200,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, you may attack with any number of Weapons Systems mounted on your Mech. Each attack must have a different target, which you must choose before you make any attacks. Make and resolve each attack separately. This Ability costs 1 EP per weapon you attack with."
+      }
+    ]
   },
   {
     "id": "03685c58-515e-4579-a92e-63828a4db855",
@@ -683,9 +855,13 @@
         "type": "heat spike"
       }
     ],
-    "effect": "When you activate this Module, choose a Weapons System mounted on your Mech. The next time you make an attack with this Weapons System, it deals an additional amount of SP damage equal to its Tech Level. When activated, your Mech gains 2 Heat and must make a Heat Check. You may activate this Ability on multiple different Weapons Systems on the same turn, but cannot apply it to the same Weapons System more than once.",
     "page": 200,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When you activate this Module, choose a Weapons System mounted on your Mech. The next time you make an attack with this Weapons System, it deals an additional amount of SP damage equal to its Tech Level. When activated, your Mech gains 2 Heat and must make a Heat Check. You may activate this Ability on multiple different Weapons Systems on the same turn, but cannot apply it to the same Weapons System more than once."
+      }
+    ]
   },
   {
     "id": "2af195ad-8525-427d-add2-b3afe990a80d",
@@ -703,7 +879,6 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "This Stefanus developed hacking program allows you to hack into a Mech, database, or computer system and manipulate data within it.",
-    "effect": "When activated, roll on the table below to determine the result.",
     "table": {
       "1": "The hack fails and the target is alerted of your hacking attempt. They can retaliate as appropriate.",
       "20": "You may change or manipulate up to 5 pieces of data within the target.",
@@ -713,7 +888,12 @@
       "type": "standard"
     },
     "page": 201,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, roll on the table below to determine the result."
+      }
+    ]
   },
   {
     "id": "c332e34e-5079-4658-880b-4c6b4b87719d",
@@ -726,7 +906,6 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "This Drontek-manufactured Module emits a piercing sound at an ultra high frequency that stuns anyone who hears it and causes them immense and sudden pain, with potential for cerebral haemorrhages and internal bleeding.",
-    "effect": "When activated, roll on the table below to determine the result.",
     "table": {
       "1": "The targets are entirely unharmed. The Module malfunctions causing the sound to reverberate through your Mech's Cockpit, your Pilot must roll on the Critical Injury Table.",
       "20": "All targets that can hear within Range are reduced to 0 HP.",
@@ -736,7 +915,12 @@
       "type": "standard"
     },
     "page": 201,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, roll on the table below to determine the result."
+      }
+    ]
   },
   {
     "id": "a9f2ca91-6d27-4778-b775-0fb8c35a3628",
@@ -747,9 +931,13 @@
     "salvageValue": 1,
     "actionType": "Free",
     "description": "This AMS-manufactured add-on unit allows you to modulate your outgoing voice communications, allowing you to disguise your voice.",
-    "effect": "The modulator allows you to alter the pitch and tone of your voice, or choose from a variety of preset voice options such as robotic, sultry, intimidating, cartoonish, and animal-like. You may also choose any other option of your choice that you can think of.",
     "page": 202,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "The modulator allows you to alter the pitch and tone of your voice, or choose from a variety of preset voice options such as robotic, sultry, intimidating, cartoonish, and animal-like. You may also choose any other option of your choice that you can think of."
+      }
+    ]
   },
   {
     "id": "ba46280d-c937-4e36-a1e3-12482e544e9d",
@@ -767,7 +955,6 @@
     "range": "Close",
     "activationCost": 4,
     "description": "UNION DESIGNED HACKING MODULE THAT IMMOBILISES TARGET MECHS. IT THEN ATTEMPTS TO JUMP TO ANOTHER MECH IN RANGE.",
-    "effect": "When activated, roll on the table below to determine the result.",
     "table": {
       "1": "THE TONGUE REPLICATES IN YOUR SYSTEM. YOU GAIN THE IMMOBILE TRAIT FOR 10 MINUTES",
       "20": "CHOOSE 3 TARGETS IN RANGE, THEY ALL GAIN THE IMMOBILE TRAIT FOR 10 MINUTES.",
@@ -777,7 +964,12 @@
       "type": "standard"
     },
     "page": 189,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, roll on the table below to determine the result."
+      }
+    ]
   },
   {
     "id": "01ef98c2-3b7c-4a75-9659-4baf5f51f0bd",
@@ -788,7 +980,6 @@
     "salvageValue": 2,
     "actionType": "Passive",
     "description": "These advanced safety protocols are hyper efficient at keeping your reactor and core systems functional even in high stress situations that would otherwise result in a total reactor meltdown.",
-    "effect": "When you make a Heat Check, roll on the table below instead of the standard Heat Check table.",
     "table": {
       "1": "Reactor Disabled: Your Mech is forced to Shutdown for one hour and cannot be powered back on in that period. Whilst Shutdown your Mech cannot move or take any actions and gains the Vulnerable Trait. Its Heat is reduced to 0 after the hour ends.",
       "20": "Reactor Hyper Stabilisation: Your Mechs reactor stabilises and its Heat is reduced to 0. You may Push your Mech's next action for free.",
@@ -798,7 +989,12 @@
       "type": "standard"
     },
     "page": 202,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When you make a Heat Check, roll on the table below instead of the standard Heat Check table."
+      }
+    ]
   },
   {
     "id": "35544d7f-232e-43d4-8044-e6406986fdca",
@@ -816,9 +1012,13 @@
         "type": "targeter"
       }
     ],
-    "effect": "When activated, you must attack with all mounted Weapons Systems on your Mech against any number of targets of your choice within Range. Make and resolve each attack separately. Activating this Module costs an amount of EP equal to the number of Weapon Systems you attacked with and you gain an amount of Heat equal to the amount of Weapons Systems you attacked with.",
     "page": 189,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, you must attack with all mounted Weapons Systems on your Mech against any number of targets of your choice within Range. Make and resolve each attack separately. Activating this Module costs an amount of EP equal to the number of Weapon Systems you attacked with and you gain an amount of Heat equal to the amount of Weapons Systems you attacked with."
+      }
+    ]
   },
   {
     "id": "49957195-dedf-4f22-862c-296c010efda4",
@@ -829,7 +1029,6 @@
     "salvageValue": 3,
     "actionType": "Turn",
     "description": "This compact repair droid with a rudimentary A.I. is hardwired into your Mech and can perform a variety of repair tasks on it whilst you focus on piloting.",
-    "effect": "The Auto-Repair Droid has multiple functions that can be activated separately.",
     "actions": [
       {
         "name": "Repair",
@@ -850,7 +1049,12 @@
         "description": "You reduce the Heat of your Mech by 2."
       }
     ],
-    "page": 203
+    "page": 203,
+    "effects": [
+      {
+        "value": "The Auto-Repair Droid has multiple functions that can be activated separately."
+      }
+    ]
   },
   {
     "id": "8cb4e8af-4b45-4958-ac4d-b80775354960",
@@ -865,9 +1069,13 @@
         "type": "heat spike"
       }
     ],
-    "effect": "When activated, your Mech may move an additional Range Band this turn. Your Mech gains 2 Heat and must make a Heat Check. You may only activate this Module once per turn.",
     "page": 203,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, your Mech may move an additional Range Band this turn. Your Mech gains 2 Heat and must make a Heat Check. You may only activate this Module once per turn."
+      }
+    ]
   },
   {
     "id": "67c24f7c-aa47-46a6-ae8e-eaa0ade9e1f4",
@@ -877,9 +1085,13 @@
     "slotsRequired": 1,
     "salvageValue": 2,
     "actionType": "Reaction",
-    "effect": "When activated, your Mech as well as all attached Systems, Modules, and all carried Cargo are destroyed as the reactor detonates in an electro-magnetic explosion. Your Pilot may attempt to escape as normal if they have access to anything with the Escape Trait. If they fail to escape, they are reduced to 0 HP. All Mechs, Systems, Modules, and Vehicles including allies within Medium Range of your Mech become Shutdown and inactive for 10 minutes. In addition, any other electronic or technological equipment or hardware within Range becomes inoperable. Meld are also affected, going into an inert state for 10 minutes.",
     "page": 203,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, your Mech as well as all attached Systems, Modules, and all carried Cargo are destroyed as the reactor detonates in an electro-magnetic explosion. Your Pilot may attempt to escape as normal if they have access to anything with the Escape Trait. If they fail to escape, they are reduced to 0 HP. All Mechs, Systems, Modules, and Vehicles including allies within Medium Range of your Mech become Shutdown and inactive for 10 minutes. In addition, any other electronic or technological equipment or hardware within Range becomes inoperable. Meld are also affected, going into an inert state for 10 minutes."
+      }
+    ]
   },
   {
     "id": "fd13e5af-bb66-4d19-bcae-f6266300ce5a",
@@ -896,9 +1108,13 @@
     ],
     "range": "Long",
     "activationCost": 3,
-    "effect": "When you activate this Module, pick a target within Range. The next attack you make against that target automatically hits counting as an (11-19) result.",
     "page": 204,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When you activate this Module, pick a target within Range. The next attack you make against that target automatically hits counting as an (11-19) result."
+      }
+    ]
   },
   {
     "id": "d0d06e1b-954c-42ef-89fe-f0df69625900",
@@ -914,7 +1130,6 @@
       }
     ],
     "range": "Close",
-    "effect": "When activated, choose up to 4 target Mechs in Range. This Ability costs 2 EP for each Mech you target with this Ability. Roll on the table below to determine the result.",
     "table": {
       "1": "The target goes haywire, it moves one Range Band in a random direction, falls Prone, and gains the Vulnerable Trait.",
       "20": "The target entirely loses control of itself, attacking wildly. It must make an attack with all its Weapons Systems against a random Ally within Range. It cannot move or take any actions until the end of your next turn.",
@@ -924,7 +1139,12 @@
       "type": "standard"
     },
     "page": 204,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, choose up to 4 target Mechs in Range. This Ability costs 2 EP for each Mech you target with this Ability. Roll on the table below to determine the result."
+      }
+    ]
   },
   {
     "id": "82393866-dda0-483f-bd68-8edb8adeee6a",
@@ -942,9 +1162,13 @@
     "range": "Medium",
     "activationCost": 4,
     "description": "Multiple Rounds, Simultaneous Impact.",
-    "effect": "When activated, choose a target within Range. You and up to 2 Allied Mechs in Range may attack the target immediately with a single Weapons System of their choice in Range of the target. Make each attack separately. These attacks count as having the Targeter Trait.",
     "page": 204,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, choose a target within Range. You and up to 2 Allied Mechs in Range may attack the target immediately with a single Weapons System of their choice in Range of the target. Make each attack separately. These attacks count as having the Targeter Trait."
+      }
+    ]
   },
   {
     "id": "65a6a178-40f8-47fb-a0cd-aa6b3ce959a3",
@@ -961,9 +1185,13 @@
     ],
     "range": "Long",
     "activationCost": 1,
-    "effect": "When activated, you are able to see the location of anything that generates heat within visual Range. You can see their location even if they are in an obscured area such as foggy conditions, in darkness, or behind solid objects such as buildings. This effect lasts for 1 hour.",
     "page": 204,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, you are able to see the location of anything that generates heat within visual Range. You can see their location even if they are in an obscured area such as foggy conditions, in darkness, or behind solid objects such as buildings. This effect lasts for 1 hour."
+      }
+    ]
   },
   {
     "id": "58638c99-7f67-4607-9227-0b0f81dcbe65",
@@ -982,9 +1210,13 @@
       }
     ],
     "description": "This Aegean Dynamics-developed Module allows you to track targets even without visual confirmation from your Mech's heads-up display.",
-    "effect": "When activated, a Weapons System of your choice mounted on your Mech gains the Guided Trait meaning it does not need line of sight to hit any target within its Range.",
     "page": 205,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, a Weapons System of your choice mounted on your Mech gains the Guided Trait meaning it does not need line of sight to hit any target within its Range."
+      }
+    ]
   },
   {
     "id": "2c15e95a-fce0-4046-b407-efe7b34e9aa7",
@@ -994,7 +1226,6 @@
     "slotsRequired": 2,
     "salvageValue": 2,
     "description": "This mil-tech Module combines Laser Guidance, Pinpoint Targeter, and Multi-Targeter into one Module.",
-    "effect": "You may activate each function separately.",
     "actions": [
       {
         "name": "Pinpoint Targeter",
@@ -1005,7 +1236,11 @@
             "type": "targeter"
           }
         ],
-        "effect": "Make an attack at a selected target. If it hits select a system or appendage to be damaged/injured. If you roll a 20 it is destroyed instead. You also deal damage as normal."
+        "effects": [
+          {
+            "value": "Make an attack at a selected target. If it hits select a system or appendage to be damaged/injured. If you roll a 20 it is destroyed instead. You also deal damage as normal."
+          }
+        ]
       },
       {
         "name": "Multi-Targeter",
@@ -1016,7 +1251,11 @@
             "type": "targeter"
           }
         ],
-        "effect": "Make an attack with any number of weapons. Each weapon must select a different target. Costs 1 EP per weapon fired."
+        "effects": [
+          {
+            "value": "Make an attack with any number of weapons. Each weapon must select a different target. Costs 1 EP per weapon fired."
+          }
+        ]
       },
       {
         "name": "Laser Guidance",
@@ -1031,10 +1270,19 @@
           }
         ],
         "range": "Long",
-        "effect": "The next attack you make against that target automatically hits counting as an (11-19) result."
+        "effects": [
+          {
+            "value": "The next attack you make against that target automatically hits counting as an (11-19) result."
+          }
+        ]
       }
     ],
-    "page": 205
+    "page": 205,
+    "effects": [
+      {
+        "value": "You may activate each function separately."
+      }
+    ]
   },
   {
     "id": "0c8d0737-89f1-4e75-8ce3-99b31c7000ae",
@@ -1047,9 +1295,13 @@
     "range": "Medium",
     "activationCost": 2,
     "description": "Developed by Ascension PLC as a means for their corporate minds to communicate with the material realm, this holo projector uses a complex laser array to project solid, life-like, three dimensional holograms into the world.",
-    "effect": "When activated, this Module projects a life-like, three dimensional, hologram into an area within Range. The hologram appears to onlookers as though it was realistic and can be viewed from multiple angles. It can be spoken through or set to repeat a message, make animal calls, or mimic the sounds of explosions or weapons firing. The hologram can have any appearance that you choose and can be either Mech or Pilot-sized. The hologram stays in place within the location you set for 24 hours.",
     "page": 205,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, this Module projects a life-like, three dimensional, hologram into an area within Range. The hologram appears to onlookers as though it was realistic and can be viewed from multiple angles. It can be spoken through or set to repeat a message, make animal calls, or mimic the sounds of explosions or weapons firing. The hologram can have any appearance that you choose and can be either Mech or Pilot-sized. The hologram stays in place within the location you set for 24 hours."
+      }
+    ]
   },
   {
     "id": "f05e57d3-a579-48c1-bd31-bb6a52ffd091",
@@ -1060,9 +1312,13 @@
     "salvageValue": 2,
     "actionType": "Reaction",
     "description": "This Module rapidly flushes your Mech's Reactor with sub-zero liquid Helium coolant manufactured in the Opus Institute Labs in the Frozen Gulf.",
-    "effect": "When activated, reduce the Heat on your Mech to 0.",
     "page": 197,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, reduce the Heat on your Mech to 0."
+      }
+    ]
   },
   {
     "id": "0cbc2a80-bf97-4acb-ad26-9e2f8f5ed0d7",
@@ -1072,9 +1328,13 @@
     "slotsRequired": 2,
     "salvageValue": 2,
     "description": "This Module combines Zoom Optics, Thermal Optics, and IR Night Vision Optics into one.",
-    "effect": "You gain the use of all three and may activate each separately.",
     "page": 205,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "You gain the use of all three and may activate each separately."
+      }
+    ]
   },
   {
     "id": "cf34948e-631e-4051-ad34-db3494b8f2b5",
@@ -1091,10 +1351,14 @@
     ],
     "range": "Long",
     "description": "This Module connects directly to your Pilot's brain whilst in the Cockpit, and allows telepathic communication with anything that has the Communicator Trait within Range.",
-    "effect": "In addition, you may choose what the output of your brain frequencies sounds like, altering the pitch and tone to your liking. These communications are also encrypted.",
     "notes": "The Neuralink Communicator may also be detached and used by your Pilot in the field as a Portable Communications Unit.",
     "page": 189,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "In addition, you may choose what the output of your brain frequencies sounds like, altering the pitch and tone to your liking. These communications are also encrypted."
+      }
+    ]
   },
   {
     "id": "f363125a-2d73-4f2c-a689-3af8a5fd9da5",
@@ -1104,9 +1368,13 @@
     "slotsRequired": 2,
     "salvageValue": 2,
     "description": "This Module combines Evasion Protocols, Offensive Protocols, and Dash Protocols into one Module.",
-    "effect": "You may activate each separately as desired.",
     "page": 189,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "You may activate each separately as desired."
+      }
+    ]
   },
   {
     "id": "8e991403-1d78-464e-b71c-ccd397bf733e",
@@ -1118,9 +1386,13 @@
     "actionType": "Turn",
     "activationCost": 1,
     "description": "This Module utilises Dynamic Diode Rotarisation technology allowing a Mech to perform a series of complex movements in time with music typically meant to impress others as well as for recreation.",
-    "effect": "When activated, your Mech performs a series of complex movements in time with music.",
     "page": 206,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, your Mech performs a series of complex movements in time with music."
+      }
+    ]
   },
   {
     "id": "684e6851-9a5c-496b-8104-14350e1d32e2",
@@ -1131,9 +1403,13 @@
     "salvageValue": 3,
     "actionType": "Turn",
     "activationCost": 4,
-    "effect": "When activated, your Mech becomes phased. Whilst in a phased state your Mech can move through walls, objects, structures, and other Mechs. You cannot attack or otherwise interact with anything whilst phased. You can unphase as a Free Action at no cost.",
     "page": 206,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, your Mech becomes phased. Whilst in a phased state your Mech can move through walls, objects, structures, and other Mechs. You cannot attack or otherwise interact with anything whilst phased. You can unphase as a Free Action at no cost."
+      }
+    ]
   },
   {
     "id": "8cdd2865-337f-4ee4-890e-c74d98d2943f",
@@ -1148,9 +1424,13 @@
       }
     ],
     "actionType": "Reaction",
-    "effect": "When activated, you may attack with any Weapons System or activate any System, Module, or Ability your Mech has access to as a Reaction. This Reaction always resolves first. After this has resolved, increase your Mech's Heat by 2 and make a Heat Check.",
     "page": 207,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "When activated, you may attack with any Weapons System or activate any System, Module, or Ability your Mech has access to as a Reaction. This Reaction always resolves first. After this has resolved, increase your Mech's Heat by 2 and make a Heat Check."
+      }
+    ]
   },
   {
     "id": "44fdfeb4-bfb3-4007-bddf-f6dddc7200e9",
@@ -1160,8 +1440,12 @@
     "slotsRequired": 2,
     "salvageValue": 2,
     "actionType": "Passive",
-    "effect": "This allows your Mech to activate Energy Point Abilities by increasing its Heat by 2× that amount instead. Anytime you would increase your Mech's Heat you may instead decrease your Mech's Energy Points by that amount.",
     "page": 189,
-    "actions": []
+    "actions": [],
+    "effects": [
+      {
+        "value": "This allows your Mech to activate Energy Point Abilities by increasing its Heat by 2× that amount instead. Anytime you would increase your Mech's Heat you may instead decrease your Mech's Energy Points by that amount."
+      }
+    ]
   }
 ]
