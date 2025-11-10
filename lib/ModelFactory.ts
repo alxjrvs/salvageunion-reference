@@ -16,6 +16,7 @@ import crawlerBaysData from '../data/crawler-bays.json' with { type: 'json' }
 import crawlerTechLevelsData from '../data/crawler-tech-levels.json' with { type: 'json' }
 import crawlersData from '../data/crawlers.json' with { type: 'json' }
 import creaturesData from '../data/creatures.json' with { type: 'json' }
+import distancesData from '../data/distances.json' with { type: 'json' }
 import dronesData from '../data/drones.json' with { type: 'json' }
 import equipmentData from '../data/equipment.json' with { type: 'json' }
 import keywordsData from '../data/keywords.json' with { type: 'json' }
@@ -39,6 +40,7 @@ import crawlerBaysSchema from '../schemas/crawler-bays.schema.json' with { type:
 import crawlerTechLevelsSchema from '../schemas/crawler-tech-levels.schema.json' with { type: 'json' }
 import crawlersSchema from '../schemas/crawlers.schema.json' with { type: 'json' }
 import creaturesSchema from '../schemas/creatures.schema.json' with { type: 'json' }
+import distancesSchema from '../schemas/distances.schema.json' with { type: 'json' }
 import dronesSchema from '../schemas/drones.schema.json' with { type: 'json' }
 import equipmentSchema from '../schemas/equipment.schema.json' with { type: 'json' }
 import keywordsSchema from '../schemas/keywords.schema.json' with { type: 'json' }
@@ -65,6 +67,7 @@ const dataMap: Record<string, unknown[]> = {
   'crawler-tech-levels': crawlerTechLevelsData,
   crawlers: crawlersData,
   creatures: creaturesData,
+  distances: distancesData,
   drones: dronesData,
   equipment: equipmentData,
   keywords: keywordsData,
@@ -92,6 +95,7 @@ const schemaMap: Record<string, Record<string, unknown>> = {
   'crawler-tech-levels': crawlerTechLevelsSchema,
   crawlers: crawlersSchema,
   creatures: creaturesSchema,
+  distances: distancesSchema,
   drones: dronesSchema,
   equipment: equipmentSchema,
   keywords: keywordsSchema,
@@ -224,6 +228,7 @@ const schemaDisplayNames: Record<string, { singular: string; plural: string }> =
     },
     crawlers: { singular: 'Crawler', plural: 'Crawlers' },
     creatures: { singular: 'Creature', plural: 'Creatures' },
+    distances: { singular: 'Distance', plural: 'Distances' },
     drones: { singular: 'Drone', plural: 'Drones' },
     equipment: { singular: 'Equipment', plural: 'Equipment' },
     keywords: { singular: 'Keyword', plural: 'Keywords' },
@@ -244,6 +249,7 @@ export interface EnhancedSchemaMetadata {
   id: string
   title: string
   description: string
+  comment?: string
   dataFile: string
   schemaFile: string
   itemCount: number

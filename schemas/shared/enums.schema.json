@@ -10,8 +10,12 @@
       "description": "The source book or expansion for this content"
     },
     "range": {
-      "type": "string",
-      "enum": ["Close", "Medium", "Long", "Far", "Close/Long"],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Close", "Medium", "Long", "Far"]
+      },
+      "minItems": 1,
       "description": "Range bands for abilities and weapons"
     },
     "actionType": {
@@ -92,6 +96,7 @@
         "crawler-tech-levels",
         "crawlers",
         "creatures",
+        "distances",
         "drones",
         "equipment",
         "keywords",

@@ -23,7 +23,9 @@ interface Choice {
 interface System {
   id: string
   name: string
-  choices?: Choice[]
+  action: {
+    choices?: Choice[]
+  }
 }
 
 interface PatternItem {
@@ -48,8 +50,8 @@ describe('Preselected Choices Validation', () => {
     const errors: string[] = []
 
     for (const system of systemsData) {
-      if (system.choices) {
-        for (const choice of system.choices) {
+      if (system.actions?.[0]?.choices) {
+        for (const choice of system.actions[0].choices) {
           if (!choice.id) {
             errors.push(
               `System "${system.name}" has a choice "${choice.name}" without an ID`
@@ -78,8 +80,8 @@ describe('Preselected Choices Validation', () => {
     const choiceIdToSystemName = new Map<string, string>()
 
     for (const system of systemsData) {
-      if (system.choices) {
-        for (const choice of system.choices) {
+      if (system.actions?.[0]?.choices) {
+        for (const choice of system.actions[0].choices) {
           if (choice.id) {
             validChoiceIds.add(choice.id)
             choiceIdToSystemName.set(choice.id, system.name)

@@ -18,6 +18,13 @@ import { randomUUID } from 'crypto'
 const UUID_PATTERN =
   /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 
+interface Action {
+  id?: string
+  name?: string
+  actions?: Action[]
+  [key: string]: unknown
+}
+
 interface Choice {
   id?: string
   name: string
@@ -43,6 +50,7 @@ interface DataItem {
   npc?: NPC
   abilities?: Ability[]
   choices?: Choice[]
+  actions?: Action[]
   [key: string]: unknown
 }
 
@@ -50,8 +58,10 @@ interface FileResult {
   file: string
   rootIdsAdded: number
   rootIdsFixed: number
+  actionIdsAdded: number
+  actionIdsFixed: number
   choiceIdsAdded: number
-  choiceIdsFi: number
+  choiceIdsFixed: number
   totalChanges: number
 }
 
@@ -67,8 +77,10 @@ function processFile(filename: string): FileResult {
     file: filename,
     rootIdsAdded: 0,
     rootIdsFixed: 0,
+    actionIdsAdded: 0,
+    actionIdsFixed: 0,
     choiceIdsAdded: 0,
-    choiceIdsFi: 0,
+    choiceIdsFixed: 0,
     totalChanges: 0,
   }
 
@@ -84,6 +96,27 @@ function processFile(filename: string): FileResult {
       result.totalChanges++
     }
 
+    // Process actions (recursive)
+    const processActions = (actions: Action[]) => {
+      if (actions && Array.isArray(actions)) {
+        actions.forEach((action) => {
+          if (!action.id) {
+            action.id = randomUUID()
+            result.actionIdsAdded++
+            result.totalChanges++
+          } else if (!validateUUID(action.id)) {
+            action.id = randomUUID()
+            result.actionIdsFixed++
+            result.totalChanges++
+          }
+          // Recursively process nested actions
+          if (action.actions) {
+            processActions(action.actions)
+          }
+        })
+      }
+    }
+
     // Process choices
     const processChoices = (choices: Choice[]) => {
       if (choices && Array.isArray(choices)) {
@@ -94,11 +127,16 @@ function processFile(filename: string): FileResult {
             result.totalChanges++
           } else if (!validateUUID(choice.id)) {
             choice.id = randomUUID()
-            result.choiceIdsFi++
+            result.choiceIdsFixed++
             result.totalChanges++
           }
         })
       }
+    }
+
+    // Check actions at root level
+    if (item.actions) {
+      processActions(item.actions)
     }
 
     // Check choices at root level
@@ -158,6 +196,8 @@ console.log('🔧 Generating and fixing UUIDs...\n')
 
 let totalRootIdsAdded = 0
 let totalRootIdsFixed = 0
+let totalActionIdsAdded = 0
+let totalActionIdsFixed = 0
 let totalChoiceIdsAdded = 0
 let totalChoiceIdsFixed = 0
 let filesModified = 0
@@ -179,14 +219,24 @@ for (const filename of dataFiles) {
       totalRootIdsFixed += result.rootIdsFixed
     }
 
+    if (result.actionIdsAdded > 0) {
+      console.log(`   ✓ Added ${result.actionIdsAdded} action ID(s)`)
+      totalActionIdsAdded += result.actionIdsAdded
+    }
+
+    if (result.actionIdsFixed > 0) {
+      console.log(`   ✓ Fixed ${result.actionIdsFixed} invalid action ID(s)`)
+      totalActionIdsFixed += result.actionIdsFixed
+    }
+
     if (result.choiceIdsAdded > 0) {
       console.log(`   ✓ Added ${result.choiceIdsAdded} choice ID(s)`)
       totalChoiceIdsAdded += result.choiceIdsAdded
     }
 
-    if (result.choiceIdsFi > 0) {
-      console.log(`   ✓ Fixed ${result.choiceIdsFi} invalid choice ID(s)`)
-      totalChoiceIdsFixed += result.choiceIdsFi
+    if (result.choiceIdsFixed > 0) {
+      console.log(`   ✓ Fixed ${result.choiceIdsFixed} invalid choice ID(s)`)
+      totalChoiceIdsFixed += result.choiceIdsFixed
     }
 
     console.log()
@@ -201,10 +251,12 @@ if (filesModified === 0) {
   console.log(`Files modified: ${filesModified}`)
   console.log(`Root-level IDs added: ${totalRootIdsAdded}`)
   console.log(`Root-level IDs fixed: ${totalRootIdsFixed}`)
+  console.log(`Action IDs added: ${totalActionIdsAdded}`)
+  console.log(`Action IDs fixed: ${totalActionIdsFixed}`)
   console.log(`Choice IDs added: ${totalChoiceIdsAdded}`)
   console.log(`Choice IDs fixed: ${totalChoiceIdsFixed}`)
   console.log(
-    `Total changes: ${totalRootIdsAdded + totalRootIdsFixed + totalChoiceIdsAdded + totalChoiceIdsFixed}`
+    `Total changes: ${totalRootIdsAdded + totalRootIdsFixed + totalActionIdsAdded + totalActionIdsFixed + totalChoiceIdsAdded + totalChoiceIdsFixed}`
   )
   console.log('\n✅ All missing and invalid IDs have been generated and fixed!')
   console.log(

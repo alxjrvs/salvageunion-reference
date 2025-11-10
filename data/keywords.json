@@ -45,7 +45,7 @@
     "id": "c2229ef9-fc5a-427b-a9bf-ae0d8ca20a69",
     "source": "Salvage Union Workshop Manual",
     "name": "blind",
-    "description": "If someone is Blind, they gain the Vulnerable Trait and cannot take any actions that would require sight unless they find another means to circumvent this.",
+    "description": "If someone is Blind, they gain the [[Vulnerable]] Trait and cannot take any actions that would require sight unless they find another means to circumvent this.",
     "page": 72
   },
   {
@@ -290,7 +290,7 @@
     "id": "8a4f9f61-ba68-430f-8363-9d3782d05b44",
     "source": "Salvage Union Workshop Manual",
     "name": "mount / dismount",
-    "description": "Mounting and Dismounting are actions that Mechs and Pilots can perform if they have access to a System or Module with the Rigging Trait. This lets them remove and attach Systems and Modules to a Mech. You may not Mount a damaged System or Module to a Mech.",
+    "description": "Mounting and Dismounting are actions that Mechs and Pilots can perform if they have access to a System or Module with the [[Rigging]] Trait. This lets them remove and attach Systems and Modules to a Mech. You may not Mount a damaged System or Module to a Mech.",
     "page": 324
   },
   {
@@ -360,7 +360,7 @@
     "id": "a69cdac6-e696-4c35-beb0-5484753978d4",
     "source": "Salvage Union Workshop Manual",
     "name": "ranged weapon",
-    "description": "Any weapon that does not have the Melee Trait and is used to make some sort of Ranged based attack counts as a Ranged weapon.",
+    "description": "Any weapon that does not have the [[Melee]] Trait and is used to make some sort of Ranged based attack counts as a Ranged weapon.",
     "page": 67
   },
   {
@@ -423,7 +423,7 @@
     "id": "7a201300-e68f-4576-9d07-671dd69cdd8b",
     "source": "Salvage Union Workshop Manual",
     "name": "shutdown",
-    "description": "A Mech that is Shutdown is inoperable and gains the Vulnerable Trait. It cannot be used in any way. If a Mech is Shutdown fully for an hour, it reduces its Heat to 0. A Pilot can activate a Shutdown Mech as a Turn Action. It takes a Mech a Turn to boot up from Shutdown and it will be active at the start of that Pilots next Turn.",
+    "description": "A Mech that is Shutdown is inoperable and gains the [[Vulnerable]] Trait. It cannot be used in any way. If a Mech is Shutdown fully for an hour, it reduces its Heat to 0. A Pilot can activate a Shutdown Mech as a Turn Action. It takes a Mech a Turn to boot up from Shutdown and it will be active at the start of that Pilots next Turn.",
     "page": 324
   },
   {
@@ -479,7 +479,7 @@
     "id": "d78979f8-e5b3-4f3c-892d-55ae376ef73e",
     "source": "Salvage Union Workshop Manual",
     "name": "turrets",
-    "description": "Static form of automated or manned defence. Unless otherwise stated Turrets have the Immobile Trait and deal damage as their Weapon System. They have SP equal to 2× their Weapon Systems Tech Level, for example a Green Laser Turret has 4 SP and attacks as a Green Laser.",
+    "description": "Static form of automated or manned defence. Unless otherwise stated Turrets have the [[Immobile]] Trait and deal damage as their Weapon System. They have SP equal to 2× their Weapon Systems Tech Level, for example a Green Laser Turret has 4 SP and attacks as a Green Laser.",
     "page": 335
   },
   {

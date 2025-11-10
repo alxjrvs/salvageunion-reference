@@ -27,9 +27,14 @@ export type SURefClassType = 'Advanced' | 'Hybrid'
 export type SURefDamageType = 'HP' | 'SP'
 
 /**
+ * Individual range value
+ */
+export type SURefRangeItem = 'Close' | 'Medium' | 'Long' | 'Far'
+
+/**
  * Range bands for abilities and weapons
  */
-export type SURefRange = 'Close' | 'Medium' | 'Long' | 'Far' | 'Close/Long'
+export type SURefRange = SURefRangeItem[]
 
 /**
  * Name of the schema
@@ -45,6 +50,7 @@ export type SURefSchemaName =
   | 'crawler-tech-levels'
   | 'crawlers'
   | 'creatures'
+  | 'distances'
   | 'drones'
   | 'equipment'
   | 'keywords'

@@ -6,10 +6,13 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["npc", "actions"],
+    "required": [
+      "npc",
+      "actions"
+    ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
       }
     ],
     "properties": {

@@ -21,6 +21,7 @@ import type {
   SURefCrawlerTechLevel,
   SURefCrawler,
   SURefCreature,
+  SURefDistance,
   SURefDrone,
   SURefEquipment,
   SURefKeyword,
@@ -80,6 +81,7 @@ type SchemaToEntityMap = {
   'crawler-tech-levels': SURefCrawlerTechLevel
   crawlers: SURefCrawler
   creatures: SURefCreature
+  distances: SURefDistance
   drones: SURefDrone
   equipment: SURefEquipment
   keywords: SURefKeyword
@@ -105,6 +107,7 @@ const SchemaToModelMap = {
   'crawler-tech-levels': 'CrawlerTechLevels',
   crawlers: 'Crawlers',
   creatures: 'Creatures',
+  distances: 'Distances',
   drones: 'Drones',
   equipment: 'Equipment',
   keywords: 'Keywords',
@@ -130,6 +133,7 @@ export const SchemaToDisplayName = {
   'crawler-tech-levels': 'Crawler Tech Levels',
   crawlers: 'Crawlers',
   creatures: 'Creatures',
+  distances: 'Distances',
   drones: 'Drones',
   equipment: 'Equipment',
   keywords: 'Keywords',
@@ -181,6 +185,9 @@ export class SalvageUnionReference {
   >
   static Creatures = models.Creatures as ModelWithMetadata<
     SchemaToEntityMap['creatures']
+  >
+  static Distances = models.Distances as ModelWithMetadata<
+    SchemaToEntityMap['distances']
   >
   static Drones = models.Drones as ModelWithMetadata<
     SchemaToEntityMap['drones']

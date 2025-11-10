@@ -45,9 +45,7 @@
         "amount": {
           "oneOf": [
             {
-              "type": "integer",
-              "minimum": 0,
-              "description": "Amount of damage dealt"
+              "$ref": "common.schema.json#/definitions/nonNegativeInteger"
             },
             {
               "type": "string",
@@ -68,19 +66,16 @@
         "amount": {
           "oneOf": [
             {
-              "type": "integer",
-              "minimum": 0,
-              "description": "Numeric value for the trait"
+              "$ref": "common.schema.json#/definitions/nonNegativeInteger"
             },
             {
               "type": "string",
-              "description": "Variable value for the trait"
+              "description": "Variable value"
             }
           ]
         },
         "type": {
-          "type": "string",
-          "description": "Type of trait that doesn't require a numeric value"
+          "type": "string"
         }
       }
     },
@@ -89,42 +84,28 @@
       "description": "Statistics for mechs, chassis, and vehicles",
       "properties": {
         "structurePoints": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Structure points (durability)"
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         },
         "energyPoints": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Energy points (power capacity)"
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         },
         "heatCapacity": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Heat capacity"
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         },
         "systemSlots": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Number of system slots"
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         },
         "moduleSlots": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Number of module slots"
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         },
         "cargoCapacity": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Cargo capacity"
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         },
         "techLevel": {
           "$ref": "common.schema.json#/definitions/techLevel"
         },
         "salvageValue": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Salvage value in scrap"
+          "$ref": "common.schema.json#/definitions/salvageValue"
         }
       }
     },
@@ -139,13 +120,10 @@
       ],
       "properties": {
         "position": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Name of the NPC"
+          "$ref": "common.schema.json#/definitions/name"
         },
         "description": {
-          "type": "string",
-          "description": "Description of the NPC"
+          "type": "string"
         },
         "hitPoints": {
           "$ref": "common.schema.json#/definitions/hitPoints"
@@ -163,22 +141,16 @@
       ],
       "properties": {
         "name": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Name of the system or module"
+          "$ref": "common.schema.json#/definitions/name"
         },
         "count": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Number of this system or module included"
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         },
         "preselectedChoices": {
           "type": "object",
           "description": "Preselected choices for this system or module, keyed by choice ID",
           "additionalProperties": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Name of the choice"
+            "$ref": "common.schema.json#/definitions/name"
           }
         }
       }
@@ -194,17 +166,13 @@
       ],
       "properties": {
         "name": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Name of the pattern"
+          "$ref": "common.schema.json#/definitions/name"
         },
         "description": {
-          "type": "string",
-          "description": "Description of the pattern"
+          "type": "string"
         },
         "legalStarting": {
-          "type": "boolean",
-          "description": "Whether this pattern is legal for starting characters"
+          "type": "boolean"
         },
         "systems": {
           "type": "array",
@@ -220,7 +188,7 @@
         },
         "drone": {
           "type": "object",
-          "description": "Optional drone configuration for this pattern",
+          "description": "Optional drone configuration",
           "additionalProperties": false,
           "required": [
             "systems",
@@ -254,14 +222,10 @@
       ],
       "properties": {
         "techLevelMin": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "Minimum tech level for this effect"
+          "$ref": "common.schema.json#/definitions/positiveInteger"
         },
         "techLevelMax": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "Maximum tech level for this effect"
+          "$ref": "common.schema.json#/definitions/positiveInteger"
         },
         "effects": {
           "$ref": "#/definitions/effects"
@@ -280,57 +244,44 @@
           "$ref": "common.schema.json#/definitions/id"
         },
         "name": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Name of the choice"
+          "$ref": "common.schema.json#/definitions/name"
         },
         "description": {
-          "type": "string",
-          "description": "Description of the choice"
+          "type": "string"
         },
         "rollTable": {
-          "type": "string",
-          "description": "Roll table name for the choice"
+          "type": "string"
         },
         "schemaEntities": {
           "type": "array",
-          "description": "Entities that can be chosen",
           "items": {
             "type": "string"
           }
         },
         "schema": {
           "type": "array",
-          "description": "Schema for the choice",
           "items": {
             "$ref": "enums.schema.json#/definitions/schemaName"
           }
         },
         "customSystemOptions": {
           "type": "array",
-          "description": "Options for the choice",
           "items": {
             "$ref": "#/definitions/systemModule"
           }
         },
         "constraints": {
           "type": "object",
-          "description": "Constraints for the choice",
           "additionalProperties": false,
           "properties": {
             "field": {
-              "type": "string",
-              "description": "Field to apply the constraint to"
+              "type": "string"
             },
             "min": {
-              "type": "integer",
-              "minimum": 0,
-              "description": "Minimum number of choices"
+              "$ref": "common.schema.json#/definitions/nonNegativeInteger"
             },
             "max": {
-              "type": "integer",
-              "minimum": 0,
-              "description": "Maximum number of choices"
+              "$ref": "common.schema.json#/definitions/nonNegativeInteger"
             }
           }
         }
@@ -340,55 +291,48 @@
       "type": "object",
       "description": "An action, ability, or attack that can be performed",
       "required": [
+        "id",
         "name"
       ],
       "properties": {
+        "id": {
+          "$ref": "common.schema.json#/definitions/id"
+        },
         "structurePoints": {
-          "type": "number",
-          "description": "Structure Points (SP) - the health/durability of the entity"
+          "type": "number"
         },
         "energyPoints": {
-          "type": "number",
-          "description": "Energy Points (EP) - the energy/power capacity of the entity"
+          "type": "number"
         },
         "heatCapacity": {
-          "type": "number",
-          "description": "Heat Capacity - how much heat the entity can handle"
+          "type": "number"
         },
         "systemSlots": {
-          "type": "number",
-          "description": "Number of system slots available"
+          "type": "number"
         },
         "moduleSlots": {
-          "type": "number",
-          "description": "Number of module slots available"
+          "type": "number"
         },
         "cargoCapacity": {
-          "type": "number",
-          "description": "Cargo capacity"
+          "type": "number"
         },
         "techLevel": {
           "$ref": "common.schema.json#/definitions/techLevel"
         },
         "salvageValue": {
-          "type": "number",
-          "description": "Salvage value when scrapped"
+          "type": "number"
         },
         "name": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Name of the action"
+          "$ref": "common.schema.json#/definitions/name"
         },
         "description": {
-          "type": "string",
-          "description": "Description of what the action does"
+          "type": "string"
         },
         "effects": {
           "$ref": "#/definitions/effects"
         },
         "notes": {
-          "type": "string",
-          "description": "Additional notes or flavor text for the action"
+          "type": "string"
         },
         "activationCost": {
           "$ref": "common.schema.json#/definitions/activationCost"
@@ -401,7 +345,6 @@
         },
         "traits": {
           "type": "array",
-          "description": "Special traits and properties of items, systems, or abilities",
           "items": {
             "$ref": "#/definitions/trait"
           }
@@ -411,10 +354,8 @@
         },
         "options": {
           "type": "array",
-          "description": "List of options or choices for this action",
           "items": {
             "type": "object",
-            "description": "Structured option with label and value",
             "additionalProperties": false,
             "required": [
               "value",
@@ -422,32 +363,22 @@
             ],
             "properties": {
               "label": {
-                "type": "string",
-                "description": "Display label for the option (empty string if no label)"
+                "type": "string"
               },
               "value": {
-                "type": "string",
-                "description": "Description or effect of the option"
+                "type": "string"
               }
             }
           }
         },
         "choices": {
           "type": "array",
-          "description": "Choices available to the player when interacting with the NPC",
           "items": {
             "$ref": "#/definitions/choice"
           }
         },
         "table": {
           "$ref": "#/definitions/table"
-        },
-        "actions": {
-          "type": "array",
-          "description": "Sub-actions or nested actions for this ability",
-          "items": {
-            "$ref": "#/definitions/action"
-          }
         }
       }
     },
@@ -470,57 +401,19 @@
           "$ref": "common.schema.json#/definitions/techLevel"
         },
         "slotsRequired": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Number of slots required to install"
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         },
         "salvageValue": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Salvage value in scrap"
+          "$ref": "common.schema.json#/definitions/salvageValue"
         },
         "recommended": {
-          "type": "boolean",
-          "description": "Whether this is a recommended starting system"
+          "type": "boolean"
         },
-        "traits": {
-          "type": "array",
-          "description": "Special traits and properties of items, systems, or abilities",
-          "items": {
-            "$ref": "#/definitions/trait"
-          }
-        },
-        "name": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Name of the system or module"
-        },
-        "notes": {
-          "type": "string",
-          "description": "Additional notes"
-        },
-        "activationCost": {
-          "$ref": "common.schema.json#/definitions/activationCost"
-        },
-        "range": {
-          "$ref": "enums.schema.json#/definitions/range"
-        },
-        "damage": {
-          "$ref": "#/definitions/damage"
-        },
-        "table": {
-          "$ref": "#/definitions/table"
-        },
-        "actionType": {
-          "$ref": "enums.schema.json#/definitions/actionType"
+        "count": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         },
         "actions": {
           "$ref": "#/definitions/actions"
-        },
-        "count": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Number of this system included"
         }
       }
     },
@@ -701,9 +594,9 @@
         }
       ]
     },
-    "entry": {
+    "baseEntity": {
       "type": "object",
-      "description": "Basic entry with name, description, source, and page reference",
+      "description": "Basic entity with name, description, source, and page reference",
       "required": [
         "id",
         "name",
@@ -719,31 +612,27 @@
         },
         "indexable": {
           "type": "boolean",
-          "description": "Whether this entry should be included in search indexes",
           "default": true
         },
         "name": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Name of the entry"
+          "$ref": "common.schema.json#/definitions/name"
         },
         "description": {
-          "type": "string",
-          "description": "Description of the entry"
+          "type": "string"
         },
         "notes": {
-          "type": "string",
-          "description": "Additional notes about the entry"
+          "type": "string"
         },
         "source": {
           "$ref": "enums.schema.json#/definitions/source"
         },
         "page": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "Page number in the source book"
+          "$ref": "common.schema.json#/definitions/positiveInteger"
         }
       }
+    },
+    "baseEntry": {
+      "$ref": "#/definitions/baseEntity"
     },
     "bonusPerTechLevel": {
       "type": "object",
@@ -764,7 +653,7 @@
       ],
       "allOf": [
         {
-          "$ref": "#/definitions/entry"
+          "$ref": "#/definitions/baseEntry"
         }
       ],
       "properties": {
@@ -780,6 +669,22 @@
       },
       "unevaluatedProperties": false
     },
+    "contentBlock": {
+      "type": "object",
+      "description": "Block of content with a label and value",
+      "additionalProperties": false,
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
     "effect": {
       "type": "object",
       "description": "Related entry or reference",
@@ -789,91 +694,77 @@
       ],
       "properties": {
         "label": {
-          "type": "string",
-          "description": "Display label for the effect (empty string if no label)"
+          "type": "string"
         },
         "value": {
-          "type": "string",
-          "description": "Name of the related entry or reference"
+          "type": "string"
         }
       }
     },
     "grants": {
       "type": "array",
-      "description": "Entities that can be granted",
       "items": {
         "$ref": "#/definitions/grantable"
       }
     },
     "traits": {
       "type": "array",
-      "description": "Special traits and properties of items, systems, or abilities",
       "items": {
         "$ref": "#/definitions/trait"
       }
     },
     "actions": {
       "type": "array",
-      "description": "Actions that can be performed with this entity",
       "items": {
         "$ref": "#/definitions/action"
       }
     },
     "choices": {
       "type": "array",
-      "description": "Choices available to the player when interacting with the entity",
       "items": {
         "$ref": "#/definitions/choice"
       }
     },
     "effects": {
       "type": "array",
-      "description": "Related entries or references",
       "items": {
         "$ref": "#/definitions/effect"
       }
     },
     "schemaEntities": {
       "type": "array",
-      "description": "Entity names that can be chosen",
       "items": {
         "type": "string"
       }
     },
     "schemaNames": {
       "type": "array",
-      "description": "Schema names for filtering choices",
       "items": {
         "$ref": "enums.schema.json#/definitions/schemaName"
       }
     },
     "systems": {
       "type": "array",
-      "description": "System names (string references)",
       "items": {
         "type": "string"
       }
     },
     "modules": {
       "type": "array",
-      "description": "Module names (string references)",
       "items": {
         "type": "string"
       }
     },
     "customSystemOptions": {
       "type": "array",
-      "description": "Custom system options for choices",
       "items": {
         "$ref": "#/definitions/systemModule"
       }
     },
     "actionOptions": {
       "type": "array",
-      "description": "List of options or choices for an action",
       "items": {
         "type": "object",
-        "description": "Structured option with label and value",
         "additionalProperties": false,
         "required": [
           "value",
@@ -881,26 +772,22 @@
         ],
         "properties": {
           "label": {
-            "type": "string",
-            "description": "Display label for the option (empty string if no label)"
+            "type": "string"
           },
           "value": {
-            "type": "string",
-            "description": "Description or effect of the option"
+            "type": "string"
           }
         }
       }
     },
     "patterns": {
       "type": "array",
-      "description": "Mech chassis pattern configurations",
       "items": {
         "$ref": "#/definitions/pattern"
       }
     },
     "techLevelEffects": {
       "type": "array",
-      "description": "Effects that scale with tech level",
       "items": {
         "$ref": "#/definitions/techLevelEffect"
       }

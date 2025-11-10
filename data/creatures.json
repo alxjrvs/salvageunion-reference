@@ -7,7 +7,7 @@
     "actions": [
       {
         "name": "Stinger",
-        "range": "Close",
+        "range": ["Close"],
         "damage": {
           "amount": 2,
           "damageType": "HP"
@@ -22,7 +22,8 @@
           {
             "type": "deadly (creatures only)"
           }
-        ]
+        ],
+        "id": "110f09d1-2f84-4ec5-a9a2-df36461bde75"
       }
     ],
     "hitPoints": 4,
@@ -42,7 +43,7 @@
     "actions": [
       {
         "name": "Acid Spit",
-        "range": "Medium",
+        "range": ["Medium"],
         "damage": {
           "amount": 2,
           "damageType": "HP"
@@ -52,7 +53,8 @@
             "type": "burn",
             "amount": 2
           }
-        ]
+        ],
+        "id": "85f9957b-7c90-417f-bff2-c62e4673ba08"
       },
       {
         "name": "Corrosive Skin Glands",
@@ -60,7 +62,8 @@
           {
             "value": "When hit by a melee attack, the attacker takes 2 HP damage."
           }
-        ]
+        ],
+        "id": "9205f5c9-21ee-4433-93e8-c87a164cc590"
       }
     ],
     "hitPoints": 2,
@@ -75,7 +78,7 @@
     "actions": [
       {
         "name": "Barbed Tentacles",
-        "range": "Close",
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -94,7 +97,8 @@
             "type": "multi-attack",
             "amount": 3
           }
-        ]
+        ],
+        "id": "ff32cfbb-0930-4fe3-a7d3-c51f71cc06d8"
       }
     ],
     "hitPoints": 10,
@@ -108,7 +112,7 @@
     "actions": [
       {
         "name": "Bear Carnage",
-        "range": "Close",
+        "range": ["Close"],
         "damage": {
           "amount": 4,
           "damageType": "HP"
@@ -117,7 +121,8 @@
           {
             "type": "melee"
           }
-        ]
+        ],
+        "id": "167d2315-0770-4f18-812a-fef772daabed"
       }
     ],
     "hitPoints": 5,
@@ -137,7 +142,7 @@
     "actions": [
       {
         "name": "Iron Claw",
-        "range": "Close",
+        "range": ["Close"],
         "damage": {
           "amount": 4,
           "damageType": "SP"
@@ -146,7 +151,8 @@
           {
             "type": "melee"
           }
-        ]
+        ],
+        "id": "86a7997d-a983-49c2-bdc9-c1a4cef76e1e"
       }
     ],
     "hitPoints": 12,
@@ -165,11 +171,12 @@
     "actions": [
       {
         "name": "Talons",
-        "range": "Close",
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "HP"
-        }
+        },
+        "id": "a138ebfe-33fc-4594-9a80-77486fdeb1a9"
       }
     ],
     "hitPoints": 3,

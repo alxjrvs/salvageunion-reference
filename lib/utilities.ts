@@ -268,15 +268,28 @@ export function hasActions(
 /**
  * Type guard to check if an entity has traits
  * @param entity - The entity to check
- * @returns True if the entity has a traits property
+ * @returns True if the entity has a traits property (either at base level or in action property)
  */
 export function hasTraits(
   entity: SURefMetaEntity
 ): entity is SURefMetaEntity & { traits?: unknown[] } {
-  return (
+  // Check if traits exists at base level
+  const hasBaseTraits =
     'traits' in entity &&
     (entity.traits === undefined || Array.isArray(entity.traits))
-  )
+
+  // Check if traits exists in actions[0] property
+  const hasActionTraits =
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'traits' in entity.actions[0] &&
+    (entity.actions[0].traits === undefined ||
+      Array.isArray(entity.actions[0].traits))
+
+  return hasBaseTraits || hasActionTraits
 }
 
 // ============================================================================
@@ -437,8 +450,437 @@ export function isMetaAction(
     typeof entity === 'object' &&
     'name' in entity &&
     typeof entity.name === 'string' &&
-    // MetaActions don't have 'id' or 'source' properties (which all SURefEntity types have)
-    !('id' in entity) &&
+    // MetaActions have 'id' but don't have 'source' properties (which all SURefEntity types have)
     !('source' in entity)
   )
+}
+
+// ============================================================================
+// ACTION PROPERTY GETTERS
+// ============================================================================
+
+/**
+ * Get description from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract description from
+ * @returns The description or undefined if not present
+ */
+export function getDescription(entity: SURefMetaEntity): string | undefined {
+  // Check base level first
+  if ('description' in entity && typeof entity.description === 'string') {
+    return entity.description
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'description' in entity.actions[0] &&
+    typeof entity.actions[0].description === 'string'
+  ) {
+    return entity.actions[0].description
+  }
+
+  return undefined
+}
+
+/**
+ * Get activation cost from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract activation cost from
+ * @returns The activation cost or undefined if not present
+ */
+export function getActivationCost(
+  entity: SURefMetaEntity
+): number | string | undefined {
+  // Check base level first
+  if (
+    'activationCost' in entity &&
+    (typeof entity.activationCost === 'number' ||
+      typeof entity.activationCost === 'string')
+  ) {
+    return entity.activationCost
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'activationCost' in entity.actions[0] &&
+    (typeof entity.actions[0].activationCost === 'number' ||
+      typeof entity.actions[0].activationCost === 'string')
+  ) {
+    return entity.actions[0].activationCost
+  }
+
+  return undefined
+}
+
+/**
+ * Get action type from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract action type from
+ * @returns The action type or undefined if not present
+ */
+export function getActionType(entity: SURefMetaEntity): string | undefined {
+  // Check base level first
+  if ('actionType' in entity && typeof entity.actionType === 'string') {
+    return entity.actionType
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'actionType' in entity.actions[0] &&
+    typeof entity.actions[0].actionType === 'string'
+  ) {
+    return entity.actions[0].actionType
+  }
+
+  return undefined
+}
+
+/**
+ * Get range from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract range from
+ * @returns The range array or undefined if not present
+ */
+export function getRange(entity: SURefMetaEntity): string[] | undefined {
+  // Check base level first
+  if ('range' in entity && Array.isArray(entity.range)) {
+    return entity.range
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'range' in entity.actions[0] &&
+    Array.isArray(entity.actions[0].range)
+  ) {
+    return entity.actions[0].range
+  }
+
+  return undefined
+}
+
+/**
+ * Get damage from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract damage from
+ * @returns The damage object or undefined if not present
+ */
+export function getDamage(entity: SURefMetaEntity):
+  | {
+      damageType: string
+      amount: number | string
+    }
+  | undefined {
+  // Check base level first
+  if (
+    'damage' in entity &&
+    entity.damage !== null &&
+    typeof entity.damage === 'object'
+  ) {
+    return entity.damage as { damageType: string; amount: number | string }
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'damage' in entity.actions[0] &&
+    entity.actions[0].damage !== null &&
+    typeof entity.actions[0].damage === 'object'
+  ) {
+    return entity.actions[0].damage as {
+      damageType: string
+      amount: number | string
+    }
+  }
+
+  return undefined
+}
+
+/**
+ * Get traits from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract traits from
+ * @returns The traits array or undefined if not present
+ */
+export function getTraits(entity: SURefMetaEntity):
+  | Array<{
+      amount?: number | string
+      type: string
+    }>
+  | undefined {
+  // Check base level first
+  if ('traits' in entity && Array.isArray(entity.traits)) {
+    return entity.traits as Array<{ amount?: number | string; type: string }>
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'traits' in entity.actions[0] &&
+    Array.isArray(entity.actions[0].traits)
+  ) {
+    return entity.actions[0].traits as Array<{
+      amount?: number | string
+      type: string
+    }>
+  }
+
+  return undefined
+}
+
+/**
+ * Get effects from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract effects from
+ * @returns The effects array or undefined if not present
+ */
+export function getEffects(entity: SURefMetaEntity):
+  | Array<{
+      label?: string
+      value: string
+    }>
+  | undefined {
+  // Check base level first
+  if ('effects' in entity && Array.isArray(entity.effects)) {
+    return entity.effects as Array<{ label?: string; value: string }>
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'effects' in entity.actions[0] &&
+    Array.isArray(entity.actions[0].effects)
+  ) {
+    return entity.actions[0].effects as Array<{ label?: string; value: string }>
+  }
+
+  return undefined
+}
+
+/**
+ * Get table from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract table from
+ * @returns The table object or undefined if not present
+ */
+export function getTable(entity: SURefMetaEntity):
+  | {
+      type: 'standard' | 'alternate' | 'flat' | 'full'
+      [key: string]: string
+    }
+  | undefined {
+  // Check base level first
+  if (
+    'table' in entity &&
+    entity.table !== null &&
+    typeof entity.table === 'object'
+  ) {
+    return entity.table as {
+      type: 'standard' | 'alternate' | 'flat' | 'full'
+      [key: string]: string
+    }
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'table' in entity.actions[0] &&
+    entity.actions[0].table !== null &&
+    typeof entity.actions[0].table === 'object'
+  ) {
+    return entity.actions[0].table as {
+      type: 'standard' | 'alternate' | 'flat' | 'full'
+      [key: string]: string
+    }
+  }
+
+  return undefined
+}
+
+/**
+ * Get options from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract options from
+ * @returns The options array or undefined if not present
+ */
+export function getOptions(entity: SURefMetaEntity):
+  | Array<{
+      label: string
+      value: string
+    }>
+  | undefined {
+  // Check base level first
+  if ('options' in entity && Array.isArray(entity.options)) {
+    return entity.options as Array<{ label: string; value: string }>
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'options' in entity.actions[0] &&
+    Array.isArray(entity.actions[0].options)
+  ) {
+    return entity.actions[0].options as Array<{ label: string; value: string }>
+  }
+
+  return undefined
+}
+
+/**
+ * Get choices from an entity
+ * Checks both base level and nested action property
+ * @param entity - The entity to extract choices from
+ * @returns The choices array or undefined if not present
+ */
+export function getChoices(entity: SURefMetaEntity):
+  | Array<{
+      id: string
+      name: string
+      description?: string
+      [key: string]: unknown
+    }>
+  | undefined {
+  // Check base level first
+  if ('choices' in entity && Array.isArray(entity.choices)) {
+    return entity.choices as Array<{
+      id: string
+      name: string
+      description?: string
+      [key: string]: unknown
+    }>
+  }
+
+  // Check actions[0] property
+  if (
+    'actions' in entity &&
+    Array.isArray(entity.actions) &&
+    entity.actions.length > 0 &&
+    entity.actions[0] !== null &&
+    typeof entity.actions[0] === 'object' &&
+    'choices' in entity.actions[0] &&
+    Array.isArray(entity.actions[0].choices)
+  ) {
+    return entity.actions[0].choices as Array<{
+      id: string
+      name: string
+      description?: string
+      [key: string]: unknown
+    }>
+  }
+
+  return undefined
+}
+
+/**
+ * Represents a parsed trait reference from text
+ */
+export interface ParsedTraitReference {
+  /** The full matched text including brackets */
+  fullMatch: string
+  /** The trait name (e.g., "Hot", "Burn", "Explosive") */
+  traitName: string
+  /** The parameter if present (e.g., "3", "X", "2") */
+  parameter?: string
+  /** The start index of the match in the original text */
+  startIndex: number
+  /** The end index of the match in the original text */
+  endIndex: number
+}
+
+/**
+ * Parse trait references from text
+ * Handles both simple [[TraitName]] and parameterized [[[TraitName] (param)]] formats
+ * @param text - The text to parse for trait references
+ * @returns Array of parsed trait references
+ *
+ * @example
+ * const text = "This has the [[Shield]] Trait and [[[Hot] (3)]] Trait"
+ * const refs = parseTraitReferences(text)
+ * // => [
+ * //   { fullMatch: "[[Shield]]", traitName: "Shield", startIndex: 13, endIndex: 23 },
+ * //   { fullMatch: "[[[Hot] (3)]]", traitName: "Hot", parameter: "3", startIndex: 35, endIndex: 48 }
+ * // ]
+ */
+export function parseTraitReferences(text: string): ParsedTraitReference[] {
+  const references: ParsedTraitReference[] = []
+
+  // Pattern for parameterized traits: [[[TraitName] (param)]]
+  const paramPattern =
+    /\[\[\[([A-Z][A-Za-z-]+(?:\s+[A-Z][A-Za-z-]+)*)\]\s+\(([^)]+)\)\]\]/g
+
+  // Pattern for simple traits: [[TraitName]]
+  const simplePattern = /\[\[([A-Z][A-Za-z-]+(?:\s+[A-Z][A-Za-z-]+)*)\]\]/g
+
+  // Find all parameterized trait references first
+  let match: RegExpExecArray | null
+  while ((match = paramPattern.exec(text)) !== null) {
+    references.push({
+      fullMatch: match[0],
+      traitName: match[1],
+      parameter: match[2],
+      startIndex: match.index,
+      endIndex: match.index + match[0].length,
+    })
+  }
+
+  // Find all simple trait references
+  while ((match = simplePattern.exec(text)) !== null) {
+    // Skip if this position is already covered by a parameterized match
+    const isAlreadyMatched = references.some(
+      (ref) => match!.index >= ref.startIndex && match!.index < ref.endIndex
+    )
+
+    if (!isAlreadyMatched) {
+      references.push({
+        fullMatch: match[0],
+        traitName: match[1],
+        startIndex: match.index,
+        endIndex: match.index + match[0].length,
+      })
+    }
+  }
+
+  // Sort by start index
+  references.sort((a, b) => a.startIndex - b.startIndex)
+
+  return references
 }

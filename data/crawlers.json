@@ -19,7 +19,8 @@
     "actions": [
       {
         "name": "Crawler Wide Augments",
-        "description": "Every Pilot on the Union Crawler may train any Pilot Ability from the Augment Ability Tree in addition to their other abilities. When you choose this Crawler Type during character creation all Pilots gain an additional Training Point which they may only spend on the Augment Ability Tree."
+        "description": "Every Pilot on the Union Crawler may train any Pilot Ability from the Augment Ability Tree in addition to their other abilities. When you choose this Crawler Type during character creation all Pilots gain an additional Training Point which they may only spend on the Augment Ability Tree.",
+        "id": "8d09b52e-0bd9-4d26-bbd9-40c9f29abdc5"
       }
     ],
     "page": 216
@@ -57,7 +58,8 @@
             "description": "Choose a Weapons System to mount in the Armament Bay.",
             "schema": ["systems"]
           }
-        ]
+        ],
+        "id": "a884c78d-f5a9-49b0-ad61-41f375132848"
       }
     ],
     "page": 157
@@ -87,7 +89,8 @@
     "actions": [
       {
         "name": "Exceptional Engineering",
-        "description": "Your Union Crawler reduces its upkeep cost by 2 Scrap of its Tech Level. In addition add 2 free Scrap of it’s Tech Level to its Upgrade Pool at the start of each Downtime."
+        "description": "Your Union Crawler reduces its upkeep cost by 2 Scrap of its Tech Level. In addition add 2 free Scrap of it’s Tech Level to its Upgrade Pool at the start of each Downtime.",
+        "id": "990cb58d-c58d-4e4e-a422-466c108a7f3c"
       }
     ],
     "page": 27
@@ -117,7 +120,8 @@
     "actions": [
       {
         "name": "All Terrain Locomotion",
-        "description": "Your Union Crawler has the ability to easily traverse over a vast range of terrain types from mountain ranges and ash-filled plains to dense forests and muddy swamplands. It is never slowed down by Difficult Terrain. It can also safely cross bodies of water amphibiously."
+        "description": "Your Union Crawler has the ability to easily traverse over a vast range of terrain types from mountain ranges and ash-filled plains to dense forests and muddy swamplands. It is never slowed down by Difficult Terrain. It can also safely cross bodies of water amphibiously.",
+        "id": "361d894d-a5dc-451f-9a93-860e71e94ff9"
       }
     ],
     "page": 217
@@ -155,7 +159,8 @@
           "6-10": " An Intact Mech Chassis and an Intact Module are available for trade. ",
           "2-5": "An Intact System and an Intact Module are available for trade. ",
           "type": "standard"
-        }
+        },
+        "id": "ec078d5c-c5a5-4be1-a617-665b8ecfc383"
       }
     ],
     "page": 76

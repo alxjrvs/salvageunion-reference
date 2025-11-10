@@ -15,7 +15,7 @@
     ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
       }
     ],
     "properties": {

@@ -7,11 +7,12 @@
   "items": {
     "type": "object",
     "required": [
-      "techLevel"
+      "techLevel",
+      "actions"
     ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
       },
       {
         "$ref": "shared/objects.schema.json#/definitions/stats"
@@ -27,38 +28,8 @@
       "techLevel": {
         "$ref": "shared/common.schema.json#/definitions/techLevel"
       },
-      "traits": {
-        "$ref": "shared/objects.schema.json#/definitions/traits"
-      },
-      "range": {
-        "$ref": "shared/enums.schema.json#/definitions/range"
-      },
-      "effects": {
-        "$ref": "shared/objects.schema.json#/definitions/effects"
-      },
-      "options": {
-        "$ref": "shared/objects.schema.json#/definitions/actionOptions"
-      },
-      "actionType": {
-        "$ref": "shared/enums.schema.json#/definitions/actionType"
-      },
-      "damage": {
-        "$ref": "shared/objects.schema.json#/definitions/damage"
-      },
-      "activationCost": {
-        "$ref": "shared/common.schema.json#/definitions/activationCost"
-      },
-      "table": {
-        "$ref": "shared/objects.schema.json#/definitions/table"
-      },
-      "notes": {
-        "type": "string"
-      },
       "actions": {
-        "type": "array",
-        "items": {
-          "$ref": "shared/objects.schema.json#/definitions/action"
-        }
+        "$ref": "shared/objects.schema.json#/definitions/actions"
       }
     },
     "unevaluatedProperties": false

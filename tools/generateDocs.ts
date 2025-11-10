@@ -6,6 +6,7 @@ interface SchemaInfo {
   id: string
   title: string
   description: string
+  comment?: string
   dataFile: string
   schemaFile: string
   itemCount: number
@@ -98,7 +99,7 @@ function parseSchemaFile(schemaFile: string): SchemaInfo | null {
     const id = schemaFile.replace('.schema.json', '')
     const dataFile = `data/${id}.json`
 
-    return {
+    const info: SchemaInfo = {
       id,
       title: schema.title || id,
       description: schema.description || '',
@@ -108,6 +109,13 @@ function parseSchemaFile(schemaFile: string): SchemaInfo | null {
       requiredFields: getRequiredFields(schema, id),
       displayName: SCHEMA_DISPLAY_NAME_MAP[id] || id,
     }
+
+    // Add $comment if present
+    if (schema.$comment) {
+      info.comment = schema.$comment
+    }
+
+    return info
   } catch (error) {
     console.error(`Error parsing ${schemaFile}:`, error)
     return null
@@ -124,6 +132,7 @@ interface SchemaIndex {
     id: string
     title: string
     description: string
+    comment?: string
     dataFile: string
     schemaFile: string
     itemCount: number
@@ -150,16 +159,23 @@ function generateSchemaIndex(schemas: SchemaInfo[]): void {
       'Catalog of all available schemas in the salvageunion-data repository',
     version: getPackageVersion(),
     generated: new Date().toISOString(),
-    schemas: schemas.map((s) => ({
-      id: s.id,
-      title: s.title,
-      description: s.description,
-      dataFile: s.dataFile,
-      schemaFile: s.schemaFile,
-      itemCount: s.itemCount,
-      requiredFields: s.requiredFields,
-      displayName: s.displayName,
-    })),
+    schemas: schemas.map((s) => {
+      const entry: SchemaIndex['schemas'][0] = {
+        id: s.id,
+        title: s.title,
+        description: s.description,
+        dataFile: s.dataFile,
+        schemaFile: s.schemaFile,
+        itemCount: s.itemCount,
+        requiredFields: s.requiredFields,
+        displayName: s.displayName,
+      }
+      // Only include comment if it exists
+      if (s.comment) {
+        entry.comment = s.comment
+      }
+      return entry
+    }),
   }
 
   // Check if only the generated field would change

@@ -81,6 +81,7 @@ async function generateEnumTypes() {
     const enumDef = definitions[enumName]
 
     if (enumDef.type === 'string' && Array.isArray(enumDef.enum)) {
+      // Simple string enum
       const typeCode = generateEnumType(
         enumName,
         enumDef.enum,
@@ -88,8 +89,38 @@ async function generateEnumTypes() {
       )
       typeDefinitions.push(typeCode)
       typeDefinitions.push('')
+    } else if (
+      enumDef.type === 'array' &&
+      enumDef.items?.type === 'string' &&
+      Array.isArray(enumDef.items.enum)
+    ) {
+      // Array of enum strings - generate both the item type and array type
+      const itemTypeName = `SURef${capitalize(enumName)}Item`
+      const arrayTypeName = `SURef${capitalize(enumName)}`
+
+      // Generate item type
+      const itemTypeCode = generateEnumType(
+        `${enumName}Item`,
+        enumDef.items.enum,
+        `Individual ${enumName} value`
+      )
+      typeDefinitions.push(itemTypeCode)
+      typeDefinitions.push('')
+
+      // Generate array type
+      const lines: string[] = []
+      if (enumDef.description) {
+        lines.push('/**')
+        lines.push(` * ${enumDef.description}`)
+        lines.push(' */')
+      }
+      lines.push(`export type ${arrayTypeName} = ${itemTypeName}[]`)
+      typeDefinitions.push(lines.join('\n'))
+      typeDefinitions.push('')
     } else {
-      console.warn(`⚠️  Skipping ${enumName}: not a string enum`)
+      console.warn(
+        `⚠️  Skipping ${enumName}: not a string enum or array of enum strings`
+      )
     }
   }
 

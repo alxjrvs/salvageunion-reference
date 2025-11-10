@@ -15,6 +15,13 @@ import { join } from 'path'
 const UUID_PATTERN =
   /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 
+interface Action {
+  id?: string
+  name?: string
+  actions?: Action[]
+  [key: string]: unknown
+}
+
 interface Choice {
   id?: string
   name?: string
@@ -41,6 +48,7 @@ interface Ability {
 interface DataItem {
   id?: string
   choices?: Choice[]
+  actions?: Action[]
   npc?: NPC
   abilities?: Ability[]
   [key: string]: unknown
@@ -74,7 +82,6 @@ const dataFiles = [
   'chassis.json',
   'classes.advanced.json',
   'classes.core.json',
-  'classes..json',
   'crawler-bays.json',
   'crawler-tech-levels.json',
   'crawlers.json',
@@ -130,6 +137,21 @@ function checkFile(filename: string): FileResult {
       checkId(item.id, index, 'root')
     }
 
+    // Check nested action IDs (recursive)
+    const checkActions = (actions: Action[], context: string) => {
+      if (actions && Array.isArray(actions)) {
+        actions.forEach((action, actionIndex) => {
+          if (action.id) {
+            checkId(action.id, index, `${context}[${actionIndex}]`)
+          }
+          // Recursively check nested actions
+          if (action.actions) {
+            checkActions(action.actions, `${context}[${actionIndex}].actions`)
+          }
+        })
+      }
+    }
+
     // Check nested choice IDs
     const checkChoices = (choices: Choice[], context: string) => {
       if (choices && Array.isArray(choices)) {
@@ -139,6 +161,11 @@ function checkFile(filename: string): FileResult {
           }
         })
       }
+    }
+
+    // Check actions at root level
+    if (item.actions) {
+      checkActions(item.actions, 'root.actions')
     }
 
     // Check choices at root level
@@ -201,6 +228,21 @@ function checkAllFiles(): ValidationResult {
         addToGlobalMap(item.id, index)
       }
 
+      // Add nested action IDs (recursive)
+      const addActionIds = (actions: Action[]) => {
+        if (actions && Array.isArray(actions)) {
+          actions.forEach((action) => {
+            if (action.id) {
+              addToGlobalMap(action.id, index)
+            }
+            // Recursively add nested action IDs
+            if (action.actions) {
+              addActionIds(action.actions)
+            }
+          })
+        }
+      }
+
       // Add nested choice IDs
       const addChoiceIds = (choices: Choice[]) => {
         if (choices && Array.isArray(choices)) {
@@ -210,6 +252,11 @@ function checkAllFiles(): ValidationResult {
             }
           })
         }
+      }
+
+      // Check actions at root level
+      if (item.actions) {
+        addActionIds(item.actions)
       }
 
       // Check choices at root level

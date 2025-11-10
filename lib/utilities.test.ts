@@ -108,9 +108,9 @@ describe('Additional Type Guards', () => {
       expect(hasActions(system)).toBe(true)
     })
 
-    it('should return false for abilities', () => {
+    it('should return true for abilities', () => {
       const ability = SalvageUnionReference.Abilities.all()[0]
-      expect(hasActions(ability)).toBe(false)
+      expect(hasActions(ability)).toBe(true)
     })
   })
 
@@ -430,19 +430,25 @@ describe('Property Extractors', () => {
     })
 
     it('should return undefined for entities without actions', () => {
-      const equipment = SalvageUnionReference.Equipment.all()[0]
-      const actions = extractActions(equipment)
+      const trait = SalvageUnionReference.Traits.all()[0]
+      const actions = extractActions(trait)
       expect(actions).toBeUndefined()
     })
 
-    it('should return undefined for abilities (which are actions themselves)', () => {
+    it('should extract actions from abilities', () => {
       const ability = SalvageUnionReference.Abilities.all()[0]
       const actions = extractActions(ability)
-      // Abilities can have nested actions, so this might be defined
-      // Just check it's either undefined or an array
-      if (actions !== undefined) {
-        expect(Array.isArray(actions)).toBe(true)
-      }
+      expect(actions).toBeDefined()
+      expect(Array.isArray(actions)).toBe(true)
+      expect(actions!.length).toBeGreaterThan(0)
+    })
+
+    it('should extract actions from equipment', () => {
+      const equipment = SalvageUnionReference.Equipment.all()[0]
+      const actions = extractActions(equipment)
+      expect(actions).toBeDefined()
+      expect(Array.isArray(actions)).toBe(true)
+      expect(actions!.length).toBeGreaterThan(0)
     })
   })
 

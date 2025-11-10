@@ -415,6 +415,7 @@ async function generateObjectTypes() {
     'damage',
     'trait',
     'grantable',
+    'effect',
     'stats',
     'choice',
     'npc',

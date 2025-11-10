@@ -80,6 +80,20 @@ export interface SURefMetaGrantable {
 }
 
 /**
+ * Related entry or reference
+ */
+export interface SURefMetaEffect {
+  /**
+   * Display label for the effect (empty string if no label)
+   */
+  label?: string
+  /**
+   * Name of the related entry or reference
+   */
+  value: string
+}
+
+/**
  * Statistics for mechs, chassis, and vehicles
  */
 export interface SURefMetaStats {
@@ -229,16 +243,14 @@ export interface SURefMetaTechLevelEffect {
    * Maximum tech level for this effect
    */
   techLevelMax: number
-  /**
-   * Description of the effect
-   */
-  effect: string
+  effects: SURefMetaEffects
 }
 
 /**
  * An action, ability, or attack that can be performed
  */
 export interface SURefMetaAction {
+  id: SURefId
   /**
    * Structure Points (SP) - the health/durability of the entity
    */
@@ -276,10 +288,7 @@ export interface SURefMetaAction {
    * Description of what the action does
    */
   description?: string
-  /**
-   * Mechanical effect of the action
-   */
-  effect?: string
+  effects?: SURefMetaEffects
   /**
    * Additional notes or flavor text for the action
    */
@@ -334,27 +343,11 @@ export interface SURefMetaSystemModule extends SURefMetaStats {
    */
   recommended?: boolean
   /**
-   * Special traits and properties of items, systems, or abilities
-   */
-  traits?: SURefMetaTrait[]
-  /**
-   * Name of the system or module
-   */
-  name?: string
-  /**
-   * Additional notes
-   */
-  notes?: string
-  activationCost?: SURefActivationCost
-  range?: SURefRange
-  damage?: SURefMetaDamage
-  table?: SURefMetaTable
-  actionType?: SURefActionType
-  actions: SURefMetaActions
-  /**
    * Number of this system included
    */
   count?: number
+  action: SURefMetaAction
+  actions: SURefMetaActions
 }
 
 /**
@@ -473,6 +466,11 @@ export type SURefMetaChoices = SURefMetaChoice[]
  * Custom system options for choices
  */
 export type SURefMetaCustomSystemOptions = SURefMetaSystemModule[]
+
+/**
+ * Related entries or references
+ */
+export type SURefMetaEffects = SURefMetaEffect[]
 
 /**
  * Entities that can be granted

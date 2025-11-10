@@ -12,10 +12,7 @@
     ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/entry"
-      },
-      {
-        "$ref": "shared/objects.schema.json#/definitions/action"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
       }
     ],
     "properties": {
@@ -50,6 +47,9 @@
         "enum": [
           "Variable"
         ]
+      },
+      "actions": {
+        "$ref": "shared/objects.schema.json#/definitions/actions"
       }
     },
     "unevaluatedProperties": false

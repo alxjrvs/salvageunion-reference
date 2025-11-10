@@ -17,7 +17,7 @@
     "id": "2d354aff-cd3e-4d97-9d74-7ad653181ec0",
     "source": "Salvage Union Workshop Manual",
     "name": "anti-shielding",
-    "description": "A System, Module, or Ability with this Trait ignores the effects of anything with the Shield Trait.",
+    "description": "A System, Module, or Ability with this Trait ignores the effects of anything with the [[Shield]] Trait.",
     "page": 183
   },
   {
@@ -108,7 +108,7 @@
     "id": "734e3d6b-439a-4c77-8b40-68cf22c9a816",
     "source": "Salvage Union Workshop Manual",
     "name": "fly",
-    "description": "Anything with this Trait can fly, allowing them to move in the air over obstacles and terrain. Anything attacking a target with this Trait treats it as though it is in Long Range unless it also has the Fly or Hover Trait.",
+    "description": "Anything with this Trait can fly, allowing them to move in the air over obstacles and terrain. Anything attacking a target with this Trait treats it as though it is in Long Range unless it also has the Fly or [[Hover]] Trait.",
     "page": 280
   },
   {
@@ -206,7 +206,7 @@
     "id": "8f8ba32b-6cb6-452a-b884-c07f1bc3bbe5",
     "source": "Salvage Union Workshop Manual",
     "name": "overheat",
-    "description": "If a target is hit by a weapon with the Overheat Trait it cannot use any Systems, Modules, or Abilities that would generate Heat on its next turn. For example, it cannot attack with any weapons that have the Hot Trait nor can it Push.",
+    "description": "If a target is hit by a weapon with the Overheat Trait it cannot use any Systems, Modules, or Abilities that would generate Heat on its next turn. For example, it cannot attack with any weapons that have the [[Hot]] Trait nor can it Push.",
     "page": 103
   },
   {
@@ -297,7 +297,7 @@
     "id": "40cb28ae-6474-4657-b443-e568bec769bd",
     "source": "Salvage Union Workshop Manual",
     "name": "wield",
-    "description": "A System with the Wield Trait requires your Mech to have a System with the Rigging Trait to use it; as it must be held. This applies for each System with this Trait, for example to use an Armoured Shield and a Mech Melee Armament you need two Systems with the Rigging Trait.",
+    "description": "A System with the Wield Trait requires your Mech to have a System with the [[Rigging]] Trait to use it; as it must be held. This applies for each System with this Trait, for example to use an Armoured Shield and a Mech Melee Armament you need two Systems with the [[Rigging]] Trait.",
     "page": 65
   }
 ]
