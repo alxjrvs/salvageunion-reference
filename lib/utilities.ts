@@ -6,9 +6,9 @@
 import type { SURefMetaEntity, SURefMetaAction } from './types/index.js'
 import type {
   SURefAbility,
-  SURefAdvancedClass,
+  SURefAdvancedClasse,
   SURefChassis,
-  SURefCoreClass,
+  SURefCoreClasse,
   SURefModule,
   SURefSystem,
 } from './types/index.js'
@@ -367,7 +367,9 @@ export function isChassis(entity: SURefMetaEntity): entity is SURefChassis {
  * @param entity - The entity to check
  * @returns True if the entity is a Core Class
  */
-export function isCoreClass(entity: SURefMetaEntity): entity is SURefCoreClass {
+export function isCoreClass(
+  entity: SURefMetaEntity
+): entity is SURefCoreClasse {
   return (
     entity !== null &&
     typeof entity === 'object' &&
@@ -384,7 +386,7 @@ export function isCoreClass(entity: SURefMetaEntity): entity is SURefCoreClass {
  */
 export function isBaseAdvancedClass(
   entity: SURefMetaEntity
-): entity is SURefAdvancedClass {
+): entity is SURefAdvancedClasse {
   return (
     entity !== null &&
     typeof entity === 'object' &&
@@ -400,7 +402,7 @@ export function isBaseAdvancedClass(
  */
 export function isAdvancedClass(
   entity: SURefMetaEntity
-): entity is SURefAdvancedClass {
+): entity is SURefAdvancedClasse {
   return isBaseAdvancedClass(entity) && entity.type === 'Advanced'
 }
 
@@ -411,7 +413,7 @@ export function isAdvancedClass(
  */
 export function isHybridClass(
   entity: SURefMetaEntity
-): entity is SURefAdvancedClass {
+): entity is SURefAdvancedClasse {
   return isBaseAdvancedClass(entity) && entity.type === 'Hybrid'
 }
 
@@ -422,7 +424,7 @@ export function isHybridClass(
  */
 export function isClass(
   entity: SURefMetaEntity
-): entity is SURefCoreClass | SURefAdvancedClass {
+): entity is SURefCoreClasse | SURefAdvancedClasse {
   return isCoreClass(entity) || isAdvancedClass(entity) || isHybridClass(entity)
 }
 
@@ -435,24 +437,6 @@ export function isSystemOrModule(
   entity: SURefMetaEntity
 ): entity is SURefSystem | SURefModule {
   return isSystem(entity) || isModule(entity)
-}
-
-/**
- * Type guard to check if an entity is a MetaAction
- * @param entity - The entity to check
- * @returns True if the entity is a MetaAction
- */
-export function isMetaAction(
-  entity: SURefMetaEntity
-): entity is SURefMetaAction {
-  return (
-    entity !== null &&
-    typeof entity === 'object' &&
-    'name' in entity &&
-    typeof entity.name === 'string' &&
-    // MetaActions have 'id' but don't have 'source' properties (which all SURefEntity types have)
-    !('source' in entity)
-  )
 }
 
 // ============================================================================

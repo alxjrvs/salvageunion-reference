@@ -1,33 +1,21 @@
 /**
- * Auto-generated TypeScript types for Salvage Union
- *
- * This file re-exports all generated types from the individual type files.
+ * Auto-generated TypeScript type exports
+ * DO NOT EDIT MANUALLY
  */
 
-// Export all enum types
-export * from './enums.js'
-
-// Export all common types
-export * from './common.js'
-
-// Export all object types
-export * from './objects.js'
-
-// Export all schema types
-export * from './schemas.js'
-
-// Import schema types for union type
+// Import types for use in union types
 import type {
   SURefAbility,
   SURefAbilityTreeRequirement,
   SURefBioTitan,
   SURefChassis,
-  SURefAdvancedClass,
-  SURefCoreClass,
+  SURefAdvancedClasse,
+  SURefCoreClasse,
   SURefCrawlerBay,
   SURefCrawlerTechLevel,
   SURefCrawler,
   SURefCreature,
+  SURefDistance,
   SURefDrone,
   SURefEquipment,
   SURefKeyword,
@@ -41,24 +29,80 @@ import type {
   SURefVehicle,
 } from './schemas.js'
 
-// Import object types for union type
-import type { SURefMetaAction, SURefMetaSystemModule } from './objects.js'
+// Export all enum types
+export type * from './enums.js'
 
-// Import enum types for union type
-import type { SURefSchemaName } from './enums.js'
+// Export all common types
+export type * from './common.js'
 
-// Union type for all entity types
+// Export all object types
+export type * from './objects.js'
+
+// Export all schema types
+export type * from './schemas.js'
+
+// Re-export specific commonly used types for convenience
+export type {
+  SURefSchemaName,
+  SURefTree,
+  SURefActionType,
+  SURefDamageType,
+  SURefRange,
+  SURefSource,
+  SURefClassType,
+  SURefContentType,
+} from './enums.js'
+
+export type {
+  SURefId,
+  SURefName,
+  SURefTechLevel,
+  SURefSalvageValue,
+  SURefHitPoints,
+  SURefStructurePoints,
+  SURefPositiveInteger,
+  SURefNonNegativeInteger,
+  SURefActivationCost,
+  SURefAssetUrl,
+} from './common.js'
+
+export type {
+  SURefMetaTrait,
+  SURefMetaStats,
+  SURefMetaChassisStats,
+  SURefMetaEquipmentStats,
+  SURefMetaChoice,
+  SURefMetaNpc,
+  SURefMetaSystemModule,
+  SURefMetaTable,
+  SURefMetaAdvancedClass,
+  SURefMetaAction,
+  SURefMetaGrant,
+  SURefMetaChoices,
+  SURefMetaContent,
+  SURefMetaContentBlock,
+  SURefMetaPattern,
+  SURefMetaSystems,
+  SURefMetaModules,
+  SURefMetaTraits,
+  SURefMetaBaseEntity,
+  SURefMetaCombatEntity,
+  SURefMetaMechanicalEntity,
+} from './objects.js'
+
+// Union type of all entity types
 export type SURefEntity =
   | SURefAbility
   | SURefAbilityTreeRequirement
   | SURefBioTitan
   | SURefChassis
-  | SURefAdvancedClass
-  | SURefCoreClass
+  | SURefAdvancedClasse
+  | SURefCoreClasse
   | SURefCrawlerBay
   | SURefCrawlerTechLevel
   | SURefCrawler
   | SURefCreature
+  | SURefDistance
   | SURefDrone
   | SURefEquipment
   | SURefKeyword
@@ -71,11 +115,27 @@ export type SURefEntity =
   | SURefTrait
   | SURefVehicle
 
-// Union type for all entities and meta actions
+// Union type of all meta entity types (entities with common base properties)
 export type SURefMetaEntity =
-  | SURefEntity
-  | SURefMetaAction
-  | SURefMetaSystemModule
-
-// Union type for all schema names including meta actions
-export type SURefMetaSchemaName = SURefSchemaName | 'actions'
+  | SURefAbility
+  | SURefAbilityTreeRequirement
+  | SURefBioTitan
+  | SURefChassis
+  | SURefAdvancedClasse
+  | SURefCoreClasse
+  | SURefCrawlerBay
+  | SURefCrawlerTechLevel
+  | SURefCrawler
+  | SURefCreature
+  | SURefDistance
+  | SURefDrone
+  | SURefEquipment
+  | SURefKeyword
+  | SURefMeld
+  | SURefModule
+  | SURefNPC
+  | SURefRollTable
+  | SURefSquad
+  | SURefSystem
+  | SURefTrait
+  | SURefVehicle

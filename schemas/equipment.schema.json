@@ -12,7 +12,7 @@
     ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
       },
       {
         "$ref": "shared/objects.schema.json#/definitions/stats"
@@ -25,11 +25,11 @@
       "choices": {
         "$ref": "shared/objects.schema.json#/definitions/choices"
       },
-      "techLevel": {
-        "$ref": "shared/common.schema.json#/definitions/techLevel"
-      },
       "actions": {
-        "$ref": "shared/objects.schema.json#/definitions/actions"
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
       }
     },
     "unevaluatedProperties": false

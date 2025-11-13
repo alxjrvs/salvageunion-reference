@@ -9,10 +9,10 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
-import { SCHEMA_NAME_MAP } from './schemaNameMap.js'
+import { getSingularTypeName, getDirname } from './generatorUtils.js'
 
 const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const __dirname = getDirname(import.meta.url)
 
 const SCHEMAS_DIR = path.join(__dirname, '../schemas')
 const SCHEMA_INDEX_PATH = path.join(SCHEMAS_DIR, 'index.json')
@@ -184,6 +184,11 @@ function generateProperties(
   const lines: string[] = []
 
   for (const [propName, propSchema] of Object.entries(properties)) {
+    // Skip properties with value `true` - they're inherited from base types
+    if (propSchema === true) {
+      continue
+    }
+
     const isRequired = required.includes(propName)
     const optional = isRequired ? '' : '?'
     const formattedName = formatPropertyName(propName)
@@ -209,8 +214,8 @@ function generateSchemaType(
   schemaId: string,
   schema: JSONSchema
 ): string | null {
-  // Use SCHEMA_NAME_MAP for consistent singular naming
-  const singularName = SCHEMA_NAME_MAP[schemaId]
+  // Use getSingularTypeName for consistent singular naming
+  const singularName = getSingularTypeName(schemaId, __dirname)
   if (!singularName) {
     console.warn(`⚠️  No mapping found for schema: ${schemaId}`)
     return null

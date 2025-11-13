@@ -6,7 +6,6 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { SCHEMA_NAME_MAP } from './schemaNameMap.js'
 
 /**
  * Schema index entry structure
@@ -51,11 +50,65 @@ export function loadSchemaIndex(dirname: string): SchemaIndex {
 }
 
 /**
- * Get singular type name from schema ID
- * Uses SCHEMA_NAME_MAP for special cases, otherwise returns the ID
+ * Generate schema name map from schema index
+ * Derives singular type names from display names
  */
-export function getSingularTypeName(schemaId: string): string {
-  return SCHEMA_NAME_MAP[schemaId] || schemaId
+export function generateSchemaNameMap(
+  schemaIndex: SchemaIndex
+): Record<string, string> {
+  const map: Record<string, string> = {}
+
+  for (const schema of schemaIndex.schemas) {
+    // Convert display name to singular form
+    // Most display names are already plural, so we need to singularize them
+    let singular = schema.displayName
+
+    // Handle special cases
+    if (singular === 'Abilities') singular = 'Ability'
+    else if (singular === 'Chassis')
+      singular = 'Chassis' // Already singular
+    else if (singular === 'Equipment')
+      singular = 'Equipment' // Already singular
+    else if (singular === 'Meld')
+      singular = 'Meld' // Already singular
+    else if (singular === 'Distances') singular = 'Distance'
+    else if (singular.endsWith('ies')) {
+      // Abilities -> Ability
+      singular = singular.slice(0, -3) + 'y'
+    } else if (singular.endsWith('s')) {
+      // Remove trailing 's' for most plurals
+      singular = singular.slice(0, -1)
+    }
+
+    // Convert to PascalCase (remove spaces and hyphens)
+    const pascalCase = singular
+      .split(/[\s-]/)
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join('')
+
+    map[schema.id] = pascalCase
+  }
+
+  return map
+}
+
+/**
+ * Get singular type name from schema ID
+ * Generates the map from schema index on first call
+ */
+let cachedSchemaNameMap: Record<string, string> | null = null
+
+export function getSingularTypeName(
+  schemaId: string,
+  dirname?: string
+): string {
+  if (!cachedSchemaNameMap) {
+    const dir = dirname || getDirname(import.meta.url)
+    const schemaIndex = loadSchemaIndex(dir)
+    cachedSchemaNameMap = generateSchemaNameMap(schemaIndex)
+  }
+
+  return cachedSchemaNameMap[schemaId] || schemaId
 }
 
 /**

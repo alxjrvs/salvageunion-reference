@@ -12,24 +12,25 @@ import type {
 
 import type {
   SURefHitPoints,
-  SURefPositiveInteger,
-  SURefSalvageValue,
-  SURefTechLevel
+  SURefPositiveInteger
 } from './common.js'
 
 import type {
-  SURefMetaActions,
+  SURefMetaAction,
   SURefMetaAdvancedClass,
-  SURefMetaBaseEntry,
+  SURefMetaBaseEntity,
   SURefMetaBonusPerTechLevel,
+  SURefMetaChassisStats,
   SURefMetaChoice,
   SURefMetaChoices,
-  SURefMetaGrants,
+  SURefMetaCombatEntity,
+  SURefMetaContent,
+  SURefMetaGrant,
+  SURefMetaMechanicalEntity,
   SURefMetaNpc,
-  SURefMetaPatterns,
+  SURefMetaPattern,
   SURefMetaStats,
   SURefMetaSystemModule,
-  SURefMetaSystems,
   SURefMetaTable,
   SURefMetaTechLevelEffects,
   SURefMetaTrait
@@ -38,20 +39,20 @@ import type {
 /**
  * Pilot abilities and skills in Salvage Union
  */
-export interface SURefAbility extends SURefMetaBaseEntry {
+export interface SURefAbility extends SURefMetaBaseEntity {
   description?: string
   tree: SURefTree
   level: (number | 'L' | 'G')
   mechActionType?: SURefActionType
-  grants?: SURefMetaGrants
+  grants?: SURefMetaGrant[]
   activationCurrency?: 'Variable'
-  actions?: SURefMetaActions
+  actions?: SURefMetaAction[]
 }
 
 /**
  * Requirements for ability trees in Salvage Union
  */
-export interface SURefAbilityTreeRequirement extends SURefMetaBaseEntry {
+export interface SURefAbilityTreeRequirement extends SURefMetaBaseEntity {
   /**
    * List of ability tree names required to access this tree
    */
@@ -61,9 +62,9 @@ export interface SURefAbilityTreeRequirement extends SURefMetaBaseEntry {
 /**
  * Massive bio-engineered titan creatures in Salvage Union
  */
-export interface SURefBioTitan extends SURefMetaBaseEntry {
+export interface SURefBioTitan extends SURefMetaBaseEntity {
   structurePoints: SURefPositiveInteger
-  actions: SURefMetaActions
+  actions: SURefMetaAction[]
   /**
    * Special traits and properties of items, systems, or abilities
    */
@@ -73,21 +74,21 @@ export interface SURefBioTitan extends SURefMetaBaseEntry {
 /**
  * Mech chassis definitions in Salvage Union
  */
-export interface SURefChassis extends SURefMetaBaseEntry, SURefMetaStats {
-  actions: SURefMetaActions
-  patterns: SURefMetaPatterns
+export interface SURefChassis extends SURefMetaBaseEntity, SURefMetaChassisStats {
+  actions: SURefMetaAction[]
+  patterns: SURefMetaPattern[]
   npc?: SURefMetaNpc
 }
 
 /**
  * Advanced and Hybrid character classes in Salvage Union
  */
-export type SURefAdvancedClass = SURefMetaAdvancedClass
+export type SURefAdvancedClasse = SURefMetaAdvancedClass
 
 /**
  * Core character classes in Salvage Union
  */
-export interface SURefCoreClass extends SURefMetaBaseEntry {
+export interface SURefCoreClasse extends SURefMetaBaseEntity {
   /**
    * Maximum number of abilities this class can have
    */
@@ -100,12 +101,13 @@ export interface SURefCoreClass extends SURefMetaBaseEntry {
    * Core ability trees available to this class
    */
   coreTrees: SURefTree[]
+  content?: SURefMetaContent
 }
 
 /**
  * Bays and facilities on Union Crawlers in Salvage Union
  */
-export interface SURefCrawlerBay extends SURefMetaBaseEntry {
+export interface SURefCrawlerBay extends SURefMetaBaseEntity {
   /**
    * Effect when this bay is damaged
    */
@@ -115,7 +117,7 @@ export interface SURefCrawlerBay extends SURefMetaBaseEntry {
    * Choices available to the player when interacting with the NPC
    */
   choices?: SURefMetaChoice[]
-  actions: SURefMetaActions
+  actions: SURefMetaAction[]
   techLevelEffects: SURefMetaTechLevelEffects
   table?: SURefMetaTable
 }
@@ -123,7 +125,7 @@ export interface SURefCrawlerBay extends SURefMetaBaseEntry {
 /**
  * Tech levels for Union Crawlers in Salvage Union
  */
-export interface SURefCrawlerTechLevel extends SURefMetaBaseEntry {
+export interface SURefCrawlerTechLevel extends SURefMetaBaseEntity {
   /**
    * Tech level (1-6)
    */
@@ -145,58 +147,51 @@ export interface SURefCrawlerTechLevel extends SURefMetaBaseEntry {
 /**
  * Crawler vehicles in Salvage Union
  */
-export interface SURefCrawler extends SURefMetaBaseEntry {
+export interface SURefCrawler extends SURefMetaBaseEntity {
   npc: SURefMetaNpc
-  actions: SURefMetaActions
+  actions: SURefMetaAction[]
 }
 
 /**
  * Creatures and wildlife in Salvage Union
  */
-export interface SURefCreature extends SURefMetaBaseEntry {
+export interface SURefCreature extends SURefMetaBaseEntity, SURefMetaCombatEntity {
   hitPoints: SURefHitPoints
-  actions: SURefMetaActions
-  /**
-   * Special traits and properties of items, systems, or abilities
-   */
-  traits?: SURefMetaTrait[]
 }
 
 /**
  * Distances in Salvage Union are abstracted into the following Range categories. Both Pilots and Mechs use these Range categories for their movement as well as the effective distances for their weapons and other Abilities. The Mediator can factor in any other difference between the speed and distance of Pilots and Mechs based on the narrative and the situation.
  */
-export type SURefDistance = SURefMetaBaseEntry
+export interface SURefDistance extends SURefMetaBaseEntity {
+  content?: SURefMetaContent
+}
 
 /**
  * Autonomous drones in Salvage Union
  */
-export interface SURefDrone extends SURefMetaBaseEntry {
-  structurePoints: SURefPositiveInteger
-  techLevel: SURefTechLevel
-  salvageValue: SURefSalvageValue
-  systems: SURefMetaSystems
-}
+export type SURefDrone = SURefMetaBaseEntity & SURefMetaMechanicalEntity
 
 /**
  * Pilot equipment and gear in Salvage Union
  */
-export interface SURefEquipment extends SURefMetaBaseEntry, SURefMetaStats {
+export interface SURefEquipment extends SURefMetaBaseEntity, SURefMetaStats {
   bonusPerTechLevel?: SURefMetaBonusPerTechLevel
   choices?: SURefMetaChoices
-  techLevel: SURefTechLevel
-  actions: SURefMetaActions
+  actions: SURefMetaAction[]
 }
 
 /**
  * Game keywords and terminology in Salvage Union
  */
-export type SURefKeyword = SURefMetaBaseEntry
+export interface SURefKeyword extends SURefMetaBaseEntity {
+  content?: SURefMetaContent
+}
 
 /**
  * Meld-infected creatures in Salvage Union
  */
-export interface SURefMeld extends SURefMetaBaseEntry {
-  actions: SURefMetaActions
+export interface SURefMeld extends SURefMetaBaseEntity {
+  actions: SURefMetaAction[]
   /**
    * Special traits and properties of items, systems, or abilities
    */
@@ -218,37 +213,33 @@ export interface SURefMeld extends SURefMetaBaseEntry {
 /**
  * Mech modules in Salvage Union
  */
-export type SURefModule = SURefMetaSystemModule & SURefMetaBaseEntry
+export type SURefModule = SURefMetaSystemModule & SURefMetaBaseEntity
 
 /**
  * Non-player characters and people in Salvage Union
  */
-export interface SURefNPC extends SURefMetaBaseEntry {
+export interface SURefNPC extends SURefMetaBaseEntity, SURefMetaCombatEntity {
   hitPoints: SURefHitPoints
-  actions: SURefMetaActions
-  /**
-   * Special traits and properties of items, systems, or abilities
-   */
-  traits?: SURefMetaTrait[]
 }
 
 /**
  * Random tables and roll tables in Salvage Union
  */
-export interface SURefRollTable extends SURefMetaBaseEntry {
+export interface SURefRollTable extends SURefMetaBaseEntity {
   /**
    * Section or category of the roll table
    */
   section: string
   table: SURefMetaTable
+  content?: SURefMetaContent
 }
 
 /**
  * NPC squads and groups in Salvage Union
  */
-export interface SURefSquad extends SURefMetaBaseEntry {
+export interface SURefSquad extends SURefMetaBaseEntity {
   hitPoints?: SURefHitPoints
-  actions: SURefMetaActions
+  actions: SURefMetaAction[]
   /**
    * Special traits and properties of items, systems, or abilities
    */
@@ -259,23 +250,16 @@ export interface SURefSquad extends SURefMetaBaseEntry {
 /**
  * Mech systems in Salvage Union
  */
-export type SURefSystem = SURefMetaSystemModule & SURefMetaBaseEntry
+export type SURefSystem = SURefMetaSystemModule & SURefMetaBaseEntity
 
 /**
  * Traits and special properties in Salvage Union
  */
-export type SURefTrait = SURefMetaBaseEntry
+export interface SURefTrait extends SURefMetaBaseEntity {
+  content?: SURefMetaContent
+}
 
 /**
  * Conventional vehicles in Salvage Union
  */
-export interface SURefVehicle extends SURefMetaBaseEntry {
-  structurePoints: SURefPositiveInteger
-  techLevel: SURefTechLevel
-  salvageValue: SURefSalvageValue
-  systems: string[]
-  /**
-   * Special traits and properties of items, systems, or abilities
-   */
-  traits?: SURefMetaTrait[]
-}
+export type SURefVehicle = SURefMetaBaseEntity & SURefMetaMechanicalEntity

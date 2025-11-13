@@ -15,8 +15,8 @@ import type {
   SURefAbilityTreeRequirement,
   SURefBioTitan,
   SURefChassis,
-  SURefAdvancedClass,
-  SURefCoreClass,
+  SURefAdvancedClasse,
+  SURefCoreClasse,
   SURefCrawlerBay,
   SURefCrawlerTechLevel,
   SURefCrawler,
@@ -75,8 +75,8 @@ type SchemaToEntityMap = {
   'ability-tree-requirements': SURefAbilityTreeRequirement
   'bio-titans': SURefBioTitan
   'chassis': SURefChassis
-  'classes.advanced': SURefAdvancedClass
-  'classes.core': SURefCoreClass
+  'classes.advanced': SURefAdvancedClasse
+  'classes.core': SURefCoreClasse
   'crawler-bays': SURefCrawlerBay
   'crawler-tech-levels': SURefCrawlerTechLevel
   'crawlers': SURefCrawler

@@ -14,33 +14,13 @@
     ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
+      },
+      {
+        "$ref": "shared/objects.schema.json#/definitions/mechanicalEntity"
       }
     ],
-    "properties": {
-      "structurePoints": {
-        "$ref": "shared/common.schema.json#/definitions/positiveInteger"
-      },
-      "techLevel": {
-        "$ref": "shared/common.schema.json#/definitions/techLevel"
-      },
-      "salvageValue": {
-        "$ref": "shared/common.schema.json#/definitions/salvageValue"
-      },
-      "systems": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      },
-      "traits": {
-        "type": "array",
-        "description": "Special traits and properties of items, systems, or abilities",
-        "items": {
-          "$ref": "shared/objects.schema.json#/definitions/trait"
-        }
-      }
-    },
+    "properties": {},
     "unevaluatedProperties": false
   }
 }

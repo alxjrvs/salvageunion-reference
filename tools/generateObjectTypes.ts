@@ -206,6 +206,11 @@ function generateProperties(
   const lines: string[] = []
 
   for (const [propName, propSchema] of Object.entries(properties)) {
+    // Skip properties with value `true` - they're inherited from base types
+    if (propSchema === true) {
+      continue
+    }
+
     const isRequired = required.includes(propName)
     const optional = isRequired ? '' : '?'
     const formattedName = formatPropertyName(propName)
@@ -254,6 +259,15 @@ function generateObjectType(name: string, schema: JSONSchema): string | null {
     lines.push('/**')
     lines.push(` * ${schema.description}`)
     lines.push(' */')
+  }
+
+  // Handle simple $ref (type alias)
+  if (schema.$ref && !schema.allOf && !schema.properties && !schema.oneOf) {
+    const refType = extractRefType(schema.$ref)
+    if (refType) {
+      lines.push(`export type ${typeName} = ${refType.typeName}`)
+      return lines.join('\n')
+    }
   }
 
   // Handle allOf (inheritance/composition)
@@ -412,17 +426,24 @@ async function generateObjectTypes() {
   // Generate object types in dependency order
   const objectOrder = [
     'entry',
+    'baseEntity',
     'damage',
     'trait',
     'grantable',
     'effect',
     'stats',
+    'chassisStats',
+    'equipmentStats',
+    'contentBlock',
+    'combatEntity',
+    'mechanicalEntity',
     'choice',
     'npc',
     'patternSystemModule',
-    'pattern',
     'techLevelEffect',
     'action',
+    'grant',
+    'pattern',
     'systemModule',
     'table',
     'bonusPerTechLevel',

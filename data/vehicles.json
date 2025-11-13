@@ -23,7 +23,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Box Wheel",
     "systems": [
-      "Locomotion System Box Wheel"
+      "Locomotion System"
     ],
     "traits": [
       {
@@ -127,7 +127,7 @@
     "name": "Rotorcraft",
     "systems": [
       "Hover Locomotion System",
-      "Rotary Mini Gun"
+      "Rotary Minigun"
     ],
     "traits": [
       {

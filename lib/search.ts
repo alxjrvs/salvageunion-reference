@@ -12,6 +12,16 @@ export interface SearchOptions {
   caseSensitive?: boolean
 }
 
+// Cache for search results
+const searchCache = new Map<string, SearchResult[]>()
+
+/**
+ * Clear the search cache (useful when data is reloaded)
+ */
+export function clearSearchCache(): void {
+  searchCache.clear()
+}
+
 export interface SearchResult {
   schemaName: SURefSchemaName
   schemaTitle: string
@@ -20,6 +30,41 @@ export interface SearchResult {
   entityName: string
   matchedFields: string[]
   matchScore: number
+}
+
+/**
+ * Extract all text from content blocks recursively
+ */
+function extractContentText(content: unknown): string {
+  if (!content) return ''
+
+  if (Array.isArray(content)) {
+    return content.map(extractContentText).join(' ')
+  }
+
+  if (typeof content === 'object' && content !== null) {
+    const block = content as Record<string, unknown>
+    let text = ''
+
+    // Extract value field
+    if ('value' in block && typeof block.value === 'string') {
+      text += block.value + ' '
+    }
+
+    // Extract label field
+    if ('label' in block && typeof block.label === 'string') {
+      text += block.label + ' '
+    }
+
+    // Recursively extract from nested items
+    if ('items' in block && Array.isArray(block.items)) {
+      text += extractContentText(block.items)
+    }
+
+    return text
+  }
+
+  return ''
 }
 
 /**
@@ -97,6 +142,37 @@ function matchesQuery(
     }
   }
 
+  // Check content blocks if they exist
+  if ('content' in entity && entity.content) {
+    const contentText = extractContentText(entity.content)
+    const searchableContent = caseSensitive
+      ? contentText
+      : contentText.toLowerCase()
+    if (searchableContent.includes(searchQuery)) {
+      matchedFields.push('content')
+    }
+  }
+
+  // Check actions for content blocks
+  if ('actions' in entity && Array.isArray(entity.actions)) {
+    for (const action of entity.actions) {
+      if (
+        typeof action === 'object' &&
+        action !== null &&
+        'content' in action
+      ) {
+        const actionContentText = extractContentText(action.content)
+        const searchableActionContent = caseSensitive
+          ? actionContentText
+          : actionContentText.toLowerCase()
+        if (searchableActionContent.includes(searchQuery)) {
+          matchedFields.push('actions.content')
+          break // Only count once even if multiple actions match
+        }
+      }
+    }
+  }
+
   return {
     matches: matchedFields.length > 0,
     matchedFields,
@@ -111,6 +187,15 @@ export function search(options: SearchOptions): SearchResult[] {
 
   if (!query.trim()) {
     return []
+  }
+
+  // Create cache key from search options
+  const cacheKey = JSON.stringify(options)
+
+  // Check cache first
+  const cached = searchCache.get(cacheKey)
+  if (cached) {
+    return cached
   }
 
   const results: SearchResult[] = []
@@ -169,11 +254,13 @@ export function search(options: SearchOptions): SearchResult[] {
   results.sort((a, b) => b.matchScore - a.matchScore)
 
   // Apply limit after sorting
-  if (limit && results.length > limit) {
-    return results.slice(0, limit)
-  }
+  const finalResults =
+    limit && results.length > limit ? results.slice(0, limit) : results
 
-  return results
+  // Cache the results
+  searchCache.set(cacheKey, finalResults)
+
+  return finalResults
 }
 
 /**

@@ -7,14 +7,17 @@
 import type {
   SURefActionType,
   SURefClassType,
+  SURefContentType,
   SURefDamageType,
   SURefRange,
   SURefSchemaName,
+  SURefSource,
   SURefTree
 } from './enums.js'
 
 import type {
   SURefActivationCost,
+  SURefAssetUrl,
   SURefHitPoints,
   SURefId,
   SURefName,
@@ -25,11 +28,16 @@ import type {
 } from './common.js'
 
 /**
- * Damage dealt by an attack or ability
+ * Basic entity with name, content, source, and page reference
  */
-export interface SURefMetaDamage {
-  damageType: SURefDamageType
-  amount: (SURefNonNegativeInteger | string)
+export interface SURefMetaBaseEntity {
+  asset_url?: SURefAssetUrl
+  content?: SURefMetaContent
+  id: SURefId
+  indexable?: boolean
+  name: SURefName
+  source: SURefSource
+  page: SURefPositiveInteger
 }
 
 /**
@@ -38,22 +46,6 @@ export interface SURefMetaDamage {
 export interface SURefMetaTrait {
   amount?: (SURefNonNegativeInteger | string)
   type: string
-}
-
-/**
- * Grantable entity with a name and description
- */
-export interface SURefMetaGrantable {
-  schema: (SURefSchemaName | 'choice')
-  name: SURefName
-}
-
-/**
- * Related entry or reference
- */
-export interface SURefMetaEffect {
-  label?: string
-  value: string
 }
 
 /**
@@ -68,6 +60,70 @@ export interface SURefMetaStats {
   cargoCapacity?: SURefNonNegativeInteger
   techLevel?: SURefTechLevel
   salvageValue?: SURefSalvageValue
+}
+
+/**
+ * Statistics specific to chassis
+ */
+export interface SURefMetaChassisStats {
+  structurePoints?: SURefNonNegativeInteger
+  energyPoints?: SURefNonNegativeInteger
+  heatCapacity?: SURefNonNegativeInteger
+  systemSlots?: SURefNonNegativeInteger
+  moduleSlots?: SURefNonNegativeInteger
+  cargoCapacity?: SURefNonNegativeInteger
+  techLevel?: SURefTechLevel
+  salvageValue?: SURefSalvageValue
+}
+
+/**
+ * Statistics for equipment (systems and modules)
+ */
+export interface SURefMetaEquipmentStats {
+  techLevel?: SURefTechLevel
+  salvageValue?: SURefSalvageValue
+}
+
+/**
+ * Block of structured content for rendering (paragraph, heading, list item, etc.)
+ */
+export interface SURefMetaContentBlock {
+  type?: SURefContentType
+  /**
+   * The text content of this block
+   */
+  value: string
+  /**
+   * Optional label for this content block (e.g., for labeled sections)
+   */
+  label?: string
+  /**
+   * Heading level (1-6) when type is 'heading'
+   */
+  level?: number
+  /**
+   * Nested content blocks (e.g., list items within a list)
+   */
+  items?: SURefMetaContentBlock[]
+}
+
+/**
+ * Entity that can perform actions and has traits
+ */
+export interface SURefMetaCombatEntity {
+  actions?: SURefMetaAction[]
+  traits?: SURefMetaTrait[]
+}
+
+/**
+ * Mechanical entity with structure points and equipment stats
+ */
+export interface SURefMetaMechanicalEntity {
+  structurePoints?: SURefPositiveInteger
+  techLevel?: SURefTechLevel
+  salvageValue?: SURefSalvageValue
+  systems?: string[]
+  traits?: SURefMetaTrait[]
 }
 
 export interface SURefMetaChoice {
@@ -105,30 +161,15 @@ export interface SURefMetaPatternSystemModule {
 }
 
 /**
- * Mech chassis pattern configuration
- */
-export interface SURefMetaPattern {
-  name: SURefName
-  content?: SURefMetaContent
-  legalStarting?: boolean
-  systems: SURefMetaPatternSystemModule[]
-  modules: SURefMetaPatternSystemModule[]
-  /**
-   * Optional drone configuration
-   */
-  drone?: {
-    systems: string[]
-    modules: string[]
-  }
-}
-
-/**
  * Effect that scales with tech level
  */
 export interface SURefMetaTechLevelEffect {
   techLevelMin: SURefPositiveInteger
   techLevelMax: SURefPositiveInteger
-  content: SURefMetaContent
+  effects: {
+label?: string
+value: string
+}[]
 }
 
 /**
@@ -150,9 +191,41 @@ export interface SURefMetaAction {
   range?: SURefRange
   actionType?: SURefActionType
   traits?: SURefMetaTrait[]
-  damage?: SURefMetaDamage
+  /**
+   * Damage dealt by an attack or ability
+   */
+  damage?: {
+    damageType: SURefDamageType
+    amount: (SURefNonNegativeInteger | string)
+  }
   choices?: SURefMetaChoice[]
   table?: SURefMetaTable
+}
+
+/**
+ * Grantable entity with a name and description
+ */
+export interface SURefMetaGrant {
+  schema: (SURefSchemaName | 'choice')
+  name: SURefName
+}
+
+/**
+ * Mech chassis pattern configuration
+ */
+export interface SURefMetaPattern {
+  name: SURefName
+  content?: SURefMetaContent
+  legalStarting?: boolean
+  systems: SURefMetaPatternSystemModule[]
+  modules: SURefMetaPatternSystemModule[]
+  /**
+   * Optional drone configuration
+   */
+  drone?: {
+    systems: string[]
+    modules: string[]
+  }
 }
 
 /**
@@ -164,7 +237,7 @@ export interface SURefMetaSystemModule extends SURefMetaStats {
   salvageValue: SURefSalvageValue
   recommended?: boolean
   count?: SURefNonNegativeInteger
-  actions: SURefMetaActions
+  actions: SURefMetaAction[]
 }
 
 /**
@@ -249,10 +322,11 @@ export type SURefMetaBonusPerTechLevel = SURefMetaStats
 /**
  * Advanced or hybrid character class
  */
-export interface SURefMetaAdvancedClass extends SURefMetaBaseEntry {
+export interface SURefMetaAdvancedClass extends SURefMetaBaseEntity {
   type: SURefClassType
   advancedTree: SURefTree
   legendaryTree: SURefTree
+  content?: SURefMetaContent
 }
 
 export type SURefMetaActionOptions = {
@@ -260,21 +334,13 @@ export type SURefMetaActionOptions = {
   value: string
 }[]
 
-export type SURefMetaActions = SURefMetaAction[]
-
 export type SURefMetaChoices = SURefMetaChoice[]
 
 export type SURefMetaContent = SURefMetaContentBlock[]
 
 export type SURefMetaCustomSystemOptions = SURefMetaSystemModule[]
 
-export type SURefMetaEffects = SURefMetaEffect[]
-
-export type SURefMetaGrants = SURefMetaGrantable[]
-
 export type SURefMetaModules = string[]
-
-export type SURefMetaPatterns = SURefMetaPattern[]
 
 export type SURefMetaSchemaEntities = string[]
 

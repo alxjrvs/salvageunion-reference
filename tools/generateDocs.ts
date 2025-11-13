@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import { SCHEMA_DISPLAY_NAME_MAP } from './schemaNameMap.js'
 
 interface SchemaInfo {
   id: string
@@ -99,6 +98,37 @@ function parseSchemaFile(schemaFile: string): SchemaInfo | null {
     const id = schemaFile.replace('.schema.json', '')
     const dataFile = `data/${id}.json`
 
+    // Generate display name from schema title or id
+    // This will be used to populate the schema index
+    let displayName = schema.title || id
+
+    // Convert to proper display format
+    if (displayName === 'abilities') displayName = 'Abilities'
+    else if (displayName === 'ability-tree-requirements')
+      displayName = 'Ability Tree Requirements'
+    else if (displayName === 'bio-titans') displayName = 'Bio-Titans'
+    else if (displayName === 'chassis') displayName = 'Chassis'
+    else if (displayName === 'classes.advanced')
+      displayName = 'Advanced Classes'
+    else if (displayName === 'classes.core') displayName = 'Core Classes'
+    else if (displayName === 'crawler-bays') displayName = 'Crawler Bays'
+    else if (displayName === 'crawler-tech-levels')
+      displayName = 'Crawler Tech Levels'
+    else if (displayName === 'crawlers') displayName = 'Crawlers'
+    else if (displayName === 'creatures') displayName = 'Creatures'
+    else if (displayName === 'distances') displayName = 'Distances'
+    else if (displayName === 'drones') displayName = 'Drones'
+    else if (displayName === 'equipment') displayName = 'Equipment'
+    else if (displayName === 'keywords') displayName = 'Keywords'
+    else if (displayName === 'meld') displayName = 'Meld'
+    else if (displayName === 'modules') displayName = 'Modules'
+    else if (displayName === 'npcs') displayName = 'NPCs'
+    else if (displayName === 'roll-tables') displayName = 'Roll Tables'
+    else if (displayName === 'squads') displayName = 'Squads'
+    else if (displayName === 'systems') displayName = 'Systems'
+    else if (displayName === 'traits') displayName = 'Traits'
+    else if (displayName === 'vehicles') displayName = 'Vehicles'
+
     const info: SchemaInfo = {
       id,
       title: schema.title || id,
@@ -107,7 +137,7 @@ function parseSchemaFile(schemaFile: string): SchemaInfo | null {
       schemaFile: `schemas/${schemaFile}`,
       itemCount: getItemCount(dataFile),
       requiredFields: getRequiredFields(schema, id),
-      displayName: SCHEMA_DISPLAY_NAME_MAP[id] || id,
+      displayName,
     }
 
     // Add $comment if present

@@ -159,9 +159,7 @@
     "source": "Salvage Union Workshop Manual",
     "name": "Needle Drone",
     "systems": [
-      "Hover Locomotion System",
-      "Needler",
-      "Polycarbonate Stealth Chassis"
+      "Hover Locomotion System"
     ],
     "techLevel": 4,
     "salvageValue": 3,

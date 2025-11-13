@@ -10,7 +10,7 @@
         "$ref": "shared/objects.schema.json#/definitions/systemModule"
       },
       {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
       }
     ]
   }

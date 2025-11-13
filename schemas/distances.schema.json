@@ -9,7 +9,7 @@
   "items": {
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
       }
     ],
     "properties": {

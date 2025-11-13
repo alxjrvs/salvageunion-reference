@@ -14,7 +14,7 @@
     ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
       }
     ],
     "properties": {
@@ -33,7 +33,10 @@
         }
       },
       "actions": {
-        "$ref": "shared/objects.schema.json#/definitions/actions"
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
       },
       "techLevelEffects": {
         "$ref": "shared/objects.schema.json#/definitions/techLevelEffects"

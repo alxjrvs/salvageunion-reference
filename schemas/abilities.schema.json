@@ -12,7 +12,7 @@
     ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
       }
     ],
     "properties": {
@@ -43,7 +43,10 @@
         "$ref": "shared/enums.schema.json#/definitions/actionType"
       },
       "grants": {
-        "$ref": "shared/objects.schema.json#/definitions/grants"
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/grant"
+        }
       },
       "activationCurrency": {
         "type": "string",
@@ -52,7 +55,10 @@
         ]
       },
       "actions": {
-        "$ref": "shared/objects.schema.json#/definitions/actions"
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
       }
     },
     "unevaluatedProperties": false

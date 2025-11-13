@@ -11,7 +11,7 @@
     ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
       }
     ],
     "properties": {
@@ -19,7 +19,10 @@
         "$ref": "shared/common.schema.json#/definitions/hitPoints"
       },
       "actions": {
-        "$ref": "shared/objects.schema.json#/definitions/actions"
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/action"
+        }
       },
       "traits": {
         "type": "array",

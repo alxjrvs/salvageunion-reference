@@ -14,7 +14,6 @@ import {
   isSystemOrModule,
   isChassis,
   isSystem,
-  isMetaAction,
   getTechLevel,
   getSalvageValue,
   getSlotsRequired,
@@ -181,41 +180,6 @@ describe('Additional Type Guards', () => {
     it('should return false for abilities', () => {
       const ability = SalvageUnionReference.Abilities.all()[0]
       expect(isSystemOrModule(ability)).toBe(false)
-    })
-  })
-
-  describe('isMetaAction', () => {
-    it('should return true for actions from chassis', () => {
-      const chassis = SalvageUnionReference.Chassis.all()[0]
-      if (chassis.actions && chassis.actions.length > 0) {
-        const action = chassis.actions[0]
-        expect(isMetaAction(action)).toBe(true)
-      }
-    })
-
-    it('should return true for actions from systems', () => {
-      const system = SalvageUnionReference.Systems.all().find(
-        (s) => s.actions && s.actions.length > 0
-      )
-      if (system && system.actions && system.actions.length > 0) {
-        const action = system.actions[0]
-        expect(isMetaAction(action)).toBe(true)
-      }
-    })
-
-    it('should return false for regular entities', () => {
-      const chassis = SalvageUnionReference.Chassis.all()[0]
-      expect(isMetaAction(chassis)).toBe(false)
-    })
-
-    it('should return false for abilities', () => {
-      const ability = SalvageUnionReference.Abilities.all()[0]
-      expect(isMetaAction(ability)).toBe(false)
-    })
-
-    it('should return false for systems', () => {
-      const system = SalvageUnionReference.Systems.all()[0]
-      expect(isMetaAction(system)).toBe(false)
     })
   })
 

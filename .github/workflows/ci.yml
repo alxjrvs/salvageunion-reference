@@ -34,3 +34,9 @@ jobs:
 
       - name: Validate unique IDs
         run: bun run validate:ids
+
+      - name: Validate generated files
+        run: bun run validate:generated
+
+      - name: Validate cross-references
+        run: bun run validate:references

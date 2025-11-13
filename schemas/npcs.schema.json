@@ -12,22 +12,15 @@
     ],
     "allOf": [
       {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
+      },
+      {
+        "$ref": "shared/objects.schema.json#/definitions/combatEntity"
       }
     ],
     "properties": {
       "hitPoints": {
         "$ref": "shared/common.schema.json#/definitions/hitPoints"
-      },
-      "actions": {
-        "$ref": "shared/objects.schema.json#/definitions/actions"
-      },
-      "traits": {
-        "type": "array",
-        "description": "Special traits and properties of items, systems, or abilities",
-        "items": {
-          "$ref": "shared/objects.schema.json#/definitions/trait"
-        }
       }
     },
     "unevaluatedProperties": false
