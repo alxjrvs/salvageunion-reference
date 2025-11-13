@@ -6,9 +6,7 @@
     "actions": [
       {
         "name": "Bite",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 2,
           "damageType": "HP"
@@ -47,9 +45,7 @@
     "actions": [
       {
         "name": "Devour",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -97,9 +93,7 @@
     "actions": [
       {
         "name": "Nanoid Tendrils",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "SP"
@@ -139,9 +133,7 @@
     "actions": [
       {
         "name": "Splitter Tendrils",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "amount": 4,
           "damageType": "SP"
@@ -196,9 +188,7 @@
       {
         "name": "Behemoth Tendrils",
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "amount": 6,
           "damageType": "SP"

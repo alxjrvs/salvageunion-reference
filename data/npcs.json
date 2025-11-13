@@ -7,9 +7,7 @@
     "actions": [
       {
         "name": "Improvised Melee Weapon",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 2,
           "damageType": "HP"
@@ -42,9 +40,7 @@
     "actions": [
       {
         "name": "Improvised Firearm",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -76,9 +72,7 @@
     "actions": [
       {
         "name": "Rifle",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "amount": 5,
           "damageType": "HP"
@@ -111,9 +105,7 @@
     "actions": [
       {
         "name": "Green Laser Rifle",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "amount": 5,
           "damageType": "HP"
@@ -146,9 +138,7 @@
     "actions": [
       {
         "name": "Pistol",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -181,9 +171,7 @@
     "actions": [
       {
         "name": "Sniper Rifle",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "amount": 6,
           "damageType": "HP"

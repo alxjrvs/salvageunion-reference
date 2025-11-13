@@ -3,10 +3,7 @@
     "id": "a2e4549e-d235-4647-9768-88372bf93afc",
     "source": "Salvage Union Workshop Manual",
     "name": "Defacer Drone",
-    "systems": [
-      "Hover Locomotion System",
-      "Chainsaw Arm"
-    ],
+    "systems": ["Hover Locomotion System", "Chainsaw Arm"],
     "techLevel": 1,
     "salvageValue": 1,
     "structurePoints": 2,
@@ -22,10 +19,7 @@
     "id": "8620fe00-e899-4ff1-8a31-a3dec347b2df",
     "source": "Salvage Union Workshop Manual",
     "name": "Salvo Drone",
-    "systems": [
-      "Hover Locomotion System",
-      ".50 Cal Machine Gun"
-    ],
+    "systems": ["Hover Locomotion System", ".50 Cal Machine Gun"],
     "techLevel": 1,
     "salvageValue": 2,
     "structurePoints": 3,
@@ -41,10 +35,7 @@
     "id": "89e32833-9150-4672-b7e6-2782d00976b4",
     "source": "Salvage Union Workshop Manual",
     "name": "Survey Drone",
-    "systems": [
-      "Hover Locomotion System",
-      "Survey Scanner"
-    ],
+    "systems": ["Hover Locomotion System", "Survey Scanner"],
     "techLevel": 1,
     "salvageValue": 1,
     "structurePoints": 1,
@@ -61,10 +52,7 @@
     "id": "3144593e-93af-4d06-9178-5d40c74a32a0",
     "source": "Salvage Union Workshop Manual",
     "name": "Combat Drone",
-    "systems": [
-      "Hover Locomotion System",
-      "Red Laser"
-    ],
+    "systems": ["Hover Locomotion System", "Red Laser"],
     "techLevel": 2,
     "salvageValue": 2,
     "structurePoints": 4,
@@ -80,10 +68,7 @@
     "id": "3971ed10-6db8-4a01-bc76-fdd037f5d6c9",
     "source": "Salvage Union Workshop Manual",
     "name": "Heavy Combat Drone",
-    "systems": [
-      "Hover Locomotion System",
-      "30mm Autocannon"
-    ],
+    "systems": ["Hover Locomotion System", "30mm Autocannon"],
     "techLevel": 3,
     "salvageValue": 2,
     "structurePoints": 5,
@@ -99,11 +84,7 @@
     "id": "774f56f5-1c8b-4508-b61b-5060b031468c",
     "source": "Salvage Union Workshop Manual",
     "name": "Walker Drone",
-    "systems": [
-      "Locomotion System",
-      "Articulated Rigging Arm",
-      "Green Laser"
-    ],
+    "systems": ["Locomotion System", "Articulated Rigging Arm", "Green Laser"],
     "techLevel": 2,
     "salvageValue": 3,
     "structurePoints": 6,
@@ -120,10 +101,7 @@
     "id": "592f32ac-eed8-4cce-bfa1-2517b3d58091",
     "source": "Salvage Union Workshop Manual",
     "name": "Pest Drone",
-    "systems": [
-      "Spider Locomotion System",
-      "FM-3 Flamethrower"
-    ],
+    "systems": ["Spider Locomotion System", "FM-3 Flamethrower"],
     "techLevel": 3,
     "salvageValue": 3,
     "structurePoints": 4,
@@ -139,10 +117,7 @@
     "id": "123cfc16-f3a1-4a5c-ba6c-a109695a4358",
     "source": "Salvage Union Workshop Manual",
     "name": "Hover Drone",
-    "systems": [
-      "Hover Locomotion System",
-      "Missile Pod"
-    ],
+    "systems": ["Hover Locomotion System", "Missile Pod"],
     "techLevel": 4,
     "salvageValue": 3,
     "structurePoints": 4,
@@ -158,9 +133,7 @@
     "id": "09e8ae26-2d39-4ba1-be81-e69bc263be13",
     "source": "Salvage Union Workshop Manual",
     "name": "Needle Drone",
-    "systems": [
-      "Hover Locomotion System"
-    ],
+    "systems": ["Hover Locomotion System"],
     "techLevel": 4,
     "salvageValue": 3,
     "structurePoints": 2,

@@ -17,9 +17,7 @@
           }
         ],
         "actionType": "Free",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "name": "Comms Module",
         "content": [
           {
@@ -73,9 +71,7 @@
           }
         ],
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 2,
         "table": {
           "1": "The hack fails and the target is alerted to your hacking attempt. They can retaliate as appropriate.",
@@ -116,9 +112,7 @@
           }
         ],
         "actionType": "Reaction",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 2,
         "table": {
           "1": "You fail to block the hack, and your Firewall is breached, it becomes damaged and cannot be used until repaired to the Intact Condition.",
@@ -181,9 +175,7 @@
       {
         "id": "7e063dde-3281-4b15-ba2a-ed09252a990e",
         "actionType": "Turn",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 1,
         "name": "Reactor Flare",
         "content": [
@@ -238,9 +230,7 @@
           }
         ],
         "actionType": "Short",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 2,
         "table": {
           "1": "Your scan returns inaccurate data. You may ask the Mediator 2 questions about the area and both answers will contain false information which you believe to be true.",
@@ -363,9 +353,7 @@
           }
         ],
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 1,
         "name": "Damage Assessor",
         "content": [
@@ -420,9 +408,7 @@
           }
         ],
         "actionType": "Short",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 2,
         "name": "Deep Survey Scanner",
         "content": [
@@ -481,9 +467,7 @@
       {
         "id": "3f251696-6c0c-4b6c-9cf3-9f7851edcb21",
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 2,
         "name": "Hull Magnetiser",
         "content": [
@@ -520,9 +504,7 @@
           }
         ],
         "actionType": "Free",
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "activationCost": 1,
         "name": "IR Night Vision Optics",
         "content": [
@@ -557,9 +539,7 @@
         "name": "Coolant Flush",
         "activationCost": 2,
         "actionType": "Short",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "traits": [
           {
             "type": "scanner"
@@ -604,9 +584,7 @@
           }
         ],
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 1,
         "name": "M315 Motion Scanner",
         "content": [
@@ -639,9 +617,7 @@
           }
         ],
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 1,
         "name": "Navigation Module",
         "content": [
@@ -698,9 +674,7 @@
             "type": "hacking"
           }
         ],
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 2,
         "name": "Reactor Overload",
         "content": [
@@ -724,9 +698,7 @@
       {
         "id": "cd0784f5-3f3f-4edd-bda9-56899826b947",
         "actionType": "Turn",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 1,
         "name": "Video Projection Array",
         "content": [
@@ -807,9 +779,7 @@
       {
         "id": "123d0e83-0362-4562-9351-0df38a24ac4d",
         "actionType": "Turn",
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "activationCost": 1,
         "name": "Video Recording Array",
         "content": [
@@ -859,9 +829,7 @@
       {
         "name": "Heal",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "id": "9bcadaa9-c771-4668-acda-746a4bdec539",
         "content": [
@@ -874,9 +842,7 @@
       {
         "name": "Physio",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "id": "5bde20a0-0965-4e16-b482-bd7747ff9cf2",
         "content": [
@@ -889,9 +855,7 @@
       {
         "name": "Therapy",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "id": "b5f540ec-987a-4282-97b5-526e0f92bf51",
         "content": [
@@ -904,9 +868,7 @@
       {
         "name": "First Aid",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Free",
         "id": "dff5c995-b7bf-45ce-b951-8e16ea6a75f4",
         "content": [
@@ -950,9 +912,7 @@
             "type": "hacking"
           }
         ],
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 2,
         "name": "Comms Tapper",
         "content": [
@@ -1047,9 +1007,7 @@
       {
         "id": "26befd64-edfe-4347-88da-5766310b9394",
         "actionType": "Turn",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 3,
         "name": "ECM Transmitter",
         "content": [
@@ -1126,9 +1084,7 @@
             "type": "hacking"
           }
         ],
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 1,
         "name": "Hacking Repeater Node",
         "content": [
@@ -1211,9 +1167,7 @@
             "type": "hacking"
           }
         ],
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 2,
         "table": {
           "1": "The hack fails and the target is alerted of your hacking attempt. They can retaliate as appropriate.",
@@ -1249,9 +1203,7 @@
       {
         "id": "34b696b8-b97b-4741-b251-4de139efb959",
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 2,
         "table": {
           "1": "The targets are entirely unharmed. The Module malfunctions causing the sound to reverberate through your Mech's Cockpit, your Pilot must roll on the Critical Injury Table.",
@@ -1318,9 +1270,7 @@
             "type": "hacking"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "activationCost": 4,
         "table": {
           "1": "THE TONGUE REPLICATES IN YOUR SYSTEM. YOU GAIN THE IMMOBILE TRAIT FOR 10 MINUTES",
@@ -1536,9 +1486,7 @@
             "type": "targeter"
           }
         ],
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 3,
         "name": "Laser Guidance",
         "content": [
@@ -1567,9 +1515,7 @@
             "type": "hacking"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "table": {
           "1": "The target goes haywire, it moves one Range Band in a random direction, falls Prone, and gains the [[Vulnerable]] Trait.",
           "20": "The target entirely loses control of itself, attacking wildly. It must make an attack with all its Weapons Systems against a random Ally within Range. It cannot move or take any actions until the end of your next turn.",
@@ -1605,9 +1551,7 @@
             "type": "targeter"
           }
         ],
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 4,
         "name": "MRSI Co-Ordinator",
         "content": [
@@ -1640,9 +1584,7 @@
             "type": "optics"
           }
         ],
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 1,
         "name": "Thermal Optics",
         "content": [
@@ -1742,9 +1684,7 @@
             "type": "guided"
           }
         ],
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "id": "b9f08412-3a34-4440-8468-3e8d93a8e242",
         "content": [
           {
@@ -1782,9 +1722,7 @@
       {
         "id": "0e56c8ef-3f73-4d6c-80d7-a874a609105e",
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "activationCost": 2,
         "name": "Holo Projector",
         "content": [
@@ -1868,9 +1806,7 @@
             "type": "communicator"
           }
         ],
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "name": "Neuralink Communicator",
         "content": [
           {

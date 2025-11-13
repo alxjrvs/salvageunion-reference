@@ -14,9 +14,7 @@
             "amount": 3
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "name": "First Aid Kit",
         "content": [
           {
@@ -46,9 +44,7 @@
         "name": "Patch",
         "actionType": "Turn",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "07739aaa-f188-47e8-8f5b-f9e236e53d11",
         "content": [
           {
@@ -62,9 +58,7 @@
         "name": "System Repair",
         "actionType": "Short",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "6e96a97d-3edb-4e53-bb5c-32f2d5fc8eb8",
         "content": [
           {
@@ -78,9 +72,7 @@
         "name": "Chassis Repair",
         "actionType": "Long",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "136a19a3-f2f9-4d91-9c14-af0911528b2e",
         "content": [
           {
@@ -91,9 +83,7 @@
       },
       {
         "id": "72e73a35-f913-4153-9105-0a6ee3433e82",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "name": "Handheld Riveting Gun",
         "content": [
           {
@@ -115,9 +105,7 @@
       {
         "id": "6ba4598f-8b08-4866-94e1-9099c2aa76d7",
         "actionType": "Free",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "name": "Heavy Duty Torch",
         "content": [
           {
@@ -147,9 +135,7 @@
           }
         ],
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "name": "High Tensile Wire",
         "content": [
           {
@@ -183,9 +169,7 @@
             "amount": 2
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 3
@@ -221,9 +205,7 @@
             "type": "unwieldy"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "HP",
           "amount": 3
@@ -255,9 +237,7 @@
             "type": "silent"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "HP",
           "amount": 2
@@ -287,9 +267,7 @@
           }
         ],
         "actionType": "Free",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "name": "Portable Comms Unit",
         "content": [
           {
@@ -348,9 +326,7 @@
           }
         ],
         "actionType": "Turn",
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "name": "Flare Gun",
         "content": [
           {
@@ -403,9 +379,7 @@
             "type": "ballistic"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "HP",
           "amount": 3
@@ -436,9 +410,7 @@
           }
         ],
         "actionType": "Turn",
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "name": "Disposable Camera",
         "content": [
           {
@@ -459,9 +431,7 @@
       {
         "name": "Project",
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "id": "cbae8222-5584-4d12-b59a-10c6555972c2",
         "content": [
           {
@@ -501,9 +471,7 @@
         "name": "Patch",
         "actionType": "Turn",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "23956569-f661-4b45-b9e0-d3549b80b092",
         "content": [
           {
@@ -517,9 +485,7 @@
         "name": "System Repair",
         "actionType": "Short",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "719e1de4-9f51-4be5-8067-bedcb2efa9eb",
         "content": [
           {
@@ -533,9 +499,7 @@
         "name": "Chassis Repair",
         "actionType": "Long",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "a0884c7f-b6ab-4939-b155-f504d21de381",
         "content": [
           {
@@ -571,9 +535,7 @@
             "type": "energy"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "HP",
           "amount": 3
@@ -662,9 +624,7 @@
             "type": "energy"
           }
         ],
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "HP",
           "amount": 5
@@ -698,9 +658,7 @@
             "amount": 3
           }
         ],
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "SP",
           "amount": 4
@@ -756,9 +714,7 @@
         "source": "Salvage Union Workshop Manual",
         "name": "Healing Spray",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "4a6878a0-f2c2-4e70-8854-ee1ad9ada50a",
         "content": [
           {
@@ -771,9 +727,7 @@
         "source": "Salvage Union Workshop Manual",
         "name": "Suturing Spray",
         "actionType": "Short",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "657af5f2-b1dd-4954-bf6a-b85693a6e442",
         "content": [
           {
@@ -812,9 +766,7 @@
         "name": "Patch",
         "actionType": "Turn",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "903370bf-ce43-4f87-a07a-ee524359eba8",
         "content": [
           {
@@ -828,9 +780,7 @@
         "name": "System Repair",
         "actionType": "Short",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "135672bb-5022-4c93-a701-2aa4021f8d3c",
         "content": [
           {
@@ -844,9 +794,7 @@
         "name": "Chassis Repair",
         "actionType": "Long",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "6cbff348-a9ec-42fb-bde3-b9189d86ebc5",
         "content": [
           {
@@ -916,9 +864,7 @@
             "type": "silent"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "HP",
           "amount": 4
@@ -957,9 +903,7 @@
             "type": "heavy"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "HP",
           "amount": 2
@@ -1019,9 +963,7 @@
             "type": "ballistic"
           }
         ],
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "HP",
           "amount": 5
@@ -1050,9 +992,7 @@
             "type": "ballistic"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "HP",
           "amount": 4
@@ -1089,9 +1029,7 @@
             "amount": 3
           }
         ],
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "name": "Tranquiliser Rifle",
         "content": [
           {
@@ -1117,9 +1055,7 @@
         "name": "Patch",
         "actionType": "Turn",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "67d64a51-6f0d-4a51-919d-bfd68fddb25f",
         "content": [
           {
@@ -1133,9 +1069,7 @@
         "name": "System Repair",
         "actionType": "Short",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "303021a0-f780-4bd7-af93-411f9004ac4c",
         "content": [
           {
@@ -1149,9 +1083,7 @@
         "name": "Chassis Repair",
         "actionType": "Long",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "6b7c19eb-61db-4661-92ea-0803722f26a5",
         "content": [
           {
@@ -1187,9 +1119,7 @@
             "type": "climbing"
           }
         ],
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "name": "Electro Grappling Hook",
         "content": [
           {
@@ -1210,9 +1140,7 @@
       {
         "id": "583dfdf0-ff70-4deb-9191-8bdf5042a282",
         "actionType": "Free",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "name": "Night Vision Goggles",
         "content": [
           {
@@ -1284,9 +1212,7 @@
             "amount": 2
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 4
@@ -1334,9 +1260,7 @@
             "amount": 3
           }
         ],
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 5
@@ -1365,9 +1289,7 @@
             "type": "ballistic"
           }
         ],
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "HP",
           "amount": 6
@@ -1402,9 +1324,7 @@
             "type": "silent"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 4
@@ -1448,9 +1368,7 @@
             "amount": 3
           }
         ],
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "SP",
           "amount": 7
@@ -1507,9 +1425,7 @@
         "name": "Patch",
         "actionType": "Turn",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "f146d9b8-35f6-4694-a202-e70c12109c07",
         "content": [
           {
@@ -1523,9 +1439,7 @@
         "name": "System Repair",
         "actionType": "Short",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "e713a9fb-46ef-49ef-8801-3ececd42952a",
         "content": [
           {
@@ -1539,9 +1453,7 @@
         "name": "Chassis Repair",
         "actionType": "Long",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "a4bcfe9f-757b-48e4-be23-de1af83022f4",
         "content": [
           {
@@ -1633,9 +1545,7 @@
           }
         ],
         "actionType": "Turn",
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "name": "Orbital Lance Controller",
         "content": [
           {
@@ -1661,9 +1571,7 @@
         "name": "Patch",
         "actionType": "Turn",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "d738d5c0-10f1-45ff-92b5-5a4d42f0d5d7",
         "content": [
           {
@@ -1677,9 +1585,7 @@
         "name": "System Repair",
         "actionType": "Short",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "3d3ad7ae-1fa4-4e03-a983-3396f6c49cfc",
         "content": [
           {
@@ -1693,9 +1599,7 @@
         "name": "Chassis Repair",
         "actionType": "Long",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "id": "402d6b78-b85e-4f3d-90e9-ca1b74f25ffc",
         "content": [
           {
@@ -1736,9 +1640,7 @@
           "damageType": "SP",
           "amount": 2
         },
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "name": "Custom Sniper Rifle",
         "content": [
           {

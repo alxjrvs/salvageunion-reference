@@ -6,9 +6,7 @@
     "actions": [
       {
         "name": "Scythe Attack",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 4,
           "damageType": "SP"
@@ -154,9 +152,7 @@
       {
         "name": "Swallow Whole",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "traits": [
           {
             "type": "melee"
@@ -233,9 +229,7 @@
       {
         "name": "Cluster Energy Bombs",
         "actionType": "Turn",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "amount": 5,
           "damageType": "SP"
@@ -373,9 +367,7 @@
       {
         "name": "Morph Scythes",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 5,
           "damageType": "SP"
@@ -438,9 +430,7 @@
       {
         "name": "Electrified Spines",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 8,
           "damageType": "SP"
@@ -486,9 +476,7 @@
       {
         "name": "Bio-Electric Arc",
         "actionType": "Turn",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "traits": [
           {
             "type": "energy"
@@ -559,9 +547,7 @@
       {
         "name": "Claw Swipes",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 10,
           "damageType": "SP"
@@ -619,9 +605,7 @@
       {
         "name": "Tail Swat",
         "actionType": "Reaction",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "amount": 15,
           "damageType": "SP"
@@ -642,9 +626,7 @@
       {
         "name": "Rending Bite",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 20,
           "damageType": "SP"
@@ -668,9 +650,7 @@
       {
         "name": "Irradiated Beam",
         "actionType": "Turn",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "amount": 40,
           "damageType": "SP"

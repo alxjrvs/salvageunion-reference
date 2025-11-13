@@ -6,12 +6,7 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": [
-      "structurePoints",
-      "techLevel",
-      "salvageValue",
-      "systems"
-    ],
+    "required": ["structurePoints", "techLevel", "salvageValue", "systems"],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/baseEntity"

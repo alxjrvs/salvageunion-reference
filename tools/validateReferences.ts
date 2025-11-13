@@ -24,7 +24,7 @@ const errors: ValidationError[] = []
 // Load all data files
 const dataDir = join(__dirname, '..', 'data')
 
-function loadData(filename: string): any[] {
+function loadData(filename: string): Record<string, unknown>[] {
   try {
     const content = readFileSync(join(dataDir, filename), 'utf-8')
     return JSON.parse(content)
@@ -41,8 +41,8 @@ const vehicles = loadData('vehicles.json')
 const drones = loadData('drones.json')
 
 // Create lookup sets for fast validation
-const systemNames = new Set(systems.map((s: any) => s.name))
-const moduleNames = new Set(modules.map((m: any) => m.name))
+const systemNames = new Set(systems.map((s) => s.name as string))
+const moduleNames = new Set(modules.map((m) => m.name as string))
 
 console.log(
   `Loaded ${systemNames.size} systems and ${moduleNames.size} modules`

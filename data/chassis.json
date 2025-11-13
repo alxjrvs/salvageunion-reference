@@ -428,9 +428,7 @@
         "name": "Data Scanner",
         "activationCost": 2,
         "actionType": "Short",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "traits": [
           {
             "type": "scanner"
@@ -2204,10 +2202,7 @@
             "High Gain Antenna",
             "Cargo Pod"
           ],
-          "modules": [
-            "Survey Scanner",
-            "M315 Motion Scanner"
-          ]
+          "modules": ["Survey Scanner", "M315 Motion Scanner"]
         },
         "content": [
           {
@@ -2241,15 +2236,8 @@
           }
         ],
         "drone": {
-          "systems": [
-            "Red Laser",
-            "Fabrication Arm",
-            "High Gain Antenna"
-          ],
-          "modules": [
-            "Survey Scanner",
-            "Damage Assessor"
-          ]
+          "systems": ["Red Laser", "Fabrication Arm", "High Gain Antenna"],
+          "modules": ["Survey Scanner", "Damage Assessor"]
         },
         "content": [
           {
@@ -2283,13 +2271,8 @@
           }
         ],
         "drone": {
-          "systems": [
-            "Rail Rifle"
-          ],
-          "modules": [
-            "Reactor Overload",
-            "Laser Guidance"
-          ]
+          "systems": ["Rail Rifle"],
+          "modules": ["Reactor Overload", "Laser Guidance"]
         },
         "content": [
           {
@@ -2333,9 +2316,7 @@
       },
       {
         "activationCost": 2,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "traits": [
           {
@@ -2993,9 +2974,7 @@
         "name": "Integrated Advanced Shield Projector",
         "activationCost": "X",
         "actionType": "Reaction",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "traits": [
           {
             "type": "shield"

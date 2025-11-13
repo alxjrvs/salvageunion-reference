@@ -31,21 +31,24 @@ const schemaIndex = JSON.parse(
   readFileSync(join(schemasDir, 'index.json'), 'utf-8')
 )
 
-function generateFieldTable(properties: any, required: string[] = []): string {
+function generateFieldTable(
+  properties: Record<string, unknown>,
+  required: string[] = []
+): string {
   if (!properties) return ''
 
   let table = '| Field | Type | Required | Description |\n'
   table += '|-------|------|----------|-------------|\n'
 
   for (const [fieldName, fieldDef] of Object.entries(properties)) {
-    const def = fieldDef as any
+    const def = fieldDef as Record<string, unknown>
 
     // Skip fields that are just `true` (inherited from allOf)
     if (def === true) continue
 
     const isRequired = required.includes(fieldName) ? '✅' : '❌'
     const type = getFieldType(def)
-    const description = def.description || ''
+    const description = (def.description as string) || ''
 
     table += `| \`${fieldName}\` | ${type} | ${isRequired} | ${description} |\n`
   }
@@ -53,29 +56,32 @@ function generateFieldTable(properties: any, required: string[] = []): string {
   return table
 }
 
-function getFieldType(def: any): string {
+function getFieldType(def: Record<string, unknown>): string {
   if (def.$ref) {
-    const refParts = def.$ref.split('/')
+    const refParts = String(def.$ref).split('/')
     return `\`${refParts[refParts.length - 1]}\``
   }
 
   if (def.type === 'array') {
-    if (def.items?.$ref) {
-      const refParts = def.items.$ref.split('/')
+    const items = def.items as Record<string, unknown> | undefined
+    if (items?.$ref) {
+      const refParts = String(items.$ref).split('/')
       return `Array<\`${refParts[refParts.length - 1]}\`>`
     }
-    if (def.items?.type) {
-      return `Array<${def.items.type}>`
+    if (items?.type) {
+      return `Array<${items.type}>`
     }
     return 'Array'
   }
 
   if (def.type) {
-    return def.type
+    return String(def.type)
   }
 
   if (def.oneOf) {
-    return def.oneOf.map((o: any) => getFieldType(o)).join(' | ')
+    return (def.oneOf as Record<string, unknown>[])
+      .map((o) => getFieldType(o))
+      .join(' | ')
   }
 
   if (def.const) {
@@ -85,7 +91,10 @@ function getFieldType(def: any): string {
   return 'unknown'
 }
 
-function generateExampleJson(schema: any, data: any[]): string {
+function generateExampleJson(
+  schema: Record<string, unknown>,
+  data: unknown[]
+): string {
   if (!data || data.length === 0)
     return '```json\n// No example data available\n```'
 
@@ -104,7 +113,7 @@ function generateSchemaDoc(schemaInfo: SchemaInfo): string {
   )
 
   // Load data for examples
-  let data: any[] = []
+  let data: unknown[] = []
   try {
     data = JSON.parse(
       readFileSync(
@@ -112,7 +121,7 @@ function generateSchemaDoc(schemaInfo: SchemaInfo): string {
         'utf-8'
       )
     )
-  } catch (error) {
+  } catch {
     console.warn(`Could not load data for ${schemaInfo.id}`)
   }
 

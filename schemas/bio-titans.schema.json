@@ -6,10 +6,7 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": [
-      "structurePoints",
-      "actions"
-    ],
+    "required": ["structurePoints", "actions"],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/baseEntity"

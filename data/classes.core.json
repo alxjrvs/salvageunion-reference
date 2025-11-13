@@ -4,11 +4,7 @@
     "name": "Engineer",
     "source": "Salvage Union Workshop Manual",
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.core/engineer.jpg",
-    "coreTrees": [
-      "Mechanical Knowledge",
-      "Forging",
-      "Mech-Tech"
-    ],
+    "coreTrees": ["Mechanical Knowledge", "Forging", "Mech-Tech"],
     "maxAbilities": 10,
     "advanceable": true,
     "page": 26,
@@ -24,11 +20,7 @@
     "name": "Hacker",
     "source": "Salvage Union Workshop Manual",
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.core/hacker.jpg",
-    "coreTrees": [
-      "Hacking",
-      "Electronics",
-      "Augmentation"
-    ],
+    "coreTrees": ["Hacking", "Electronics", "Augmentation"],
     "advanceable": true,
     "page": 32,
     "maxAbilities": 10,
@@ -44,11 +36,7 @@
     "name": "Hauler",
     "source": "Salvage Union Workshop Manual",
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.core/hauler.jpg",
-    "coreTrees": [
-      "Salvaging",
-      "Trading",
-      "Leadership"
-    ],
+    "coreTrees": ["Salvaging", "Trading", "Leadership"],
     "page": 38,
     "advanceable": true,
     "maxAbilities": 10,
@@ -93,11 +81,7 @@
     "name": "Scout",
     "source": "Salvage Union Workshop Manual",
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.core/scout.jpg",
-    "coreTrees": [
-      "Recon",
-      "Sleuth",
-      "Sniper"
-    ],
+    "coreTrees": ["Recon", "Sleuth", "Sniper"],
     "page": 46,
     "advanceable": true,
     "maxAbilities": 10,
@@ -113,11 +97,7 @@
     "name": "Soldier",
     "source": "Salvage Union Workshop Manual",
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/classes.core/soldier.jpg",
-    "coreTrees": [
-      "Survivalist",
-      "Gladitorial Combat",
-      "Tactical Warfare"
-    ],
+    "coreTrees": ["Survivalist", "Gladitorial Combat", "Tactical Warfare"],
     "page": 52,
     "advanceable": true,
     "maxAbilities": 10,

@@ -6,9 +6,7 @@
     "actions": [
       {
         "name": "Stinger",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 2,
           "damageType": "HP"
@@ -49,9 +47,7 @@
     "actions": [
       {
         "name": "Acid Spit",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "amount": 2,
           "damageType": "HP"
@@ -92,9 +88,7 @@
     "actions": [
       {
         "name": "Barbed Tentacles",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -133,9 +127,7 @@
     "actions": [
       {
         "name": "Bear Carnage",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 4,
           "damageType": "HP"
@@ -170,9 +162,7 @@
     "actions": [
       {
         "name": "Iron Claw",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 4,
           "damageType": "SP"
@@ -206,9 +196,7 @@
     "actions": [
       {
         "name": "Talons",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "HP"

@@ -6,10 +6,7 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": [
-      "techLevel",
-      "actions"
-    ],
+    "required": ["techLevel", "actions"],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/baseEntity"

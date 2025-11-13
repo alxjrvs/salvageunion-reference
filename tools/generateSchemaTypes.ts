@@ -8,10 +8,8 @@
 
 import * as fs from 'fs'
 import * as path from 'path'
-import { fileURLToPath } from 'url'
 import { getSingularTypeName, getDirname } from './generatorUtils.js'
 
-const __filename = fileURLToPath(import.meta.url)
 const __dirname = getDirname(import.meta.url)
 
 const SCHEMAS_DIR = path.join(__dirname, '../schemas')

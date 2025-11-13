@@ -124,9 +124,7 @@
       {
         "id": "e2f9bdc1-3887-40e1-8f51-f83d56c867a5",
         "activationCost": "X",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "name": "Mass Field Maintenance",
         "content": [
@@ -151,9 +149,7 @@
       {
         "id": "fb752e33-d45c-41df-b257-bf6fa262af0a",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "name": "If I cut this wire...",
         "content": [
@@ -179,9 +175,7 @@
       {
         "id": "4cdf74ac-1b33-4431-9d9b-209f7ec10e4b",
         "activationCost": "X",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "name": "Mass Field Repair",
         "content": [
@@ -346,9 +340,7 @@
       {
         "id": "9a1b5535-acf2-4564-9a07-6b7fa50df88f",
         "activationCost": 3,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "name": "This one goes to 11...",
         "content": [
@@ -374,9 +366,7 @@
       {
         "id": "7ea39631-ed12-4045-bcd6-944eb1a19ffc",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "name": "Mass Energy Recharge",
         "content": [
@@ -424,9 +414,7 @@
       {
         "id": "c1835c9e-8c22-4dca-bd36-9761e15467a2",
         "activationCost": 3,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "name": "The Full Works",
         "content": [
@@ -479,9 +467,7 @@
       {
         "id": "737ac1a0-455f-470b-906e-8e08eb9ae47b",
         "activationCost": 2,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "traits": [
           {
@@ -518,9 +504,7 @@
       {
         "id": "dee41123-65cc-4f43-b01d-88cf54d27f5a",
         "activationCost": "X",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "traits": [
           {
@@ -646,9 +630,7 @@
               "Zoom Optics",
               "IR Night Vision Optics"
             ],
-            "schema": [
-              "modules"
-            ]
+            "schema": ["modules"]
           }
         ],
         "name": "Bionic Senses",
@@ -677,9 +659,7 @@
           "damageType": "SP",
           "amount": "X"
         },
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "traits": [
           {
             "type": "melee"
@@ -734,9 +714,7 @@
       {
         "id": "d29ba356-ec3f-43b5-919f-20e4fdaad880",
         "activationCost": 4,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "traits": [
           {
@@ -769,9 +747,7 @@
       {
         "id": "804477cc-db67-4fb6-b8f6-52fe4085a6a7",
         "activationCost": 1,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Reaction",
         "traits": [
           {
@@ -808,9 +784,7 @@
       {
         "id": "7491065d-12c4-418e-bec9-7d8ef5718690",
         "activationCost": "X",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "traits": [
           {
@@ -847,9 +821,7 @@
       {
         "id": "df658854-feab-4c76-bff9-061a847194bb",
         "activationCost": 5,
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "actionType": "Turn",
         "traits": [
           {
@@ -878,9 +850,7 @@
       {
         "id": "0e241e49-170c-4865-a7fe-29d122337986",
         "activationCost": 5,
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "actionType": "Turn",
         "traits": [
           {
@@ -909,9 +879,7 @@
       {
         "id": "fc4b9167-661a-4101-a3b1-f1e336c72800",
         "activationCost": 1,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "name": "Squeeze it in",
         "content": [
@@ -1133,9 +1101,7 @@
       {
         "id": "e236c17b-161d-46b0-be08-203847307e8c",
         "activationCost": 2,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "table": {
           "1": "They stand strong in the face of you, and are much stronger than you thought. The Mediator may add reinforcements to their numbers, or improve their strength or capabilities in some other way.",
@@ -1259,9 +1225,7 @@
       {
         "name": "Cargo Charge (Pilot)",
         "value": "Make a special charge attack against a target in Range. Roll to hit as normal. On a hit, this deals HP damage equal to the amount of Inventory Slots your Pilot has filled. Non-Bio-Titan or Meld creatures hit by this attack are knocked Prone and gain the [[Vulnerable]] Trait.",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "traits": [
           {
             "type": "melee"
@@ -1272,9 +1236,7 @@
       {
         "name": "Cargo Charge (Mech)",
         "value": "Make a special charge attack against a target in Range while piloting a Mech. Roll to hit as normal. On a hit, this deals SP damage equal to the amount of Cargo Slots you currently have filled on your Mech. Any target hit by this attack is knocked Prone and gains the [[Vulnerable]] Trait.",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "traits": [
           {
             "type": "melee"
@@ -1285,9 +1247,7 @@
       {
         "id": "f286ad7a-ceee-4e73-92e7-d21d54335d16",
         "activationCost": 3,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "name": "Can’t Stop, Won’t Stop",
         "content": [
@@ -1315,9 +1275,7 @@
       {
         "id": "508e3422-417c-492c-a759-e649f918efd6",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "name": "Master Salvager",
         "content": [
@@ -1386,9 +1344,7 @@
       {
         "id": "f03c8620-863b-47e6-b0ba-9f9a8675ef06",
         "activationCost": 2,
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "actionType": "Turn",
         "name": "Tail",
         "content": [
@@ -1540,9 +1496,7 @@
       {
         "id": "c7f68c3b-5edd-4894-a953-e44a9da2717d",
         "activationCost": 2,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Free",
         "name": "Spotter",
         "content": [
@@ -1576,9 +1530,7 @@
           "damageType": "SP",
           "amount": 2
         },
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "id": "f397e885-771b-4c10-bfca-28403060187f"
       },
       {
@@ -1790,9 +1742,7 @@
       {
         "id": "2b98527c-2950-4f80-a4dd-cc4cf6129994",
         "activationCost": 1,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Free",
         "name": "Charge",
         "content": [
@@ -1816,9 +1766,7 @@
       {
         "id": "63026b4d-366b-4046-8bdb-8bc0616453c5",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "name": "Overpower",
         "content": [
@@ -1842,9 +1790,7 @@
       {
         "id": "0d80e1fb-c57b-41d0-b2c0-00c6325c128f",
         "activationCost": 3,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "name": "Duel",
         "content": [
@@ -1918,9 +1864,7 @@
           "damageType": "SP",
           "amount": 3
         },
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "traits": [
           {
             "type": "missile"
@@ -2004,9 +1948,7 @@
       {
         "id": "904fe2cb-e549-461a-8fcf-54220db0243b",
         "activationCost": 1,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "name": "Provoke",
         "content": [
@@ -2280,9 +2222,7 @@
           "damageType": "SP",
           "amount": 5
         },
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "traits": [
           {
             "type": "melee"
@@ -2367,9 +2307,7 @@
       {
         "id": "a141c475-9893-43e6-be15-0fa4a313b079",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "traits": [
           {
@@ -2652,9 +2590,7 @@
       {
         "id": "76dc53c8-d3c5-4481-8983-f3d036549789",
         "activationCost": 3,
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "actionType": "Turn",
         "traits": [
           {
@@ -2691,9 +2627,7 @@
       {
         "id": "6b889072-bfb5-4479-8a23-f6f650ea8d60",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "traits": [
           {
@@ -2887,9 +2821,7 @@
     "actions": [
       {
         "id": "c98dcfcd-e39b-4587-8cb7-2be494bb14e4",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "table": {
           "1": "its Chassis, Systems, and Modules are all considered destroyed.",
@@ -2926,9 +2858,7 @@
     "actions": [
       {
         "id": "7c006633-d112-4369-bbe0-8fa86f165ab5",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "traits": [],
         "name": "Scrap",
@@ -2957,9 +2887,7 @@
     "actions": [
       {
         "id": "4649d724-1cf6-4517-8814-2077291331ae",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "traits": [],
         "name": "Repair",
@@ -2988,9 +2916,7 @@
     "actions": [
       {
         "id": "b36d791b-9a0c-450a-9e3a-56947a4f31b6",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "traits": [],
         "name": "Mount",
@@ -3018,9 +2944,7 @@
     "actions": [
       {
         "id": "195077ef-7f6b-457c-a8c4-ee1ad32bf68e",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "traits": [],
         "name": "Patch Up",
@@ -3048,9 +2972,7 @@
     "actions": [
       {
         "id": "c447e95d-56d8-431f-adfb-150622977dac",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "traits": [],
         "name": "Load",

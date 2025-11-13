@@ -10,9 +10,7 @@
     "actions": [
       {
         "id": "696b540c-310b-497d-a6eb-191b4d80bc6f",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 2
@@ -137,9 +135,7 @@
     "actions": [
       {
         "id": "60d029c0-c928-4909-ba0e-3c07efa3cbff",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 2
@@ -178,9 +174,7 @@
       {
         "id": "8b26ca5b-c7a1-42d3-9b13-ad8a2284e2c2",
         "actionType": "Free",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "name": "Floodlights",
         "content": [
           {
@@ -202,9 +196,7 @@
     "actions": [
       {
         "id": "416526f5-d704-4437-a0ed-5d6d10cbf0f6",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 1
@@ -256,9 +248,7 @@
             "amount": 5
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "name": "High Pressure Hose",
         "content": [
           {
@@ -284,9 +274,7 @@
     "actions": [
       {
         "id": "c5e0e6b5-c4dd-4ad9-9ddc-749c1eb0df4b",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 3
@@ -358,9 +346,7 @@
       {
         "id": "d511b72e-6645-4a64-bda4-74c42ade4a51",
         "actionType": "Free",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "name": "Loudspeakers",
         "content": [
           {
@@ -387,9 +373,7 @@
       {
         "id": "93c1da61-7e1a-49c2-bdc2-20ed230f7556",
         "actionType": "Turn",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "table": {
           "1": "The Mechapult explodes and is destroyed. Deal SP damage equal to 2× the Tech Level of the Scrap to your Mech and everything within Close Range.",
           "2": "The Mechapult overloads collapsing in on itself. Your Mech takes damage equal to the Tech Level of the Scrap and the Mechapult is damaged.",
@@ -438,9 +422,7 @@
     "actions": [
       {
         "id": "bf393a3b-5df9-49f2-a677-22d2a3b3d108",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "SP",
           "amount": 5
@@ -476,9 +458,7 @@
     "actions": [
       {
         "id": "058bb890-236d-4a12-9bf9-f81c36b8f99e",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 4
@@ -519,9 +499,7 @@
     "actions": [
       {
         "id": "7baa5f4a-d9b6-49c8-9440-da303f46f811",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 3
@@ -617,9 +595,7 @@
       {
         "id": "b5316ff6-6a0d-4c97-bb55-9912a2b728e4",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 1
@@ -649,9 +625,7 @@
       {
         "name": "Patch",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "id": "b42c2ac4-0d5d-4719-96b6-8e7946d92896",
         "content": [
@@ -664,9 +638,7 @@
       {
         "name": "System Repair",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "id": "db618835-6d9f-463a-915f-b9490f71d241",
         "content": [
@@ -679,9 +651,7 @@
       {
         "name": "Chassis Repair",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "id": "2a1f9775-0864-4cc5-a88b-169a95db5e66",
         "content": [
@@ -758,9 +728,7 @@
     "actions": [
       {
         "id": "c9734532-1261-4a25-a9a9-7539fbef65e4",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "SP",
           "amount": 4
@@ -798,9 +766,7 @@
     "actions": [
       {
         "id": "e0ebea27-00ca-4ede-b889-3ab4ec77c2e5",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 6
@@ -923,9 +889,7 @@
       {
         "name": "Pin",
         "activationCost": 2,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "traits": [
           {
@@ -943,9 +907,7 @@
       {
         "name": "Swing",
         "activationCost": 2,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "id": "1d581b4f-d2a5-42f9-b203-4a0517828760",
         "content": [
@@ -980,9 +942,7 @@
     "actions": [
       {
         "id": "8442ae83-beb2-4c19-ad25-c867fc81bd0d",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "SP",
           "amount": 4
@@ -1076,9 +1036,7 @@
         "choices": [
           {
             "name": "Industrial Body Kit Choice",
-            "schema": [
-              "chassis"
-            ],
+            "schema": ["chassis"],
             "id": "ed8cb1b3-3b38-4c92-9f0c-2638356edfc7",
             "constraints": {
               "field": "techLevel",
@@ -1109,9 +1067,7 @@
     "actions": [
       {
         "id": "9ef717cb-cf19-46bd-81dc-ee112e509199",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 3
@@ -1147,9 +1103,7 @@
       {
         "id": "9c0171f6-b40c-45c9-a6c1-7479a249bd46",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "activationCost": 2,
         "name": "Nanofibre Net Launcher",
         "content": [
@@ -1293,9 +1247,7 @@
             "type": "shield"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "table": {
           "1": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check.",
           "20": "The attack misses and deals no damage and refracts back at the attacker, hitting them for the damage of the weapon.",
@@ -1329,10 +1281,7 @@
     "actions": [
       {
         "id": "0946ece1-ca7e-4aac-9bfe-31adcf40d455",
-        "range": [
-          "Close",
-          "Long"
-        ],
+        "range": ["Close", "Long"],
         "damage": {
           "damageType": "SP",
           "amount": 6
@@ -1385,9 +1334,7 @@
             "type": "targeter"
           }
         ],
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "activationCost": 2,
         "name": "Tracking Node",
         "content": [
@@ -1414,9 +1361,7 @@
       {
         "name": "Patch",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "id": "0ca29c5a-19ce-490d-ae61-18690197b8e5",
         "content": [
@@ -1429,9 +1374,7 @@
       {
         "name": "System Repair",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "id": "1062ad1d-332a-4f07-bbb4-5b240b45d484",
         "content": [
@@ -1444,9 +1387,7 @@
       {
         "name": "Chassis Repair",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "id": "d1c93921-fe69-4ba8-8d48-47ab44500ea4",
         "content": [
@@ -1481,9 +1422,7 @@
     "actions": [
       {
         "id": "1ee3c81e-a6aa-4515-a70f-f73d156d4095",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 6
@@ -1647,9 +1586,7 @@
       {
         "id": "6d9a3fb9-56a0-46c7-9197-e4ddca1c9602",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "activationCost": 1,
         "traits": [
           {
@@ -1688,9 +1625,7 @@
             "type": "shield"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "table": {
           "1": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check.",
           "20": "The attack misses, deals no damage, and is reflected back at the attacker, hitting them for the damage of the weapon.",
@@ -1724,9 +1659,7 @@
       {
         "name": "Patch",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "id": "c9247d18-6535-4e10-b20a-10cba22cf0db",
         "content": [
@@ -1739,9 +1672,7 @@
       {
         "name": "System Repair",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "id": "388f3c7d-f324-4cf8-b419-0ee878c186d6",
         "content": [
@@ -1754,9 +1685,7 @@
       {
         "name": "Chassis Repair",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "id": "6ee2f439-94c0-4407-a219-7554601a7ac5",
         "content": [
@@ -1791,9 +1720,7 @@
     "actions": [
       {
         "id": "69254864-8da6-4ace-bb6b-e4b79b4b064a",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 6
@@ -1837,9 +1764,7 @@
     "actions": [
       {
         "id": "7d338e20-579c-43fa-abde-1929f4f1f73f",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 4
@@ -1878,9 +1803,7 @@
     "actions": [
       {
         "id": "91623264-232b-4ea4-baf0-e7bf127e7d2c",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 5
@@ -1930,9 +1853,7 @@
     "actions": [
       {
         "id": "4d5518c5-f14f-4f54-ad5f-f8778a6b1453",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 8
@@ -2016,9 +1937,7 @@
     "actions": [
       {
         "id": "c54b7ebe-0125-4b93-bf80-53816ef48440",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "SP",
           "amount": 4
@@ -2093,9 +2012,7 @@
     "actions": [
       {
         "id": "a4bf371b-529b-4b0a-a777-507a28722063",
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "damage": {
           "damageType": "SP",
           "amount": 5
@@ -2134,9 +2051,7 @@
     "actions": [
       {
         "id": "46e8c091-7902-430a-bba3-06bea0ab24fe",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 5
@@ -2233,9 +2148,7 @@
             "type": "targeter"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "activationCost": 2,
         "name": "Target Painter",
         "content": [
@@ -2288,9 +2201,7 @@
       {
         "name": "Patch",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "id": "95b5f4cd-2668-4e98-baa9-d3b5209aae86",
         "content": [
@@ -2303,9 +2214,7 @@
       {
         "name": "System Repair",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "id": "601a6286-ce58-44fb-9017-3c6df07b8a5f",
         "content": [
@@ -2318,9 +2227,7 @@
       {
         "name": "Chassis Repair",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "id": "c71ab281-98b0-4a4d-9b45-09e290ff6c76",
         "content": [
@@ -2405,9 +2312,7 @@
                   {
                     "id": "3134ad28-4d26-4fac-96e6-5be263590fcd",
                     "description": "A gimble mounted .50 Cal Machine gun with automated optical tracking.",
-                    "range": [
-                      "Close"
-                    ],
+                    "range": ["Close"],
                     "damage": {
                       "damageType": "SP",
                       "amount": 2
@@ -2433,9 +2338,7 @@
                   {
                     "id": "a0589d25-4920-4b7e-aec1-1be3c9c8a3af",
                     "description": "A tri-axis gyroscope controlled Green Laser, with No-Scope LIDAR tracking.",
-                    "range": [
-                      "Medium"
-                    ],
+                    "range": ["Medium"],
                     "damage": {
                       "damageType": "SP",
                       "amount": 4
@@ -2462,9 +2365,7 @@
                   {
                     "id": "09fdd38e-c1e0-4c2f-9db5-6397ddd9be8c",
                     "description": "A Herrsch 360° RealSteel Turret Enclosure, controls this 120mm Cannon.",
-                    "range": [
-                      "Long"
-                    ],
+                    "range": ["Long"],
                     "damage": {
                       "damageType": "SP",
                       "amount": 6
@@ -2511,9 +2412,7 @@
       {
         "id": "1fae1763-5d29-43f6-b782-4020d753f611",
         "actionType": "Turn",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "activationCost": 3,
         "name": "Aerosolised Nerve Gas Sprayer",
         "content": [
@@ -2540,9 +2439,7 @@
     "actions": [
       {
         "id": "2e67cdca-2fbb-446a-948b-ed8fa48500ed",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 5
@@ -2584,9 +2481,7 @@
         "actionType": "Passive",
         "choices": [
           {
-            "schema": [
-              "chassis"
-            ],
+            "schema": ["chassis"],
             "id": "8286393e-daf8-4a1d-8b91-dd8457da6251",
             "name": "Chassis Choice",
             "constraints": {
@@ -2717,9 +2612,7 @@
     "actions": [
       {
         "id": "2f5e34a7-5655-4442-86dd-2d0cd444c36a",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 1
@@ -2757,9 +2650,7 @@
     "actions": [
       {
         "id": "07c395a3-e81c-4f1b-a44f-832a2bcec780",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 9
@@ -2800,9 +2691,7 @@
             "type": "shield"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "name": "Shield Dome",
         "content": [
           {
@@ -2850,9 +2739,7 @@
     "actions": [
       {
         "id": "fc3b0d04-2b80-4483-af94-938837690657",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "SP",
           "amount": 3
@@ -2925,9 +2812,7 @@
       {
         "name": "Tesla Arc",
         "activationCost": 2,
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "actionType": "Turn",
         "id": "65af3472-760e-4213-8ed5-6b6a97f1c449",
         "content": [
@@ -2940,9 +2825,7 @@
       {
         "name": "Tesla Charge",
         "activationCost": 3,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "id": "e60ad298-1ed0-4fe7-937e-0e74fd837373",
         "content": [
@@ -2955,9 +2838,7 @@
       {
         "name": "Tesla Shield",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "traits": [
           {
@@ -3006,9 +2887,7 @@
       {
         "id": "9f46c8e3-b06e-4830-af74-a54185ff209d",
         "actionType": "Short",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "activationCost": 3,
         "name": "Fabrication Bay",
         "content": [
@@ -3032,9 +2911,7 @@
     "actions": [
       {
         "id": "d4c14bba-f02f-4c7a-b179-5f297973bf4e",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 3
@@ -3075,9 +2952,7 @@
     "actions": [
       {
         "id": "c286ff6e-6860-492f-8e1e-4732882726ee",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "damageType": "SP",
           "amount": 5
@@ -3126,9 +3001,7 @@
             "type": "shield"
           }
         ],
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "activationCost": 2,
         "table": {
           "1": "The shield malfunctions. You take no damage from the attack, but it is deflected to a random target within Medium Range, which takes the full damage of the attack. In addition, your Reflective Shielding System becomes damaged.",
@@ -3159,9 +3032,7 @@
     "actions": [
       {
         "id": "87b221d5-749e-4e45-b352-33276f1f64fd",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 7
@@ -3205,9 +3076,7 @@
     "actions": [
       {
         "id": "340b0516-9ab2-4808-9928-6d724d0d9f79",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "damageType": "SP",
           "amount": 7
@@ -3318,9 +3187,7 @@
     "actions": [
       {
         "id": "32db342c-b76e-475b-b5a9-6cbf77b9ff32",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": "X"
@@ -3386,9 +3253,7 @@
     "actions": [
       {
         "id": "5946780b-82f1-4633-a58d-268ae5aece3a",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": 6
@@ -3452,9 +3317,7 @@
     "actions": [
       {
         "id": "6faa3681-1ad5-4d32-a7de-d2f17e890c94",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "damageType": "SP",
           "amount": "2d20"
@@ -3550,9 +3413,7 @@
             "type": "targeter"
           }
         ],
-        "range": [
-          "Far"
-        ],
+        "range": ["Far"],
         "name": "N15 Fat Boy",
         "content": [
           {
@@ -3582,9 +3443,7 @@
       {
         "name": "Disintegrate",
         "activationCost": "X",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "traits": [
           {
@@ -3606,9 +3465,7 @@
       {
         "name": "Shield",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Reaction",
         "traits": [
           {
@@ -3655,9 +3512,7 @@
       {
         "name": "Patch",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Turn",
         "id": "cd84b6b1-907d-40af-ace8-02a097428e4f",
         "content": [
@@ -3670,9 +3525,7 @@
       {
         "name": "System Repair",
         "activationCost": 2,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Short",
         "id": "9f95ad2d-91b8-48e3-92cf-4658ab586a22",
         "content": [
@@ -3685,9 +3538,7 @@
       {
         "name": "Chassis Repair",
         "activationCost": 4,
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "actionType": "Long",
         "id": "91ae660d-c99f-4e45-b62e-37820ed72aa0",
         "content": [

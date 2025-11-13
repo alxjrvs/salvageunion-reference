@@ -6,9 +6,7 @@
     "actions": [
       {
         "name": "Improvised Weapons",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 4,
           "damageType": "HP"
@@ -46,9 +44,7 @@
     "actions": [
       {
         "name": "Improvised Firearms",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 4,
           "damageType": "HP"
@@ -86,9 +82,7 @@
     "actions": [
       {
         "name": "Rifles",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "amount": 6,
           "damageType": "HP"
@@ -129,9 +123,7 @@
     "actions": [
       {
         "name": ".50 Cal Machine Gun",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "SP"
@@ -179,9 +171,7 @@
     "actions": [
       {
         "name": "Rocket Launcher",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "amount": 6,
           "damageType": "SP"
@@ -231,9 +221,7 @@
     "actions": [
       {
         "name": "Monomolecular Sword",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 6,
           "damageType": "SP"
@@ -279,9 +267,7 @@
     "actions": [
       {
         "name": "Beta Fission Gun",
-        "range": [
-          "Long"
-        ],
+        "range": ["Long"],
         "damage": {
           "amount": 9,
           "damageType": "SP"
@@ -331,9 +317,7 @@
     "actions": [
       {
         "name": "Stampede",
-        "range": [
-          "Close"
-        ],
+        "range": ["Close"],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -373,9 +357,7 @@
     "actions": [
       {
         "name": "Red Laser",
-        "range": [
-          "Medium"
-        ],
+        "range": ["Medium"],
         "damage": {
           "amount": 4,
           "damageType": "SP"

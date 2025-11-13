@@ -6,12 +6,7 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": [
-      "damagedEffect",
-      "npc",
-      "actions",
-      "techLevelEffects"
-    ],
+    "required": ["damagedEffect", "npc", "actions", "techLevelEffects"],
     "allOf": [
       {
         "$ref": "shared/objects.schema.json#/definitions/baseEntity"

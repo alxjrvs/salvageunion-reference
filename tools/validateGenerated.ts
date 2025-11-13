@@ -116,7 +116,9 @@ function validateGenerated(): boolean {
     console.error('❌ Some generated files are stale!')
     console.error('\n💡 Run `npm run generate` to update generated files\n')
     console.error('Stale files:')
-    staleFiles.forEach((f) => console.error(`  - ${path.relative(process.cwd(), f)}`))
+    staleFiles.forEach((f) =>
+      console.error(`  - ${path.relative(process.cwd(), f)}`)
+    )
     return false
   }
 
@@ -127,4 +129,3 @@ function validateGenerated(): boolean {
 // Run validation
 const isValid = validateGenerated()
 process.exit(isValid ? 0 : 1)
-
