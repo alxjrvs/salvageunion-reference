@@ -5,7 +5,16 @@
   "description": "Game keywords and terminology in Salvage Union",
   "type": "array",
   "items": {
-    "$ref": "shared/objects.schema.json#/definitions/baseEntry",
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+      }
+    ],
+    "properties": {
+      "content": {
+        "$ref": "shared/objects.schema.json#/definitions/content"
+      }
+    },
     "unevaluatedProperties": false
   }
 }

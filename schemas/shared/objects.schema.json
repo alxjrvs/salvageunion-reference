@@ -4,57 +4,6 @@
   "title": "Salvage Union Object Definitions",
   "description": "Shared complex object definitions for Salvage Union game data",
   "definitions": {
-    "grantable": {
-      "type": "object",
-      "description": "Grantable entity with a name and description",
-      "additionalProperties": false,
-      "required": [
-        "name",
-        "schema"
-      ],
-      "properties": {
-        "schema": {
-          "oneOf": [
-            {
-              "$ref": "enums.schema.json#/definitions/schemaName"
-            },
-            {
-              "type": "string",
-              "description": "Name of the schema",
-              "const": "choice"
-            }
-          ]
-        },
-        "name": {
-          "$ref": "common.schema.json#/definitions/name"
-        }
-      }
-    },
-    "damage": {
-      "description": "Damage dealt by an attack or ability",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "damageType",
-        "amount"
-      ],
-      "properties": {
-        "damageType": {
-          "$ref": "enums.schema.json#/definitions/damageType"
-        },
-        "amount": {
-          "oneOf": [
-            {
-              "$ref": "common.schema.json#/definitions/nonNegativeInteger"
-            },
-            {
-              "type": "string",
-              "description": "Variable damage formula"
-            }
-          ]
-        }
-      }
-    },
     "trait": {
       "type": "object",
       "description": "Special traits and properties of items, systems, or abilities",
@@ -115,15 +64,14 @@
       "additionalProperties": false,
       "required": [
         "position",
-        "description",
         "hitPoints"
       ],
       "properties": {
         "position": {
           "$ref": "common.schema.json#/definitions/name"
         },
-        "description": {
-          "type": "string"
+        "content": {
+          "$ref": "#/definitions/content"
         },
         "hitPoints": {
           "$ref": "common.schema.json#/definitions/hitPoints"
@@ -155,62 +103,6 @@
         }
       }
     },
-    "pattern": {
-      "type": "object",
-      "description": "Mech chassis pattern configuration",
-      "additionalProperties": false,
-      "required": [
-        "name",
-        "systems",
-        "modules"
-      ],
-      "properties": {
-        "name": {
-          "$ref": "common.schema.json#/definitions/name"
-        },
-        "description": {
-          "type": "string"
-        },
-        "legalStarting": {
-          "type": "boolean"
-        },
-        "systems": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/patternSystemModule"
-          }
-        },
-        "modules": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/patternSystemModule"
-          }
-        },
-        "drone": {
-          "type": "object",
-          "description": "Optional drone configuration",
-          "additionalProperties": false,
-          "required": [
-            "systems",
-            "modules"
-          ],
-          "properties": {
-            "systems": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "modules": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        }
-      }
-    },
     "techLevelEffect": {
       "type": "object",
       "description": "Effect that scales with tech level",
@@ -228,7 +120,23 @@
           "$ref": "common.schema.json#/definitions/positiveInteger"
         },
         "effects": {
-          "$ref": "#/definitions/effects"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Related entry or reference",
+            "additionalProperties": false,
+            "required": [
+              "value"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     },
@@ -246,8 +154,8 @@
         "name": {
           "$ref": "common.schema.json#/definitions/name"
         },
-        "description": {
-          "type": "string"
+        "content": {
+          "$ref": "#/definitions/content"
         },
         "rollTable": {
           "type": "string"
@@ -284,101 +192,6 @@
               "$ref": "common.schema.json#/definitions/nonNegativeInteger"
             }
           }
-        }
-      }
-    },
-    "action": {
-      "type": "object",
-      "description": "An action, ability, or attack that can be performed",
-      "required": [
-        "id",
-        "name"
-      ],
-      "properties": {
-        "id": {
-          "$ref": "common.schema.json#/definitions/id"
-        },
-        "structurePoints": {
-          "type": "number"
-        },
-        "energyPoints": {
-          "type": "number"
-        },
-        "heatCapacity": {
-          "type": "number"
-        },
-        "systemSlots": {
-          "type": "number"
-        },
-        "moduleSlots": {
-          "type": "number"
-        },
-        "cargoCapacity": {
-          "type": "number"
-        },
-        "techLevel": {
-          "$ref": "common.schema.json#/definitions/techLevel"
-        },
-        "salvageValue": {
-          "type": "number"
-        },
-        "name": {
-          "$ref": "common.schema.json#/definitions/name"
-        },
-        "description": {
-          "type": "string"
-        },
-        "effects": {
-          "$ref": "#/definitions/effects"
-        },
-        "notes": {
-          "type": "string"
-        },
-        "activationCost": {
-          "$ref": "common.schema.json#/definitions/activationCost"
-        },
-        "range": {
-          "$ref": "enums.schema.json#/definitions/range"
-        },
-        "actionType": {
-          "$ref": "enums.schema.json#/definitions/actionType"
-        },
-        "traits": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/trait"
-          }
-        },
-        "damage": {
-          "$ref": "#/definitions/damage"
-        },
-        "options": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "value",
-              "label"
-            ],
-            "properties": {
-              "label": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "choices": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/choice"
-          }
-        },
-        "table": {
-          "$ref": "#/definitions/table"
         }
       }
     },
@@ -596,7 +409,7 @@
     },
     "baseEntity": {
       "type": "object",
-      "description": "Basic entity with name, description, source, and page reference",
+      "description": "Basic entity with name, content, source, and page reference",
       "required": [
         "id",
         "name",
@@ -607,6 +420,9 @@
         "asset_url": {
           "$ref": "common.schema.json#/definitions/asset_url"
         },
+        "content": {
+          "$ref": "#/definitions/content"
+        },
         "id": {
           "$ref": "common.schema.json#/definitions/id"
         },
@@ -616,12 +432,6 @@
         },
         "name": {
           "$ref": "common.schema.json#/definitions/name"
-        },
-        "description": {
-          "type": "string"
-        },
-        "notes": {
-          "type": "string"
         },
         "source": {
           "$ref": "enums.schema.json#/definitions/source"
@@ -665,46 +475,81 @@
         },
         "legendaryTree": {
           "$ref": "enums.schema.json#/definitions/tree"
+        },
+        "content": {
+          "$ref": "#/definitions/content"
         }
       },
       "unevaluatedProperties": false
     },
     "contentBlock": {
       "type": "object",
-      "description": "Block of content with a label and value",
+      "description": "Block of structured content for rendering (paragraph, heading, list item, etc.)",
       "additionalProperties": false,
       "required": [
         "value"
       ],
       "properties": {
-        "label": {
-          "type": "string"
+        "type": {
+          "$ref": "enums.schema.json#/definitions/contentType",
+          "default": "paragraph"
         },
         "value": {
-          "type": "string"
+          "type": "string",
+          "description": "The text content of this block"
+        },
+        "label": {
+          "type": "string",
+          "description": "Optional label for this content block (e.g., for labeled sections)"
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6,
+          "description": "Heading level (1-6) when type is 'heading'"
+        },
+        "items": {
+          "type": "array",
+          "description": "Nested content blocks (e.g., list items within a list)",
+          "items": {
+            "$ref": "#/definitions/contentBlock"
+          }
         }
       }
     },
-    "effect": {
-      "type": "object",
-      "description": "Related entry or reference",
-      "additionalProperties": false,
-      "required": [
-        "value"
-      ],
-      "properties": {
-        "label": {
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        }
+    "content": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/contentBlock"
       }
     },
     "grants": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/grantable"
+        "type": "object",
+        "description": "Grantable entity with a name and description",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "schema"
+        ],
+        "properties": {
+          "schema": {
+            "oneOf": [
+              {
+                "$ref": "enums.schema.json#/definitions/schemaName"
+              },
+              {
+                "type": "string",
+                "description": "Name of the schema",
+                "const": "choice"
+              }
+            ]
+          },
+          "name": {
+            "$ref": "common.schema.json#/definitions/name"
+          }
+        }
       }
     },
     "traits": {
@@ -716,19 +561,102 @@
     "actions": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/action"
+        "type": "object",
+        "description": "An action, ability, or attack that can be performed",
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/definitions/id"
+          },
+          "content": {
+            "$ref": "#/definitions/content"
+          },
+          "structurePoints": {
+            "type": "number"
+          },
+          "energyPoints": {
+            "type": "number"
+          },
+          "heatCapacity": {
+            "type": "number"
+          },
+          "systemSlots": {
+            "type": "number"
+          },
+          "moduleSlots": {
+            "type": "number"
+          },
+          "cargoCapacity": {
+            "type": "number"
+          },
+          "techLevel": {
+            "$ref": "common.schema.json#/definitions/techLevel"
+          },
+          "salvageValue": {
+            "type": "number"
+          },
+          "name": {
+            "$ref": "common.schema.json#/definitions/name"
+          },
+          "activationCost": {
+            "$ref": "common.schema.json#/definitions/activationCost"
+          },
+          "range": {
+            "$ref": "enums.schema.json#/definitions/range"
+          },
+          "actionType": {
+            "$ref": "enums.schema.json#/definitions/actionType"
+          },
+          "traits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/trait"
+            }
+          },
+          "damage": {
+            "description": "Damage dealt by an attack or ability",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "damageType",
+              "amount"
+            ],
+            "properties": {
+              "damageType": {
+                "$ref": "enums.schema.json#/definitions/damageType"
+              },
+              "amount": {
+                "oneOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+                  },
+                  {
+                    "type": "string",
+                    "description": "Variable damage formula"
+                  }
+                ]
+              }
+            }
+          },
+          "choices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/choice"
+            }
+          },
+          "table": {
+            "$ref": "#/definitions/table"
+          }
+        }
       }
     },
     "choices": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/choice"
-      }
-    },
-    "effects": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/effect"
       }
     },
     "schemaEntities": {
@@ -783,7 +711,60 @@
     "patterns": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/pattern"
+        "type": "object",
+        "description": "Mech chassis pattern configuration",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "systems",
+          "modules"
+        ],
+        "properties": {
+          "name": {
+            "$ref": "common.schema.json#/definitions/name"
+          },
+          "content": {
+            "$ref": "#/definitions/content"
+          },
+          "legalStarting": {
+            "type": "boolean"
+          },
+          "systems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/patternSystemModule"
+            }
+          },
+          "modules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/patternSystemModule"
+            }
+          },
+          "drone": {
+            "type": "object",
+            "description": "Optional drone configuration",
+            "additionalProperties": false,
+            "required": [
+              "systems",
+              "modules"
+            ],
+            "properties": {
+              "systems": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "modules": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "techLevelEffects": {

@@ -3,11 +3,12 @@
     "id": "ba8b32f2-3916-43d0-937d-74168b846114",
     "source": "Salvage Union Workshop Manual",
     "name": "Irradiated Scorpion",
-    "description": "Mutated beyond their usual size, they have been known to kill entire camps of wasters.",
     "actions": [
       {
         "name": "Stinger",
-        "range": ["Close"],
+        "range": [
+          "Close"
+        ],
         "damage": {
           "amount": 2,
           "damageType": "HP"
@@ -27,13 +28,18 @@
       }
     ],
     "hitPoints": 4,
-    "page": 296
+    "page": 296,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Mutated beyond their usual size, they have been known to kill entire camps of wasters."
+      }
+    ]
   },
   {
     "id": "204c855b-e13b-4326-9355-24be3a38ae34",
     "source": "Salvage Union Workshop Manual",
     "name": "Artl",
-    "description": "Burrowing, ambush predators that liquify their prey for easier digestion.",
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/creatures/artl.jpg",
     "traits": [
       {
@@ -43,7 +49,9 @@
     "actions": [
       {
         "name": "Acid Spit",
-        "range": ["Medium"],
+        "range": [
+          "Medium"
+        ],
         "damage": {
           "amount": 2,
           "damageType": "HP"
@@ -58,27 +66,35 @@
       },
       {
         "name": "Corrosive Skin Glands",
-        "effects": [
+        "id": "9205f5c9-21ee-4433-93e8-c87a164cc590",
+        "content": [
           {
+            "type": "paragraph",
             "value": "When hit by a melee attack, the attacker takes 2 HP damage."
           }
-        ],
-        "id": "9205f5c9-21ee-4433-93e8-c87a164cc590"
+        ]
       }
     ],
     "hitPoints": 2,
-    "page": 266
+    "page": 266,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Burrowing, ambush predators that liquify their prey for easier digestion."
+      }
+    ]
   },
   {
     "id": "6718545a-0261-4e4c-874c-079f1a9fcd80",
     "source": "Salvage Union Workshop Manual",
     "name": "Chimeripede",
-    "description": "A mutated, radiation scarred amalgamation of flesh.",
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/creatures/chimeripede.jpg",
     "actions": [
       {
         "name": "Barbed Tentacles",
-        "range": ["Close"],
+        "range": [
+          "Close"
+        ],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -102,17 +118,24 @@
       }
     ],
     "hitPoints": 10,
-    "page": 272
+    "page": 272,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A mutated, radiation scarred amalgamation of flesh."
+      }
+    ]
   },
   {
     "id": "bfbf2664-6139-4727-8ad1-26ec1c01ae12",
     "source": "Salvage Union Workshop Manual",
     "name": "Wasteland Bear",
-    "description": "Large, hungry, and ferocious, these bears are not just after your picnic basket.",
     "actions": [
       {
         "name": "Bear Carnage",
-        "range": ["Close"],
+        "range": [
+          "Close"
+        ],
         "damage": {
           "amount": 4,
           "damageType": "HP"
@@ -126,13 +149,18 @@
       }
     ],
     "hitPoints": 5,
-    "page": 297
+    "page": 297,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Large, hungry, and ferocious, these bears are not just after your picnic basket."
+      }
+    ]
   },
   {
     "id": "f32c1706-6bc0-476b-af22-01f0e4339034",
     "source": "Salvage Union Workshop Manual",
     "name": "Molebear",
-    "description": "Terrifying, huge burrowing predators known to rend through metal.",
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/creatures/molebear.jpg",
     "traits": [
       {
@@ -142,7 +170,9 @@
     "actions": [
       {
         "name": "Iron Claw",
-        "range": ["Close"],
+        "range": [
+          "Close"
+        ],
         "damage": {
           "amount": 4,
           "damageType": "SP"
@@ -156,13 +186,18 @@
       }
     ],
     "hitPoints": 12,
-    "page": 266
+    "page": 266,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Terrifying, huge burrowing predators known to rend through metal."
+      }
+    ]
   },
   {
     "id": "9303ec5f-5cda-4edc-8ebf-265850bcdfcd",
     "source": "Salvage Union Workshop Manual",
     "name": "Carrion Bird",
-    "description": "Large flying scavengers that feast on flesh and bone.",
     "traits": [
       {
         "type": "fly"
@@ -171,7 +206,9 @@
     "actions": [
       {
         "name": "Talons",
-        "range": ["Close"],
+        "range": [
+          "Close"
+        ],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -180,6 +217,12 @@
       }
     ],
     "hitPoints": 3,
-    "page": 266
+    "page": 266,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Large flying scavengers that feast on flesh and bone."
+      }
+    ]
   }
 ]

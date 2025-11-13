@@ -5,7 +5,16 @@
   "description": "Traits and special properties in Salvage Union",
   "type": "array",
   "items": {
-    "$ref": "shared/objects.schema.json#/definitions/baseEntry",
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+      }
+    ],
+    "properties": {
+      "content": {
+        "$ref": "shared/objects.schema.json#/definitions/content"
+      }
+    },
     "unevaluatedProperties": false
   }
 }

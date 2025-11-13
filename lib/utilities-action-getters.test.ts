@@ -15,18 +15,17 @@ import {
 
 describe('Action Property Getters', () => {
   describe('getDescription', () => {
-    test('should get description from ability (action property)', () => {
+    test('should get description from ability', () => {
       const ability = SalvageUnionReference.Abilities.all()[0]
       const description = getDescription(ability)
       expect(description).toBeDefined()
       expect(typeof description).toBe('string')
     })
 
-    test('should get description from chassis (base level)', () => {
+    test('should return undefined for non-ability entities (deprecated)', () => {
       const chassis = SalvageUnionReference.Chassis.all()[0]
       const description = getDescription(chassis)
-      expect(description).toBeDefined()
-      expect(typeof description).toBe('string')
+      expect(description).toBeUndefined()
     })
   })
 

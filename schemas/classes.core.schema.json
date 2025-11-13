@@ -32,6 +32,9 @@
         "items": {
           "$ref": "shared/enums.schema.json#/definitions/tree"
         }
+      },
+      "content": {
+        "$ref": "shared/objects.schema.json#/definitions/content"
       }
     },
     "unevaluatedProperties": false

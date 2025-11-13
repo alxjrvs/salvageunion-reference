@@ -22,6 +22,9 @@
       },
       "table": {
         "$ref": "shared/objects.schema.json#/definitions/table"
+      },
+      "content": {
+        "$ref": "shared/objects.schema.json#/definitions/content"
       }
     },
     "unevaluatedProperties": false

@@ -10,64 +10,33 @@ import type {
   SURefDamageType,
   SURefRange,
   SURefSchemaName,
-  SURefSource,
-  SURefTree,
+  SURefTree
 } from './enums.js'
 
 import type {
   SURefActivationCost,
-  SURefAssetUrl,
   SURefHitPoints,
   SURefId,
   SURefName,
-  SURefTechLevel,
+  SURefNonNegativeInteger,
+  SURefPositiveInteger,
+  SURefSalvageValue,
+  SURefTechLevel
 } from './common.js'
-
-/**
- * Basic entry with name, description, source, and page reference
- */
-export interface SURefMetaEntry {
-  asset_url?: SURefAssetUrl
-  id: SURefId
-  /**
-   * Whether this entry should be included in search indexes
-   */
-  indexable?: boolean
-  /**
-   * Name of the entry
-   */
-  name: string
-  /**
-   * Description of the entry
-   */
-  description?: string
-  /**
-   * Additional notes about the entry
-   */
-  notes?: string
-  source: SURefSource
-  /**
-   * Page number in the source book
-   */
-  page: number
-}
 
 /**
  * Damage dealt by an attack or ability
  */
 export interface SURefMetaDamage {
   damageType: SURefDamageType
-  amount: number | string
+  amount: (SURefNonNegativeInteger | string)
 }
 
 /**
  * Special traits and properties of items, systems, or abilities
  */
 export interface SURefMetaTrait {
-  amount?: number | string
-  /**
-   * Type of trait that doesn't require a numeric value
-   */
+  amount?: (SURefNonNegativeInteger | string)
   type: string
 }
 
@@ -75,7 +44,7 @@ export interface SURefMetaTrait {
  * Grantable entity with a name and description
  */
 export interface SURefMetaGrantable {
-  schema: SURefSchemaName | 'choice'
+  schema: (SURefSchemaName | 'choice')
   name: SURefName
 }
 
@@ -83,13 +52,7 @@ export interface SURefMetaGrantable {
  * Related entry or reference
  */
 export interface SURefMetaEffect {
-  /**
-   * Display label for the effect (empty string if no label)
-   */
   label?: string
-  /**
-   * Name of the related entry or reference
-   */
   value: string
 }
 
@@ -97,79 +60,28 @@ export interface SURefMetaEffect {
  * Statistics for mechs, chassis, and vehicles
  */
 export interface SURefMetaStats {
-  /**
-   * Structure points (durability)
-   */
-  structurePoints?: number
-  /**
-   * Energy points (power capacity)
-   */
-  energyPoints?: number
-  /**
-   * Heat capacity
-   */
-  heatCapacity?: number
-  /**
-   * Number of system slots
-   */
-  systemSlots?: number
-  /**
-   * Number of module slots
-   */
-  moduleSlots?: number
-  /**
-   * Cargo capacity
-   */
-  cargoCapacity?: number
+  structurePoints?: SURefNonNegativeInteger
+  energyPoints?: SURefNonNegativeInteger
+  heatCapacity?: SURefNonNegativeInteger
+  systemSlots?: SURefNonNegativeInteger
+  moduleSlots?: SURefNonNegativeInteger
+  cargoCapacity?: SURefNonNegativeInteger
   techLevel?: SURefTechLevel
-  /**
-   * Salvage value in scrap
-   */
-  salvageValue?: number
+  salvageValue?: SURefSalvageValue
 }
 
 export interface SURefMetaChoice {
   id: SURefId
-  /**
-   * Name of the choice
-   */
-  name: string
-  /**
-   * Description of the choice
-   */
-  description?: string
-  /**
-   * Roll table name for the choice
-   */
+  name: SURefName
+  content?: SURefMetaContent
   rollTable?: string
-  /**
-   * Entities that can be chosen
-   */
   schemaEntities?: string[]
-  /**
-   * Schema for the choice
-   */
   schema?: SURefSchemaName[]
-  /**
-   * Options for the choice
-   */
   customSystemOptions?: SURefMetaSystemModule[]
-  /**
-   * Constraints for the choice
-   */
   constraints?: {
-    /**
-     * Field to apply the constraint to
-     */
     field?: string
-    /**
-     * Minimum number of choices
-     */
-    min?: number
-    /**
-     * Maximum number of choices
-     */
-    max?: number
+    min?: SURefNonNegativeInteger
+    max?: SURefNonNegativeInteger
   }
 }
 
@@ -177,53 +89,32 @@ export interface SURefMetaChoice {
  * NPC associated with an entity
  */
 export interface SURefMetaNpc {
-  /**
-   * Name of the NPC
-   */
-  position: string
-  /**
-   * Description of the NPC
-   */
-  description: string
+  position: SURefName
+  content?: SURefMetaContent
   hitPoints: SURefHitPoints
   choices?: SURefMetaChoices
 }
 
 export interface SURefMetaPatternSystemModule {
-  /**
-   * Name of the system or module
-   */
-  name: string
-  /**
-   * Number of this system or module included
-   */
-  count?: number
+  name: SURefName
+  count?: SURefNonNegativeInteger
   /**
    * Preselected choices for this system or module, keyed by choice ID
    */
-  preselectedChoices?: Record<string, string>
+  preselectedChoices?: Record<string, SURefName>
 }
 
 /**
  * Mech chassis pattern configuration
  */
 export interface SURefMetaPattern {
-  /**
-   * Name of the pattern
-   */
-  name: string
-  /**
-   * Description of the pattern
-   */
-  description?: string
-  /**
-   * Whether this pattern is legal for starting characters
-   */
+  name: SURefName
+  content?: SURefMetaContent
   legalStarting?: boolean
   systems: SURefMetaPatternSystemModule[]
   modules: SURefMetaPatternSystemModule[]
   /**
-   * Optional drone configuration for this pattern
+   * Optional drone configuration
    */
   drone?: {
     systems: string[]
@@ -235,15 +126,9 @@ export interface SURefMetaPattern {
  * Effect that scales with tech level
  */
 export interface SURefMetaTechLevelEffect {
-  /**
-   * Minimum tech level for this effect
-   */
-  techLevelMin: number
-  /**
-   * Maximum tech level for this effect
-   */
-  techLevelMax: number
-  effects: SURefMetaEffects
+  techLevelMin: SURefPositiveInteger
+  techLevelMax: SURefPositiveInteger
+  content: SURefMetaContent
 }
 
 /**
@@ -251,78 +136,23 @@ export interface SURefMetaTechLevelEffect {
  */
 export interface SURefMetaAction {
   id: SURefId
-  /**
-   * Structure Points (SP) - the health/durability of the entity
-   */
+  content?: SURefMetaContent
   structurePoints?: number
-  /**
-   * Energy Points (EP) - the energy/power capacity of the entity
-   */
   energyPoints?: number
-  /**
-   * Heat Capacity - how much heat the entity can handle
-   */
   heatCapacity?: number
-  /**
-   * Number of system slots available
-   */
   systemSlots?: number
-  /**
-   * Number of module slots available
-   */
   moduleSlots?: number
-  /**
-   * Cargo capacity
-   */
   cargoCapacity?: number
   techLevel?: SURefTechLevel
-  /**
-   * Salvage value when scrapped
-   */
   salvageValue?: number
-  /**
-   * Name of the action
-   */
-  name: string
-  /**
-   * Description of what the action does
-   */
-  description?: string
-  effects?: SURefMetaEffects
-  /**
-   * Additional notes or flavor text for the action
-   */
-  notes?: string
+  name: SURefName
   activationCost?: SURefActivationCost
   range?: SURefRange
   actionType?: SURefActionType
-  /**
-   * Special traits and properties of items, systems, or abilities
-   */
   traits?: SURefMetaTrait[]
   damage?: SURefMetaDamage
-  /**
-   * List of options or choices for this action
-   */
-  options?: {
-    /**
-     * Display label for the option (empty string if no label)
-     */
-    label: string
-    /**
-     * Description or effect of the option
-     */
-    value: string
-  }[]
-  /**
-   * Choices available to the player when interacting with the NPC
-   */
   choices?: SURefMetaChoice[]
   table?: SURefMetaTable
-  /**
-   * Sub-actions or nested actions for this ability
-   */
-  actions?: SURefMetaAction[]
 }
 
 /**
@@ -330,23 +160,10 @@ export interface SURefMetaAction {
  */
 export interface SURefMetaSystemModule extends SURefMetaStats {
   techLevel: SURefTechLevel
-  /**
-   * Number of slots required to install
-   */
-  slotsRequired: number
-  /**
-   * Salvage value in scrap
-   */
-  salvageValue: number
-  /**
-   * Whether this is a recommended starting system
-   */
+  slotsRequired: SURefNonNegativeInteger
+  salvageValue: SURefSalvageValue
   recommended?: boolean
-  /**
-   * Number of this system included
-   */
-  count?: number
-  action: SURefMetaAction
+  count?: SURefNonNegativeInteger
   actions: SURefMetaActions
 }
 
@@ -354,7 +171,7 @@ export interface SURefMetaSystemModule extends SURefMetaStats {
  * Roll table for random outcomes based on d20 rolls
  */
 export type SURefMetaTable =
-  | {
+  {
       /**
        * Critical failure outcome
        */
@@ -432,82 +249,39 @@ export type SURefMetaBonusPerTechLevel = SURefMetaStats
 /**
  * Advanced or hybrid character class
  */
-export interface SURefMetaAdvancedClass extends SURefMetaEntry {
+export interface SURefMetaAdvancedClass extends SURefMetaBaseEntry {
   type: SURefClassType
   advancedTree: SURefTree
   legendaryTree: SURefTree
 }
 
-/**
- * List of options or choices for an action
- */
 export type SURefMetaActionOptions = {
-  /**
-   * Display label for the option (empty string if no label)
-   */
   label: string
-  /**
-   * Description or effect of the option
-   */
   value: string
 }[]
 
-/**
- * Actions that can be performed with this entity
- */
 export type SURefMetaActions = SURefMetaAction[]
 
-/**
- * Choices available to the player when interacting with the entity
- */
 export type SURefMetaChoices = SURefMetaChoice[]
 
-/**
- * Custom system options for choices
- */
+export type SURefMetaContent = SURefMetaContentBlock[]
+
 export type SURefMetaCustomSystemOptions = SURefMetaSystemModule[]
 
-/**
- * Related entries or references
- */
 export type SURefMetaEffects = SURefMetaEffect[]
 
-/**
- * Entities that can be granted
- */
 export type SURefMetaGrants = SURefMetaGrantable[]
 
-/**
- * Module names (string references)
- */
 export type SURefMetaModules = string[]
 
-/**
- * Mech chassis pattern configurations
- */
 export type SURefMetaPatterns = SURefMetaPattern[]
 
-/**
- * Entity names that can be chosen
- */
 export type SURefMetaSchemaEntities = string[]
 
-/**
- * Schema names for filtering choices
- */
 export type SURefMetaSchemaNames = SURefSchemaName[]
 
-/**
- * System names (string references)
- */
 export type SURefMetaSystems = string[]
 
-/**
- * Effects that scale with tech level
- */
 export type SURefMetaTechLevelEffects = SURefMetaTechLevelEffect[]
 
-/**
- * Special traits and properties of items, systems, or abilities
- */
 export type SURefMetaTraits = SURefMetaTrait[]

@@ -16,6 +16,9 @@
       }
     ],
     "properties": {
+      "description": {
+        "type": "string"
+      },
       "tree": {
         "$ref": "shared/enums.schema.json#/definitions/tree"
       },

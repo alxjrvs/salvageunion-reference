@@ -7,7 +7,16 @@
   "type": "array",
   "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/distances.jpg",
   "items": {
-    "$ref": "shared/objects.schema.json#/definitions/baseEntry",
+    "allOf": [
+      {
+        "$ref": "shared/objects.schema.json#/definitions/baseEntry"
+      }
+    ],
+    "properties": {
+      "content": {
+        "$ref": "shared/objects.schema.json#/definitions/content"
+      }
+    },
     "unevaluatedProperties": false
   }
 }

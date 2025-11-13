@@ -3,19 +3,28 @@
     "id": "c1d53d2d-9abd-4a72-8e78-2674eb7d7329",
     "source": "Salvage Union Workshop Manual",
     "name": "Power Loader",
-    "description": "A pneumatically powered heavy loader for moving cargo.",
-    "systems": ["Locomotion System", "Rigging Arm"],
+    "systems": [
+      "Locomotion System",
+      "Rigging Arm"
+    ],
     "techLevel": 1,
     "salvageValue": 1,
     "structurePoints": 1,
-    "page": 292
+    "page": 292,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A pneumatically powered heavy loader for moving cargo."
+      }
+    ]
   },
   {
     "id": "cc95bd31-30c2-4f47-b1b3-a881eb228c0d",
     "source": "Salvage Union Workshop Manual",
     "name": "Box Wheel",
-    "description": "A four seater box wheel vehicle designed for recreational driving. Not a lot of these nowadays.",
-    "systems": ["Locomotion System Box Wheel"],
+    "systems": [
+      "Locomotion System Box Wheel"
+    ],
     "traits": [
       {
         "type": "personnel capacity",
@@ -28,14 +37,22 @@
     "techLevel": 1,
     "salvageValue": 1,
     "structurePoints": 1,
-    "page": 292
+    "page": 292,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A four seater box wheel vehicle designed for recreational driving. Not a lot of these nowadays."
+      }
+    ]
   },
   {
     "id": "b31e45ef-412a-46ae-bf21-83ef01477199",
     "source": "Salvage Union Workshop Manual",
     "name": "Fighting Box Wheel",
-    "description": "An improvised fighting vehicle, modified to carry heavy weaponry.",
-    "systems": ["Locomotion System", ".50 Cal Machine Gun"],
+    "systems": [
+      "Locomotion System",
+      ".50 Cal Machine Gun"
+    ],
     "traits": [
       {
         "type": "personnel capacity",
@@ -48,14 +65,22 @@
     "techLevel": 1,
     "salvageValue": 2,
     "structurePoints": 2,
-    "page": 293
+    "page": 293,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "An improvised fighting vehicle, modified to carry heavy weaponry."
+      }
+    ]
   },
   {
     "id": "92f28dba-4b4b-4e4d-81f8-bc9e279d92f5",
     "source": "Salvage Union Workshop Manual",
     "name": "Armoured Box Wheel",
-    "description": "An armoured, wheeled vehicle that carries personnel and provides fire support",
-    "systems": ["Locomotion System", "30mm Autocannon"],
+    "systems": [
+      "Locomotion System",
+      "30mm Autocannon"
+    ],
     "traits": [
       {
         "type": "personnel capacity",
@@ -69,25 +94,41 @@
     "salvageValue": 3,
     "structurePoints": 4,
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/vehicles/armoured%20box%20wheel.jpg",
-    "page": 293
+    "page": 293,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "An armoured, wheeled vehicle that carries personnel and provides fire support"
+      }
+    ]
   },
   {
     "id": "2ee55c7e-c8fb-406f-93f9-93a5b2a9ba37",
     "source": "Salvage Union Workshop Manual",
     "name": "Tank",
-    "description": "A conventional tracked, armoured battle vehicle.",
-    "systems": ["Locomotion System", "120mm Cannon"],
+    "systems": [
+      "Locomotion System",
+      "120mm Cannon"
+    ],
     "techLevel": 3,
     "salvageValue": 4,
     "structurePoints": 6,
-    "page": 165
+    "page": 165,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A conventional tracked, armoured battle vehicle."
+      }
+    ]
   },
   {
     "id": "1e582dbd-3d2c-4408-a43c-d961ba63fb37",
     "source": "Salvage Union Workshop Manual",
     "name": "Rotorcraft",
-    "description": "A flying vehicle that can hover over terrain.",
-    "systems": ["Hover Locomotion System", "Rotary Mini Gun"],
+    "systems": [
+      "Hover Locomotion System",
+      "Rotary Mini Gun"
+    ],
     "traits": [
       {
         "type": "personnel capacity",
@@ -100,14 +141,21 @@
     "techLevel": 4,
     "salvageValue": 3,
     "structurePoints": 3,
-    "page": 293
+    "page": 293,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A flying vehicle that can hover over terrain."
+      }
+    ]
   },
   {
     "id": "79640c87-2166-44fa-a9e5-396de3fe865a",
     "source": "Salvage Union Workshop Manual",
     "name": "Machine Gun Turret",
-    "description": "A static gun emplacement.",
-    "systems": [".50 Cal Machine Gun"],
+    "systems": [
+      ".50 Cal Machine Gun"
+    ],
     "traits": [
       {
         "type": "immobile"
@@ -116,6 +164,12 @@
     "techLevel": 1,
     "salvageValue": 1,
     "structurePoints": 2,
-    "page": 178
+    "page": 178,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A static gun emplacement."
+      }
+    ]
   }
 ]

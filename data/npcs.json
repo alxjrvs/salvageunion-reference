@@ -3,12 +3,13 @@
     "id": "c6bfc845-b1dc-43e9-8f79-fd4854842949",
     "source": "Salvage Union Workshop Manual",
     "name": "Wastelander",
-    "description": "Represents the myriad of common denizens of the wastelands.",
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/npcs/wastelander.jpg",
     "actions": [
       {
         "name": "Improvised Melee Weapon",
-        "range": ["Close"],
+        "range": [
+          "Close"
+        ],
         "damage": {
           "amount": 2,
           "damageType": "HP"
@@ -26,17 +27,24 @@
       }
     ],
     "hitPoints": 2,
-    "page": 53
+    "page": 53,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Represents the myriad of common denizens of the wastelands."
+      }
+    ]
   },
   {
     "id": "bb1b8558-1bca-4db8-8d13-f02fc344d327",
     "source": "Salvage Union Workshop Manual",
     "name": "Raider",
-    "description": "Wastelanders who take what they need by force.",
     "actions": [
       {
         "name": "Improvised Firearm",
-        "range": ["Close"],
+        "range": [
+          "Close"
+        ],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -53,17 +61,24 @@
       }
     ],
     "hitPoints": 3,
-    "page": 46
+    "page": 46,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Wastelanders who take what they need by force."
+      }
+    ]
   },
   {
     "id": "28015ce1-8440-471c-b97e-bb4ff114a667",
     "source": "Salvage Union Workshop Manual",
     "name": "Trooper",
-    "description": "Combat trained troops deployed in a wide range of roles.",
     "actions": [
       {
         "name": "Rifle",
-        "range": ["Medium"],
+        "range": [
+          "Medium"
+        ],
         "damage": {
           "amount": 5,
           "damageType": "HP"
@@ -81,17 +96,24 @@
       }
     ],
     "hitPoints": 5,
-    "page": 274
+    "page": 274,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Combat trained troops deployed in a wide range of roles."
+      }
+    ]
   },
   {
     "id": "5b1e5b18-c023-4e7c-a6b9-c6a22cb6e48d",
     "source": "Salvage Union Workshop Manual",
     "name": "Veteran",
-    "description": "A well trained and seasoned soldier deployed on difficult operations.",
     "actions": [
       {
         "name": "Green Laser Rifle",
-        "range": ["Medium"],
+        "range": [
+          "Medium"
+        ],
         "damage": {
           "amount": 5,
           "damageType": "HP"
@@ -109,17 +131,24 @@
       }
     ],
     "hitPoints": 9,
-    "page": 52
+    "page": 52,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A well trained and seasoned soldier deployed on difficult operations."
+      }
+    ]
   },
   {
     "id": "ad0a3127-2fb2-4d38-af8e-7fc76d9d05d9",
     "source": "Salvage Union Workshop Manual",
     "name": "Combat Pilot",
-    "description": "A combat trained Mech Pilot, such as a Union Salvager.",
     "actions": [
       {
         "name": "Pistol",
-        "range": ["Close"],
+        "range": [
+          "Close"
+        ],
         "damage": {
           "amount": 3,
           "damageType": "HP"
@@ -137,17 +166,24 @@
       }
     ],
     "hitPoints": 10,
-    "page": 57
+    "page": 57,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A combat trained Mech Pilot, such as a Union Salvager."
+      }
+    ]
   },
   {
     "id": "15ff8ca3-a759-4c39-a546-1cac319ffc4e",
     "source": "Salvage Union Workshop Manual",
     "name": "Ace",
-    "description": "A veteran Mech Pilot, usually with Corpo training.",
     "actions": [
       {
         "name": "Sniper Rifle",
-        "range": ["Long"],
+        "range": [
+          "Long"
+        ],
         "damage": {
           "amount": 6,
           "damageType": "HP"
@@ -165,6 +201,12 @@
       }
     ],
     "hitPoints": 16,
-    "page": 12
+    "page": 12,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A veteran Mech Pilot, usually with Corpo training."
+      }
+    ]
   }
 ]

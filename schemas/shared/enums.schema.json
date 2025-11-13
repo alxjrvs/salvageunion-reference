@@ -6,14 +6,33 @@
   "definitions": {
     "source": {
       "type": "string",
-      "enum": ["Salvage Union Workshop Manual", "Mech Monday"],
+      "enum": [
+        "Salvage Union Workshop Manual",
+        "Mech Monday"
+      ],
       "description": "The source book or expansion for this content"
+    },
+    "contentType": {
+      "type": "string",
+      "enum": [
+        "paragraph",
+        "heading",
+        "list-item",
+        "list-item-naked",
+        "label"
+      ],
+      "description": "Type of content block for rendering structured text"
     },
     "range": {
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["Close", "Medium", "Long", "Far"]
+        "enum": [
+          "Close",
+          "Medium",
+          "Long",
+          "Far"
+        ]
       },
       "minItems": 1,
       "description": "Range bands for abilities and weapons"
@@ -33,12 +52,18 @@
     },
     "damageType": {
       "type": "string",
-      "enum": ["HP", "SP"],
+      "enum": [
+        "HP",
+        "SP"
+      ],
       "description": "Type of damage"
     },
     "classType": {
       "type": "string",
-      "enum": ["Advanced", "Hybrid"],
+      "enum": [
+        "Advanced",
+        "Hybrid"
+      ],
       "description": "Type of advanced class"
     },
     "tree": {

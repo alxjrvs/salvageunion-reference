@@ -461,27 +461,13 @@ export function isMetaAction(
 
 /**
  * Get description from an entity
- * Checks both base level and nested action property
  * @param entity - The entity to extract description from
- * @returns The description or undefined if not present
+ * @returns The description or undefined if not an ability
  */
 export function getDescription(entity: SURefMetaEntity): string | undefined {
-  // Check base level first
+  // Only return description for abilities
   if ('description' in entity && typeof entity.description === 'string') {
     return entity.description
-  }
-
-  // Check actions[0] property
-  if (
-    'actions' in entity &&
-    Array.isArray(entity.actions) &&
-    entity.actions.length > 0 &&
-    entity.actions[0] !== null &&
-    typeof entity.actions[0] === 'object' &&
-    'description' in entity.actions[0] &&
-    typeof entity.actions[0].description === 'string'
-  ) {
-    return entity.actions[0].description
   }
 
   return undefined
