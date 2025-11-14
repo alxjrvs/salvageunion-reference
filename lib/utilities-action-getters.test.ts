@@ -39,6 +39,91 @@ describe('Action Property Getters', () => {
         expect(cost).toBeDefined()
       }
     })
+
+    test('should extract from actions[0] when entity has exactly 1 action', () => {
+      const entity = {
+        id: 'test-single-action',
+        name: 'Test Single Action',
+        actions: [
+          {
+            id: 'action1',
+            name: 'Action 1',
+            activationCost: 3,
+            actionType: 'Attack',
+          },
+        ],
+      }
+
+      const cost = getActivationCost(entity as never)
+      expect(cost).toBe(3)
+    })
+
+    test('should return undefined when entity has multiple actions', () => {
+      const entity = {
+        id: 'test-multi-action',
+        name: 'Test Multi Action',
+        actions: [
+          {
+            id: 'action1',
+            name: 'Action 1',
+            activationCost: 3,
+            actionType: 'Attack',
+          },
+          {
+            id: 'action2',
+            name: 'Action 2',
+            activationCost: 2,
+            actionType: 'Utility',
+          },
+        ],
+      }
+
+      const cost = getActivationCost(entity as never)
+      expect(cost).toBeUndefined()
+    })
+
+    test('should prefer base-level property over actions[0]', () => {
+      const entity = {
+        id: 'test-base-level',
+        name: 'Test Base Level',
+        activationCost: 5,
+        actions: [
+          {
+            id: 'action1',
+            name: 'Action 1',
+            activationCost: 3,
+            actionType: 'Attack',
+          },
+        ],
+      }
+
+      const cost = getActivationCost(entity as never)
+      expect(cost).toBe(5)
+    })
+
+    test('should work correctly with real single-action systems', () => {
+      const singleActionSystem = SalvageUnionReference.Systems.all().find(
+        (s) =>
+          s.actions && s.actions.length === 1 && s.actions[0].activationCost
+      )
+      if (singleActionSystem && singleActionSystem.actions) {
+        const cost = getActivationCost(singleActionSystem)
+        expect(cost).toBe(singleActionSystem.actions[0].activationCost)
+      }
+    })
+
+    test('should return undefined for real multi-action chassis', () => {
+      const multiActionChassis = SalvageUnionReference.Chassis.all().find(
+        (c) =>
+          c.actions &&
+          c.actions.length > 1 &&
+          c.actions[0].activationCost !== undefined
+      )
+      if (multiActionChassis) {
+        const cost = getActivationCost(multiActionChassis)
+        expect(cost).toBeUndefined()
+      }
+    })
   })
 
   describe('getActionType', () => {
@@ -47,6 +132,27 @@ describe('Action Property Getters', () => {
       const actionType = getActionType(ability)
       expect(actionType).toBeDefined()
       expect(typeof actionType).toBe('string')
+    })
+
+    test('should extract from actions[0] when entity has exactly 1 action', () => {
+      const entity = {
+        id: 'test',
+        name: 'Test',
+        actions: [{ id: 'a1', name: 'A1', actionType: 'Attack' }],
+      }
+      expect(getActionType(entity as never)).toBe('Attack')
+    })
+
+    test('should return undefined when entity has multiple actions', () => {
+      const entity = {
+        id: 'test',
+        name: 'Test',
+        actions: [
+          { id: 'a1', name: 'A1', actionType: 'Attack' },
+          { id: 'a2', name: 'A2', actionType: 'Utility' },
+        ],
+      }
+      expect(getActionType(entity as never)).toBeUndefined()
     })
   })
 
@@ -60,6 +166,27 @@ describe('Action Property Getters', () => {
         expect(range).toBeDefined()
         expect(typeof range).toBe('string')
       }
+    })
+
+    test('should extract from actions[0] when entity has exactly 1 action', () => {
+      const entity = {
+        id: 'test',
+        name: 'Test',
+        actions: [{ id: 'a1', name: 'A1', range: ['6'] }],
+      }
+      expect(getRange(entity as never)).toEqual(['6'])
+    })
+
+    test('should return undefined when entity has multiple actions', () => {
+      const entity = {
+        id: 'test',
+        name: 'Test',
+        actions: [
+          { id: 'a1', name: 'A1', range: ['6'] },
+          { id: 'a2', name: 'A2', range: ['12'] },
+        ],
+      }
+      expect(getRange(entity as never)).toBeUndefined()
     })
   })
 
@@ -85,6 +212,44 @@ describe('Action Property Getters', () => {
         expect(damage).toBeDefined()
       }
     })
+
+    test('should extract from actions[0] when entity has exactly 1 action', () => {
+      const entity = {
+        id: 'test',
+        name: 'Test',
+        actions: [
+          {
+            id: 'a1',
+            name: 'A1',
+            damage: { damageType: 'Kinetic', amount: 2 },
+          },
+        ],
+      }
+      expect(getDamage(entity as never)).toEqual({
+        damageType: 'Kinetic',
+        amount: 2,
+      })
+    })
+
+    test('should return undefined when entity has multiple actions', () => {
+      const entity = {
+        id: 'test',
+        name: 'Test',
+        actions: [
+          {
+            id: 'a1',
+            name: 'A1',
+            damage: { damageType: 'Kinetic', amount: 2 },
+          },
+          {
+            id: 'a2',
+            name: 'A2',
+            damage: { damageType: 'Energy', amount: 3 },
+          },
+        ],
+      }
+      expect(getDamage(entity as never)).toBeUndefined()
+    })
   })
 
   describe('getTraits', () => {
@@ -107,10 +272,33 @@ describe('Action Property Getters', () => {
         expect(Array.isArray(traits)).toBe(true)
       }
     })
+
+    test('should extract from actions[0] when entity has exactly 1 action', () => {
+      const entity = {
+        id: 'test',
+        name: 'Test',
+        actions: [
+          { id: 'a1', name: 'A1', traits: [{ type: 'Hot', amount: 2 }] },
+        ],
+      }
+      expect(getTraits(entity as never)).toEqual([{ type: 'Hot', amount: 2 }])
+    })
+
+    test('should return undefined when entity has multiple actions', () => {
+      const entity = {
+        id: 'test',
+        name: 'Test',
+        actions: [
+          { id: 'a1', name: 'A1', traits: [{ type: 'Hot', amount: 2 }] },
+          { id: 'a2', name: 'A2', traits: [{ type: 'Shield' }] },
+        ],
+      }
+      expect(getTraits(entity as never)).toBeUndefined()
+    })
   })
 
   describe('getEffects', () => {
-    test('should get effects from ability (action property)', () => {
+    test('should get effects from ability (base level)', () => {
       const ability = SalvageUnionReference.Abilities.all().find((a) => {
         const effects = getEffects(a)
         return effects && effects.length > 0
@@ -123,6 +311,15 @@ describe('Action Property Getters', () => {
           expect(effects[0]).toHaveProperty('value')
         }
       }
+    })
+
+    test('should return undefined when entity has no effects', () => {
+      const entity = {
+        id: 'test',
+        name: 'Test',
+        actions: [{ id: 'a1', name: 'A1' }],
+      }
+      expect(getEffects(entity as never)).toBeUndefined()
     })
   })
 

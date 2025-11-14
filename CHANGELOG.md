@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] - 2025-01-13
+
+### Fixed
+
+- **Action Property Extraction Bug**: Fixed utility functions that incorrectly extracted properties from `actions[0]` for multi-action entities
+  - Updated `getActivationCost()`, `getActionType()`, `getRange()`, `getDamage()`, and `getTraits()` to only extract from `actions[0]` when entity has **exactly 1 action**
+  - Previously, these functions would extract from the first action even when entities had multiple actions (e.g., Chassis with 4 actions)
+  - Now correctly returns `undefined` for multi-action entities, ensuring properties are only "promoted" for single-action entities
+  - Fixed `getEffects()` to only check base-level properties (effects don't exist in action schema)
+  - Added comprehensive test coverage for single-action, multi-action, and base-level property precedence scenarios
+
 ## [2.0.0] - 2025-01-13
 
 ### 🚨 BREAKING CHANGES

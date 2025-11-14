@@ -459,7 +459,7 @@ export function getDescription(entity: SURefMetaEntity): string | undefined {
 
 /**
  * Get activation cost from an entity
- * Checks both base level and nested action property
+ * Checks base level first, then actions[0] if entity has exactly 1 action
  * @param entity - The entity to extract activation cost from
  * @returns The activation cost or undefined if not present
  */
@@ -475,11 +475,11 @@ export function getActivationCost(
     return entity.activationCost
   }
 
-  // Check actions[0] property
+  // Check actions[0] property (only if entity has exactly 1 action)
   if (
     'actions' in entity &&
     Array.isArray(entity.actions) &&
-    entity.actions.length > 0 &&
+    entity.actions.length === 1 &&
     entity.actions[0] !== null &&
     typeof entity.actions[0] === 'object' &&
     'activationCost' in entity.actions[0] &&
@@ -494,7 +494,7 @@ export function getActivationCost(
 
 /**
  * Get action type from an entity
- * Checks both base level and nested action property
+ * Checks base level first, then actions[0] if entity has exactly 1 action
  * @param entity - The entity to extract action type from
  * @returns The action type or undefined if not present
  */
@@ -504,11 +504,11 @@ export function getActionType(entity: SURefMetaEntity): string | undefined {
     return entity.actionType
   }
 
-  // Check actions[0] property
+  // Check actions[0] property (only if entity has exactly 1 action)
   if (
     'actions' in entity &&
     Array.isArray(entity.actions) &&
-    entity.actions.length > 0 &&
+    entity.actions.length === 1 &&
     entity.actions[0] !== null &&
     typeof entity.actions[0] === 'object' &&
     'actionType' in entity.actions[0] &&
@@ -522,7 +522,7 @@ export function getActionType(entity: SURefMetaEntity): string | undefined {
 
 /**
  * Get range from an entity
- * Checks both base level and nested action property
+ * Checks base level first, then actions[0] if entity has exactly 1 action
  * @param entity - The entity to extract range from
  * @returns The range array or undefined if not present
  */
@@ -532,11 +532,11 @@ export function getRange(entity: SURefMetaEntity): string[] | undefined {
     return entity.range
   }
 
-  // Check actions[0] property
+  // Check actions[0] property (only if entity has exactly 1 action)
   if (
     'actions' in entity &&
     Array.isArray(entity.actions) &&
-    entity.actions.length > 0 &&
+    entity.actions.length === 1 &&
     entity.actions[0] !== null &&
     typeof entity.actions[0] === 'object' &&
     'range' in entity.actions[0] &&
@@ -550,7 +550,7 @@ export function getRange(entity: SURefMetaEntity): string[] | undefined {
 
 /**
  * Get damage from an entity
- * Checks both base level and nested action property
+ * Checks base level first, then actions[0] if entity has exactly 1 action
  * @param entity - The entity to extract damage from
  * @returns The damage object or undefined if not present
  */
@@ -569,11 +569,11 @@ export function getDamage(entity: SURefMetaEntity):
     return entity.damage as { damageType: string; amount: number | string }
   }
 
-  // Check actions[0] property
+  // Check actions[0] property (only if entity has exactly 1 action)
   if (
     'actions' in entity &&
     Array.isArray(entity.actions) &&
-    entity.actions.length > 0 &&
+    entity.actions.length === 1 &&
     entity.actions[0] !== null &&
     typeof entity.actions[0] === 'object' &&
     'damage' in entity.actions[0] &&
@@ -591,7 +591,7 @@ export function getDamage(entity: SURefMetaEntity):
 
 /**
  * Get traits from an entity
- * Checks both base level and nested action property
+ * Checks base level first, then actions[0] if entity has exactly 1 action
  * @param entity - The entity to extract traits from
  * @returns The traits array or undefined if not present
  */
@@ -606,11 +606,11 @@ export function getTraits(entity: SURefMetaEntity):
     return entity.traits as Array<{ amount?: number | string; type: string }>
   }
 
-  // Check actions[0] property
+  // Check actions[0] property (only if entity has exactly 1 action)
   if (
     'actions' in entity &&
     Array.isArray(entity.actions) &&
-    entity.actions.length > 0 &&
+    entity.actions.length === 1 &&
     entity.actions[0] !== null &&
     typeof entity.actions[0] === 'object' &&
     'traits' in entity.actions[0] &&
@@ -627,7 +627,7 @@ export function getTraits(entity: SURefMetaEntity):
 
 /**
  * Get effects from an entity
- * Checks both base level and nested action property
+ * Note: Effects only exist at base level, not in actions
  * @param entity - The entity to extract effects from
  * @returns The effects array or undefined if not present
  */
@@ -637,22 +637,9 @@ export function getEffects(entity: SURefMetaEntity):
       value: string
     }>
   | undefined {
-  // Check base level first
+  // Check base level only (effects don't exist in actions)
   if ('effects' in entity && Array.isArray(entity.effects)) {
     return entity.effects as Array<{ label?: string; value: string }>
-  }
-
-  // Check actions[0] property
-  if (
-    'actions' in entity &&
-    Array.isArray(entity.actions) &&
-    entity.actions.length > 0 &&
-    entity.actions[0] !== null &&
-    typeof entity.actions[0] === 'object' &&
-    'effects' in entity.actions[0] &&
-    Array.isArray(entity.actions[0].effects)
-  ) {
-    return entity.actions[0].effects as Array<{ label?: string; value: string }>
   }
 
   return undefined
