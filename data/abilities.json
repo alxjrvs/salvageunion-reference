@@ -14,7 +14,8 @@
         "name": "Engineering Expertise",
         "content": [
           {
-            "value": "You are able to answer questions pertaining to mechanical and engineering topics. You may ask the Mediator two questions that cover these areas, and they must answer truthfully. You can use this Ability to ask for the full stats of any Mech Chassis, System, Module, or Pilot Equipment that you can see and interact with, as one of these questions."
+            "value": "You are able to answer questions pertaining to mechanical and engineering topics. You may ask the Mediator two questions that cover these areas, and they must answer truthfully. You can use this Ability to ask for the full stats of any Mech Chassis, System, Module, or Pilot Equipment that you can see and interact with, as one of these questions.",
+            "type": "paragraph"
           }
         ]
       }
@@ -33,10 +34,12 @@
         "id": "7a8ba47f-0815-403c-a840-6ee05db36e2a",
         "content": [
           {
-            "value": "You can easily converse and build rapport with other mechanics, salvagers, workers, and similar wasteland folk. You invent a local saying to exchange with the person you are talking to, something like, \"The only thing that overcomes hard luck is hard work\" or \"Get the show on the road\". Explain what this means."
+            "value": "You can easily converse and build rapport with other mechanics, salvagers, workers, and similar wasteland folk. You invent a local saying to exchange with the person you are talking to, something like, \"The only thing that overcomes hard luck is hard work\" or \"Get the show on the road\". Explain what this means.",
+            "type": "paragraph"
           },
           {
-            "value": "You are now friendly with this NPC and can ask them for three of the following favours. You may choose the same option multiple times."
+            "value": "You are now friendly with this NPC and can ask them for three of the following favours. You may choose the same option multiple times.",
+            "type": "paragraph"
           },
           {
             "type": "list-item",
@@ -59,7 +62,8 @@
             "value": "Provide a favour within their power and ability to grant as adjudicated by the Mediator."
           },
           {
-            "value": "If you meet that same person again you may repeat the phrase and they will offer you a single favour."
+            "value": "If you meet that same person again you may repeat the phrase and they will offer you a single favour.",
+            "type": "paragraph"
           }
         ],
         "activationCost": 3,
@@ -85,10 +89,12 @@
         "name": "Mech Acquisition",
         "content": [
           {
-            "value": "You are able to use your intimate knowledge of engineering to track down and acquire specific Mech parts within wasteland settlements and trading hubs."
+            "value": "You are able to use your intimate knowledge of engineering to track down and acquire specific Mech parts within wasteland settlements and trading hubs.",
+            "type": "paragraph"
           },
           {
-            "value": "You may use this Ability in the field when you are in a settlement within the wastelands or any location that has access to Mech parts. Name any Mech Chassis, System, or Module of a Tech Level less than, equal to, or one level higher than the settlement you are in. The Mediator decides the Tech Level of the settlement. This now becomes available for purchase for an amount of Scrap equal to its Salvage Value of its Tech Level. It is in the Intact Condition."
+            "value": "You may use this Ability in the field when you are in a settlement within the wastelands or any location that has access to Mech parts. Name any Mech Chassis, System, or Module of a Tech Level less than, equal to, or one level higher than the settlement you are in. The Mediator decides the Tech Level of the settlement. This now becomes available for purchase for an amount of Scrap equal to its Salvage Value of its Tech Level. It is in the Intact Condition.",
+            "type": "paragraph"
           },
           {
             "type": "list-item",
@@ -103,10 +109,12 @@
             "value": "Corporate Arcos typically have a Tech Level of 5-6."
           },
           {
-            "value": "During Downtime this Ability may instead be used once, at no cost, to allow you to choose any Mech Chassis, System, or Module of a Tech Level less than, equal to or one level higher than your Union Crawler."
+            "value": "During Downtime this Ability may instead be used once, at no cost, to allow you to choose any Mech Chassis, System, or Module of a Tech Level less than, equal to or one level higher than your Union Crawler.",
+            "type": "paragraph"
           },
           {
-            "value": "This becomes available to purchase in Intact Condition within your Trading Bay as per the normal trading rules (see p. 222)."
+            "value": "This becomes available to purchase in Intact Condition within your Trading Bay as per the normal trading rules (see p. 222).",
+            "type": "paragraph"
           }
         ]
       }
@@ -129,10 +137,12 @@
         "name": "Mass Field Maintenance",
         "content": [
           {
-            "value": "For each Ability Point you spend when you activate this Ability you restore up to 4 SP amongst any number of target Mechs or Vehicles within Range, as long as they have at least 1 SP."
+            "value": "For each Ability Point you spend when you activate this Ability you restore up to 4 SP amongst any number of target Mechs or Vehicles within Range, as long as they have at least 1 SP.",
+            "type": "paragraph"
           },
           {
-            "value": "For example, if you spend 3 AP you may restore up to 12 SP between all target Mechs or Vehicles. You may distribute this SP however you wish amongst the targets."
+            "value": "For example, if you spend 3 AP you may restore up to 12 SP between all target Mechs or Vehicles. You may distribute this SP however you wish amongst the targets.",
+            "type": "paragraph"
           }
         ]
       }
@@ -154,10 +164,12 @@
         "name": "If I cut this wire...",
         "content": [
           {
-            "value": "You can work out exactly where to target a Mech in order to disable its Systems or Modules. Describe how you do this."
+            "value": "You can work out exactly where to target a Mech in order to disable its Systems or Modules. Describe how you do this.",
+            "type": "paragraph"
           },
           {
-            "value": "Pick a System or Module on a target Mech within Range. It becomes damaged and cannot be used until repaired."
+            "value": "Pick a System or Module on a target Mech within Range. It becomes damaged and cannot be used until repaired.",
+            "type": "paragraph"
           }
         ]
       }
@@ -180,10 +192,12 @@
         "name": "Mass Field Repair",
         "content": [
           {
-            "value": "You repair any number of damaged Mech Chassis, Vehicles, Systems, or Modules within Range to Intact Condition. They must be of a Tech Level equal to or lower than your Union Crawler."
+            "value": "You repair any number of damaged Mech Chassis, Vehicles, Systems, or Modules within Range to Intact Condition. They must be of a Tech Level equal to or lower than your Union Crawler.",
+            "type": "paragraph"
           },
           {
-            "value": "This Ability costs 1 AP per target that you repair."
+            "value": "This Ability costs 1 AP per target that you repair.",
+            "type": "paragraph"
           }
         ]
       }
@@ -205,13 +219,16 @@
         "name": "Jury Rig",
         "content": [
           {
-            "value": "You are able to hastily craft improvised equipment from everyday objects taken from your surroundings."
+            "value": "You are able to hastily craft improvised equipment from everyday objects taken from your surroundings.",
+            "type": "paragraph"
           },
           {
-            "value": "When you are in an area with everyday objects at your disposal, you may craft any Pilot Equipment of your choice of a Tech Level equal to or lower than your Union Crawler."
+            "value": "When you are in an area with everyday objects at your disposal, you may craft any Pilot Equipment of your choice of a Tech Level equal to or lower than your Union Crawler.",
+            "type": "paragraph"
           },
           {
-            "value": "This Pilot Equipment gains the [[Unwieldy]] Trait, and is destroyed on any roll of 1-5 when used, in addition to any other setbacks."
+            "value": "This Pilot Equipment gains the [[Unwieldy]] Trait, and is destroyed on any roll of 1-5 when used, in addition to any other setbacks.",
+            "type": "paragraph"
           }
         ]
       }
@@ -233,13 +250,16 @@
         "name": "Mech-Gyver",
         "content": [
           {
-            "value": "Your ability to improvise extends to being able to craft mech parts from scrap in the field."
+            "value": "Your ability to improvise extends to being able to craft mech parts from scrap in the field.",
+            "type": "paragraph"
           },
           {
-            "value": "When you are in an area with Scrap at your disposal, you may craft any System or Module of your choice of a Tech Level equal to or lower than your Union Crawler. You must spend 1 Scrap of the Tech Level of the System or Module or higher to use this Ability. This System or Module gains the [[Unwieldy]] Trait, and is destroyed on any roll of 1-5 when used, in addition to any other setbacks."
+            "value": "When you are in an area with Scrap at your disposal, you may craft any System or Module of your choice of a Tech Level equal to or lower than your Union Crawler. You must spend 1 Scrap of the Tech Level of the System or Module or higher to use this Ability. This System or Module gains the [[Unwieldy]] Trait, and is destroyed on any roll of 1-5 when used, in addition to any other setbacks.",
+            "type": "paragraph"
           },
           {
-            "value": "This System or Module gains the [[Unwieldy]] Trait, and is destroyed on any roll of 1-5 when used, in addition to any other setbacks."
+            "value": "This System or Module gains the [[Unwieldy]] Trait, and is destroyed on any roll of 1-5 when used, in addition to any other setbacks.",
+            "type": "paragraph"
           }
         ]
       }
@@ -267,19 +287,24 @@
         "actionType": "Turn",
         "content": [
           {
-            "value": "You construct an immobile Auto-Turret and train yourself in using it. Only you may use the Auto-Turret. It is powered by a simple reactor and controlled by a rudimentary A.I. It can be used to defend an area and obey simple commands. It acts independently of you, and has its own turn in the round."
+            "value": "You construct an immobile Auto-Turret and train yourself in using it. Only you may use the Auto-Turret. It is powered by a simple reactor and controlled by a rudimentary A.I. It can be used to defend an area and obey simple commands. It acts independently of you, and has its own turn in the round.",
+            "type": "paragraph"
           },
           {
-            "value": "An Auto-Turret uses the same rules as Mechs for attaching Systems and Modules; taking damage and being repaired; as well as Heat and Heat Checks. Your Auto-Turret cannot Push."
+            "value": "An Auto-Turret uses the same rules as Mechs for attaching Systems and Modules; taking damage and being repaired; as well as Heat and Heat Checks. Your Auto-Turret cannot Push.",
+            "type": "paragraph"
           },
           {
-            "value": "You may deploy your Auto-Turret in a location you are in as a Turn Action."
+            "value": "You may deploy your Auto-Turret in a location you are in as a Turn Action.",
+            "type": "paragraph"
           },
           {
-            "value": "Your Auto-Turret has a unique personality.  Choose this or roll on the A.I. Personality Table p. 91. Name your Auto-Turret if you want to get especially attached."
+            "value": "Your Auto-Turret has a unique personality.  Choose this or roll on the A.I. Personality Table p. 91. Name your Auto-Turret if you want to get especially attached.",
+            "type": "paragraph"
           },
           {
-            "value": "Your Auto-Turret has a Tech Level equal to your Union Crawler. Your Auto-Turret is upgraded along with your Union Crawler, it gains additional stats as shown for each Tech level above the first."
+            "value": "Your Auto-Turret has a Tech Level equal to your Union Crawler. Your Auto-Turret is upgraded along with your Union Crawler, it gains additional stats as shown for each Tech level above the first.",
+            "type": "paragraph"
           }
         ],
         "traits": [
@@ -301,7 +326,8 @@
     "description": "Improved repair; gain an additional 4SP when using Repair abilities or Systems.",
     "content": [
       {
-        "value": "You have specialised in getting your hands dirty, you can patch up even the most brutally damaged Mechs with ease, even in the midst of conflict."
+        "value": "You have specialised in getting your hands dirty, you can patch up even the most brutally damaged Mechs with ease, even in the midst of conflict.",
+        "type": "paragraph"
       }
     ],
     "actions": [
@@ -310,7 +336,8 @@
         "actionType": "Passive",
         "content": [
           {
-            "value": "When you, or a Mech you are piloting uses any Ability that restores Structure Points, the Ability restores an additional 4 SP each time you use it. For example, if you use the Welding Laser's 'Weld' Ability, it restores an additional 4 Structure Points when used."
+            "value": "When you, or a Mech you are piloting uses any Ability that restores Structure Points, the Ability restores an additional 4 SP each time you use it. For example, if you use the Welding Laser's 'Weld' Ability, it restores an additional 4 Structure Points when used.",
+            "type": "paragraph"
           }
         ],
         "id": "c93e328c-a2cd-4e31-82ce-5289fa9814b7"
@@ -321,7 +348,8 @@
         "activationCost": 1,
         "content": [
           {
-            "value": "When you activate this Ability, you may use any Turn Action Ability you have access to that restores Structure Points as a Free Action. For example, you could use the Welding Lasers 'Weld' Ability as a Free Action instead of a Turn Action. This allows you to use the Ability multiple times in a turn."
+            "value": "When you activate this Ability, you may use any Turn Action Ability you have access to that restores Structure Points as a Free Action. For example, you could use the Welding Lasers 'Weld' Ability as a Free Action instead of a Turn Action. This allows you to use the Ability multiple times in a turn.",
+            "type": "paragraph"
           }
         ],
         "id": "bb8987ba-9de3-46bc-b384-9ffe3668c519"
@@ -345,7 +373,8 @@
         "name": "This one goes to 11...",
         "content": [
           {
-            "value": "You are able to overcharge a Mech Reactor far beyond its usual capacity. Risky, but if anything goes wrong you've got the skills to repair it. You overcharge the reactor on a target Mech. For the next hour, this Mech can Push twice on any of its attacks or actions, re-rolling the same die twice. In addition, it can Push to take an additional action on its turn. This follows all of the normal rules for Pushing."
+            "value": "You are able to overcharge a Mech Reactor far beyond its usual capacity. Risky, but if anything goes wrong you've got the skills to repair it. You overcharge the reactor on a target Mech. For the next hour, this Mech can Push twice on any of its attacks or actions, re-rolling the same die twice. In addition, it can Push to take an additional action on its turn. This follows all of the normal rules for Pushing.",
+            "type": "paragraph"
           },
           {
             "type": "paragraph",
@@ -371,7 +400,8 @@
         "name": "Mass Energy Recharge",
         "content": [
           {
-            "value": "You have gained mastery and intimate knowledge of how a Mech reactor performs, to the point you are able to recharge limited amounts of their energy in the field. When you activate this Ability you can restore up to 10 Energy Points, distributed among any number of target Mechs in Range."
+            "value": "You have gained mastery and intimate knowledge of how a Mech reactor performs, to the point you are able to recharge limited amounts of their energy in the field. When you activate this Ability you can restore up to 10 Energy Points, distributed among any number of target Mechs in Range.",
+            "type": "paragraph"
           }
         ]
       }
@@ -392,7 +422,8 @@
         "name": "Tip Top Shape",
         "content": [
           {
-            "value": " Your Union Crawler no longer needs to pay Upkeep as long as you are on board during Downtime, and it does not deteriorate."
+            "value": " Your Union Crawler no longer needs to pay Upkeep as long as you are on board during Downtime, and it does not deteriorate.",
+            "type": "paragraph"
           },
           {
             "type": "paragraph",
@@ -654,7 +685,6 @@
     "actions": [
       {
         "name": "Bionic Arms Attack",
-        "value": "Melee attack with your bionic arms, where X is equal to the Tech Level of your Union Crawler.",
         "damage": {
           "damageType": "SP",
           "amount": "X"
@@ -665,7 +695,13 @@
             "type": "melee"
           }
         ],
-        "id": "eebc847d-2e61-4d90-9648-c191b5ecc9a1"
+        "id": "eebc847d-2e61-4d90-9648-c191b5ecc9a1",
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Melee attack with your bionic arms, where X is equal to the Tech Level of your Union Crawler."
+          }
+        ]
       },
       {
         "id": "be8df8b7-b6b6-448c-9beb-c8b87dd26b59",
@@ -1224,25 +1260,35 @@
     "actions": [
       {
         "name": "Cargo Charge (Pilot)",
-        "value": "Make a special charge attack against a target in Range. Roll to hit as normal. On a hit, this deals HP damage equal to the amount of Inventory Slots your Pilot has filled. Non-Bio-Titan or Meld creatures hit by this attack are knocked Prone and gain the [[Vulnerable]] Trait.",
         "range": ["Medium"],
         "traits": [
           {
             "type": "melee"
           }
         ],
-        "id": "e8cbf548-106a-4a63-a84a-2012c02e8a81"
+        "id": "e8cbf548-106a-4a63-a84a-2012c02e8a81",
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Make a special charge attack against a target in Range. Roll to hit as normal. On a hit, this deals HP damage equal to the amount of Inventory Slots your Pilot has filled. Non-Bio-Titan or Meld creatures hit by this attack are knocked Prone and gain the [[Vulnerable]] Trait."
+          }
+        ]
       },
       {
         "name": "Cargo Charge (Mech)",
-        "value": "Make a special charge attack against a target in Range while piloting a Mech. Roll to hit as normal. On a hit, this deals SP damage equal to the amount of Cargo Slots you currently have filled on your Mech. Any target hit by this attack is knocked Prone and gains the [[Vulnerable]] Trait.",
         "range": ["Medium"],
         "traits": [
           {
             "type": "melee"
           }
         ],
-        "id": "3d79368c-15f5-4a52-be36-889d4edd103f"
+        "id": "3d79368c-15f5-4a52-be36-889d4edd103f",
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Make a special charge attack against a target in Range while piloting a Mech. Roll to hit as normal. On a hit, this deals SP damage equal to the amount of Cargo Slots you currently have filled on your Mech. Any target hit by this attack is knocked Prone and gains the [[Vulnerable]] Trait."
+          }
+        ]
       },
       {
         "id": "f286ad7a-ceee-4e73-92e7-d21d54335d16",
@@ -1525,13 +1571,18 @@
     "actions": [
       {
         "name": "Custom Sniper Rifle",
-        "value": "Attack with your custom sniper rifle. Base damage is 2 SP at Tech 1, increasing by 1 SP per Tech Level.",
         "damage": {
           "damageType": "SP",
           "amount": 2
         },
         "range": ["Long"],
-        "id": "f397e885-771b-4c10-bfca-28403060187f"
+        "id": "f397e885-771b-4c10-bfca-28403060187f",
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Attack with your custom sniper rifle. Base damage is 2 SP at Tech 1, increasing by 1 SP per Tech Level."
+          }
+        ]
       },
       {
         "id": "27b22a70-8952-49bb-9dc7-35ecdd8ccd6e",
@@ -1859,7 +1910,6 @@
     "actions": [
       {
         "name": "Custom Missile Launcher",
-        "value": "Attack with your custom missile launcher. Base damage is 3 SP at Tech 1, increasing by 1 SP per Tech Level.",
         "damage": {
           "damageType": "SP",
           "amount": 3
@@ -1877,7 +1927,13 @@
             "type": "heavy"
           }
         ],
-        "id": "a82d9c77-e442-46a7-af6c-e66dde21bc88"
+        "id": "a82d9c77-e442-46a7-af6c-e66dde21bc88",
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Attack with your custom missile launcher. Base damage is 3 SP at Tech 1, increasing by 1 SP per Tech Level."
+          }
+        ]
       },
       {
         "id": "bf8bab9d-191a-49ef-ad82-b28193551ed5",
@@ -2217,7 +2273,6 @@
     "actions": [
       {
         "name": "Meld Tendril Attack",
-        "value": "Attack with your Meld tendrils.",
         "damage": {
           "damageType": "SP",
           "amount": 5
@@ -2235,7 +2290,13 @@
             "amount": 2
           }
         ],
-        "id": "6c595ec1-29ee-4d24-ba84-ad2e70dc5e4c"
+        "id": "6c595ec1-29ee-4d24-ba84-ad2e70dc5e4c",
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Attack with your Meld tendrils."
+          }
+        ]
       },
       {
         "id": "3ffeb3a4-a54c-44f4-a8f1-7da808f776fc",
