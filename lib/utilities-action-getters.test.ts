@@ -115,9 +115,9 @@ describe('Action Property Getters', () => {
     test('should return undefined for real multi-action chassis', () => {
       const multiActionChassis = SalvageUnionReference.Chassis.all().find(
         (c) =>
-          c.actions &&
-          c.actions.length > 1 &&
-          c.actions[0].activationCost !== undefined
+          c.chassisAbilities &&
+          c.chassisAbilities.length > 1 &&
+          c.chassisAbilities[0].activationCost !== undefined
       )
       if (multiActionChassis) {
         const cost = getActivationCost(multiActionChassis)

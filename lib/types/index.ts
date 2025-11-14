@@ -9,8 +9,8 @@ import type {
   SURefAbilityTreeRequirement,
   SURefBioTitan,
   SURefChassis,
-  SURefAdvancedClasse,
-  SURefCoreClasse,
+  SURefAdvancedClass,
+  SURefCoreClass,
   SURefCrawlerBay,
   SURefCrawlerTechLevel,
   SURefCrawler,
@@ -88,6 +88,7 @@ export type {
   SURefMetaBaseEntity,
   SURefMetaCombatEntity,
   SURefMetaMechanicalEntity,
+  SURefMetaSchemaName,
 } from './objects.js'
 
 // Union type of all entity types
@@ -96,8 +97,8 @@ export type SURefEntity =
   | SURefAbilityTreeRequirement
   | SURefBioTitan
   | SURefChassis
-  | SURefAdvancedClasse
-  | SURefCoreClasse
+  | SURefAdvancedClass
+  | SURefCoreClass
   | SURefCrawlerBay
   | SURefCrawlerTechLevel
   | SURefCrawler
@@ -121,8 +122,8 @@ export type SURefMetaEntity =
   | SURefAbilityTreeRequirement
   | SURefBioTitan
   | SURefChassis
-  | SURefAdvancedClasse
-  | SURefCoreClasse
+  | SURefAdvancedClass
+  | SURefCoreClass
   | SURefCrawlerBay
   | SURefCrawlerTechLevel
   | SURefCrawler

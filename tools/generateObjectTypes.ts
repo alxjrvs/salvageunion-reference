@@ -207,7 +207,7 @@ function generateProperties(
 
   for (const [propName, propSchema] of Object.entries(properties)) {
     // Skip properties with value `true` - they're inherited from base types
-    if (propSchema === true) {
+    if (typeof propSchema === 'boolean' && propSchema === true) {
       continue
     }
 
@@ -414,12 +414,17 @@ async function generateObjectTypes() {
   // Separate object types from array types
   const objectDefs: Record<string, JSONSchema> = {}
   const arrayDefs: Record<string, JSONSchema> = {}
+  const simpleTypeDefs: Record<string, JSONSchema> = {}
 
   for (const [name, def] of Object.entries(allDefs)) {
-    if ((def as JSONSchema).type === 'array') {
-      arrayDefs[name] = def as JSONSchema
+    const schema = def as JSONSchema
+    if (schema.type === 'array') {
+      arrayDefs[name] = schema
+    } else if (schema.oneOf && !schema.properties) {
+      // Simple union types (not complex objects with oneOf)
+      simpleTypeDefs[name] = schema
     } else {
-      objectDefs[name] = def as JSONSchema
+      objectDefs[name] = schema
     }
   }
 
@@ -454,6 +459,21 @@ async function generateObjectTypes() {
   for (const typeName of objectOrder) {
     if (objectDefs[typeName]) {
       const typeCode = generateObjectType(typeName, objectDefs[typeName])
+      if (typeCode) {
+        typeDefinitions.push(typeCode)
+        typeDefinitions.push('')
+        console.log(`   ✓ ${typeName}`)
+      }
+    }
+  }
+
+  // Generate simple union types (like schemaName)
+  const simpleTypeOrder = Object.keys(simpleTypeDefs).sort()
+
+  if (simpleTypeOrder.length > 0) {
+    console.log('\n📋 Generating simple union types...')
+    for (const typeName of simpleTypeOrder) {
+      const typeCode = generateObjectType(typeName, simpleTypeDefs[typeName])
       if (typeCode) {
         typeDefinitions.push(typeCode)
         typeDefinitions.push('')

@@ -26,6 +26,43 @@ interface PropertyInfo {
   required: boolean
 }
 
+function resolveTypeFromRef(ref: string, schemasDir: string): string {
+  // Handle references to shared schemas
+  if (ref.includes('common.schema.json') || ref.startsWith('#/definitions/')) {
+    const defName = ref.split('/').pop()
+    const commonSchema = JSON.parse(
+      readFileSync(join(schemasDir, 'shared', 'common.schema.json'), 'utf-8')
+    )
+    const def =
+      commonSchema.$defs?.[defName || ''] ||
+      commonSchema.definitions?.[defName || '']
+    if (def?.type) {
+      // Map integer to number for TypeScript
+      const type = String(def.type)
+      return type === 'integer' ? 'number' : type
+    }
+    if (def?.$ref) return resolveTypeFromRef(String(def.$ref), schemasDir)
+  }
+
+  if (ref.includes('enums.schema.json')) {
+    // All enums are strings
+    return 'string'
+  }
+
+  if (ref.includes('objects.schema.json')) {
+    const defName = ref.split('/').pop()
+    // Known object types
+    if (defName === 'content') return 'array'
+    if (defName === 'table') return 'object'
+    if (defName === 'npc') return 'object'
+    if (defName === 'techLevelEffects') return 'array'
+    if (defName === 'bonusPerTechLevel') return 'object'
+    return 'object'
+  }
+
+  return 'unknown'
+}
+
 function extractProperties(schemaFile: string): PropertyInfo[] {
   const schema = JSON.parse(
     readFileSync(join(schemasDir, schemaFile.replace('schemas/', '')), 'utf-8')
@@ -67,14 +104,13 @@ function extractProperties(schemaFile: string): PropertyInfo[] {
 
           for (const [propName, propDef] of Object.entries(refProps)) {
             const def = propDef as Record<string, unknown>
-            if (def === true) continue
+            if (typeof def === 'boolean' && def === true) continue
 
             let type = 'unknown'
             if (def.type) {
               type = String(def.type)
             } else if (def.$ref) {
-              const parts = String(def.$ref).split('/')
-              type = parts[parts.length - 1]
+              type = resolveTypeFromRef(String(def.$ref), schemasDir)
             }
 
             propertyMap.set(propName, {
@@ -93,14 +129,35 @@ function extractProperties(schemaFile: string): PropertyInfo[] {
     const def = propDef as Record<string, unknown>
 
     // Skip inherited properties (marked as true) unless we don't have them yet
-    if (def === true) continue
+    if (typeof def === 'boolean' && def === true) continue
 
     let type = 'unknown'
     if (def.type) {
       type = String(def.type)
     } else if (def.$ref) {
-      const refParts = def.$ref.split('/')
-      type = refParts[refParts.length - 1]
+      type = resolveTypeFromRef(String(def.$ref), schemasDir)
+    } else if (def.oneOf) {
+      // Handle oneOf - try to infer the common type
+      const oneOfArray = def.oneOf as Array<Record<string, unknown>>
+      const types = oneOfArray.map((item) => {
+        if (item.type) return String(item.type)
+        if (item.$ref) return resolveTypeFromRef(String(item.$ref), schemasDir)
+        return 'unknown'
+      })
+      // If all types are the same, use that type
+      const uniqueTypes = [...new Set(types)]
+      if (uniqueTypes.length === 1) {
+        type = uniqueTypes[0]
+      } else if (uniqueTypes.every((t) => t === 'integer' || t === 'number')) {
+        type = 'number'
+      } else if (
+        uniqueTypes.every(
+          (t) => t === 'string' || t === 'number' || t === 'integer'
+        )
+      ) {
+        // Mixed string/number - use 'string | number' union
+        type = 'string | number'
+      }
     }
 
     propertyMap.set(propName, {
@@ -141,39 +198,97 @@ function generateTypeGuard(
   return code
 }
 
+function getTypeScriptType(propName: string, propType: string): string {
+  // Map property names to their SURef types
+  const typeMap: Record<string, string> = {
+    content: 'SURefMetaContent',
+    npc: 'SURefMetaNpc',
+    table: 'SURefMetaTable',
+    techLevelEffects: 'SURefMetaTechLevelEffects',
+    bonusPerTechLevel: 'SURefMetaBonusPerTechLevel',
+    traits: 'SURefMetaTraits',
+    actions: 'SURefMetaAction[]',
+    chassisAbilities: 'SURefMetaAction[]',
+    grants: 'SURefMetaGrant[]',
+    systems: 'SURefMetaSystems',
+    modules: 'SURefMetaModules',
+    choices: 'SURefMetaChoices',
+    patterns: 'SURefMetaPattern[]',
+    requirement: 'string[]', // array of tree enums
+    coreTrees: 'string[]', // array of tree enums
+  }
+
+  if (typeMap[propName]) {
+    return typeMap[propName]
+  }
+
+  // Fall back to basic types
+  if (propType === 'string') return 'string'
+  if (propType === 'number' || propType === 'integer') return 'number'
+  if (propType === 'boolean') return 'boolean'
+  if (propType === 'array') return 'unknown[]'
+  if (propType === 'object') return 'Record<string, unknown>'
+  if (propType === 'string | number') return 'string | number'
+
+  return 'unknown'
+}
+
 function generatePropertyExtractor(propName: string, propType: string): string {
   const functionName = `get${propName.charAt(0).toUpperCase()}${propName.slice(1)}`
+  const returnType = getTypeScriptType(propName, propType)
 
   let code = `/**\n`
   code += ` * Extract ${propName} from an entity\n`
   code += ` * @param entity - The entity to extract from\n`
   code += ` * @returns The ${propName} or undefined\n`
   code += ` */\n`
-  code += `export function ${functionName}(entity: SURefMetaEntity): `
+  code += `export function ${functionName}(entity: SURefMetaEntity): ${returnType} | undefined {\n`
 
-  // Determine return type
-  if (propType === 'string') {
-    code += `string | undefined {\n`
+  // Generate the implementation based on the base type
+  if (propType === 'string' || returnType === 'string') {
     code += `  return '${propName}' in entity && typeof entity.${propName} === 'string'\n`
     code += `    ? entity.${propName}\n`
     code += `    : undefined\n`
-  } else if (propType === 'number' || propType === 'integer') {
-    code += `number | undefined {\n`
+  } else if (
+    propType === 'number' ||
+    propType === 'integer' ||
+    returnType === 'number'
+  ) {
     code += `  return '${propName}' in entity && typeof entity.${propName} === 'number'\n`
     code += `    ? entity.${propName}\n`
     code += `    : undefined\n`
-  } else if (propType === 'boolean') {
-    code += `boolean | undefined {\n`
+  } else if (propType === 'boolean' || returnType === 'boolean') {
     code += `  return '${propName}' in entity && typeof entity.${propName} === 'boolean'\n`
     code += `    ? entity.${propName}\n`
     code += `    : undefined\n`
-  } else if (propType === 'array') {
-    code += `unknown[] | undefined {\n`
+  } else if (
+    propType === 'array' ||
+    returnType.includes('[]') ||
+    (returnType.startsWith('SURefMeta') &&
+      returnType.endsWith('s') &&
+      !returnType.includes('|'))
+  ) {
     code += `  return '${propName}' in entity && Array.isArray(entity.${propName})\n`
     code += `    ? entity.${propName}\n`
     code += `    : undefined\n`
+  } else if (
+    propType === 'object' ||
+    returnType.startsWith('SURefMeta') ||
+    returnType === 'Record<string, unknown>'
+  ) {
+    code += `  return '${propName}' in entity &&\n`
+    code += `    entity.${propName} !== null &&\n`
+    code += `    typeof entity.${propName} === 'object' &&\n`
+    code += `    !Array.isArray(entity.${propName})\n`
+    code += `    ? entity.${propName}\n`
+    code += `    : undefined\n`
+  } else if (propType === 'string | number') {
+    code += `  return '${propName}' in entity &&\n`
+    code += `    (typeof entity.${propName} === 'string' || typeof entity.${propName} === 'number')\n`
+    code += `    ? entity.${propName}\n`
+    code += `    : undefined\n`
   } else {
-    code += `unknown {\n`
+    // Unknown type - just check existence
     code += `  return '${propName}' in entity ? entity.${propName} : undefined\n`
   }
 
@@ -204,7 +319,24 @@ const typeImports = schemaIndex.schemas
   .join(',\n')
 
 output += typeImports
-output += `\n} from './types/index.js'\n\n`
+output += `\n} from './types/index.js'\n`
+
+// Add imports for object types used in property extractors
+output += `import type {\n`
+output += `  SURefMetaAction,\n`
+output += `  SURefMetaContent,\n`
+output += `  SURefMetaNpc,\n`
+output += `  SURefMetaTable,\n`
+output += `  SURefMetaTechLevelEffects,\n`
+output += `  SURefMetaBonusPerTechLevel,\n`
+output += `  SURefMetaTraits,\n`
+output += `  SURefMetaGrant,\n`
+output += `  SURefMetaSystems,\n`
+output += `  SURefMetaModules,\n`
+output += `  SURefMetaChoices,\n`
+output += `  SURefMetaPattern\n`
+output += `} from './types/objects.js'\n\n`
+
 output += `// ============================================================================\n`
 output += `// TYPE GUARDS\n`
 output += `// ============================================================================\n\n`

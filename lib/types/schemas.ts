@@ -70,7 +70,7 @@ export interface SURefBioTitan extends SURefMetaBaseEntity {
 export interface SURefChassis
   extends SURefMetaBaseEntity,
     SURefMetaChassisStats {
-  actions: SURefMetaAction[]
+  chassisAbilities: SURefMetaAction[]
   patterns: SURefMetaPattern[]
   npc?: SURefMetaNpc
 }
@@ -78,12 +78,12 @@ export interface SURefChassis
 /**
  * Advanced and Hybrid character classes in Salvage Union
  */
-export type SURefAdvancedClasse = SURefMetaAdvancedClass
+export type SURefAdvancedClass = SURefMetaAdvancedClass
 
 /**
  * Core character classes in Salvage Union
  */
-export interface SURefCoreClasse extends SURefMetaBaseEntity {
+export interface SURefCoreClass extends SURefMetaBaseEntity {
   /**
    * Maximum number of abilities this class can have
    */

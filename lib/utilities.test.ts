@@ -19,6 +19,7 @@ import {
   getSlotsRequired,
   getPageReference,
   extractActions,
+  getChassisAbilities,
   getStructurePoints,
   getEnergyPoints,
   getHeatCapacity,
@@ -97,9 +98,9 @@ describe('Additional Type Guards', () => {
   })
 
   describe('hasActions', () => {
-    it('should return true for chassis', () => {
+    it('should return false for chassis (chassis use chassisAbilities)', () => {
       const chassis = SalvageUnionReference.Chassis.all()[0]
-      expect(hasActions(chassis)).toBe(true)
+      expect(hasActions(chassis)).toBe(false)
     })
 
     it('should return true for systems', () => {
@@ -189,7 +190,7 @@ describe('Additional Type Guards', () => {
 
       if (isChassis(chassis)) {
         // TypeScript should know this is a chassis
-        expect(chassis.actions).toBeDefined()
+        expect(chassis.chassisAbilities).toBeDefined()
         expect(chassis.patterns).toBeDefined()
       }
     })
@@ -317,12 +318,10 @@ describe('Property Extractors', () => {
   })
 
   describe('extractActions', () => {
-    it('should extract actions from chassis', () => {
+    it('should return undefined for chassis (chassis use chassisAbilities)', () => {
       const chassis = SalvageUnionReference.Chassis.all()[0]
       const actions = extractActions(chassis)
-      expect(actions).toBeDefined()
-      expect(Array.isArray(actions)).toBe(true)
-      expect(actions!.length).toBeGreaterThan(0)
+      expect(actions).toBeUndefined()
     })
 
     it('should extract actions from systems', () => {
@@ -413,6 +412,28 @@ describe('Property Extractors', () => {
       expect(actions).toBeDefined()
       expect(Array.isArray(actions)).toBe(true)
       expect(actions!.length).toBeGreaterThan(0)
+    })
+  })
+
+  describe('getChassisAbilities', () => {
+    it('should extract chassis abilities from chassis', () => {
+      const chassis = SalvageUnionReference.Chassis.all()[0]
+      const chassisAbilities = getChassisAbilities(chassis)
+      expect(chassisAbilities).toBeDefined()
+      expect(Array.isArray(chassisAbilities)).toBe(true)
+      expect(chassisAbilities!.length).toBeGreaterThan(0)
+    })
+
+    it('should return undefined for non-chassis entities', () => {
+      const system = SalvageUnionReference.Systems.all()[0]
+      const chassisAbilities = getChassisAbilities(system)
+      expect(chassisAbilities).toBeUndefined()
+    })
+
+    it('should return undefined for abilities', () => {
+      const ability = SalvageUnionReference.Abilities.all()[0]
+      const chassisAbilities = getChassisAbilities(ability)
+      expect(chassisAbilities).toBeUndefined()
     })
   })
 

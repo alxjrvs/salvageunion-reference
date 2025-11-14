@@ -183,7 +183,7 @@ function generateProperties(
 
   for (const [propName, propSchema] of Object.entries(properties)) {
     // Skip properties with value `true` - they're inherited from base types
-    if (propSchema === true) {
+    if (typeof propSchema === 'boolean' && propSchema === true) {
       continue
     }
 

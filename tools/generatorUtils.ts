@@ -59,31 +59,37 @@ export function generateSchemaNameMap(
   const map: Record<string, string> = {}
 
   for (const schema of schemaIndex.schemas) {
-    // Convert display name to singular form
-    // Most display names are already plural, so we need to singularize them
-    let singular = schema.displayName
+    const displayName = schema.displayName
 
-    // Handle special cases
-    if (singular === 'Abilities') singular = 'Ability'
-    else if (singular === 'Chassis')
-      singular = 'Chassis' // Already singular
-    else if (singular === 'Equipment')
-      singular = 'Equipment' // Already singular
-    else if (singular === 'Meld')
-      singular = 'Meld' // Already singular
-    else if (singular === 'Distances') singular = 'Distance'
-    else if (singular.endsWith('ies')) {
-      // Abilities -> Ability
-      singular = singular.slice(0, -3) + 'y'
-    } else if (singular.endsWith('s')) {
-      // Remove trailing 's' for most plurals
-      singular = singular.slice(0, -1)
-    }
-
-    // Convert to PascalCase (remove spaces and hyphens)
-    const pascalCase = singular
+    // Split by spaces and hyphens first, then singularize each word
+    const pascalCase = displayName
       .split(/[\s-]/)
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .map((word) => {
+        // Singularize each word
+        let singular = word
+
+        // Handle special cases
+        if (word === 'Abilities') singular = 'Ability'
+        else if (word === 'Chassis')
+          singular = 'Chassis' // Already singular
+        else if (word === 'Equipment')
+          singular = 'Equipment' // Already singular
+        else if (word === 'Meld')
+          singular = 'Meld' // Already singular
+        else if (word === 'Distances') singular = 'Distance'
+        else if (word === 'Classes')
+          singular = 'Class' // Classes -> Class
+        else if (word.endsWith('ies')) {
+          // Abilities -> Ability
+          singular = word.slice(0, -3) + 'y'
+        } else if (word.endsWith('s')) {
+          // Remove trailing 's' for most plurals
+          singular = word.slice(0, -1)
+        }
+
+        // Capitalize first letter
+        return singular.charAt(0).toUpperCase() + singular.slice(1)
+      })
       .join('')
 
     map[schema.id] = pascalCase

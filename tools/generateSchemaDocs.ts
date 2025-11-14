@@ -44,7 +44,7 @@ function generateFieldTable(
     const def = fieldDef as Record<string, unknown>
 
     // Skip fields that are just `true` (inherited from allOf)
-    if (def === true) continue
+    if (typeof def === 'boolean' && def === true) continue
 
     const isRequired = required.includes(fieldName) ? '✅' : '❌'
     const type = getFieldType(def)

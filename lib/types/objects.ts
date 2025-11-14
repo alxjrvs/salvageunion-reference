@@ -241,6 +241,23 @@ export interface SURefMetaSystemModule extends SURefMetaStats {
 }
 
 /**
+ * Bonus values that increase with tech level
+ */
+export type SURefMetaBonusPerTechLevel = SURefMetaStats
+
+/**
+ * Advanced or hybrid character class
+ */
+export interface SURefMetaAdvancedClass extends SURefMetaBaseEntity {
+  type: SURefClassType
+  advancedTree: SURefTree
+  legendaryTree: SURefTree
+  content?: SURefMetaContent
+}
+
+export type SURefMetaSchemaName = SURefSchemaName | 'actions'
+
+/**
  * Roll table for random outcomes based on d20 rolls
  */
 export type SURefMetaTable =
@@ -313,21 +330,6 @@ export type SURefMetaTable =
       '20': string
       type: 'flat'
     }
-
-/**
- * Bonus values that increase with tech level
- */
-export type SURefMetaBonusPerTechLevel = SURefMetaStats
-
-/**
- * Advanced or hybrid character class
- */
-export interface SURefMetaAdvancedClass extends SURefMetaBaseEntity {
-  type: SURefClassType
-  advancedTree: SURefTree
-  legendaryTree: SURefTree
-  content?: SURefMetaContent
-}
 
 export type SURefMetaActionOptions = {
   label: string

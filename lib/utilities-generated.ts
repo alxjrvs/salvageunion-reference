@@ -13,8 +13,8 @@ import type {
   SURefAbilityTreeRequirement,
   SURefBioTitan,
   SURefChassis,
-  SURefAdvancedClasse,
-  SURefCoreClasse,
+  SURefAdvancedClass,
+  SURefCoreClass,
   SURefCrawlerBay,
   SURefCrawlerTechLevel,
   SURefCrawler,
@@ -32,6 +32,20 @@ import type {
   SURefTrait,
   SURefVehicle,
 } from './types/index.js'
+import type {
+  SURefMetaAction,
+  SURefMetaContent,
+  SURefMetaNpc,
+  SURefMetaTable,
+  SURefMetaTechLevelEffects,
+  SURefMetaBonusPerTechLevel,
+  SURefMetaTraits,
+  SURefMetaGrant,
+  SURefMetaSystems,
+  SURefMetaModules,
+  SURefMetaChoices,
+  SURefMetaPattern,
+} from './types/objects.js'
 
 // ============================================================================
 // TYPE GUARDS
@@ -72,17 +86,15 @@ export function isBioTitan(entity: SURefMetaEntity): entity is SURefBioTitan {
  * @returns True if the entity is a Chassis
  */
 export function isChassis(entity: SURefMetaEntity): entity is SURefChassis {
-  return 'actions' in entity && 'patterns' in entity
+  return 'chassisAbilities' in entity && 'patterns' in entity
 }
 
 /**
- * Type guard to check if an entity is a CoreClasse
+ * Type guard to check if an entity is a CoreClass
  * @param entity - The entity to check
- * @returns True if the entity is a CoreClasse
+ * @returns True if the entity is a CoreClass
  */
-export function isCoreClasse(
-  entity: SURefMetaEntity
-): entity is SURefCoreClasse {
+export function isCoreClass(entity: SURefMetaEntity): entity is SURefCoreClass {
   return (
     'maxAbilities' in entity && 'advanceable' in entity && 'coreTrees' in entity
   )
@@ -214,8 +226,13 @@ export function getSalvageValue(entity: SURefMetaEntity): number | undefined {
  * @param entity - The entity to extract from
  * @returns The structurePoints or undefined
  */
-export function getStructurePoints(entity: SURefMetaEntity): unknown {
-  return 'structurePoints' in entity ? entity.structurePoints : undefined
+export function getStructurePoints(
+  entity: SURefMetaEntity
+): number | undefined {
+  return 'structurePoints' in entity &&
+    typeof entity.structurePoints === 'number'
+    ? entity.structurePoints
+    : undefined
 }
 
 /**
@@ -223,8 +240,10 @@ export function getStructurePoints(entity: SURefMetaEntity): unknown {
  * @param entity - The entity to extract from
  * @returns The hitPoints or undefined
  */
-export function getHitPoints(entity: SURefMetaEntity): unknown {
-  return 'hitPoints' in entity ? entity.hitPoints : undefined
+export function getHitPoints(entity: SURefMetaEntity): number | undefined {
+  return 'hitPoints' in entity && typeof entity.hitPoints === 'number'
+    ? entity.hitPoints
+    : undefined
 }
 
 /**
@@ -243,8 +262,11 @@ export function getMaxAbilities(entity: SURefMetaEntity): number | undefined {
  * @param entity - The entity to extract from
  * @returns The level or undefined
  */
-export function getLevel(entity: SURefMetaEntity): unknown {
-  return 'level' in entity ? entity.level : undefined
+export function getLevel(entity: SURefMetaEntity): string | number | undefined {
+  return 'level' in entity &&
+    (typeof entity.level === 'string' || typeof entity.level === 'number')
+    ? entity.level
+    : undefined
 }
 
 /**
@@ -252,8 +274,10 @@ export function getLevel(entity: SURefMetaEntity): unknown {
  * @param entity - The entity to extract from
  * @returns The tree or undefined
  */
-export function getTree(entity: SURefMetaEntity): unknown {
-  return 'tree' in entity ? entity.tree : undefined
+export function getTree(entity: SURefMetaEntity): string | undefined {
+  return 'tree' in entity && typeof entity.tree === 'string'
+    ? entity.tree
+    : undefined
 }
 
 /**
@@ -272,7 +296,9 @@ export function getDescription(entity: SURefMetaEntity): string | undefined {
  * @param entity - The entity to extract from
  * @returns The actions or undefined
  */
-export function getActions(entity: SURefMetaEntity): unknown[] | undefined {
+export function getActions(
+  entity: SURefMetaEntity
+): SURefMetaAction[] | undefined {
   return 'actions' in entity && Array.isArray(entity.actions)
     ? entity.actions
     : undefined
@@ -283,7 +309,9 @@ export function getActions(entity: SURefMetaEntity): unknown[] | undefined {
  * @param entity - The entity to extract from
  * @returns The grants or undefined
  */
-export function getGrants(entity: SURefMetaEntity): unknown[] | undefined {
+export function getGrants(
+  entity: SURefMetaEntity
+): SURefMetaGrant[] | undefined {
   return 'grants' in entity && Array.isArray(entity.grants)
     ? entity.grants
     : undefined
@@ -294,7 +322,9 @@ export function getGrants(entity: SURefMetaEntity): unknown[] | undefined {
  * @param entity - The entity to extract from
  * @returns The traits or undefined
  */
-export function getTraits(entity: SURefMetaEntity): unknown[] | undefined {
+export function getTraits(
+  entity: SURefMetaEntity
+): SURefMetaTraits | undefined {
   return 'traits' in entity && Array.isArray(entity.traits)
     ? entity.traits
     : undefined
@@ -305,8 +335,10 @@ export function getTraits(entity: SURefMetaEntity): unknown[] | undefined {
  * @param entity - The entity to extract from
  * @returns The mechActionType or undefined
  */
-export function getMechActionType(entity: SURefMetaEntity): unknown {
-  return 'mechActionType' in entity ? entity.mechActionType : undefined
+export function getMechActionType(entity: SURefMetaEntity): string | undefined {
+  return 'mechActionType' in entity && typeof entity.mechActionType === 'string'
+    ? entity.mechActionType
+    : undefined
 }
 
 /**
@@ -328,7 +360,7 @@ export function getActivationCurrency(
  * @param entity - The entity to extract from
  * @returns The requirement or undefined
  */
-export function getRequirement(entity: SURefMetaEntity): unknown[] | undefined {
+export function getRequirement(entity: SURefMetaEntity): string[] | undefined {
   return 'requirement' in entity && Array.isArray(entity.requirement)
     ? entity.requirement
     : undefined
@@ -339,7 +371,9 @@ export function getRequirement(entity: SURefMetaEntity): unknown[] | undefined {
  * @param entity - The entity to extract from
  * @returns The patterns or undefined
  */
-export function getPatterns(entity: SURefMetaEntity): unknown[] | undefined {
+export function getPatterns(
+  entity: SURefMetaEntity
+): SURefMetaPattern[] | undefined {
   return 'patterns' in entity && Array.isArray(entity.patterns)
     ? entity.patterns
     : undefined
@@ -350,8 +384,13 @@ export function getPatterns(entity: SURefMetaEntity): unknown[] | undefined {
  * @param entity - The entity to extract from
  * @returns The npc or undefined
  */
-export function getNpc(entity: SURefMetaEntity): unknown {
-  return 'npc' in entity ? entity.npc : undefined
+export function getNpc(entity: SURefMetaEntity): SURefMetaNpc | undefined {
+  return 'npc' in entity &&
+    entity.npc !== null &&
+    typeof entity.npc === 'object' &&
+    !Array.isArray(entity.npc)
+    ? entity.npc
+    : undefined
 }
 
 /**
@@ -370,7 +409,7 @@ export function getAdvanceable(entity: SURefMetaEntity): boolean | undefined {
  * @param entity - The entity to extract from
  * @returns The coreTrees or undefined
  */
-export function getCoreTrees(entity: SURefMetaEntity): unknown[] | undefined {
+export function getCoreTrees(entity: SURefMetaEntity): string[] | undefined {
   return 'coreTrees' in entity && Array.isArray(entity.coreTrees)
     ? entity.coreTrees
     : undefined
@@ -381,8 +420,12 @@ export function getCoreTrees(entity: SURefMetaEntity): unknown[] | undefined {
  * @param entity - The entity to extract from
  * @returns The content or undefined
  */
-export function getContent(entity: SURefMetaEntity): unknown {
-  return 'content' in entity ? entity.content : undefined
+export function getContent(
+  entity: SURefMetaEntity
+): SURefMetaContent | undefined {
+  return 'content' in entity && Array.isArray(entity.content)
+    ? entity.content
+    : undefined
 }
 
 /**
@@ -401,7 +444,9 @@ export function getDamagedEffect(entity: SURefMetaEntity): string | undefined {
  * @param entity - The entity to extract from
  * @returns The choices or undefined
  */
-export function getChoices(entity: SURefMetaEntity): unknown[] | undefined {
+export function getChoices(
+  entity: SURefMetaEntity
+): SURefMetaChoices | undefined {
   return 'choices' in entity && Array.isArray(entity.choices)
     ? entity.choices
     : undefined
@@ -412,8 +457,12 @@ export function getChoices(entity: SURefMetaEntity): unknown[] | undefined {
  * @param entity - The entity to extract from
  * @returns The techLevelEffects or undefined
  */
-export function getTechLevelEffects(entity: SURefMetaEntity): unknown {
-  return 'techLevelEffects' in entity ? entity.techLevelEffects : undefined
+export function getTechLevelEffects(
+  entity: SURefMetaEntity
+): SURefMetaTechLevelEffects | undefined {
+  return 'techLevelEffects' in entity && Array.isArray(entity.techLevelEffects)
+    ? entity.techLevelEffects
+    : undefined
 }
 
 /**
@@ -421,8 +470,13 @@ export function getTechLevelEffects(entity: SURefMetaEntity): unknown {
  * @param entity - The entity to extract from
  * @returns The table or undefined
  */
-export function getTable(entity: SURefMetaEntity): unknown {
-  return 'table' in entity ? entity.table : undefined
+export function getTable(entity: SURefMetaEntity): SURefMetaTable | undefined {
+  return 'table' in entity &&
+    entity.table !== null &&
+    typeof entity.table === 'object' &&
+    !Array.isArray(entity.table)
+    ? entity.table
+    : undefined
 }
 
 /**
@@ -452,8 +506,15 @@ export function getPopulationMax(entity: SURefMetaEntity): number | undefined {
  * @param entity - The entity to extract from
  * @returns The bonusPerTechLevel or undefined
  */
-export function getBonusPerTechLevel(entity: SURefMetaEntity): unknown {
-  return 'bonusPerTechLevel' in entity ? entity.bonusPerTechLevel : undefined
+export function getBonusPerTechLevel(
+  entity: SURefMetaEntity
+): SURefMetaBonusPerTechLevel | undefined {
+  return 'bonusPerTechLevel' in entity &&
+    entity.bonusPerTechLevel !== null &&
+    typeof entity.bonusPerTechLevel === 'object' &&
+    !Array.isArray(entity.bonusPerTechLevel)
+    ? entity.bonusPerTechLevel
+    : undefined
 }
 
 /**
@@ -472,6 +533,8 @@ export function getSection(entity: SURefMetaEntity): string | undefined {
  * @param entity - The entity to extract from
  * @returns The damageType or undefined
  */
-export function getDamageType(entity: SURefMetaEntity): unknown {
-  return 'damageType' in entity ? entity.damageType : undefined
+export function getDamageType(entity: SURefMetaEntity): string | undefined {
+  return 'damageType' in entity && typeof entity.damageType === 'string'
+    ? entity.damageType
+    : undefined
 }

@@ -691,6 +691,17 @@
         "type": "string"
       }
     },
+    "schemaName": {
+      "oneOf": [
+        {
+          "$ref": "enums.schema.json#/definitions/schemaName"
+        },
+        {
+          "type": "string",
+          "const": "actions"
+        }
+      ]
+    },
     "schemaNames": {
       "type": "array",
       "items": {

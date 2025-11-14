@@ -148,7 +148,7 @@ describe('Extra Properties Validation', () => {
           cargoCapacity: 10,
           techLevel: 1,
           salvageValue: 1,
-          actions: [],
+          chassisAbilities: [],
           patterns: [],
           extraField: 'This should not be allowed', // Extra property
         },
